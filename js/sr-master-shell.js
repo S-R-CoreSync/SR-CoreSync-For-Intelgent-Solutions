@@ -177,131 +177,25 @@
         }
     }
 
-    // 5. Universal AI Idea Analyzer & Dispatcher
-    // 5. Universal AI Idea Analyzer & Dispatcher (S&R CoreSync User Specification)
+    // 5. Universal AI Idea Analyzer & Dispatcher (S&R CoreSync Specification)
     window.setPrompt = function (text) {
         const input = document.getElementById('userIdeaInput') || document.getElementById('heroAiIdeaInput');
-        const input = document.getElementById('userIdeaInput');
         if (input) {
             input.value = text;
             input.focus();
-            input.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     };
 
     window.analyzeIdea = function () {
         const input = document.getElementById('userIdeaInput') || document.getElementById('heroAiIdeaInput');
-        const query = (input ? input.value : '').trim();
-
-        if (!query) {
-            if (input) {
-                input.focus();
-                input.style.boxShadow = '0 0 15px rgba(239, 68, 68, 0.8)';
-                setTimeout(() => { input.style.boxShadow = ''; }, 1500);
-            }
-            alert('يرجى كتابة فكرة مشروعك أولاً ليقوم الذكاء الاصطناعي بتحليلها.');
-        const input = document.getElementById('userIdeaInput');
         const idea = (input ? input.value : '').toLowerCase();
-        
+
         if (!idea.trim()) {
             alert('الرجاء كتابة فكرة المشروع أولاً.');
             if (input) input.focus();
             return;
         }
 
-        // Semantic Analysis & Routing Logic
-        let recommendation = {
-            category: 'منظومة برمجيات سحابية سيادية مخصصة',
-            system: 'S&R CoreSync Enterprise Suite',
-            description: 'تحليل الفكرة أظهر الحاجة إلى معمارية متقدمة وتكامل سحابي فوري وإدارة عمليات.',
-            url: './demo.html',
-            urlText: 'بدء المعاينة والتجربة الفورية ⚡',
-            badge: 'حلول مؤسسية مخصصة'
-        };
-
-        const q = query.toLowerCase();
-
-        if (q.includes('متجر') || q.includes('تجارة') || q.includes('بيع') || q.includes('منتجات') || q.includes('سلة') || q.includes('ecommerce')) {
-            recommendation = {
-                category: 'متاجر إلكترونية فاخرة وحلول التجارة الرقمية',
-                system: 'S&R Automated E-Commerce Launchpad',
-                description: 'بناء متجر إلكتروني فاخر فائق السرعة متوافق مع بوابات الدفع الدولية iDEAL و Stripe و Apple Pay مع الفوترة والربط السحابي.',
-                url: './ecommerce-launchpad.html',
-                urlText: 'فتح استوديو المتاجر الفورية 🛍️',
-                badge: 'التجارة الإلكترونية'
-            };
-        } else if (q.includes('مبيعات') || q.includes('crm') || q.includes('عملاء') || q.includes('إدارة') || q.includes('زبائن')) {
-            recommendation = {
-                category: 'إدارة علاقات العملاء وتحليلات الأداء الحي',
-                system: 'S&R Sovereign CRM & Live Analytics Engine',
-                description: 'لوحة تحكم تنفيذية لمتابعة الصفقات، تدفقات المبيعات، ومؤشرات الأداء المالي والربط الفوري مع الفواتير.',
-                url: './crm-dashboard.html',
-                urlText: 'استعراض لوحة الـ CRM والبيانات 📊',
-                badge: 'إدارة المبيعات والـ CRM'
-            };
-        } else if (q.includes('تعليم') || q.includes('منصة') || q.includes('أكاديمية') || q.includes('دورات') || q.includes('كورسات') || q.includes('تدريب')) {
-            recommendation = {
-                category: 'المنصات التعليمية والأنظمة التفاعلية LMS',
-                system: 'S&R Sovereign Educational & Knowledge Platform',
-                description: 'هندسة منصة تعليمية وبوابات اشتراكات ذكية مع فصول افتراضية وحماية المحتوى الرقمي والملكية الفكرية.',
-                url: './software.html',
-                urlText: 'استعراض سوق الأنظمة والبرمجيات 💻',
-                badge: 'المنصات التعليمية LMS'
-            };
-        } else if (q.includes('دفع') || q.includes('بوابة') || q.includes('تحويل') || q.includes('فيزا') || q.includes('stripe') || q.includes('ideal')) {
-            recommendation = {
-                category: 'بوابات المدفوعات والحلول المالية FinTech',
-                system: 'S&R Sovereign Unified Payment Gateway',
-                description: 'تكامل بوابات الدفع الدولية متعددة العملات مع امتثال PSD2 الأوروبي وإيصالات الدفع المشفرة.',
-                url: './payment-gateway.html',
-                urlText: 'فتح بوابة المدفوعات الموحدة 💳',
-                badge: 'المدفوعات الدولية FinTech'
-            };
-        } else if (q.includes('فاتورة') || q.includes('ضرائب') || q.includes('zatca') || q.includes('peppol') || q.includes('فوترة')) {
-            recommendation = {
-                category: 'الفوترة الإلكترونية والامتثال الضريبي',
-                system: 'S&R Digital Invoice & Tax Compliance Engine',
-                description: 'محرك الفوترة الرقمية المعتمد المتوافق مع هيئة الزكاة والضريبة والجمارك ZATCA والأنظمة الأوروبية Peppol.',
-                url: './invoice-engine.html',
-                urlText: 'تشغيل محرك الفوترة الرقمية 🧾',
-                badge: 'الفوترة والامتثال ZATCA'
-            };
-        } else if (q.includes('هبوط') || q.includes('تسويق') || q.includes('إعلان') || q.includes('landing') || q.includes('صفحة')) {
-            recommendation = {
-                category: 'صفحات الهبوط والحملات التسويقية عالية التحويل',
-                system: 'S&R High-Converting Landing Page Builder',
-                description: 'تصميم وإطلاق صفحات هبوط متجاوبة مع حاسبة العائد الاستثماري ونموذج حجز فوري ومربوطة بـ WhatsApp.',
-                url: './landing-page-builder.html',
-                urlText: 'فتح مولّد صفحات الهبوط 🚀',
-                badge: 'صفحات الهبوط والتحويل'
-            };
-        } else if (q.includes('عقد') || q.includes('اتفاقية') || q.includes('ملكية') || q.includes('توقيع') || q.includes('nda')) {
-            recommendation = {
-                category: 'العقود الذكية وحماية الملكية الفكرية والشيفرات',
-                system: 'S&R IP & NDA Smart Contract Engine',
-                description: 'صياغة اتفاقيات عدم الإفصاح وتراخيص السوفتوير مع التوقيع الإلكتروني وتوثيق بصمة SHA-256 المشفرة.',
-                url: './ip-nda-smart-contract.html',
-                urlText: 'فتح محرك عقود الملكية الفكرية 📜',
-                badge: 'العقود والملكية الفكرية'
-            };
-        } else if (q.includes('شعار') || q.includes('هوية') || q.includes('براند') || q.includes('ألوان') || q.includes('تصميم')) {
-            recommendation = {
-                category: 'الهويات البصرية والأصول السيادية 3D',
-                system: 'S&R Sovereign Brand Identity Studio',
-                description: 'بناء وتخصيص الهوية البصرية المتكاملة للمؤسسات وتصدير حزم الأصول الرقمية بدقة 8K فائقة.',
-                url: './brand-identity-studio.html',
-                urlText: 'فتح استوديو الهوية البصرية 🎨',
-                badge: 'الهوية البصرية والتصميم'
-            };
-        } else if (q.includes('qr') || q.includes('باركود') || q.includes('رمز')) {
-            recommendation = {
-                category: 'أكواد QR المشفرة والربط الديناميكي',
-                system: 'S&R Dynamic QR Studio & Scanner',
-                description: 'توليد وتخصيص وفحص أكواد QR للمواقع والمنتجات وفواتير ZATCA مع دمج الشعار والتحليل اللحظي.',
-                url: './dynamic-qr-studio.html',
-                urlText: 'فتح استوديو أكواد QR المشفرة 📲',
-                badge: 'أكواد QR الذكية'
-            };
         // منطق التحليل الذكي والتوجيه البسيط
         if (idea.includes('متجر') || idea.includes('بيع') || idea.includes('منتج')) {
             alert('تحليل الذكاء الاصطناعي: فكرتك تميل نحو التجارة الإلكترونية. جاري تحويلك إلى المتجر والخدمات المرتبطة...');
@@ -331,66 +225,7 @@
                 window.location.href = './index.html#services-section';
             }
         }
-
-        // Render AI Analysis Modal
-        let modal = document.getElementById('srAiAnalysisModal');
-        if (!modal) {
-            modal = document.createElement('div');
-            modal.id = 'srAiAnalysisModal';
-            modal.className = 'sr-ai-modal-overlay';
-            document.body.appendChild(modal);
-        }
-
-        const encodedWa = encodeURIComponent(`مرحباً S&R CoreSync، قمت بتحليل فكرة مشروعي عبر الذكاء الاصطناعي في المنصة:\n\n*الفكرة:* "${query}"\n*التصنيف المقترح:* ${recommendation.category}\n*النظام:* ${recommendation.system}\n\nأود مناقشة التنفيذ والبدء المباشر معكم.`);
-
-        modal.innerHTML = `
-            <div class="sr-ai-modal-content">
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; border-bottom:1px solid var(--sr-border); padding-bottom:14px;">
-                    <div style="display:flex; align-items:center; gap:10px;">
-                        <span style="font-size:1.6rem;">✨</span>
-                        <div>
-                            <h3 style="margin:0; font-size:1.25rem; color:var(--sr-gold-light);">نتيجة تحليل الفكرة بالذكاء الاصطناعي</h3>
-                            <span style="font-size:0.76rem; color:var(--sr-text-muted);">S&R CoreSync Sovereign Intelligent Analyzer</span>
-                        </div>
-                    </div>
-                    <button type="button" onclick="document.getElementById('srAiAnalysisModal').classList.remove('open')" style="background:none; border:none; color:#cbd5e1; font-size:1.5rem; cursor:pointer; line-height:1;">✕</button>
-                </div>
-
-                <div style="margin-bottom:16px;">
-                    <span style="font-size:0.75rem; color:var(--sr-gold); font-weight:700;">فكرتك المسجلة:</span>
-                    <p style="background:rgba(255,255,255,0.04); padding:10px 14px; border-radius:10px; font-weight:700; color:#fff; border:1px solid rgba(255,255,255,0.08); margin-top:4px;">"${query}"</p>
-                </div>
-
-                <div style="background:rgba(197,168,128,0.08); border:1px solid var(--sr-border); border-radius:14px; padding:18px; margin-bottom:22px;">
-                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
-                        <span style="font-size:0.8rem; font-weight:800; color:var(--sr-emerald);">القطاع الموصى به:</span>
-                        <span style="background:rgba(16,185,129,0.15); color:var(--sr-emerald); padding:3px 10px; border-radius:6px; font-size:0.72rem; font-weight:700;">${recommendation.badge}</span>
-                    </div>
-                    <h4 style="color:#ffffff; font-size:1.05rem; margin-bottom:6px;">${recommendation.system}</h4>
-                    <p style="font-size:0.88rem; color:var(--sr-text-secondary); margin:0;">${recommendation.description}</p>
-                </div>
-
-                <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                    <a href="${recommendation.url}" class="sr-unified-btn-primary" style="flex:1; justify-content:center; text-decoration:none;">
-                        ${recommendation.urlText}
-                    </a>
-                    <a href="https://wa.me/31687766555?text=${encodedWa}" target="_blank" class="sr-unified-btn-secondary" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.4); color:var(--sr-emerald); text-decoration:none;">
-                        <span>محادثة المستشار عبر WhatsApp 💬</span>
-                    </a>
-                </div>
-            </div>
-        `;
-
-        modal.classList.add('open');
     };
-
-    // Close modal on escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            const modal = document.getElementById('srAiAnalysisModal');
-            if (modal) modal.classList.remove('open');
-        }
-    });
 
     // Boot on DOMContentLoaded or immediately if ready
     if (document.readyState === 'loading') {
