@@ -2266,42 +2266,22 @@
         </div>
 
         <!-- قسم تحليل أفكار المشاريع بالذكاء الاصطناعي (AI Project Idea Analyzer Hero Banner) -->
-        <section class="hero-banner" id="hero-idea-banner">
-            <div class="container text-right">
-                <h1>حوّل فكرتك إلى واقع ذكي باستخدام S&R CoreSync</h1>
-                <p>اكتب فكرتك باختصار، ودع نظام الذكاء الاصطناعي يحللها ويوجهك للقسم الأنسب لمشروعك.</p>
-
+        <section class="hero-banner" id="hero-idea-banner" style="text-align: right; direction: rtl; padding: 60px 20px; background-color: #f8f9fa;">
+            <div class="container">
+                <h1 style="font-size: 2.5rem; color: #1a1a1a; margin-bottom: 20px;">حوّل فكرتك إلى واقع ذكي باستخدام S&R CoreSync</h1>
+                <p style="font-size: 1.2rem; color: #555; margin-bottom: 30px;">اكتب فكرتك باختصار، ودع نظام الذكاء الاصطناعي يحللها ويوجهك للقسم الأنسب لمشروعك.</p>
+                
                 <!-- حقل إدخال فكرة الـ AI -->
-                <div class="ai-prompt-box">
-                    <input type="text" id="userIdeaInput"
-                        placeholder="اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)..."
-                        onkeydown="if(event.key==='Enter'){analyzeIdea();}" />
-                    <button type="button" onclick="analyzeIdea()" class="btn-primary">
-                        <span>حلل فكرتي الآن</span>
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                            stroke-width="2.5">
-                            <line x1="19" y1="12" x2="5" y2="12" />
-                            <polyline points="12 19 5 12 12 5" />
-                        </svg>
-                    </button>
+                <div class="ai-prompt-box" style="display: flex; gap: 10px; max-width: 600px; margin-bottom: 20px;">
+                    <input type="text" id="userIdeaInput" placeholder="اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)..." onkeydown="if(event.key==='Enter'){analyzeIdea();}" style="flex: 1; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; text-align: right;" />
+                    <button type="button" onclick="analyzeIdea()" style="padding: 15px 30px; background-color: #007bff; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: bold;">حلل فكرتي الآن</button>
                 </div>
-
+                
                 <!-- أمثلة سريعة لتحفيز الزائر -->
-                <div class="quick-prompts">
-                    <span>تجربة سريعة:</span>
-                    <button type="button" onclick="setPrompt('أريد بناء منصة تعليمية ذكية مع اشتراكات')">منصة
-                        تعليمية</button>
-                    <button type="button" onclick="setPrompt('تطوير نظام إدارة مبيعات وعلاقات عملاء CRM')">نظام مبيعات
-                        CRM</button>
-                    <button type="button" onclick="setPrompt('إنشاء متجر إلكتروني فاخر مع بوابات دفع دولية')">متجر
-                        إلكتروني فاخر</button>
-                    <button type="button"
-                        onclick="setPrompt('نظام فوترة إلكترونية متوافق مع هيئة الزكاة والضريبة ZATCA')">فوترة
-                        ZATCA</button>
-                    <button type="button" onclick="setPrompt('أريد بناء منصة تعليمية')">منصة تعليمية</button>
-                    <button type="button" onclick="setPrompt('تطوير نظام إدارة مبيعات')">نظام مبيعات</button>
-                    <button type="button" onclick="setPrompt('أريد بناء متجر إلكتروني ذكي')">متجر إلكتروني</button>
-                    <button type="button" onclick="setPrompt('استعراض باقات وتكلفة الأسعار')">عرض الأسعار</button>
+                <div class="quick-prompts" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                    <span style="font-weight: bold; color: #333;">تجربة سريعة:</span>
+                    <button type="button" onclick="setPrompt('أريد بناء منصة تعليمية')" style="padding: 8px 15px; background: #e9ecef; border: none; border-radius: 5px; cursor: pointer; color: #333;">منصة تعليمية</button>
+                    <button type="button" onclick="setPrompt('تطوير نظام إدارة مبيعات')" style="padding: 8px 15px; background: #e9ecef; border: none; border-radius: 5px; cursor: pointer; color: #333;">نظام مبيعات</button>
                 </div>
             </div>
         </section>
