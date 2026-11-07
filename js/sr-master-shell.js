@@ -428,7 +428,11 @@
         });
     }
 
-    // 5.3 Dynamic Rotating Hero Headline Engine (Mohammad Salim Aziza & S&R CoreSync Pillars)
+    // 5.3 Dynamic Rotating Hero Headline Engine — with Bullet Dot Navigator
+    // Phase 157: Extracted currentHeroIndex + heroJumpToTitle() for dot control
+    var currentHeroIndex = 0;
+    var heroTitleInterval = null;
+
     function initHeroDynamicTitleRotator() {
         const titleEl = document.getElementById('heroRotatingText');
         if (!titleEl) return;
@@ -440,23 +444,155 @@
             'تصميم المتاجر الإلكترونية الفاخرة والهويات البصرية'
         ];
 
-        let index = 0;
-        setInterval(() => {
+        function updateDots(idx) {
+            var dots = document.querySelectorAll('#heroDotIndicators .hero-title-dot');
+            dots.forEach(function(d, i) {
+                d.classList.toggle('active', i === idx);
+            });
+        }
+
+        function rotateTo(idx) {
             titleEl.style.opacity = '0';
             titleEl.style.transform = 'translateY(10px)';
-            setTimeout(() => {
-                index = (index + 1) % titles.length;
-                titleEl.textContent = titles[index];
+            setTimeout(function() {
+                currentHeroIndex = idx;
+                titleEl.textContent = titles[currentHeroIndex];
                 titleEl.style.opacity = '1';
                 titleEl.style.transform = 'translateY(0)';
+                updateDots(currentHeroIndex);
             }, 350);
-        }, 3600);
+        }
+
+        function startAutoRotate() {
+            heroTitleInterval = setInterval(function() {
+                rotateTo((currentHeroIndex + 1) % titles.length);
+            }, 3600);
+        }
+
+        // Expose global jump function for dot buttons
+        window.heroJumpToTitle = function(idx) {
+            if (heroTitleInterval) clearInterval(heroTitleInterval);
+            rotateTo(idx);
+            startAutoRotate();
+        };
+
+        startAutoRotate();
+    }
+
+    // 5.4 Orbital Emblem Parallax — Mouse-driven 3D tilt
+    function initEmblemParallax() {
+        var stage = document.getElementById('heroEmblemStage');
+        var card  = document.getElementById('heroEmblemCard');
+        if (!stage || !card) return;
+
+        stage.addEventListener('mousemove', function(e) {
+            var rect = stage.getBoundingClientRect();
+            var cx = rect.left + rect.width  / 2;
+            var cy = rect.top  + rect.height / 2;
+            var dx = (e.clientX - cx) / (rect.width  / 2);
+            var dy = (e.clientY - cy) / (rect.height / 2);
+            var rotX = (-dy * 12).toFixed(2);
+            var rotY = ( dx * 12).toFixed(2);
+            card.style.transform = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) scale(1.03)';
+        });
+
+        stage.addEventListener('mouseleave', function() {
+            card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+    }
+
+    // 5.5 Studio Peek Modal Engine — Instant Preview for Sector Chips
+    var studioPeekData = {
+        fintech: {
+            icon:  '💳',
+            badge: 'FinTech & Payment',
+            title: 'حلول FinTech وبوابات الدفع الذكية',
+            desc:  'بناء بوابات دفع مؤسسية، أنظمة EFT/SWIFT، محافظ رقمية، وتكامل شامل مع أنظمة المحاسبة الأوروبية BTW/EU.',
+            url:   '#services-section'
+        },
+        erp: {
+            icon:  '🏢',
+            badge: 'Enterprise ERP',
+            title: 'نظام CoreSync ERP المؤسسي المتكامل',
+            desc:  'منظومة إدارة موارد المؤسسات الكاملة: مشتريات، مخازن، HR، محاسبة، CRM — مُصممة للبيئات الأوروبية والخليجية.',
+            url:   '#services-section'
+        },
+        ai: {
+            icon:  '🤖',
+            badge: 'AI Agents Studio',
+            title: 'وكلاء الذكاء الاصطناعي والأتمتة الذكية',
+            desc:  'بناء وكلاء AI مُدرَّبين على بيانات مؤسستك: خدمة عملاء، تحليل عقود، تقارير مالية، وأتمتة سير العمل بالكامل.',
+            url:   '#services-section'
+        },
+        supply: {
+            icon:  '📦',
+            badge: 'Supply Chain & Logistics',
+            title: 'لوجستيات ذكية وسلاسل إمداد رقمية',
+            desc:  'تتبع الشحنات لحظياً، تكامل ERP+WMS، تحسين المخزون بالذكاء الاصطناعي، وربط موردين متعددين في منصة واحدة.',
+            url:   '#services-section'
+        },
+        store: {
+            icon:  '🛒',
+            badge: 'E-Commerce Studio',
+            title: 'متاجر إلكترونية فاخرة وهويات بصرية',
+            desc:  'تصميم وبناء متاجر إلكترونية احترافية بأعلى المعايير الأوروبية، مع هوية بصرية متكاملة وتجربة مستخدم استثنائية.',
+            url:   '#store-section'
+        },
+        clgid: {
+            icon:  '🏛️',
+            badge: 'CLGID Center — The Hague',
+            title: 'مركز CLGID لاهاي للحوكمة والاستثمار',
+            desc:  'مركز متخصص في حوكمة المؤسسات الدولية، الامتثال الأوروبي، وتسهيل الاستثمار الأجنبي في هولندا ومنطقة البنيلوكس.',
+            url:   'https://clgid-governance.ai.studio/'
+        }
+    };
+
+    function showStudioPeek(key) {
+        var data = studioPeekData[key];
+        if (!data) return;
+
+        document.getElementById('srPeekIcon').textContent  = data.icon;
+        document.getElementById('srPeekBadge').textContent = data.badge;
+        document.getElementById('srPeekTitle').textContent = data.title;
+        document.getElementById('srPeekDesc').textContent  = data.desc;
+
+        var btnGo = document.getElementById('srPeekBtnGo');
+        btnGo.onclick = function() {
+            closeStudioPeek();
+            setTimeout(function() {
+                if (data.url.startsWith('http')) {
+                    window.open(data.url, '_blank', 'noopener');
+                } else {
+                    var target = document.querySelector(data.url);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    else window.location.href = data.url;
+                }
+            }, 320);
+        };
+
+        var overlay = document.getElementById('srStudioPeekOverlay');
+        if (overlay) {
+            overlay.style.display = 'flex';
+            requestAnimationFrame(function() {
+                overlay.classList.add('sr-peek-visible');
+            });
+        }
+    }
+
+    function closeStudioPeek() {
+        var overlay = document.getElementById('srStudioPeekOverlay');
+        if (!overlay) return;
+        overlay.classList.remove('sr-peek-visible');
+        setTimeout(function() { overlay.style.display = 'none'; }, 320);
     }
 
     // Expose globally to window
-    window.setPrompt = setPrompt;
-    window.analyzeIdea = analyzeIdea;
-    window.closeRouteCard = closeRouteCard;
+    window.setPrompt        = setPrompt;
+    window.analyzeIdea      = analyzeIdea;
+    window.closeRouteCard   = closeRouteCard;
+    window.showStudioPeek   = showStudioPeek;
+    window.closeStudioPeek  = closeStudioPeek;
+    // heroJumpToTitle exposed inside initHeroDynamicTitleRotator()
 
     // Boot on DOMContentLoaded or immediately if ready
     if (document.readyState === 'loading') {
@@ -465,12 +601,14 @@
             autoEnhanceNavbar();
             initAnimatedPlaceholder();
             initHeroDynamicTitleRotator();
+            initEmblemParallax();
         });
     } else {
         createMasterDrawer();
         autoEnhanceNavbar();
         initAnimatedPlaceholder();
         initHeroDynamicTitleRotator();
+        initEmblemParallax();
     }
 
 })();
