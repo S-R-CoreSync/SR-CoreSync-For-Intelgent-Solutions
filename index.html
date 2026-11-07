@@ -2120,13 +2120,15 @@
                                         </div>
                                     </div>
 
-                                    <!-- روابط البوابات والاستشارات المدمجة -->
+                                    <!-- روابط البوابات والاستشارات المدمجة مع مفتاح الصوت اللمسي -->
                                     <div class="hero-quick-portals-strip">
                                         <a href="developer-portal.html" class="hero-quick-portal-link">بوابة المطورين ⚡</a>
                                         <span class="hero-portal-sep">•</span>
                                         <a href="partner-portal.html" class="hero-quick-portal-link">بوابة الوكلاء والتراخيص 💼</a>
                                         <span class="hero-portal-sep">•</span>
                                         <button type="button" class="hero-quick-portal-btn" data-sr-call="openExecutiveBookingModal">حجز استشارة خاصة 👔</button>
+                                        <span class="hero-portal-sep">•</span>
+                                        <button type="button" class="hero-sound-toggle-btn" id="srSoundToggleBtn" onclick="toggleSoundMute()" title="تبديل المؤثرات الصوتية اللمسية">🔊 صوت الواجهة</button>
                                     </div>
 
                                     <!-- رقاقات التخصصات السريعة في صف واحد متناسق -->
@@ -11003,6 +11005,13 @@
                 <button type="button" class="sr-peek-close-corner" onclick="closeStudioPeek()" aria-label="إغلاق النافذة">✕</button>
             </div>
 
+            <!-- معرض التبويبات المصغر للمعاينة الثلاثية (Mini Gallery Tabs - Phase 159) -->
+            <div class="sr-peek-tabs-row" id="srPeekTabs" role="tablist" aria-label="أوضاع المعاينة للمنظومة">
+                <button type="button" class="sr-peek-tab-btn active" data-tab="dashboard" onclick="switchStudioPeekTab('dashboard')">🖥️ لوحة الإدارة</button>
+                <button type="button" class="sr-peek-tab-btn" data-tab="analytics" onclick="switchStudioPeekTab('analytics')">📊 التقارير والامتثال</button>
+                <button type="button" class="sr-peek-tab-btn" data-tab="mobile" onclick="switchStudioPeekTab('mobile')">📱 تطبيق الجوال</button>
+            </div>
+
             <!-- بطاقة المعاينة المرئية الحية (Live Visual Showcase Card) -->
             <div class="sr-peek-visual-box" id="srPeekVisualBox">
                 <img id="srPeekImg" src="./assets/service-erp-finance-3d.webp" alt="معاينة المنصة" class="sr-peek-thumb-img" loading="lazy">
@@ -11023,6 +11032,66 @@
             <div class="sr-peek-actions">
                 <button class="sr-peek-btn-go" id="srPeekBtnGo">🚀 استعراض الاستوديو بالكامل</button>
                 <button class="sr-peek-btn-close" onclick="closeStudioPeek()">إغلاق</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Scope & Timeline Estimator Modal — حاسبة التقدير الذكي والنطاق المعماري (Phase 159) -->
+    <div id="srAiEstimateModal" role="dialog" aria-modal="true" aria-label="تقدير مشروع الذكاء الاصطناعي" onclick="if(event.target===this)closeAiEstimateModal()">
+        <div class="sr-ai-estimate-card" id="srAiEstimateCard">
+            <div class="sr-estimate-header">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="sr-estimate-icon">✨</span>
+                    <div>
+                        <span class="sr-estimate-badge">S&amp;R CoreSync AI Architecture Engine</span>
+                        <h2 class="sr-estimate-title" id="srEstTitle">تحليل النطاق المعماري والجدول الزمني</h2>
+                    </div>
+                </div>
+                <button type="button" class="sr-peek-close-corner" onclick="closeAiEstimateModal()" aria-label="إغلاق التقدير">✕</button>
+            </div>
+
+            <!-- بطاقة الفكرة الأصلية المدخلة -->
+            <div class="sr-estimate-user-query">
+                <span class="sr-query-label">الفكرة المحللة:</span>
+                <p class="sr-query-text" id="srEstQueryText">"..."</p>
+            </div>
+
+            <!-- شبكة التقدير الفوري (Metrics Grid) -->
+            <div class="sr-estimate-grid">
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">التصنيف المعماري</span>
+                    <strong class="sr-est-val" id="srEstClassification">منظومة سحابية متقدمة</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">الجدول الزمني للإطلاق</span>
+                    <strong class="sr-est-val sr-val-gold" id="srEstTimeline">3 - 5 أسابيع</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">معايير الامتثال والأمان</span>
+                    <strong class="sr-est-val sr-val-emerald" id="srEstCompliance">GDPR + 21% BTW</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">المعمارية الموصى بها</span>
+                    <strong class="sr-est-val" id="srEstStack">Next.js + CoreSync Cloud</strong>
+                </div>
+            </div>
+
+            <!-- خطة الإطلاق المرحلية المسرعة -->
+            <div class="sr-estimate-phases">
+                <span class="sr-phases-label">مراحل التنفيذ السيادية:</span>
+                <div class="sr-phase-steps">
+                    <div class="sr-phase-step"><span class="step-num">1</span><span>هندسة النواة والبيانات</span></div>
+                    <div class="sr-phase-sep">←</div>
+                    <div class="sr-phase-step"><span class="step-num">2</span><span>تطوير الواجهة وبوابات الربط</span></div>
+                    <div class="sr-phase-sep">←</div>
+                    <div class="sr-phase-step"><span class="step-num">3</span><span>التدقيق والتشغيل الحي</span></div>
+                </div>
+            </div>
+
+            <!-- أزرار الإجراءات التنفيذية -->
+            <div class="sr-estimate-actions">
+                <button type="button" class="sr-peek-btn-go" onclick="closeAiEstimateModal(); window.location.href='#services-section';">👔 حجز جلسة تدقيق معماري خاصة</button>
+                <a href="demo.html" class="sr-peek-btn-secondary" onclick="closeAiEstimateModal()">⚡ تجربة النظام السحابي فوراً</a>
             </div>
         </div>
     </div>

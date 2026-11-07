@@ -395,37 +395,8 @@
             return;
         }
 
-        let targetId = 'services-section';
-        let fallbackUrl = './index.html#services-section';
-        let routeTitle = 'فرع القيادة والخدمات المؤسسية الشاملة';
-        let routeDesc = 'تحليل الذكاء الاصطناعي: فكرة واعدة واستراتيجية! جاري توجيهك إلى فرع القيادة والخدمات للاستشارة الشاملة وحلول التحول الرقمي.';
-        let routeBadge = 'الاستشارات الشاملة';
-        let routeIcon = '🏛️';
-
-        if (idea.includes('متجر') || idea.includes('بيع') || idea.includes('منتج')) {
-            targetId = 'store-section';
-            fallbackUrl = './index.html#store-section';
-            routeTitle = 'استوديو المتاجر والتجارة الإلكترونية';
-            routeDesc = 'تحليل الذكاء الاصطناعي: فكرتك تميل نحو التجارة الإلكترونية. جاري تحويلك إلى المتجر والخدمات المرتبطة.';
-            routeBadge = 'التجارة الإلكترونية';
-            routeIcon = '🛍️';
-        } else if (idea.includes('سعر') || idea.includes('تكلفة') || idea.includes('باقة')) {
-            targetId = 'pricing-section';
-            fallbackUrl = './index.html#pricing-section';
-            routeTitle = 'خطط الأسعار والباقات المؤسسية';
-            routeDesc = 'تحليل الذكاء الاصطناعي: تم تصنيف مشروعك، جاري عرض خطط الأسعار والخيارات المناسبة لك.';
-            routeBadge = 'خطط الأسعار';
-            routeIcon = '💎';
-        }
-
-        showCustomRouteCard({
-            badge: routeBadge,
-            icon: routeIcon,
-            title: routeTitle,
-            description: routeDesc,
-            targetId: targetId,
-            fallbackUrl: fallbackUrl
-        });
+        // Trigger AI Scope & Timeline Estimator Modal (Phase 159)
+        openAiEstimatorModal(idea);
     }
 
     // 5.3 Dynamic Rotating Hero Headline Engine — with Bullet Dot Navigator
@@ -471,6 +442,7 @@
 
         // Expose global jump function for dot buttons
         window.heroJumpToTitle = function(idx) {
+            playHaptic('tap');
             if (heroTitleInterval) clearInterval(heroTitleInterval);
             rotateTo(idx);
             startAutoRotate();
@@ -501,93 +473,255 @@
         });
     }
 
-    // 5.5 Studio Peek Modal Engine — Rich Visual Showcase for Sector Chips (Phase 158)
+    // 5.5 Web Audio Luxury Haptic Sound Engine (Phase 159)
+    var isSoundMuted = localStorage.getItem('sr_sound_muted') === 'true';
+    var audioCtx = null;
+
+    function getAudioContext() {
+        if (!audioCtx) {
+            var AudioContextClass = window.AudioContext || window.webkitAudioContext;
+            if (AudioContextClass) {
+                audioCtx = new AudioContextClass();
+            }
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+        return audioCtx;
+    }
+
+    function playHaptic(type) {
+        if (isSoundMuted) return;
+        try {
+            var ctx = getAudioContext();
+            if (!ctx) return;
+
+            var osc = ctx.createOscillator();
+            var gain = ctx.createGain();
+            var now = ctx.currentTime;
+
+            osc.type = 'sine';
+
+            if (type === 'tap') {
+                osc.frequency.setValueAtTime(1150, now);
+                osc.frequency.exponentialRampToValueAtTime(750, now + 0.05);
+                gain.gain.setValueAtTime(0.04, now);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.06);
+                osc.start(now);
+                osc.stop(now + 0.07);
+            } else if (type === 'open') {
+                osc.frequency.setValueAtTime(650, now);
+                osc.frequency.exponentialRampToValueAtTime(1350, now + 0.12);
+                gain.gain.setValueAtTime(0.05, now);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.14);
+                osc.start(now);
+                osc.stop(now + 0.15);
+            } else if (type === 'close') {
+                osc.frequency.setValueAtTime(900, now);
+                osc.frequency.exponentialRampToValueAtTime(450, now + 0.08);
+                gain.gain.setValueAtTime(0.035, now);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.09);
+                osc.start(now);
+                osc.stop(now + 0.1);
+            } else {
+                // switch tab
+                osc.frequency.setValueAtTime(980, now);
+                osc.frequency.exponentialRampToValueAtTime(1300, now + 0.06);
+                gain.gain.setValueAtTime(0.04, now);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.07);
+                osc.start(now);
+                osc.stop(now + 0.08);
+            }
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+        } catch (e) {
+            // Audio silent fallback
+        }
+    }
+
+    function toggleSoundMute() {
+        isSoundMuted = !isSoundMuted;
+        localStorage.setItem('sr_sound_muted', isSoundMuted ? 'true' : 'false');
+        updateMuteButtonUI();
+        if (!isSoundMuted) {
+            playHaptic('open');
+        }
+    }
+
+    function updateMuteButtonUI() {
+        var btn = document.getElementById('srSoundToggleBtn');
+        if (!btn) return;
+        if (isSoundMuted) {
+            btn.classList.add('is-muted');
+            btn.innerHTML = '🔇 الصوت مكتوم';
+            btn.title = 'تفعيل المؤثرات الصوتية اللمسية';
+        } else {
+            btn.classList.remove('is-muted');
+            btn.innerHTML = '🔊 صوت الواجهة';
+            btn.title = 'كتم المؤثرات الصوتية اللمسية';
+        }
+    }
+
+    // 5.6 Studio Peek Modal Engine — Multi-View Gallery Tabs (Phase 158 & 159)
+    var currentStudioPeekKey = 'erp';
+    var currentStudioPeekTab = 'dashboard';
+
     var studioPeekData = {
         fintech: {
             icon:  '💳',
             badge: 'FinTech & Sovereign Payments',
             title: 'حلول FinTech وبوابات الدفع الذكية',
             desc:  'بناء بوابات دفع مؤسسية، أنظمة EFT/SWIFT، محافظ رقمية، وتكامل شامل مع معايير الضرائب والفوترة الأوروبية BTW 21%.',
-            img:   './assets/service-erp-finance-3d.webp',
-            kpi:   '🔒 أمان مصرفي وتشفير KMS 100%',
             tags:  ['SEPA & SWIFT', 'BTW / 21% Tax', 'Mollie & Stripe', 'Smart Wallet', 'ISO 27001'],
-            url:   '#services-section'
+            url:   '#services-section',
+            views: {
+                dashboard: {
+                    img: './assets/service-erp-finance-3d.webp',
+                    kpi: '🔒 أمان مصرفي وتشفير KMS 100%'
+                },
+                analytics: {
+                    img: './assets/branding/live_compliance_center_showcase_snapshot.png',
+                    kpi: '📊 تدقيق ضريبي هولندي BTW معتمد'
+                },
+                mobile: {
+                    img: './assets/work-civicsync-hero.webp',
+                    kpi: '📱 محفظة ذكية ودفع فوري باللمس'
+                }
+            }
         },
         erp: {
             icon:  '🏢',
             badge: 'Enterprise CoreSync ERP',
             title: 'منظومة CoreSync ERP المؤسسية المتكاملة',
             desc:  'نظام تخطيط موارد المؤسسات الشامل: مشتريات، مخازن ذكية WMS، موارد بشرية، ومحاسبة سحابية متعددة الفروع والعملات.',
-            img:   './assets/branding/live_erp_operations_showcase_snapshot.png',
-            kpi:   '⚡ جاهزية تشغيلية سحابية 99.99%',
             tags:  ['Multi-Tenant Cloud', 'Automated WMS', 'HR & Payroll', 'Consolidated Ledger', 'Real-time Sync'],
-            url:   '#services-section'
+            url:   '#services-section',
+            views: {
+                dashboard: {
+                    img: './assets/branding/live_erp_operations_showcase_snapshot.png',
+                    kpi: '⚡ جاهزية تشغيلية سحابية 99.99%'
+                },
+                analytics: {
+                    img: './assets/branding/live_kpi_analytics_showcase_snapshot.png',
+                    kpi: '📈 تحليلات مالية وتنفيذية لحظية'
+                },
+                mobile: {
+                    img: './assets/work-bakery-pos.webp',
+                    kpi: '📱 نقاط بيع سحابية POS متزامنة'
+                }
+            }
         },
         ai: {
             icon:  '🤖',
             badge: 'Autonomous AI Agents',
             title: 'وكلاء الذكاء الاصطناعي والأتمتة الذاتية',
             desc:  'تصميم وتدريب وكلاء ذكاء اصطناعي سياديين مخصصين لبيانات شركتك: دعم عملاء فوري، تحليل عقود، وأتمتة العمليات المعقدة.',
-            img:   './assets/service-ai-automation-3d.webp',
-            kpi:   '⏱️ زمن معالجة ذكية < 280ms',
             tags:  ['Autonomous RAG', 'Multi-Agent Swarm', 'Document OCR', 'Workflow Auto-Pilot', 'Zero-Data-Leak'],
-            url:   '#services-section'
+            url:   '#services-section',
+            views: {
+                dashboard: {
+                    img: './assets/service-ai-automation-3d.webp',
+                    kpi: '⏱️ زمن معالجة ذكية < 280ms'
+                },
+                analytics: {
+                    img: './assets/branding/live_stress_testing_showcase_snapshot.png',
+                    kpi: '🛡️ أمان سيادي دون تدريب نماذج عامة'
+                },
+                mobile: {
+                    img: './assets/work-healthbridge-hero.webp',
+                    kpi: '📱 مساعد ذكي محمول مدار بالصوت'
+                }
+            }
         },
         supply: {
             icon:  '📦',
             badge: 'Intelligent Supply Chain',
             title: 'لوجستيات ذكية وسلاسل إمداد رقمية',
             desc:  'تتبع حركة الأساطيل والشحنات لحظياً عبر أوروبا والشرق الأوسط، إدارة الموردين، والتنبؤ التلقائي باحتياجات المخزون.',
-            img:   './assets/branding/live_reseller_portal_showcase_snapshot.png',
-            kpi:   '📦 تكامل لوجستي عبر القارات 100%',
             tags:  ['GPS Fleet Live', 'Predictive Stock', 'B2B Vendor Portal', 'Dynamic Route AI', 'EDI Integration'],
-            url:   '#services-section'
+            url:   '#services-section',
+            views: {
+                dashboard: {
+                    img: './assets/branding/live_reseller_portal_showcase_snapshot.png',
+                    kpi: '📦 تكامل لوجستي عبر القارات 100%'
+                },
+                analytics: {
+                    img: './assets/branding/live_kms_backup_showcase_snapshot.png',
+                    kpi: '🔄 تزامن مخزون عبر 24 مركز توزيع'
+                },
+                mobile: {
+                    img: './assets/work-omnibakery-hero.webp',
+                    kpi: '📱 تطبيق سائقين ومسح باركود ذكي'
+                }
+            }
         },
         store: {
             icon:  '🛒',
             badge: 'Luxury E-Commerce & Identity',
             title: 'متاجر إلكترونية فاخرة وهويات بصرية ملكية',
             desc:  'تصميم متاجر رقمية عالية التحويل بتجربة مستخدم سينمائية استثنائية، وتصميم هويات بصرية ثلاثية الأبعاد تعزز مكانة علامتك.',
-            img:   './assets/work-1.webp',
-            kpi:   '🚀 سرعة أداء واستجابة 99/100',
             tags:  ['Headless Commerce', '3D Showcase', 'Omni-Channel', 'Tailored UI/UX', 'Conversion Optimized'],
-            url:   '#store-section'
+            url:   '#store-section',
+            views: {
+                dashboard: {
+                    img: './assets/work-1.webp',
+                    kpi: '🚀 سرعة أداء واستجابة 99/100'
+                },
+                analytics: {
+                    img: './assets/work-2.webp',
+                    kpi: '💎 معدل تحويل مبيعات مرتفع'
+                },
+                mobile: {
+                    img: './assets/work-3.webp',
+                    kpi: '📱 تجربة تسوق جوال سينمائية'
+                }
+            }
         },
         clgid: {
             icon:  '🏛️',
             badge: 'CLGID Center — The Hague',
             title: 'مركز CLGID لاهاي للحوكمة والاستثمار الدولي',
             desc:  'مركز دولي رائد في حوكمة المنظومات، الامتثال للأنظمة الأوروبية والضريبية، وتسهيل تأسيس وتوسع الشركات في هولندا والاتحاد الأوروبي.',
-            img:   './assets/branding/live_compliance_center_showcase_snapshot.png',
-            kpi:   '🏛️ اعتماد أوروبي وحوكمة دولية كاملة',
             tags:  ['The Hague HQ', 'EU Directives', 'GDPR Sovereign', 'Dutch Chamber (KvK)', 'Cross-Border Deals'],
-            url:   'https://clgid-governance.ai.studio/'
+            url:   'https://clgid-governance.ai.studio/',
+            views: {
+                dashboard: {
+                    img: './assets/branding/live_compliance_center_showcase_snapshot.png',
+                    kpi: '🏛️ اعتماد أوروبي وحوكمة دولية كاملة'
+                },
+                analytics: {
+                    img: './assets/branding/coresync-emblem-8k.png',
+                    kpi: '📜 مطابقة 100% مع تشريعات الاتحاد'
+                },
+                mobile: {
+                    img: './assets/work-web-cleaning.webp',
+                    kpi: '📱 بوابة مستثمرين دولية آمنة'
+                }
+            }
         }
     };
 
     function showStudioPeek(key) {
+        playHaptic('open');
         var data = studioPeekData[key];
         if (!data) return;
+
+        currentStudioPeekKey = key;
+        currentStudioPeekTab = 'dashboard';
 
         var iconEl  = document.getElementById('srPeekIcon');
         var badgeEl = document.getElementById('srPeekBadge');
         var titleEl = document.getElementById('srPeekTitle');
         var descEl  = document.getElementById('srPeekDesc');
-        var imgEl   = document.getElementById('srPeekImg');
-        var kpiEl   = document.getElementById('srPeekKpi');
         var tagsEl  = document.getElementById('srPeekTags');
 
         if (iconEl)  iconEl.textContent  = data.icon;
         if (badgeEl) badgeEl.textContent = data.badge;
         if (titleEl) titleEl.textContent = data.title;
         if (descEl)  descEl.textContent  = data.desc;
-        if (imgEl && data.img) {
-            imgEl.src = data.img;
-            imgEl.alt = data.title;
-        }
-        if (kpiEl && data.kpi) {
-            kpiEl.textContent = data.kpi;
-        }
+
+        applyStudioPeekView(currentStudioPeekKey, currentStudioPeekTab);
 
         if (tagsEl && data.tags) {
             tagsEl.innerHTML = '';
@@ -599,9 +733,16 @@
             });
         }
 
+        // Reset tabs state
+        var tabBtns = document.querySelectorAll('#srPeekTabs .sr-peek-tab-btn');
+        tabBtns.forEach(function(btn) {
+            btn.classList.toggle('active', btn.getAttribute('data-tab') === 'dashboard');
+        });
+
         var btnGo = document.getElementById('srPeekBtnGo');
         if (btnGo) {
             btnGo.onclick = function() {
+                playHaptic('tap');
                 closeStudioPeek();
                 setTimeout(function() {
                     if (data.url.startsWith('http')) {
@@ -624,19 +765,128 @@
         }
     }
 
+    function applyStudioPeekView(secKey, tabKey) {
+        var data = studioPeekData[secKey];
+        if (!data || !data.views) return;
+        var view = data.views[tabKey] || data.views['dashboard'];
+        if (!view) return;
+
+        var imgEl = document.getElementById('srPeekImg');
+        var kpiEl = document.getElementById('srPeekKpi');
+
+        if (imgEl && view.img) {
+            imgEl.style.opacity = '0.4';
+            imgEl.style.transform = 'scale(0.98)';
+            setTimeout(function() {
+                imgEl.src = view.img;
+                imgEl.alt = data.title;
+                imgEl.style.opacity = '1';
+                imgEl.style.transform = 'scale(1)';
+            }, 120);
+        }
+
+        if (kpiEl && view.kpi) {
+            kpiEl.textContent = view.kpi;
+        }
+    }
+
+    function switchStudioPeekTab(tabKey) {
+        playHaptic('switch');
+        currentStudioPeekTab = tabKey;
+
+        var tabBtns = document.querySelectorAll('#srPeekTabs .sr-peek-tab-btn');
+        tabBtns.forEach(function(btn) {
+            btn.classList.toggle('active', btn.getAttribute('data-tab') === tabKey);
+        });
+
+        applyStudioPeekView(currentStudioPeekKey, currentStudioPeekTab);
+    }
+
     function closeStudioPeek() {
+        playHaptic('close');
         var overlay = document.getElementById('srStudioPeekOverlay');
         if (!overlay) return;
         overlay.classList.remove('sr-peek-visible');
         setTimeout(function() { overlay.style.display = 'none'; }, 320);
     }
 
+    // 5.7 AI Scope & Timeline Estimator Engine (Phase 159)
+    function openAiEstimatorModal(query) {
+        playHaptic('open');
+        var text = (query || '').toLowerCase();
+
+        var classification = 'هندسة منظومة رقمية سحابية مخصصة';
+        var timeline = '4 - 6 أسابيع';
+        var compliance = 'معايير الاتحاد الأوروبي + GDPR';
+        var stack = 'Next.js 15 + CoreSync Cloud';
+
+        if (text.includes('متجر') || text.includes('بيع') || text.includes('منتج') || text.includes('تسوق') || text.includes('سلة')) {
+            classification = 'منصة تجارة إلكترونية فاخرة متكاملة';
+            timeline = '3 - 5 أسابيع';
+            compliance = 'EU GDPR + BTW 21% + SEPA/Mollie';
+            stack = 'Headless Next.js + CoreSync Commerce';
+        } else if (text.includes('سعر') || text.includes('تكلفة') || text.includes('باقة') || text.includes('اشتراك')) {
+            classification = 'حزمة التحول الرقمي المؤسسي الشامل';
+            timeline = '2 - 4 أسابيع';
+            compliance = 'ضمان تكلفة ثابت مع عائد استثماري ROI موثق';
+            stack = 'CoreSync Enterprise Sovereign Bundle';
+        } else if (text.includes('ذكاء') || text.includes('ai') || text.includes('وكيل') || text.includes('بوت') || text.includes('أتمتة')) {
+            classification = 'شبكة وكلاء ذكاء اصطناعي وأتمتة سيادية';
+            timeline = '4 - 6 أسابيع';
+            compliance = 'Zero Data Leakage + ISO 27001 Cloud';
+            stack = 'Autonomous RAG + Private Multi-Agent Swarm';
+        } else if (text.includes('نظام') || text.includes('إدارة') || text.includes('erp') || text.includes('مخازن') || text.includes('محاسبة')) {
+            classification = 'منظومة CoreSync ERP المؤسسية الشاملة';
+            timeline = '6 - 8 أسابيع';
+            compliance = 'حوكمة أوروبية + معايير هولندية KvK & Belasting';
+            stack = 'PostgreSQL Cluster + CoreSync ERP Core';
+        } else if (text.includes('شحن') || text.includes('توصيل') || text.includes('لوجست') || text.includes('إمداد')) {
+            classification = 'شبكة لوجستيات وسلاسل إمداد رقمية';
+            timeline = '5 - 7 أسابيع';
+            compliance = 'تتبع أساطيل أوروبي + أمان شحنات متقدم';
+            stack = 'Dynamic Route AI + Fleet Telematics Engine';
+        }
+
+        var qEl = document.getElementById('srEstQueryText');
+        var cEl = document.getElementById('srEstClassification');
+        var tEl = document.getElementById('srEstTimeline');
+        var cmpEl = document.getElementById('srEstCompliance');
+        var sEl = document.getElementById('srEstStack');
+
+        if (qEl) qEl.textContent = '« ' + (query || 'فكرة استراتيجية قيد التحليل') + ' »';
+        if (cEl) cEl.textContent = classification;
+        if (tEl) tEl.textContent = timeline;
+        if (cmpEl) cmpEl.textContent = compliance;
+        if (sEl) sEl.textContent = stack;
+
+        var modal = document.getElementById('srAiEstimateModal');
+        if (modal) {
+            modal.style.display = 'flex';
+            requestAnimationFrame(function() {
+                modal.classList.add('sr-estimate-visible');
+            });
+        }
+    }
+
+    function closeAiEstimateModal() {
+        playHaptic('close');
+        var modal = document.getElementById('srAiEstimateModal');
+        if (!modal) return;
+        modal.classList.remove('sr-estimate-visible');
+        setTimeout(function() { modal.style.display = 'none'; }, 320);
+    }
+
     // Expose globally to window
-    window.setPrompt        = setPrompt;
-    window.analyzeIdea      = analyzeIdea;
-    window.closeRouteCard   = closeRouteCard;
-    window.showStudioPeek   = showStudioPeek;
-    window.closeStudioPeek  = closeStudioPeek;
+    window.setPrompt              = setPrompt;
+    window.analyzeIdea            = analyzeIdea;
+    window.closeRouteCard         = closeRouteCard;
+    window.showStudioPeek         = showStudioPeek;
+    window.closeStudioPeek        = closeStudioPeek;
+    window.switchStudioPeekTab    = switchStudioPeekTab;
+    window.openAiEstimatorModal   = openAiEstimatorModal;
+    window.closeAiEstimateModal   = closeAiEstimateModal;
+    window.toggleSoundMute        = toggleSoundMute;
+    window.playHaptic             = playHaptic;
     // heroJumpToTitle exposed inside initHeroDynamicTitleRotator()
 
     // Boot on DOMContentLoaded or immediately if ready
@@ -646,11 +896,16 @@
         initAnimatedPlaceholder();
         initHeroDynamicTitleRotator();
         initEmblemParallax();
+        updateMuteButtonUI();
 
         // Support preview hash trigger for visual audits (immediate invocation)
-        if (window.location.hash && window.location.hash.indexOf('peek-') !== -1) {
-            var peekKey = window.location.hash.replace('#peek-', '').trim();
-            showStudioPeek(peekKey);
+        if (window.location.hash) {
+            if (window.location.hash.indexOf('peek-') !== -1) {
+                var peekKey = window.location.hash.replace('#peek-', '').trim();
+                showStudioPeek(peekKey);
+            } else if (window.location.hash.indexOf('estimate') !== -1) {
+                openAiEstimatorModal('أريد بناء منصة تجارة إلكترونية فاخرة متكاملة');
+            }
         }
     }
 

@@ -1342,3 +1342,328 @@ header.header,
         justify-content: center;
     }
 }
+
+/* ============================================================
+   PHASE 159 — Web Audio Haptics + Gallery Tabs + AI Estimator
+   S&R CoreSync Sovereign Design System
+   ============================================================ */
+
+/* ── Hero Sound Toggle Button ── */
+.hero-sound-toggle-btn {
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #f3dfba;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hero-sound-toggle-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+}
+
+.hero-sound-toggle-btn.is-muted {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #94a3b8;
+}
+
+/* ── Mini Gallery Tabs inside Studio Peek Card ── */
+.sr-peek-tabs-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sr-peek-tab-btn {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.sr-peek-tab-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.sr-peek-tab-btn.active {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: rgba(212, 175, 55, 0.45);
+    color: #f3dfba;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 12px rgba(212, 175, 55, 0.2);
+}
+
+/* ── AI Scope & Timeline Estimator Modal ── */
+#srAiEstimateModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.32s ease, visibility 0.32s ease;
+}
+
+#srAiEstimateModal.sr-estimate-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sr-ai-estimate-card {
+    direction: rtl;
+    text-align: right;
+    background: linear-gradient(145deg,
+        rgba(15, 24, 38, 0.98) 0%,
+        rgba(18, 27, 44, 0.96) 50%,
+        rgba(10, 16, 28, 0.99) 100%
+    );
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 24px;
+    padding: 30px 32px 26px;
+    max-width: 600px;
+    width: 94%;
+    box-shadow:
+        0 0 80px rgba(212, 175, 55, 0.2),
+        0 30px 80px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    transform: translateY(26px) scale(0.95);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+#srAiEstimateModal.sr-estimate-visible .sr-ai-estimate-card {
+    transform: translateY(0) scale(1);
+}
+
+.sr-estimate-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 14px;
+}
+
+.sr-estimate-icon {
+    font-size: 2.2rem;
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.7));
+}
+
+.sr-estimate-badge {
+    display: inline-block;
+    color: #d4af37;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.sr-estimate-title {
+    font-size: 1.28rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 2px 0 0;
+}
+
+/* User query strip */
+.sr-estimate-user-query {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+}
+
+.sr-query-label {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.sr-query-text {
+    font-size: 0.88rem;
+    color: #f3dfba;
+    margin: 0;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Metrics Grid */
+.sr-estimate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.sr-est-metric-card {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sr-est-lbl {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.sr-est-val {
+    font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.sr-val-gold {
+    color: #f3dfba !important;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.sr-val-emerald {
+    color: #6ee7b7 !important;
+}
+
+/* Phases */
+.sr-estimate-phases {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 22px;
+}
+
+.sr-phases-label {
+    font-size: 0.74rem;
+    color: #d4af37;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sr-phase-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    font-weight: 700;
+}
+
+.sr-phase-step {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sr-phase-step .step-num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid #d4af37;
+    color: #f3dfba;
+    font-size: 0.7rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sr-phase-sep {
+    color: rgba(212, 175, 55, 0.4);
+    font-size: 0.9rem;
+}
+
+/* Actions */
+.sr-estimate-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 16px;
+}
+
+.sr-peek-btn-secondary {
+    padding: 11px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sr-peek-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 576px) {
+    .sr-ai-estimate-card {
+        padding: 20px 16px;
+    }
+    .sr-estimate-grid {
+        grid-template-columns: 1fr;
+    }
+    .sr-phase-steps {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .sr-phase-sep {
+        display: none;
+    }
+    .sr-estimate-actions {
+        flex-direction: column;
+    }
+    .sr-estimate-actions button,
+    .sr-estimate-actions a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
