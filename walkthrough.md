@@ -4771,28 +4771,5 @@ gba(197, 168, 128, 0.45)) وبادجات اعتماد قانونية موثقة.
    - ضبط خيارات التعرف الصوتي المتقدمة: `continuous = true`, `interimResults = true`, `maxAlternatives = 5`.
    - معالجة ذكية للأخطاء الصوتية بحيث لا يتوقف المايك عند فترات الصمت العابرة (`no-speech`).
 2. **في واجهات المستخدم (`index.html` وجميع بوابات اللغات الـ 28):**
-   - إضافة شريط اختيار اللهجة واللغة الصوتية `#voicePlannerLangSelect` أعلى زر المايكروفون مباشرة (يشمل الفصحى والخليجية والشامية والمصرية والإماراتية واللغات الأوروبية).
-   - ضمان التوافق التام مع فحص النقاء اللغوي (LTR Purity Check).
-
----
-
-### 3. نتائج الفحص والاختبار (100% Passed):
-- `python scripts/check_multilingual_page_parity.py` ➔ **اجتياز كامل بنسبة 100%**.
-- `python scripts/validate_publish_set.py` ➔ **اجتياز كامل بنسبة 100% (LTR Script Purity Check 54/54 صفحات نقية تماماً)**.
-- `node --check js/sr-inline-13eaa28e.js` ➔ **سليم برمجياً وخالٍ من الأخطاء**.
-
-
----
-
-## 143. الجولة الثالثة والأربعون بعد المائة: تثبيت التوكن الجديد وربط المصادقة الصامتة الدائمة لمستودع GitHub
-
-### 1. الإجراء التقني المنفذ:
-- تم استبدال التوكن القديم المنتهي بالتوكن الشخصي الجديد المعتمد `ghp_...` داخل ملف [`.env`](file:///d:/I-Ai/App/S&R%20CoreSync%20For%20Intelligent%20Solutions/Project/.env).
-- تم تضمين التوكن مباشرة داخل إعدادات المستودع المحلي [`.git/config`](file:///d:/I-Ai/App/S&R%20CoreSync%20For%20Intelligent%20Solutions/Project/.git/config) كجزء من رابط المصادقة المباشر للـ Remote Origin:
-  `https://Salim-Grav:ghp_***@github.com/Salim-Grav/SR-CoreSync-For-Intelgent-Solutions.git`
-
----
-
-### 2. الأثر التشغيلي والنتائج:
-- استبعاد أي حاجة لإدخا
+   - إضافة شريط 
 ... [truncated for diff preview]
