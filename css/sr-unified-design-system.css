@@ -899,3 +899,273 @@ header.header,
     }
 }
 
+
+/* ============================================================
+   PHASE 157 — Orbital Hologram Glow + Bullet Dots + Studio Peek
+   S&R CoreSync Sovereign Design System
+   ============================================================ */
+
+/* ── FIX: Force circular emblem with no overflow leaking ── */
+.hero-emblem-card-3d {
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* ── ORBITAL HOLOGRAM GLOW — Layered rotating rings ── */
+@keyframes srHologramRotate {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes srHologramRotateReverse {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+@keyframes srHologramPulse {
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50%       { opacity: 0.9;  transform: scale(1.04); }
+}
+
+/* Outer golden rotating ring */
+.hero-emblem-card-3d::before {
+    content: '';
+    position: absolute;
+    inset: -18px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        rgba(212, 175, 55, 0.0) 30%,
+        rgba(212, 175, 55, 0.85) 50%,
+        rgba(255, 215, 0, 0.95) 55%,
+        rgba(212, 175, 55, 0.5) 70%,
+        transparent 100%
+    );
+    animation: srHologramRotate 4.5s linear infinite, srHologramPulse 3s ease-in-out infinite;
+    z-index: -1;
+    pointer-events: none;
+    mask: radial-gradient(circle, transparent 72%, black 73%);
+    -webkit-mask: radial-gradient(circle, transparent 72%, black 73%);
+    filter: blur(1.5px);
+}
+
+/* Inner emerald counter-rotating ring */
+.hero-emblem-card-3d::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 180deg,
+        transparent 0%,
+        rgba(16, 185, 129, 0.0) 25%,
+        rgba(16, 185, 129, 0.7) 45%,
+        rgba(52, 211, 153, 0.9) 50%,
+        rgba(16, 185, 129, 0.4) 65%,
+        transparent 100%
+    );
+    animation: srHologramRotateReverse 6s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    mask: radial-gradient(circle, transparent 80%, black 81%);
+    -webkit-mask: radial-gradient(circle, transparent 80%, black 81%);
+    filter: blur(1px);
+    opacity: 0.75;
+}
+
+/* Emblem parallax smooth transition */
+.hero-emblem-card-3d {
+    transition: transform 0.08s ease-out;
+}
+
+/* ── BULLET DOT INDICATORS — Rotating Title Navigator ── */
+.hero-title-dots {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    padding-right: 2px;
+}
+
+.hero-title-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.3);
+    border: 1.5px solid rgba(212, 175, 55, 0.5);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    outline: none;
+}
+
+.hero-title-dot:hover {
+    background: rgba(212, 175, 55, 0.6);
+    border-color: #d4af37;
+    transform: scale(1.3);
+}
+
+.hero-title-dot.active {
+    width: 24px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #d4af37, #f5d26a);
+    border-color: #d4af37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.3);
+    animation: srPulseDotActive 2s ease-in-out infinite;
+}
+
+@keyframes srPulseDotActive {
+    0%, 100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.5), 0 0 16px rgba(212, 175, 55, 0.25); }
+    50%       { box-shadow: 0 0 14px rgba(212, 175, 55, 0.8), 0 0 28px rgba(212, 175, 55, 0.4); }
+}
+
+/* ── STUDIO PEEK MODAL — Glassmorphism Instant Preview ── */
+#srStudioPeekOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 999998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#srStudioPeekOverlay.sr-peek-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sr-studio-peek-card {
+    direction: rtl;
+    text-align: right;
+    background: linear-gradient(135deg,
+        rgba(15, 20, 30, 0.95) 0%,
+        rgba(25, 32, 50, 0.92) 50%,
+        rgba(10, 15, 25, 0.95) 100%
+    );
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 20px;
+    padding: 32px 36px 28px;
+    max-width: 420px;
+    width: 90%;
+    box-shadow:
+        0 0 60px rgba(212, 175, 55, 0.12),
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    transform: translateY(20px) scale(0.96);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+#srStudioPeekOverlay.sr-peek-visible .sr-studio-peek-card {
+    transform: translateY(0) scale(1);
+}
+
+.sr-studio-peek-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 70%);
+    pointer-events: none;
+}
+
+.sr-peek-icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+}
+
+.sr-peek-badge {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #d4af37;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sr-peek-title {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+.sr-peek-desc {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.sr-peek-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.sr-peek-btn-go {
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #d4af37, #c5a028);
+    color: #0a0a0a;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.03em;
+}
+
+.sr-peek-btn-go:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.sr-peek-btn-close {
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sr-peek-btn-close:hover {
+    background: rgba(255, 255, 255, 0.09);
+    color: #cbd5e1;
+}
+
+/* ── Responsive: stack peek card on small screens ── */
+@media (max-width: 480px) {
+    .sr-studio-peek-card {
+        padding: 24px 20px 20px;
+    }
+    .sr-peek-actions {
+        flex-direction: column;
+    }
+}
