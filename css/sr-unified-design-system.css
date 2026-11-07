@@ -860,17 +860,28 @@ header.header,
     font-size: 0.72rem !important;
 }
 
-/* Scaled 3D Emblem Stage to Fit Screen Perfectly */
+/* Scaled 3D Emblem Stage to Fit Screen Perfectly & Circular Cover */
 .hero-emblem-card-3d {
-    width: clamp(280px, 26vw, 380px) !important;
-    height: clamp(280px, 26vw, 380px) !important;
+    width: clamp(300px, 28vw, 420px) !important;
+    height: clamp(300px, 28vw, 420px) !important;
     margin: 0 auto;
+    border-radius: 50% !important;
+}
+
+.hero-emblem-frame {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
 }
 
 .hero-emblem-render-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 50% !important;
+    display: block !important;
 }
 
 /* Responsive adjustments */
