@@ -2085,16 +2085,23 @@
                                     <span class="hero-rotating-text-frame">
                                         <span class="hero-rotating-text-item active" id="heroRotatingText">أنظمة برمجية متقدمة وحلول الذكاء الاصطناعي</span>
                                     </span>
+                                    <!-- مؤشر النقاط التفاعلي للتبديل الفوري -->
+                                    <div class="hero-title-dots" id="heroTitleDots" role="tablist" aria-label="الخدمات الرئيسية">
+                                        <button type="button" class="hero-title-dot active" onclick="srSwitchTitle(0)" aria-label="أنظمة برمجية وذكاء اصطناعي"></button>
+                                        <button type="button" class="hero-title-dot" onclick="srSwitchTitle(1)" aria-label="تطبيقات ومنصات رقمية"></button>
+                                        <button type="button" class="hero-title-dot" onclick="srSwitchTitle(2)" aria-label="بناء وتحديث المنظومات"></button>
+                                        <button type="button" class="hero-title-dot" onclick="srSwitchTitle(3)" aria-label="متاجر إلكترونية وهويات بصرية"></button>
+                                    </div>
                                 </h1>
 
                                 <div class="hero-reference__bottom hero-intro">
                                     <p class="hero-vision-lead mb-3">
                                         <strong>أنظمة برمجية متكاملة وحلول سحابية ذكية</strong> يقود هندستها المهندس <strong>محمد سليم عزيزة</strong>:
                                         <span class="hero-service-pillars-pills">
-                                            <span>تطبيقات ومنصات رقمية</span> • 
-                                            <span>حلول سحابية</span> • 
-                                            <span>بناء وتحديث المنظومات</span> • 
-                                            <span>متاجر إلكترونية وهويات بصرية</span>
+                                            <button type="button" class="hero-service-pill-btn" onclick="srOpenStudioPeek('apps')">📱 تطبيقات ومنصات رقمية</button> • 
+                                            <button type="button" class="hero-service-pill-btn" onclick="srOpenStudioPeek('cloud')">☁️ حلول سحابية سيادية</button> • 
+                                            <button type="button" class="hero-service-pill-btn" onclick="srOpenStudioPeek('enterprise')">🏢 بناء وتحديث المنظومات</button> • 
+                                            <button type="button" class="hero-service-pill-btn" onclick="srOpenStudioPeek('ecommerce')">🛍️ متاجر وهويات بصرية</button>
                                         </span>
                                     </p>
 
@@ -6991,23 +6998,7 @@
                         الأسئلة الشائعة وهندسة الثقة
                     </h2>
                     <p class="text-white-64 mt-2 mx-auto faq-lead-desc">
-                        إجابات واضحة وحاسمة حول ملكية الكود المصدري، الامتثال الضريبي الهولندي والأوروبي (21% BTW)، أمان
-                        البيانات وفق معايير GDPR، وترحيل أنظمة الـ ERP دون ثانية توقف واحدة.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="accordion-faq_list" id="accordion-faq_list">
-                            <!-- سؤال 1 -->
-                            <div class="accordion-faq_item">
-                                <div class="accordion-action text-body-1 letter-space--1 fw-medium"
-                                    data-sr-call="toggleFaq" data-sr-this="1">
-                                    <span class="accordion-order">01</span>
-                                    <p class="accordion-text">كم يستغرق بناء وتطوير النظام أو التطبيق عادة؟</p>
-                                    <div class="ic-wrap d-flex">
-                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <polyline points="6 9 12 15 18 9"></polyline>
+                   
                                         </svg>
                                     </div>
                                 </div>
