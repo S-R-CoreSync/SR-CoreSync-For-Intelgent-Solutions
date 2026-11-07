@@ -450,3 +450,202 @@ p {
     gap: 12px;
 }
 
+/* ==========================================================
+   Sovereign Hero Banner & AI Idea Analyzer Component
+   ========================================================== */
+.hero-banner {
+    position: relative;
+    padding: 60px 0 50px;
+    background: radial-gradient(ellipse at 50% 20%, rgba(197, 168, 128, 0.08) 0%, rgba(3, 8, 6, 0.95) 70%);
+    border-top: 1px solid var(--sr-border);
+    border-bottom: 1px solid var(--sr-border);
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--sr-gold), transparent);
+}
+
+.hero-banner .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 40%, var(--sr-gold-light) 80%, var(--sr-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.hero-banner p {
+    font-size: 1.05rem;
+    color: var(--sr-text-secondary);
+    max-width: 820px;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+.ai-prompt-box {
+    display: flex;
+    align-items: center;
+    background: rgba(8, 20, 14, 0.85);
+    border: 1.5px solid var(--sr-border);
+    border-radius: var(--sr-radius-xl);
+    padding: 8px 10px 8px 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), var(--sr-gold-glow);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.ai-prompt-box:focus-within {
+    border-color: var(--sr-gold);
+    box-shadow: 0 0 30px rgba(197, 168, 128, 0.4);
+    transform: translateY(-2px);
+}
+
+.ai-prompt-box input[type="text"] {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: var(--sr-font-body);
+    font-size: 1rem;
+    padding: 10px 14px;
+    direction: rtl;
+    text-align: right;
+}
+
+.ai-prompt-box input[type="text"]::placeholder {
+    color: var(--sr-text-muted);
+    font-size: 0.95rem;
+}
+
+.ai-prompt-box .btn-primary {
+    background: var(--sr-gold-gradient);
+    color: var(--sr-bg-root);
+    border: none;
+    border-radius: var(--sr-radius-md);
+    padding: 12px 28px;
+    font-family: var(--sr-font-heading);
+    font-weight: 800;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-prompt-box .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(197, 168, 128, 0.5);
+    transform: translateY(-1px);
+}
+
+.quick-prompts {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 0.88rem;
+    color: var(--sr-text-muted);
+}
+
+.quick-prompts span {
+    font-weight: 700;
+    color: var(--sr-gold);
+}
+
+.quick-prompts button {
+    background: rgba(197, 168, 128, 0.1);
+    border: 1px solid var(--sr-border);
+    color: var(--sr-gold-light);
+    border-radius: var(--sr-radius-full);
+    padding: 6px 16px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    font-family: var(--sr-font-heading);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-prompts button:hover {
+    background: rgba(197, 168, 128, 0.22);
+    border-color: var(--sr-gold);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .ai-prompt-box {
+        flex-direction: column;
+        padding: 12px;
+        border-radius: var(--sr-radius-lg);
+        gap: 10px;
+    }
+    .ai-prompt-box input[type="text"] {
+        width: 100%;
+        padding: 8px 4px;
+    }
+    .ai-prompt-box .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* AI Analysis Modal */
+.sr-ai-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.sr-ai-modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sr-ai-modal-content {
+    background: rgba(6, 16, 10, 0.98);
+    border: 2px solid var(--sr-gold);
+    border-radius: 24px;
+    max-width: 620px;
+    width: 100%;
+    padding: 34px 30px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), var(--sr-gold-glow);
+    direction: rtl;
+    text-align: right;
+    position: relative;
+    transform: scale(0.92);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sr-ai-modal-overlay.open .sr-ai-modal-content {
+    transform: scale(1);
+}
+
