@@ -428,182 +428,35 @@
         });
     }
 
-    // 5.3 Dynamic Rotating Hero Headline Engine with Interactive Dots
-    const heroTitles = [
-        'أنظمة برمجية متقدمة وحلول الذكاء الاصطناعي',
-        'تطبيقات ومنصات رقمية وحلول سحابية فائقة',
-        'بناء وتحديث المنظومات المؤسسية وإدارة البيانات',
-        'تصميم المتاجر الإلكترونية الفاخرة والهويات البصرية'
-    ];
-    let heroCurrentTitleIndex = 0;
-    let heroTitleRotatorTimer = null;
-
-    function updateTitleDisplay(idx) {
-        const titleEl = document.getElementById('heroRotatingText');
-        const dots = document.querySelectorAll('.hero-title-dot');
-        
-        if (titleEl) {
-            titleEl.style.opacity = '0';
-            titleEl.style.transform = 'translateY(10px)';
-            setTimeout(() => {
-                titleEl.textContent = heroTitles[idx];
-                titleEl.style.opacity = '1';
-                titleEl.style.transform = 'translateY(0)';
-            }, 300);
-        }
-
-        dots.forEach((dot, dIdx) => {
-            if (dIdx === idx) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
-    }
-
-    function srSwitchTitle(targetIdx) {
-        if (targetIdx < 0 || targetIdx >= heroTitles.length) return;
-        heroCurrentTitleIndex = targetIdx;
-        updateTitleDisplay(heroCurrentTitleIndex);
-
-        if (heroTitleRotatorTimer) {
-            clearInterval(heroTitleRotatorTimer);
-            heroTitleRotatorTimer = setInterval(rotateNextTitle, 3800);
-        }
-    }
-
-    function rotateNextTitle() {
-        heroCurrentTitleIndex = (heroCurrentTitleIndex + 1) % heroTitles.length;
-        updateTitleDisplay(heroCurrentTitleIndex);
-    }
-
+    // 5.3 Dynamic Rotating Hero Headline Engine (Mohammad Salim Aziza & S&R CoreSync Pillars)
     function initHeroDynamicTitleRotator() {
         const titleEl = document.getElementById('heroRotatingText');
         if (!titleEl) return;
-        
-        updateTitleDisplay(0);
-        if (heroTitleRotatorTimer) clearInterval(heroTitleRotatorTimer);
-        heroTitleRotatorTimer = setInterval(rotateNextTitle, 3800);
+
+        const titles = [
+            'أنظمة برمجية متقدمة وحلول الذكاء الاصطناعي',
+            'تطبيقات ومنصات رقمية وحلول سحابية فائقة',
+            'بناء وتحديث المنظومات المؤسسية وإدارة البيانات',
+            'تصميم المتاجر الإلكترونية الفاخرة والهويات البصرية'
+        ];
+
+        let index = 0;
+        setInterval(() => {
+            titleEl.style.opacity = '0';
+            titleEl.style.transform = 'translateY(10px)';
+            setTimeout(() => {
+                index = (index + 1) % titles.length;
+                titleEl.textContent = titles[index];
+                titleEl.style.opacity = '1';
+                titleEl.style.transform = 'translateY(0)';
+            }, 350);
+        }, 3600);
     }
-
-    // 5.4 Instant Studio Peek Modal Engine (Interactive Service Pillars)
-    const studioPeeksData = {
-        apps: {
-            title: 'تطبيقات ومنصات رقمية سحابية PWA & SaaS',
-            badge: 'تطبيقات ومنصات سحابية',
-            icon: '📱',
-            desc: 'هندسة وتطوير تطبيقات الويب السحابية PWA وأنظمة SaaS متعددة المستأجرين مع واجهات برمجة فائقة الأداء وتجربة مستخدم عالمية مخصصة.',
-            tech: 'Next.js • Node.js • WebSockets • REST & GraphQL APIs',
-            url: './software.html',
-            btnText: 'استعراض سوق الأنظمة والتطبيقات ⚡'
-        },
-        cloud: {
-            title: 'الحلول السحابية السيادية وهندسة الأمان',
-            badge: 'سحابة سيادية وأمان عالي',
-            icon: '☁️',
-            desc: 'بناء خوادم سحابية أوروبية سيادية عالية الأمان مع جاهزية 99.99%، وتشفير متقدم متوافق تماماً مع معايير GDPR والامتثال الضريبي الأوروبي.',
-            tech: 'Kubernetes • Cloud Run • PostgreSQL • Zero Trust Security',
-            url: './demo.html',
-            btnText: 'معاينة البيئة السحابية الحية ⚡'
-        },
-        enterprise: {
-            title: 'بناء وتحديث المنظومات المؤسسية و CoreSync ERP',
-            badge: 'منظومات مؤسسية و ERP',
-            icon: '🏢',
-            desc: 'تطوير أنظمة تخطيط الموارد ERP وأتمتة العمليات الإدارية والمالية المتكاملة مع الفوترة والربط البنكي وسلاسل الإمداد.',
-            tech: 'CoreSync ERP Engine • Peppol • ZATCA • Webhooks Automation',
-            url: './crm-dashboard.html',
-            btnText: 'فتح لوحة الإدارة والبيانات 📊'
-        },
-        ecommerce: {
-            title: 'المتاجر الإلكترونية الفاخرة والهويات البصرية 3D',
-            badge: 'تجارة إلكترونية وهويات 3D',
-            icon: '🛍️',
-            desc: 'إطلاق متاجر إلكترونية فاخرة مجهزة ببوابات iDEAL و Stripe و Apple Pay مع استوديوهات النماذج ثلاثية الأبعاد 3D والهويات البصرية بدقة 8K.',
-            tech: '3D Configurator • Dynamic QR • iDEAL & Stripe • 8K Brand Studio',
-            url: './ecommerce-launchpad.html',
-            btnText: 'فتح استوديو المتاجر والهويات 🎨'
-        }
-    };
-
-    function srOpenStudioPeek(key) {
-        const data = studioPeeksData[key];
-        if (!data) return;
-
-        let overlay = document.getElementById('srStudioPeekModal');
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.id = 'srStudioPeekModal';
-            overlay.className = 'sr-peek-overlay';
-            document.body.appendChild(overlay);
-
-            overlay.addEventListener('click', (e) => {
-                if (e.target === overlay) srCloseStudioPeek();
-            });
-        }
-
-        const encodedWa = encodeURIComponent(`مرحباً S&R CoreSync، أود الاستفسار والبدء المباشر في خدمة: "${data.title}" بقيادة المهندس محمد سليم عزيزة.`);
-
-        overlay.innerHTML = `
-            <div class="sr-peek-content">
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; border-bottom:1px solid rgba(197,168,128,0.25); padding-bottom:12px;">
-                    <div style="display:flex; align-items:center; gap:10px;">
-                        <span style="font-size:2rem;">${data.icon}</span>
-                        <div>
-                            <span style="font-size:0.75rem; color:#10b981; font-weight:800; background:rgba(16,185,129,0.15); padding:3px 10px; border-radius:20px;">${data.badge}</span>
-                            <h3 style="margin:4px 0 0; font-size:1.15rem; color:#f8fafc; font-weight:800;">${data.title}</h3>
-                        </div>
-                    </div>
-                    <button type="button" onclick="window.srCloseStudioPeek()" style="background:none; border:none; color:#cbd5e1; font-size:1.4rem; cursor:pointer; line-height:1; padding:4px;">✕</button>
-                </div>
-
-                <p style="font-size:0.95rem; color:#cbd5e1; line-height:1.75; margin:0 0 16px;">
-                    ${data.desc}
-                </p>
-
-                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:10px 14px; margin-bottom:20px;">
-                    <span style="font-size:0.75rem; color:#d4af37; font-weight:700;">التقنيات والمعمارية السيادية:</span>
-                    <p style="margin:4px 0 0; font-size:0.84rem; color:#94a3b8; font-family:monospace;">${data.tech}</p>
-                </div>
-
-                <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                    <a href="${data.url}" class="sr-unified-btn-primary" style="flex:1; justify-content:center; text-decoration:none; padding:11px 20px;">
-                        ${data.btnText}
-                    </a>
-                    <a href="https://wa.me/31618111116?text=${encodedWa}" target="_blank" class="sr-unified-btn-secondary" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.4); color:#10b981; text-decoration:none; padding:11px 18px;">
-                        <span>محادثة مباشرة 💬</span>
-                    </a>
-                </div>
-            </div>
-        `;
-
-        requestAnimationFrame(() => {
-            overlay.classList.add('open');
-        });
-    }
-
-    function srCloseStudioPeek() {
-        const overlay = document.getElementById('srStudioPeekModal');
-        if (overlay) {
-            overlay.classList.remove('open');
-        }
-    }
-
-    // Close on escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            srCloseStudioPeek();
-            closeRouteCard();
-        }
-    });
 
     // Expose globally to window
     window.setPrompt = setPrompt;
     window.analyzeIdea = analyzeIdea;
     window.closeRouteCard = closeRouteCard;
-    window.srSwitchTitle = srSwitchTitle;
-    window.srOpenStudioPeek = srOpenStudioPeek;
-    window.srCloseStudioPeek = srCloseStudioPeek;
 
     // Boot on DOMContentLoaded or immediately if ready
     if (document.readyState === 'loading') {
