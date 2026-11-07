@@ -1,81 +1,174 @@
-// lottie-studio.js – Handles loading, preview, speed, color and export
-// Uses the minimal stub `window.lottie` defined in lottie.min.js.
+/**
+ * S&R CoreSync Sovereign Lottie & Micro-Interactions Studio
+ * (c) 2026 S&R CoreSync For Intelligent Solutions — The Netherlands
+ */
 
 let lottieInstance = null;
-let loadedAnimationData = null; // Store JSON for export if user loads a file
+let currentAnimationData = null;
 
-// Helper to download data as a file
 function downloadFile(filename, content, mime = 'application/json') {
   const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
 
-// Initialize UI events after DOM is ready
+function showStudioToast(msg) {
+  let toast = document.getElementById('studioToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'studioToast';
+    toast.className = 'studio-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2600);
+}
+
+function loadLottieAnimation(animData) {
+  const previewDiv = document.getElementById('lottiePreview');
+  if (!previewDiv || typeof window.lottie === 'undefined') return;
+
+  if (lottieInstance) lottieInstance.destroy();
+
+  currentAnimationData = animData || (window.lottie.presets && window.lottie.presets.checkmark);
+
+  lottieInstance = window.lottie.loadAnimation({
+    container: previewDiv,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    animationData: currentAnimationData,
+  });
+
+  const speedRange = document.getElementById('speedRange');
+  if (speedRange && lottieInstance) {
+    lottieInstance.setSpeed(parseFloat(speedRange.value) || 1);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const fileInput = document.getElementById('lottieFile');
   const speedRange = document.getElementById('speedRange');
+  const speedVal = document.getElementById('speedVal');
   const colorPicker = document.getElementById('colorPicker');
   const previewDiv = document.getElementById('lottiePreview');
   const exportJsonBtn = document.getElementById('exportJsonBtn');
   const exportCssBtn = document.getElementById('exportCssBtn');
+  const presetSelect = document.getElementById('presetSelect');
+  const btnPlay = document.getElementById('btnPlay');
+  const btnPause = document.getElementById('btnPause');
+  const btnStop = document.getElementById('btnStop');
+
+  // Load default preset
+  if (window.lottie && window.lottie.presets) {
+    loadLottieAnimation(window.lottie.presets.checkmark);
+  }
+
+  // Preset selector
+  if (presetSelect) {
+    presetSelect.addEventListener('change', () => {
+      const key = presetSelect.value;
+      if (window.lottie && window.lottie.presets && window.lottie.presets[key]) {
+        loadLottieAnimation(window.lottie.presets[key]);
+        showStudioToast(`✓ تم تحميل نموذج: ${window.lottie.presets[key].name || key}`);
+      }
+    });
+  }
 
   // Load animation from local file (JSON)
-  fileInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        loadedAnimationData = JSON.parse(ev.target.result);
-        // For demo we reuse the stub animation – ignore actual data
-        if (lottieInstance) lottieInstance.destroy();
-        lottieInstance = lottie.loadAnimation({
-          container: previewDiv,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          animationData: loadedAnimationData,
-        });
-      } catch (err) {
-        alert('ملف Lottie غير صالح');
-        console.error(err);
-      }
-    };
-    reader.readAsText(file);
-  });
+  if (fileInput) {
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          const parsed = JSON.parse(ev.target.result);
+          loadLottieAnimation(parsed);
+          showStudioToast(`✓ تم استيراد ملف Lottie: ${file.name}`);
+        } catch (err) {
+          alert('ملف Lottie غير صالح، يرجى التأكد من هيكل الـ JSON');
+          console.error(err);
+        }
+      };
+      reader.readAsText(file);
+    });
+  }
 
-  // Speed control – updates animation speed
-  speedRange.addEventListener('input', () => {
-    const speed = parseFloat(speedRange.value);
-    if (lottieInstance) lottieInstance.setSpeed(speed);
-  });
+  // Speed control
+  if (speedRange) {
+    speedRange.addEventListener('input', () => {
+      const speed = parseFloat(speedRange.value);
+      if (speedVal) speedVal.textContent = `${speed}x`;
+      if (lottieInstance) lottieInstance.setSpeed(speed);
+    });
+  }
 
-  // Color control – CSS variable applied to preview container
-  colorPicker.addEventListener('input', () => {
-    const color = colorPicker.value;
-    previewDiv.style.setProperty('--lottie-color', color);
-  });
+  // Color control
+  if (colorPicker && previewDiv) {
+    colorPicker.addEventListener('input', () => {
+      const color = colorPicker.value;
+      previewDiv.style.setProperty('--lottie-color', color);
+    });
+  }
 
-  // Export JSON – if a file was loaded, download it again
-  exportJsonBtn.addEventListener('click', () => {
-    if (!loadedAnimationData) {
-      alert('لم يتم تحميل ملف Lottie لتصديره');
-      return;
-    }
-    const jsonStr = JSON.stringify(loadedAnimationData, null, 2);
-    downloadFile('animation-export.json', jsonStr, 'application/json');
-  });
+  // Playback buttons
+  if (btnPlay) {
+    btnPlay.addEventListener('click', () => {
+      if (lottieInstance) lottieInstance.play();
+    });
+  }
+  if (btnPause) {
+    btnPause.addEventListener('click', () => {
+      if (lottieInstance) lottieInstance.pause();
+    });
+  }
+  if (btnStop) {
+    btnStop.addEventListener('click', () => {
+      if (lottieInstance) lottieInstance.stop();
+    });
+  }
 
-  // Export CSS – generate simple keyframes based on current speed
-  exportCssBtn.addEventListener('click', () => {
-    const speed = parseFloat(speedRange.value) || 1;
-    const duration = (2 / speed).toFixed(2);
-    const css = `@keyframes lottieSpin {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n\n.lottie-preview {\n  animation: lottieSpin ${duration}s linear infinite;\n  --lottie-color: ${colorPicker.value};\n}`;
-    downloadFile('lottie-animation.css', css, 'text/css');
-  });
+  // Export JSON
+  if (exportJsonBtn) {
+    exportJsonBtn.addEventListener('click', () => {
+      const dataToExport = currentAnimationData || (window.lottie && window.lottie.presets && window.lottie.presets.checkmark);
+      const jsonStr = JSON.stringify(dataToExport, null, 2);
+      downloadFile('sr-micro-interaction.json', jsonStr, 'application/json');
+      showStudioToast('✓ تم تصدير ملف Lottie JSON بنجاح!');
+    });
+  }
+
+  // Export CSS Keyframes
+  if (exportCssBtn) {
+    exportCssBtn.addEventListener('click', () => {
+      const speed = parseFloat((speedRange && speedRange.value) || 1);
+      const duration = (2 / speed).toFixed(2);
+      const color = (colorPicker && colorPicker.value) || '#c5a880';
+      const css = `/* S&R CoreSync - Micro-Interactions Keyframes */
+@keyframes srLottiePulse {
+  0% { transform: scale(1) rotate(0deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(197, 168, 128, 0.3)); }
+  50% { transform: scale(1.08) rotate(180deg); opacity: 0.92; filter: drop-shadow(0 0 25px ${color}); }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(197, 168, 128, 0.3)); }
+}
+
+.sr-lottie-animated {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: srLottiePulse ${duration}s ease-in-out infinite;
+  --lottie-color: ${color};
+}
+`;
+      downloadFile('sr-micro-interactions.css', css, 'text/css');
+      showStudioToast('✓ تم تصدير كود CSS Keyframes الجاهز للتضمين!');
+    });
+  }
 });
