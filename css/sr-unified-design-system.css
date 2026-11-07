@@ -649,3 +649,14 @@ p {
     transform: scale(1);
 }
 
+@keyframes srPulseDot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.45);
+        opacity: 0.55;
+    }
+}
+

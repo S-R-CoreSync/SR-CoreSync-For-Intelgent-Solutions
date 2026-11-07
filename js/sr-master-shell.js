@@ -177,7 +177,7 @@
         }
     }
 
-    // 5. Universal AI Idea Analyzer & Dispatcher (S&R CoreSync Specification)
+    // 5. Universal AI Idea Analyzer, Animated Placeholder & Custom Route Card (S&R CoreSync Specification)
     function setPrompt(text) {
         const ideaInput = document.getElementById('userIdeaInput');
         if (ideaInput) {
@@ -186,42 +186,264 @@
         }
     }
 
+    // 5.1 Animated Typing Placeholder Engine
+    function initAnimatedPlaceholder() {
+        const input = document.getElementById('userIdeaInput');
+        if (!input) return;
+
+        const prompts = [
+            'اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)...',
+            'مثلاً: منصة تعليمية ذكية مع بوابات دفع واشتراكات...',
+            'مثلاً: نظام سحابي لإدارة المبيعات والعملاء CRM...',
+            'مثلاً: متجر إلكتروني فاخر متعدد العملات والشحن الفوري...',
+            'مثلاً: نظام فوترة إلكترونية معتمد لـ ZATCA و Peppol...',
+            'مثلاً: استوديو هويات بصرية وعقود حماية ملكية فكرية...'
+        ];
+
+        let promptIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isFocused = false;
+        let typingTimeout = null;
+
+        input.addEventListener('focus', () => { isFocused = true; });
+        input.addEventListener('blur', () => {
+            isFocused = false;
+            if (!input.value.trim() && !typingTimeout) {
+                typeLoop();
+            }
+        });
+        input.addEventListener('input', () => {
+            if (input.value.trim().length > 0) {
+                isFocused = true;
+            }
+        });
+
+        function typeLoop() {
+            if (isFocused || input.value.trim().length > 0) {
+                typingTimeout = setTimeout(typeLoop, 1000);
+                return;
+            }
+
+            const currentPrompt = prompts[promptIndex];
+            if (isDeleting) {
+                charIndex--;
+                input.setAttribute('placeholder', currentPrompt.substring(0, charIndex));
+                if (charIndex <= 0) {
+                    isDeleting = false;
+                    promptIndex = (promptIndex + 1) % prompts.length;
+                    typingTimeout = setTimeout(typeLoop, 500);
+                    return;
+                }
+                typingTimeout = setTimeout(typeLoop, 25);
+            } else {
+                charIndex++;
+                input.setAttribute('placeholder', currentPrompt.substring(0, charIndex));
+                if (charIndex >= currentPrompt.length) {
+                    isDeleting = true;
+                    typingTimeout = setTimeout(typeLoop, 3000); // 3 ثوانٍ كما طلب المستخدم
+                    return;
+                }
+                typingTimeout = setTimeout(typeLoop, 45);
+            }
+        }
+
+        typeLoop();
+    }
+
+    // 5.2 Custom Glassmorphism Route Card Engine
+    let routeCountdownInterval = null;
+    let routeAutoRedirectTimeout = null;
+
+    function closeRouteCard() {
+        if (routeCountdownInterval) clearInterval(routeCountdownInterval);
+        if (routeAutoRedirectTimeout) clearTimeout(routeAutoRedirectTimeout);
+        const card = document.getElementById('srCustomRouteOverlay');
+        if (card) {
+            card.classList.remove('active');
+            setTimeout(() => { card.style.display = 'none'; }, 300);
+        }
+    }
+
+    function showCustomRouteCard(config) {
+        closeRouteCard();
+
+        let overlay = document.getElementById('srCustomRouteOverlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'srCustomRouteOverlay';
+            overlay.style.cssText = `
+                position: fixed; inset: 0; z-index: 999999;
+                display: flex; align-items: center; justify-content: center;
+                background: rgba(1, 9, 7, 0.78); backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px); opacity: 0;
+                transition: opacity 0.3s ease; direction: rtl; text-align: right;
+                padding: 16px; font-family: 'Alexandria', 'Plus Jakarta Sans', system-ui, sans-serif;
+            `;
+            document.body.appendChild(overlay);
+        }
+
+        let secondsLeft = 3;
+        overlay.innerHTML = `
+            <div style="
+                background: linear-gradient(145deg, rgba(10, 24, 19, 0.98), rgba(2, 11, 8, 0.98));
+                border: 1px solid rgba(197, 168, 128, 0.35);
+                border-radius: 18px; max-width: 520px; width: 100%;
+                padding: 26px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(197, 168, 128, 0.15);
+                position: relative; overflow: hidden;
+            ">
+                <div style="position: absolute; top: 0; right: 0; left: 0; height: 3px; background: rgba(255, 255, 255, 0.1);">
+                    <div id="srRouteProgressBar" style="width: 100%; height: 100%; background: linear-gradient(90deg, #10b981, #d4af37); transition: width 3s linear;"></div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 14px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 2rem;">${config.icon}</span>
+                        <div>
+                            <span style="font-size: 0.75rem; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.15); padding: 3px 10px; border-radius: 20px;">${config.badge}</span>
+                            <h3 style="margin: 4px 0 0; font-size: 1.18rem; color: #f8fafc; font-weight: 800;">${config.title}</h3>
+                        </div>
+                    </div>
+                    <button type="button" onclick="window.closeRouteCard()" style="background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer; line-height: 1; padding: 4px;">✕</button>
+                </div>
+
+                <p style="font-size: 0.94rem; color: #cbd5e1; line-height: 1.7; margin: 0 0 20px; background: rgba(255, 255, 255, 0.03); padding: 12px 16px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.06);">
+                    ${config.description}
+                </p>
+
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                    <div style="font-size: 0.84rem; color: #d4af37; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981; animation: srPulseDot 1.5s infinite;"></span>
+                        جاري التوجيه التلقائي خلال <span id="srRouteTimer" style="font-weight: 900; font-size: 1rem; color: #10b981;">${secondsLeft}</span> ثوانٍ...
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <button type="button" onclick="window.closeRouteCard()" style="padding: 10px 18px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); color: #e2e8f0; border-radius: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 700;">تعديل الفكرة</button>
+                        <button type="button" id="srRouteConfirmBtn" style="padding: 10px 22px; background: linear-gradient(135deg, #d4af37, #c5a880); border: none; color: #020b08; border-radius: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 900; display: flex; align-items: center; gap: 6px;">انتقال فوري ⚡</button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        overlay.style.display = 'flex';
+        requestAnimationFrame(() => {
+            overlay.style.opacity = '1';
+            const bar = document.getElementById('srRouteProgressBar');
+            if (bar) bar.style.width = '0%';
+        });
+
+        const executeRedirect = () => {
+            closeRouteCard();
+            navigateToSection(config.targetId, config.fallbackUrl);
+        };
+
+        const confirmBtn = document.getElementById('srRouteConfirmBtn');
+        if (confirmBtn) {
+            confirmBtn.onclick = executeRedirect;
+        }
+
+        routeCountdownInterval = setInterval(() => {
+            secondsLeft--;
+            const timerEl = document.getElementById('srRouteTimer');
+            if (timerEl) timerEl.textContent = secondsLeft;
+            if (secondsLeft <= 0) {
+                clearInterval(routeCountdownInterval);
+            }
+        }, 1000);
+
+        routeAutoRedirectTimeout = setTimeout(executeRedirect, 3000);
+    }
+
+    function navigateToSection(targetId, fallbackUrl) {
+        const el = document.getElementById(targetId) ||
+                   (targetId === 'store-section' ? document.getElementById('software-hub') :
+                   (targetId === 'pricing-section' ? document.getElementById('pricing') :
+                   document.getElementById('services')));
+
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.location.hash = targetId;
+
+            // Highlight pulse on target
+            el.style.transition = 'outline 0.4s ease, box-shadow 0.4s ease';
+            el.style.outline = '2px solid rgba(212, 175, 55, 0.85)';
+            el.style.boxShadow = '0 0 35px rgba(212, 175, 55, 0.35)';
+            setTimeout(() => {
+                el.style.outline = '';
+                el.style.boxShadow = '';
+            }, 3500);
+        } else {
+            window.location.href = fallbackUrl;
+        }
+    }
+
     function analyzeIdea() {
         const ideaInput = document.getElementById('userIdeaInput');
         const idea = (ideaInput ? ideaInput.value : '').toLowerCase();
-        
+
         if (!idea.trim()) {
+            if (ideaInput) {
+                ideaInput.focus();
+                ideaInput.style.transition = 'all 0.3s ease';
+                ideaInput.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.45)';
+                ideaInput.style.borderColor = '#ef4444';
+                setTimeout(() => {
+                    ideaInput.style.boxShadow = '';
+                    ideaInput.style.borderColor = '';
+                }, 2000);
+            }
             alert('الرجاء كتابة فكرة المشروع أولاً.');
-            if (ideaInput) ideaInput.focus();
             return;
         }
 
-        // منطق التحليل الذكي والتوجيه البسيط
+        let targetId = 'services-section';
+        let fallbackUrl = './index.html#services-section';
+        let routeTitle = 'فرع القيادة والخدمات المؤسسية الشاملة';
+        let routeDesc = 'تحليل الذكاء الاصطناعي: فكرة واعدة واستراتيجية! جاري توجيهك إلى فرع القيادة والخدمات للاستشارة الشاملة وحلول التحول الرقمي.';
+        let routeBadge = 'الاستشارات الشاملة';
+        let routeIcon = '🏛️';
+
         if (idea.includes('متجر') || idea.includes('بيع') || idea.includes('منتج')) {
-            alert('تحليل الذكاء الاصطناعي: فكرتك تميل نحو التجارة الإلكترونية. جاري تحويلك إلى المتجر والخدمات المرتبطة...');
-            window.location.href = '#store-section'; 
+            targetId = 'store-section';
+            fallbackUrl = './index.html#store-section';
+            routeTitle = 'استوديو المتاجر والتجارة الإلكترونية';
+            routeDesc = 'تحليل الذكاء الاصطناعي: فكرتك تميل نحو التجارة الإلكترونية. جاري تحويلك إلى المتجر والخدمات المرتبطة.';
+            routeBadge = 'التجارة الإلكترونية';
+            routeIcon = '🛍️';
         } else if (idea.includes('سعر') || idea.includes('تكلفة') || idea.includes('باقة')) {
-            alert('تحليل الذكاء الاصطناعي: تم تصنيف مشروعك، جاري عرض خطط الأسعار المناسبة لك...');
-            window.location.href = '#pricing-section'; 
-        } else {
-            alert('تحليل الذكاء الاصطناعي: فكرة واعدة! جاري تحويلك إلى فرع القيادة والخدمات للاستشارة الشاملة...');
-            window.location.href = '#services-section'; 
+            targetId = 'pricing-section';
+            fallbackUrl = './index.html#pricing-section';
+            routeTitle = 'خطط الأسعار والباقات المؤسسية';
+            routeDesc = 'تحليل الذكاء الاصطناعي: تم تصنيف مشروعك، جاري عرض خطط الأسعار والخيارات المناسبة لك.';
+            routeBadge = 'خطط الأسعار';
+            routeIcon = '💎';
         }
+
+        showCustomRouteCard({
+            badge: routeBadge,
+            icon: routeIcon,
+            title: routeTitle,
+            description: routeDesc,
+            targetId: targetId,
+            fallbackUrl: fallbackUrl
+        });
     }
 
     // Expose globally to window
     window.setPrompt = setPrompt;
     window.analyzeIdea = analyzeIdea;
+    window.closeRouteCard = closeRouteCard;
 
     // Boot on DOMContentLoaded or immediately if ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             createMasterDrawer();
             autoEnhanceNavbar();
+            initAnimatedPlaceholder();
         });
     } else {
         createMasterDrawer();
         autoEnhanceNavbar();
+        initAnimatedPlaceholder();
     }
 
 })();
