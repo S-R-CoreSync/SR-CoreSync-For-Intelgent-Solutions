@@ -1,44 +1,366 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-page-language="ar">
+<html lang="ar" dir="rtl" data-theme="dark" data-page-language="ar">
 <head>
     <meta charset="UTF-8">
-    <title>استوديو Lottie وMicro‑Interactions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/sr-unified-design-system.css">
+    <title>استوديو ومحرر الرسوم المتحركة والتفاعلات الدقيقة Lottie • S&R CoreSync</title>
+    <meta name="description" content="استوديو تفاعلي ومحرر رسوم Lottie وتفاعلات بصرية دقيقة مع التحكم بالسرعة والألوان وتصدير JSON وكود CSS Keyframes نقي.">
+    <link rel="icon" type="image/svg+xml" href="./assets/sr-core-emblem.svg?v=sovereign2026">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Sovereign Unified Design System (UDS) -->
+    <link rel="stylesheet" href="./css/sr-unified-design-system.css">
+
     <style>
-        .studio-container { max-width: 900px; margin: 2rem auto; padding: 1rem; }
-        .preview-area { border: 1px solid #e5e7eb; padding: 1rem; text-align: center; }
-        .controls { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
-        .controls label { margin-right: 0.3rem; }
-        .export-btn { padding: 8px 14px; background: #10b981; color:#fff; border:none; border-radius:4px; cursor:pointer; }
-        .export-btn:hover { background:#059669; }
+        :root {
+            --sr-gold: #c5a880;
+            --sr-gold-light: #f3dfba;
+            --sr-gold-dark: #8c734b;
+            --sr-bg: #030806;
+            --sr-card: rgba(8, 20, 15, 0.88);
+            --sr-border: rgba(197, 168, 128, 0.22);
+            --sr-cyan: #38bdf8;
+            --sr-emerald: #10b981;
+            --lottie-color: #c5a880;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: radial-gradient(ellipse at 50% 0%, #0d221a 0%, #030806 75%);
+            color: #f8fafc;
+            font-family: 'Alexandria', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .studio-navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 28px;
+            background: rgba(3, 8, 5, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--sr-border);
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #f8fafc;
+        }
+
+        .brand-link img { width: 34px; height: 34px; }
+        .brand-text strong { font-size: 1.05rem; color: var(--sr-gold-light); display: block; font-weight: 800; }
+        .brand-text span { font-size: 0.72rem; color: #94a3b8; }
+
+        .studio-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .studio-nav-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .studio-nav-link:hover, .studio-nav-link.active {
+            color: var(--sr-gold-light);
+            background: rgba(197, 168, 128, 0.12);
+        }
+
+        .studio-container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(197, 168, 128, 0.12);
+            border: 1px solid var(--sr-border);
+            border-radius: 999px;
+            font-size: 0.82rem;
+            color: var(--sr-gold-light);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .studio-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #f8fafc;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--sr-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .studio-desc {
+            font-size: 1.02rem;
+            color: #94a3b8;
+            max-width: 720px;
+            margin-bottom: 32px;
+        }
+
+        .studio-grid {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 24px;
+        }
+
+        @media (max-width: 860px) {
+            .studio-grid { grid-template-columns: 1fr; }
+        }
+
+        .preview-card {
+            background: var(--sr-card);
+            border: 1px solid var(--sr-border);
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 380px;
+            position: relative;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .lottie-stage {
+            width: 240px;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .playback-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn-ctrl {
+            background: rgba(197, 168, 128, 0.12);
+            border: 1px solid var(--sr-border);
+            color: #f8fafc;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-family: inherit;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-ctrl:hover {
+            background: var(--sr-gold);
+            color: #030806;
+        }
+
+        .panel-card {
+            background: var(--sr-card);
+            border: 1px solid var(--sr-border);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .panel-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--sr-gold-light);
+            border-bottom: 1px solid var(--sr-border);
+            padding-bottom: 10px;
+        }
+
+        .ctrl-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .ctrl-label {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sr-input, .sr-select {
+            background: #081611;
+            border: 1px solid var(--sr-border);
+            color: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .sr-input:focus, .sr-select:focus { border-color: var(--sr-gold); }
+
+        .btn-export-primary {
+            background: linear-gradient(135deg, var(--sr-gold), var(--sr-gold-dark));
+            color: #030806;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: inherit;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .btn-export-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35);
+        }
+
+        .btn-export-secondary {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: inherit;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .btn-export-secondary:hover {
+            background: #10b981;
+            color: #030806;
+        }
+
+        .studio-toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: rgba(8, 20, 15, 0.95);
+            border: 1px solid var(--sr-gold);
+            color: var(--sr-gold-light);
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+            z-index: 9999;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .studio-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
     </style>
 </head>
 <body>
-    <nav class="sr-main-nav">
-        <ul class="sr-nav-list">
-            <li><a href="index.html" class="sr-nav-link">الرئيسية</a></li>
-            <li><a href="tech-matrix.html" class="sr-nav-link">مصفوفة المقارنات التقنية</a></li>
-            <li><a href="lottie-studio.html" class="sr-nav-link">استوديو Lottie</a></li>
-            <li><a href="perf-audit.html" class="sr-nav-link">استوديو فحص الأداء</a></li>
-        </ul>
-    </nav>
+    <header class="studio-navbar">
+        <a href="./index.html" class="brand-link">
+            <img src="./assets/sr-core-emblem.svg" alt="S&R CoreSync Emblem">
+            <div class="brand-text">
+                <strong>S&R CoreSync</strong>
+                <span>استوديو الرسوم المتحركة والتفاعلات الدقيقة</span>
+            </div>
+        </a>
+        <nav>
+            <ul class="studio-nav-links">
+                <li><a href="./index.html" class="studio-nav-link">الرئيسية 🏠</a></li>
+                <li><a href="./tech-matrix.html" class="studio-nav-link">مصفوفة المقارنات ⚖️</a></li>
+                <li><a href="./lottie-studio.html" class="studio-nav-link active">استوديو Lottie ✨</a></li>
+                <li><a href="./perf-audit.html" class="studio-nav-link">فاحص الأداء ⚡</a></li>
+                <li><a href="./dynamic-qr-studio.html" class="studio-nav-link">QR ذكي 📲</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="studio-container">
-        <h1 class="sr-title">استوديو Lottie وMicro‑Interactions</h1>
-        <section class="preview-area" id="lottiePreview">
-            <p>اختر أو حمّل ملف Lottie (JSON) لبدء المعاينة.</p>
-        </section>
-        <div class="controls">
-            <input type="file" id="lottieFile" accept=".json" />
-            <label for="speedRange">السرعة:</label>
-            <input type="range" id="speedRange" min="0.25" max="3" step="0.25" value="1" />
-            <label for="colorPicker">اللون الأساسي:</label>
-            <input type="color" id="colorPicker" value="#10b981" />
-            <button class="export-btn" id="exportJsonBtn">تصدير JSON</button>
-            <button class="export-btn" id="exportCssBtn">تصدير CSS Keyframes</button>
+        <div class="hero-badge">✨ محرك الرسوم التفاعلية • Micro-Interactions & Lottie Studio</div>
+        <h1 class="studio-title">استوديو اختبار وتوليد الرسوم المتحركة الدقيقة</h1>
+        <p class="studio-desc">بيئة تفاعلية لاختبار وضبط ملفات الـ Lottie والـ Micro-interactions، والتحكم بمعدل السرعة والسمة اللونية، مع تصدير كود CSS Keyframes نقي وملفات JSON جاهزة للتضمين المباشر.</p>
+
+        <div class="studio-grid">
+            <section class="preview-card">
+                <div class="lottie-stage" id="lottiePreview"></div>
+                <div class="playback-bar">
+                    <button type="button" class="btn-ctrl" id="btnPlay">▶ تشغيل</button>
+                    <button type="button" class="btn-ctrl" id="btnPause">⏸ إيقاف مؤقت</button>
+                    <button type="button" class="btn-ctrl" id="btnStop">⏹ إعادة ضبط</button>
+                </div>
+            </section>
+
+            <aside class="panel-card">
+                <div class="panel-title">🎛 لوحة التحكم والتخصيص</div>
+
+                <div class="ctrl-group">
+                    <label class="ctrl-label" for="presetSelect">نماذج تفاعلية جاهزة:</label>
+                    <select id="presetSelect" class="sr-select">
+                        <option value="checkmark">علامة الإنجاز السيادية (Checkmark)</option>
+                        <option value="pulse">نبض نواة الـ AI (Core Pulse)</option>
+                        <option value="rocket">إطلاق المنظومة السحابية (Rocket)</option>
+                    </select>
+                </div>
+
+                <div class="ctrl-group">
+                    <label class="ctrl-label" for="lottieFile">استيراد ملف Lottie خاص (JSON):</label>
+                    <input type="file" id="lottieFile" class="sr-input" accept=".json" />
+                </div>
+
+                <div class="ctrl-group">
+                    <div class="ctrl-label">
+                        <span>سرعة الحركة:</span>
+                        <span id="speedVal" style="color:var(--sr-gold-light); font-weight:bold;">1x</span>
+                    </div>
+                    <input type="range" id="speedRange" min="0.25" max="3" step="0.25" value="1" />
+                </div>
+
+                <div class="ctrl-group">
+                    <label class="ctrl-label" for="colorPicker">لون السمة الرئيسي:</label>
+                    <input type="color" id="colorPicker" value="#c5a880" style="width:100%; height:36px; border:1px solid var(--sr-border); border-radius:6px; cursor:pointer; background:#081611;" />
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:10px; margin-top:8px;">
+                    <button type="button" class="btn-export-primary" id="exportJsonBtn">💾 تصدير ملف Lottie JSON</button>
+                    <button type="button" class="btn-export-secondary" id="exportCssBtn">🎨 توليد وتصدير CSS Keyframes</button>
+                </div>
+            </aside>
         </div>
     </main>
+
     <script src="js/lottie.min.js"></script>
     <script src="js/lottie-studio.js"></script>
+    <!-- Sovereign Master Shell Engine (MSE) -->
+    <script src="./js/sr-master-shell.js"></script>
 </body>
 </html>

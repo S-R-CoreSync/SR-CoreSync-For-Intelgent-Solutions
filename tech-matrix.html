@@ -1,50 +1,337 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-page-language="ar">
+<html lang="ar" dir="rtl" data-theme="dark" data-page-language="ar">
 <head>
     <meta charset="UTF-8">
-    <title>مصفوفة المقارنات التقنية</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/sr-unified-design-system.css">
+    <title>بوابة مصفوفة المقارنات الفنية والتقنية • S&R CoreSync</title>
+    <meta name="description" content="استوديو تفاعلي عالي التحويل لمقارنة الأنظمة البرمجية وحلول الذكاء الاصطناعي مع تمييز الفروقات وحاسبة التوفير وتصدير تقرير تنفيذي.">
+    <link rel="icon" type="image/svg+xml" href="./assets/sr-core-emblem.svg?v=sovereign2026">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Sovereign Unified Design System (UDS) -->
+    <link rel="stylesheet" href="./css/sr-unified-design-system.css">
+
     <style>
-        .sr-matrix { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        .sr-matrix th, .sr-matrix td { padding: 0.5rem 0.75rem; border: 1px solid #e5e7eb; text-align: center; }
-        .sr-matrix th { background: #f3f4f6; cursor: pointer; }
-        .diff-highlight { background: rgba(255, 165, 0, 0.2); }
-        .sr-filter { margin: 0.5rem 0; }
-        .sr-export-btn { margin-top: 1rem; padding: 8px 16px; background: #10b981; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
-        .sr-export-btn:hover { background: #059669; }
+        :root {
+            --sr-gold: #c5a880;
+            --sr-gold-light: #f3dfba;
+            --sr-gold-dark: #8c734b;
+            --sr-bg: #030806;
+            --sr-card: rgba(8, 20, 15, 0.88);
+            --sr-border: rgba(197, 168, 128, 0.22);
+            --sr-cyan: #38bdf8;
+            --sr-emerald: #10b981;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: radial-gradient(ellipse at 50% 0%, #0d221a 0%, #030806 75%);
+            color: #f8fafc;
+            font-family: 'Alexandria', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .studio-navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 28px;
+            background: rgba(3, 8, 5, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--sr-border);
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #f8fafc;
+        }
+
+        .brand-link img { width: 34px; height: 34px; }
+        .brand-text strong { font-size: 1.05rem; color: var(--sr-gold-light); display: block; font-weight: 800; }
+        .brand-text span { font-size: 0.72rem; color: #94a3b8; }
+
+        .studio-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .studio-nav-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .studio-nav-link:hover, .studio-nav-link.active {
+            color: var(--sr-gold-light);
+            background: rgba(197, 168, 128, 0.12);
+        }
+
+        .sr-matrix-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(197, 168, 128, 0.12);
+            border: 1px solid var(--sr-border);
+            border-radius: 999px;
+            font-size: 0.82rem;
+            color: var(--sr-gold-light);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .matrix-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #f8fafc;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--sr-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .matrix-desc {
+            font-size: 1.02rem;
+            color: #94a3b8;
+            max-width: 780px;
+            margin-bottom: 32px;
+        }
+
+        .controls-card {
+            background: var(--sr-card);
+            border: 1px solid var(--sr-border);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        .sr-select {
+            background: #081611;
+            border: 1px solid var(--sr-border);
+            color: #f8fafc;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .sr-select:focus { border-color: var(--sr-gold); }
+
+        .btn-toggle-diff {
+            background: rgba(197, 168, 128, 0.1);
+            border: 1px solid var(--sr-border);
+            color: var(--sr-gold-light);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .btn-toggle-diff.active {
+            background: var(--sr-gold);
+            color: #030806;
+            font-weight: 800;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border-radius: 14px;
+            border: 1px solid var(--sr-border);
+            background: var(--sr-card);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .sr-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        .sr-matrix th, .sr-matrix td {
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.12);
+            font-size: 0.92rem;
+        }
+
+        .sr-matrix th {
+            background: rgba(13, 34, 26, 0.9);
+            color: var(--sr-gold-light);
+            font-weight: 800;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .sr-matrix th:hover { background: rgba(197, 168, 128, 0.18); }
+
+        .sr-matrix tbody tr:hover { background: rgba(197, 168, 128, 0.04); }
+
+        .feature-cell { font-weight: 600; color: #f1f5f9; }
+        .feature-included { color: #10b981; font-weight: bold; }
+        .feature-excluded { color: #64748b; }
+
+        .diff-highlight {
+            background: rgba(245, 158, 11, 0.12) !important;
+            border-right: 3px solid #f59e0b;
+        }
+
+        .savings-card {
+            background: linear-gradient(135deg, rgba(8, 20, 15, 0.95), rgba(13, 34, 26, 0.85));
+            border: 1px solid var(--sr-border);
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .savings-info strong {
+            display: block;
+            font-size: 1.15rem;
+            color: var(--sr-gold-light);
+            margin-bottom: 4px;
+        }
+
+        .savings-val {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #10b981;
+            direction: ltr;
+        }
+
+        .btn-export-matrix {
+            background: linear-gradient(135deg, var(--sr-gold), var(--sr-gold-dark));
+            color: #030806;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 6px 20px rgba(197, 168, 128, 0.3);
+            transition: all 0.2s;
+        }
+
+        .btn-export-matrix:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(197, 168, 128, 0.45);
+        }
     </style>
 </head>
 <body>
-    <!-- Existing navigation placeholder -->
-    <nav class="sr-main-nav">
-        <ul class="sr-nav-list">
-            <li><a href="index.html" class="sr-nav-link">الرئيسية</a></li>
-            <li><a href="tech-matrix.html" class="sr-nav-link">مصفوفة المقارنات التقنية</a></li>
-            <li><a href="lottie-studio.html" class="sr-nav-link">استوديو Lottie</a></li>
-            <li><a href="perf-audit.html" class="sr-nav-link">استوديو فحص الأداء</a></li>
-        </ul>
-    </nav>
-    <main class="sr-container">
-        <h1 class="sr-title">مصفوفة المقارنات التقنية (Interactive Tech Comparison Matrix)</h1>
-        <section class="sr-filter">
-            <label for="sizeFilter">فلترة حسب حجم الشركة:</label>
-            <select id="sizeFilter" onchange="TechMatrix.filterBySize()">
-                <option value="all">الكل</option>
-                <option value="startup">شركات ناشئة</option>
-                <option value="mid">متوسطة</option>
-                <option value="enterprise">مؤسسات سيادية</option>
-            </select>
+    <header class="studio-navbar">
+        <a href="./index.html" class="brand-link">
+            <img src="./assets/sr-core-emblem.svg" alt="S&R CoreSync Emblem">
+            <div class="brand-text">
+                <strong>S&R CoreSync</strong>
+                <span>بوابة مصفوفة المقارنات الفنية والتقنية</span>
+            </div>
+        </a>
+        <nav>
+            <ul class="studio-nav-links">
+                <li><a href="./index.html" class="studio-nav-link">الرئيسية 🏠</a></li>
+                <li><a href="./tech-matrix.html" class="studio-nav-link active">مصفوفة المقارنات ⚖️</a></li>
+                <li><a href="./lottie-studio.html" class="studio-nav-link">استوديو Lottie ✨</a></li>
+                <li><a href="./perf-audit.html" class="studio-nav-link">فاحص الأداء ⚡</a></li>
+                <li><a href="./dynamic-qr-studio.html" class="studio-nav-link">QR ذكي 📲</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="sr-matrix-container">
+        <div class="hero-badge">⚖️ استوديو المقارنات السيادية • Interactive Tech Comparison Matrix</div>
+        <h1 class="matrix-title">مصفوفة المقارنات الفنية والتقنية للأنظمة والباقات</h1>
+        <p class="matrix-desc">استوديو ديناميكي عالي التحويل لمقارنة الحلول السحابية ومنظومات الـ AI والباقات المؤسسية، مع إمكانية فرز الميزات، تمييز الفروقات بنقرة واحدة، وحساب العائد الاستثماري (ROI).</p>
+
+        <section class="controls-card">
+            <div class="filter-group">
+                <label for="sizeFilter" class="filter-label">فلترة حسب حجم المؤسسة:</label>
+                <select id="sizeFilter" class="sr-select" onchange="TechMatrix.filterBySize()">
+                    <option value="all">كافة الباقات والحلول (الكل)</option>
+                    <option value="startup">شركات ناشئة ورواد أعمال (Starter)</option>
+                    <option value="mid">شركات نامية ومتوسطة (Business)</option>
+                    <option value="enterprise">مؤسسات وهيئات سيادية (Enterprise)</option>
+                </select>
+                <button type="button" class="btn-toggle-diff" id="btnDiff" onclick="TechMatrix.toggleDiff()">🔍 تمييز الفروقات فقط</button>
+            </div>
+            <div>
+                <button type="button" class="btn-export-matrix" onclick="TechMatrix.exportPDF()">📄 تصدير تقرير المقارنة كـ PDF</button>
+            </div>
         </section>
-        <table class="sr-matrix" id="matrixTable">
-            <thead>
-                <tr id="matrixHeader"></tr>
-            </thead>
-            <tbody id="matrixBody"></tbody>
-        </table>
-        <button class="sr-export-btn" onclick="TechMatrix.exportPDF()">تصدير كملف PDF</button>
-        <div id="costSavings" style="margin-top:1rem;font-weight:800;color:#10b981;"></div>
+
+        <div class="table-wrap">
+            <table class="sr-matrix" id="matrixTable">
+                <thead>
+                    <tr id="matrixHeader"></tr>
+                </thead>
+                <tbody id="matrixBody"></tbody>
+            </table>
+        </div>
+
+        <section class="savings-card">
+            <div class="savings-info">
+                <strong>حاسبة التوفير السنوي والجدوى الاستثمارية (Estimated Annual ROI):</strong>
+                <span style="font-size:0.88rem; color:#94a3b8;">مقارنةً بالأنظمة التقليدية وتكاليف البرمجة والصيانة المنفصلة</span>
+            </div>
+            <div id="costSavings" class="savings-val">€ 14,800 / سنوياً</div>
+        </section>
     </main>
+
     <script src="js/tech-matrix.js"></script>
+    <!-- Sovereign Master Shell Engine (MSE) -->
+    <script src="./js/sr-master-shell.js"></script>
 </body>
 </html>

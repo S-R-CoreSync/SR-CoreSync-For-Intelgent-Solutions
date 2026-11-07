@@ -1,23 +1,11 @@
-// ---------------------------------------------------------------
-// tech-matrix.js – Interactive Tech Comparison Matrix
-// ---------------------------------------------------------------
-// This script builds a dynamic comparison table, adds filtering, sorting,
-// difference highlighting, a simple cost‑savings calculator and a PDF export.
-// It is pure vanilla JavaScript – no external libs – to keep the project
-// self‑contained and compatible with the existing build pipeline.
+/**
+ * S&R CoreSync Sovereign Tech Comparison Matrix Engine
+ * (c) 2026 S&R CoreSync For Intelligent Solutions — The Netherlands
+ */
 
-/* -----------------------------------------------------------------
-   Sample data – in a real project this would be fetched from a JSON file
-   or an API. Each entry represents a product / solution.
-   Fields:
-   • name        – Display name
-   • size        – "startup" | "mid" | "enterprise"
-   • price       – Monthly price (USD) – used for the savings calculator
-   • features    – Object where key = feature name, value = true/false or a value
-   ----------------------------------------------------------------- */
 const TechData = [
   {
-    name: "CoreSync Starter",
+    name: "CoreSync Starter • انطلاقة سحابية",
     size: "startup",
     price: 199,
     features: {
@@ -25,12 +13,12 @@ const TechData = [
       "تحليل AI": false,
       "تعدد اللغات": true,
       "دعم 24/7": false,
-      "تكامل ERP": "محدود",
-      "وقت الاستجابة": "5 ث",
+      "تكامل ERP": "أساسي",
+      "وقت الاستجابة": "0.4 ثانية",
     },
   },
   {
-    name: "CoreSync Business",
+    name: "CoreSync Business • منظومة الشركات",
     size: "mid",
     price: 499,
     features: {
@@ -39,11 +27,11 @@ const TechData = [
       "تعدد اللغات": true,
       "دعم 24/7": true,
       "تكامل ERP": "متوسط",
-      "وقت الاستجابة": "2 ث",
+      "وقت الاستجابة": "0.15 ثانية",
     },
   },
   {
-    name: "CoreSync Enterprise",
+    name: "CoreSync Enterprise • باقة سيادية متكاملة",
     size: "enterprise",
     price: 1199,
     features: {
@@ -51,15 +39,12 @@ const TechData = [
       "تحليل AI": true,
       "تعدد اللغات": true,
       "دعم 24/7": true,
-      "تكامل ERP": "متكامل",
-      "وقت الاستجابة": "1 ث",
+      "تكامل ERP": "سيادي 100%",
+      "وقت الاستجابة": "0.05 ثانية (Edge)",
     },
   },
 ];
 
-// -----------------------------------------------------------------
-// Utility helpers
-// -----------------------------------------------------------------
 function $(selector) {
   return document.querySelector(selector);
 }
@@ -67,13 +52,11 @@ function $$(selector) {
   return Array.from(document.querySelectorAll(selector));
 }
 
-// -----------------------------------------------------------------
-// Core object exposed globally as `TechMatrix`
-// -----------------------------------------------------------------
 const TechMatrix = {
   data: TechData,
   filteredData: TechData.slice(),
   currentSort: { col: null, asc: true },
+  diffOnly: false,
 
   init() {
     this.renderHeader();
@@ -81,80 +64,77 @@ const TechMatrix = {
     this.updateCostSavings();
   },
 
-  // -----------------------------------------------------------------
-  // Render table header – each feature becomes a sortable column
-  // -----------------------------------------------------------------
   renderHeader() {
     const headerRow = $('#matrixHeader');
+    if (!headerRow) return;
     headerRow.innerHTML = '';
-    // First column for product names
+
     const thName = document.createElement('th');
-    thName.textContent = 'المنتج / النظام';
+    thName.innerHTML = 'المنظومة / الباقة <span>⇅</span>';
     thName.dataset.key = 'name';
     thName.addEventListener('click', () => this.sortBy('name'));
     headerRow.appendChild(thName);
 
-    // Collect all distinct feature keys (order preserved by first product)
     const featureKeys = Object.keys(this.data[0].features);
     featureKeys.forEach((key) => {
       const th = document.createElement('th');
-      th.textContent = key;
+      th.innerHTML = `${key} <span style="font-size:0.75rem;opacity:0.6;">⇅</span>`;
       th.dataset.key = key;
       th.addEventListener('click', () => this.sortBy(key));
       headerRow.appendChild(th);
     });
-    // Price column (always last)
+
     const thPrice = document.createElement('th');
-    thPrice.textContent = 'السعر (USD)';
+    thPrice.innerHTML = 'الاستثمار الشهري <span>⇅</span>';
     thPrice.dataset.key = 'price';
     thPrice.addEventListener('click', () => this.sortBy('price'));
     headerRow.appendChild(thPrice);
   },
 
-  // -----------------------------------------------------------------
-  // Render table body based on `filteredData`
-  // -----------------------------------------------------------------
   renderBody() {
     const tbody = $('#matrixBody');
+    if (!tbody) return;
     tbody.innerHTML = '';
+
     this.filteredData.forEach((item) => {
       const tr = document.createElement('tr');
-      // Product name cell
       const tdName = document.createElement('td');
+      tdName.className = 'feature-cell';
       tdName.textContent = item.name;
       tr.appendChild(tdName);
-      // Feature cells
+
       const featureKeys = Object.keys(this.data[0].features);
       featureKeys.forEach((key) => {
         const td = document.createElement('td');
         const val = item.features[key];
         if (typeof val === 'boolean') {
-          td.textContent = val ? '✔️' : '✖️';
+          td.innerHTML = val
+            ? '<span class="feature-included">✓ مشمول</span>'
+            : '<span class="feature-excluded">✕ غير متاح</span>';
         } else {
-          td.textContent = val;
+          td.innerHTML = `<span style="font-weight:600; color:#f8fafc;">${val}</span>`;
         }
         tr.appendChild(td);
       });
-      // Price cell
+
       const tdPrice = document.createElement('td');
-      tdPrice.textContent = item.price.toLocaleString('ar-EG') + ' $';
+      tdPrice.style.direction = 'ltr';
+      tdPrice.style.fontWeight = 'bold';
+      tdPrice.style.color = 'var(--sr-gold-light)';
+      tdPrice.textContent = `€ ${item.price} / شهر`;
       tr.appendChild(tdPrice);
       tbody.appendChild(tr);
     });
-    // After drawing body, apply difference highlighting
+
     this.highlightDifferences();
   },
 
-  // -----------------------------------------------------------------
-  // Sort by a column (feature key or name / price)
-  // -----------------------------------------------------------------
   sortBy(key) {
     const asc = this.currentSort.col === key ? !this.currentSort.asc : true;
     this.currentSort = { col: key, asc };
     this.filteredData.sort((a, b) => {
       let aVal = a[key];
       let bVal = b[key];
-      // For features we compare boolean/value representations
       if (typeof aVal === 'object' && aVal !== null) aVal = JSON.stringify(aVal);
       if (typeof bVal === 'object' && bVal !== null) bVal = JSON.stringify(bVal);
       if (aVal < bVal) return asc ? -1 : 1;
@@ -164,92 +144,116 @@ const TechMatrix = {
     this.renderBody();
   },
 
-  // -----------------------------------------------------------------
-  // Filter by company size (startup / mid / enterprise / all)
-  // -----------------------------------------------------------------
   filterBySize() {
-    const filter = $('#sizeFilter').value;
+    const filterEl = $('#sizeFilter');
+    const filter = filterEl ? filterEl.value : 'all';
     if (filter === 'all') {
       this.filteredData = this.data.slice();
     } else {
       this.filteredData = this.data.filter((it) => it.size === filter);
     }
-    // Reset sorting after filter
     this.currentSort = { col: null, asc: true };
     this.renderBody();
     this.updateCostSavings();
   },
 
-  // -----------------------------------------------------------------
-  // Highlight cells that differ from the cheapest product in the current view
-  // -----------------------------------------------------------------
+  toggleDiff() {
+    this.diffOnly = !this.diffOnly;
+    const btn = $('#btnDiff');
+    if (btn) btn.classList.toggle('active', this.diffOnly);
+    this.highlightDifferences();
+  },
+
   highlightDifferences() {
     if (this.filteredData.length === 0) return;
-    // Find the reference (cheapest) product for price comparison
-    const reference = this.filteredData.reduce((prev, cur) => (cur.price < prev.price ? cur : prev), this.filteredData[0]);
+    const reference = this.filteredData[0];
     const tbodyRows = $$('#matrixBody tr');
     const featureKeys = Object.keys(this.data[0].features);
+
     tbodyRows.forEach((tr, rowIndex) => {
       const product = this.filteredData[rowIndex];
-      // Skip the reference row – no highlight needed
-      if (product === reference) return;
-      // Iterate over feature cells (skip first name cell)
       const cells = tr.querySelectorAll('td');
+
       featureKeys.forEach((key, colIdx) => {
         const refVal = reference.features[key];
         const curVal = product.features[key];
+        const cell = cells[colIdx + 1];
+        if (!cell) return;
+
         if (refVal !== curVal) {
-          // Highlight the cell
-          cells[colIdx + 1].classList.add('diff-highlight'); // +1 because first cell is name
+          cell.classList.add('diff-highlight');
+        } else {
+          cell.classList.remove('diff-highlight');
         }
       });
     });
   },
 
-  // -----------------------------------------------------------------
-  // Simple cost‑savings calculator – shows how much cheaper each option is
-  // relative to the most expensive one in the current view.
-  // -----------------------------------------------------------------
   updateCostSavings() {
+    const costBox = $('#costSavings');
+    if (!costBox) return;
+
     if (this.filteredData.length === 0) {
-      $('#costSavings').textContent = '';
+      costBox.textContent = '';
       return;
     }
     const maxPrice = Math.max(...this.filteredData.map((p) => p.price));
     const lines = this.filteredData.map((p) => {
-      const saved = maxPrice - p.price;
-      return `${p.name}: توفير ${saved.toLocaleString('ar-EG')} $`; 
+      const annualSaved = (maxPrice - p.price) * 12;
+      return `<span><strong>${p.name}:</strong> توفير سنوي مباشر بقيمة € ${annualSaved.toLocaleString('en-US')}</span>`;
     });
-    $('#costSavings').innerHTML = lines.join('<br>');
+    costBox.innerHTML = lines.join('<br>');
   },
 
-  // -----------------------------------------------------------------
-  // Export current table view as PDF using `window.print()` on a hidden clone.
-  // -----------------------------------------------------------------
   exportPDF() {
-    // Clone the table into a temporary full‑screen container
-    const clone = document.createElement('div');
-    clone.style.position = 'fixed';
-    clone.style.top = '0';
-    clone.style.left = '0';
-    clone.style.width = '100%';
-    clone.style.height = '100%';
-    clone.style.background = '#fff';
-    clone.style.zIndex = '9999';
-    clone.style.overflow = 'auto';
-    clone.innerHTML = `<h1 style="text-align:center;margin:20px 0;">
-      مصفوفة المقارنات التقنية – نسخة طباعة
-    </h1>` + document.getElementById('matrixTable').outerHTML;
-    document.body.appendChild(clone);
-    // Give the browser a moment to render the clone before printing
+    const printWin = window.open('', '_blank');
+    if (!printWin) {
+      alert('يرجى السماح بالنوافذ المنبثقة لطباعة مصفوفة المقارنة');
+      return;
+    }
+    const printHtml = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مصفوفة المقارنات الفنية والتقنية • S&R CoreSync</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: rtl; background: #fff; color: #0f172a; padding: 40px; margin: 0; }
+    .header { border-bottom: 2px solid #c5a880; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+    .title { font-size: 22px; font-weight: bold; color: #0b192c; }
+    table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+    th, td { border: 1px solid #cbd5e1; padding: 12px; text-align: right; }
+    th { background: #0b192c; color: #fff; font-weight: bold; }
+    .footer { margin-top: 40px; border-top: 1px solid #e2e8f0; padding-top: 15px; font-size: 11px; color: #64748b; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <div class="title">S&R CoreSync For Intelligent Solutions</div>
+      <div>مصفوفة المقارنات الفنية والتقنية للأنظمة والباقات</div>
+    </div>
+    <div style="font-size:12px; color:#64748b;">${new Date().toLocaleDateString('ar-EG', { dateStyle: 'full' })}</div>
+  </div>
+  ${document.getElementById('matrixTable').outerHTML}
+  <div style="background:#f8fafc; border:1px solid #cbd5e1; padding:15px; border-radius:6px; margin-top:20px;">
+    <strong>تقدير الجدوى والتوفير المالي:</strong>
+    <div style="margin-top:8px;">${document.getElementById('costSavings').innerHTML}</div>
+  </div>
+  <div class="footer">
+    تم تصدير هذا التقرير رسمياً بواسطة بوابة مصفوفة المقارنات لشركة S&R CoreSync For Intelligent Solutions — هولندا
+  </div>
+</body>
+</html>`;
+
+    printWin.document.open();
+    printWin.document.write(printHtml);
+    printWin.document.close();
     setTimeout(() => {
-      window.print();
-      document.body.removeChild(clone);
-    }, 500);
+      printWin.print();
+    }, 400);
   },
 };
 
-// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   TechMatrix.init();
 });
