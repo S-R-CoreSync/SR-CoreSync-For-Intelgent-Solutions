@@ -4894,9 +4894,7 @@ function exportTechnicalContractWord() {
     </div>
     <p><strong>الاعتماد والتوقيع:</strong> معتمد وموقع رسمياً من م. محمد سليم عزيزة والسيد مضر أبو فاشة.</p>
     
-    <!-- Sovereign Master Shell Engine (MSE) -->
-    <script src="./js/sr-master-shell.js"></script>
-</body></html>`;
+    </body></html>`;
     const blob = new Blob(['\\ufeff', html], { type: 'application/msword;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -5598,6 +5596,8 @@ function calcCloudSizing() {
 })();
 </script>
 
+<!-- Sovereign Master Shell Engine (MSE) -->
+<script src="./js/sr-master-shell.js"></script>
 <script src="./js/sr-tech-radar.js"></script>
 </body>
 </html>

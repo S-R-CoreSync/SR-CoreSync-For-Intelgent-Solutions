@@ -1622,7 +1622,6 @@
             }
             if (clientDate) {
                 clientDate.innerText = 'تاريخ التوقيع الرقمي: ' + new Date().toISOString().slice(0, 10);
-                }
             }
         }
 
@@ -1778,10 +1777,8 @@
                         </td>
                     </tr>
                 </table>
-                <!-- Sovereign Master Shell Engine (MSE) -->
-    <script src="./js/sr-master-shell.js"></script>
-</body>
-            </html>;
+                </body>
+            </html>`;
 
             const blob = new Blob(['\ufeff', htmlContent], { type: 'application/msword;charset=utf-8' });
             const url = URL.createObjectURL(blob);
@@ -1824,7 +1821,7 @@
                 table { border-collapse: collapse; }
                 th, td { border: 1px solid #cbd5e1; padding: 6px 10px; font-size: 10pt; }
             </style>
-            </head><body><table>${tableRows}</table></body></html>;
+            </head><body><table>${tableRows}</table></body></html>`;
 
             const blob = new Blob(['\ufeff', excelContent], { type: 'application/vnd.ms-excel;charset=utf-8' });
             const url = URL.createObjectURL(blob);
@@ -1913,6 +1910,8 @@
             }
         }
     </script>
+<!-- Sovereign Master Shell Engine (MSE) -->
+<script src="./js/sr-master-shell.js"></script>
 <script src="./js/sr-events.js" defer></script>
 </body>
 </html>
