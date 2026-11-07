@@ -428,6 +428,31 @@
         });
     }
 
+    // 5.3 Dynamic Rotating Hero Headline Engine (Mohammad Salim Aziza & S&R CoreSync Pillars)
+    function initHeroDynamicTitleRotator() {
+        const titleEl = document.getElementById('heroRotatingText');
+        if (!titleEl) return;
+
+        const titles = [
+            'أنظمة برمجية متقدمة وحلول الذكاء الاصطناعي',
+            'تطبيقات ومنصات رقمية وحلول سحابية فائقة',
+            'بناء وتحديث المنظومات المؤسسية وإدارة البيانات',
+            'تصميم المتاجر الإلكترونية الفاخرة والهويات البصرية'
+        ];
+
+        let index = 0;
+        setInterval(() => {
+            titleEl.style.opacity = '0';
+            titleEl.style.transform = 'translateY(10px)';
+            setTimeout(() => {
+                index = (index + 1) % titles.length;
+                titleEl.textContent = titles[index];
+                titleEl.style.opacity = '1';
+                titleEl.style.transform = 'translateY(0)';
+            }, 350);
+        }, 3600);
+    }
+
     // Expose globally to window
     window.setPrompt = setPrompt;
     window.analyzeIdea = analyzeIdea;
@@ -439,11 +464,13 @@
             createMasterDrawer();
             autoEnhanceNavbar();
             initAnimatedPlaceholder();
+            initHeroDynamicTitleRotator();
         });
     } else {
         createMasterDrawer();
         autoEnhanceNavbar();
         initAnimatedPlaceholder();
+        initHeroDynamicTitleRotator();
     }
 
 })();

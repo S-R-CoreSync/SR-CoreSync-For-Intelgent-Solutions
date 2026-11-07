@@ -660,3 +660,231 @@ p {
     }
 }
 
+/* ==========================================================
+   Priority Stacking & Header Support Dropdown Fix
+   Ensure Support Tools Dropdown is ALWAYS above Floating Social Bar
+   ========================================================== */
+.floating-follow {
+    z-index: 99 !important;
+}
+
+header.header,
+.header-original,
+.header-upper,
+.sr-master-header,
+.header-support-dropdown-wrap {
+    z-index: 10001 !important;
+    position: relative;
+}
+
+.header-support-menu {
+    z-index: 10005 !important;
+    position: absolute !important;
+    top: calc(100% + 12px) !important;
+    left: 0 !important;
+    right: auto !important;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95), 0 0 35px rgba(16, 185, 129, 0.35) !important;
+}
+
+@media (max-width: 1200px) {
+    .header-support-menu {
+        left: -10px !important;
+    }
+}
+
+/* ==========================================================
+   Compact Viewport-Fitted Sovereign Hero Section (100% Height)
+   ========================================================== */
+.section-hero-v1.hero-reference {
+    min-height: calc(100vh - 85px) !important;
+    max-height: 920px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px 0 25px !important;
+    overflow: hidden;
+}
+
+.container-hero-luxury {
+    max-width: 1380px !important;
+    width: 100% !important;
+    padding: 0 30px !important;
+}
+
+.hero-reference__grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    align-items: center !important;
+    gap: 36px !important;
+}
+
+/* Rotating headline */
+.hero-dynamic-title-wrap {
+    margin-bottom: 12px !important;
+}
+
+.hero-rotating-text-frame {
+    display: block;
+    min-height: 58px;
+    position: relative;
+}
+
+.hero-rotating-text-item {
+    display: inline-block;
+    font-size: clamp(1.65rem, 2.5vw, 2.55rem);
+    font-weight: 900;
+    line-height: 1.3;
+    background: linear-gradient(135deg, #ffffff 20%, #f3dfba 55%, #c5a880 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Service Pillars Pills */
+.hero-service-pillars-pills {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    color: #6ee7b7;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.hero-service-pillars-pills span {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+}
+
+/* Compact Actions */
+.hero-actions-compact {
+    margin: 16px 0 12px !important;
+}
+
+.hero-actions-compact .hero-actions-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-actions-compact .hero-reference__action {
+    padding: 12px 22px !important;
+    font-size: 0.94rem !important;
+    border-radius: 12px !important;
+}
+
+/* Quick Portals Strip */
+.hero-quick-portals-strip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 0.82rem;
+    color: #94a3b8;
+}
+
+.hero-quick-portal-link,
+.hero-quick-portal-btn {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.hero-quick-portal-link:hover,
+.hero-quick-portal-btn:hover {
+    color: #d4af37;
+    background: rgba(197, 168, 128, 0.1);
+}
+
+.hero-portal-sep {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Compact Sectors Row */
+.hero-compact-sectors-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.hero-compact-sectors-label {
+    font-size: 0.78rem;
+    color: #d4af37;
+    font-weight: 800;
+}
+
+.hero-compact-chip {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(197, 168, 128, 0.25);
+    color: #e2e8f0;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.hero-compact-chip:hover {
+    background: rgba(197, 168, 128, 0.16);
+    border-color: #d4af37;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Compact Trust Metrics */
+.hero-trust-compact {
+    margin-top: 10px !important;
+    padding: 10px 16px !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.hero-trust-compact .metric-val {
+    font-size: 1rem !important;
+}
+
+.hero-trust-compact .metric-lbl {
+    font-size: 0.72rem !important;
+}
+
+/* Scaled 3D Emblem Stage to Fit Screen Perfectly */
+.hero-emblem-card-3d {
+    width: clamp(280px, 26vw, 380px) !important;
+    height: clamp(280px, 26vw, 380px) !important;
+    margin: 0 auto;
+}
+
+.hero-emblem-render-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .section-hero-v1.hero-reference {
+        min-height: auto !important;
+        max-height: none !important;
+        padding: 40px 0 !important;
+    }
+    .hero-reference__grid {
+        grid-template-columns: 1fr !important;
+    }
+    .hero-reference__emblem-col {
+        order: -1 !important;
+    }
+}
+
