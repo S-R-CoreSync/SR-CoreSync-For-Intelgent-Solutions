@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-page-language="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>استوديو Lottie وMicro‑Interactions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sr-unified-design-system.css">
+    <style>
+        .studio-container { max-width: 900px; margin: 2rem auto; padding: 1rem; }
+        .preview-area { border: 1px solid #e5e7eb; padding: 1rem; text-align: center; }
+        .controls { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+        .controls label { margin-right: 0.3rem; }
+        .export-btn { padding: 8px 14px; background: #10b981; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+        .export-btn:hover { background:#059669; }
+    </style>
+</head>
+<body>
+    <nav class="sr-main-nav">
+        <ul class="sr-nav-list">
+            <li><a href="index.html" class="sr-nav-link">الرئيسية</a></li>
+            <li><a href="tech-matrix.html" class="sr-nav-link">مصفوفة المقارنات التقنية</a></li>
+            <li><a href="lottie-studio.html" class="sr-nav-link">استوديو Lottie</a></li>
+            <li><a href="perf-audit.html" class="sr-nav-link">استوديو فحص الأداء</a></li>
+        </ul>
+    </nav>
+    <main class="studio-container">
+        <h1 class="sr-title">استوديو Lottie وMicro‑Interactions</h1>
+        <section class="preview-area" id="lottiePreview">
+            <p>اختر أو حمّل ملف Lottie (JSON) لبدء المعاينة.</p>
+        </section>
+        <div class="controls">
+            <input type="file" id="lottieFile" accept=".json" />
+            <label for="speedRange">السرعة:</label>
+            <input type="range" id="speedRange" min="0.25" max="3" step="0.25" value="1" />
+            <label for="colorPicker">اللون الأساسي:</label>
+            <input type="color" id="colorPicker" value="#10b981" />
+            <button class="export-btn" id="exportJsonBtn">تصدير JSON</button>
+            <button class="export-btn" id="exportCssBtn">تصدير CSS Keyframes</button>
+        </div>
+    </main>
+    <script src="js/lottie.min.js"></script>
+    <script src="js/lottie-studio.js"></script>
+</body>
+</html>
