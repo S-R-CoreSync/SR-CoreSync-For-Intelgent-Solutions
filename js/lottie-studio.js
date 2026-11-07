@@ -5,7 +5,7 @@ let lottieInstance = null;
 let loadedAnimationData = null; // Store JSON for export if user loads a file
 
 // Helper to download data as a file
-def downloadFile(filename, content, mime = 'application/json') {
+function downloadFile(filename, content, mime = 'application/json') {
   const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
