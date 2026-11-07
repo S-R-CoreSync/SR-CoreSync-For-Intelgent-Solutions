@@ -205,6 +205,21 @@ const TechMatrix = {
     costBox.innerHTML = lines.join('<br>');
   },
 
+  openSocialCard() {
+    if (typeof SRSocialCard === 'undefined') return;
+    SRSocialCard.open({
+      title: 'مصفوفة المقارنات الفنية والتقنية للأنظمة السحابية',
+      subtitle: 'تحليل ومقارنة شاملة لحلول الذكاء الاصطناعي وباقات الأنظمة السيادية',
+      badge: 'مقارنات الأنظمة ⚖️',
+      url: window.location.href,
+      metrics: [
+        { label: 'باقة الشركات الكبرى Enterprise', val: '€ 1,199', sub: 'تكامل سيادي ERP 100%', color: '#c5a880' },
+        { label: 'زمن الاستجابة السحابية', val: '0.05s', sub: 'أداء Edge فائق السرعة', color: '#10b981' },
+        { label: 'التوفير السنوي المقدر ROI', val: '€ 14,800', sub: 'توفير تكاليف الصيانة', color: '#38bdf8' }
+      ]
+    });
+  },
+
   exportPDF() {
     const printWin = window.open('', '_blank');
     if (!printWin) {

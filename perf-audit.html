@@ -380,13 +380,15 @@
             </div>
         </section>
 
-        <div style="text-align: center; margin-top: 10px;">
+        <div style="text-align: center; margin-top: 10px; display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
             <button type="button" class="btn-export-report" id="exportReportBtn">📄 تصدير تقرير التدقيق الفني المعتمد (PDF)</button>
+            <button type="button" class="btn-export-report" style="background:rgba(56, 189, 248, 0.15); border:1px solid rgba(56, 189, 248, 0.35); color:#38bdf8;" onclick="openPerfAuditSocialCard()">📢 توليد بطاقة المشاركة الاجتماعية (1200×630)</button>
         </div>
     </main>
 
     <script src="js/web-vitals.min.js"></script>
     <script src="js/perf-audit.js"></script>
+    <script src="js/sr-social-card-engine.js"></script>
     <!-- Sovereign Master Shell Engine (MSE) -->
     <script src="./js/sr-master-shell.js"></script>
 </body>

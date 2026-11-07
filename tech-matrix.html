@@ -306,6 +306,7 @@
                     <option value="enterprise">مؤسسات وهيئات سيادية (Enterprise)</option>
                 </select>
                 <button type="button" class="btn-toggle-diff" id="btnDiff" onclick="TechMatrix.toggleDiff()">🔍 تمييز الفروقات فقط</button>
+                <button type="button" class="btn-toggle-diff" onclick="TechMatrix.openSocialCard()">📢 بطاقة المشاركة الاجتماعية</button>
             </div>
             <div>
                 <button type="button" class="btn-export-matrix" onclick="TechMatrix.exportPDF()">📄 تصدير تقرير المقارنة كـ PDF</button>
@@ -331,6 +332,7 @@
     </main>
 
     <script src="js/tech-matrix.js"></script>
+    <script src="js/sr-social-card-engine.js"></script>
     <!-- Sovereign Master Shell Engine (MSE) -->
     <script src="./js/sr-master-shell.js"></script>
 </body>

@@ -53,6 +53,26 @@ function loadLottieAnimation(animData) {
   }
 }
 
+function openLottieSocialCard() {
+  if (typeof SRSocialCard === 'undefined') return;
+  const speedRange = document.getElementById('speedRange');
+  const speed = (speedRange && speedRange.value) || '1';
+  const presetSelect = document.getElementById('presetSelect');
+  const presetName = (presetSelect && presetSelect.options[presetSelect.selectedIndex].text) || 'علامة الإنجاز السيادية';
+
+  SRSocialCard.open({
+    title: 'استوديو الرسوم المتحركة والتفاعلات الدقيقة Lottie',
+    subtitle: `تصميم وتوليد عناصر بصرية تفاعلية بنقرة واحدة (${presetName})`,
+    badge: 'أنيميشن Lottie ✨',
+    url: window.location.href,
+    metrics: [
+      { label: 'معدل السرعة وسلاسة الحركة', val: `${speed}x`, sub: '60 FPS Full Vector Animation', color: '#10b981' },
+      { label: 'توليد كود CSS Keyframes', val: '100% Pure', sub: 'بدون مكتبات خارجية', color: '#38bdf8' },
+      { label: 'دقة الرسم والإخراج', val: '8K Vector', sub: 'متطابق مع كافة الشاشات', color: '#c5a880' }
+    ]
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const fileInput = document.getElementById('lottieFile');
   const speedRange = document.getElementById('speedRange');
