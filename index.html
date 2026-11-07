@@ -2085,6 +2085,13 @@
                                     <span class="hero-rotating-text-frame">
                                         <span class="hero-rotating-text-item active" id="heroRotatingText">أنظمة برمجية متقدمة وحلول الذكاء الاصطناعي</span>
                                     </span>
+                                    <!-- نقاط التبديل التفاعلية — Bullet Dot Indicators -->
+                                    <div class="hero-title-dots" id="heroDotIndicators" aria-label="التنقل بين خدمات المهندس محمد سليم عزيزة">
+                                        <button class="hero-title-dot active" data-index="0" onclick="heroJumpToTitle(0)" aria-label="أنظمة برمجية وذكاء اصطناعي" title="أنظمة برمجية وذكاء اصطناعي"></button>
+                                        <button class="hero-title-dot" data-index="1" onclick="heroJumpToTitle(1)" aria-label="تطبيقات وحلول سحابية" title="تطبيقات وحلول سحابية"></button>
+                                        <button class="hero-title-dot" data-index="2" onclick="heroJumpToTitle(2)" aria-label="بناء وتحديث المنظومات" title="بناء وتحديث المنظومات"></button>
+                                        <button class="hero-title-dot" data-index="3" onclick="heroJumpToTitle(3)" aria-label="متاجر وهويات بصرية" title="متاجر وهويات بصرية"></button>
+                                    </div>
                                 </h1>
 
                                 <div class="hero-reference__bottom hero-intro">
@@ -2125,12 +2132,12 @@
                                     <!-- رقاقات التخصصات السريعة في صف واحد متناسق -->
                                     <div class="hero-compact-sectors-row" aria-label="قطاعات متخصصة:">
                                         <span class="hero-compact-sectors-label">تخصصاتنا:</span>
-                                        <a href="#store-section" class="hero-compact-chip">💳 حلول FinTech</a>
-                                        <a href="#store-section" class="hero-compact-chip">🏢 CoreSync ERP</a>
-                                        <a href="#store-section" class="hero-compact-chip">🤖 وكلاء AI</a>
-                                        <a href="#store-section" class="hero-compact-chip">📦 سلاسل إمداد</a>
-                                        <a href="#store-section" class="hero-compact-chip">🛒 متاجر إلكترونية</a>
-                                        <a href="#store-section" class="hero-compact-chip">🏛️ مركز CLGID</a>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 حلول FinTech</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 وكلاء AI</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 سلاسل إمداد</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 متاجر إلكترونية</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ مركز CLGID</button>
                                     </div>
 
                                     <!-- شريط مؤشرات الثقة المدمج والمصغر -->
@@ -10983,6 +10990,20 @@
     </script>
     <!-- محرك القالب السيادي الموحد للوراثة الشاملة ومتحكم حجم الخطوط والقوائم (Master Sovereign Shell Engine) -->
     <script src="./js/sr-master-shell.js"></script>
+
+    <!-- Studio Peek Modal — Instant Preview Overlay (Phase 157) -->
+    <div id="srStudioPeekOverlay" role="dialog" aria-modal="true" aria-label="معاينة الاستوديو" onclick="if(event.target===this)closeStudioPeek()">
+        <div class="sr-studio-peek-card" id="srStudioPeekCard">
+            <span class="sr-peek-icon" id="srPeekIcon">💡</span>
+            <span class="sr-peek-badge" id="srPeekBadge">استوديو S&amp;R CoreSync</span>
+            <h2 class="sr-peek-title" id="srPeekTitle">عنوان الخدمة</h2>
+            <p class="sr-peek-desc" id="srPeekDesc">وصف الخدمة</p>
+            <div class="sr-peek-actions">
+                <button class="sr-peek-btn-go" id="srPeekBtnGo" onclick="closeStudioPeek()">🚀 انتقال للاستوديو</button>
+                <button class="sr-peek-btn-close" onclick="closeStudioPeek()">✕ إغلاق</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
