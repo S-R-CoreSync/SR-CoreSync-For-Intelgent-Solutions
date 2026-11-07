@@ -178,8 +178,10 @@
     }
 
     // 5. Universal AI Idea Analyzer & Dispatcher
+    // 5. Universal AI Idea Analyzer & Dispatcher (S&R CoreSync User Specification)
     window.setPrompt = function (text) {
         const input = document.getElementById('userIdeaInput') || document.getElementById('heroAiIdeaInput');
+        const input = document.getElementById('userIdeaInput');
         if (input) {
             input.value = text;
             input.focus();
@@ -198,6 +200,12 @@
                 setTimeout(() => { input.style.boxShadow = ''; }, 1500);
             }
             alert('يرجى كتابة فكرة مشروعك أولاً ليقوم الذكاء الاصطناعي بتحليلها.');
+        const input = document.getElementById('userIdeaInput');
+        const idea = (input ? input.value : '').toLowerCase();
+        
+        if (!idea.trim()) {
+            alert('الرجاء كتابة فكرة المشروع أولاً.');
+            if (input) input.focus();
             return;
         }
 
@@ -294,6 +302,34 @@
                 urlText: 'فتح استوديو أكواد QR المشفرة 📲',
                 badge: 'أكواد QR الذكية'
             };
+        // منطق التحليل الذكي والتوجيه البسيط
+        if (idea.includes('متجر') || idea.includes('بيع') || idea.includes('منتج')) {
+            alert('تحليل الذكاء الاصطناعي: فكرتك تميل نحو التجارة الإلكترونية. جاري تحويلك إلى المتجر والخدمات المرتبطة...');
+            const storeEl = document.getElementById('store-section') || document.getElementById('software-hub');
+            if (storeEl) {
+                storeEl.scrollIntoView({ behavior: 'smooth' });
+                window.location.hash = 'store-section';
+            } else {
+                window.location.href = './index.html#store-section';
+            }
+        } else if (idea.includes('سعر') || idea.includes('تكلفة') || idea.includes('باقة')) {
+            alert('تحليل الذكاء الاصطناعي: تم تصنيف مشروعك، جاري عرض خطط الأسعار المناسبة لك...');
+            const pricingEl = document.getElementById('pricing-section') || document.getElementById('pricing');
+            if (pricingEl) {
+                pricingEl.scrollIntoView({ behavior: 'smooth' });
+                window.location.hash = 'pricing-section';
+            } else {
+                window.location.href = './index.html#pricing-section';
+            }
+        } else {
+            alert('تحليل الذكاء الاصطناعي: فكرة واعدة! جاري تحويلك إلى فرع القيادة والخدمات للاستشارة الشاملة...');
+            const servicesEl = document.getElementById('services-section') || document.getElementById('services');
+            if (servicesEl) {
+                servicesEl.scrollIntoView({ behavior: 'smooth' });
+                window.location.hash = 'services-section';
+            } else {
+                window.location.href = './index.html#services-section';
+            }
         }
 
         // Render AI Analysis Modal

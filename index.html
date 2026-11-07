@@ -2270,23 +2270,38 @@
             <div class="container text-right">
                 <h1>حوّل فكرتك إلى واقع ذكي باستخدام S&R CoreSync</h1>
                 <p>اكتب فكرتك باختصار، ودع نظام الذكاء الاصطناعي يحللها ويوجهك للقسم الأنسب لمشروعك.</p>
-                
+
                 <!-- حقل إدخال فكرة الـ AI -->
                 <div class="ai-prompt-box">
-                    <input type="text" id="userIdeaInput" placeholder="اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)..." onkeydown="if(event.key==='Enter'){analyzeIdea();}" />
+                    <input type="text" id="userIdeaInput"
+                        placeholder="اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)..."
+                        onkeydown="if(event.key==='Enter'){analyzeIdea();}" />
                     <button type="button" onclick="analyzeIdea()" class="btn-primary">
                         <span>حلل فكرتي الآن</span>
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="19" y1="12" x2="5" y2="12" />
+                            <polyline points="12 19 5 12 12 5" />
+                        </svg>
                     </button>
                 </div>
-                
+
                 <!-- أمثلة سريعة لتحفيز الزائر -->
                 <div class="quick-prompts">
                     <span>تجربة سريعة:</span>
-                    <button type="button" onclick="setPrompt('أريد بناء منصة تعليمية ذكية مع اشتراكات')">منصة تعليمية</button>
-                    <button type="button" onclick="setPrompt('تطوير نظام إدارة مبيعات وعلاقات عملاء CRM')">نظام مبيعات CRM</button>
-                    <button type="button" onclick="setPrompt('إنشاء متجر إلكتروني فاخر مع بوابات دفع دولية')">متجر إلكتروني فاخر</button>
-                    <button type="button" onclick="setPrompt('نظام فوترة إلكترونية متوافق مع هيئة الزكاة والضريبة ZATCA')">فوترة ZATCA</button>
+                    <button type="button" onclick="setPrompt('أريد بناء منصة تعليمية ذكية مع اشتراكات')">منصة
+                        تعليمية</button>
+                    <button type="button" onclick="setPrompt('تطوير نظام إدارة مبيعات وعلاقات عملاء CRM')">نظام مبيعات
+                        CRM</button>
+                    <button type="button" onclick="setPrompt('إنشاء متجر إلكتروني فاخر مع بوابات دفع دولية')">متجر
+                        إلكتروني فاخر</button>
+                    <button type="button"
+                        onclick="setPrompt('نظام فوترة إلكترونية متوافق مع هيئة الزكاة والضريبة ZATCA')">فوترة
+                        ZATCA</button>
+                    <button type="button" onclick="setPrompt('أريد بناء منصة تعليمية')">منصة تعليمية</button>
+                    <button type="button" onclick="setPrompt('تطوير نظام إدارة مبيعات')">نظام مبيعات</button>
+                    <button type="button" onclick="setPrompt('أريد بناء متجر إلكتروني ذكي')">متجر إلكتروني</button>
+                    <button type="button" onclick="setPrompt('استعراض باقات وتكلفة الأسعار')">عرض الأسعار</button>
                 </div>
             </div>
         </section>
@@ -2876,6 +2891,7 @@
 
         <!-- 2. قسم الخدمات (Services Orbit Section) -->
         <div id="service" data-section class="section-scroll-anchor" aria-hidden="true"></div>
+        <div id="services-section" data-section class="section-scroll-anchor" aria-hidden="true"></div>
         <section class="section-tech-stack-v2 service-orbit-section" id="services" data-section>
             <div class="container">
                 <div class="s-header d-block">
@@ -4724,6 +4740,7 @@
         </div>
 
         <!-- 7. قسم الأسعار والباقات (Section Pricing - 1:1 Replica) -->
+        <div id="pricing-section" data-section class="section-scroll-anchor" aria-hidden="true"></div>
         <section class="section-pricing flat-spacing flat-animate-tab" id="pricing" data-section>
             <div class="bg-img">
                 <img loading="lazy" decoding="async" width="1440" height="1081" src="./assets/bg-4.png"
@@ -5845,7 +5862,8 @@
                                 BTW (ضريبة القيمة المضافة)؟</summary>
                             <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">الأسعار
                                 <strong>hors taxe</strong> (بدون BTW). جميع الفواتير تصدر بفاتورة ضريبية رسمية (BTW 21%)
-                                متوافقة مع Belastingdienst — مؤهلة للخصم كنفقات تشغيلية.</p>
+                                متوافقة مع Belastingdienst — مؤهلة للخصم كنفقات تشغيلية.
+                            </p>
                         </details>
                         <details style="border-bottom:1px solid rgba(197,168,128,0.15);padding:0.9rem 0;">
                             <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">ما مدة الدعم
@@ -6307,6 +6325,7 @@
         <!-- -----------------------------------------------------=== -->
         <!-- 7.8. سوق البرمجيات الحصرية ومختبر حلول التطبيقات (Section Software Marketplace & Lab) -->
         <!-- -----------------------------------------------------=== -->
+        <div id="store-section" data-section class="section-scroll-anchor" aria-hidden="true"></div>
         <section class="flat-spacing section-software-hub" id="software-hub" data-section>
             <div class="container">
                 <!-- البنر الرئيسي الفخم والمتوسط هندسياً (Sovereign Centered Software Hub Banner) -->
@@ -6987,6 +7006,8 @@
                             أداة بايثون سحابية متقدمة لاستخراج وتحليل بيانات التجارة الإلكترونية والأسعار المنافسة
                             وترحيلها لحظياً لقواعد البيانات.
                         </p>
+
+                        ... [truncated for diff preview]
                         <div class="d-flex align-items-center gap-2">
                             <button type="button" class="tf-btn software-btn-sim flex-grow-1 justify-content-center"
                                 data-sr-call="openExecutiveBookingModal" data-sr-args='["salim"]'>
