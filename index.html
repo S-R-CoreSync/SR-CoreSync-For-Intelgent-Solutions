@@ -10991,16 +10991,38 @@
     <!-- محرك القالب السيادي الموحد للوراثة الشاملة ومتحكم حجم الخطوط والقوائم (Master Sovereign Shell Engine) -->
     <script src="./js/sr-master-shell.js"></script>
 
-    <!-- Studio Peek Modal — Instant Preview Overlay (Phase 157) -->
-    <div id="srStudioPeekOverlay" role="dialog" aria-modal="true" aria-label="معاينة الاستوديو" onclick="if(event.target===this)closeStudioPeek()">
+    <!-- Studio Peek Modal — Instant Preview Overlay (Phase 157 & 158 Visual Live Cards) -->
+    <div id="srStudioPeekOverlay" role="dialog" aria-modal="true" aria-label="معاينة الاستوديو التفاعلية" onclick="if(event.target===this)closeStudioPeek()">
         <div class="sr-studio-peek-card" id="srStudioPeekCard">
-            <span class="sr-peek-icon" id="srPeekIcon">💡</span>
-            <span class="sr-peek-badge" id="srPeekBadge">استوديو S&amp;R CoreSync</span>
+            <!-- الهيدر العلوي: الأيقونة والوسم وزر الإغلاق السريع -->
+            <div class="sr-peek-top-bar">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="sr-peek-icon" id="srPeekIcon">💡</span>
+                    <span class="sr-peek-badge" id="srPeekBadge">استوديو S&amp;R CoreSync</span>
+                </div>
+                <button type="button" class="sr-peek-close-corner" onclick="closeStudioPeek()" aria-label="إغلاق النافذة">✕</button>
+            </div>
+
+            <!-- بطاقة المعاينة المرئية الحية (Live Visual Showcase Card) -->
+            <div class="sr-peek-visual-box" id="srPeekVisualBox">
+                <img id="srPeekImg" src="./assets/service-erp-finance-3d.webp" alt="معاينة المنصة" class="sr-peek-thumb-img" loading="lazy">
+                <div class="sr-peek-visual-overlay"></div>
+                <span class="sr-peek-kpi-badge" id="srPeekKpi">⚡ مؤشر الأداء: 99.99%</span>
+            </div>
+
+            <!-- العنوان والوصف التنفيذي -->
             <h2 class="sr-peek-title" id="srPeekTitle">عنوان الخدمة</h2>
             <p class="sr-peek-desc" id="srPeekDesc">وصف الخدمة</p>
+
+            <!-- وسوم التقنيات والبروتوكولات (Tech Stack Pills) -->
+            <div class="sr-peek-tags-row" id="srPeekTags" aria-label="التقنيات المستخدمة">
+                <!-- يُملأ ديناميكياً بواسطة جافاسكريبت -->
+            </div>
+
+            <!-- أزرار الإجراءات التفاعلية -->
             <div class="sr-peek-actions">
-                <button class="sr-peek-btn-go" id="srPeekBtnGo" onclick="closeStudioPeek()">🚀 انتقال للاستوديو</button>
-                <button class="sr-peek-btn-close" onclick="closeStudioPeek()">✕ إغلاق</button>
+                <button class="sr-peek-btn-go" id="srPeekBtnGo">🚀 استعراض الاستوديو بالكامل</button>
+                <button class="sr-peek-btn-close" onclick="closeStudioPeek()">إغلاق</button>
             </div>
         </div>
     </div>
