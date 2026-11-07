@@ -2208,10 +2208,13 @@
                 <h1 style="font-size: 2.5rem; color: #1a1a1a; margin-bottom: 20px;">حوّل فكرتك إلى واقع ذكي باستخدام S&R CoreSync</h1>
                 <p style="font-size: 1.2rem; color: #555; margin-bottom: 30px;">اكتب فكرتك باختصار، ودع نظام الذكاء الاصطناعي يحللها ويوجهك للقسم الأنسب لمشروعك.</p>
                 
-                <!-- حقل إدخال فكرة الـ AI -->
-                <div class="ai-prompt-box" style="display: flex; gap: 10px; max-width: 600px; margin-bottom: 20px;">
-                    <input type="text" id="userIdeaInput" placeholder="اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)..." onkeydown="if(event.key==='Enter'){analyzeIdea();}" style="flex: 1; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; text-align: right;" />
-                    <button type="button" onclick="analyzeIdea()" style="padding: 15px 30px; background-color: #007bff; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: bold;">حلل فكرتي الآن</button>
+                <!-- حقل إدخال فكرة الـ AI مع الإملاء الصوتي المباشر (Phase 160) -->
+                <div class="ai-prompt-box" style="display: flex; gap: 10px; max-width: 650px; margin-bottom: 20px; align-items: center; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 280px; position: relative; display: flex; align-items: center;">
+                        <input type="text" id="userIdeaInput" placeholder="اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)..." onkeydown="if(event.key==='Enter'){analyzeIdea();}" style="width: 100%; padding: 15px 48px 15px 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; text-align: right;" />
+                        <button type="button" id="srVoiceDictateBtn" onclick="toggleHeroVoiceDictation()" class="sr-voice-dictate-btn" title="إملاء فكرتك صوتياً" aria-label="إملاء صوتي">🎙️</button>
+                    </div>
+                    <button type="button" onclick="analyzeIdea()" style="padding: 15px 28px; background: linear-gradient(135deg, #d4af37, #b8972e); color: #070d0a; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: 800; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);">حلل فكرتي الآن ✨</button>
                 </div>
                 
                 <!-- أمثلة سريعة لتحفيز الزائر -->
@@ -11028,6 +11031,36 @@
                 <!-- يُملأ ديناميكياً بواسطة جافاسكريبت -->
             </div>
 
+            <!-- شريط المقارنة التفاعلي قبل/بعد (Phase 160 Before/After Benchmark) -->
+            <div class="sr-peek-benchmark-section">
+                <button type="button" class="sr-peek-benchmark-toggle-btn" id="srBenchmarkToggleBtn" onclick="toggleBenchmarkView()">
+                    <span>⚖️ مقارنة الأداء: الأنظمة القديمة vs CoreSync</span>
+                    <span class="sr-toggle-arrow" id="srBenchmarkArrow">▾</span>
+                </button>
+                <div class="sr-peek-benchmark-box" id="srPeekBenchmarkBox" style="display: none;">
+                    <div class="sr-benchmark-row">
+                        <span class="sr-bm-item legacy">3.8 ثوانٍ (تقليدي)</span>
+                        <span class="sr-bm-vs">⚡ السرعة:</span>
+                        <span class="sr-bm-item coresync">&lt; 280ms (CoreSync)</span>
+                    </div>
+                    <div class="sr-benchmark-row">
+                        <span class="sr-bm-item legacy">تكاليف باهظة ومجزأة</span>
+                        <span class="sr-bm-vs">💰 التكلفة:</span>
+                        <span class="sr-bm-item coresync">توفير 60% مع بنية موحدة</span>
+                    </div>
+                    <div class="sr-benchmark-row">
+                        <span class="sr-bm-item legacy">يدوي ومعرض للغرامات</span>
+                        <span class="sr-bm-vs">🛡️ الامتثال:</span>
+                        <span class="sr-bm-item coresync">مؤتمت 100% BTW &amp; GDPR</span>
+                    </div>
+                    <div class="sr-benchmark-row">
+                        <span class="sr-bm-item legacy">تعطل متكرر وصيانة معقدة</span>
+                        <span class="sr-bm-vs">☁️ الجاهزية:</span>
+                        <span class="sr-bm-item coresync">سحابي موزع 99.99%</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- أزرار الإجراءات التفاعلية -->
             <div class="sr-peek-actions">
                 <button class="sr-peek-btn-go" id="srPeekBtnGo">🚀 استعراض الاستوديو بالكامل</button>
@@ -11088,10 +11121,11 @@
                 </div>
             </div>
 
-            <!-- أزرار الإجراءات التنفيذية -->
+            <!-- أزرار الإجراءات التنفيذية مع تصدير وثيقة المشروع PDF -->
             <div class="sr-estimate-actions">
-                <button type="button" class="sr-peek-btn-go" onclick="closeAiEstimateModal(); window.location.href='#services-section';">👔 حجز جلسة تدقيق معماري خاصة</button>
-                <a href="demo.html" class="sr-peek-btn-secondary" onclick="closeAiEstimateModal()">⚡ تجربة النظام السحابي فوراً</a>
+                <button type="button" class="sr-peek-btn-pdf" id="srBtnExportPdf" onclick="exportAiEstimatePdf()">📄 تصدير وثيقة المشروع (PDF)</button>
+                <button type="button" class="sr-peek-btn-go" onclick="closeAiEstimateModal(); window.location.href='#services-section';">👔 حجز جلسة استشارية خاصة</button>
+                <a href="demo.html" class="sr-peek-btn-secondary" onclick="closeAiEstimateModal()">⚡ تجربة النظام السحابي</a>
             </div>
         </div>
     </div>

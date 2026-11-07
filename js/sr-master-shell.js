@@ -876,17 +876,220 @@
         setTimeout(function() { modal.style.display = 'none'; }, 320);
     }
 
+    // 5.8 Benchmark Comparison Toggle (Phase 160)
+    function toggleBenchmarkView() {
+        playHaptic('tap');
+        var box = document.getElementById('srPeekBenchmarkBox');
+        var btn = document.getElementById('srBenchmarkToggleBtn');
+        if (!box || !btn) return;
+
+        var isOpen = box.style.display !== 'none';
+        if (isOpen) {
+            box.style.display = 'none';
+            btn.classList.remove('is-open');
+        } else {
+            box.style.display = 'flex';
+            btn.classList.add('is-open');
+        }
+    }
+
+    // 5.9 Executive Architecture Brief PDF Generation Engine (Phase 160)
+    function exportAiEstimatePdf() {
+        playHaptic('open');
+
+        var title = (document.getElementById('srEstTitle') || {}).textContent || 'تحليل النطاق المعماري والجدول الزمني';
+        var query = (document.getElementById('srEstQueryText') || {}).textContent || '';
+        var classification = (document.getElementById('srEstClassification') || {}).textContent || '';
+        var timeline = (document.getElementById('srEstTimeline') || {}).textContent || '';
+        var compliance = (document.getElementById('srEstCompliance') || {}).textContent || '';
+        var stack = (document.getElementById('srEstStack') || {}).textContent || '';
+        var dateStr = 'السبت، 07 نوفمبر 2026 — هولندا، أمستردام';
+
+        var printWindow = window.open('', '_blank', 'width=900,height=1100');
+        if (!printWindow) {
+            alert('يرجى السماح بفتح النوافذ المنبثقة لتحميل وطباعة وثيقة الـ PDF السيادية.');
+            return;
+        }
+
+        var printHtml = '<!DOCTYPE html>' +
+            '<html lang="ar" dir="rtl">' +
+            '<head>' +
+            '<meta charset="UTF-8">' +
+            '<title>S&R CoreSync — وثيقة المواصفات المعمارية التنفيذية</title>' +
+            '<style>' +
+            '@page { size: A4; margin: 18mm 15mm; }' +
+            '* { box-sizing: border-box; font-family: "Segoe UI", Tahoma, Arial, sans-serif; }' +
+            'body { background: #ffffff; color: #0a1016; margin: 0; padding: 25px; line-height: 1.6; }' +
+            '.doc-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #c5a880; padding-bottom: 16px; margin-bottom: 22px; }' +
+            '.doc-logo-title { font-size: 22px; font-weight: 900; color: #070d0a; margin: 0; }' +
+            '.doc-logo-sub { font-size: 13px; color: #8c734b; font-weight: 700; margin: 2px 0 0; }' +
+            '.doc-meta { text-align: left; font-size: 11px; color: #555; }' +
+            '.doc-badge { display: inline-block; background: #fdf8ef; border: 1px solid #c5a880; color: #8c734b; font-weight: 800; font-size: 11px; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; }' +
+            '.doc-title { font-size: 20px; font-weight: 800; color: #070d0a; margin: 0 0 14px; }' +
+            '.query-card { background: #f8f9fa; border-right: 4px solid #c5a880; padding: 12px 16px; margin-bottom: 22px; border-radius: 4px; }' +
+            '.query-card p { margin: 0; font-style: italic; color: #333; font-weight: 600; font-size: 14px; }' +
+            '.matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }' +
+            '.matrix-box { border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px; background: #fafbfc; }' +
+            '.matrix-lbl { font-size: 12px; color: #64748b; font-weight: 700; display: block; margin-bottom: 4px; }' +
+            '.matrix-val { font-size: 14px; color: #0f172a; font-weight: 800; }' +
+            '.phases-table { width: 100%; border-collapse: collapse; margin-bottom: 26px; font-size: 13px; }' +
+            '.phases-table th, .phases-table td { border: 1px solid #e2e8f0; padding: 10px 14px; text-align: right; }' +
+            '.phases-table th { background: #f1f5f9; color: #0f172a; font-weight: 800; }' +
+            '.doc-footer { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 35px; border-top: 1px solid #e2e8f0; padding-top: 20px; }' +
+            '.sign-block { text-align: right; }' +
+            '.sign-title { font-size: 13px; font-weight: 800; color: #070d0a; margin: 0; }' +
+            '.sign-role { font-size: 11px; color: #64748b; margin: 2px 0 0; }' +
+            '.seal-box { border: 2px dashed #c5a880; border-radius: 50%; width: 95px; height: 95px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #8c734b; font-size: 10px; font-weight: 800; transform: rotate(-5deg); }' +
+            '</style>' +
+            '</head>' +
+            '<body>' +
+            '<div class="doc-header">' +
+            '<div>' +
+            '<h1 class="doc-logo-title">S&amp;R CoreSync For Intelligent Solutions</h1>' +
+            '<p class="doc-logo-sub">المكتب الاستشاري السيادي لهندسة المنظومات والذكاء الاصطناعي</p>' +
+            '</div>' +
+            '<div class="doc-meta">' +
+            '<strong>Amsterdam HQ — Netherlands</strong><br>' +
+            'Dutch KvK &amp; 21% BTW Compliant<br>' +
+            'تاريخ التوثيق: ' + dateStr +
+            '</div>' +
+            '</div>' +
+            '<span class="doc-badge">وثيقة استشارية معمارية رسمية • صالحة للبدء التنفيذي</span>' +
+            '<h2 class="doc-title">' + title + '</h2>' +
+            '<div class="query-card">' +
+            '<span style="font-size:11px; color:#64748b; font-weight:700;">ملخص الفكرة المقدمة من الشريك / العميل:</span>' +
+            '<p>' + query + '</p>' +
+            '</div>' +
+            '<div class="matrix-grid">' +
+            '<div class="matrix-box"><span class="matrix-lbl">التصنيف المعماري المعتمد</span><span class="matrix-val">' + classification + '</span></div>' +
+            '<div class="matrix-box"><span class="matrix-lbl">الجدول الزمني التقديري للإطلاق</span><span class="matrix-val">' + timeline + '</span></div>' +
+            '<div class="matrix-box"><span class="matrix-lbl">معايير الأمان والامتثال الأوروبي</span><span class="matrix-val">' + compliance + '</span></div>' +
+            '<div class="matrix-box"><span class="matrix-lbl">المعمارية والتقنيات المقترحة</span><span class="matrix-val">' + stack + '</span></div>' +
+            '</div>' +
+            '<h3 style="font-size:14px; font-weight:800; color:#0f172a; margin-bottom:10px;">خريطة الطريق التنفيذية للمشروع (3 Phases Roadmap):</h3>' +
+            '<table class="phases-table">' +
+            '<thead><tr><th>المرحلة</th><th>النطاق الهندسي</th><th>مخرجات الاعتماد</th></tr></thead>' +
+            '<tbody>' +
+            '<tr><td><strong>المرحلة 1</strong></td><td>هندسة النواة، النمذجة البيانية، وتأمين البنية التحتية السحابية</td><td>وثيقة المعمارية + مستودع Git الأساسي</td></tr>' +
+            '<tr><td><strong>المرحلة 2</strong></td><td>تطوير واجهات المستخدم التفاعلية، بوابات الدفع، وتكامل الـ API</td><td>بيئة تجريبية حية (Staging Prototype)</td></tr>' +
+            '<tr><td><strong>المرحلة 3</strong></td><td>فحوصات الأمان واختبارات الضغط، التدقيق الضريبي، والتشغيل الفعلي</td><td>شهادة الامتثال والإنتاج السيادي 100%</td></tr>' +
+            '</tbody>' +
+            '</table>' +
+            '<div class="doc-footer">' +
+            '<div class="sign-block">' +
+            '<p class="sign-title">المهندس محمد سليم عزيزة</p>' +
+            '<p class="sign-role">المؤسس والرئيس التنفيذي للتكنولوجيا (CTO) • S&amp;R CoreSync</p>' +
+            '</div>' +
+            '<div class="seal-box">' +
+            '<span>S&amp;R CoreSync</span>' +
+            '<span>SOVEREIGN</span>' +
+            '<span>VERIFIED</span>' +
+            '</div>' +
+            '</div>' +
+            '<script>' +
+            'window.onload = function() { window.print(); };' +
+            '</script>' +
+            '</body>' +
+            '</html>';
+
+        printWindow.document.open();
+        printWindow.document.write(printHtml);
+        printWindow.document.close();
+    }
+
+    // 5.10 Voice-to-Text Idea Dictation Engine via Web Speech API (Phase 160)
+    var heroSpeechRecognition = null;
+    var isHeroSpeechListening = false;
+
+    function initHeroVoiceDictation() {
+        var SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRecognitionClass) return null;
+
+        var rec = new SpeechRecognitionClass();
+        rec.continuous = false;
+        rec.interimResults = true;
+        rec.lang = 'ar-SA';
+
+        rec.onstart = function() {
+            isHeroSpeechListening = true;
+            playHaptic('open');
+            var btn = document.getElementById('srVoiceDictateBtn');
+            var input = document.getElementById('userIdeaInput');
+            if (btn) btn.classList.add('is-listening');
+            if (input) {
+                input.placeholder = '🔴 جاري الاستماع... تفضل بالتحدث الآن';
+            }
+        };
+
+        rec.onresult = function(event) {
+            var transcript = '';
+            for (var i = event.resultIndex; i < event.results.length; i++) {
+                transcript += event.results[i][0].transcript;
+            }
+            var input = document.getElementById('userIdeaInput');
+            if (input && transcript) {
+                input.value = transcript;
+            }
+        };
+
+        rec.onerror = function() {
+            stopHeroVoiceDictation();
+        };
+
+        rec.onend = function() {
+            stopHeroVoiceDictation();
+        };
+
+        return rec;
+    }
+
+    function toggleHeroVoiceDictation() {
+        if (!heroSpeechRecognition) {
+            heroSpeechRecognition = initHeroVoiceDictation();
+        }
+
+        if (!heroSpeechRecognition) {
+            alert('متصفحك الحالي لا يدعم ميزة الإملاء الصوتي المباشر. يرجى استخدام متصفح Chrome أو Edge.');
+            return;
+        }
+
+        if (isHeroSpeechListening) {
+            heroSpeechRecognition.stop();
+            stopHeroVoiceDictation();
+        } else {
+            try {
+                heroSpeechRecognition.start();
+            } catch (e) {
+                // If already active
+            }
+        }
+    }
+
+    function stopHeroVoiceDictation() {
+        isHeroSpeechListening = false;
+        playHaptic('close');
+        var btn = document.getElementById('srVoiceDictateBtn');
+        var input = document.getElementById('userIdeaInput');
+        if (btn) btn.classList.remove('is-listening');
+        if (input && !input.value) {
+            input.placeholder = 'اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)...';
+        }
+    }
+
     // Expose globally to window
-    window.setPrompt              = setPrompt;
-    window.analyzeIdea            = analyzeIdea;
-    window.closeRouteCard         = closeRouteCard;
-    window.showStudioPeek         = showStudioPeek;
-    window.closeStudioPeek        = closeStudioPeek;
-    window.switchStudioPeekTab    = switchStudioPeekTab;
-    window.openAiEstimatorModal   = openAiEstimatorModal;
-    window.closeAiEstimateModal   = closeAiEstimateModal;
-    window.toggleSoundMute        = toggleSoundMute;
-    window.playHaptic             = playHaptic;
+    window.setPrompt                 = setPrompt;
+    window.analyzeIdea               = analyzeIdea;
+    window.closeRouteCard            = closeRouteCard;
+    window.showStudioPeek            = showStudioPeek;
+    window.closeStudioPeek           = closeStudioPeek;
+    window.switchStudioPeekTab       = switchStudioPeekTab;
+    window.toggleBenchmarkView       = toggleBenchmarkView;
+    window.openAiEstimatorModal      = openAiEstimatorModal;
+    window.closeAiEstimateModal      = closeAiEstimateModal;
+    window.exportAiEstimatePdf       = exportAiEstimatePdf;
+    window.toggleHeroVoiceDictation  = toggleHeroVoiceDictation;
+    window.toggleSoundMute           = toggleSoundMute;
+    window.playHaptic                = playHaptic;
     // heroJumpToTitle exposed inside initHeroDynamicTitleRotator()
 
     // Boot on DOMContentLoaded or immediately if ready
@@ -901,8 +1104,12 @@
         // Support preview hash trigger for visual audits (immediate invocation)
         if (window.location.hash) {
             if (window.location.hash.indexOf('peek-') !== -1) {
-                var peekKey = window.location.hash.replace('#peek-', '').trim();
+                var isBench = window.location.hash.indexOf('-bench') !== -1;
+                var peekKey = window.location.hash.replace('#peek-', '').replace('-bench', '').trim();
                 showStudioPeek(peekKey);
+                if (isBench) {
+                    toggleBenchmarkView();
+                }
             } else if (window.location.hash.indexOf('estimate') !== -1) {
                 openAiEstimatorModal('أريد بناء منصة تجارة إلكترونية فاخرة متكاملة');
             }

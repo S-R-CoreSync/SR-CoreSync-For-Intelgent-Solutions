@@ -1667,3 +1667,171 @@ header.header,
         justify-content: center;
     }
 }
+
+/* ============================================================
+   PHASE 160 — PDF Export + Benchmark Compare + Voice Dictation
+   S&R CoreSync Sovereign Design System
+   ============================================================ */
+
+/* ── Voice-to-Text Microphone Button in Hero ── */
+.sr-voice-dictate-btn {
+    position: absolute;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: rgba(10, 16, 26, 0.85);
+    color: #f3dfba;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 2;
+}
+
+.sr-voice-dictate-btn:hover {
+    background: rgba(212, 175, 55, 0.25);
+    border-color: #d4af37;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.sr-voice-dictate-btn.is-listening {
+    background: rgba(239, 68, 68, 0.25) !important;
+    border-color: #ef4444 !important;
+    animation: srVoicePulse 1.2s ease-in-out infinite;
+}
+
+@keyframes srVoicePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6), 0 0 15px rgba(239, 68, 68, 0.4);
+        transform: scale(1.05);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0), 0 0 25px rgba(239, 68, 68, 0.7);
+        transform: scale(1.18);
+    }
+}
+
+/* ── Before/After Comparison Benchmark in Peek Modal ── */
+.sr-peek-benchmark-section {
+    margin: 12px 0 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.sr-peek-benchmark-toggle-btn {
+    width: 100%;
+    padding: 9px 14px;
+    background: rgba(212, 175, 55, 0.06);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: #f3dfba;
+    font-size: 0.78rem;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.sr-peek-benchmark-toggle-btn:hover {
+    background: rgba(212, 175, 55, 0.15);
+    color: #ffffff;
+}
+
+.sr-toggle-arrow {
+    font-size: 0.85rem;
+    transition: transform 0.25s ease;
+}
+
+.sr-peek-benchmark-toggle-btn.is-open .sr-toggle-arrow {
+    transform: rotate(180deg);
+}
+
+.sr-peek-benchmark-box {
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    animation: srFadeSlideDown 0.25s ease;
+}
+
+@keyframes srFadeSlideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.sr-benchmark-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    gap: 8px;
+    padding: 4px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+.sr-benchmark-row:last-child {
+    border-bottom: none;
+}
+
+.sr-bm-vs {
+    color: #d4af37;
+    font-weight: 800;
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+
+.sr-bm-item {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+
+.sr-bm-item.legacy {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    color: #fca5a5;
+    text-decoration: line-through;
+    opacity: 0.85;
+}
+
+.sr-bm-item.coresync {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.45);
+    color: #6ee7b7;
+    font-weight: 800;
+}
+
+/* ── PDF Export Button in AI Estimator Modal ── */
+.sr-peek-btn-pdf {
+    padding: 11px 20px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.sr-peek-btn-pdf:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    color: #ffffff;
+}
