@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-page-language="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مصفوفة المقارنات التقنية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sr-unified-design-system.css">
+    <style>
+        .sr-matrix { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        .sr-matrix th, .sr-matrix td { padding: 0.5rem 0.75rem; border: 1px solid #e5e7eb; text-align: center; }
+        .sr-matrix th { background: #f3f4f6; cursor: pointer; }
+        .diff-highlight { background: rgba(255, 165, 0, 0.2); }
+        .sr-filter { margin: 0.5rem 0; }
+        .sr-export-btn { margin-top: 1rem; padding: 8px 16px; background: #10b981; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+        .sr-export-btn:hover { background: #059669; }
+    </style>
+</head>
+<body>
+    <!-- Existing navigation placeholder -->
+    <nav class="sr-main-nav">
+        <ul class="sr-nav-list">
+            <li><a href="index.html" class="sr-nav-link">الرئيسية</a></li>
+            <li><a href="tech-matrix.html" class="sr-nav-link">مصفوفة المقارنات التقنية</a></li>
+            <li><a href="lottie-studio.html" class="sr-nav-link">استوديو Lottie</a></li>
+            <li><a href="perf-audit.html" class="sr-nav-link">استوديو فحص الأداء</a></li>
+        </ul>
+    </nav>
+    <main class="sr-container">
+        <h1 class="sr-title">مصفوفة المقارنات التقنية (Interactive Tech Comparison Matrix)</h1>
+        <section class="sr-filter">
+            <label for="sizeFilter">فلترة حسب حجم الشركة:</label>
+            <select id="sizeFilter" onchange="TechMatrix.filterBySize()">
+                <option value="all">الكل</option>
+                <option value="startup">شركات ناشئة</option>
+                <option value="mid">متوسطة</option>
+                <option value="enterprise">مؤسسات سيادية</option>
+            </select>
+        </section>
+        <table class="sr-matrix" id="matrixTable">
+            <thead>
+                <tr id="matrixHeader"></tr>
+            </thead>
+            <tbody id="matrixBody"></tbody>
+        </table>
+        <button class="sr-export-btn" onclick="TechMatrix.exportPDF()">تصدير كملف PDF</button>
+        <div id="costSavings" style="margin-top:1rem;font-weight:800;color:#10b981;"></div>
+    </main>
+    <script src="js/tech-matrix.js"></script>
+</body>
+</html>
