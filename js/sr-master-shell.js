@@ -501,48 +501,66 @@
         });
     }
 
-    // 5.5 Studio Peek Modal Engine — Instant Preview for Sector Chips
+    // 5.5 Studio Peek Modal Engine — Rich Visual Showcase for Sector Chips (Phase 158)
     var studioPeekData = {
         fintech: {
             icon:  '💳',
-            badge: 'FinTech & Payment',
+            badge: 'FinTech & Sovereign Payments',
             title: 'حلول FinTech وبوابات الدفع الذكية',
-            desc:  'بناء بوابات دفع مؤسسية، أنظمة EFT/SWIFT، محافظ رقمية، وتكامل شامل مع أنظمة المحاسبة الأوروبية BTW/EU.',
+            desc:  'بناء بوابات دفع مؤسسية، أنظمة EFT/SWIFT، محافظ رقمية، وتكامل شامل مع معايير الضرائب والفوترة الأوروبية BTW 21%.',
+            img:   './assets/service-erp-finance-3d.webp',
+            kpi:   '🔒 أمان مصرفي وتشفير KMS 100%',
+            tags:  ['SEPA & SWIFT', 'BTW / 21% Tax', 'Mollie & Stripe', 'Smart Wallet', 'ISO 27001'],
             url:   '#services-section'
         },
         erp: {
             icon:  '🏢',
-            badge: 'Enterprise ERP',
-            title: 'نظام CoreSync ERP المؤسسي المتكامل',
-            desc:  'منظومة إدارة موارد المؤسسات الكاملة: مشتريات، مخازن، HR، محاسبة، CRM — مُصممة للبيئات الأوروبية والخليجية.',
+            badge: 'Enterprise CoreSync ERP',
+            title: 'منظومة CoreSync ERP المؤسسية المتكاملة',
+            desc:  'نظام تخطيط موارد المؤسسات الشامل: مشتريات، مخازن ذكية WMS، موارد بشرية، ومحاسبة سحابية متعددة الفروع والعملات.',
+            img:   './assets/branding/live_erp_operations_showcase_snapshot.png',
+            kpi:   '⚡ جاهزية تشغيلية سحابية 99.99%',
+            tags:  ['Multi-Tenant Cloud', 'Automated WMS', 'HR & Payroll', 'Consolidated Ledger', 'Real-time Sync'],
             url:   '#services-section'
         },
         ai: {
             icon:  '🤖',
-            badge: 'AI Agents Studio',
-            title: 'وكلاء الذكاء الاصطناعي والأتمتة الذكية',
-            desc:  'بناء وكلاء AI مُدرَّبين على بيانات مؤسستك: خدمة عملاء، تحليل عقود، تقارير مالية، وأتمتة سير العمل بالكامل.',
+            badge: 'Autonomous AI Agents',
+            title: 'وكلاء الذكاء الاصطناعي والأتمتة الذاتية',
+            desc:  'تصميم وتدريب وكلاء ذكاء اصطناعي سياديين مخصصين لبيانات شركتك: دعم عملاء فوري، تحليل عقود، وأتمتة العمليات المعقدة.',
+            img:   './assets/service-ai-automation-3d.webp',
+            kpi:   '⏱️ زمن معالجة ذكية < 280ms',
+            tags:  ['Autonomous RAG', 'Multi-Agent Swarm', 'Document OCR', 'Workflow Auto-Pilot', 'Zero-Data-Leak'],
             url:   '#services-section'
         },
         supply: {
             icon:  '📦',
-            badge: 'Supply Chain & Logistics',
+            badge: 'Intelligent Supply Chain',
             title: 'لوجستيات ذكية وسلاسل إمداد رقمية',
-            desc:  'تتبع الشحنات لحظياً، تكامل ERP+WMS، تحسين المخزون بالذكاء الاصطناعي، وربط موردين متعددين في منصة واحدة.',
+            desc:  'تتبع حركة الأساطيل والشحنات لحظياً عبر أوروبا والشرق الأوسط، إدارة الموردين، والتنبؤ التلقائي باحتياجات المخزون.',
+            img:   './assets/branding/live_reseller_portal_showcase_snapshot.png',
+            kpi:   '📦 تكامل لوجستي عبر القارات 100%',
+            tags:  ['GPS Fleet Live', 'Predictive Stock', 'B2B Vendor Portal', 'Dynamic Route AI', 'EDI Integration'],
             url:   '#services-section'
         },
         store: {
             icon:  '🛒',
-            badge: 'E-Commerce Studio',
-            title: 'متاجر إلكترونية فاخرة وهويات بصرية',
-            desc:  'تصميم وبناء متاجر إلكترونية احترافية بأعلى المعايير الأوروبية، مع هوية بصرية متكاملة وتجربة مستخدم استثنائية.',
+            badge: 'Luxury E-Commerce & Identity',
+            title: 'متاجر إلكترونية فاخرة وهويات بصرية ملكية',
+            desc:  'تصميم متاجر رقمية عالية التحويل بتجربة مستخدم سينمائية استثنائية، وتصميم هويات بصرية ثلاثية الأبعاد تعزز مكانة علامتك.',
+            img:   './assets/work-1.webp',
+            kpi:   '🚀 سرعة أداء واستجابة 99/100',
+            tags:  ['Headless Commerce', '3D Showcase', 'Omni-Channel', 'Tailored UI/UX', 'Conversion Optimized'],
             url:   '#store-section'
         },
         clgid: {
             icon:  '🏛️',
             badge: 'CLGID Center — The Hague',
-            title: 'مركز CLGID لاهاي للحوكمة والاستثمار',
-            desc:  'مركز متخصص في حوكمة المؤسسات الدولية، الامتثال الأوروبي، وتسهيل الاستثمار الأجنبي في هولندا ومنطقة البنيلوكس.',
+            title: 'مركز CLGID لاهاي للحوكمة والاستثمار الدولي',
+            desc:  'مركز دولي رائد في حوكمة المنظومات، الامتثال للأنظمة الأوروبية والضريبية، وتسهيل تأسيس وتوسع الشركات في هولندا والاتحاد الأوروبي.',
+            img:   './assets/branding/live_compliance_center_showcase_snapshot.png',
+            kpi:   '🏛️ اعتماد أوروبي وحوكمة دولية كاملة',
+            tags:  ['The Hague HQ', 'EU Directives', 'GDPR Sovereign', 'Dutch Chamber (KvK)', 'Cross-Border Deals'],
             url:   'https://clgid-governance.ai.studio/'
         }
     };
@@ -551,24 +569,51 @@
         var data = studioPeekData[key];
         if (!data) return;
 
-        document.getElementById('srPeekIcon').textContent  = data.icon;
-        document.getElementById('srPeekBadge').textContent = data.badge;
-        document.getElementById('srPeekTitle').textContent = data.title;
-        document.getElementById('srPeekDesc').textContent  = data.desc;
+        var iconEl  = document.getElementById('srPeekIcon');
+        var badgeEl = document.getElementById('srPeekBadge');
+        var titleEl = document.getElementById('srPeekTitle');
+        var descEl  = document.getElementById('srPeekDesc');
+        var imgEl   = document.getElementById('srPeekImg');
+        var kpiEl   = document.getElementById('srPeekKpi');
+        var tagsEl  = document.getElementById('srPeekTags');
+
+        if (iconEl)  iconEl.textContent  = data.icon;
+        if (badgeEl) badgeEl.textContent = data.badge;
+        if (titleEl) titleEl.textContent = data.title;
+        if (descEl)  descEl.textContent  = data.desc;
+        if (imgEl && data.img) {
+            imgEl.src = data.img;
+            imgEl.alt = data.title;
+        }
+        if (kpiEl && data.kpi) {
+            kpiEl.textContent = data.kpi;
+        }
+
+        if (tagsEl && data.tags) {
+            tagsEl.innerHTML = '';
+            data.tags.forEach(function(tag) {
+                var pill = document.createElement('span');
+                pill.className = 'sr-peek-tag-pill';
+                pill.textContent = tag;
+                tagsEl.appendChild(pill);
+            });
+        }
 
         var btnGo = document.getElementById('srPeekBtnGo');
-        btnGo.onclick = function() {
-            closeStudioPeek();
-            setTimeout(function() {
-                if (data.url.startsWith('http')) {
-                    window.open(data.url, '_blank', 'noopener');
-                } else {
-                    var target = document.querySelector(data.url);
-                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    else window.location.href = data.url;
-                }
-            }, 320);
-        };
+        if (btnGo) {
+            btnGo.onclick = function() {
+                closeStudioPeek();
+                setTimeout(function() {
+                    if (data.url.startsWith('http')) {
+                        window.open(data.url, '_blank', 'noopener');
+                    } else {
+                        var target = document.querySelector(data.url);
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        else window.location.href = data.url;
+                    }
+                }, 320);
+            };
+        }
 
         var overlay = document.getElementById('srStudioPeekOverlay');
         if (overlay) {
@@ -595,20 +640,24 @@
     // heroJumpToTitle exposed inside initHeroDynamicTitleRotator()
 
     // Boot on DOMContentLoaded or immediately if ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            createMasterDrawer();
-            autoEnhanceNavbar();
-            initAnimatedPlaceholder();
-            initHeroDynamicTitleRotator();
-            initEmblemParallax();
-        });
-    } else {
+    function bootMasterShell() {
         createMasterDrawer();
         autoEnhanceNavbar();
         initAnimatedPlaceholder();
         initHeroDynamicTitleRotator();
         initEmblemParallax();
+
+        // Support preview hash trigger for visual audits (immediate invocation)
+        if (window.location.hash && window.location.hash.indexOf('peek-') !== -1) {
+            var peekKey = window.location.hash.replace('#peek-', '').trim();
+            showStudioPeek(peekKey);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bootMasterShell);
+    } else {
+        bootMasterShell();
     }
 
 })();

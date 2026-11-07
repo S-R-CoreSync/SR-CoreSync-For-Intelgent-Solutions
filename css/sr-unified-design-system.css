@@ -1092,24 +1092,26 @@ header.header,
 .sr-studio-peek-card {
     direction: rtl;
     text-align: right;
-    background: linear-gradient(135deg,
-        rgba(15, 20, 30, 0.95) 0%,
-        rgba(25, 32, 50, 0.92) 50%,
-        rgba(10, 15, 25, 0.95) 100%
+    background: linear-gradient(145deg,
+        rgba(15, 23, 36, 0.97) 0%,
+        rgba(20, 28, 45, 0.95) 50%,
+        rgba(10, 15, 26, 0.98) 100%
     );
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    border-radius: 20px;
-    padding: 32px 36px 28px;
-    max-width: 420px;
-    width: 90%;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 24px;
+    padding: 26px 28px 24px;
+    max-width: 520px;
+    width: 92%;
     box-shadow:
-        0 0 60px rgba(212, 175, 55, 0.12),
-        0 20px 60px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.07);
-    transform: translateY(20px) scale(0.96);
+        0 0 70px rgba(212, 175, 55, 0.16),
+        0 25px 70px rgba(0, 0, 0, 0.75),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(24px) scale(0.96);
     transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 #srStudioPeekOverlay.sr-peek-visible .sr-studio-peek-card {
@@ -1120,77 +1122,196 @@ header.header,
     content: '';
     position: absolute;
     top: 0; right: 0;
-    width: 120px; height: 120px;
-    background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 70%);
+    width: 160px; height: 160px;
+    background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.12), transparent 70%);
     pointer-events: none;
 }
 
+/* ── Top Bar with Fast Close ── */
+.sr-peek-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
 .sr-peek-icon {
-    font-size: 2.8rem;
-    margin-bottom: 12px;
-    display: block;
-    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+    font-size: 1.8rem;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
 }
 
 .sr-peek-badge {
     display: inline-block;
     background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    color: #d4af37;
-    font-size: 0.72rem;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: #f3dfba;
+    font-size: 0.74rem;
     font-weight: 800;
-    letter-spacing: 0.08em;
-    padding: 3px 10px;
+    letter-spacing: 0.06em;
+    padding: 4px 12px;
     border-radius: 999px;
-    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
+.sr-peek-close-corner {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #94a3b8;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sr-peek-close-corner:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+/* ── Live Visual Showcase Card (Phase 158) ── */
+.sr-peek-visual-box {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: #050a0e;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.sr-peek-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sr-studio-peek-card:hover .sr-peek-thumb-img {
+    transform: scale(1.04);
+}
+
+.sr-peek-visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 10, 14, 0.05) 0%,
+        rgba(5, 10, 14, 0.3) 50%,
+        rgba(10, 15, 26, 0.85) 100%
+    );
+    pointer-events: none;
+}
+
+.sr-peek-kpi-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    background: rgba(10, 20, 28, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #6ee7b7;
+    font-size: 0.76rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 999px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ── Content Title & Description ── */
 .sr-peek-title {
-    font-size: 1.3rem;
+    font-size: 1.28rem;
     font-weight: 900;
     color: #ffffff;
-    margin: 0 0 10px;
-    line-height: 1.4;
+    margin: 0 0 8px;
+    line-height: 1.35;
+    background: linear-gradient(135deg, #ffffff 40%, #f3dfba 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .sr-peek-desc {
-    font-size: 0.88rem;
-    color: #94a3b8;
+    font-size: 0.86rem;
+    color: #cbd5e1;
     line-height: 1.65;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
 }
 
+/* ── Tech Stack & Capabilities Tags ── */
+.sr-peek-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.sr-peek-tag-pill {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.sr-peek-tag-pill:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+    color: #ffffff;
+}
+
+/* ── Action Buttons ── */
 .sr-peek-actions {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 16px;
 }
 
 .sr-peek-btn-go {
-    padding: 10px 22px;
+    padding: 11px 24px;
     background: linear-gradient(135deg, #d4af37, #c5a028);
-    color: #0a0a0a;
+    color: #060b09;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 0.88rem;
     font-weight: 900;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
 }
 
 .sr-peek-btn-go:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.55);
 }
 
 .sr-peek-btn-close {
-    padding: 10px 18px;
+    padding: 11px 18px;
     background: rgba(255, 255, 255, 0.05);
     color: #94a3b8;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
     font-size: 0.88rem;
     font-weight: 700;
     cursor: pointer;
@@ -1198,16 +1319,26 @@ header.header,
 }
 
 .sr-peek-btn-close:hover {
-    background: rgba(255, 255, 255, 0.09);
-    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
-/* ── Responsive: stack peek card on small screens ── */
-@media (max-width: 480px) {
+/* ── Responsive adjustments ── */
+@media (max-width: 576px) {
     .sr-studio-peek-card {
-        padding: 24px 20px 20px;
+        padding: 20px 18px 18px;
+        max-width: 95%;
+    }
+    .sr-peek-visual-box {
+        height: 140px;
     }
     .sr-peek-actions {
         flex-direction: column;
+    }
+    .sr-peek-btn-go,
+    .sr-peek-btn-close {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }
