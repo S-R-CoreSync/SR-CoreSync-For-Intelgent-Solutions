@@ -178,54 +178,40 @@
     }
 
     // 5. Universal AI Idea Analyzer & Dispatcher (S&R CoreSync Specification)
-    window.setPrompt = function (text) {
-        const input = document.getElementById('userIdeaInput') || document.getElementById('heroAiIdeaInput');
-        if (input) {
-            input.value = text;
-            input.focus();
+    function setPrompt(text) {
+        const ideaInput = document.getElementById('userIdeaInput');
+        if (ideaInput) {
+            ideaInput.value = text;
+            ideaInput.focus();
         }
-    };
+    }
 
-    window.analyzeIdea = function () {
-        const input = document.getElementById('userIdeaInput') || document.getElementById('heroAiIdeaInput');
-        const idea = (input ? input.value : '').toLowerCase();
-
+    function analyzeIdea() {
+        const ideaInput = document.getElementById('userIdeaInput');
+        const idea = (ideaInput ? ideaInput.value : '').toLowerCase();
+        
         if (!idea.trim()) {
             alert('الرجاء كتابة فكرة المشروع أولاً.');
-            if (input) input.focus();
+            if (ideaInput) ideaInput.focus();
             return;
         }
 
         // منطق التحليل الذكي والتوجيه البسيط
         if (idea.includes('متجر') || idea.includes('بيع') || idea.includes('منتج')) {
             alert('تحليل الذكاء الاصطناعي: فكرتك تميل نحو التجارة الإلكترونية. جاري تحويلك إلى المتجر والخدمات المرتبطة...');
-            const storeEl = document.getElementById('store-section') || document.getElementById('software-hub');
-            if (storeEl) {
-                storeEl.scrollIntoView({ behavior: 'smooth' });
-                window.location.hash = 'store-section';
-            } else {
-                window.location.href = './index.html#store-section';
-            }
+            window.location.href = '#store-section'; 
         } else if (idea.includes('سعر') || idea.includes('تكلفة') || idea.includes('باقة')) {
             alert('تحليل الذكاء الاصطناعي: تم تصنيف مشروعك، جاري عرض خطط الأسعار المناسبة لك...');
-            const pricingEl = document.getElementById('pricing-section') || document.getElementById('pricing');
-            if (pricingEl) {
-                pricingEl.scrollIntoView({ behavior: 'smooth' });
-                window.location.hash = 'pricing-section';
-            } else {
-                window.location.href = './index.html#pricing-section';
-            }
+            window.location.href = '#pricing-section'; 
         } else {
             alert('تحليل الذكاء الاصطناعي: فكرة واعدة! جاري تحويلك إلى فرع القيادة والخدمات للاستشارة الشاملة...');
-            const servicesEl = document.getElementById('services-section') || document.getElementById('services');
-            if (servicesEl) {
-                servicesEl.scrollIntoView({ behavior: 'smooth' });
-                window.location.hash = 'services-section';
-            } else {
-                window.location.href = './index.html#services-section';
-            }
+            window.location.href = '#services-section'; 
         }
-    };
+    }
+
+    // Expose globally to window
+    window.setPrompt = setPrompt;
+    window.analyzeIdea = analyzeIdea;
 
     // Boot on DOMContentLoaded or immediately if ready
     if (document.readyState === 'loading') {
