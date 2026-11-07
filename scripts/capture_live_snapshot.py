@@ -18,7 +18,9 @@ def capture(url=None):
         '--no-sandbox',
         '--incognito',
         f'--screenshot={temp_shot}',
-        '--window-size=1280,800',
+        '--window-size=1920,1080',
+        '--virtual-time-budget=4000',
+        '--run-all-compositor-stages-before-draw',
         url
     ]
     res = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
