@@ -810,7 +810,7 @@
         setTimeout(function() { overlay.style.display = 'none'; }, 320);
     }
 
-    // 5.7 AI Scope & Timeline Estimator Engine (Phase 159)
+    // 5.7 AI Scope & Timeline Estimator Engine (Phase 159 & Phase 169)
     function openAiEstimatorModal(query) {
         playHaptic('open');
         var text = (query || '').toLowerCase();
@@ -819,32 +819,44 @@
         var timeline = '4 - 6 أسابيع';
         var compliance = 'معايير الاتحاد الأوروبي + GDPR';
         var stack = 'Next.js 15 + CoreSync Cloud';
+        var budget = '€4,500 - €8,900  |  18,000 - 35,600 ر.س';
+        var roi = '+240% كفاءة تشغيلية وتوفير سنوي';
 
         if (text.includes('متجر') || text.includes('بيع') || text.includes('منتج') || text.includes('تسوق') || text.includes('سلة')) {
             classification = 'منصة تجارة إلكترونية فاخرة متكاملة';
             timeline = '3 - 5 أسابيع';
             compliance = 'EU GDPR + BTW 21% + SEPA/Mollie';
             stack = 'Headless Next.js + CoreSync Commerce';
+            budget = '€3,800 - €7,200  |  15,200 - 28,800 ر.س';
+            roi = '+310% زيادة معدل التحويل والمبيعات';
         } else if (text.includes('سعر') || text.includes('تكلفة') || text.includes('باقة') || text.includes('اشتراك')) {
             classification = 'حزمة التحول الرقمي المؤسسي الشامل';
             timeline = '2 - 4 أسابيع';
             compliance = 'ضمان تكلفة ثابت مع عائد استثماري ROI موثق';
             stack = 'CoreSync Enterprise Sovereign Bundle';
+            budget = '€2,900 - €5,500  |  11,600 - 22,000 ر.س';
+            roi = '+190% خفض تكاليف التشغيل السنوية';
         } else if (text.includes('ذكاء') || text.includes('ai') || text.includes('وكيل') || text.includes('بوت') || text.includes('أتمتة')) {
             classification = 'شبكة وكلاء ذكاء اصطناعي وأتمتة سيادية';
             timeline = '4 - 6 أسابيع';
             compliance = 'Zero Data Leakage + ISO 27001 Cloud';
             stack = 'Autonomous RAG + Private Multi-Agent Swarm';
+            budget = '€5,500 - €11,000  |  22,000 - 44,000 ر.س';
+            roi = '+420% تسريع المهام وأتمتة العمليات';
         } else if (text.includes('نظام') || text.includes('إدارة') || text.includes('erp') || text.includes('مخازن') || text.includes('محاسبة')) {
             classification = 'منظومة CoreSync ERP المؤسسية الشاملة';
             timeline = '6 - 8 أسابيع';
             compliance = 'حوكمة أوروبية + معايير هولندية KvK & Belasting';
             stack = 'PostgreSQL Cluster + CoreSync ERP Core';
+            budget = '€6,500 - €14,000  |  26,000 - 56,000 ر.س';
+            roi = '+350% دقة محاسبية وإدارة متكاملة';
         } else if (text.includes('شحن') || text.includes('توصيل') || text.includes('لوجست') || text.includes('إمداد')) {
             classification = 'شبكة لوجستيات وسلاسل إمداد رقمية';
             timeline = '5 - 7 أسابيع';
             compliance = 'تتبع أساطيل أوروبي + أمان شحنات متقدم';
             stack = 'Dynamic Route AI + Fleet Telematics Engine';
+            budget = '€5,000 - €9,800  |  20,000 - 39,200 ر.س';
+            roi = '+280% تحسين مسارات وتكاليف الشحن';
         }
 
         var qEl = document.getElementById('srEstQueryText');
@@ -852,12 +864,16 @@
         var tEl = document.getElementById('srEstTimeline');
         var cmpEl = document.getElementById('srEstCompliance');
         var sEl = document.getElementById('srEstStack');
+        var bEl = document.getElementById('srEstBudget');
+        var rEl = document.getElementById('srEstRoi');
 
         if (qEl) qEl.textContent = '« ' + (query || 'فكرة استراتيجية قيد التحليل') + ' »';
         if (cEl) cEl.textContent = classification;
         if (tEl) tEl.textContent = timeline;
         if (cmpEl) cmpEl.textContent = compliance;
         if (sEl) sEl.textContent = stack;
+        if (bEl) bEl.textContent = budget;
+        if (rEl) rEl.textContent = roi;
 
         var modal = document.getElementById('srAiEstimateModal');
         if (modal) {
@@ -903,7 +919,9 @@
         var timeline = (document.getElementById('srEstTimeline') || {}).textContent || '';
         var compliance = (document.getElementById('srEstCompliance') || {}).textContent || '';
         var stack = (document.getElementById('srEstStack') || {}).textContent || '';
-        var dateStr = 'السبت، 07 نوفمبر 2026 — هولندا، أمستردام';
+        var budget = (document.getElementById('srEstBudget') || {}).textContent || '';
+        var roi = (document.getElementById('srEstRoi') || {}).textContent || '';
+        var dateStr = 'الأحد، 08 نوفمبر 2026 — هولندا، أمستردام';
 
         var printWindow = window.open('', '_blank', 'width=900,height=1100');
         if (!printWindow) {
@@ -963,6 +981,8 @@
             '<div class="matrix-grid">' +
             '<div class="matrix-box"><span class="matrix-lbl">التصنيف المعماري المعتمد</span><span class="matrix-val">' + classification + '</span></div>' +
             '<div class="matrix-box"><span class="matrix-lbl">الجدول الزمني التقديري للإطلاق</span><span class="matrix-val">' + timeline + '</span></div>' +
+            '<div class="matrix-box"><span class="matrix-lbl">الميزانية التقديرية (EUR / SAR)</span><span class="matrix-val" style="color:#b8972e;">' + budget + '</span></div>' +
+            '<div class="matrix-box"><span class="matrix-lbl">العائد الاستثماري المتوقع (ROI)</span><span class="matrix-val" style="color:#059669;">' + roi + '</span></div>' +
             '<div class="matrix-box"><span class="matrix-lbl">معايير الأمان والامتثال الأوروبي</span><span class="matrix-val">' + compliance + '</span></div>' +
             '<div class="matrix-box"><span class="matrix-lbl">المعمارية والتقنيات المقترحة</span><span class="matrix-val">' + stack + '</span></div>' +
             '</div>' +

@@ -11382,7 +11382,7 @@
                 <p class="sr-query-text" id="srEstQueryText">"..."</p>
             </div>
 
-            <!-- شبكة التقدير الفوري (Metrics Grid) -->
+            <!-- شبكة التقدير الفوري (Metrics Grid — 6 بطاقات استشارية شاملة) -->
             <div class="sr-estimate-grid">
                 <div class="sr-est-metric-card">
                     <span class="sr-est-lbl">التصنيف المعماري</span>
@@ -11391,6 +11391,14 @@
                 <div class="sr-est-metric-card">
                     <span class="sr-est-lbl">الجدول الزمني للإطلاق</span>
                     <strong class="sr-est-val sr-val-gold" id="srEstTimeline">3 - 5 أسابيع</strong>
+                </div>
+                <div class="sr-est-metric-card sr-est-metric-gold-box" style="border-color: rgba(212, 175, 55, 0.55); background: rgba(212, 175, 55, 0.08);">
+                    <span class="sr-est-lbl" style="color: #fce0ad;">الميزانية التقديرية (EUR / SAR) 💳</span>
+                    <strong class="sr-est-val sr-val-gold font-num" id="srEstBudget">€4,500 - €8,900  |  18,000 - 35,600 ر.س</strong>
+                </div>
+                <div class="sr-est-metric-card sr-est-metric-roi-box" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08);">
+                    <span class="sr-est-lbl" style="color: #a7f3d0;">العائد الاستثماري المتوقع (ROI) 📈</span>
+                    <strong class="sr-est-val sr-val-emerald font-num" id="srEstRoi">+240% كفاءة تشغيلية وتوفير سنوي</strong>
                 </div>
                 <div class="sr-est-metric-card">
                     <span class="sr-est-lbl">معايير الامتثال والأمان</span>
@@ -11531,9 +11539,15 @@
         }
     });
 
-    /* التوافق مع أي رابط خارجي قد يحمل الوسم #hero-idea-banner */
+    /* التوافق مع أي رابط خارجي قد يحمل الوسم #hero-idea-banner أو #demo-estimate */
     if (window.location.hash === '#hero-idea-banner') {
         setTimeout(openIdeaModal, 500);
+    } else if (window.location.hash === '#demo-estimate') {
+        setTimeout(function() {
+            if (typeof openAiEstimatorModal === 'function') {
+                openAiEstimatorModal('أريد بناء متجر إلكتروني ذكي فاخر ومنظومة سحابية');
+            }
+        }, 500);
     }
     </script>
 </body>
