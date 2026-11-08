@@ -1,0 +1,988 @@
+# الإنجاز 160 — تقرير النسخة السريعة
+
+- التاريخ: 2026-11-08 17:04
+- مدة الفحص: 3.3ث
+- ملفات مفحوصة بعد تخطي المجلدات الثقيلة: 5866
+
+## أكبر مجلدات المستوى الأول
+- _site: 441.1 ميغابايت
+- assets: 371.2 ميغابايت
+- .chrome-test-profile-3: 32.5 ميغابايت
+- .chrome-audit-profile: 29.4 ميغابايت
+- .chrome-audit-support: 28.5 ميغابايت
+- .chrome-test-profile: 25.2 ميغابايت
+- .chrome-test-profile-2: 25.1 ميغابايت
+- (الجذر): 16.9 ميغابايت
+- .zwork: 15.6 ميغابايت
+- .chrome-test-profile-4: 15.1 ميغابايت
+- Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash_files: 14.7 ميغابايت
+- .chrome-test-profile-5: 12.7 ميغابايت
+- .chrome-test-profile-6: 11.9 ميغابايت
+- temp_chrome_print_dir: 4.4 ميغابايت
+- temp_chrome_print_dir2: 4.4 ميغابايت
+
+## أ) ملفات ميتة: 60 — وفرة 0.1 ميغابايت
+- .chrome-test-profile\Default\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\chrome_cart_db\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\ClientCertificates\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Code Cache\js\index-dir\38ec7e2e-d7b3-4530-9580-668537b53b70.tmp (0.0 ميغابايت)
+- .chrome-test-profile\Default\commerce_subscription_db\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\discounts_db\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\discount_infos_db\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Extension Rules\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Extension Scripts\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Extension State\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Local Storage\leveldb\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\parcel_tracking_db\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\PersistentOriginTrials\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Segmentation Platform\SegmentInfoDB\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Segmentation Platform\SignalDB\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Segmentation Platform\SignalStorageConfigDB\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\shared_proto_db\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\shared_proto_db\metadata\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Site Characteristics Database\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile\Default\Sync Data\LevelDB\LOG.old (0.0 ميغابايت)
+- .chrome-test-profile-2\11260a49-5f80-46b5-a004-c1cc80dd23c5.tmp (0.0 ميغابايت)
+- .chrome-test-profile-2\791cc417-c845-4c2f-8cce-a15fcdbbdcf0.tmp (0.0 ميغابايت)
+- .chrome-test-profile-2\VariationsSafeSeedV287157205-0a7f-48de-bb5b-932e6b60e403.tmp (0.0 ميغابايت)
+- .chrome-test-profile-2\VariationsSeedV2baaaef6b-084a-4d62-8845-1658dfc5135a.tmp (0.0 ميغابايت)
+- .chrome-test-profile-4\VariationsSafeSeedV2ef36002b-4596-43b1-bb81-54cecb89346e.tmp (0.0 ميغابايت)
+- .chrome-test-profile-4\VariationsSeedV2e8d96ba1-29f5-4f73-9d47-5cc2d5337412.tmp (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\chrome_cart_db\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\ClientCertificates\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\commerce_subscription_db\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\discounts_db\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\discount_infos_db\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\Extension State\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\Local Storage\leveldb\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\parcel_tracking_db\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\PersistentOriginTrials\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\Segmentation Platform\SegmentInfoDB\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\Segmentation Platform\SignalDB\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\Segmentation Platform\SignalStorageConfigDB\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\shared_proto_db\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\shared_proto_db\metadata\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\Site Characteristics Database\LOG.old (0.0 ميغابايت)
+- temp_chrome_print_dir\Default\Sync Data\LevelDB\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\chrome_cart_db\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\ClientCertificates\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\commerce_subscription_db\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\discounts_db\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\discount_infos_db\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\Extension State\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\Local Storage\leveldb\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\parcel_tracking_db\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\PersistentOriginTrials\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\Segmentation Platform\SegmentInfoDB\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\Segmentation Platform\SignalDB\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\Segmentation Platform\SignalStorageConfigDB\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\shared_proto_db\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\shared_proto_db\metadata\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\Site Characteristics Database\LOG.old (0.0 ميغابايت)
+- _site\temp_chrome_print_dir\Default\Sync Data\LevelDB\LOG.old (0.0 ميغابايت)
+
+## ب) نسخ مكررة: 238 مجموعة — وفرة 406.2 ميغابايت
+الاحتفاظ بالنسخة الأولى؛ البقية تنتقل إلى _trash_160.
+- 7.0 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\branding\coresync-emblem-8k.png
+  - [ينتقل] assets\social-8k-branding\universal\sr-coresync-profile-avatar-8k.png
+  - [ينتقل] _site\assets\branding\coresync-emblem-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-8k.png
+- 4.4 ميغابايت × 5 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Extensions\Temp\scoped_dir45740_386943094\CRX_INSTALL\js\background.js
+  - [ينتقل] .chrome-audit-support\Default\Extensions\Temp\scoped_dir24276_698607225\CRX_INSTALL\js\background.js
+  - [ينتقل] .chrome-test-profile\Default\Extensions\Temp\scoped_dir39412_382843553\CRX_INSTALL\js\background.js
+  - [ينتقل] .chrome-test-profile-2\Default\Extensions\Temp\scoped_dir44612_2033947714\CRX_INSTALL\js\background.js
+  - [ينتقل] .chrome-test-profile-3\Default\Extensions\Temp\scoped_dir43020_1856761991\CRX_INSTALL\js\background.js
+- 3.4 ميغابايت × 5 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Extensions\Temp\scoped_dir45740_386943094\CRX_INSTALL\js\classifier.js
+  - [ينتقل] .chrome-audit-support\Default\Extensions\Temp\scoped_dir24276_698607225\CRX_INSTALL\js\classifier.js
+  - [ينتقل] .chrome-test-profile\Default\Extensions\Temp\scoped_dir39412_382843553\CRX_INSTALL\js\classifier.js
+  - [ينتقل] .chrome-test-profile-2\Default\Extensions\Temp\scoped_dir44612_2033947714\CRX_INSTALL\js\classifier.js
+  - [ينتقل] .chrome-test-profile-3\Default\Extensions\Temp\scoped_dir43020_1856761991\CRX_INSTALL\js\classifier.js
+- 4.3 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\social-8k-branding\avatars\founder-raed-portrait-8k.png
+  - [ينتقل] assets\social-8k-branding\universal\sr-coresync-profile-avatar-raed-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\avatars\founder-raed-portrait-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-raed-8k.png
+- 0.3 ميغابايت × 48 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-audit-profile\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-audit-profile\Default\GPUCache\data_1
+  - [ينتقل] .chrome-audit-profile\GrShaderCache\data_1
+  - [ينتقل] .chrome-audit-profile\ShaderCache\data_1
+  - [ينتقل] .chrome-audit-support\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-audit-support\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-audit-support\Default\GPUCache\data_1
+  - [ينتقل] .chrome-audit-support\GrShaderCache\data_1
+  - [ينتقل] .chrome-audit-support\ShaderCache\data_1
+  - [ينتقل] .chrome-test-profile\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-test-profile\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-test-profile\Default\GPUCache\data_1
+  - [ينتقل] .chrome-test-profile\GrShaderCache\data_1
+  - [ينتقل] .chrome-test-profile\ShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-2\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-test-profile-2\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-test-profile-2\Default\GPUCache\data_1
+  - [ينتقل] .chrome-test-profile-2\GrShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-2\ShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-3\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-test-profile-3\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-test-profile-3\Default\GPUCache\data_1
+  - [ينتقل] .chrome-test-profile-3\GrShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-3\ShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-4\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-test-profile-4\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-test-profile-4\Default\GPUCache\data_1
+  - [ينتقل] .chrome-test-profile-4\GrShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-4\ShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-5\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-test-profile-5\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-test-profile-5\Default\GPUCache\data_1
+  - [ينتقل] .chrome-test-profile-5\GrShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-5\ShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-6\Default\DawnGraphiteCache\data_1
+  - [ينتقل] .chrome-test-profile-6\Default\DawnWebGPUCache\data_1
+  - [ينتقل] .chrome-test-profile-6\Default\GPUCache\data_1
+  - [ينتقل] .chrome-test-profile-6\GrShaderCache\data_1
+  - [ينتقل] .chrome-test-profile-6\ShaderCache\data_1
+  - [ينتقل] temp_chrome_print_dir2\Default\Cache\Cache_Data\data_1
+  - [ينتقل] temp_chrome_print_dir2\Default\DawnGraphiteCache\data_1
+  - [ينتقل] temp_chrome_print_dir2\GrShaderCache\data_1
+  - [ينتقل] temp_chrome_print_dir2\ShaderCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\Cache\Cache_Data\data_1
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\DawnGraphiteCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir2\GrShaderCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir2\ShaderCache\data_1
+- 3.6 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\social-8k-branding\avatars\founder-salim-portrait-8k.png
+  - [ينتقل] assets\social-8k-branding\universal\sr-coresync-profile-avatar-salim-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\avatars\founder-salim-portrait-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-salim-8k.png
+- 8.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\about-founder-cinematic-animated.webp
+  - [ينتقل] _site\assets\about-founder-cinematic-animated.webp
+- 2.1 ميغابايت × 5 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Extensions\Temp\scoped_dir45740_386943094\CRX_INSTALL\js\app.js
+  - [ينتقل] .chrome-audit-support\Default\Extensions\Temp\scoped_dir24276_698607225\CRX_INSTALL\js\app.js
+  - [ينتقل] .chrome-test-profile\Default\Extensions\Temp\scoped_dir39412_382843553\CRX_INSTALL\js\app.js
+  - [ينتقل] .chrome-test-profile-2\Default\Extensions\Temp\scoped_dir44612_2033947714\CRX_INSTALL\js\app.js
+  - [ينتقل] .chrome-test-profile-3\Default\Extensions\Temp\scoped_dir43020_1856761991\CRX_INSTALL\js\app.js
+- 3.7 ميغابايت × 3 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Extensions\Temp\scoped_dir45740_386943094\CRX_INSTALL\js\content.js
+  - [ينتقل] .chrome-audit-support\Default\Extensions\Temp\scoped_dir24276_698607225\CRX_INSTALL\js\content.js
+  - [ينتقل] .chrome-test-profile-3\Default\Extensions\Temp\scoped_dir43020_1856761991\CRX_INSTALL\js\content.js
+- 0.4 ميغابايت × 16 نسخ:
+  - [يُحفظ] .chrome-audit-profile\en-US-10-2.bdic
+  - [ينتقل] .chrome-audit-profile\Default\Cache\Cache_Data\f_000009
+  - [ينتقل] .chrome-audit-support\en-US-10-2.bdic
+  - [ينتقل] .chrome-audit-support\Default\Cache\Cache_Data\f_000001
+  - [ينتقل] .chrome-test-profile\en-US-10-2.bdic
+  - [ينتقل] .chrome-test-profile\Default\Cache\Cache_Data\f_000006
+  - [ينتقل] .chrome-test-profile-2\en-US-10-2.bdic
+  - [ينتقل] .chrome-test-profile-2\Default\Cache\Cache_Data\f_000004
+  - [ينتقل] .chrome-test-profile-3\en-US-10-2.bdic
+  - [ينتقل] .chrome-test-profile-3\Default\Cache\Cache_Data\f_000002
+  - [ينتقل] .chrome-test-profile-4\en-US-10-2.bdic
+  - [ينتقل] .chrome-test-profile-4\Default\Cache\Cache_Data\f_000008
+  - [ينتقل] .chrome-test-profile-5\en-US-10-2.bdic
+  - [ينتقل] .chrome-test-profile-5\Default\Cache\Cache_Data\f_000008
+  - [ينتقل] .chrome-test-profile-6\en-US-10-2.bdic
+  - [ينتقل] .chrome-test-profile-6\Default\Cache\Cache_Data\f_000008
+- 1.3 ميغابايت × 6 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Extensions\Temp\scoped_dir45740_386943094\CRX_INSTALL\englishWords.json
+  - [ينتقل] .chrome-audit-support\Default\Extensions\Temp\scoped_dir24276_698607225\CRX_INSTALL\englishWords.json
+  - [ينتقل] .chrome-test-profile\Default\Extensions\Temp\scoped_dir39412_382843553\CRX_INSTALL\englishWords.json
+  - [ينتقل] .chrome-test-profile-2\Default\Extensions\Temp\scoped_dir44612_2033947714\CRX_INSTALL\englishWords.json
+  - [ينتقل] .chrome-test-profile-3\Default\Extensions\Temp\scoped_dir43020_1856761991\CRX_INSTALL\englishWords.json
+  - [ينتقل] .chrome-test-profile-4\Default\Extensions\Temp\scoped_dir40308_638928517\CRX_INSTALL\englishWords.json
+- 1.2 ميغابايت × 6 نسخ:
+  - [يُحفظ] assets\sr-core-emblem-hd.png
+  - [ينتقل] assets\sr-core-emblem-official.png
+  - [ينتقل] assets\i18n\intl\sr-core-emblem-official.png
+  - [ينتقل] _site\assets\sr-core-emblem-hd.png
+  - [ينتقل] _site\assets\sr-core-emblem-official.png
+  - [ينتقل] _site\assets\i18n\intl\sr-core-emblem-official.png
+- 1.5 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] assets\i18n\intl\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\intl\sr-emblem-gold-luxury-4k.jpg
+- 4.4 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\youtube\youtube-thumbnail-master-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\youtube\youtube-thumbnail-master-8k.png
+- 0.1 ميغابايت × 48 نسخ:
+  - [يُحفظ] css\inline-bg.css
+  - [ينتقل] css\inline-cs.css
+  - [ينتقل] css\inline-da.css
+  - [ينتقل] css\inline-el.css
+  - [ينتقل] css\inline-es.css
+  - [ينتقل] css\inline-et.css
+  - [ينتقل] css\inline-fi.css
+  - [ينتقل] css\inline-fr.css
+  - [ينتقل] css\inline-ga.css
+  - [ينتقل] css\inline-hr.css
+  - [ينتقل] css\inline-hu.css
+  - [ينتقل] css\inline-it.css
+  - [ينتقل] css\inline-ku.css
+  - [ينتقل] css\inline-lt.css
+  - [ينتقل] css\inline-lv.css
+  - [ينتقل] css\inline-mt.css
+  - [ينتقل] css\inline-no.css
+  - [ينتقل] css\inline-pl.css
+  - [ينتقل] css\inline-pt.css
+  - [ينتقل] css\inline-ro.css
+  - [ينتقل] css\inline-sk.css
+  - [ينتقل] css\inline-sl.css
+  - [ينتقل] css\inline-sv.css
+  - [ينتقل] css\inline-tr.css
+  - [ينتقل] _site\css\inline-bg.css
+  - [ينتقل] _site\css\inline-cs.css
+  - [ينتقل] _site\css\inline-da.css
+  - [ينتقل] _site\css\inline-el.css
+  - [ينتقل] _site\css\inline-es.css
+  - [ينتقل] _site\css\inline-et.css
+  - [ينتقل] _site\css\inline-fi.css
+  - [ينتقل] _site\css\inline-fr.css
+  - [ينتقل] _site\css\inline-ga.css
+  - [ينتقل] _site\css\inline-hr.css
+  - [ينتقل] _site\css\inline-hu.css
+  - [ينتقل] _site\css\inline-it.css
+  - [ينتقل] _site\css\inline-ku.css
+  - [ينتقل] _site\css\inline-lt.css
+  - [ينتقل] _site\css\inline-lv.css
+  - [ينتقل] _site\css\inline-mt.css
+  - [ينتقل] _site\css\inline-no.css
+  - [ينتقل] _site\css\inline-pl.css
+  - [ينتقل] _site\css\inline-pt.css
+  - [ينتقل] _site\css\inline-ro.css
+  - [ينتقل] _site\css\inline-sk.css
+  - [ينتقل] _site\css\inline-sl.css
+  - [ينتقل] _site\css\inline-sv.css
+  - [ينتقل] _site\css\inline-tr.css
+- 0.6 ميغابايت × 7 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Cache\Cache_Data\f_00001e
+  - [ينتقل] .chrome-test-profile\Default\Cache\Cache_Data\f_000001
+  - [ينتقل] .chrome-test-profile-2\Default\Cache\Cache_Data\f_000001
+  - [ينتقل] .chrome-test-profile-3\Default\Cache\Cache_Data\f_00001e
+  - [ينتقل] .chrome-test-profile-4\Default\Cache\Cache_Data\f_000001
+  - [ينتقل] .chrome-test-profile-5\Default\Cache\Cache_Data\f_000001
+  - [ينتقل] .chrome-test-profile-6\Default\Cache\Cache_Data\f_000001
+- 3.6 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\hero-founder-cinematic-animated.webp
+  - [ينتقل] _site\assets\hero-founder-cinematic-animated.webp
+- 0.3 ميغابايت × 14 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\Default\DawnGraphiteCache\data_1
+  - [ينتقل] temp_chrome_print_dir\Default\DawnWebGPUCache\data_1
+  - [ينتقل] temp_chrome_print_dir\Default\GPUCache\data_1
+  - [ينتقل] temp_chrome_print_dir\GrShaderCache\data_1
+  - [ينتقل] temp_chrome_print_dir\ShaderCache\data_1
+  - [ينتقل] temp_chrome_print_dir2\Default\DawnWebGPUCache\data_1
+  - [ينتقل] temp_chrome_print_dir2\Default\GPUCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir\Default\DawnGraphiteCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir\Default\DawnWebGPUCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir\Default\GPUCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir\GrShaderCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir\ShaderCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\DawnWebGPUCache\data_1
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\GPUCache\data_1
+- 3.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\linkedin\linkedin-post-landscape-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\linkedin\linkedin-post-landscape-8k.png
+- 3.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\whatsapp\whatsapp-catalog-header-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\whatsapp\whatsapp-catalog-header-8k.png
+- 3.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\telegram\telegram-post-card-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\telegram\telegram-post-card-8k.png
+- 3.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash_files\index-jMmKs_nz.js.تنزيل
+  - [ينتقل] _site\Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash_files\index-jMmKs_nz.js.تنزيل
+- 3.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\instagram\instagram-story-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\instagram\instagram-story-8k.png
+- 3.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\tiktok\tiktok-video-cover-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\tiktok\tiktok-video-cover-8k.png
+- 3.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\snapchat\snapchat-story-frame-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\snapchat\snapchat-story-frame-8k.png
+- 2.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\facebook\facebook-post-landscape-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\facebook\facebook-post-landscape-8k.png
+- 2.6 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\facebook\facebook-post-square-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\facebook\facebook-post-square-8k.png
+- 2.6 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\instagram\instagram-post-square-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\instagram\instagram-post-square-8k.png
+- 2.6 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\instagram\instagram-post-portrait-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\instagram\instagram-post-portrait-8k.png
+- 0.3 ميغابايت × 9 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Cache\Cache_Data\f_000007
+  - [ينتقل] .chrome-test-profile\Default\Cache\Cache_Data\f_000005
+  - [ينتقل] .chrome-test-profile-2\Default\Cache\Cache_Data\f_000007
+  - [ينتقل] .chrome-test-profile-3\Default\Cache\Cache_Data\f_000025
+  - [ينتقل] .chrome-test-profile-4\Default\Cache\Cache_Data\f_000007
+  - [ينتقل] .chrome-test-profile-5\Default\Cache\Cache_Data\f_000007
+  - [ينتقل] .chrome-test-profile-6\Default\Cache\Cache_Data\f_000007
+  - [ينتقل] css\dananajmah-bundle.min.css
+  - [ينتقل] _site\css\dananajmah-bundle.min.css
+- 2.4 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\founder-banner-raed-4k.jpg
+- 2.4 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\founder-banner-salim-4k.jpg
+- 2.4 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\linkedin\linkedin-carousel-cover-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\linkedin\linkedin-carousel-cover-8k.png
+- 0.7 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\SR-CoreSync-Corporate-Profile-2026.pdf
+  - [ينتقل] downloads\SR-CoreSync-Corporate-Profile-2026.pdf
+  - [ينتقل] _site\assets\SR-CoreSync-Corporate-Profile-2026.pdf
+  - [ينتقل] _site\downloads\SR-CoreSync-Corporate-Profile-2026.pdf
+- 2.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\x-twitter\x-header-cover-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\x-twitter\x-header-cover-8k.png
+- 1.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\facebook\facebook-page-cover-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\facebook\facebook-page-cover-8k.png
+- 0.6 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\founder-banner-salim.jpg
+  - [ينتقل] assets\i18n\intl\founder-banner-salim.jpg
+  - [ينتقل] _site\assets\founder-banner-salim.jpg
+  - [ينتقل] _site\assets\i18n\intl\founder-banner-salim.jpg
+- 1.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\universal\sr-coresync-profile-avatar-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-8k.jpg
+- 0.6 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\founder-banner-raed.jpg
+  - [ينتقل] assets\i18n\intl\founder-banner-raed.jpg
+  - [ينتقل] _site\assets\founder-banner-raed.jpg
+  - [ينتقل] _site\assets\i18n\intl\founder-banner-raed.jpg
+- 1.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\hero-founder-cinematic.mp4
+  - [ينتقل] _site\assets\hero-founder-cinematic.mp4
+- 1.6 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\about-founder-cinematic.mp4
+  - [ينتقل] _site\assets\about-founder-cinematic.mp4
+- 1.6 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\youtube\youtube-thumbnail-master-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\youtube\youtube-thumbnail-master-8k.jpg
+- 1.5 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\facebook\facebook-post-landscape-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\facebook\facebook-post-landscape-8k.jpg
+- 0.2 ميغابايت × 7 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Cache\Cache_Data\f_00001a
+  - [ينتقل] .chrome-test-profile\Default\Cache\Cache_Data\f_000019
+  - [ينتقل] .chrome-test-profile-2\Default\Cache\Cache_Data\f_000014
+  - [ينتقل] .chrome-test-profile-3\Default\Cache\Cache_Data\f_000015
+  - [ينتقل] .chrome-test-profile-4\Default\Cache\Cache_Data\f_000015
+  - [ينتقل] assets\about-founder-cinematic-opt.mp4
+  - [ينتقل] _site\assets\about-founder-cinematic-opt.mp4
+- 1.4 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\universal\sr-coresync-profile-avatar-raed-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-raed-8k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\universal\sr-coresync-profile-avatar-salim-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-salim-8k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] sr_rag_knowledge.db
+  - [ينتقل] _site\sr_rag_knowledge.db
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\linkedin\linkedin-post-landscape-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\linkedin\linkedin-post-landscape-8k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\youtube\youtube-channel-banner-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\youtube\youtube-channel-banner-8k.png
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ckb\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\ckb\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\nl\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\nl\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\video-shorts-reels-8k\video-short-safe-zone-guide-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\video-shorts-reels-8k\video-short-safe-zone-guide-8k.png
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\de\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\de\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\el\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\el\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pt\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\pt\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fr\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\fr\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\es\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\es\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\en\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\en\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lt\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\lt\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pl\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\pl\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fi\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\fi\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lv\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\lv\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\bg\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\bg\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\el\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\el\founder-banner-salim-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\video-shorts-reels-8k\video-short-master-overlay-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\video-shorts-reels-8k\video-short-master-overlay-8k.png
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\it\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\it\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\no\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\no\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ckb\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\ckb\founder-banner-salim-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sv\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\sv\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hu\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\hu\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\et\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\et\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ku\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\ku\founder-banner-raed-4k.jpg
+- 1.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\tr\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\tr\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\nl\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\nl\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\da\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\da\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ga\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\ga\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pt\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\pt\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sk\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\sk\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sl\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\sl\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lv\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\lv\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lt\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\lt\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\es\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\es\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\cs\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\cs\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ro\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\ro\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\mt\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\mt\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pl\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\pl\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\en\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\en\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fr\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\fr\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sk\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\sk\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\it\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\it\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ga\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\ga\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hr\founder-banner-raed-4k.jpg
+  - [ينتقل] _site\assets\i18n\hr\founder-banner-raed-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\de\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\de\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\mt\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\mt\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\cs\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\cs\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\bg\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\bg\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ku\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\ku\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sl\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\sl\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hu\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\hu\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\no\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\no\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\da\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\da\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\et\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\et\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ro\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\ro\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sv\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\sv\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hr\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\hr\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fi\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\fi\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\tr\founder-banner-salim-4k.jpg
+  - [ينتقل] _site\assets\i18n\tr\founder-banner-salim-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\whatsapp\whatsapp-catalog-header-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\whatsapp\whatsapp-catalog-header-8k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\telegram\telegram-post-card-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\telegram\telegram-post-card-8k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\instagram\instagram-story-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\instagram\instagram-story-8k.jpg
+- 0.2 ميغابايت × 7 نسخ:
+  - [يُحفظ] .chrome-audit-support\Default\History
+  - [ينتقل] .chrome-test-profile\Default\History
+  - [ينتقل] .chrome-test-profile-2\Default\History
+  - [ينتقل] .chrome-test-profile-3\Default\History
+  - [ينتقل] .chrome-test-profile-4\Default\History
+  - [ينتقل] .chrome-test-profile-5\Default\History
+  - [ينتقل] .chrome-test-profile-6\Default\History
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fr\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\fr\sr-emblem-gold-luxury-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pl\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\pl\sr-emblem-gold-luxury-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\nl\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\nl\sr-emblem-gold-luxury-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\es\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\es\sr-emblem-gold-luxury-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\linkedin\linkedin-carousel-cover-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\linkedin\linkedin-carousel-cover-8k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pt\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\pt\sr-emblem-gold-luxury-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\no\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\no\sr-emblem-gold-luxury-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\bg\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\bg\sr-emblem-gold-luxury-4k.jpg
+- 1.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\mt\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\mt\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\da\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\da\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\it\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\it\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\et\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\et\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ro\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\ro\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\en\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\en\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hu\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\hu\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lv\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\lv\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lt\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\lt\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sv\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\sv\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ku\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\ku\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\de\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\de\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sk\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\sk\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hr\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\hr\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\cs\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\cs\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fi\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\fi\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\tr\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\tr\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sl\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\sl\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\el\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\el\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ga\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\ga\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ckb\sr-emblem-gold-luxury-4k.jpg
+  - [ينتقل] _site\assets\i18n\ckb\sr-emblem-gold-luxury-4k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\tiktok\tiktok-video-cover-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\tiktok\tiktok-video-cover-8k.jpg
+- 0.4 ميغابايت × 4 نسخ:
+  - [يُحفظ] .chrome-audit-profile\Default\Cache\Cache_Data\f_000020
+  - [ينتقل] .chrome-test-profile-3\Default\Cache\Cache_Data\f_000020
+  - [ينتقل] assets\icon-512.png
+  - [ينتقل] _site\assets\icon-512.png
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\instagram\instagram-post-portrait-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\instagram\instagram-post-portrait-8k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\snapchat\snapchat-story-frame-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\snapchat\snapchat-story-frame-8k.jpg
+- 0.4 ميغابايت × 4 نسخ:
+  - [يُحفظ] assets\branding\hero_centered_verified_live.png
+  - [ينتقل] assets\branding\live_hero_cleaned_snapshot.png
+  - [ينتقل] _site\assets\branding\hero_centered_verified_live.png
+  - [ينتقل] _site\assets\branding\live_hero_cleaned_snapshot.png
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\facebook\facebook-post-square-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\facebook\facebook-post-square-8k.jpg
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\story-highlights-8k\story-highlight-founders-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\story-highlights-8k\story-highlight-founders-8k.png
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\story-highlights-8k\story-highlight-about-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\story-highlights-8k\story-highlight-about-8k.png
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\story-highlights-8k\story-highlight-services-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\story-highlights-8k\story-highlight-services-8k.png
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\story-highlights-8k\story-highlight-ai-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\story-highlights-8k\story-highlight-ai-8k.png
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\story-highlights-8k\story-highlight-cloud-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\story-highlights-8k\story-highlight-cloud-8k.png
+- 1.1 ميغابايت × 2 نسخ:
+  - [يُحفظ] دليل_رفع_التحديثات_خطوة_بخطوة.pdf
+  - [ينتقل] _site\دليل_رفع_التحديثات_خطوة_بخطوة.pdf
+- 1.0 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\universal\sr-coresync-profile-avatar-8k.webp
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-8k.webp
+- 1.0 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\about-founder-cinematic-lite.webp
+  - [ينتقل] _site\assets\about-founder-cinematic-lite.webp
+- 1.0 ميغابايت × 2 نسخ:
+  - [يُحفظ] live_preview_founders_showcase_1920.png
+  - [ينتقل] _site\live_preview_founders_showcase_1920.png
+- 1.0 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\facebook\facebook-page-cover-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\facebook\facebook-page-cover-8k.jpg
+- 1.0 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\linkedin\linkedin-company-cover-8k.png
+  - [ينتقل] _site\assets\social-8k-branding\linkedin\linkedin-company-cover-8k.png
+- 1.0 ميغابايت × 2 نسخ:
+  - [يُحفظ] .chrome-audit-support\Default\Extensions\Temp\scoped_dir24276_698607225\CRX_INSTALL\js\devLog.chunk.js
+  - [ينتقل] .chrome-test-profile-3\Default\Extensions\Temp\scoped_dir43020_1856761991\CRX_INSTALL\js\devLog.chunk.js
+- 0.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\instagram\instagram-post-square-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\instagram\instagram-post-square-8k.jpg
+- 0.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] live_social_8k_studio_1920.png
+  - [ينتقل] _site\live_social_8k_studio_1920.png
+- 0.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\x-twitter\x-header-cover-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\x-twitter\x-header-cover-8k.jpg
+- 0.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\founder-banner-salim-4k.webp
+- 0.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\founder-banner-raed-4k.webp
+- 0.9 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\service-cybersecurity-3d.jpg
+  - [ينتقل] _site\assets\service-cybersecurity-3d.jpg
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] ckb\index.html
+  - [ينتقل] _site\ckb\index.html
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\service-ai-automation-3d.jpg
+  - [ينتقل] _site\assets\service-ai-automation-3d.jpg
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\youtube\youtube-channel-banner-8k.jpg
+  - [ينتقل] _site\assets\social-8k-branding\youtube\youtube-channel-banner-8k.jpg
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] .chrome-audit-support\Default\Extensions\Temp\scoped_dir24276_698607225\CRX_INSTALL\js\dist.chunk.js
+  - [ينتقل] .chrome-test-profile-3\Default\Extensions\Temp\scoped_dir43020_1856761991\CRX_INSTALL\js\dist.chunk.js
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] index.html
+  - [ينتقل] _site\index.html
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] live_exec_stage_with_voice_btn.png
+  - [ينتقل] _site\live_exec_stage_with_voice_btn.png
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] live_exec_stage_leadership.png
+  - [ينتقل] _site\live_exec_stage_leadership.png
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] live_founder_showcase_uhd_1920.png
+  - [ينتقل] _site\live_founder_showcase_uhd_1920.png
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] live_exec_stage_raed.png
+  - [ينتقل] _site\live_exec_stage_raed.png
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ckb\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\ckb\founder-banner-raed-4k.webp
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\nl\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\nl\founder-banner-raed-4k.webp
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\de\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\de\founder-banner-raed-4k.webp
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\el\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\el\founder-banner-raed-4k.webp
+- 0.8 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pt\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\pt\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fr\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\fr\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\en\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\en\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fi\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\fi\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\es\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\es\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lt\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\lt\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lv\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\lv\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hu\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\hu\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pl\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\pl\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\no\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\no\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sv\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\sv\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\et\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\et\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\tr\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\tr\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ku\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\ku\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\it\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\it\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\bg\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\bg\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\da\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\da\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ga\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\ga\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sk\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\sk\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sl\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\sl\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\cs\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\cs\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ro\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\ro\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\mt\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\mt\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\hr\founder-banner-raed-4k.webp
+  - [ينتقل] _site\assets\i18n\hr\founder-banner-raed-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ckb\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\ckb\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\el\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\el\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\nl\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\nl\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pt\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\pt\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\es\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\es\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lt\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\lt\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\lv\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\lv\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\fr\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\fr\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\en\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\en\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\it\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\it\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\pl\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\pl\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sk\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\sk\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ga\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\ga\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\cs\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\cs\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\de\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\de\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\mt\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\mt\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ku\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\ku\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\bg\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\bg\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\sl\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\sl\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\no\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\no\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\i18n\ro\founder-banner-salim-4k.webp
+  - [ينتقل] _site\assets\i18n\ro\founder-banner-salim-4k.webp
+- 0.7 ميغابايت × 2 نسخ:
+  - [يُحفظ] assets\social-8k-branding\universal\sr-coresync-profile-avatar-raed-8k.webp
+  - [ينتقل] _site\assets\social-8k-branding\universal\sr-coresync-profile-avatar-raed-8k.webp
+- 0.5 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\Default\Cache\Cache_Data\index
+  - [ينتقل] _site\temp_chrome_print_dir\Default\Cache\Cache_Data\index
+- 0.5 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir2\Default\Cache\Cache_Data\index
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\Cache\Cache_Data\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\Default\Cache\Cache_Data\data_1
+  - [ينتقل] _site\temp_chrome_print_dir\Default\Cache\Cache_Data\data_1
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\Default\DawnGraphiteCache\index
+  - [ينتقل] _site\temp_chrome_print_dir\Default\DawnGraphiteCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\Default\DawnWebGPUCache\index
+  - [ينتقل] _site\temp_chrome_print_dir\Default\DawnWebGPUCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\Default\GPUCache\index
+  - [ينتقل] _site\temp_chrome_print_dir\Default\GPUCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\GrShaderCache\index
+  - [ينتقل] _site\temp_chrome_print_dir\GrShaderCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\ShaderCache\index
+  - [ينتقل] _site\temp_chrome_print_dir\ShaderCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir2\Default\DawnGraphiteCache\index
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\DawnGraphiteCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir2\Default\DawnWebGPUCache\index
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\DawnWebGPUCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir2\Default\GPUCache\index
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\GPUCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir2\GrShaderCache\index
+  - [ينتقل] _site\temp_chrome_print_dir2\GrShaderCache\index
+- 0.3 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir2\ShaderCache\index
+  - [ينتقل] _site\temp_chrome_print_dir2\ShaderCache\index
+- 0.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir\Default\History
+  - [ينتقل] _site\temp_chrome_print_dir\Default\History
+- 0.2 ميغابايت × 2 نسخ:
+  - [يُحفظ] temp_chrome_print_dir2\Default\History
+  - [ينتقل] _site\temp_chrome_print_dir2\Default\History
+
+## ج) CSS: 116 ملف — غير مُستخدم: 4 (ينتقل إلى _css_archive_160)
+- css\sr-quick-translate.css (0.0 ميغابايت)
+- css\sr-readiness.css (0.0 ميغابايت)
+- _site\css\sr-quick-translate.css (0.0 ميغابايت)
+- _site\css\sr-readiness.css (0.0 ميغابايت)
+
+## الخلاصة
+- الوفرة الإجمالية المحتملة: 406.3 ميغابايت
+- التنفيذ: python cleanup_fast.py --go
+- كل النقل قابل للاسترجاع من _trash_160 و _css_archive_160
