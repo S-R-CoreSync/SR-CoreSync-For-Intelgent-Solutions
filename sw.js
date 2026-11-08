@@ -42,6 +42,7 @@ const SECONDARY_ASSETS = [
   './js/perf-audit.js',
   './js/web-vitals.min.js',
   './js/sr-social-card-engine.js',
+  './js/sr-studio-i18n.js',
   './card.html',
   './social-8k-studio.html',
   './en/index.html',
