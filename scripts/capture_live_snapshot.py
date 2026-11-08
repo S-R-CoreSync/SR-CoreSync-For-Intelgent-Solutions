@@ -34,5 +34,13 @@ def capture(url=None):
         return False
 
 if __name__ == '__main__':
-    capture()
+    import sys
+    target = None
+    if len(sys.argv) > 1:
+        arg = sys.argv[1]
+        if arg.startswith('http://') or arg.startswith('https://') or arg.startswith('file:///'):
+            target = arg
+        else:
+            target = 'file:///' + os.path.abspath(arg).replace('\\', '/')
+    capture(target)
 
