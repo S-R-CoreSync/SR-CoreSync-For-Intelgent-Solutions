@@ -163,6 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const jsonStr = JSON.stringify(dataToExport, null, 2);
       downloadFile('sr-micro-interaction.json', jsonStr, 'application/json');
       showStudioToast('✓ تم تصدير ملف Lottie JSON بنجاح!');
+      if (window.SRStudioTelemetry) {
+        window.SRStudioTelemetry.track('lottie-studio', 'export_json', { preset: animSelect ? animSelect.value : 'custom' });
+      }
     });
   }
 
@@ -189,6 +192,20 @@ document.addEventListener('DOMContentLoaded', () => {
 `;
       downloadFile('sr-micro-interactions.css', css, 'text/css');
       showStudioToast('✓ تم تصدير كود CSS Keyframes الجاهز للتضمين!');
+      if (window.SRStudioTelemetry) {
+        window.SRStudioTelemetry.track('lottie-studio', 'export_css', { speed: speed, color: color });
+        window.SRStudioTelemetry.recordLead({
+          studio: 'lottie-studio',
+          studioName: 'استوديو الرسوم والتفاعلات',
+          type: 'design_export',
+          title: `تصدير هوية وتفاعلات CSS Keyframes (${color})`,
+          matchScore: 90,
+          estimatedValue: '€ 9,500',
+          clientHint: 'عميل تفاعلات وهوية رقمية للمواقع',
+          status: 'engaged',
+          statusLabel: 'تفاعل تصميم 🎨'
+        });
+      }
     });
   }
 });

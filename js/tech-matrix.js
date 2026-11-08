@@ -285,6 +285,20 @@ const TechMatrix = {
       filterEl.value = this.advisorRecommendation.planKey;
       this.filterBySize();
     }
+    if (window.SRStudioTelemetry) {
+      window.SRStudioTelemetry.recordLead({
+        studio: 'tech-matrix',
+        studioName: 'مصفوفة الأنظمة والباقات',
+        type: 'ai_advisor',
+        title: `استشارة AI: باقة ${this.advisorRecommendation.planKey}`,
+        orgSize: this.advisorRecommendation.planKey,
+        matchScore: 95,
+        estimatedValue: this.advisorRecommendation.planKey === 'enterprise' ? '€ 48,000' : (this.advisorRecommendation.planKey === 'mid' ? '€ 24,000' : '€ 9,500'),
+        clientHint: 'عميل محتمل عبر مستشار الـ AI للباقات',
+        status: 'qualified',
+        statusLabel: 'مؤهل ذكياً 🤖'
+      });
+    }
     this.closeAdvisor();
     const table = $('#matrixTable');
     if (table) {

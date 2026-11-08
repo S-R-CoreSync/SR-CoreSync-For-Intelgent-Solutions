@@ -43,6 +43,7 @@ const SECONDARY_ASSETS = [
   './js/web-vitals.min.js',
   './js/sr-social-card-engine.js',
   './js/sr-studio-i18n.js',
+  './js/sr-studio-telemetry.js',
   './card.html',
   './social-8k-studio.html',
   './en/index.html',

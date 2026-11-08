@@ -135,6 +135,23 @@ function runAudit() {
 
     window._auditMetrics = metrics;
     window._auditScore = score;
+
+    if (window.SRStudioTelemetry) {
+      window.SRStudioTelemetry.track('perf-audit', 'audit_completed', { score: score, metrics: metrics });
+      if (score < 85) {
+        window.SRStudioTelemetry.recordLead({
+          studio: 'perf-audit',
+          studioName: 'فاحص سرعة وأداء الويب',
+          type: 'perf_audit',
+          title: `فحص أداء (${score}/100) بحاجة لتسريع وبنية سحابية`,
+          matchScore: 88,
+          estimatedValue: '€ 14,000',
+          clientHint: 'عميل تدقيق سرعة وأداء الويب',
+          status: 'opportunity',
+          statusLabel: 'فرصة تسريع ⚡'
+        });
+      }
+    }
   });
 }
 

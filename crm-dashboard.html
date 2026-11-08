@@ -192,6 +192,55 @@
                     <tbody id="clientBody"></tbody>
                 </table>
             </div>
+
+            <!-- تحليلات واستشارات الاستوديوهات الحية (Studio Analytics Telemetry & AI Leads) -->
+            <div class="section-card" id="studioTelemetrySection">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:18px;">
+                    <div class="section-title" style="margin-bottom:0;">
+                        <span>📡 تحليلات واستشارات الاستوديوهات الحية (Studio Telemetry & AI Leads)</span>
+                        <span class="live-pill" style="font-size:0.72rem;"><span class="live-dot"></span> متزامن حياً</span>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <span style="font-size:0.8rem; color:#94a3b8; align-self:center;">قيمة الفرص المقدرة:</span>
+                        <strong style="color:var(--emerald); font-size:0.95rem; font-family:'Space Grotesk',sans-serif;" id="telemetryTotalValue">€ 184,500</strong>
+                    </div>
+                </div>
+
+                <!-- مصفوفة مؤشرات الاستوديوهات -->
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin-bottom:18px;">
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(197,168,128,0.18); border-radius:12px; padding:12px; text-align:center;">
+                        <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">🤖 استشارات AI للباقات</div>
+                        <div style="font-size:1.3rem; font-weight:900; color:var(--gold-l); font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statAiAdvisor">14</div>
+                    </div>
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(197,168,128,0.18); border-radius:12px; padding:12px; text-align:center;">
+                        <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">⚡ فحوصات السرعة</div>
+                        <div style="font-size:1.3rem; font-weight:900; color:var(--cyan); font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statPerfAudits">28</div>
+                    </div>
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(197,168,128,0.18); border-radius:12px; padding:12px; text-align:center;">
+                        <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">🎨 تصدير التفاعلات</div>
+                        <div style="font-size:1.3rem; font-weight:900; color:var(--emerald); font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statDesignExports">19</div>
+                    </div>
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(197,168,128,0.18); border-radius:12px; padding:12px; text-align:center;">
+                        <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">📢 مشاركات اجتماعية</div>
+                        <div style="font-size:1.3rem; font-weight:900; color:#f59e0b; font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statSocialCards">32</div>
+                    </div>
+                </div>
+
+                <!-- جدول إشارات الفرص القادمة من الاستوديوهات -->
+                <div style="overflow-x:auto;">
+                    <table class="client-table" id="studioLeadsTable">
+                        <thead><tr>
+                            <th>الوقت</th>
+                            <th>الاستوديو / المصدر</th>
+                            <th>تفاصيل الاستشارة / الفرصة</th>
+                            <th>القيمة المقدرة</th>
+                            <th>حالة التحويل</th>
+                            <th>إجراء فوري</th>
+                        </tr></thead>
+                        <tbody id="studioLeadsBody"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <!-- الشريط الجانبي -->
@@ -352,7 +401,66 @@
         // تأخير لضمان تهيئة الأبعاد
         setTimeout(drawSalesChart, 100);
         window.addEventListener('resize', drawSalesChart);
+
+        // === تحليلات واستشارات الاستوديوهات الحية ===
+        function renderStudioTelemetry() {
+            if (!window.SRStudioTelemetry) return;
+            const stats = window.SRStudioTelemetry.getStats();
+            const leads = window.SRStudioTelemetry.getLeads();
+
+            const statAi = document.getElementById('statAiAdvisor');
+            const statPerf = document.getElementById('statPerfAudits');
+            const statDesign = document.getElementById('statDesignExports');
+            const statSocial = document.getElementById('statSocialCards');
+            const totalVal = document.getElementById('telemetryTotalValue');
+            const tbody = document.getElementById('studioLeadsBody');
+
+            if (statAi) statAi.textContent = stats.aiAdvisorInquiries;
+            if (statPerf) statPerf.textContent = stats.perfAuditsRun;
+            if (statDesign) statDesign.textContent = stats.designExports;
+            if (statSocial) statSocial.textContent = stats.socialCardsShared;
+            if (totalVal) totalVal.textContent = stats.totalLeadsValue;
+
+            if (tbody) {
+                tbody.innerHTML = '';
+                leads.slice(0, 6).forEach(lead => {
+                    const timeAgo = formatTimeAgo(lead.timestamp);
+                    const studioBadge = lead.studio === 'tech-matrix' 
+                        ? '<span class="status-pill active">⚖️ مصفوفة الباقات</span>' 
+                        : (lead.studio === 'perf-audit' ? '<span class="status-pill" style="background:rgba(56,189,248,0.15); color:#38bdf8;">⚡ فاحص السرعة</span>' : '<span class="status-pill" style="background:rgba(245,158,11,0.15); color:#f59e0b;">✨ استوديو Lottie</span>');
+
+                    tbody.innerHTML += `
+                        <tr>
+                            <td style="white-space:nowrap; font-size:0.8rem; color:#94a3b8;">${timeAgo}</td>
+                            <td>${studioBadge}</td>
+                            <td>
+                                <strong style="color:#f8fafc; display:block; font-size:0.86rem;">${lead.title}</strong>
+                                <span style="font-size:0.75rem; color:#94a3b8;">${lead.clientHint} • تطابق ${lead.matchScore}%</span>
+                            </td>
+                            <td style="font-family:'Space Grotesk',sans-serif; font-weight:800; color:var(--gold-l);">${lead.estimatedValue}</td>
+                            <td><span class="status-pill active">${lead.statusLabel}</span></td>
+                            <td>
+                                <a href="smart-proposal-portal.html?lead=${encodeURIComponent(lead.id)}&val=${encodeURIComponent(lead.estimatedValue)}" class="button sm-btn gold-btn" style="display:inline-flex; align-items:center; gap:4px; padding:4px 10px; font-size:0.76rem; border-radius:6px; background:rgba(197,168,128,0.18); border:1px solid rgba(197,168,128,0.35); color:var(--gold-l); text-decoration:none; font-weight:700;">📜 إنشاء عرض</a>
+                            </td>
+                        </tr>
+                    `;
+                });
+            }
+        }
+
+        function formatTimeAgo(ts) {
+            const diff = Math.floor((Date.now() - ts) / 1000);
+            if (diff < 60) return 'الآن';
+            if (diff < 3600) return `منذ ${Math.floor(diff/60)} دقيقة`;
+            if (diff < 86400) return `منذ ${Math.floor(diff/3600)} ساعة`;
+            return `منذ ${Math.floor(diff/86400)} يوم`;
+        }
+
+        renderStudioTelemetry();
+        window.addEventListener('storage', renderStudioTelemetry);
+        window.addEventListener('sr-telemetry-event', renderStudioTelemetry);
     </script>
+    <script src="./js/sr-studio-telemetry.js"></script>
     <!-- Sovereign Master Shell Engine (MSE) -->
     <script src="./js/sr-master-shell.js"></script>
 </body>
