@@ -1095,6 +1095,152 @@
     window.playHaptic                = playHaptic;
     // heroJumpToTitle exposed inside initHeroDynamicTitleRotator()
 
+    // 6. Universal Sovereign PWA One-Click Install Engine
+    let srPwaPrompt = null;
+
+    function initPwaInstallEngine() {
+        if ('serviceWorker' in navigator && !window.location.protocol.startsWith('file')) {
+            navigator.serviceWorker.register('./sw.js').catch(() => {});
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            srPwaPrompt = e;
+            window.srDeferredPwaPrompt = e;
+            renderPwaFloatingWidget();
+            updatePwaNavbarButtons();
+        });
+
+        window.addEventListener('appinstalled', () => {
+            srPwaPrompt = null;
+            const widget = document.getElementById('srPwaFloatingWidget');
+            if (widget) widget.style.display = 'none';
+        });
+
+        renderPwaFloatingWidget();
+    }
+
+    function renderPwaFloatingWidget() {
+        if (document.getElementById('srPwaFloatingWidget')) return;
+        if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) {
+            return;
+        }
+
+        const widget = document.createElement('div');
+        widget.id = 'srPwaFloatingWidget';
+        widget.className = 'sr-pwa-floating-btn';
+        widget.innerHTML = `
+            <button type="button" onclick="srPromptPwaInstall()" class="sr-pwa-btn-inner" title="تثبيت المنظومة كتطبيق مستقل">
+                <span class="sr-pwa-icon">📲</span>
+                <span class="sr-pwa-text">تثبيت التطبيق</span>
+            </button>
+        `;
+
+        if (!document.getElementById('srPwaWidgetStyles')) {
+            const style = document.createElement('style');
+            style.id = 'srPwaWidgetStyles';
+            style.textContent = `
+                .sr-pwa-floating-btn {
+                    position: fixed;
+                    bottom: 24px;
+                    left: 24px;
+                    z-index: 9998;
+                    direction: rtl;
+                }
+                .sr-pwa-btn-inner {
+                    background: linear-gradient(135deg, rgba(8, 24, 18, 0.95), rgba(13, 38, 28, 0.95));
+                    border: 1px solid rgba(197, 168, 128, 0.4);
+                    color: var(--sr-gold-light, #f3dfba);
+                    padding: 10px 18px;
+                    border-radius: 999px;
+                    font-family: inherit;
+                    font-size: 0.85rem;
+                    font-weight: 800;
+                    cursor: pointer;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.25);
+                    transition: all 0.25s ease;
+                }
+                .sr-pwa-btn-inner:hover {
+                    transform: translateY(-3px) scale(1.03);
+                    border-color: #10b981;
+                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 30px rgba(16, 185, 129, 0.4);
+                }
+                .sr-pwa-icon { font-size: 1.1rem; }
+                .sr-pwa-text { white-space: nowrap; }
+                @media (max-width: 640px) {
+                    .sr-pwa-floating-btn { bottom: 16px; left: 16px; }
+                    .sr-pwa-btn-inner { padding: 8px 14px; font-size: 0.78rem; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        document.body.appendChild(widget);
+    }
+
+    function updatePwaNavbarButtons() {
+        document.querySelectorAll('[data-sr-pwa-install]').forEach(btn => {
+            btn.style.display = 'inline-flex';
+        });
+    }
+
+    window.srPromptPwaInstall = function () {
+        if (srPwaPrompt) {
+            srPwaPrompt.prompt();
+            srPwaPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    const widget = document.getElementById('srPwaFloatingWidget');
+                    if (widget) widget.style.display = 'none';
+                }
+                srPwaPrompt = null;
+            });
+        } else {
+            showPwaHelpModal();
+        }
+    };
+
+    function showPwaHelpModal() {
+        if (document.getElementById('srPwaHelpModal')) {
+            document.getElementById('srPwaHelpModal').classList.add('active');
+            return;
+        }
+
+        const modal = document.createElement('div');
+        modal.id = 'srPwaHelpModal';
+        modal.className = 'sr-social-modal-overlay active';
+        modal.innerHTML = `
+            <div class="sr-social-modal-card" style="max-width:540px;">
+                <div class="sr-social-modal-header">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="font-size:1.3rem;">📲</span>
+                        <strong style="color:var(--sr-gold-light, #f3dfba); font-size:1.05rem;">تثبيت المنظومة السيادية كـ App</strong>
+                    </div>
+                    <button type="button" class="sr-social-close-btn" onclick="document.getElementById('srPwaHelpModal').classList.remove('active')">✕</button>
+                </div>
+                <div class="sr-social-modal-body" style="gap:16px;">
+                    <p style="font-size:0.92rem; color:#f8fafc; margin:0;">
+                        يمكنكم تثبيت منصة <strong>S&R CoreSync</strong> واستوديوهاتها كـ Progressive Web App مستقل يعمل بسرعة فائقة وبدون اتصال بالإنترنت.
+                    </p>
+                    <div style="background:rgba(8, 20, 15, 0.8); border:1px solid rgba(197, 168, 128, 0.25); border-radius:12px; padding:16px;">
+                        <div style="font-weight:bold; color:#10b981; margin-bottom:6px;">📱 لمستخدمي iPhone و iPad (متصفح Safari):</div>
+                        <div style="font-size:0.85rem; color:#cbd5e1;">اضغط على أيقونة المشاركة <strong>(Share ⎋)</strong> في أسفل الشاشة، ثم اختر <strong>"إضافة إلى الصفحة الرئيسية ➕"</strong>.</div>
+                    </div>
+                    <div style="background:rgba(8, 20, 15, 0.8); border:1px solid rgba(197, 168, 128, 0.25); border-radius:12px; padding:16px;">
+                        <div style="font-weight:bold; color:#38bdf8; margin-bottom:6px;">💻 لمستخدمي أجهزة الكمبيوتر (Chrome / Edge):</div>
+                        <div style="font-size:0.85rem; color:#cbd5e1;">اضغط على أيقونة التثبيت في شريط العنوان أعلى المتصفح <strong>(Install App 🖥️)</strong> لتثبيت المنظومة كتطبيق سطح مكتب.</div>
+                    </div>
+                    <button type="button" class="sr-social-btn sr-social-btn--gold" style="width:100%;" onclick="document.getElementById('srPwaHelpModal').classList.remove('active')">
+                        ✓ فهمت، شكراً لك!
+                    </button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
     // Boot on DOMContentLoaded or immediately if ready
     function bootMasterShell() {
         createMasterDrawer();
@@ -1103,6 +1249,7 @@
         initHeroDynamicTitleRotator();
         initEmblemParallax();
         updateMuteButtonUI();
+        initPwaInstallEngine();
 
         // Support preview hash trigger for visual audits (immediate invocation)
         if (window.location.hash) {
