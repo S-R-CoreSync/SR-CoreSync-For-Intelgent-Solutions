@@ -819,7 +819,8 @@
         var timeline = '4 - 6 أسابيع';
         var compliance = 'معايير الاتحاد الأوروبي + GDPR';
         var stack = 'Next.js 15 + CoreSync Cloud';
-        var budget = '€4,500 - €8,900  |  18,000 - 35,600 ر.س';
+        var budgetEur = '€4,500 - €8,900';
+        var budgetSar = '18,000 - 35,600 ر.س';
         var roi = '+240% كفاءة تشغيلية وتوفير سنوي';
 
         if (text.includes('متجر') || text.includes('بيع') || text.includes('منتج') || text.includes('تسوق') || text.includes('سلة')) {
@@ -827,37 +828,45 @@
             timeline = '3 - 5 أسابيع';
             compliance = 'EU GDPR + BTW 21% + SEPA/Mollie';
             stack = 'Headless Next.js + CoreSync Commerce';
-            budget = '€3,800 - €7,200  |  15,200 - 28,800 ر.س';
+            budgetEur = '€3,800 - €7,200';
+            budgetSar = '15,200 - 28,800 ر.س';
             roi = '+310% زيادة معدل التحويل والمبيعات';
         } else if (text.includes('سعر') || text.includes('تكلفة') || text.includes('باقة') || text.includes('اشتراك')) {
             classification = 'حزمة التحول الرقمي المؤسسي الشامل';
             timeline = '2 - 4 أسابيع';
             compliance = 'ضمان تكلفة ثابت مع عائد استثماري ROI موثق';
             stack = 'CoreSync Enterprise Sovereign Bundle';
-            budget = '€2,900 - €5,500  |  11,600 - 22,000 ر.س';
+            budgetEur = '€2,900 - €5,500';
+            budgetSar = '11,600 - 22,000 ر.س';
             roi = '+190% خفض تكاليف التشغيل السنوية';
         } else if (text.includes('ذكاء') || text.includes('ai') || text.includes('وكيل') || text.includes('بوت') || text.includes('أتمتة')) {
             classification = 'شبكة وكلاء ذكاء اصطناعي وأتمتة سيادية';
             timeline = '4 - 6 أسابيع';
             compliance = 'Zero Data Leakage + ISO 27001 Cloud';
             stack = 'Autonomous RAG + Private Multi-Agent Swarm';
-            budget = '€5,500 - €11,000  |  22,000 - 44,000 ر.س';
+            budgetEur = '€5,500 - €11,000';
+            budgetSar = '22,000 - 44,000 ر.س';
             roi = '+420% تسريع المهام وأتمتة العمليات';
         } else if (text.includes('نظام') || text.includes('إدارة') || text.includes('erp') || text.includes('مخازن') || text.includes('محاسبة')) {
             classification = 'منظومة CoreSync ERP المؤسسية الشاملة';
             timeline = '6 - 8 أسابيع';
             compliance = 'حوكمة أوروبية + معايير هولندية KvK & Belasting';
             stack = 'PostgreSQL Cluster + CoreSync ERP Core';
-            budget = '€6,500 - €14,000  |  26,000 - 56,000 ر.س';
+            budgetEur = '€6,500 - €14,000';
+            budgetSar = '26,000 - 56,000 ر.س';
             roi = '+350% دقة محاسبية وإدارة متكاملة';
         } else if (text.includes('شحن') || text.includes('توصيل') || text.includes('لوجست') || text.includes('إمداد')) {
             classification = 'شبكة لوجستيات وسلاسل إمداد رقمية';
             timeline = '5 - 7 أسابيع';
             compliance = 'تتبع أساطيل أوروبي + أمان شحنات متقدم';
             stack = 'Dynamic Route AI + Fleet Telematics Engine';
-            budget = '€5,000 - €9,800  |  20,000 - 39,200 ر.س';
+            budgetEur = '€5,000 - €9,800';
+            budgetSar = '20,000 - 39,200 ر.س';
             roi = '+280% تحسين مسارات وتكاليف الشحن';
         }
+
+        var budget = budgetEur + '  |  ' + budgetSar;
+        window.currentEstimateBudgetData = { eur: budgetEur, sar: budgetSar, both: budget };
 
         var qEl = document.getElementById('srEstQueryText');
         var cEl = document.getElementById('srEstClassification');
@@ -1096,6 +1105,45 @@
         }
     }
 
+    // 5.11 Interactive Currency Switcher & Direct WhatsApp Consultation
+    function switchEstimateCurrency(mode, btn) {
+        playHaptic('tap');
+        var bEl = document.getElementById('srEstBudget');
+        if (!bEl || !window.currentEstimateBudgetData) return;
+        if (btn && btn.parentElement) {
+            var siblings = btn.parentElement.querySelectorAll('button');
+            siblings.forEach(function(b) {
+                b.style.background = 'transparent';
+                b.style.borderColor = 'rgba(255,255,255,0.15)';
+                b.style.color = '#f3dfba';
+            });
+            btn.style.background = 'rgba(212,175,55,0.25)';
+            btn.style.borderColor = 'rgba(212,175,55,0.4)';
+            btn.style.color = '#ffffff';
+        }
+        if (mode === 'eur') bEl.textContent = window.currentEstimateBudgetData.eur;
+        else if (mode === 'sar') bEl.textContent = window.currentEstimateBudgetData.sar;
+        else bEl.textContent = window.currentEstimateBudgetData.both;
+    }
+
+    function sendEstimateViaWhatsApp() {
+        playHaptic('open');
+        var query = (document.getElementById('srEstQueryText') || {}).textContent || '';
+        var classification = (document.getElementById('srEstClassification') || {}).textContent || '';
+        var timeline = (document.getElementById('srEstTimeline') || {}).textContent || '';
+        var budget = (document.getElementById('srEstBudget') || {}).textContent || '';
+        
+        var msg = 'مرحباً S&R CoreSync، قمت بتحليل فكرة مشروعي عبر نظامكم الذكي:\n' +
+                  '💡 الفكرة: ' + query + '\n' +
+                  '🏛️ التصنيف: ' + classification + '\n' +
+                  '⏱️ الجدول الزمني: ' + timeline + '\n' +
+                  '💳 الميزانية التقديرية: ' + budget + '\n\n' +
+                  'أرغب في مناقشة تفاصيل التنفيذ وبدء المشروع معكم.';
+                  
+        var url = 'https://wa.me/31618111116?text=' + encodeURIComponent(msg);
+        window.open(url, '_blank');
+    }
+
     // Expose globally to window
     window.setPrompt                 = setPrompt;
     window.analyzeIdea               = analyzeIdea;
@@ -1107,6 +1155,8 @@
     window.openAiEstimatorModal      = openAiEstimatorModal;
     window.closeAiEstimateModal      = closeAiEstimateModal;
     window.exportAiEstimatePdf       = exportAiEstimatePdf;
+    window.switchEstimateCurrency    = switchEstimateCurrency;
+    window.sendEstimateViaWhatsApp   = sendEstimateViaWhatsApp;
     window.toggleHeroVoiceDictation  = toggleHeroVoiceDictation;
     window.toggleSoundMute           = toggleSoundMute;
     window.playHaptic                = playHaptic;
