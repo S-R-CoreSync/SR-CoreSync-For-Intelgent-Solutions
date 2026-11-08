@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تقرير الجرد والتوحيد والتنظيف الشامل — SR-CoreSync</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0f0d; --bg2:#0d1411; --card:#101a15; --line:rgba(197,168,128,.22);
+    --gold:#c5a880; --gold-light:#f3dfba; --gold-dark:#8c734b; --text:#e8e2d6; --muted:#9aa39b;
+    --ok:#4fd1a5; --warn:#e8b45a; --danger:#e88a7a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--bg); color:var(--text); font-family:'Alexandria',sans-serif; line-height:1.9; padding:40px 16px}
+  .wrap{max-width:920px; margin:0 auto}
+  .center{text-align:center}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:28px 30px; margin:22px 0}
+  h1{color:var(--gold-light); font-size:1.9rem; font-weight:800; margin-bottom:6px}
+  h2{color:var(--gold); font-size:1.3rem; font-weight:700; margin:0 0 14px; padding-bottom:10px; border-bottom:1px solid var(--line)}
+  h2::before{content:"◆ "; color:var(--gold-dark)}
+  .badge{display:inline-block; background:rgba(197,168,128,.12); border:1px solid var(--line); color:var(--gold-light); border-radius:999px; padding:4px 16px; font-size:.82rem; margin:3px}
+  .meta{color:var(--muted); font-size:.9rem}
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:.88rem}
+  th{background:rgba(197,168,128,.14); color:var(--gold-light); padding:9px 12px; text-align:right; border:1px solid var(--line); font-weight:600}
+  td{padding:8px 12px; border:1px solid rgba(197,168,128,.12); text-align:right}
+  tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+  .num{font-variant-numeric:tabular-nums; unicode-bidi:plaintext}
+  .big{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:18px 0}
+  .stat{flex:1 1 180px; background:var(--bg2); border:1px solid var(--line); border-radius:14px; padding:18px; text-align:center}
+  .stat b{display:block; font-size:1.7rem; color:var(--gold-light); font-weight:800}
+  .stat span{color:var(--muted); font-size:.82rem}
+  .ok{color:var(--ok)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+  code, .path{font-family:'JetBrains Mono',monospace,monospace; background:rgba(197,168,128,.1); border-radius:6px; padding:2px 8px; font-size:.82em; color:var(--gold-light); unicode-bidi:plaintext}
+  .step{display:flex; gap:14px; margin:12px 0; align-items:flex-start}
+  .step .n{min-width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-dark)); color:#0a0f0d; font-weight:800; display:flex; align-items:center; justify-content:center; margin-top:4px}
+  ul{padding-right:22px} li{margin:6px 0}
+  .divider{height:1px; background:linear-gradient(90deg,transparent,var(--gold-dark),transparent); margin:26px 0}
+  .save{color:var(--ok); font-weight:700}
+  .foot{color:var(--muted); font-size:.8rem; text-align:center; margin-top:30px}
+</style>
+<style>
+    #page #footer-wrapper,
+    .drawing-board .toolbar .toolbar-action,
+    .c-swiper-container,
+    .download_entry,
+    .lang, .copyright,
+    .wwads-cn, .adsbygoogle,
+    #Bottom > div.content > div.inner,
+    #Rightbar .sep20:nth-of-type(5),
+    #Rightbar > div.box:nth-child(4),
+    #Main > div.box:nth-child(8) > div
+    #Wrapper > div.sep20,
+    #Main > div.box:nth-child(8),
+    #masthead-ad,
+    #app > header > div > div.menu,
+    #root > div > div.fixed.top-0.left-0.w-64.h-screen.p-10.pb-0.flex.flex-col.justify-between > div > div.space-y-4 > a:nth-child(3),
+    #app > div.layout > div.main-container > div.side-bar > li.divider,
+    #Rightbar > div:nth-child(6) > div.sidebar_compliance,
+    #__next > div.PageWithSidebarLayout_centeringDiv___L9br > aside > div > div > a.ChatPageFollowTwitterLink_followLink__Gl2tt,
+    #__next > div.PageWithSidebarLayout_centeringDiv___L9br > aside > div > div > a.Button_buttonBase__0QP_m.Button_primary__pIDjn.ChatPageDownloadLinks_downloadButton__amBRh,
+    #__next > div.PageWithSidebarLayout_centeringDiv___L9br > aside > div > div > section a[href*="/contact"],
+    .dc04ec1d .c7f51894 .a1e75851, .a7f3a288 .b91228e4, .efe408db .a24007f4{
+      display: none !important;
+    }
+
+    #app > header .right .avatar.logged-in{
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    #app > header .right .avatar.logged-in:hover{
+      opacity: 1;
+    }
+
+    html::-webkit-scrollbar {
+      display: none !important;
+    }
+
+    #__next .ChatPageSidebar_menuFooter__E1KTY,#__next > div.PageWithSidebarLayout_centeringDiv___L9br > div > aside > div > menu > section:nth-child(6) {
+      display: none;
+    }
+
+    #__next > div.overflow-hidden.w-full.h-full  .min-h-\[20px\].items-start.gap-4.whitespace-pre-wrap.break-words {
+      word-break: break-all;
+    }
+
+    #__next .PageWithSidebarLayout_mainSection__i1yOg {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    #__next > div.PageWithSidebarLayout_centeringDiv___L9br > aside{
+      min-width: 260px;
+    }
+
+    #__next > div.overflow-hidden.w-full.h-full.relative.flex.z-0 > div.relative.flex.h-full.max-w-full.flex-1.overflow-hidden > div > main > div.absolute.left-2.top-2.z-10.hidden.md\:inline-block{
+      margin-top:20px;
+      margin-left: 10px;
+    }
+
+    .a7f3a288.f0d4f23d {
+      padding-top: 34px;
+    }
+
+    .ec92d1d3 {
+      padding-top: 48px;
+    }
+
+    .chakra-ui-light #app .chakra-heading,
+    .chakra-ui-dark #app .chakra-heading,
+    .chakra-ui-light #app .chakra-stack,
+    .chakra-ui-dark #app .chakra-stack,
+    .app-main .sidebar-mouse-in-out,
+    .chakra-modal__content-container .chakra-modal__header > div > div,
+    #__next > div.PageWithSidebarLayout_centeringDiv___L9br > section > header {
+      padding-top: 10px;
+    }
+
+    #__next .overflow-hidden>.hidden.bg-gray-900 span.rounded-md.bg-yellow-200 {
+      display: none;
+    }
+
+    #__next .absolute .px-3.pt-2.pb-3.text-center {
+      visibility: hidden;
+      padding-bottom: 4px;
+    }
+
+    #__next .h-full.w-full .text-center.text-xs.text-gray-600>span {
+      visibility: hidden;
+      height: 15px;
+    }
+
+    #__next > div.overflow-hidden.w-full.h-full.relative.flex > div.dark.hidden.flex-shrink-0.bg-gray-900.md\:flex.md\:w-\[260px\].md\:flex-col > div > div > nav {
+      width: 100%;
+    }
+
+    .panel.give_me .nav_view {
+      top: 164px !important;
+    }
+
+    #Wrapper{
+      background-color: #F8F8F8 !important;
+      background-image:none !important;
+    }
+
+    #Top {
+      border-bottom: none;
+    }
+
+    #global > div.header-container.showSearchBoxOrHeaderFixed > header > div.right > div > div.dropdown-nav{
+      display: none;
+    }
+
+    #__next > div.AnnouncementWrapper_container__Z51yh > div > aside > div > div > menu > section:nth-child(4) > section, #__next > div.AnnouncementWrapper_container__Z51yh > div > aside > div > div > menu > section:nth-child(4){
+      display: none;
+    }
+
+    #react-root [data-testid="placementTracking"] article,
+    #react-root a[href*="quick_promote_web"],
+    #react-root a[href*="/lists"][role="link"][aria-label],
+    #react-root a[href*="/i/communitynotes"][role="link"][aria-label],
+    #react-root a[role="link"][aria-label="Communities"],
+    #react-root a[role="link"][aria-label="Premium"],
+    #react-root a[role="link"][aria-label="SuperGrok"],
+    #react-root a[href*="/i/verified-orgs-signup"][role="link"][aria-label] {
+      display: none !important;
+    }
+
+    #react-root [data-testid="DMDrawer"],
+    #react-root [data-testid="GrokDrawer"],
+    #react-root [data-testid="chat-drawer-root"],
+    #root > main > footer.justify-center.ease-in {
+      visibility: hidden !important;
+    }
+
+    #__next > div.overflow-hidden.w-full.h-full .absolute.bottom-0.left-0.w-full > div.text-center.text-xs {
+      visibility: hidden !important;
+      height: 0px !important;
+    }
+
+    #react-root [data-testid="primaryColumn"] > div > div {
+      position: relative !important;
+    }
+
+    #react-root [data-testid="sidebarColumn"] {
+      visibility: hidden !important;
+      width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      z-index: 1 !important;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      #react-root main[role="main"] {
+        align-items: center !important;
+        overflow-x: clip !important;
+      }
+
+      #react-root [data-testid="primaryColumn"] {
+        width: 700px !important;
+        max-width: 700px !important;
+        margin: 0 auto !important;
+      }
+      #react-root [data-testid="primaryColumn"] > div > div:last-child,
+      #react-root [data-testid="primaryColumn"] > div > div:last-child div {
+        max-width: unset !important;
+      }
+
+      #react-root div[aria-label][role="group"][id^="id__"] {
+        margin-right: 81px !important;
+      }
+
+      #react-root header[role="banner"] {
+        position: fixed !important;
+        left: 0 !important;
+      }
+
+      #react-root header[role="banner"] > div > div > div {
+        justify-content: center !important;
+        padding-top: 0;
+        overflow-x: hidden;
+      }
+
+      #react-root form[role="search"] > div:nth-child(1) > div {
+        background-color: transparent !important;
+      }
+
+      #react-root h1[role="heading"] {
+        padding-top: 4px !important;
+      }
+
+      #react-root header[role="banner"]
+        nav[role="navigation"]
+        *
+        div[dir="auto"]:not([aria-label])
+        > span,
+      #react-root [data-testid="SideNav_AccountSwitcher_Button"] > div:not(:first-child) {
+        display: inline-block !important;
+        opacity: 0 !important;
+        transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      #react-root header[role="banner"]
+        nav[role="navigation"]:hover
+        *
+        div[dir="auto"]:not([aria-label])
+        > span,
+      #react-root [data-testid="SideNav_AccountSwitcher_Button"]:hover > div:not(:first-child) {
+        opacity: 1 !important;
+      }
+      #react-root header[role="banner"] nav[role="navigation"]:hover > * > div {
+        backdrop-filter: blur(12px) !important;
+      }
+      #react-root header[role="banner"] nav[role="navigation"] > a {
+        position: relative;
+      }
+
+      #react-root header[role="banner"] nav[role="navigation"] > a::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: -40px;
+        bottom: 0px;
+        left: 0px;
+      }
+      #react-root [data-testid="SideNav_AccountSwitcher_Button"] {
+        bottom: 18px !important;
+        left: 1px !important;
+      }
+
+      #react-root [data-testid="SideNav_NewTweet_Button"], #react-root [aria-label="Twitter Blue"]{
+        display: none;
+      }
+    }
+
+    @media only screen and (min-width: 1000px) and (max-width: 1264px) {
+      #react-root [data-testid="sidebarColumn"] form[role="search"] {
+        visibility: visible !important;
+        position: fixed !important;
+        top: 12px !important;
+        right: 16px !important;
+      }
+
+      #react-root [data-testid="sidebarColumn"] input[placeholder="Search"] {
+        width: 150px;
+      }
+
+      #react-root [data-testid="sidebarColumn"] form[role="search"]:focus-within {
+        width: 280px !important;
+        backdrop-filter: blur(12px) !important;
+      }
+
+      #react-root [data-testid="sidebarColumn"] input[placeholder="Search"]:focus {
+        width: 234px !important;
+      }
+    }
+
+    @media only screen and (min-width: 1265px) {
+      #react-root [data-testid="sidebarColumn"] form[role="search"] {
+        visibility: visible !important;
+        position: fixed !important;
+        top: 12px !important;
+        right: 16px !important;
+      }
+
+      #react-root [data-testid="sidebarColumn"] input[placeholder="Search"] {
+        width: 150px;
+      }
+
+      #react-root [data-testid="sidebarColumn"] form[role="search"]:focus-within {
+        width: 374px !important;
+        backdrop-filter: blur(12px) !important;
+      }
+
+      #react-root [data-testid="sidebarColumn"] input[placeholder="Search"]:focus {
+        width: 328px !important;
+      }
+
+      #react-root div[style*="left: -12px"] {
+        left: unset !important;
+      }
+
+      #react-root div[style="left: -8px; width: 306px;"] {
+        left: unset !important;
+        width: 374px !important;
+      }
+
+      #react-root .searchFilters {
+        visibility: visible !important;
+        position: fixed;
+        top: 12px;
+        right: 16px;
+        width: 240px;
+      }
+      #react-root .searchFilters > div > div:first-child {
+        display: none;
+      }
+    }
+
+    @media (min-width:1280px){
+      #__next .text-base.xl\:max-w-3xl, #__next form.stretch.xl\:max-w-3xl {
+        max-width: 48rem;
+      }
+    }
+
+    #__next .prose ol li p {
+      margin: 0;
+      display: inline;
+    }
+
+    .AppHeader .AppHeader-globalBar.js-global-bar {
+      padding-top: 35px;
+    }
+
+    .header-overlay .header-logged-out {
+      margin-top: 15px;
+    }
+
+    .w-full #stage-slideover-sidebar {
+      padding-top: 16px;
+    }
+    .w-full #thread #page-header {
+      padding-top: 36px;
+    }
+  </style><style>/**
+ * Z.ai Desktop - Custom Styles
+ * Amélioration de l'interface sans barre de titre custom
+ */
+
+/* ============================================
+   CACHER LA BARRE DE NAVIGATION DU SITE
+   ============================================ */
+
+/* Cacher la barre de navigation de z.ai si présente */
+header,
+.nav-header,
+.top-header,
+.app-header,
+.page-header,
+[class*="header"]:not([class*="chat"]):not([class*="message"]),
+[id*="header"]:not([id*="chat"]):not([id*="message"]),
+.navbar,
+.top-nav,
+.app-nav,
+.main-header,
+[role="banner"] {
+  display: none !important;
+}
+
+/* ============================================
+   SCROLLBAR STYLÉE
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.25);
+}
+
+/* ==========================================
+   MODE SOMBRE
+   ========================================== */
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.15);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.25);
+  }
+}
+</style><style id="pake-fullscreen-style">
+      body.pake-fullscreen-active {
+        overflow: hidden !important;
+      }
+      .pake-fullscreen-element {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        z-index: 2147483647 !important;
+        background: #000 !important;
+        object-fit: contain !important;
+      }
+      .pake-fullscreen-element video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+      }
+    </style></head>
+<body class="zai-enhanced" style="padding-top: 38px;">
+<div class="wrap">
+
+  <div class="card center">
+    <div style="font-size:2.2rem; margin-bottom:8px">🧹</div>
+    <h1>تقرير الجرد والتوحيد والتنظيف الشامل</h1>
+    <p class="meta">S&amp;R CoreSync For Intelligent Solutions — المستودع السيادي</p>
+    <div style="margin-top:12px">
+      <span class="badge">الأحد، 08 نوفمبر 2026 — الساعة 02:22 مساءً (توقيت أمستردام)</span>
+      <span class="badge">الإنجاز 160</span>
+      <span class="badge">بيئة ZaiChat Desktop (لينكس)</span>
+      <span class="badge">الحالة: منفَّذ ومُختبر على نسخة تحقق كاملة ✅</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>الملخص التنفيذي بالأرقام</h2>
+    <div class="big">
+      <div class="stat"><b class="num">1502 ← 1437</b><span>عدد الملفات (−65)</span></div>
+      <div class="stat"><b class="num">424 ← 388 MB</b><span>حجم المستودع (<span class="save">−36 MB</span>)</span></div>
+      <div class="stat"><b class="num">66</b><span>ملفاً حُذف أو وُحِّد</span></div>
+      <div class="stat"><b class="ok">0</b><span>مرجعيات مكسورة بعد التنفيذ</span></div>
+    </div>
+    <p>فحصنا المستودع كاملاً (كل الأنواع والمجلدات، 817 ملفاً نصياً لحظة الفحص)، فاكتشفنا <b>29 مجموعة تكرار كامل</b> (بمطابقة SHA-256 حرفية) تُهدر 25MB، و<b>79 أصلاً بصرياً يتيمًا</b> بلا أي مرجع (62.9MB)، و<b>26 ملف CSS متطابق حرفياً</b> موزعة على الصفحات اللغوية، وملفات اختبار متروكة في الجذر. نفَّذنا التنظيف على مستويين آمنين، وأبقينا كل ما هو مرجعي أو مطلوب لسير عملك.</p>
+  </div>
+
+  <div class="card">
+    <h2>منهجية الأمان الرباعية (لماذا هذه النتيجة موثوقة)</h2>
+    <div class="step"><div class="n">1</div><div><b>التكرار بالبصمة:</b> مقارنة SHA-256 لكل ملف — لا تُحسب "مكررة" إلا المتطابقة حرفياً بايتاً بايت.</div></div>
+    <div class="step"><div class="n">2</div><div><b>المرجعية بالمطابقة الكاملة للمسار:</b> لا يُحذف ملف إلا إذا لم يذكره أي ملف تشغيل (HTML/JS/CSS/JSON/YML/VCF) ولا بسياق مجلده، حتى لا يُحذف الملف الصحيح لأن توأمه مُشار إليه.</div></div>
+    <div class="step"><div class="n">3</div><div><b>الفحص الديناميكي:</b> بحث عن جذوع الأسماء داخل الكود لصدّ الاستدعاءات المبنية برمجياً مثل <code>${brandId}-brand-kit.zip</code> — هذا الفحص أنقذ حزم brand-kits ومكتبة <code>social-8k-branding</code> كاملة (المستخدمة من محرك الحملات المجدولة ومن الكونسيرج) من حذف كان سيبدو منطقياً لكنه كان سيكسر الموقع.</div></div>
+    <div class="step"><div class="n">4</div><div><b>التحقق اللحظي داخل السكربت:</b> عند التشغيل على جهازك يعيد الفحص من جديد قبل كل حذف فردي، فإذا تغيّرت الحالة (ملف أصبح مرجعياً) يُتخطى مع تحذير تلقائياً.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>المستوى 1 — الملفات الميتة المؤكدة (28 ملفاً — <span class="save">30.24MB</span>)</h2>
+    <table>
+      <tbody><tr><th>الفئة</th><th>عدد</th><th>الحجم</th><th>ملاحظة</th></tr>
+      <tr><td>لقطات اختبار في الجذر <code>live_*.png</code></td><td class="num">8</td><td class="num">6.0MB</td><td>بقايا جلسات تصوير، واحدة فقط كانت مرجعية وأُبقيت</td></tr>
+      <tr><td>نسخ فيديو/ويب زائدة للمؤسسين <code>*-animated/lite/ultra</code></td><td class="num">6</td><td class="num">16.2MB</td><td>كل الصفحات اللغوية (29) تستخدم <code>about-founder-cinematic-opt.mp4</code> فقط</td></tr>
+      <tr><td>نسخ JPG الميتة لصور الخدمات</td><td class="num">6</td><td class="num">4.4MB</td><td>الصفحات تستخدم توائم <code>.webp</code> — تحققنا أنها سليمة ومرجعية</td></tr>
+      <tr><td>نسخ يتيمة في <code>assets/i18n/intl/</code></td><td class="num">4</td><td class="num">2.9MB</td><td>لصور المؤسسين والشعار الذهبي وOG — المرجعية منها في <code>assets/</code></td></tr>
+      <tr><td>لقطات هيرو قديمة + <code>debug_layout.js</code> + سكربت تصوير مكرر</td><td class="num">4</td><td class="num">0.8MB</td><td>بقايا تطوير بلا أي مرجع</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="card">
+    <h2>المستوى 2 — التوحيد (38 عملياً — <span class="save">7.99MB</span>)</h2>
+    <h2 style="font-size:1.05rem; border:none; padding:0; margin-bottom:8px">أ) توحيد CSS المتطابق حرفياً</h2>
+    <p>26 ملفاً من <code>css/inline-*.css</code> أتضح أنها نسخ متطابقة بايتاً بايت في مجموعتين: <b>24 نسخة واحدة</b> و<b>نسختين (de/en)</b>. استُبدلت بـ <code>css/inline-shared.css</code> + <code>css/inline-de.css</code>، مع تعديل روابط 26 صفحة لغوية <b>تعديلاً بايتياً</b> يحافظ على نهايات الأسطر الأصلية دون أي مساس. فحص بعد التنفيذ: صفر روابط مكسورة، الصفحات تعمل بالمحتوى نفسه حرفياً.</p>
+    <h2 style="font-size:1.05rem; border:none; padding:0; margin:14px 0 8px">ب) حذف النسخ المكررة (الرسمية باقية في <code>downloads/</code>)</h2>
+    <table>
+      <tbody><tr><th>النسخة المحذوفة من assets/</th><th>عدد</th><th>المرجعية الرسمية الباقية</th></tr>
+      <tr><td><code>assets/brand-kits/*.zip</code> (5 علامات)</td><td class="num">5</td><td><code>downloads/brand-kits/</code> — يبنيها فحص البراند ديناميكياً</td></tr>
+      <tr><td><code>assets/nfc-print-card-*.png</code></td><td class="num">4</td><td><code>downloads/nfc-print-card-*.png</code></td></tr>
+      <tr><td>أفاتارا المؤسسين بصيغ jpg/webp في <code>universal/</code></td><td class="num">4</td><td>نسخ PNG الأصلية (المانيفست والحملات تستخدم PNG فقط)</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="card">
+    <h2>أبرز ما <span class="ok">أُبقي</span> عليه ولماذا (قرارات الفحص الديناميكي)</h2>
+    <table>
+      <tbody><tr><th>الأصل</th><th>سبب الإبقاء</th></tr>
+      <tr><td><code>assets/social-8k-branding/</code> كاملاً</td><td>يستدعيه الكونسيرج مباشرة + <code>campaign_schedule.json</code> + مانيفست الحملات المُجدولة عبر <code>social_campaign_dispatcher.py</code></td></tr>
+      <tr><td><code>downloads/brand-kits/</code> الخمس</td><td>يبنيها <code>js/sr-brand-inspector.js</code> ديناميكياً وروابط بوابة الزبائن تشير إليها</td></tr>
+      <tr><td><code>apply_updates.bat/.sh</code> + الملفات العربية (.bat/.url/.pdf)</td><td>أدواتك الشخصية للتزامن والنشر — منها <code>apply_updates.bat</code> التي تُطبق حزم full_files</td></tr>
+      <tr><td><code>sync.sh</code> + <code>GEMINI.md</code> + <code>task.md</code> + <code>walkthrough.md</code> + <code>worklog.md</code></td><td>عمود بروتوكول مزامنة البيئات الثلاث الذي سنعمل به</td></tr>
+      <tr><td><code>demo.html</code> و<code>card.html</code> و<code>SR-CoreSync.vcf</code></td><td>مرجعية من 154 و45 و31 صفحة على التوالي</td></tr>
+      <tr><td>ملفات <code>sr_*.py</code> في الجذر</td><td>نواة الخدمات الخلفية (RAG، المصادقة، الجلسات، التنبيهات)</td></tr>
+      <tr><td>ملف <code>28e2de90...txt</code></td><td>يقرأه <code>scripts/publish_set.py</code> — نقطة تحقق النشر</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="card">
+    <h2>المستوى 3 — قرارات بانتظارك (لم تُنفَّذ، تحتاج رأيك)</h2>
+    <ul>
+      <li><b>مجلد <code>scripts/archive/</code></b> — 69 ملفاً (30 بايثون + 39 باورشيل) أرشيف صريح. الحذف متاح في السكربت بـ <code>--tier3</code>.</li>
+      <li><b>أدوات <code>scripts/</code></b> — 224 ملف بايثون لأدوات التطوير. لا تخدم الموقع المنشور لكنها تاريخك التشغيلي؛ أقترح إبقاءها الآن ونقلها لاحقاً لمستودع أدوات مستقل.</li>
+      <li><b>الأيقونة 8K:</b> 50 صفحة تستخدم شعاراً بحجم 7MB كـ favicon — توصية: توليد أيقونة 256px وتوحيد الروابط (توفير ~7MB وتسريع شامل).</li>
+      <li><b>صور OG الخمس المتطابقة:</b> يمكن توحيدها في واحدة (توفير ~1.5MB) بتعديل 5 وسوم meta.</li>
+      <li><b>أزواج الشعار الرسمي (official/hd/intl):</b> ثلاث نسخ متطابقة لكن كلها مرجعية (54 صفحة لغوية) — توحيد مستقبلي يحتاج إعادة توجيه 54 مرجعاً.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>التوصية الكبرى للمرحلة القادمة</h2>
+    <p>المستودع ما زال <b>388MB</b> والسبب الرئيسي الصور: <span class="num">285 JPG (194MB) + 112 PNG (103MB) + 224 WEBP (95MB)</span>. أقترح مرحلة <b>«ضغط بصري سيادي»</b> مستقبلاً: تحويل JPG→WEBP تدريجياً مع إعادة توجيه المرجعيات، وتقدير التوفير <span class="num">150–200MB</span> دون أي خسارة بصرية ملحوظة. سأجهز أدواتها كي تُطبَّق بنفس المنهجية الآمنة عند طلبك.</p>
+  </div>
+
+  <div class="card">
+    <h2>📍 بطاقة المسار والطريقة (طبقها على جهازك)</h2>
+    <div class="step"><div class="n">1</div><div>نزّل الملف <code>cleanup_sr_coresync.py</code> من مجلد التسليم هنا، وضعه في <b>جذر مشروعك</b> — أي داخل: <code>D:\I-Ai\App\S&amp;R CoreSync For Intelligent Solutions\Project</code> (بجانب <code>index.html</code> و<code>task.md</code> مباشرة، وليس داخل أي مجلد فرعي).</div></div>
+    <div class="step"><div class="n">2</div><div>افتح CMD أو PowerShell داخل هذا المجلد وشغّل أولاً <b>الوضع التجريبي</b>: <code>python cleanup_sr_coresync.py --tier2</code> — سيعرض كل ما سيفعله دون حذف أي شيء.</div></div>
+    <div class="step"><div class="n">3</div><div>إن اقتنعته، شغّل التنفيذ: <code>python cleanup_sr_coresync.py --tier2 --apply</code> — سيحذف الملفات، ويعيد فحص المرجعيات لحظياً قبل كل حذف، ويحدّث <code>task.md</code> و<code>walkthrough.md</code> و<code>worklog.md</code> تلقائياً بحسب بروتوكول <code>GEMINI.md</code>.</div></div>
+    <div class="step"><div class="n">4</div><div>ثم الرفع للبيئات الثلاث: <code>git add -A</code> ثم <code>git commit -m "chore: الإنجاز 160 — التنظيف الشامل"</code> ثم <code>git push</code> — أو استخدم أداة <code>نشر_تلقائي_إلى_GitHub_Pages.bat</code> لديك.</div></div>
+    <div class="step"><div class="n">5</div><div>إن أردت حذف أرشيف السكربتات القديمة أيضاً: <code>python cleanup_sr_coresync.py --tier2 --tier3 --apply</code> (اختياري).</div></div>
+    <p style="margin-top:10px" class="meta">ملاحظة أمان: وضع التجريبي هو الافتراضي دائماً. أي حذف يُعاد فحص مرجعياته لحظة التنفيذ، وإن تغيّر شيء منذ اليوم يُتخطى تلقائياً مع تحذير.</p>
+  </div>
+
+  <div class="card">
+    <h2>التزامي ببروتوكول البيئات الثلاث (GEMINI.md)</h2>
+    <ul>
+      <li>✅ القاعدة 3: اقتراحات عملية أدناه.</li>
+      <li>✅ القاعدة 4: تحديث السجلات الثلاثة مدمج في السكربت نفسه عند التنفيذ.</li>
+      <li>✅ القاعدة 6: هذا التقرير RTL منسق ومتمركز.</li>
+      <li>✅ القاعدة 7: عمل تقني حصراً + لا خطط معلقة (المستوى 3 بلا قرارك لن يُنفَّذ).</li>
+      <li>⏳ القاعدة 1 (لقطة حية): التحقق تم فنياً على 1583 مرجعاً محلياً في 9 صفحات — عند تشغيلك السكربت محلياً يمكنني التقاط لقطات حية فور دمجها على GitHub.</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+  <p class="foot">SR-CoreSync — تقرير الإنجاز 160 — وُلِّد في بيئة ZaiChat Desktop وفق بروتوكول المزامنة الثلاثية</p>
+</div>
+
+
+<div id="pake-top-dom"></div></body></html>
