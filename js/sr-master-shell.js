@@ -31,10 +31,7 @@
         { id: 'ip_nda', title: 'محرك عقود الملكية الفكرية وNDA', num: '20 /', url: './ip-nda-smart-contract.html', tag: 'عقود 📜' },
         { id: 'executive_id', title: 'استوديو الهويات الرقمية التنفيذية 3D', num: '21 /', url: './executive-digital-id.html', tag: 'هويات 🪪' },
         { id: '3d_configurator', title: 'محرك تخصيص المنتجات الفاخرة 3D', num: '22 /', url: './3d-product-configurator.html', tag: 'منتجات 3D 💎' },
-        { id: 'dynamic_qr', title: 'استوديو أكواد QR الديناميكية المشفرة', num: '23 /', url: './dynamic-qr-studio.html', tag: 'QR ذكي 📲' },
-        { id: 'tech_matrix', title: 'بوابة مصفوفة المقارنات الفنية والتقنية', num: '24 /', url: './tech-matrix.html', tag: 'مقارنات ⚖️' },
-        { id: 'lottie_studio', title: 'استوديو الرسوم المتحركة والتفاعلات الدقيقة Lottie', num: '25 /', url: './lottie-studio.html', tag: 'أنيميشن ✨' },
-        { id: 'perf_audit', title: 'استوديو تدقيق سرعة وأداء الويب Core Web Vitals', num: '26 /', url: './perf-audit.html', tag: 'أداء ⚡' }
+        { id: 'dynamic_qr', title: 'استوديو أكواد QR الديناميكية المشفرة', num: '23 /', url: './dynamic-qr-studio.html', tag: 'QR ذكي 📲' }
     ];
 
     // 2. Universal Typography Scale Controller (A+ / A- Persistent Engine)
