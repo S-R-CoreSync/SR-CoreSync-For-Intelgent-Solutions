@@ -33,6 +33,15 @@ const CRITICAL_ASSETS = [
 // One entry per resource: './en/' and './en/index.html' are the same document,
 // so only the explicit file is listed.
 const SECONDARY_ASSETS = [
+  './tech-matrix.html',
+  './lottie-studio.html',
+  './perf-audit.html',
+  './js/tech-matrix.js',
+  './js/lottie-studio.js',
+  './js/lottie.min.js',
+  './js/perf-audit.js',
+  './js/web-vitals.min.js',
+  './js/sr-social-card-engine.js',
   './card.html',
   './social-8k-studio.html',
   './en/index.html',

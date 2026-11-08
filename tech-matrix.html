@@ -6,6 +6,7 @@
     <title>بوابة مصفوفة المقارنات الفنية والتقنية • S&R CoreSync</title>
     <meta name="description" content="استوديو تفاعلي عالي التحويل لمقارنة الأنظمة البرمجية وحلول الذكاء الاصطناعي مع تمييز الفروقات وحاسبة التوفير وتصدير تقرير تنفيذي.">
     <link rel="icon" type="image/svg+xml" href="./assets/sr-core-emblem.svg?v=sovereign2026">
+    <link rel="manifest" href="./manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -269,6 +270,64 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(197, 168, 128, 0.45);
         }
+
+        /* AI Advisor Modal */
+        .sr-advisor-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(3, 8, 6, 0.88);
+            backdrop-filter: blur(14px);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 10040;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.25s ease;
+            padding: 20px;
+            direction: rtl;
+        }
+        .sr-advisor-overlay.active { opacity: 1; pointer-events: auto; }
+        .sr-advisor-card {
+            background: linear-gradient(135deg, rgba(8, 22, 16, 0.98), rgba(4, 10, 8, 0.98));
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 18px;
+            width: 100%; max-width: 680px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(16, 185, 129, 0.15);
+            overflow: hidden;
+            transform: translateY(20px);
+            transition: transform 0.25s ease;
+        }
+        .sr-advisor-overlay.active .sr-advisor-card { transform: translateY(0); }
+        .sr-advisor-header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 18px 24px;
+            background: rgba(13, 34, 26, 0.7);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+        }
+        .sr-advisor-body { padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+        .advisor-step-title { font-size: 0.92rem; font-weight: 700; color: var(--sr-gold-light); margin-bottom: 6px; }
+        .advisor-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+        .advisor-option-btn {
+            background: rgba(8, 20, 15, 0.8);
+            border: 1px solid var(--sr-border);
+            color: #cbd5e1;
+            padding: 12px; border-radius: 10px;
+            text-align: right; font-family: inherit; font-size: 0.85rem; font-weight: 600;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .advisor-option-btn:hover, .advisor-option-btn.selected {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.15);
+            color: #f8fafc;
+        }
+        .advisor-result-card {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .advisor-result-card.active { display: flex; }
     </style>
 </head>
 <body>
@@ -307,6 +366,7 @@
                 </select>
                 <button type="button" class="btn-toggle-diff" id="btnDiff" onclick="TechMatrix.toggleDiff()">🔍 تمييز الفروقات فقط</button>
                 <button type="button" class="btn-toggle-diff" onclick="TechMatrix.openSocialCard()">📢 بطاقة المشاركة الاجتماعية</button>
+                <button type="button" class="btn-toggle-diff" style="background:rgba(16, 185, 129, 0.15); border:1px solid #10b981; color:#10b981; font-weight:800;" onclick="TechMatrix.openAdvisor()">🤖 مستشار الـ AI للباقات</button>
             </div>
             <div>
                 <button type="button" class="btn-export-matrix" onclick="TechMatrix.exportPDF()">📄 تصدير تقرير المقارنة كـ PDF</button>
@@ -329,6 +389,53 @@
             </div>
             <div id="costSavings" class="savings-val">€ 14,800 / سنوياً</div>
         </section>
+
+        <!-- AI Advisor Modal -->
+        <div id="srAdvisorModal" class="sr-advisor-overlay" role="dialog" aria-modal="true" aria-label="مستشار الذكاء الاصطناعي للباقات">
+            <div class="sr-advisor-card">
+                <div class="sr-advisor-header">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="font-size:1.4rem;">🤖</span>
+                        <h3 style="margin:0; font-size:1.1rem; color:var(--sr-gold-light); font-weight:800;">
+                            مستشار الذكاء الاصطناعي لاختيار الباقة الأمثل
+                        </h3>
+                    </div>
+                    <button type="button" class="sr-social-close-btn" onclick="TechMatrix.closeAdvisor()">✕</button>
+                </div>
+                <div class="sr-advisor-body">
+                    <div>
+                        <div class="advisor-step-title">1. ما هو حجم مؤسستكم وعدد المستخدمين؟</div>
+                        <div class="advisor-options-grid">
+                            <button type="button" class="advisor-option-btn selected" data-type="size" data-val="startup" onclick="TechMatrix.selectAdvisorOption(this)">🚀 ناشئة (1 - 10 مستخدمين)</button>
+                            <button type="button" class="advisor-option-btn" data-type="size" data-val="mid" onclick="TechMatrix.selectAdvisorOption(this)">🏢 متوسطة (10 - 50 مستخدماً)</button>
+                            <button type="button" class="advisor-option-btn" data-type="size" data-val="enterprise" onclick="TechMatrix.selectAdvisorOption(this)">🏛️ سيادية (50+ مستخدماً)</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="advisor-step-title">2. ما هي الأولوية الهندسية الأكثر أهمية لمشروعكم؟</div>
+                        <div class="advisor-options-grid">
+                            <button type="button" class="advisor-option-btn selected" data-type="priority" data-val="cloud" onclick="TechMatrix.selectAdvisorOption(this)">☁️ تحكم وإدارة سحابية</button>
+                            <button type="button" class="advisor-option-btn" data-type="priority" data-val="ai" onclick="TechMatrix.selectAdvisorOption(this)">🧠 محركات الـ AI المتقدمة</button>
+                            <button type="button" class="advisor-option-btn" data-type="priority" data-val="erp" onclick="TechMatrix.selectAdvisorOption(this)">📊 تكامل ERP ومحاسبة كاملة</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-export-matrix" style="width:100%; justify-content:center;" onclick="TechMatrix.calcRecommendation()">
+                        ✨ تحليل وتوليد التوصية الذكية الفورية
+                    </button>
+                    <div id="advisorResultCard" class="advisor-result-card">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <strong id="advisorRecTitle" style="color:#10b981; font-size:1.1rem;"></strong>
+                            <span id="advisorRecScore" style="background:#10b981; color:#030806; font-size:0.78rem; font-weight:800; padding:3px 10px; border-radius:999px;"></span>
+                        </div>
+                        <p id="advisorRecReason" style="font-size:0.86rem; color:#cbd5e1; margin:4px 0;"></p>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+                            <span id="advisorRecSavings" style="font-size:0.85rem; color:var(--sr-gold-light); font-weight:bold;"></span>
+                            <button type="button" class="btn-toggle-diff active" style="font-size:0.82rem; padding:6px 14px;" onclick="TechMatrix.applyAdvisorPlan()">✓ اعتماد وتحديد هذه الباقة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="js/tech-matrix.js"></script>

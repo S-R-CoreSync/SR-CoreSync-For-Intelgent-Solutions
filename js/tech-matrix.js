@@ -220,6 +220,80 @@ const TechMatrix = {
     });
   },
 
+  openAdvisor() {
+    const modal = $('#srAdvisorModal');
+    if (modal) modal.classList.add('active');
+  },
+
+  closeAdvisor() {
+    const modal = $('#srAdvisorModal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  selectAdvisorOption(el) {
+    const type = el.dataset.type;
+    const parent = el.parentElement;
+    parent.querySelectorAll('.advisor-option-btn').forEach(btn => btn.classList.remove('selected'));
+    el.classList.add('selected');
+  },
+
+  advisorRecommendation: null,
+
+  calcRecommendation() {
+    const selectedSize = document.querySelector('.advisor-option-btn.selected[data-type="size"]')?.dataset.val || 'startup';
+    const selectedPriority = document.querySelector('.advisor-option-btn.selected[data-type="priority"]')?.dataset.val || 'cloud';
+
+    let planKey = 'startup';
+    let planName = 'CoreSync Starter • انطلاقة سحابية';
+    let matchScore = 95;
+    let reason = 'توصية مثالية للمشاريع الناشئة لبناء بنية سحابية متينة بأقل تكلفة مع دعم التوسع المستقبلي.';
+    let savings = 'توفير سنوي مباشر يقدر بـ € 4,800';
+
+    if (selectedSize === 'enterprise' || selectedPriority === 'erp') {
+      planKey = 'enterprise';
+      planName = 'CoreSync Enterprise • باقة سيادية متكاملة';
+      matchScore = 99;
+      reason = 'المؤسسات ذات المتطلبات المتقدمة والربط المالي الشامل تحتاج منظومة ERP متكاملة مع استجابة Edge فائقة ودعم 24/7.';
+      savings = 'توفير سنوي استثماري يقدر بـ € 18,200';
+    } else if (selectedSize === 'mid' || selectedPriority === 'ai') {
+      planKey = 'mid';
+      planName = 'CoreSync Business • منظومة الشركات';
+      matchScore = 97;
+      reason = 'توازن هندسي رائد يدمج محركات تحليل الذكاء الاصطناعي مع الأداء السحابي السريع والتكامل المؤسسي.';
+      savings = 'توفير سنوي مباشر يقدر بـ € 9,600';
+    }
+
+    this.advisorRecommendation = { planKey, planName };
+
+    const resultCard = $('#advisorResultCard');
+    const recTitle = $('#advisorRecTitle');
+    const recScore = $('#advisorRecScore');
+    const recReason = $('#advisorRecReason');
+    const recSavings = $('#advisorRecSavings');
+
+    if (recTitle) recTitle.textContent = planName;
+    if (recScore) recScore.textContent = `نسبة المطابقة: ${matchScore}%`;
+    if (recReason) recReason.textContent = reason;
+    if (recSavings) recSavings.textContent = savings;
+    if (resultCard) resultCard.classList.add('active');
+  },
+
+  applyAdvisorPlan() {
+    if (!this.advisorRecommendation) return;
+    const filterEl = $('#sizeFilter');
+    if (filterEl) {
+      filterEl.value = this.advisorRecommendation.planKey;
+      this.filterBySize();
+    }
+    this.closeAdvisor();
+    const table = $('#matrixTable');
+    if (table) {
+      table.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      table.style.boxShadow = '0 0 35px rgba(16, 185, 129, 0.5)';
+      setTimeout(() => { table.style.boxShadow = ''; }, 2500);
+    }
+  },
+
   exportPDF() {
     const printWin = window.open('', '_blank');
     if (!printWin) {

@@ -92,6 +92,32 @@
           "type": "image/png"
         }
       ]
+    },
+    {
+      "name": "مصفوفة المقارنات التقنية",
+      "short_name": "مقارنات",
+      "description": "استوديو مقارنة الأنظمة وحاسبة التوفير",
+      "url": "./tech-matrix.html",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "استوديو فحص الأداء والسرعة",
+      "short_name": "فاحص الأداء",
+      "description": "قياس مؤشرات Core Web Vitals",
+      "url": "./perf-audit.html",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
