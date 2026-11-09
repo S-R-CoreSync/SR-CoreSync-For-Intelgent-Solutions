@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Ekip veya Çalışan Sayısı:",
     "Technical & Systems Architecture": "Teknik ve Sistem Mimarisi",
     "Technical Support Response Times": "Teknik Destek Yanıt Süreleri",
-    "Test Interactive Software Simulator ⚡": "Etkileşimli Yazılım Simülatörünü Test Et ⚡"
+    "Test Interactive Software Simulator ⚡": "Etkileşimli Yazılım Simülatörünü Test Et ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Yıllık Geri Kazanılan Toplam İş Saati:",
+    "Total Due (Incl. BTW 21%):": "Toplam Tutar (BTW %21 dahil):",
+    "Trained conversational AI indexed on corporate documentation": "Kurumsal dokümantasyon üzerinde indekslenmiş, eğitilmiş konuşma AI'sı",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Kurumsal Liderler ve Şirket Grupları Tarafından Tercih Ediliyor",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K ve Egemen Hassasiyet",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "CPU, bellek ve veritabanı bağlantı havuzlarını izleyen ve otomatik kurtarma uygulayan ultra hafif microservice daemon'u.",
+    "Unlimited + Global Anycast CDN": "Sınırsız + Küresel Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Sınırsız ürün kataloğu ve akıllı taksonomi filtreleme",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "AB GDPR düzenlemeleri kapsamında gizliliğinize saygı duyuyoruz. Kesinlikle sıfır spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS ve Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Web Sitesi Tasarımı ve Optimizasyonu",
+    "White-Label License / Bakery": "White-Label Lisans / Fırın",
+    "White-Label License / Clinic": "White-Label Lisans / Klinik",
+    "White-Label License / Org": "White-Label Lisans / Kurum",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 Dakika İçinde (7/24/365 Doğrudan Hat)",
+    "Within 24 Hours (Support Tickets)": "24 Saat İçinde (Destek Talepleri)",
+    "Within 4 Hours (Email + WhatsApp)": "4 Saat İçinde (E-posta + WhatsApp)",
+    "Your Genuine Digital License Key:": "Gerçek Dijital Lisans Anahtarınız:"
   }
 }

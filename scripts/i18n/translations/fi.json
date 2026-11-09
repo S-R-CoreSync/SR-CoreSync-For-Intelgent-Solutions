@@ -1,6 +1,6 @@
 {
   "language": "fi",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ei CoreSync-jälkeä)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Tiimin tai työntekijöiden määrä:",
     "Technical & Systems Architecture": "Tekninen arkkitehtuuri ja järjestelmäarkkitehtuuri",
     "Technical Support Response Times": "Teknisen tuen vasteajat",
-    "Test Interactive Software Simulator ⚡": "Testaa interaktiivista ohjelmistosimulaattoria ⚡"
+    "Test Interactive Software Simulator ⚡": "Testaa interaktiivista ohjelmistosimulaattoria ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Vuosittain takaisin saadut työtunnit yhteensä:",
+    "Total Due (Incl. BTW 21%):": "Maksettava yhteensä (sis. BTW 21 %):",
+    "Trained conversational AI indexed on corporate documentation": "Koulutettu keskusteleva AI, indeksoitu yritysdokumentaatioon",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Yritysjohtajien ja yritysryhmien luottama",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K ja suvereeni tarkkuus",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Erittäin kevyt microservices-daemon, joka seuraa CPU:ta, muistia ja tietokantayhteyspooleja ja suorittaa automaattisen palautuksen.",
+    "Unlimited + Global Anycast CDN": "Rajaton + maailmanlaajuinen Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Rajaton tuotekuvasto ja älykäs taksonominen suodatus",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Kunnioitamme yksityisyyttäsi EU:n GDPR:n mukaisesti. Ehdottomasti nolla roskapostia.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS ja Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Verkkosivuston suunnittelu ja optimointi",
+    "White-Label License / Bakery": "White-label-lisenssi / leipomo",
+    "White-Label License / Clinic": "White-label-lisenssi / klinikka",
+    "White-Label License / Org": "White-label-lisenssi / organisaatio",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 minuutissa (24/7/365 suora linja)",
+    "Within 24 Hours (Support Tickets)": "24 tunnissa (tukipyynnöt)",
+    "Within 4 Hours (Email + WhatsApp)": "4 tunnissa (sähköposti + WhatsApp)",
+    "Your Genuine Digital License Key:": "Aito digitaalinen lisenssiavain:"
   }
 }

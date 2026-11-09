@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Csapattagok vagy alkalmazottak száma:",
     "Technical & Systems Architecture": "Technikai és rendszerarchitektúra",
     "Technical Support Response Times": "Technikai támogatás válaszidői",
-    "Test Interactive Software Simulator ⚡": "Interaktív szoftverszimulátor kipróbálása ⚡"
+    "Test Interactive Software Simulator ⚡": "Interaktív szoftverszimulátor kipróbálása ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Összes visszanyert éves munkaóra:",
+    "Total Due (Incl. BTW 21%):": "Fizetendő összesen (BTW 21%-kal együtt):",
+    "Trained conversational AI indexed on corporate documentation": "Vállalati dokumentációra indexelt, betanított társalgási AI",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Vállalati vezetők és cégcsoportok bizalmával",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K és szuverén pontosság",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Ultrakönnyű microservices daemon, amely figyeli a CPU-t, a memóriát és az adatbázis-kapcsolat poolokat, és automatikus helyreállítást hajt végre.",
+    "Unlimited + Global Anycast CDN": "Korlátlan + globális Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Korlátlan termékkatalógus és intelligens taxonómiai szűrés",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Tiszteletben tartjuk adatvédelemét az EU GDPR rendelkezései szerint. Szigorúan nulla spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS és Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Weboldal-tervezés és optimalizálás",
+    "White-Label License / Bakery": "White-label licenc / pékség",
+    "White-Label License / Clinic": "White-label licenc / klinika",
+    "White-Label License / Org": "White-label licenc / szervezet",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 percen belül (24/7/365 közvetlen vonal)",
+    "Within 24 Hours (Support Tickets)": "24 órán belül (támogatási jegyek)",
+    "Within 4 Hours (Email + WhatsApp)": "4 órán belül (e-mail + WhatsApp)",
+    "Your Genuine Digital License Key:": "Az Ön hiteles digitális licenckulcsa:"
   }
 }

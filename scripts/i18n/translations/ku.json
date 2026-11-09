@@ -1,6 +1,6 @@
 {
   "language": "ku",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Hejmara Tîm an Karmendan:",
     "Technical & Systems Architecture": "Mîmariya Teknîkî û Sîstemê",
     "Technical Support Response Times": "Demên Bersivdana Piştgiriya Teknîkî",
-    "Test Interactive Software Simulator ⚡": "Simulatora Nermalavê ya Interaktîv Test Bike ⚡"
+    "Test Interactive Software Simulator ⚡": "Simulatora Nermalavê ya Interaktîv Test Bike ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Tevahiya Demjimêrên Kar ên Salane yên Vegera:",
+    "Total Due (Incl. BTW 21%):": "Tevahî ya Bidinê (BTW 21% tê de):",
+    "Trained conversational AI indexed on corporate documentation": "AI ya axaftinê ya perwerdekirî ku li ser belgeyên pargîdaniyê hatiye endekskirin",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Ji hêla Rêberên Pargîdaniyan û Komên Şirketan ve tê bawerkirin",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K û Rastiya Serwer",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Daemona microservice ya ultra-sivik ku CPU, bîr û hewzên girêdana danegehê dişopîne û xwe-serastkirina otomatîk pêk tîne.",
+    "Unlimited + Global Anycast CDN": "Bêsînor + CDN ya Anycast a Cîhanî",
+    "Unlimited products catalog & smart taxonomy filtering": "Katalogê berheman ê bêsînor û parzûna taksonomiyê ya jîr",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Em li gorî rêziknameyên GDPR yên YE rêzê ji nepenîtiya we re digirin. Bi tundî sifir spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS û Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Sêwirandin û Optîmîzasyona Malperê",
+    "White-Label License / Bakery": "Lîsansa White-Label / Nanpêjî",
+    "White-Label License / Clinic": "Lîsansa White-Label / Klînîk",
+    "White-Label License / Org": "Lîsansa White-Label / Rêxistin",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Di nav 15 deqeyan de (24/7/365 xeta rasterast)",
+    "Within 24 Hours (Support Tickets)": "Di nav 24 saetan de (tîketên piştgiriyê)",
+    "Within 4 Hours (Email + WhatsApp)": "Di nav 4 saetan de (e-name + WhatsApp)",
+    "Your Genuine Digital License Key:": "Kilîda we ya lîsansa dîjîtal a rastîn:"
   }
 }

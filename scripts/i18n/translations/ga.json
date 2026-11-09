@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Líon na Foirne nó na bhFostaithe:",
     "Technical & Systems Architecture": "Ailtireacht Theicniúil agus Córais",
     "Technical Support Response Times": "Amanna Freagartha Tacaíochta Teicniúla",
-    "Test Interactive Software Simulator ⚡": "Tástáil Insamhlóir Bogearraí Idirghníomhach ⚡"
+    "Test Interactive Software Simulator ⚡": "Tástáil Insamhlóir Bogearraí Idirghníomhach ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Iomlán na nUaireanta Oibre Bliantúla a Aisghabhadh:",
+    "Total Due (Incl. BTW 21%):": "Iomlán le hÍoc (BTW 21% san áireamh):",
+    "Trained conversational AI indexed on corporate documentation": "AI comhráiteach oilte, innéacsaithe ar dhoiciméadacht chorparáideach",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Muinín ag Ceannairí Fiontair agus Grúpaí Corparáideacha",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K agus Beachtas Ceannasach",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Daemon micreaseirbhísí ultra-éadrom a dhéanann monatóireacht ar CPU, cuimhne agus linneacha nasc bunachar sonraí, agus a dhéanann athshlánú uathoibríoch.",
+    "Unlimited + Global Anycast CDN": "CDN Anycast gan teorainn + domhanda",
+    "Unlimited products catalog & smart taxonomy filtering": "Catalóg táirgí gan teorainn agus scagadh tacsonamaíochta cliste",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Tugaimid urraim do do phríobháideachas faoi rialacháin GDPR an AE. Nialas spam go docht.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS agus Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Dearadh agus Optamú Láithreán Gréasáin",
+    "White-Label License / Bakery": "Ceadúnas White-Label / Bácús",
+    "White-Label License / Clinic": "Ceadúnas White-Label / Clinic",
+    "White-Label License / Org": "Ceadúnas White-Label / Eagraíocht",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Laistigh de 15 Nóiméad (Líne Dhearg Dhíreach 24/7/365)",
+    "Within 24 Hours (Support Tickets)": "Laistigh de 24 Uair (Ticéid Tacaíochta)",
+    "Within 4 Hours (Email + WhatsApp)": "Laistigh de 4 Uair (Ríomhphost + WhatsApp)",
+    "Your Genuine Digital License Key:": "Do Eochair Cheadúnais Dhigitigh Fhíor:"
   }
 }

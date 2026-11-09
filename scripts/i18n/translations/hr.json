@@ -1,6 +1,6 @@
 {
   "language": "hr",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (bez traga CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Broj članova tima ili zaposlenika:",
     "Technical & Systems Architecture": "Tehnička i sustavna arhitektura",
     "Technical Support Response Times": "Vremena odgovora tehničke podrške",
-    "Test Interactive Software Simulator ⚡": "Isprobajte interaktivni simulator softvera ⚡"
+    "Test Interactive Software Simulator ⚡": "Isprobajte interaktivni simulator softvera ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Ukupno vraćenih godišnjih radnih sati:",
+    "Total Due (Incl. BTW 21%):": "Ukupno za plaćanje (uklj. BTW 21 %):",
+    "Trained conversational AI indexed on corporate documentation": "Trenirani konverzacijski AI indeksiran na korporativnu dokumentaciju",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Povjerenje korporativnih lidera i poslovnih grupa",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K i suverena preciznost",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Ultralagani microservices daemon koji prati CPU, memoriju i poolove veza s bazom podataka te izvodi automatski oporavak.",
+    "Unlimited + Global Anycast CDN": "Neograničen + globalni Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Neograničen katalog proizvoda i pametno filtriranje taksonomije",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Poštujemo vašu privatnost u skladu s EU GDPR-om. Strogo nula spama.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS i Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Dizajn i optimizacija web stranice",
+    "White-Label License / Bakery": "White-Label licenca / pekarnica",
+    "White-Label License / Clinic": "White-Label licenca / klinika",
+    "White-Label License / Org": "White-Label licenca / organizacija",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Unutar 15 minuta (24/7/365 izravna linija)",
+    "Within 24 Hours (Support Tickets)": "Unutar 24 sata (zahtjevi za podršku)",
+    "Within 4 Hours (Email + WhatsApp)": "Unutar 4 sata (e-pošta + WhatsApp)",
+    "Your Genuine Digital License Key:": "Vaš autentični digitalni licencni ključ:"
   }
 }

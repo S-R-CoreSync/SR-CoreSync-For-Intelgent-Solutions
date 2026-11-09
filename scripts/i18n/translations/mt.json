@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Numru tat-Tim jew tal-Impjegati:",
     "Technical & Systems Architecture": "Arkitettura Teknika u tas-Sistemi",
     "Technical Support Response Times": "Ħinijiet ta' Rispons tal-Appoġġ Tekniku",
-    "Test Interactive Software Simulator ⚡": "Ipprova s-Simulatur tas-Softwer Interattiv ⚡"
+    "Test Interactive Software Simulator ⚡": "Ipprova s-Simulatur tas-Softwer Interattiv ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Total ta' Sigħat tax-Xogħol Annwali Reklamati:",
+    "Total Due (Incl. BTW 21%):": "Total dovut (inkluż BTW 21%):",
+    "Trained conversational AI indexed on corporate documentation": "AI konversazzjonali mħarreġ u indiċjat fuq dokumentazzjoni korporattiva",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Fdat minn Mexxejja tal-Intrapriża u Gruppi Korporattivi",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K u Preċiżjoni Sovrana",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Daemon tal-microservices ultra-ħafif li jissorvelja CPU, memorja u pools tal-konnessjoni mad-database, u jwettaq rkupru awtomatiku.",
+    "Unlimited + Global Anycast CDN": "CDN Anycast illimitat + globali",
+    "Unlimited products catalog & smart taxonomy filtering": "Katalgu tal-prodotti illimitat u filtrazzjoni tat-tassonomija intelliġenti",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Nirrispettaw il-privatezza tiegħek skont ir-regolamenti GDPR tal-UE. Strettament żero spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS u Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Disinn u Ottimizzazzjoni tal-Websajt",
+    "White-Label License / Bakery": "Liċenzja White-Label / Forn",
+    "White-Label License / Clinic": "Liċenzja White-Label / Klinika",
+    "White-Label License / Org": "Liċenzja White-Label / Organizzazzjoni",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Fi 15-il Minuta (Linja Diretta 24/7/365)",
+    "Within 24 Hours (Support Tickets)": "Fi 24 Siegħa (Tickets tal-Appoġġ)",
+    "Within 4 Hours (Email + WhatsApp)": "Fi 4 Sigħat (Email + WhatsApp)",
+    "Your Genuine Digital License Key:": "Iċ-Ċavetta tal-Liċenzja Diġitali Ġenwina tiegħek:"
   }
 }

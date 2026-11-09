@@ -1,6 +1,6 @@
 {
   "language": "da",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkendte operationelle basisparametre",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (ingen CoreSync-fodaftryk)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Antal teammedlemmer eller medarbejdere:",
     "Technical & Systems Architecture": "Teknisk og systemarkitektur",
     "Technical Support Response Times": "Responstider for teknisk support",
-    "Test Interactive Software Simulator ⚡": "Test interaktiv softwaresimulator ⚡"
+    "Test Interactive Software Simulator ⚡": "Test interaktiv softwaresimulator ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Samlede årligt genvundne arbejdstimer:",
+    "Total Due (Incl. BTW 21%):": "Samlet beløb (inkl. BTW 21 %):",
+    "Trained conversational AI indexed on corporate documentation": "Trænet konversationel AI indekseret på virksomhedsdokumentation",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Betroet af enterprise-ledere og virksomhedsgrupper",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K og suveræn præcision",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Ultralet microservices-daemon, der overvåger CPU, hukommelse og databaseforbindelsespuljer og udfører automatisk gendannelse.",
+    "Unlimited + Global Anycast CDN": "Ubegrænset + globalt Anycast-CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Ubegrænset produktkatalog og smart taxonomifiltrering",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Vi respekterer dit privatliv i henhold til EU's GDPR. Strengt nul spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS og Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Websitedesign og -optimering",
+    "White-Label License / Bakery": "White-label-licens / bageri",
+    "White-Label License / Clinic": "White-label-licens / klinik",
+    "White-Label License / Org": "White-label-licens / organisation",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Inden for 15 minutter (24/7/365 direkte hotline)",
+    "Within 24 Hours (Support Tickets)": "Inden for 24 timer (supportbilletter)",
+    "Within 4 Hours (Email + WhatsApp)": "Inden for 4 timer (e-mail + WhatsApp)",
+    "Your Genuine Digital License Key:": "Din ægte digitale licensnøgle:"
   }
 }

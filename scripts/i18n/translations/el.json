@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Αριθμός μελών ομάδας ή εργαζομένων:",
     "Technical & Systems Architecture": "Τεχνική αρχιτεκτονική και αρχιτεκτονική συστημάτων",
     "Technical Support Response Times": "Χρόνοι απόκρισης τεχνικής υποστήριξης",
-    "Test Interactive Software Simulator ⚡": "Δοκιμάστε τον διαδραστικό εξομοιωτή λογισμικού ⚡"
+    "Test Interactive Software Simulator ⚡": "Δοκιμάστε τον διαδραστικό εξομοιωτή λογισμικού ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Σύνολο ετήσιων ωρών εργασίας που ανακτήθηκε:",
+    "Total Due (Incl. BTW 21%):": "Σύνολο προς πληρωμή (συμπ. BTW 21%):",
+    "Trained conversational AI indexed on corporate documentation": "Εκπαιδευμένο conversational AI ευρετηριασμένο σε εταιρικά έγγραφα",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Με την εμπιστοσύνη ηγετών επιχειρήσεων και εταιρικών ομίλων",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K και κυρίαρχη ακρίβεια",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Υπερελαφρύς daemon microservices που παρακολουθεί CPU, μνήμη και pools συνδέσεων βάσης δεδομένων και εκτελεί αυτόματη ανάκτηση.",
+    "Unlimited + Global Anycast CDN": "Απεριόριστο + παγκόσμιο Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Απεριόριστος κατάλογος προϊόντων και έξυπνο φιλτράρισμα ταξονομίας",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Σεβόμαστε το απόρρητό σας σύμφωνα με τον GDPR της ΕΕ. Απόλυτα μηδέν spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS και Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Σχεδιασμός και βελτιστοποίηση ιστότοπου",
+    "White-Label License / Bakery": "Άδεια White-Label / αρτοποιείο",
+    "White-Label License / Clinic": "Άδεια White-Label / κλινική",
+    "White-Label License / Org": "Άδεια White-Label / οργανισμός",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Εντός 15 λεπτών (24/7/365 άμεση γραμμή)",
+    "Within 24 Hours (Support Tickets)": "Εντός 24 ωρών (δελτία υποστήριξης)",
+    "Within 4 Hours (Email + WhatsApp)": "Εντός 4 ωρών (email + WhatsApp)",
+    "Your Genuine Digital License Key:": "Το γνήσιο ψηφιακό κλειδί άδειάς σας:"
   }
 }

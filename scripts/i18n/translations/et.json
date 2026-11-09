@@ -1,6 +1,6 @@
 {
   "language": "et",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Kinnitatud operatiivsed baasparameetrid",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (ilma CoreSync'i jäljeta)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Meeskonna või töötajate arv:",
     "Technical & Systems Architecture": "Tehniline ja süsteemiarhitektuur",
     "Technical Support Response Times": "Tehnilise toe vastamisajad",
-    "Test Interactive Software Simulator ⚡": "Testi interaktiivset tarkvarasimulaatorit ⚡"
+    "Test Interactive Software Simulator ⚡": "Testi interaktiivset tarkvarasimulaatorit ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Aastas tagasi võidetud töötunnid kokku:",
+    "Total Due (Incl. BTW 21%):": "Maksta kokku (sisaldab BTW 21%):",
+    "Trained conversational AI indexed on corporate documentation": "Koolitatud vestlus-AI, indekseeritud ettevõtte dokumentatsioonil",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Usaldavad ettevõtete juhid ja ettevõttegrupid",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K ja suveräänne täpsus",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Üli kerge microservices-daemon, mis jälgib CPU, mälu ja andmebaasi ühenduspuule ning teostab automaatse taastamise.",
+    "Unlimited + Global Anycast CDN": "Piiramatu + ülemaailmne Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Piiramatu tootekataloog ja nutikas taksonoomiafiltratsioon",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Austame teie privaatsust vastavalt ELi GDPR-ile. Rangelt null rämpsposti.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS ja Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Veebilehe disain ja optimeerimine",
+    "White-Label License / Bakery": "White-label litsents / pagariäri",
+    "White-Label License / Clinic": "White-label litsents / kliinik",
+    "White-Label License / Org": "White-label litsents / organisatsioon",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 minuti jooksul (24/7/365 otseiliin)",
+    "Within 24 Hours (Support Tickets)": "24 tunni jooksul (tugipiletid)",
+    "Within 4 Hours (Email + WhatsApp)": "4 tunni jooksul (e-post + WhatsApp)",
+    "Your Genuine Digital License Key:": "Teie ehtne digitaalne litsentsivõti:"
   }
 }

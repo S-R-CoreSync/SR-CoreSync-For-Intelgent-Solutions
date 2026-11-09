@@ -1,6 +1,6 @@
 {
   "language": "it",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operativi di base approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (zero impronta CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Numero di membri del team o dipendenti:",
     "Technical & Systems Architecture": "Architettura tecnica e di sistema",
     "Technical Support Response Times": "Tempi di risposta del supporto tecnico",
-    "Test Interactive Software Simulator ⚡": "Prova il simulatore software interattivo ⚡"
+    "Test Interactive Software Simulator ⚡": "Prova il simulatore software interattivo ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Totale ore di lavoro annuali recuperate:",
+    "Total Due (Incl. BTW 21%):": "Totale da pagare (BTW 21% inclusa):",
+    "Trained conversational AI indexed on corporate documentation": "IA conversazionale addestrata e indicizzata sulla documentazione aziendale",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Scelto da leader enterprise e gruppi aziendali",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K e precisione sovrana",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Daemon microservizi ultraleggero che monitora CPU, memoria e pool di connessioni al database ed esegue il ripristino automatico.",
+    "Unlimited + Global Anycast CDN": "CDN Anycast illimitato e globale",
+    "Unlimited products catalog & smart taxonomy filtering": "Catalogo prodotti illimitato e filtro tassonomico intelligente",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Rispettiamo la tua privacy ai sensi del GDPR UE. Zero spam rigoroso.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS e Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Design e ottimizzazione del sito web",
+    "White-Label License / Bakery": "Licenza white-label / panetteria",
+    "White-Label License / Clinic": "Licenza white-label / clinica",
+    "White-Label License / Org": "Licenza white-label / organizzazione",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Entro 15 minuti (linea diretta 24/7/365)",
+    "Within 24 Hours (Support Tickets)": "Entro 24 ore (ticket di supporto)",
+    "Within 4 Hours (Email + WhatsApp)": "Entro 4 ore (email + WhatsApp)",
+    "Your Genuine Digital License Key:": "La tua autentica chiave di licenza digitale:"
   }
 }

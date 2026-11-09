@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Numărul de membri ai echipei sau angajați:",
     "Technical & Systems Architecture": "Arhitectură tehnică și de sistem",
     "Technical Support Response Times": "Timpii de răspuns ai asistenței tehnice",
-    "Test Interactive Software Simulator ⚡": "Testați simulatorul software interactiv ⚡"
+    "Test Interactive Software Simulator ⚡": "Testați simulatorul software interactiv ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Total ore de lucru anuale recuperate:",
+    "Total Due (Incl. BTW 21%):": "Total de plată (inclusiv BTW 21%):",
+    "Trained conversational AI indexed on corporate documentation": "AI conversațional antrenat și indexat pe documentația corporativă",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Ales de lideri enterprise și grupuri de companii",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K și precizie suverană",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Daemon microservicii ultra-ușor care monitorizează CPU, memoria și pool-urile de conexiuni la baza de date și execută recuperare automată.",
+    "Unlimited + Global Anycast CDN": "CDN Anycast nelimitat + global",
+    "Unlimited products catalog & smart taxonomy filtering": "Catalog de produse nelimitat și filtrare taxonomică inteligentă",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Respectăm confidențialitatea dvs. conform Regulamentului GDPR al UE. Strict zero spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS și Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Design și optimizare de site web",
+    "White-Label License / Bakery": "Licență white-label / brutărie",
+    "White-Label License / Clinic": "Licență white-label / clinică",
+    "White-Label License / Org": "Licență white-label / organizație",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "În 15 minute (linie directă 24/7/365)",
+    "Within 24 Hours (Support Tickets)": "În 24 de ore (tichete de suport)",
+    "Within 4 Hours (Email + WhatsApp)": "În 4 ore (e-mail + WhatsApp)",
+    "Your Genuine Digital License Key:": "Cheia dvs. digitală autentică de licență:"
   }
 }

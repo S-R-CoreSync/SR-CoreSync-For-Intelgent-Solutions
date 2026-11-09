@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "ژمارەی تیم یان کارمەند:",
     "Technical & Systems Architecture": "تەلارسازی تەکنیکی و سیستەم",
     "Technical Support Response Times": "کاتی وەڵامدانەوەی پشتگیری تەکنیکی",
-    "Test Interactive Software Simulator ⚡": "تاقیکردنەوەی سیمولاتۆری نەرمەکاڵای کارلێکەر ⚡"
+    "Test Interactive Software Simulator ⚡": "تاقیکردنەوەی سیمولاتۆری نەرمەکاڵای کارلێکەر ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "کۆی کاتژمێرەکانی کاری ساڵانە کە بەدەست هاتووە:",
+    "Total Due (Incl. BTW 21%):": "کۆی گشتی بۆ پارەدان (لەگەڵ BTW ٢١٪):",
+    "Trained conversational AI indexed on corporate documentation": "AI ی گفتوگۆی ڕاهێنراو کە لەسەر بەڵگەنامەکانی کۆمپانیا ئیندێکس کراوە",
+    "Trusted by Enterprise Leaders & Corporate Groups": "لەلایەن سەرکردەکانی کۆمپانیا و گروپەکانی شەرکەتەوە متمانەی پێکراوە",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K و وردی سەروەر",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "دیمۆنی microservice ی زۆر سووک کە CPU، بیرگە و حەوزەکانی پەیوەندی داتابەیس چاودێری دەکات و خۆچاککردنی خۆکاری ئەنجام دەدات.",
+    "Unlimited + Global Anycast CDN": "بێسنوور + CDN ی Anycast ی جیهانی",
+    "Unlimited products catalog & smart taxonomy filtering": "کاتالۆگی بێسنووری بەرهەم و فلتەرکردنی تاکسۆنۆمی زیرەک",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "ئێمە ڕێز لە تایبەتمەندی تۆ دەگرین بەپێی ڕێکخستنەکانی GDPR ی یەکێتی ئەورووپا. بە توندی سفر سپام.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS و Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "دیزاین و باشترکردنی وێبسایت",
+    "White-Label License / Bakery": "مۆڵەتی White-Label / نانەواخانە",
+    "White-Label License / Clinic": "مۆڵەتی White-Label / کلینیک",
+    "White-Label License / Org": "مۆڵەتی White-Label / ڕێکخراو",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "لە ماوەی ١٥ خولەکدا (٢٤/٧/٣٦٥ هێڵی ڕاستەوخۆ)",
+    "Within 24 Hours (Support Tickets)": "لە ماوەی ٢٤ کاتژمێردا (تیکێتی پشتگیری)",
+    "Within 4 Hours (Email + WhatsApp)": "لە ماوەی ٤ کاتژمێردا (ئیمەیل + WhatsApp)",
+    "Your Genuine Digital License Key:": "کلیلی مۆڵەتی دیجیتاڵی ڕەسەنی تۆ:"
   }
 }

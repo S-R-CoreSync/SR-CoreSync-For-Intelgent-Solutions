@@ -1,6 +1,6 @@
 {
   "language": "cs",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Schválené provozní základní parametry",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (bez stopy CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Počet členů týmu nebo zaměstnanců:",
     "Technical & Systems Architecture": "Technická a systémová architektura",
     "Technical Support Response Times": "Doby odezvy technické podpory",
-    "Test Interactive Software Simulator ⚡": "Vyzkoušet interaktivní softwarový simulátor ⚡"
+    "Test Interactive Software Simulator ⚡": "Vyzkoušet interaktivní softwarový simulátor ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Celkem ušetřených ročních pracovních hodin:",
+    "Total Due (Incl. BTW 21%):": "Celkem k úhradě (včetně BTW 21 %):",
+    "Trained conversational AI indexed on corporate documentation": "Trénovaná konverzační AI indexovaná na firemní dokumentaci",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Důvěřují nám lídři podniků a firemní skupiny",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K a suverénní přesnost",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Ultraodlehčený microservices démon sledující CPU, paměť a fondy databázových připojení a provádějící automatické obnovení.",
+    "Unlimited + Global Anycast CDN": "Neomezené + globální Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Neomezený katalog produktů a chytré filtrování taxonomie",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Respektujeme vaše soukromí podle nařízení EU GDPR. Striktně žádný spam.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS a Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Design a optimalizace webu",
+    "White-Label License / Bakery": "White-label licence / pekárna",
+    "White-Label License / Clinic": "White-label licence / klinika",
+    "White-Label License / Org": "White-label licence / organizace",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "Do 15 minut (24/7/365 přímá linka)",
+    "Within 24 Hours (Support Tickets)": "Do 24 hodin (support tickety)",
+    "Within 4 Hours (Email + WhatsApp)": "Do 4 hodin (e-mail + WhatsApp)",
+    "Your Genuine Digital License Key:": "Váš autentický digitální licenční klíč:"
   }
 }

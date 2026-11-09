@@ -1,6 +1,6 @@
 {
   "language": "bg",
-  "count": 326,
+  "count": 345,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Одобрени оперативни базови параметри",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (без следа от CoreSync)",
@@ -327,6 +327,25 @@
     "Team or Employee Count:": "Брой на екипа или служителите:",
     "Technical & Systems Architecture": "Техническа и системна архитектура",
     "Technical Support Response Times": "Времена за отговор на техническата поддръжка",
-    "Test Interactive Software Simulator ⚡": "Тествайте интерактивния софтуерен симулатор ⚡"
+    "Test Interactive Software Simulator ⚡": "Тествайте интерактивния софтуерен симулатор ⚡",
+    "Total Annual Workforce Hours Reclaimed:": "Общо възстановени годишни работни часове:",
+    "Total Due (Incl. BTW 21%):": "Общо дължимо (с включен BTW 21%):",
+    "Trained conversational AI indexed on corporate documentation": "Обучен разговорен AI, индексиран върху корпоративна документация",
+    "Trusted by Enterprise Leaders & Corporate Groups": "Доверено от корпоративни лидери и бизнес групи",
+    "Ultra-HD 4K & Sovereign Precision": "Ultra-HD 4K и суверенна прецизност",
+    "Ultra-lightweight microservices daemon tracking CPU, memory, and database connection pools, executing automated auto-recovery.": "Ултралек демон за микросервизи, който следи CPU, памет и пулове за връзки с база данни и изпълнява автоматично възстановяване.",
+    "Unlimited + Global Anycast CDN": "Неограничен + глобален Anycast CDN",
+    "Unlimited products catalog & smart taxonomy filtering": "Неограничен продуктов каталог и интелигентно филтриране по таксономия",
+    "We respect your privacy under EU GDPR regulations. Strictly zero spam.": "Уважаваме вашата поверителност съгласно изискванията на GDPR на ЕС. Строго нула спам.",
+    "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN": "Web (Next.js) • iOS и Android (Expo) • AR / NL / EN",
+    "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+    "Website Design & Optimization": "Дизайн и оптимизация на уебсайт",
+    "White-Label License / Bakery": "Лиценз White-Label / пекарна",
+    "White-Label License / Clinic": "Лиценз White-Label / клиника",
+    "White-Label License / Org": "Лиценз White-Label / организация",
+    "Within 15 Minutes (24/7/365 Direct Red-Line)": "В рамките на 15 минути (24/7/365 директна линия)",
+    "Within 24 Hours (Support Tickets)": "В рамките на 24 часа (тикети за поддръжка)",
+    "Within 4 Hours (Email + WhatsApp)": "В рамките на 4 часа (имейл + WhatsApp)",
+    "Your Genuine Digital License Key:": "Вашият автентичен цифров лицензен ключ:"
   }
 }
