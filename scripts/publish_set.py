@@ -21,8 +21,14 @@ CI verifies is byte-for-byte the artifact that CI publishes.
 The site is a static GitHub Pages deployment. Everything in EXCLUDED_DIRS or
 EXCLUDED_ROOT_FILES is server-side material that must never be reachable from
 the public domain.
+
+Browser "Save page as -> Webpage, Complete" snapshots are likewise never
+published: neither the saved page (nor any renamed copy of it) nor its
+*_files/ asset folder belongs to site content.
 """
+import io
 import os
+import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -60,7 +66,7 @@ EXCLUDED_ROOT_SUFFIXES = ('.md', '.bat', '.url', '.ps1')
 EXCLUDED_DEV_PAGES = {
     'debug_header.html',
     'preview_emblem_tuning.html',
-    'preview_new_official_emblem.html',
+    'preview_new_official_embel.html',
     'preview_roi_modal.html',
     'preview-booking-modal.html',
     'preview-checkout.html',
@@ -71,12 +77,42 @@ EXCLUDED_DEV_PAGES = {
     'preview-license-manager.html',
     'preview-software-modal.html',
     'preview-welcome-email.html',
+    'preview-welcome-email.html',
 }
 
 # ---------------------------------------------------------------------------
 # Global file suffixes that are never published.
 # ---------------------------------------------------------------------------
 EXCLUDED_SUFFIXES = ('.pyc',)
+
+# ---------------------------------------------------------------------------
+# Browser "Save page as -> Webpage, Complete" artefacts. Chrome/Edge save a
+# page as X.html next to an X_files/ asset folder, and every renamed copy of
+# that HTML still references the same *_files/ folder. These are third-party
+# snapshots (e.g. saved Z.ai chats) with their trackers, never site content:
+# neither the page nor its asset folder is ever published.
+# The project's own pages never reference a local *_files/ folder, so the
+# content marker below cannot misclassify them.
+# ---------------------------------------------------------------------------
+SAVED_PAGE_DIR_SUFFIX = '_files'
+SAVED_PAGE_REF_RE = re.compile(
+    r'(?:src|href)\s*=\s*["\']'
+    r'(?!https?:|//|data:|mailto:|tel:|javascript:|blob:|#)'
+    r'[^"\']*' + re.escape(SAVED_PAGE_DIR_SUFFIX) + r'/',
+    re.IGNORECASE,
+)
+
+
+def _is_saved_page(path):
+    """True when an HTML file is a browser "Webpage, Complete" snapshot or a
+    renamed copy of one: it references a local *_files/ asset folder, which
+    Chrome always rewrites saved-page resources into. Reading is bounded to
+    the first megabyte (the marker sits in <head>); real pages never match."""
+    try:
+        with io.open(path, 'r', encoding='utf-8', errors='ignore') as fh:
+            return SAVED_PAGE_REF_RE.search(fh.read(1024 * 1024)) is not None
+    except OSError:
+        return False
 
 # ---------------------------------------------------------------------------
 # Paths that must never appear in the published artifact.
@@ -123,6 +159,8 @@ def is_excluded(rel_path):
         return True
     if name.endswith(EXCLUDED_SUFFIXES):
         return True
+    if name.endswith(SAVED_PAGE_DIR_SUFFIX):
+        return True  # browser saved-page asset folder (or a stray file named so)
     if len(parts) == 1:
         if name in EXCLUDED_ROOT_FILES:
             return True
@@ -137,13 +175,21 @@ def iter_publish_files(root=None):
     """Yield every repository-relative path that belongs to the publish set."""
     base = root or ROOT
     for dirpath, dirnames, filenames in os.walk(base):
-        dirnames[:] = sorted(d for d in dirnames if d not in EXCLUDED_DIRS and not (d.startswith('.') and d not in ALLOWED_DOT_DIRS))
+        dirnames[:] = sorted(
+            d for d in dirnames
+            if d not in EXCLUDED_DIRS
+            and not (d.startswith('.') and d not in ALLOWED_DOT_DIRS)
+            and not d.endswith(SAVED_PAGE_DIR_SUFFIX)
+        )
         rel_dir = os.path.relpath(dirpath, base).replace('\\', '/')
         if rel_dir == '.':
             rel_dir = ''
         for name in sorted(filenames):
             rel = (rel_dir + '/' + name) if rel_dir else name
             if is_excluded(rel):
+                continue
+            if name.lower().endswith('.html') and _is_saved_page(
+                    os.path.join(dirpath, name)):
                 continue
             yield rel
 
