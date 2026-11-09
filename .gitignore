@@ -75,3 +75,6 @@ temp_chrome_print_dir*/
 # Local cleanup archives (never committed, never published)
 _trash_*/
 _css_archive_*/
+
+# Stray downloaded artifact
+Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash.html
