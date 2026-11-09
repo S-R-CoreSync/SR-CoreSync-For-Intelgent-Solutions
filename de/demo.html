@@ -165,7 +165,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>S&R CoreSync For Intelligent Solutions | Enterprise-Software, Cloud-ERP & KI-Architektur</title>
+    <title>S&amp;R CoreSync | Interaktive Cloud-ERP-Demonstration</title>
     <link rel="icon" type="image/png" sizes="256x256" href="../assets/i18n/intl/sr-core-emblem-256.png?v=sovereign2026_fixed">
     <link rel="icon" type="image/svg+xml" href="../assets/i18n/intl/sr-core-emblem.svg?v=sovereign2026_fixed">
     <link rel="alternate icon" type="image/png" href="../assets/favicon-96.png">
@@ -238,7 +238,7 @@
         <aside class="portal-sidebar">
             <div class="nav-item active" id="tourNav-overview" data-sr-call="switchPortalTab" data-sr-args='["overview"]' data-sr-this="last">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                <span>Executive Dashboard</span>
+                <span>Geschäftsführungs-Dashboard</span>
             </div>
             <div class="nav-item" id="tourNav-erp" data-sr-call="switchPortalTab" data-sr-args='["erp"]' data-sr-this="last">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
@@ -267,7 +267,7 @@
 
             <div class="nav-item" id="tourNav-roi" data-sr-call="switchPortalTab" data-sr-args='["roi"]' data-sr-this="last">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v12M15 9.5H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H9"></path></svg>
-                <span>Smart ROI Calculator</span>
+                <span>Intelligenter ROI-Rechner</span>
             </div>
 
 
@@ -323,9 +323,9 @@
                             <span class="cur-label">Steuermodell:</span>
                             <select id="globalVatSelector" onchange="setGlobalVat(this.value)" class="cur-select-vat" title="Select financial tax regime" aria-label="Select financial tax regime">
                                 <option value="0.21" selected>🇳🇱 Deutsche MwSt (19%)</option>
-                                <option value="0.09">🇳🇱 Reduced BTW (9%)</option>
-                                <option value="0.15">🇸🇦 GCC VAT (15%)</option>
-                                <option value="0.00">🌐 Tax Exempt (0%)</option>
+                                <option value="0.09">🇳🇱 Ermäßigter MwSt.-Satz (9%)</option>
+                                <option value="0.15">🇸🇦 GCC-Mehrwertsteuer (15%)</option>
+                                <option value="0.00">🌐 Steuerbefreit (0%)</option>
                             </select>
                         </div>
                         <div class="cur-summary-chip">
@@ -1770,7 +1770,7 @@
 
         function saveNewTx() {
             const client = document.getElementById('txClient').value;
-            const amount = parseFloat(document.getElementById('txBetrag').value) || 0;
+            const amount = parseFloat(document.getElementById('txAmount').value) || 0;
             const type = document.getElementById('txType').value;
 
             // Enterprise CoreSync Engine Logic
@@ -1817,10 +1817,10 @@
 
         function generateNewInvoice() {
             const client = document.getElementById('invClient').value || 'Rotterdam Tech BV';
-            const netBetrag = parseFloat(document.getElementById('invBetrag').value) || 10000;
+            const netAmount = parseFloat(document.getElementById('invAmount').value) || 10000;
             const taxPct = parseFloat(document.getElementById('invTaxRegime').value) || 0;
-            const vatBetrag = Math.round(netBetrag * (taxPct / 100));
-            const total = netBetrag + vatBetrag;
+            const vatAmount = Math.round(netAmount * (taxPct / 100));
+            const total = netAmount + vatAmount;
             const invNum = 'INV-2026-0' + Math.floor(83 + Math.random() * 20);
             const dateStr = '2026-10-06';
             const taxLabel = taxPct > 0 ? `${taxPct}% BTW` : 'Reverse Charge 0%';
@@ -1833,13 +1833,13 @@
             tr.innerHTML = `
                 <td class="font-num">${invNum}</td>
                 <td>${client}</td>
-                <td class="font-num">€ ${netBetrag.toLocaleString()}</td>
-                <td class="font-num">€ ${vatBetrag.toLocaleString()} (${taxLabel})</td>
+                <td class="font-num">€ ${netAmount.toLocaleString()}</td>
+                <td class="font-num">€ ${vatAmount.toLocaleString()} (${taxLabel})</td>
                 <td class="font-num tx-amount-highlight">€ ${total.toLocaleString()}</td>
                 <td><span class="status-badge status-processing" id="status-badge-${invNum}">New - Due</span></td>
                 <td>
                     <button type="button" class="table-action-btn pay-action-btn" id="btn-pay-${invNum}" onclick="openIdealSimulatorModal('${invNum}', '${client}', ${total})">Pay via iDEAL</button>
-                    <button type="button" class="table-action-btn" onclick="previewInvoiceModal('${invNum}', '${client}', ${netBetrag}, ${vatBetrag}, ${total}, 'Ausstehend', '${dateStr}', '${taxLabel}')">Rechnung anzeigen</button>
+                    <button type="button" class="table-action-btn" onclick="previewInvoiceModal('${invNum}', '${client}', ${netAmount}, ${vatAmount}, ${total}, 'Pending', '${dateStr}', '${taxLabel}')">View Invoice</button>
                 </td>
             `;
 
@@ -1852,7 +1852,7 @@
 
             updateInvoiceCounters();
             closeInvoiceGeneratorModal();
-            previewInvoiceModal(invNum, client, netBetrag, vatBetrag, total, 'Ausstehend', dateStr, taxLabel);
+            previewInvoiceModal(invNum, client, netAmount, vatAmount, total, 'Pending', dateStr, taxLabel);
         }
 
         function previewInvoiceModal(num, client, net, vat, total, status, date, taxType, customIssuerName = null) {
@@ -1863,7 +1863,7 @@
             document.getElementById('pvTotal').innerText = `€ ${total.toLocaleString()}`;
             document.getElementById('pvGrandTotal').innerText = `€ ${total.toLocaleString()}`;
             document.getElementById('pvStatus').innerText = status;
-            document.getElementById('pvDatum').innerText = date || '2026-10-06';
+            document.getElementById('pvDate').innerText = date || '2026-10-06';
 
             // Enterprise CoreSync Engine Logic
             const savedBrand = localStorage.getItem('sr_custom_brand_name');
@@ -1940,7 +1940,7 @@
             currentPayingInv = { num: invNum, client: client, amount: amount };
             document.getElementById('idealInvNum').innerText = invNum;
             document.getElementById('idealClientName').innerText = client;
-            document.getElementById('idealTotalBetrag').innerText = `€ ${amount.toLocaleString()}`;
+            document.getElementById('idealTotalAmount').innerText = `€ ${amount.toLocaleString()}`;
             document.getElementById('idealProgressFill').style.width = '0%';
             document.getElementById('idealStatusText').innerText = 'Select your bank and click Confirm Instant Payment';
             document.getElementById('btnConfirmIdeal').disabled = false;
@@ -1969,7 +1969,7 @@
 
             setTimeout(() => {
                 progress.style.width = '100%';
-                statusText.innerHTML = '<span class="ideal-success-msg">✓ Betrag successfully settled and deposited into the corporate bank account!</span>';
+                statusText.innerHTML = '<span class="ideal-success-msg">✓ Amount successfully settled and deposited into the corporate bank account!</span>';
 
                 // Enterprise CoreSync Engine Logic
                 const badge = document.getElementById('status-badge-' + currentPayingInv.num) || document.getElementById('status-badge-inv-82');
@@ -2027,7 +2027,7 @@
                     document.exitFullscreen().catch(() => {});
                 }
                 btn.classList.remove('active');
-                btn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg> <span>Kundenpräsentation [P]</span>`;
+                btn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg> <span>Kundenansicht [P]</span>`;
             }
         }
 
@@ -2194,7 +2194,7 @@
             if (brandTitle) {
                 brandTitle.innerHTML = `<span class="brand-sr-text">S&amp;R</span> <span class="brand-sub-text">CoreSync</span>`;
             }
-            document.querySelector('.sidebar-user-card .user-name').innerText = 'Interaktive Vorschau-Sitzung';
+            document.querySelector('.sidebar-user-card .user-name').innerText = 'Interactive Preview Session';
             document.querySelector('.sidebar-user-card .user-avatar').innerText = 'SR';
             document.querySelector('.portal-brand-emblem').src = '../assets/i18n/intl/sr-core-emblem-official.png';
 
@@ -2347,7 +2347,7 @@
 
         // Enterprise CoreSync Engine Logic
         function calcQuickTax() {
-            const amountInput = document.getElementById('quickTaxBetrag');
+            const amountInput = document.getElementById('quickTaxAmount');
             const rateSelect = document.getElementById('quickTaxRate');
             if (!amountInput || !rateSelect) return;
             const amount = parseFloat(amountInput.value) || 0;
@@ -2413,7 +2413,7 @@
         function setGlobalVat(rate) {
             currentVatRate = parseFloat(rate) || 0;
             updateGlobalFinancials();
-            const vatText = currentVatRate === 0.21 ? 'Deutsche MwSt (19%)' :
+            const vatText = currentVatRate === 0.21 ? 'Dutch BTW (21%)' :
                             currentVatRate === 0.09 ? 'Reduced BTW (9%)' :
                             currentVatRate === 0.15 ? 'GCC VAT (15%)' : 'Exempt (0%)';
             showPortalToast(`🏛️ Tax model updated: ${vatText}`);
@@ -2444,7 +2444,7 @@
             if (pdfCash) pdfCash.innerText = `${conf.symbol} ${cash.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             if (pdfVat) pdfVat.innerText = `${conf.symbol} ${vatEst.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             if (pdfVatScheme) {
-                pdfVatScheme.innerText = currentVatRate === 0.21 ? 'Deutsche MwSt (19%)' :
+                pdfVatScheme.innerText = currentVatRate === 0.21 ? 'Dutch BTW (21%)' :
                                          currentVatRate === 0.09 ? 'Reduced BTW (9%)' :
                                          currentVatRate === 0.15 ? 'GCC VAT (15%)' : 'Zero-Rated VAT / Tax Exempt (0%)';
             }
@@ -2514,9 +2514,9 @@
             document.getElementById('tourStepDesc').innerText = step.desc;
 
             const prevBtn = document.getElementById('tourPrevBtn');
-            const nextBtn = document.getElementById('tourWeiterBtn');
+            const nextBtn = document.getElementById('tourNextBtn');
             if (prevBtn) prevBtn.style.visibility = currentTourStep === 0 ? 'hidden' : 'visible';
-            if (nextBtn) nextBtn.innerText = currentTourStep === tourSteps.length - 1 ? 'Finish Tour ✓' : 'Weiter ➡️';
+            if (nextBtn) nextBtn.innerText = currentTourStep === tourSteps.length - 1 ? 'Finish Tour ✓' : 'Next ➡️';
 
             // Enterprise CoreSync Engine Logic
             setTimeout(() => {
@@ -2578,8 +2578,8 @@
         // -----------------------------------------------------====================
         function openExecutivePdfModal() {
             updateGlobalFinancials();
-            const dateEl = document.getElementById('pdfDatumDisplay');
-            if (dateEl) dateEl.innerText = new Datum().toISOString().split('T')[0];
+            const dateEl = document.getElementById('pdfDateDisplay');
+            if (dateEl) dateEl.innerText = new Date().toISOString().split('T')[0];
             const modal = document.getElementById('executivePdfModal');
             if (modal) modal.classList.add('active');
         }
@@ -2662,7 +2662,7 @@ Direct Founders Contact: info@coresync.cloud
             const desc = document.getElementById('pubDesc').value;
 
             // Enterprise CoreSync Engine Logic
-            const id = 'custom_' + Datum.now();
+            const id = 'custom_' + Date.now();
             softwareCatalog[id] = {
                 title: title,
                 icon: cat === 'mobile' ? '📱' : cat === 'sdk' ? '🧩' : cat === 'pos' ? '⚡' : '💻',
@@ -2894,14 +2894,14 @@ STATUS: COMPLIANT WITH BELASTINGDIENST REQUIREMENTS (100% READY FOR SUBMISSION)`
 
             document.getElementById('chkAppTitle').innerText = sw.title;
             document.getElementById('chkAppIcon').innerText = sw.icon;
-            document.getElementById('chkAppLicenseType').innerText = `Full Gewerbliche Lizenz (${sw.version}) • Includes Official VAT Invoice`;
+            document.getElementById('chkAppLicenseType').innerText = `Full Commercial License (${sw.version}) • Includes Official VAT Invoice`;
 
             const netPrice = sw.price;
             const vat = Math.round(netPrice * 0.21 * 100) / 100;
             const total = Math.round((netPrice + vat) * 100) / 100;
 
             document.getElementById('chkNetPrice').innerText = `€ ${netPrice.toFixed(2)}`;
-            document.getElementById('chkVatBetrag').innerText = `€ ${vat.toFixed(2)}`;
+            document.getElementById('chkVatAmount').innerText = `€ ${vat.toFixed(2)}`;
             document.getElementById('chkTotalPrice').innerText = `€ ${total.toFixed(2)}`;
             document.getElementById('chkBtnText').innerText = `Confirm Secure Payment & Issue Invoice (€ ${total.toFixed(2)})`;
 
@@ -2968,7 +2968,7 @@ STATUS: COMPLIANT WITH BELASTINGDIENST REQUIREMENTS (100% READY FOR SUBMISSION)`
                         <td class="font-num">€ ${netPrice.toLocaleString()}</td>
                         <td class="font-num">€ ${vat.toLocaleString()} (21% BTW)</td>
                         <td class="font-num tx-amount-highlight">€ ${total.toLocaleString()}</td>
-                        <td><span class="status-badge status-completed">Bezahlt via ${gwLabel}</span></td>
+                        <td><span class="status-badge status-completed">Paid via ${gwLabel}</span></td>
                         <td>
                             <button type="button" class="table-action-btn" onclick="previewInvoiceModal('${invNum}', '${clientName}', ${netPrice}, ${vat}, ${total}, 'Paid via ${gwLabel}', '2026-10-06', 'BTW 21%')">Preview Invoice</button>
                         </td>
@@ -4455,6 +4455,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
+
 
 
 
