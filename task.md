@@ -13,6 +13,7 @@
 - [x] **توحيد SEO (38 صفحة):** تطبيق canonical + robots + OG + Twitter Card على 38 صفحة منتج/استوديو/بوابة legitimate (غير مدرجة في sitemap) كانت تفتقرها. اختيار صور OG بتطابق tokens (autonomous-tax-audit، brand-identity-roi، sovereign-arbitration-hub، client-portal، ecommerce-conversion، zero-trust، ...). إصلاح stray `>>` (bug في insertion). جميع البوابات ناجحة (publish_set, site_links, csp --check).
 - [x] **SEO صفحات مستبعدة (9):** إضافة canonical + OG + Twitter Card + robots `noindex, nofollow` إلى 9 صفحات (clgid-contract، clgid-prototype، contract-of2026-fin-pdf، contract-of2026-pdf، export-banner-founders-erp، ip-nda-smart-contract، perf-audit، preview-agent-widget، verify). OG fallback `og-software.jpg`. جميع البوابات ناجحة.
 - **SEO صفحات مستبعدة (9) + leftover + partner-portal (4):** حذف/أرشفة ملف Z.ai leftover (1.5MB) من tracking + .gitignore؛ إضافة canonical + OG + Twitter Card + robots `index, follow` إلى 4 صفحات partner-portal محلية (de/en/fr/nl) مع OG `og-sovereign-partner-portal.jpg`. جميع البوابات ناجحة.
+- **SEO demo (28):** canonical + OG + Twitter Card + robots `noindex, nofollow` لـ 28 صفحة `demo.html` محلية (bg..tr). OG `og-demo.jpg`. جميع البوابات ناجحة.
 
 ---
 
