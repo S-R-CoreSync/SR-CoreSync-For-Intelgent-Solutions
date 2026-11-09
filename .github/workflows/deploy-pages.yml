@@ -208,3 +208,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # The publish set is ~350 MB / ~1.3k files; GitHub's CDN sync of an
+          # artifact this size regularly needs more than the 10 minute default,
+          # and the step then aborts on "syncing_files" and cancels the deploy.
+          timeout: 1800000
+          reporting_interval: 15000
