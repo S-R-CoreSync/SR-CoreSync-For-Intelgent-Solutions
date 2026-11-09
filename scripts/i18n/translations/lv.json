@@ -1,7 +1,8 @@
 {
   "language": "lv",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Žetons “Powered by CoreSync”",
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez CoreSync pēdām)",
     "100% responsive, high-end bespoke UI/UX": "100 % adaptīvs, augstākās klases pielāgots UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Detalizēts infrastruktūras, atbilstības, AI un uzņēmuma SLA salīdzinājums",
     "Developer SDK • REST & Node": "Izstrādātāja SDK • REST un Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Native iOS un Android lietotņu un adaptīvu tīmekļa lietotņu izstrāde ar izpildes laiku zem vienas sekundes.",
+    "Dhr. Mohammad Raed Kaakeh": "k-gs Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Digitālā transformācija un ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Tiešais izmaksu efektivitātes un ROI kalkulators",
     "Direct loaded hourly cost applied to company operational payroll": "Tiešās stundas izmaksas, kas piemērotas uzņēmuma operatīvajam algu fondam",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Projektēsim kopā jūsu nākamo stratēģisko sistēmu",
     "License Tier / Duration:": "Licences līmenis / ilgums:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Viegla starpprogrammatūra, kas savieno POS kases aparātus tieši ar mākoņa ERP uzskaiti, neaizstājot mantoto aparatūru.",
+    "Live ERP Demo ⚡": "ERP demonstrācija tiešraidē ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Pārvaldīts mākonis, ikdienas automātiskas dublējumkopijas, 24/7 telemetrija un tūlītēja SLA atbilde",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Manuālas darbplūsmas vai izkliedētas izklājlapas (līdz 36 % ietaupījuma potenciāls)",
     "Maximum response window for critical operational tickets": "Maksimālais atbildes logs kritiskajiem operatīvajiem pieteikumiem",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Ģenerēt jaunu kriptogrāfisko licences atslēgu",
     "⚡ Instant Automated Key Delivery": "⚡ Tūlītēja automātiska atslēgas piegāde",
     "⚡ Launch Interactive Simulator": "⚡ Palaist interaktīvo simulatoru",
+    "⚡ Live Cloud ERP Demo": "⚡ Cloud ERP demonstrācija tiešraidē",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Atbilde zem sekundes un bezsaistes PWA gatavība",
     "✓ 16 medical departments & AI health assistant": "✓ 16 medicīnas nodaļas un AI veselības asistents",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 darbības profili: Austrumu • Turku • Eiropas amatniecība",

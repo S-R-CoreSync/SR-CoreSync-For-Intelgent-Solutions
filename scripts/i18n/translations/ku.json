@@ -1,7 +1,8 @@
 {
   "language": "ku",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Nîşana \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "UI/UX-a taybet a 100% berpirsiyar û payebilind",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Berawirdkirina berfireh li ser binesazî, lihevhatin, AI û SLAyên pargîdaniyê",
     "Developer SDK • REST & Node": "SDK ya Pêşvebir • REST û Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Pêşxistina sepanên xwecî yên iOS û Android û sepanên webê yên berpirsiyar ên ji bo leza xebatê ya di bin çirkeyê de hatine çêkirin.",
+    "Dhr. Mohammad Raed Kaakeh": "Birêz Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Guherîna Dîjîtal û ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Hesabkerê Rasterast a Karbidestiya Lêçûnê û ROI",
     "Direct loaded hourly cost applied to company operational payroll": "Lêçûna saetê ya rasterast a li ser mûçeya operasyonel a pargîdaniyê tê sepandin",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Werin Em bi Hev re Pergala We ya Stratejîk a Paşerojê Avakin",
     "License Tier / Duration:": "Asta Lîsansê / Dem:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Midilwareya sivik ku qeydên kassaya firotanê rasterast bi hesabgiriya ERP ya cloud ve girêdide bê guhertina hardwareya kevnare.",
+    "Live ERP Demo ⚡": "Demo ya ERP ya Zindî ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Clouda birêvebirî, paşvegerên rojane yên otomatîk, telemetrî 24/7 û bersiva SLA ya lezgîn",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Karûbarên manuel an rûpelên belavbûyî (heta 36% potansiyela teserûfê)",
     "Maximum response window for critical operational tickets": "Serdema bersiva herî zêde ji bo bilêtên operasyonel ên krîtîk",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Kilîda Lîsansa Krîptografîk a Nû Çêke",
     "⚡ Instant Automated Key Delivery": "⚡ Radestkirina Kilîdê ya Otomatîk a Tavilê",
     "⚡ Launch Interactive Simulator": "⚡ Sîmulatora Interaktîf Bidest Bixe",
+    "⚡ Live Cloud ERP Demo": "⚡ Demo ya Cloud ERP ya Zindî",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Bersiva bin-saniyeyê û amadebûna PWA ya offline",
     "✓ 16 medical departments & AI health assistant": "✓ 16 beşên bijîşkî û alîkarê tenduristiyê yê AI",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 profîlên xebitandinê: Rojhilatî • Tirkî • Hunera Ewropî",

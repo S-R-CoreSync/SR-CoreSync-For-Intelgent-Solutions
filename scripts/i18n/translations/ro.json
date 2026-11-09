@@ -1,7 +1,8 @@
 {
   "language": "ro",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Insignă „Powered by CoreSync”",
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "UI/UX personalizat, 100% responsive și de nivel înalt",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Comparație detaliată a infrastructurii, conformității, AI și SLA-urilor enterprise",
     "Developer SDK • REST & Node": "Developer SDK • REST și Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Dezvoltarea de aplicații native iOS și Android și aplicații web responsive proiectate pentru timpi de execuție sub o secundă.",
+    "Dhr. Mohammad Raed Kaakeh": "dl Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Transformare digitală și ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Calculator direct de eficiență a costurilor și ROI",
     "Direct loaded hourly cost applied to company operational payroll": "Cost orar direct aplicat statului de plată operațional al companiei",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Să proiectăm împreună următorul dumneavoastră sistem strategic",
     "License Tier / Duration:": "Nivel de licență / durată:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Middleware ușor care conectează casele POS direct la contabilitatea ERP cloud fără a înlocui hardware-ul legacy.",
+    "Live ERP Demo ⚡": "Demo ERP în direct ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Cloud gestionat, backup-uri automate zilnice, telemetrie 24/7 și răspuns SLA imediat",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Fluxuri de lucru manuale sau foi de calcul împrăștiate (până la 36% potențial de economii)",
     "Maximum response window for critical operational tickets": "Fereastra maximă de răspuns pentru tichetele operaționale critice",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Generează o nouă cheie de licență criptografică",
     "⚡ Instant Automated Key Delivery": "⚡ Livrare automată instantanee a cheii",
     "⚡ Launch Interactive Simulator": "⚡ Pornește simulatorul interactiv",
+    "⚡ Live Cloud ERP Demo": "⚡ Demo Cloud ERP în direct",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Răspuns sub o secundă și pregătire PWA offline",
     "✓ 16 medical departments & AI health assistant": "✓ 16 departamente medicale și asistent de sănătate AI",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 profiluri operaționale: Oriental • Turcesc • Artizanat european",

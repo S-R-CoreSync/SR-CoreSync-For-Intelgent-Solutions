@@ -1,7 +1,8 @@
 {
   "language": "el",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Σήμα «Powered by CoreSync»",
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "100% responsive, κορυφαίος σχεδιασμός UI/UX κατά παραγγελία",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Λεπτομερής σύγκριση υποδομής, συμμόρφωσης, AI και εταιρικών SLA",
     "Developer SDK • REST & Node": "Developer SDK • REST και Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Ανάπτυξη εγγενών εφαρμογών iOS και Android και responsive web εφαρμογών σχεδιασμένων για χρόνους εκτέλεσης κάτω του ενός δευτερολέπτου.",
+    "Dhr. Mohammad Raed Kaakeh": "κ. Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Ψηφιακός Μετασχηματισμός και ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Άμεσος υπολογιστής κόστους-αποδοτικότητας και ROI",
     "Direct loaded hourly cost applied to company operational payroll": "Άμεσο ωριαίο κόστος που εφαρμόζεται στο λειτουργικό μισθολόγιο της εταιρείας",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Ας σχεδιάσουμε μαζί το επόμενο στρατηγικό σας σύστημα",
     "License Tier / Duration:": "Επίπεδο άδειας / διάρκεια:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Ελαφρύ middleware που συνδέει ταμειακές μηχανές POS απευθείας με λογιστική ERP cloud χωρίς αντικατάσταση παλαιού υλικού.",
+    "Live ERP Demo ⚡": "Ζωντανό demo ERP ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Διαχειριζόμενο cloud, καθημερινά αυτόματα αντίγραφα ασφαλείας, τηλεμετρία 24/7 και άμεση απόκριση SLA",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Χειροκίνητες ροές εργασίας ή διάσπαρτα υπολογιστικά φύλλα (έως 36% δυναμικό εξοικονόμησης)",
     "Maximum response window for critical operational tickets": "Μέγιστο παράθυρο απόκρισης για κρίσιμα επιχειρησιακά tickets",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Δημιουργία νέου κρυπτογραφικού κλειδιού άδειας",
     "⚡ Instant Automated Key Delivery": "⚡ Άμεση αυτοματοποιημένη παράδοση κλειδιού",
     "⚡ Launch Interactive Simulator": "⚡ Εκκίνηση διαδραστικού εξομοιωτή",
+    "⚡ Live Cloud ERP Demo": "⚡ Ζωντανό demo Cloud ERP",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Απόκριση κάτω του δευτερολέπτου και ετοιμότητα offline PWA",
     "✓ 16 medical departments & AI health assistant": "✓ 16 ιατρικά τμήματα και AI βοηθός υγείας",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 προφίλ λειτουργίας: Ανατολίτικο • Τουρκικό • Ευρωπαϊκή χειροτεχνία",

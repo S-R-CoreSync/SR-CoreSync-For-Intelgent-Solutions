@@ -1,7 +1,8 @@
 {
   "language": "sl",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Značka »Powered by CoreSync«",
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (brez sledi CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "100 % odziven, vrhunski UI/UX po meri",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Podrobna primerjava infrastrukture, skladnosti, AI in poslovnih SLA",
     "Developer SDK • REST & Node": "Developer SDK • REST in Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Razvoj izvornih aplikacij za iOS in Android ter odzivnih spletnih aplikacij, zasnovanih za čase izvajanja pod eno sekundo.",
+    "Dhr. Mohammad Raed Kaakeh": "g. Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Digitalna preobrazba in ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Neposredni kalkulator stroškovne učinkovitosti in ROI",
     "Direct loaded hourly cost applied to company operational payroll": "Neposredni urni strošek, uporabljen na operativno plačilno listo podjetja",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Skupaj zasnujmo vaš naslednji strateški sistem",
     "License Tier / Duration:": "Raven licence / trajanje:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Lahka vmesna programska oprema, ki poveže blagajne POS neposredno z računovodstvom ERP v oblaku brez zamenjave podedovane strojne opreme.",
+    "Live ERP Demo ⚡": "Demo ERP v živo ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Upravljani oblak, dnevne samodejne varnostne kopije, 24/7 telemetrija in takojšen odziv SLA",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Ročni delovni tokovi ali raztresene preglednice (do 36 % potenciala prihranka)",
     "Maximum response window for critical operational tickets": "Najdaljše odzivno okno za kritične operativne zahtevke",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Ustvari nov kriptografski licenčni ključ",
     "⚡ Instant Automated Key Delivery": "⚡ Takojšnja samodejna dostava ključa",
     "⚡ Launch Interactive Simulator": "⚡ Zaženi interaktivni simulator",
+    "⚡ Live Cloud ERP Demo": "⚡ Demo Cloud ERP v živo",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Odziv pod sekundo in pripravljenost na offline PWA",
     "✓ 16 medical departments & AI health assistant": "✓ 16 medicinskih oddelkov in AI zdravstveni asistent",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 delovni profili: Orientalski • Turški • Evropska obrt",

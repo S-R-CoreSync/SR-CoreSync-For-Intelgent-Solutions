@@ -1,7 +1,8 @@
 {
   "language": "lt",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Ženklelis „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (be CoreSync pėdsakų)",
     "100% responsive, high-end bespoke UI/UX": "100 % prisitaikantis, aukščiausios klasės individualus UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Išsamus infrastruktūros, atitikties, AI ir įmonės SLA palyginimas",
     "Developer SDK • REST & Node": "Kūrėjo SDK • REST ir Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Natyvių iOS ir Android programėlių bei prisitaikančių žiniatinklio programų, sukurtų veikimo laikui iki vienos sekundės, kūrimas.",
+    "Dhr. Mohammad Raed Kaakeh": "p. Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Skaitmeninė transformacija ir ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Tiesioginė kaštų efektyvumo ir ROI skaičiuoklė",
     "Direct loaded hourly cost applied to company operational payroll": "Tiesioginė valandinė kaina, taikoma įmonės operatyviniam darbo užmokesčiui",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Suprojektuokime kartu jūsų kitą strateginę sistemą",
     "License Tier / Duration:": "Licencijos lygis / trukmė:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Lengvas tarpinės programinės įrangos sluoksnis, jungiantis POS kasos aparatus tiesiogiai su debesų ERP apskaita, nekeičiant paveldėtos techninės įrangos.",
+    "Live ERP Demo ⚡": "ERP demonstracija gyvai ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Valdoma debesis, kasdienės automatinės atsarginės kopijos, 24/7 telemetrija ir momentinis SLA atsakas",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Rankinės darbo eigos arba išbarstytos skaičiuoklės (iki 36 % taupymo potencialo)",
     "Maximum response window for critical operational tickets": "Maksimalus atsakymo laikas kritiniams operaciniams užklausoms",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Generuoti naują kriptografinį licencijos raktą",
     "⚡ Instant Automated Key Delivery": "⚡ Momentinis automatinis rakto pristatymas",
     "⚡ Launch Interactive Simulator": "⚡ Paleisti interaktyvųjį imituoklį",
+    "⚡ Live Cloud ERP Demo": "⚡ Debesijos ERP demonstracija gyvai",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Reakcija per mažiau nei sekundę ir neprisijungusio PWA pasirengimas",
     "✓ 16 medical departments & AI health assistant": "✓ 16 medicinos skyrių ir AI sveikatos asistentas",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 veiklos profiliai: Rytietiškas • Turkiškas • Europos amatas",

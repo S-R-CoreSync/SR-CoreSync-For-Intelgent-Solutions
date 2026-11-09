@@ -1,7 +1,8 @@
 {
   "language": "ckb",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "نیشانەی \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "UI/UXی تایبەت و بەرزی 100% وەڵامدەرەو",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "بەراوردکردنی ورد لەسەر ژێرخان، گونجاوی، AI و SLAی کۆمپانیا",
     "Developer SDK • REST & Node": "SDKی گەشەپێدەر • REST و Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "گەشەپێدانی ئەپە ڕەسەنەکانی iOS و Android و ئەپە وێبە وەڵامدەرەوەکان کە بۆ خێرایی جێبەجێکردنی کەمتر لە چرکە دروستکراون.",
+    "Dhr. Mohammad Raed Kaakeh": "بەڕێز محمد ڕائید کاکێ",
     "Digital Transformation & ERP": "گۆڕانی دیجیتاڵی و ERP",
     "Direct Cost-Efficiency & ROI Calculator": "حیسابکەری ڕاستەوخۆی کاریگەریی تێچوو و ROI",
     "Direct loaded hourly cost applied to company operational payroll": "تێچووی کاتژمێری ڕاستەوخۆ کە لەسەر مووچەی کارکردنی کۆمپانیا جێبەجێ دەکرێت",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "وەرن سیستەمی ستراتیژی داهاتووتان پێکەوە دروست بکەین",
     "License Tier / Duration:": "ئاستی مۆڵەت / ماوە:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "ناوەندەری سووک کە تۆمارەکانی کاشێری فرۆشتن ڕاستەوخۆ بە ژمێریاری ERPی هەور دەبەستێتەوە بەبێ گۆڕینی هاردوێری کۆن.",
+    "Live ERP Demo ⚡": "دیمۆی ERP ی زیندوو ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "هەوری بەڕێوەبراو، پاشەکەوتکردنی ڕۆژانەی خۆکار، تەلەمەتری 24/7 و وەڵامی SLAی خێرا",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "کارە دەستییەکان یان خشتەکانی بڵاوبووەوە (تا 36% توانای پاشەکەوت)",
     "Maximum response window for critical operational tickets": "زۆرترین ماوەی وەڵامدانەوە بۆ تیکێتەکانی کارکردنی گرنگ",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ کلیلی مۆڵەتی کریپتۆگرافیای نوێ دروست بکە",
     "⚡ Instant Automated Key Delivery": "⚡ گەیاندنی خۆکاری کلیلی دەستبەجێ",
     "⚡ Launch Interactive Simulator": "⚡ سیمولاتۆری کارلێکەر دەستپێبکە",
+    "⚡ Live Cloud ERP Demo": "⚡ دیمۆی Cloud ERP ی زیندوو",
     "⚡ Sub-second response & offline PWA readiness": "⚡ وەڵامدانەوەی ژێر چرکە و ئامادەیی PWA ی ئۆفلاین",
     "✓ 16 medical departments & AI health assistant": "✓ ١٦ بەشی پزیشکی و یاریدەدەری تەندروستی AI",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ ٣ پرۆفایلی کارکردن: ڕۆژهەڵاتی • تورکی • دەستکردی ئەورووپی",

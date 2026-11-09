@@ -1,7 +1,8 @@
 {
   "language": "fi",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Merkki \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ei CoreSync-jälkeä)",
     "100% responsive, high-end bespoke UI/UX": "100 % responsiivinen, huippuluokan räätälöity UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Yksityiskohtainen vertailu infrastruktuurista, vaatimustenmukaisuudesta, AI:sta ja yritystason SLA:ista",
     "Developer SDK • REST & Node": "Kehittäjä-SDK • REST ja Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Natiivien iOS- ja Android-sovellusten sekä responsiivisten verkkosovellusten kehittäminen alle sekunnin suoritusajoille.",
+    "Dhr. Mohammad Raed Kaakeh": "hr. Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Digitaalinen transformaatio ja ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Suora kustannustehokkuus- ja ROI-laskuri",
     "Direct loaded hourly cost applied to company operational payroll": "Suora tuntikustannus yrityksen operatiiviseen palkkasummaan sovellettuna",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Rakennetaan yhdessä seuraava strateginen järjestelmäsi",
     "License Tier / Duration:": "Lisenssitaso / kesto:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Kevyt väliohjelmisto, joka yhdistää POS-kassalaitteet suoraan pilvi-ERP-kirjanpitoon vaihtamatta legacy-laitteistoa.",
+    "Live ERP Demo ⚡": "Live ERP -demo ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Hallinnoitu pilvi, päivittäiset automaattiset varmuuskopiot, 24/7-telemetria ja välitön SLA-vastaus",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Manuaaliset työnkulut tai hajallaan olevat taulukot (jopa 36 % säästöpotentiaali)",
     "Maximum response window for critical operational tickets": "Kriittisten operatiivisten tikettien enimmäisvasteaika",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Luo uusi kryptografinen lisenssiavain",
     "⚡ Instant Automated Key Delivery": "⚡ Välitön automaattinen avaimen toimitus",
     "⚡ Launch Interactive Simulator": "⚡ Käynnistä interaktiivinen simulaattori",
+    "⚡ Live Cloud ERP Demo": "⚡ Live Cloud ERP -demo",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Alle sekunnin vaste ja offline-PWA-valmius",
     "✓ 16 medical departments & AI health assistant": "✓ 16 lääketieteen osastoa ja AI-terveysavustaja",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 toimintaprofiilia: itämäinen • turkkilainen • eurooppalainen käsityö",

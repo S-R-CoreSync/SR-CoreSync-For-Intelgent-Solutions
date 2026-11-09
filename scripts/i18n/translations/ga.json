@@ -1,7 +1,8 @@
 {
   "language": "ga",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Suaitheantas \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "UI/UX saincheaptha 100% inoiriúnaithe, ardleibhéil",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Comparáid mhionsonraithe ar bhonneagar, comhlíonadh, AI agus SLAanna fiontair",
     "Developer SDK • REST & Node": "Developer SDK • REST agus Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Forbairt aipeanna dúchasacha iOS agus Android agus feidhmchlár gréasáin inoiriúnaithe atá deartha do luasanna forghníomhaithe faoi bhun soicind.",
+    "Dhr. Mohammad Raed Kaakeh": "An tUasal Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Claochlú Digiteach agus ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Áireamhán Díreach Éifeachtúlachta Costais agus ROI",
     "Direct loaded hourly cost applied to company operational payroll": "Costas uaireanta díreach a chuirtear i bhfeidhm ar phárolla oibriúcháin na cuideachta",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Déanaimis Do Chéad Chóras Straitéiseach Eile a Innealtóireacht le Chéile",
     "License Tier / Duration:": "Leibhéal Ceadúnais / Fad:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Meán-earraí éadroma a nascann cláir airgid pointe díola go díreach le cuntasaíocht ERP néal gan crua-earraí leagáide a athsholáthar.",
+    "Live ERP Demo ⚡": "Taispeántas ERP Beo ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Néal bainistithe, cúltacaí uathoibrithe laethúla, teiliméadracht 24/7 agus freagairt SLA láithreach",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Sreafaí oibre láimhe nó scarbhileoga scaipthe (suas le 36% poitéinseal coigiltis)",
     "Maximum response window for critical operational tickets": "Uasfhuinneog freagartha do thicéid oibriúcháin chriticiúla",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Eochair Cheadúnais Chripteagrafach Nua a Ghiniúint",
     "⚡ Instant Automated Key Delivery": "⚡ Seachadadh Eochrach Uathoibríoch Láithreach",
     "⚡ Launch Interactive Simulator": "⚡ Seol an tInsamhlóir Idirghníomhach",
+    "⚡ Live Cloud ERP Demo": "⚡ Taispeántas Cloud ERP Beo",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Freagairt faoi bhun soicind agus ullmhacht PWA as líne",
     "✓ 16 medical departments & AI health assistant": "✓ 16 roinn leighis agus cúntóir sláinte AI",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 phróifíl oibriúcháin: Oirthearach • Tuircis • Ceardaíocht Eorpach",

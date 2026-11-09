@@ -1,7 +1,8 @@
 {
   "language": "mt",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Badge \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "UI/UX mfassal apposta, 100% responsive u ta' livell għoli",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Paragun dettaljat tal-infrastruttura, konformità, AI u SLA tal-intrapriża",
     "Developer SDK • REST & Node": "Developer SDK • REST u Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Żvilupp ta' apps nattivi iOS u Android u applikazzjonijiet web responsive maħsuba għal ħinijiet ta' eżekuzzjoni ta' inqas minn sekonda.",
+    "Dhr. Mohammad Raed Kaakeh": "Sur Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Trasformazzjoni Diġitali u ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Kalkulatur Dirett tal-Effiċjenza fl-Ispejjeż u ROI",
     "Direct loaded hourly cost applied to company operational payroll": "Kost orarju dirett applikat għall-payroll operattiv tal-kumpanija",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Inġinierjaw Flimkien is-Sistema Strateġika li Jmiss tiegħek",
     "License Tier / Duration:": "Livell tal-Liċenzja / Tul:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Middleware ħafif li jgħaqqad il-kaxxi tal-POS direttament mal-kontabilità ERP tal-cloud mingħajr ma jbiddel il-hardware legacy.",
+    "Live ERP Demo ⚡": "Demo ERP live ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Cloud ġestit, backups awtomatiċi ta' kuljum, telemetrija 24/7 u rispons SLA immedjat",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Flussi tax-xogħol manwali jew spreadsheets imxerrda (sa 36% potenzjal ta' tfaddil)",
     "Maximum response window for critical operational tickets": "L-akbar tieqa ta' rispons għal tickets operattivi kritiċi",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Iġġenera Ċavetta Ġdida tal-Liċenzja Kriptografika",
     "⚡ Instant Automated Key Delivery": "⚡ Kunsinna Awtomatika Instantanja taċ-Ċavetta",
     "⚡ Launch Interactive Simulator": "⚡ Ibda s-Simulatur Interattiv",
+    "⚡ Live Cloud ERP Demo": "⚡ Demo Cloud ERP live",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Rispons ta' inqas minn sekonda u PWA offline lesta",
     "✓ 16 medical departments & AI health assistant": "✓ 16-il dipartiment mediku u assistent tas-saħħa bl-AI",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 profili operattivi: Orjentali • Tork • Artiġjanat Ewropew",

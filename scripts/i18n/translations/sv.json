@@ -1,7 +1,8 @@
 {
   "language": "sv",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Märke \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Godkända operativa basparametrar",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (inga CoreSync-spår)",
     "100% responsive, high-end bespoke UI/UX": "100 % responsiv, exklusiv skräddarsydd UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Detaljerad jämförelse av infrastruktur, efterlevnad, AI och företags-SLA:er",
     "Developer SDK • REST & Node": "Developer SDK • REST och Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Utveckling av inbyggda iOS- och Android-appar samt responsiva webbapplikationer designade för körtider under en sekund.",
+    "Dhr. Mohammad Raed Kaakeh": "hr Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Digital transformation och ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Direkt kostnadseffektivitets- och ROI-kalkylator",
     "Direct loaded hourly cost applied to company operational payroll": "Direkt timkostnad tillämpad på företagets operativa lönesumma",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Låt oss designa ditt nästa strategiska system tillsammans",
     "License Tier / Duration:": "Licensnivå / varaktighet:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Lättvikts-mellanprogram som kopplar POS-kassaapparater direkt till moln-ERP-redovisning utan att byta ut legacy-hårdvara.",
+    "Live ERP Demo ⚡": "Live ERP-demo ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Hanterat moln, dagliga automatiska säkerhetskopior, 24/7-telemetri och omedelbart SLA-svar",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Manuella arbetsflöden eller utspridda kalkylblad (upp till 36 % besparingspotential)",
     "Maximum response window for critical operational tickets": "Maximalt svarstidsfönster för kritiska driftärenden",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Generera ny kryptografisk licensnyckel",
     "⚡ Instant Automated Key Delivery": "⚡ Omedelbar automatisk nyckelleverans",
     "⚡ Launch Interactive Simulator": "⚡ Starta interaktiv simulator",
+    "⚡ Live Cloud ERP Demo": "⚡ Live Cloud ERP-demo",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Svar under en sekund och offline-PWA-beredskap",
     "✓ 16 medical departments & AI health assistant": "✓ 16 medicinska avdelningar och AI-hälsoassistent",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 driftprofiler: Orientalisk • Turkisk • Europeiskt hantverk",

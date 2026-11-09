@@ -1,7 +1,8 @@
 {
   "language": "sk",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Odznak „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Schválené prevádzkové základné parametre",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez stopy CoreSync)",
     "100% responsive, high-end bespoke UI/UX": "100 % responzívny, špičkový UI/UX na mieru",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Podrobné porovnanie infraštruktúry, compliance, AI a podnikových SLA",
     "Developer SDK • REST & Node": "Developer SDK • REST a Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Vývoj natívnych aplikácií pre iOS a Android a responzívnych webových aplikácií navrhnutých pre časy spustenia pod jednu sekundu.",
+    "Dhr. Mohammad Raed Kaakeh": "pán Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Digitálna transformácia a ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Priama kalkulačka nákladovej efektívnosti a ROI",
     "Direct loaded hourly cost applied to company operational payroll": "Priame hodinové náklady aplikované na prevádzkové mzdové náklady spoločnosti",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Navrhnime spoločne váš ďalší strategický systém",
     "License Tier / Duration:": "Licenčná úroveň / trvanie:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Ľahký middleware prepájajúci POS pokladnice priamo s cloudovým ERP účtovníctvom bez výmeny legacy hardvéru.",
+    "Live ERP Demo ⚡": "Živé demo ERP ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Managed cloud, denné automatické zálohy, 24/7 telemetria a okamžitá SLA reakcia",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Manuálne pracovné postupy alebo roztrúsené tabuľky (až 36 % potenciál úspor)",
     "Maximum response window for critical operational tickets": "Maximálny čas odozvy pre kritické prevádzkové tikety",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Vygenerovať nový kryptografický licenčný kľúč",
     "⚡ Instant Automated Key Delivery": "⚡ Okamžité automatické doručenie kľúča",
     "⚡ Launch Interactive Simulator": "⚡ Spustiť interaktívny simulátor",
+    "⚡ Live Cloud ERP Demo": "⚡ Živé demo Cloud ERP",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Odozva pod sekundu a pripravenosť offline PWA",
     "✓ 16 medical departments & AI health assistant": "✓ 16 lekárskych oddelení a AI zdravotný asistent",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 prevádzkové profily: Orientálny • Turecký • Európske remeslo",

@@ -1,7 +1,8 @@
 {
   "language": "tr",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\" rozeti",
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
     "100% responsive, high-end bespoke UI/UX": "%100 duyarlı, üst düzey özel UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Altyapı, uyumluluk, AI ve kurumsal SLA'lar arasında ayrıntılı karşılaştırma",
     "Developer SDK • REST & Node": "Geliştirici SDK • REST ve Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Saniye altı çalışma hızları için tasarlanmış yerel iOS ve Android uygulamaları ile duyarlı web uygulamaları geliştirme.",
+    "Dhr. Mohammad Raed Kaakeh": "Bay Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Dijital Dönüşüm ve ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Doğrudan Maliyet Verimliliği ve ROI Hesaplayıcısı",
     "Direct loaded hourly cost applied to company operational payroll": "Şirketin operasyonel bordrosuna uygulanan doğrudan saatlik maliyet",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Bir Sonraki Stratejik Sisteminizi Birlikte İnşa Edelim",
     "License Tier / Duration:": "Lisans Katmanı / Süre:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Eski donanımı değiştirmeden satış noktası yazarkasalarını doğrudan bulut ERP muhasebesine bağlayan hafif ara katman yazılımı.",
+    "Live ERP Demo ⚡": "Canlı ERP Demosu ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Yönetilen bulut, günlük otomatik yedeklemeler, 24/7 telemetri ve anında SLA yanıtı",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Manuel iş akışları veya dağınık elektronik tablolar (%36'ya kadar tasarruf potansiyeli)",
     "Maximum response window for critical operational tickets": "Kritik operasyonel talepler için maksimum yanıt penceresi",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Yeni Kriptografik Lisans Anahtarı Oluştur",
     "⚡ Instant Automated Key Delivery": "⚡ Anında Otomatik Anahtar Teslimi",
     "⚡ Launch Interactive Simulator": "⚡ Etkileşimli Simülatörü Başlat",
+    "⚡ Live Cloud ERP Demo": "⚡ Canlı Bulut ERP Demosu",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Saniye altı yanıt ve çevrimdışı PWA hazırlığı",
     "✓ 16 medical departments & AI health assistant": "✓ 16 tıbbi departman ve AI sağlık asistanı",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 çalışma profili: Oryantal • Türk • Avrupa Zanaat",

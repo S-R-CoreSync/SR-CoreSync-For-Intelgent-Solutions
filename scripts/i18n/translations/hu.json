@@ -1,7 +1,8 @@
 {
   "language": "hu",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "„Powered by CoreSync” jelvény",
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
     "100% responsive, high-end bespoke UI/UX": "100%-ban reszponzív, prémium egyedi UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Részletes összehasonlítás infrastruktúráról, megfelelőségről, AI-ról és vállalati SLA-król",
     "Developer SDK • REST & Node": "Fejlesztői SDK • REST és Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Natív iOS- és Android-alkalmazások, valamint reszponzív webalkalmazások fejlesztése egy másodperc alatti végrehajtási időre tervezve.",
+    "Dhr. Mohammad Raed Kaakeh": "Mohammad Raed Kaakeh úr",
     "Digital Transformation & ERP": "Digitális transzformáció és ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Közvetlen költséghatékonysági és ROI-kalkulátor",
     "Direct loaded hourly cost applied to company operational payroll": "Közvetlen óradíj a vállalat operatív bérköltségére alkalmazva",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Tervezzük meg együtt a következő stratégiai rendszerét",
     "License Tier / Duration:": "Licencszint / időtartam:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Könnyű middleware, amely a POS pénztárgépeket közvetlenül a felhő ERP könyveléshez kapcsolja a legacy hardver cseréje nélkül.",
+    "Live ERP Demo ⚡": "Élő ERP-demó ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Kezelt felhő, napi automatikus biztonsági mentések, 24/7 telemetria és azonnali SLA-válasz",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Kézi munkafolyamatok vagy szétszórt táblázatok (akár 36% megtakarítási potenciál)",
     "Maximum response window for critical operational tickets": "Maximális válaszidő kritikus operatív jegyekre",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Új kriptográfiai licenckulcs létrehozása",
     "⚡ Instant Automated Key Delivery": "⚡ Azonnali automatikus kulcskézbesítés",
     "⚡ Launch Interactive Simulator": "⚡ Interaktív szimulátor indítása",
+    "⚡ Live Cloud ERP Demo": "⚡ Élő Cloud ERP-demó",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Másodperc alatti válasz és offline PWA-készség",
     "✓ 16 medical departments & AI health assistant": "✓ 16 orvosi osztály és AI egészségügyi asszisztens",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 működési profil: keleti • török • európai kézműves",

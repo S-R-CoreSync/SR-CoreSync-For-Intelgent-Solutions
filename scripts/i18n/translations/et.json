@@ -1,7 +1,8 @@
 {
   "language": "et",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "Märgis „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Kinnitatud operatiivsed baasparameetrid",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (ilma CoreSync'i jäljeta)",
     "100% responsive, high-end bespoke UI/UX": "100% responsiivne, tipptasemel kohandatud UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Detailne võrdlus infrastruktuuri, vastavuse, AI ja ettevõtte SLA-de lõikes",
     "Developer SDK • REST & Node": "Arendaja SDK • REST ja Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Natiivsete iOS- ja Androidi rakenduste ning reageerivate veebirakenduste arendamine, mis on loodud alla ühe sekundi täitmisajale.",
+    "Dhr. Mohammad Raed Kaakeh": "hr Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Digitaalne transformatsioon ja ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Otsene kuluefektiivsuse ja ROI kalkulaator",
     "Direct loaded hourly cost applied to company operational payroll": "Otsene tunnikulu, mida rakendatakse ettevõtte operatiivsele palgafondile",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Ehitame koos teie järgmise strateegilise süsteemi",
     "License Tier / Duration:": "Litsentsi tase / kestus:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Kerge vahetarkvara, mis ühendab POS-kassad otse pilve-ERP raamatupidamisega ilma pärandriistvara väljavahetamata.",
+    "Live ERP Demo ⚡": "Reaalajas ERP demo ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Hallatud pilv, igapäevased automaatsed varukoopiad, 24/7 telemeetria ja kohene SLA vastus",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Käsitsi töövood või hajutatud arvutustabelid (kuni 36% säästupotentsiaali)",
     "Maximum response window for critical operational tickets": "Kriitiliste operatiivsete piletite maksimaalne vastuseaeg",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Loo uus krüptograafiline litsentsivõti",
     "⚡ Instant Automated Key Delivery": "⚡ Kohene automaatne võtme kohaletoimetamine",
     "⚡ Launch Interactive Simulator": "⚡ Käivita interaktiivne simulaator",
+    "⚡ Live Cloud ERP Demo": "⚡ Reaalajas Cloud ERP demo",
     "⚡ Sub-second response & offline PWA readiness": "⚡ All-sekundiline reageerimine ja offline PWA valmisolek",
     "✓ 16 medical departments & AI health assistant": "✓ 16 meditsiiniosakonda ja AI terviseassistent",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 tööprofiili: idamaine • türgi • Euroopa käsitöö",

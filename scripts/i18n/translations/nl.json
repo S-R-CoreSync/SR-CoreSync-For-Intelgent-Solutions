@@ -1,7 +1,8 @@
 {
   "language": "nl",
-  "count": 437,
+  "count": 441,
   "strings": {
+    "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\"-badge",
     "1. Approved Operational Baseline Parameters": "1. Goedgekeurde operationele basisparameters",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (geen CoreSync-voetafdruk)",
     "100% responsive, high-end bespoke UI/UX": "100% responsief, hoogwaardig maatwerk UI/UX",
@@ -121,6 +122,7 @@
     "Detailed comparison across infrastructure, compliance, AI, and enterprise SLAs": "Gedetailleerde vergelijking van infrastructuur, compliance, AI en enterprise-SLA's",
     "Developer SDK • REST & Node": "Developer SDK • REST en Node",
     "Developing native iOS & Android applications and responsive web applications engineered for sub-second execution speeds.": "Ontwikkeling van native iOS- en Android-apps en responsieve webapplicaties, gebouwd voor uitvoeringstijden onder één seconde.",
+    "Dhr. Mohammad Raed Kaakeh": "Dhr. Mohammad Raed Kaakeh",
     "Digital Transformation & ERP": "Digitale transformatie en ERP",
     "Direct Cost-Efficiency & ROI Calculator": "Directe kostenefficiëntie- en ROI-calculator",
     "Direct loaded hourly cost applied to company operational payroll": "Directe uurloonkosten toegepast op de operationele loonlijst van het bedrijf",
@@ -222,6 +224,7 @@
     "Let's Engineer Your Next Strategic System Together": "Laten we samen uw volgende strategische systeem bouwen",
     "License Tier / Duration:": "Licentieniveau / looptijd:",
     "Lightweight middleware bridging point-of-sale cash registers directly with cloud ERP accounting without replacing legacy hardware.": "Lichtgewicht middleware die kassasystemen rechtstreeks koppelt aan cloud-ERP-boekhouding zonder legacy-hardware te vervangen.",
+    "Live ERP Demo ⚡": "Live ERP-demo ⚡",
     "Managed cloud, daily automated backups, 24/7 telemetry & instant SLA response": "Beheerde cloud, dagelijkse automatische back-ups, 24/7 telemetrie en directe SLA-respons",
     "Manual workflows or scattered spreadsheets (Up to 36% savings potential)": "Handmatige workflows of verspreide spreadsheets (tot 36% besparingspotentieel)",
     "Maximum response window for critical operational tickets": "Maximale reactietijd voor kritieke operationele tickets",
@@ -355,6 +358,7 @@
     "⚡ Generate New Cryptographic License Key": "⚡ Nieuwe cryptografische licentiesleutel genereren",
     "⚡ Instant Automated Key Delivery": "⚡ Directe geautomatiseerde sleutellevering",
     "⚡ Launch Interactive Simulator": "⚡ Interactieve simulator starten",
+    "⚡ Live Cloud ERP Demo": "⚡ Live cloud-ERP-demo",
     "⚡ Sub-second response & offline PWA readiness": "⚡ Sub-seconde respons en offline PWA-gereedheid",
     "✓ 16 medical departments & AI health assistant": "✓ 16 medische afdelingen en AI-gezondheidsassistent",
     "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 bedrijfsprofielen: Orientaals • Turks • Europees ambachtelijk",
