@@ -38,7 +38,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXCLUDED_DIRS = {
     '.git', '_site', '.github', '.githooks', '.secrets', '.agents', '.vscode',
     '.zwork', 'api', 'config', 'workers', 'scripts', 'dist', 'deploy',
-    'scratch', 'node_modules', '__pycache__', 'docs'
+    'scratch', 'node_modules', '__pycache__', 'docs',
+    # stray Chrome print scratch dirs from an old local run: 329 junk files that
+    # no page references and that only bloat the Pages artefact.
+    'temp_chrome_print_dir', 'temp_chrome_print_dir2'
 }
 
 # Any other dot-directory is tooling state (editor caches, agent artefacts), not
@@ -62,7 +65,10 @@ EXCLUDED_ROOT_FILES = {
 }
 
 # Root level file suffixes that are never published.
-EXCLUDED_ROOT_SUFFIXES = ('.md', '.bat', '.url', '.ps1')
+# Root PDFs are internal working documents (the Arabic deployment guide and a
+# draft proposal). None is linked from a page; the non-ASCII file name also
+# trips the GitHub Pages file sync.
+EXCLUDED_ROOT_SUFFIXES = ('.md', '.bat', '.url', '.ps1', '.pdf')
 
 # ---------------------------------------------------------------------------
 # Root level development artifacts that must never be published.
