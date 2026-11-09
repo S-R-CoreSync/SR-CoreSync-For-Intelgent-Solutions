@@ -6,7 +6,7 @@
 
 ---
 
-## 1) الروابط المسحوبة
+## 1) الروابط المسحوبة (تحتاج إزالة في GSC)
 
 | الرابط | الحالة الآن | ملاحظة |
 |---|---|---|
@@ -22,7 +22,48 @@
 
 ---
 
-## 2) الإزالة عبر Google Search Console (خطوتان)
+## 2) نتيجة فحص كل الروابط القديمة المرشحة (33 رابطًا)
+
+فُحصت كل الصفحات التطويرية المستثناة (`EXCLUDED_DEV_PAGES`) وكل صفحات HTML المحذوفة من تاريخ Git،
+محليًا وعلى الموقع الحيّ، بتاريخ 09 نوفمبر 2026.
+
+### أ) صفحات مستثناة من النشر — كلها 404 ✅
+
+`debug_header.html`، `preview-booking-modal.html`، `preview-checkout.html`،
+`preview-client-portal.html`، `preview-comparison.html`، `preview-header.html`،
+`preview-invoice-quote.html`، `preview-license-manager.html`، `preview-software-modal.html`،
+`preview-welcome-email.html`، `preview_emblem_tuning.html`، `preview_new_official_embel.html`،
+`preview_roi_modal.html`.
+
+> 13 رابطًا → **404** جميعها. لا حاجة لأي إجراء إضافي.
+
+### ب) صفحات محذوفة من تاريخ Git — 404 ✅ (باستثناء المشروعة أدناه)
+
+`card_print_preview.html`، `invoice_branded_preview.html`، `presets/index-option1-slider.html`،
+`presets/index-option2-split.html`، `preview_mobile_fabs.html`، `preview_mobile_fabs_ready.html`،
+`preview_modal_en.html`، `preview_modal_en_ready.html`، `preview_modal_nl.html`،
+`preview_modal_nl_ready.html`، `preview_modal_switcher.html`، `preview-work-cleaning.html`،
+`test_mobile.html`، `test_rect.html`، `test_switch.html`.
+
+> 15 رابطًا → **404** جميعها.
+
+### ج) صفحات حيّة مشروعة — لا تُحذف ⚠️
+
+| الرابط | الحالة | السبب |
+|---|---|---|
+| `3d-product-configurator.html` | 200 | مرتبطة من `index.html` و`dynamic-qr-studio.html` — صفحة منتج حقيقية |
+| `multi-cbdc-bridge.html` | 200 | مُدرجة في `sitemap.xml` وضمن مجموعة صفحات الحلول السيادية |
+| `sovereign-arbitration-hub.html` | 200 | مُدرجة في `sitemap.xml` وضمن مجموعة صفحات الحلول السيادية |
+| `zkp-confidential-enclave.html` | 200 | مُدرجة في `sitemap.xml` وضمن مجموعة صفحات الحلول السيادية |
+
+هذه الصفحات ظهرت في تاريخ Git كـ«محذوفة» لأنها حُذفت ثم أُعيدت لاحقًا؛ وهي الآن **متعقَّبة في Git
+ومنشورة ومربوطة داخليًا**، لذا تُستثنى من أي قائمة إزالة.
+
+**الخلاصة:** 30 رابطًا مسحوبًا مؤكد بـ404، و4 صفحات حيّة مشروعة. لا توجد روابط مكشوفة تحتاج معالجة.
+
+---
+
+## 3) الإزالة عبر Google Search Console (خطوتان)
 
 ### الخيار (أ) — أداة «إزالة المحتوى القديم» (الأسرع)
 
@@ -45,7 +86,7 @@
 
 ---
 
-## 3) التحقق بعد التنفيذ
+## 4) التحقق بعد التنفيذ
 
 ```powershell
 curl.exe -4 -sS -o NUL -w "%{http_code}`n" "https://sr-coresync.com/_trash_160/2026-11-08_1704/index.html"
@@ -59,7 +100,7 @@ curl.exe -4 -sS -o NUL -w "%{http_code}`n" "https://sr-coresync.com/_trash_160/2
 
 ---
 
-## 4) ضمان عدم التكرار
+## 5) ضمان عدم التكرار
 
 - `scripts/publish_set.py` يستثني **أي مجلد يبدأ بشرطة سفلية** (`_trash_*`، `_css_archive_*`، `_site`).
 - `.gitignore` يمنع إعادة إضافة هذه المجلدات إلى Git.
