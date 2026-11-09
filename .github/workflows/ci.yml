@@ -84,7 +84,7 @@ jobs:
       # in English. This fails the build when a page gains an untranslated
       # block. Lower the allowance as translation batches land; never raise it.
       - name: Translation leakage gate (ratchet)
-        run: python scripts/audit_translation_leakage.py --allow-english 292
+        run: python scripts/audit_translation_leakage.py --allow-english 275
 
       - name: Test the Cloudflare Lead Capture Worker
         run: node scripts/test_lead_worker.mjs
