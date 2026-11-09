@@ -36,6 +36,40 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, os.path.dirname(__file__))
 from fix_multilingual_hero import normalize_index_html
 
+# ---------------------------------------------------------------------------
+# Translation catalog
+#
+# The generator replaces English strings listed in this file's dictionaries.
+# Anything not listed stays English, silently. The catalog in
+# scripts/i18n/translations/<lang>.json is the durable answer: it is applied to
+# every file this script writes, so a regenerated page keeps its translations.
+# ---------------------------------------------------------------------------
+TRANSLATION_DIR = os.path.join(BASE_DIR, 'scripts', 'i18n', 'translations')
+try:
+    from apply_translations import apply_to_html as _apply_catalog
+except Exception:  # keep the generator usable without the catalog tooling
+    _apply_catalog = None
+_TRANSLATION_CACHE = {}
+
+
+def load_translation_catalog(code):
+    if code in _TRANSLATION_CACHE:
+        return _TRANSLATION_CACHE[code]
+    path = os.path.join(TRANSLATION_DIR, code + '.json')
+    catalog = {}
+    if os.path.exists(path):
+        try:
+            with open(path, encoding='utf-8') as fh:
+                data = json.load(fh)
+            if isinstance(data, dict) and 'strings' in data:
+                data = data['strings']
+            catalog = {k: v for k, v in data.items()
+                       if isinstance(v, str) and v.strip()}
+        except Exception as exc:
+            print('  ! translation catalog %s unreadable: %s' % (code, exc))
+    _TRANSLATION_CACHE[code] = catalog
+    return catalog
+
 DEMO_AR_PATH = os.path.join(BASE_DIR, 'demo.html')
 DEMO_EN_PATH = os.path.join(BASE_DIR, 'en', 'demo.html')
 INDEX_AR_PATH = os.path.join(BASE_DIR, 'index.html')
@@ -828,6 +862,11 @@ def update_file(file_path, current_lang_code, page_type="demo", is_subfolder=Fal
     if 'Sovereign Global Multilingual Hub Controller' not in c:
         c = c.replace('</body>', build_dropdown_js() + '\n</body>', 1)
 
+    catalog = load_translation_catalog(current_lang_code)
+    if catalog and _apply_catalog is not None:
+        c, _applied = _apply_catalog(c, catalog)
+        if _applied:
+            print(f"  translations applied: {len(_applied)} [{current_lang_code.upper()}]")
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(c)
     print(f"Updated: {os.path.basename(file_path)} [{current_lang_code.upper()}]")

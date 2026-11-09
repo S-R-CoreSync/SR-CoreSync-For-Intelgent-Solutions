@@ -1,13 +1,21 @@
 {
-  "_note": "Proof-of-pipeline sample. Keys are the exact English strings listed in i18n/gaps/no.json. Fill from there language by language; scripts/apply_translations.py rewrites only text nodes.",
+  "language": "no",
+  "count": 15,
   "strings": {
-    "Skip to main content": "Hopp til hovedinnhold",
-    "Digital Transformation & ERP": "Digital transformasjon og ERP",
+    "12+ Years Software Systems Engineering": "12+ års ingeniørarbeid med programvaresystemer",
+    "Amsterdam HQ, The Netherlands | European Union & Global Delivery": "Hovedkontor Amsterdam, Nederland | Den europeiske union og global levering",
     "Certified Principal Cloud Architect": "Sertifisert ledende skyarkitekt",
-    "Enterprise AI & LLM Automation": "Bedrifts-AI og LLM-automatisering",
-    "12+ Years Software Systems Engineering": "12+ års erfaring med programvaresystemer",
+    "Co-Founder & CFO // Financial ERP Architect": "Medgründer og CFO // Finansiell ERP-arkitekt",
+    "Co-Founder & CTO // Lead Cloud Systems Architect": "Medgründer og CTO // Ledende sky-systemarkitekt",
+    "Corporate Profile (PDF) 📄": "Selskapsprofil (PDF) 📄",
+    "Digital Transformation & ERP": "Digital transformasjon og ERP",
+    "Enterprise AI & LLM Automation": "Enterprise-AI og LLM-automatisering",
+    "Enterprise Cloud Architecture, ERP & Financial Intelligence Systems": "Enterprise-skyarkitektur, ERP og systemer for finansiell intelligens",
+    "IFRS & European Corporate Tax Compliance": "IFRS og europeisk selskapsskatteetterlevelse",
+    "Interactive Auto Slider 🔄": "Interaktiv automatisk slider 🔄",
+    "Odoo & Enterprise ERP Systems Architect": "Systemarkitekt for Odoo og enterprise-ERP",
     "Senior Financial & ERP Consultant": "Senior rådgiver innen finans og ERP",
-    "Odoo & Enterprise ERP Systems Architect": "Systemarkitekt for Odoo og bedrifts-ERP",
-    "IFRS & European Corporate Tax Compliance": "IFRS og europeisk selskapsbeskatning"
+    "Skip to main content": "Hopp til hovedinnhold",
+    "Smart NFC Card 📲": "Smart NFC-kort 📲"
   }
 }
