@@ -1,6 +1,6 @@
 {
   "language": "nl",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Goedgekeurde operationele basisparameters",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (geen CoreSync-voetafdruk)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Microseconde-uitvoeringssnelheid met volledige testsuites",
     "✓ Official XML tax returns & audit reports": "✓ Officiële XML-belastingaangiften en auditrapporten",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Realtime heartbeat-telemetrie en SLA-nalevingsstatistieken",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integratie van bonprinter en optische barcodescanner"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integratie van bonprinter en optische barcodescanner",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Redundant versleuteld back-upknooppunt in Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Veerkrachtige offline buffer met automatische herverbindingssynchronisatie",
+    "✓ Standard Customer Service RAG": "✓ Standaard klantenservice-RAG",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Afdrukken van facturen conform de standaard EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Drietalige dienstengids, nieuws, evenementen en vrijwilligerswerk",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Extreem kleine voetafdruk (< 15MB RAM-gebruik)",
+    "✓ Verified Genuine License": "✓ Geverifieerde authentieke licentie",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Volledig echt pakket downloaden (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Volledig ZIP-pakket downloaden",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 SEPA-bankoverschrijving",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabisch (Golf / Standaard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabisch (Levant / Syrië)",
+    "🌍 Voice Language & Dialect:": "🌍 Spraaktaal en dialect:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Cloudinfrastructuur en AMS-IX-hosting",
+    "🌐 Digital identity & 8K suite": "🌐 Digitale identiteit en 8K-suite",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Soevereine wereldtalen (29 ondersteunde talen en btw-regimes)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Officiële digitale contactkaart • slimme vCard",
+    "💡 Cloud store with automated ERP": "💡 Cloudwinkel met geautomatiseerde ERP",
+    "💬 Instant WhatsApp Chat": "💬 Direct WhatsApp-chat"
   }
 }

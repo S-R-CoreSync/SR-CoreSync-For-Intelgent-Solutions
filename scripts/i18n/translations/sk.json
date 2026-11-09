@@ -1,6 +1,6 @@
 {
   "language": "sk",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Schválené prevádzkové základné parametre",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez stopy CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Rýchlosť vykonávania v mikrosekundách s kompletnými testovacími sadami",
     "✓ Official XML tax returns & audit reports": "✓ Oficiálne XML daňové priznania a audítorské správy",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetria srdcového tepu v reálnom čase a metriky zhody so SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrácia tlačiarne účteniek a optického čítača čiarových kódov"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrácia tlačiarne účteniek a optického čítača čiarových kódov",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Redundantný šifrovaný záložný uzol v Amsterdame (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Odolný offline buffer so synchronizáciou po automatickom opätovnom pripojení",
+    "✓ Standard Customer Service RAG": "✓ Štandardný RAG zákazníckej podpory",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Tlač faktúr v súlade so štandardom EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Trojjazyčný adresár služieb, novinky, podujatia a dobrovoľníctvo",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Veľmi nízka stopa (< 15 MB spotreby RAM)",
+    "✓ Verified Genuine License": "✓ Overená autentická licencia",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Stiahnuť celý skutočný balík (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Stiahnuť celý balík ZIP",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Bankový prevod SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabčina (Perzský záliv / štandardná)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabčina (Levanta / Sýria)",
+    "🌍 Voice Language & Dialect:": "🌍 Jazyk hlasu a dialekt:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Cloudová infraštruktúra a hosting AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Digitálna identita a sada 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suverénne svetové jazyky (29 podporovaných jazykov a režimov DPH)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Oficiálna digitálna vizitka • inteligentná vCard",
+    "💡 Cloud store with automated ERP": "💡 Cloudový obchod s automatizovaným ERP",
+    "💬 Instant WhatsApp Chat": "💬 Okamžitý chat na WhatsAppe"
   }
 }

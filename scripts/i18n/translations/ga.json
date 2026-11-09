@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Luas forghníomhaithe micriseacainne le hiomlán tacair tástála",
     "✓ Official XML tax returns & audit reports": "✓ Tuairisceáin chánach XML oifigiúla agus tuarascálacha iniúchta",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Teiliméadracht bhuille croí fíor-ama agus méadraí comhlíonta SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Comhtháthú printéir admhála agus scanóra optúil barrachóid"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Comhtháthú printéir admhála agus scanóra optúil barrachóid",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Nód cúltaca criptithe iomarcach in Amstardam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Maolán as líne seasmhach le sioncronú athnascaidh uathoibríoch",
+    "✓ Standard Customer Service RAG": "✓ RAG caighdeánach um Chúram Custaiméirí",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Priontáil sonrasc de réir chaighdeán EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Eolaire seirbhísí trítheangach, nuacht, imeachtaí agus obair dheonach",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Lorg fíor-íseal (< 15MB de thomhaltas RAM)",
+    "✓ Verified Genuine License": "✓ Ceadúnas barántúil fíoraithe",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Íoslódáil an pacáiste fíor-iomlán (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Íoslódáil an pacáiste ZIP iomlán",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Aistriú bainc SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Araibis (Murascaill / Caighdeánach)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Araibis (Levant / An tSiria)",
+    "🌍 Voice Language & Dialect:": "🌍 Teanga gutha agus canúint:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Bonneagar Néal agus Óstáil AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Aitheantas digiteach agus sraith 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Teangacha domhanda ceannasacha (29 teanga le tacaíocht agus córais CBL)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Cárta teagmhála digiteach oifigiúil • vCard chliste",
+    "💡 Cloud store with automated ERP": "💡 Siopa néal le ERP uathoibrithe",
+    "💬 Instant WhatsApp Chat": "💬 Comhrá WhatsApp láithreach"
   }
 }

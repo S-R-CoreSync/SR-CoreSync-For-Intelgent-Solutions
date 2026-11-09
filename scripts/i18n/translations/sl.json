@@ -1,6 +1,6 @@
 {
   "language": "sl",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (brez sledi CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Hitrost izvajanja v mikrosekundah s popolnimi testnimi paketi",
     "✓ Official XML tax returns & audit reports": "✓ Uradne XML davčne napovedi in revizijska poročila",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrija srčnega utripa v realnem času in meritve skladnosti s SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integracija tiskalnika računov in optičnega bralnika črtnih kod"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integracija tiskalnika računov in optičnega bralnika črtnih kod",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Redundantno šifrirano varnostno vozlišče v Amsterdamu (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Odporen medpomnilnik brez povezave s sinhronizacijo ob samodejni ponovni povezavi",
+    "✓ Standard Customer Service RAG": "✓ Standardni RAG za podporo strankam",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Tiskanje računov v skladu s standardom EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Trojezični imenik storitev, novice, dogodki in prostovoljstvo",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Izjemno majhen odtis (< 15 MB porabe RAM)",
+    "✓ Verified Genuine License": "✓ Preverjena pristna licenca",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Prenesi celoten pristen paket (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Prenesi celoten paket ZIP",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Bančno nakazilo SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabščina (Perzijski zaliv / standardna)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabščina (Levant / Sirija)",
+    "🌍 Voice Language & Dialect:": "🌍 Glasovni jezik in narečje:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Oblačna infrastruktura in gostovanje AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Digitalna identiteta in paket 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suvereni svetovni jeziki (29 podprtih jezikov in režimov DDV)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Uradna digitalna vizitka • pametna vCard",
+    "💡 Cloud store with automated ERP": "💡 Trgovina v oblaku z avtomatiziranim ERP",
+    "💬 Instant WhatsApp Chat": "💬 Takojšen klepet WhatsApp"
   }
 }

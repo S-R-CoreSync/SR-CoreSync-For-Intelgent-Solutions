@@ -1,6 +1,6 @@
 {
   "language": "cs",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Schválené provozní základní parametry",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (bez stopy CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Rychlost provádění v mikrosekundách s kompletními testovacími sadami",
     "✓ Official XML tax returns & audit reports": "✓ Oficiální XML daňová přiznání a auditní zprávy",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrie srdečního tepu v reálném čase a metriky shody se SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrace tiskárny účtenek a optického čtečky čárových kódů"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrace tiskárny účtenek a optického čtečky čárových kódů",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Redundantní šifrovaný záložní uzel v Amsterdamu (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Odolný offline buffer se synchronizací po automatickém opětovném připojení",
+    "✓ Standard Customer Service RAG": "✓ Standardní RAG zákaznické podpory",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Tisk faktur v souladu se standardem EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Trojjazyčný adresář služeb, novinky, akce a dobrovolnictví",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Velmi nízká stopa (< 15 MB spotřeby RAM)",
+    "✓ Verified Genuine License": "✓ Ověřená autentická licence",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Stáhnout celý skutečný balíček (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Stáhnout celý balíček ZIP",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Bankovní převod SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabština (Golf / standardní)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabština (Levanta / Sýrie)",
+    "🌍 Voice Language & Dialect:": "🌍 Jazyk hlasu a dialekt:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Cloudová infrastruktura a hosting AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Digitální identita a sada 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suverénní světové jazyky (29 podporovaných jazyků a režimů DPH)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Oficiální digitální vizitka • chytrá vCard",
+    "💡 Cloud store with automated ERP": "💡 Cloudový obchod s automatizovaným ERP",
+    "💬 Instant WhatsApp Chat": "💬 Okamžitý chat na WhatsAppu"
   }
 }

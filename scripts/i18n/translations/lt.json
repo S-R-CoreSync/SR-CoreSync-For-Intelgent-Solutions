@@ -1,6 +1,6 @@
 {
   "language": "lt",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (be CoreSync pėdsakų)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Vykdymo greitis mikrosekundėmis su pilnais testų rinkiniais",
     "✓ Official XML tax returns & audit reports": "✓ Oficialios XML mokesčių deklaracijos ir audito ataskaitos",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Realiojo laiko širdies plakimo telemetrija ir SLA atitikties rodikliai",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Kvitu spausdintuvo ir optinio brūkšninių kodų skaitytuvo integracija"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Kvitu spausdintuvo ir optinio brūkšninių kodų skaitytuvo integracija",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Perteklinis šifruotas atsarginės kopijos mazgas Amsterdame (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Atsparus neprisijungęs buferis su automatinio prisijungimo sinchronizavimu",
+    "✓ Standard Customer Service RAG": "✓ Standartinis klientų aptarnavimo RAG",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Sąskaitų spausdinimas pagal EN 16931 standartą",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Trikalbis paslaugų katalogas, naujienos, renginiai ir savanorystė",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Itin mažas pėdsakas (< 15 MB RAM sąnaudų)",
+    "✓ Verified Genuine License": "✓ Patikrinta autentiška licencija",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Atsisiųsti visą tikrą paketą (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Atsisiųsti visą ZIP paketą",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 SEPA banko pavedimas",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabų (Persijos įlankos / standartinė)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabų (Levanto / Sirija)",
+    "🌍 Voice Language & Dialect:": "🌍 Balso kalba ir tarmė:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Debesijos infrastruktūra ir AMS-IX priegloba",
+    "🌐 Digital identity & 8K suite": "🌐 Skaitmeninė tapatybė ir 8K rinkinys",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suverenios pasaulinės kalbos (29 palaikomos kalbos ir PVM režimai)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Oficiali skaitmeninė vizitinė kortelė • išmani vCard",
+    "💡 Cloud store with automated ERP": "💡 Debesijos parduotuvė su automatizuotu ERP",
+    "💬 Instant WhatsApp Chat": "💬 Momentinis WhatsApp pokalbis"
   }
 }

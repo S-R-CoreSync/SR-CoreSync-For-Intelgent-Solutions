@@ -1,6 +1,6 @@
 {
   "language": "lv",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez CoreSync pēdām)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Izpildes ātrums mikrosekundēs ar pilniem testu komplektiem",
     "✓ Official XML tax returns & audit reports": "✓ Oficiālas XML nodokļu deklarācijas un audita pārskati",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Reāllaika sirdspukstu telemetrija un SLA atbilstības rādītāji",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Čeku printera un optiskā svītrkodu skenera integrācija"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Čeku printera un optiskā svītrkodu skenera integrācija",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Lieks šifrēts dublējuma mezgls Amsterdamā (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Noturīgs bezsaistes buferis ar automātiskas atkārtotas savienošanas sinhronizāciju",
+    "✓ Standard Customer Service RAG": "✓ Standarta klientu apkalpošanas RAG",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Rēķinu drukāšana saskaņā ar EN 16931 standartu",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Trīsvalodu pakalpojumu katalogs, jaunumi, pasākumi un brīvprātīgais darbs",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Ļoti maza pēda (< 15 MB RAM patēriņa)",
+    "✓ Verified Genuine License": "✓ Pārbaudīta īsta licence",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Lejupielādēt visu īsto pakotni (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Lejupielādēt visu ZIP pakotni",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 SEPA bankas pārskaitījums",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arābu (Persijas līča / standarta)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arābu (Levantes / Sīrija)",
+    "🌍 Voice Language & Dialect:": "🌍 Balss valoda un dialekts:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Mākoņa infrastruktūra un AMS-IX mitināšana",
+    "🌐 Digital identity & 8K suite": "🌐 Digitālā identitāte un 8K komplekts",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suverēnas pasaules valodas (29 atbalstītas valodas un PVN režīmi)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Oficiāla digitālā vizītkarte • viedā vCard",
+    "💡 Cloud store with automated ERP": "💡 Mākoņa veikals ar automatizētu ERP",
+    "💬 Instant WhatsApp Chat": "💬 Tūlītēja WhatsApp saruna"
   }
 }

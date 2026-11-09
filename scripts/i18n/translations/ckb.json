@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ خێرایی جێبەجێکردن بە مایکرۆچرکە لەگەڵ کۆمەڵە تاقیکردنەوەی تەواو",
     "✓ Official XML tax returns & audit reports": "✓ بەیاننامەکانی باجی XML ی فەرمی و ڕاپۆرتەکانی پشکنین",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ تێلێمەتری لێدانی دڵی کاتی ڕاستەقینە و پێوەرەکانی پابەندبوون بە SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ یەکخستنی چاپەری وەسڵ و سکانەری بارکۆدی ئۆپتیکی"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ یەکخستنی چاپەری وەسڵ و سکانەری بارکۆدی ئۆپتیکی",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ نۆدی پاڵپشتی شفرکراوی زیادە لە Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ بافەری ئۆفلاینی بەرگەگرتوو لەگەڵ سینککردنی دووبارە پەیوەندیکردن",
+    "✓ Standard Customer Service RAG": "✓ RAG ی ستانداردی خزمەتگوزاری کڕیار",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ چاپکردنی فاتوورە بەپێی ستانداردی EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ ڕێبەری خزمەتگوزاری سێزمانی، هەواڵ، چالاکی و خۆبەخشی",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ شوێنپێی زۆر کەم (< ١٥MB بەکارهێنانی RAM)",
+    "✓ Verified Genuine License": "✓ مۆڵەتی ڕەسەنی پشتڕاستکراوە",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ پاکێتی ڕاستەقینەی تەواو دابەزێنە (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ پاکێتی ZIP ی تەواو دابەزێنە",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 گواستنەوەی بانکی SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 عەرەبی (کەنداو / ستاندارد)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 عەرەبی (لێڤانت / سوریا)",
+    "🌍 Voice Language & Dialect:": "🌍 زمانی دەنگ و زاراوە:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 ١. ژێرخانی هەور و میوانداری AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 ناسنامەی دیجیتاڵی و سوێتی 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 زمانە جیهانییەکانی سەروەر (٢٩ زمانی پشتگیریکراو و ڕژێمەکانی BTW)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 کارتی پەیوەندی دیجیتاڵی فەرمی • vCard ی زیرەک",
+    "💡 Cloud store with automated ERP": "💡 فرۆشگای هەوری لەگەڵ ERP ی خۆکار",
+    "💬 Instant WhatsApp Chat": "💬 گفتوگۆی WhatsApp ی دەستبەجێ"
   }
 }

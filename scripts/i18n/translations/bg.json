@@ -1,6 +1,6 @@
 {
   "language": "bg",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Одобрени оперативни базови параметри",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (без следа от CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Скорост на изпълнение в микросекунди с пълни тестови пакети",
     "✓ Official XML tax returns & audit reports": "✓ Официални XML данъчни декларации и одитни отчети",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Телеметрия на сърдечен ритъм в реално време и показатели за съответствие със SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Интеграция с принтер за касови бележки и оптичен баркод скенер"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Интеграция с принтер за касови бележки и оптичен баркод скенер",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Резервен криптиран възел в Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Устойчив офлайн буфер със синхронизация при автоматично свързване",
+    "✓ Standard Customer Service RAG": "✓ Стандартен RAG за обслужване на клиенти",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Печат на фактури съгласно стандарта EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Триезичен справочник на услугите, новини, събития и доброволчество",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Изключително малък отпечатък (< 15MB консумация на RAM)",
+    "✓ Verified Genuine License": "✓ Проверен автентичен лиценз",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Изтеглете пълния реален пакет (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Изтеглете пълния ZIP пакет",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Банков превод SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Арабски (Залив / стандартен)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Арабски (Левант / Сирия)",
+    "🌍 Voice Language & Dialect:": "🌍 Език на гласа и диалект:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Облачна инфраструктура и AMS-IX хостинг",
+    "🌐 Digital identity & 8K suite": "🌐 Дигитална идентичност и 8K пакет",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Суверенни световни езици (29 поддържани езика и режими на ДДС)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Официална дигитална контактна карта • интелигентна vCard",
+    "💡 Cloud store with automated ERP": "💡 Облачен магазин с автоматизиран ERP",
+    "💬 Instant WhatsApp Chat": "💬 Незабавен WhatsApp чат"
   }
 }

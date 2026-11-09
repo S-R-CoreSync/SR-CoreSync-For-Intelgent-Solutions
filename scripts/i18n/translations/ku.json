@@ -1,6 +1,6 @@
 {
   "language": "ku",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Leza cîbicîkirina mîkrosaniyeyê bi komeleyên testê yên temam",
     "✓ Official XML tax returns & audit reports": "✓ Danezaniyên bacê yên fermî yên XML û raporên kontrolê",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrîya dilpêlê ya dem-rast û pîvanên lihevhatina SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Entegrasyona çapera wergirtinê û skanera barkodê ya optîk"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Entegrasyona çapera wergirtinê û skanera barkodê ya optîk",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Nodê paşgirê yê şîfrekirî yê zêde li Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Bufereke offline ya berxwedêr bi senkronîzasyona ji nû ve girêdanê",
+    "✓ Standard Customer Service RAG": "✓ RAG a standard a Xizmeta Xerîdar",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Çapkirina fatûreyê li gorî standarda EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Rêbernameya xizmetan a sêzimanî, nûçe, bûyer û xwebexşî",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Şopa pir kêm (< 15MB xerckirina RAM)",
+    "✓ Verified Genuine License": "✓ Lîsansa resen a verastkirî",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Pakêta rastîn a temam dakêşe (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Pakêta ZIP a temam dakêşe",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Veguheztina bankê ya SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Erebî (Kendav / Standard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Erebî (Levant / Sûrî)",
+    "🌍 Voice Language & Dialect:": "🌍 Zimanê dengî û zarava:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Binesaziya Cloud û mêvandariya AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Nasnameya dîjîtal û suiteya 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Zimanên cîhanî yên serwer (29 zimanên piştgirîkirî û rejîmên BTW)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Karta têkiliyê ya dîjîtal a fermî • vCard a jîr",
+    "💡 Cloud store with automated ERP": "💡 Firotgeha hêwrî bi ERP ya otomatîk",
+    "💬 Instant WhatsApp Chat": "💬 Sohbeta WhatsApp a tavilê"
   }
 }

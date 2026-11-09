@@ -1,6 +1,6 @@
 {
   "language": "et",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Kinnitatud operatiivsed baasparameetrid",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (ilma CoreSync'i jäljeta)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Mikrosekundiline täitmiskiirus täielike testikomplektidega",
     "✓ Official XML tax returns & audit reports": "✓ Ametlikud XML-maksudeklaratsioonid ja auditiaruanded",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Reaalajas südamelöögi telemeetria ja SLA-vastavuse mõõdikud",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Tšekiprinteri ja optilise vöötkoodilugeja integratsioon"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Tšekiprinteri ja optilise vöötkoodilugeja integratsioon",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Liigne krüpteeritud varukoopia sõlm Amsterdamis (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Vastupidav võrguühenduseta puhver automaatse taasühenduse sünkroonimisega",
+    "✓ Standard Customer Service RAG": "✓ Standardne klienditeeninduse RAG",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Standardile EN 16931 vastav arvete printimine",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Kolmekeelne teenuste kataloog, uudised, sündmused ja vabatahtlik töö",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Ülimalt väike jalajälg (< 15MB RAM-i kasutust)",
+    "✓ Verified Genuine License": "✓ Kontrollitud ehtne litsents",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Laadi alla täielik ehtne pakett (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Laadi alla täielik ZIP-pakett",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 SEPA pangaülekanne",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Araabia (Lahe / standard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Araabia (Levant / Süüria)",
+    "🌍 Voice Language & Dialect:": "🌍 Häälekeel ja murre:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Pilveinfrastruktuur ja AMS-IX majutus",
+    "🌐 Digital identity & 8K suite": "🌐 Digitaalne identiteet ja 8K komplekt",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suveräänsed maailmakeeled (29 toetatud keelt ja käibemaksurežiimi)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Ametlik digitaalne kontaktkaart • nutikas vCard",
+    "💡 Cloud store with automated ERP": "💡 Pilvepood automatiseeritud ERP-ga",
+    "💬 Instant WhatsApp Chat": "💬 Kohene WhatsApp-vestlus"
   }
 }

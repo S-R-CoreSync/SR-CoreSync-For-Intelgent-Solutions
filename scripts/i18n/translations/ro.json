@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Viteză de execuție în microsecunde cu suite de teste complete",
     "✓ Official XML tax returns & audit reports": "✓ Declarații fiscale XML oficiale și rapoarte de audit",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrie heartbeat în timp real și metrici de conformitate SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrare imprimantă de bonuri și scaner optic de coduri de bare"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrare imprimantă de bonuri și scaner optic de coduri de bare",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Nod de backup criptat redundant la Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Buffer offline rezistent cu sincronizare la reconectarea automată",
+    "✓ Standard Customer Service RAG": "✓ RAG standard pentru serviciul clienți",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Tipărire facturi conform standardului EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Director de servicii trilingv, știri, evenimente și voluntariat",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Amprentă ultra-redusă (< 15 MB consum de RAM)",
+    "✓ Verified Genuine License": "✓ Licență autentică verificată",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Descarcă pachetul real complet (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Descarcă pachetul ZIP complet",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Transfer bancar SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabă (Golf / standard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabă (Levant / Siria)",
+    "🌍 Voice Language & Dialect:": "🌍 Limba vocii și dialectul:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Infrastructură cloud și găzduire AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Identitate digitală și suită 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Limbi globale suverane (29 de limbi acceptate și regimuri de TVA)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Carte de vizită digitală oficială • vCard inteligent",
+    "💡 Cloud store with automated ERP": "💡 Magazin cloud cu ERP automatizat",
+    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp instantaneu"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "da",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkendte operationelle basisparametre",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (ingen CoreSync-fodaftryk)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Mikrosekund-hastighed med komplette testsuiter",
     "✓ Official XML tax returns & audit reports": "✓ Officielle XML-skatteangivelser og revisionsrapporter",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Realtids-heartbeat-telemetri og SLA-overholdelsesmålinger",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integration af bonprinter og optisk stregkodescanner"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integration af bonprinter og optisk stregkodescanner",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Redundant krypteret backup-knude i Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Robust offline buffer med auto-genopkoblingssynkronisering",
+    "✓ Standard Customer Service RAG": "✓ Standard kundeservice-RAG",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Standard EN 16931-kompatibel fakturaudskrivning",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Tresproget servicekatalog, nyheder, begivenheder og frivilligt arbejde",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Ekstremt lille fodaftryk (< 15MB RAM-forbrug)",
+    "✓ Verified Genuine License": "✓ Verificeret ægte licens",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Download den fulde rigtige pakke (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Download den fulde ZIP-pakke",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 SEPA-bankoverførsel",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabisk (Golf / standard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabisk (Levant / Syrien)",
+    "🌍 Voice Language & Dialect:": "🌍 Talesprog og dialekt:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Cloudinfrastruktur og AMS-IX-hosting",
+    "🌐 Digital identity & 8K suite": "🌐 Digital identitet og 8K-suite",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suveræne globale sprog (29 understøttede sprog og momsordninger)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Officielt digitalt kontaktkort • smart vCard",
+    "💡 Cloud store with automated ERP": "💡 Cloudbutik med automatiseret ERP",
+    "💬 Instant WhatsApp Chat": "💬 Øjeblikkelig WhatsApp-chat"
   }
 }

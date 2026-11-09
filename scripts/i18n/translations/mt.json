@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Veloċità tal-eżekuzzjoni f'mikrosekondi b'suites tat-test kompluti",
     "✓ Official XML tax returns & audit reports": "✓ Dikjarazzjonijiet tat-taxxa XML uffiċjali u rapporti tal-awditjar",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrija tal-polz f'ħin reali u metriċi tal-konformità SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrazzjoni tal-printer tar-riċevuti u scanner ottiku tal-barcode"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrazzjoni tal-printer tar-riċevuti u scanner ottiku tal-barcode",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Nodu ta' backup encrypted redundant f'Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Buffer offline reżiljenti b'sinkronizzazzjoni ta' qbil mill-ġdid awtomatiku",
+    "✓ Standard Customer Service RAG": "✓ RAG standard tas-Servizz tal-Klijent",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Stampa tal-fatturi konformi mal-istandard EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Direttorju tas-servizzi tliet lingwi, aħbarijiet, avvenimenti u volontarjat",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Impronta ultra-baxxa (< 15MB ta' konsum RAM)",
+    "✓ Verified Genuine License": "✓ Liċenzja awtentika verifikata",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Niżżel il-pakkett reali sħiħ (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Niżżel il-pakkett ZIP sħiħ",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Trasferiment bankarju SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Għarbi (Golf / Standard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Għarbi (Levant / Sirja)",
+    "🌍 Voice Language & Dialect:": "🌍 Lingwa tal-vuċi u djalett:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Infrastruttura Cloud u hosting AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Identità diġitali u suite 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Lingwi globali sovrani (29 lingwa appoġġjati u reġimi tal-VAT)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Karta tal-kuntatt diġitali uffiċjali • vCard intelliġenti",
+    "💡 Cloud store with automated ERP": "💡 Maħżen cloud b'ERP awtomatizzat",
+    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp istantanja"
   }
 }

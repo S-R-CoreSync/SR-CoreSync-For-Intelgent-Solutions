@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Mikroszekundumos végrehajtási sebesség teljes tesztcsomagokkal",
     "✓ Official XML tax returns & audit reports": "✓ Hivatalos XML adóbevallások és auditjelentések",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Valós idejű heartbeat telemetria és SLA-megfelelési mutatók",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Nyugtanyomtató és optikai vonalkódolvasó integráció"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Nyugtanyomtató és optikai vonalkódolvasó integráció",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Redundáns titkosított biztonsági mentési csomópont Amszterdamban (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Robusztus offline puffer automatikus újracsatlakozási szinkronizálással",
+    "✓ Standard Customer Service RAG": "✓ Standard ügyfélszolgálati RAG",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ EN 16931 szabványnak megfelelő számlanyomtatás",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Háromnyelvű szolgáltatási címtár, hírek, események és önkéntesség",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Rendkívül alacsony lábnyom (< 15 MB RAM-fogyasztás)",
+    "✓ Verified Genuine License": "✓ Ellenőrzött eredeti licenc",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ A teljes valódi csomag letöltése (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ A teljes ZIP-csomag letöltése",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 SEPA banki átutalás",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arab (Öböl / standard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arab (Levante / Szíria)",
+    "🌍 Voice Language & Dialect:": "🌍 Beszédnyelv és dialektus:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Felhőinfrastruktúra és AMS-IX tárhely",
+    "🌐 Digital identity & 8K suite": "🌐 Digitális identitás és 8K csomag",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Szuverén világnyelvek (29 támogatott nyelv és áfarendszer)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Hivatalos digitális névjegykártya • okos vCard",
+    "💡 Cloud store with automated ERP": "💡 Felhőáruház automatizált ERP-vel",
+    "💬 Instant WhatsApp Chat": "💬 Azonnali WhatsApp-csevegés"
   }
 }

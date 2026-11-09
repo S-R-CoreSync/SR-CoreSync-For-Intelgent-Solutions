@@ -1,6 +1,6 @@
 {
   "language": "it",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operativi di base approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (zero impronta CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Velocità di esecuzione in microsecondi con suite di test complete",
     "✓ Official XML tax returns & audit reports": "✓ Dichiarazioni fiscali XML ufficiali e report di audit",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetria heartbeat in tempo reale e metriche di conformità SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrazione stampante ricevute e scanner ottico di codici a barre"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrazione stampante ricevute e scanner ottico di codici a barre",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Nodo di backup cifrato ridondante ad Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Buffer offline resiliente con sincronizzazione alla riconnessione",
+    "✓ Standard Customer Service RAG": "✓ RAG standard per l'assistenza clienti",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Stampa fatture conforme allo standard EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Directory dei servizi trilingue, notizie, eventi e volontariato",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Impronta ultrabassa (< 15 MB di consumo RAM)",
+    "✓ Verified Genuine License": "✓ Licenza autentica verificata",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Scarica il pacchetto reale completo (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Scarica il pacchetto ZIP completo",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Bonifico bancario SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arabo (Golfo / standard)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arabo (Levante / Siria)",
+    "🌍 Voice Language & Dialect:": "🌍 Lingua vocale e dialetto:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Infrastruttura cloud e hosting AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Identità digitale e suite 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Lingue globali sovrane (29 lingue supportate e regimi IVA)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Biglietto da visita digitale ufficiale • vCard smart",
+    "💡 Cloud store with automated ERP": "💡 Negozio cloud con ERP automatizzato",
+    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp istantanea"
   }
 }

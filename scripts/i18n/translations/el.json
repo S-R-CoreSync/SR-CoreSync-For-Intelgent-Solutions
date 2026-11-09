@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Ταχύτητα εκτέλεσης σε μικροδευτερόλεπτα με πλήρεις σουίτες δοκιμών",
     "✓ Official XML tax returns & audit reports": "✓ Επίσημες φορολογικές δηλώσεις XML και αναφορές ελέγχου",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Τηλεμετρία παλμού σε πραγματικό χρόνο και μετρήσεις συμμόρφωσης SLA",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Ενσωμάτωση εκτυπωτή αποδείξεων και οπτικού σαρωτή barcode"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Ενσωμάτωση εκτυπωτή αποδείξεων και οπτικού σαρωτή barcode",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Πλεονάζων κρυπτογραφημένος κόμβος αντιγράφων στο Amsterdam (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Ανθεκτικό buffer εκτός σύνδεσης με συγχρονισμό αυτόματης επανασύνδεσης",
+    "✓ Standard Customer Service RAG": "✓ Τυπικό RAG εξυπηρέτησης πελατών",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ Εκτύπωση τιμολογίων σύμφωνα με το πρότυπο EN 16931",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Τρίγλωσσος κατάλογος υπηρεσιών, ειδήσεις, εκδηλώσεις και εθελοντισμός",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Εξαιρετικά μικρό αποτύπωμα (< 15MB κατανάλωση RAM)",
+    "✓ Verified Genuine License": "✓ Επαληθευμένη γνήσια άδεια",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Λήψη πλήρους αυθεντικού πακέτου (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Λήψη πλήρους πακέτου ZIP",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 Τραπεζική μεταφορά SEPA",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Αραβικά (Κόλπου / τυπικά)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Αραβικά (Λεβάντε / Συρία)",
+    "🌍 Voice Language & Dialect:": "🌍 Γλώσσα φωνής και διάλεκτος:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Υποδομή cloud και φιλοξενία AMS-IX",
+    "🌐 Digital identity & 8K suite": "🌐 Ψηφιακή ταυτότητα και σουίτα 8K",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Κυρίαρχες παγκόσμιες γλώσσες (29 υποστηριζόμενες γλώσσες και καθεστώτα ΦΠΑ)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Επίσημη ψηφιακή κάρτα επαφής • έξυπνη vCard",
+    "💡 Cloud store with automated ERP": "💡 Κατάστημα cloud με αυτοματοποιημένο ERP",
+    "💬 Instant WhatsApp Chat": "💬 Άμεση συνομιλία WhatsApp"
   }
 }

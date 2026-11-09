@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 383,
+  "count": 402,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
@@ -384,6 +384,25 @@
     "✓ Microsecond execution speed with complete test suites": "✓ Eksiksiz test paketleriyle mikrosaniye yürütme hızı",
     "✓ Official XML tax returns & audit reports": "✓ Resmî XML vergi beyannameleri ve denetim raporları",
     "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Gerçek zamanlı heartbeat telemetrisi ve SLA uyum metrikleri",
-    "✓ Receipt printer & optical barcode scanner integration": "✓ Fiş yazıcısı ve optik barkod okuyucu entegrasyonu"
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Fiş yazıcısı ve optik barkod okuyucu entegrasyonu",
+    "✓ Redundant encrypted backup node in Amsterdam (AMS-01)": "✓ Amsterdam'da yedekli şifreli yedek düğümü (AMS-01)",
+    "✓ Resilient offline buffer with auto-reconnect sync": "✓ Otomatik yeniden bağlanma senkronizasyonlu dayanıklı çevrimdışı tampon",
+    "✓ Standard Customer Service RAG": "✓ Standart Müşteri Hizmetleri RAG",
+    "✓ Standard EN 16931 compliant invoice printing": "✓ EN 16931 standardına uygun fatura yazdırma",
+    "✓ Trilingual service directory, news, events & volunteering": "✓ Üç dilli hizmet rehberi, haberler, etkinlikler ve gönüllülük",
+    "✓ Ultra-low footprint (< 15MB RAM consumption)": "✓ Ultra düşük ayak izi (< 15MB RAM tüketimi)",
+    "✓ Verified Genuine License": "✓ Doğrulanmış gerçek lisans",
+    "⬇️ Download Full Real Package (ZIP)": "⬇️ Tam gerçek paketi indir (ZIP)",
+    "⬇️ Download Full ZIP Package": "⬇️ Tam ZIP paketini indir",
+    "🇪🇺 SEPA Bank Transfer": "🇪🇺 SEPA banka havalesi",
+    "🇸🇦 Arabic (Gulf / Standard)": "🇸🇦 Arapça (Körfez / Standart)",
+    "🇸🇾 Arabic (Levant / Syria)": "🇸🇾 Arapça (Levant / Suriye)",
+    "🌍 Voice Language & Dialect:": "🌍 Ses dili ve lehçe:",
+    "🌐 1. Cloud Infrastructure & AMS-IX Hosting": "🌐 1. Bulut altyapısı ve AMS-IX barındırma",
+    "🌐 Digital identity & 8K suite": "🌐 Dijital kimlik ve 8K paketi",
+    "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Egemen küresel diller (29 desteklenen dil ve KDV rejimi)",
+    "👑 Official Digital Contact Card • Smart vCard": "👑 Resmî dijital iletişim kartı • akıllı vCard",
+    "💡 Cloud store with automated ERP": "💡 Otomatik ERP'li bulut mağaza",
+    "💬 Instant WhatsApp Chat": "💬 Anında WhatsApp sohbeti"
   }
 }
