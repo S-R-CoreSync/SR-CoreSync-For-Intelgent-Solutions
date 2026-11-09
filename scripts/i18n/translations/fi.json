@@ -1,6 +1,6 @@
 {
   "language": "fi",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ei CoreSync-jälkeä)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Nykyiset operatiiviset ja hallinnolliset kuukausikustannukset:",
     "Current Software & Workflow Maturity Level:": "Nykyinen ohjelmistojen ja työnkulkujen kypsyystaso:",
     "Custom Brand Colors, Logo & Domain": "Räätälöidyt brändivärit, logo ja verkkotunnus",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Räätälöity pilvialusta + johtoryhmän kojelaudat (60 % säästö)",
     "Custom Cloud Software & Systems": "Räätälöity pilviohjelmisto ja -järjestelmät",
     "Custom Software & Platforms": "Räätälöity ohjelmisto ja alustat",
     "Database Optimization & API Orchestration": "Tietokannan optimointi ja API-orkestrointi",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Yrityksen digitaalinen lisenssiavain:",
     "Enterprise ERP & Financial Ledger Architecture": "Yrityksen ERP- ja talouspääkirja-arkkitehtuuri",
     "Enterprise Financial Savings & Efficiency Engine": "Yrityksen taloudellisen säästön ja tehokkuuden moottori",
+    "Enterprise Systems & Cloud Architectures": "Yritysjärjestelmät ja pilviarkkitehtuurit",
     "Enterprise Web Platforms (React & Next.js)": "Yrityksen verkkoulustat (React ja Next.js)",
     "Enterprise security audit & DDoS hardening": "Yrityksen tietoturva-auditointi ja DDoS-kovennus",
     "Estimated Budget (EUR €)": "Arvioitu budjetti (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skannaa QR-koodi puhelimen kameralla ja tallenna yhteystieto heti",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Perustajan ja pääarkkitehdin Salim Azizan kryptografinen portaali",
     "🔒 256-bit SSL Encrypted": "🔒 256-bittinen SSL-salaus",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % käytettävyys ja pankkitason salaus"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % käytettävyys ja pankkitason salaus",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Digitaalisesti allekirjoitettu ja sertifioitu 100 % haittaohjelmavapaa • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Kaikki ohjelmistot ja järjestelmät",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40 % vähemmän perityn infrastruktuurin yleiskustannuksia",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Lataa natiivi Windows-asennusohjelma (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Lataa asennustiedosto (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 PERUSTAJAN LABORATORIO JA KAUPALLISEN JAKELUN PORTAALI",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Perustaja ins. Salimin laboratorio",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Turvallisuus ja sääntelynmukaisuus",
+    "🛡️ Compliance & Security": "🛡️ Vaatimustenmukaisuus ja turvallisuus",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Ohjelmistolisenssien hallintaportaali • Vain perustaja ja pääarkkitehti Salim Azizalle • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Vahvistettu SEPA- ja hollantilainen BTW-vaatimustenmukaisuus",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA ja executive concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Välitön white-label-lisenssilaskuri ja tarjous (PDF)"
   }
 }

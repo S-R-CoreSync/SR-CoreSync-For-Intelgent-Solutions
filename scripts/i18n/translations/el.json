@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Τρέχον λειτουργικό και διοικητικό μηνιαίο κόστος:",
     "Current Software & Workflow Maturity Level:": "Τρέχον επίπεδο ωριμότητας λογισμικού και ροών εργασίας:",
     "Custom Brand Colors, Logo & Domain": "Προσαρμοσμένα χρώματα μάρκας, λογότυπο και domain",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Προσαρμοσμένη πλατφόρμα cloud + executive dashboards (60% εξοικονόμηση)",
     "Custom Cloud Software & Systems": "Προσαρμοσμένο λογισμικό και συστήματα cloud",
     "Custom Software & Platforms": "Προσαρμοσμένο λογισμικό και πλατφόρμες",
     "Database Optimization & API Orchestration": "Βελτιστοποίηση βάσεων δεδομένων και ενορχήστρωση API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Ψηφιακό κλειδί άδειας επιχείρησης:",
     "Enterprise ERP & Financial Ledger Architecture": "Αρχιτεκτονική εταιρικού ERP και χρηματοοικονομικού καθολικού",
     "Enterprise Financial Savings & Efficiency Engine": "Μηχανή εταιρικών οικονομικών εξοικονομήσεων και αποδοτικότητας",
+    "Enterprise Systems & Cloud Architectures": "Εταιρικά συστήματα και αρχιτεκτονικές cloud",
     "Enterprise Web Platforms (React & Next.js)": "Εταιρικές πλατφόρμες web (React και Next.js)",
     "Enterprise security audit & DDoS hardening": "Έλεγχος ασφαλείας επιχείρησης και ενίσχυση DDoS",
     "Estimated Budget (EUR €)": "Εκτιμώμενος προϋπολογισμός (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Σαρώστε τον κωδικό QR με την κάμερα του τηλεφώνου για άμεση αποθήκευση της επαφής",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Κρυπτογραφική πύλη του ιδρυτή και επικεφαλής αρχιτέκτονα Salim Aziza",
     "🔒 256-bit SSL Encrypted": "🔒 Κρυπτογράφηση SSL 256-bit",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% διαθεσιμότητα και κρυπτογράφηση τραπεζικού επιπέδου"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% διαθεσιμότητα και κρυπτογράφηση τραπεζικού επιπέδου",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Ψηφιακά υπογεγραμμένο και πιστοποιημένο 100% χωρίς κακόβουλο λογισμικό • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Όλο το λογισμικό και τα συστήματα",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40% μείωση του κόστους παλαιάς υποδομής",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Λήψη εγγενούς προγράμματος εγκατάστασης Windows (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Λήψη εκτελέσιμου εγκατάστασης (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 ΕΡΓΑΣΤΗΡΙΟ ΤΟΥ ΙΔΡΥΤΗ ΚΑΙ ΠΥΛΗ ΕΜΠΟΡΙΚΗΣ ΔΙΑΝΟΜΗΣ",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Εργαστήριο του ιδρυτή Μηχ. Σαλίμ",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Ασφάλεια και κανονιστική συμμόρφωση",
+    "🛡️ Compliance & Security": "🛡️ Συμμόρφωση και ασφάλεια",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Πύλη διαχείρισης αδειών λογισμικού • Αποκλειστικά για τον Salim Aziza, ιδρυτή και επικεφαλής αρχιτέκτονα • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Επαληθευμένη συμμόρφωση SEPA και ολλανδικού BTW",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA και executive concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Άμεσος υπολογιστής και προσφορά άδειας White-Label (PDF)"
   }
 }

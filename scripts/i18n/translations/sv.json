@@ -1,6 +1,6 @@
 {
   "language": "sv",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkända operativa basparametrar",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (inga CoreSync-spår)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Nuvarande operativa och administrativa månadskostnad:",
     "Current Software & Workflow Maturity Level:": "Nuvarande mognadsnivå för programvara och arbetsflöden:",
     "Custom Brand Colors, Logo & Domain": "Anpassade varumärkesfärger, logotyp och domän",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Skräddarsydd molnplattform + executive dashboards (60 % besparing)",
     "Custom Cloud Software & Systems": "Anpassad molnprogramvara och -system",
     "Custom Software & Platforms": "Anpassad programvara och plattformar",
     "Database Optimization & API Orchestration": "Databasoptimering och API-orkestrering",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Digital enterprise-licensnyckel:",
     "Enterprise ERP & Financial Ledger Architecture": "Enterprise ERP- och finansbokföringsarkitektur",
     "Enterprise Financial Savings & Efficiency Engine": "Motor för finansiella besparingar och effektivitet",
+    "Enterprise Systems & Cloud Architectures": "Enterprise-system och molnarkitekturer",
     "Enterprise Web Platforms (React & Next.js)": "Enterprise-webbplattformar (React och Next.js)",
     "Enterprise security audit & DDoS hardening": "Enterprise-säkerhetsrevision och DDoS-härdning",
     "Estimated Budget (EUR €)": "Uppskattad budget (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skanna QR-koden med telefonkameran för att spara kontakten direkt",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kryptografisk portal för grundaren och chefsarkitekten Salim Aziza",
     "🔒 256-bit SSL Encrypted": "🔒 256-bitars SSL-kryptering",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % tillgänglighet och kryptering på banknivå"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % tillgänglighet och kryptering på banknivå",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Digitalt signerat och certifierat 100 % malwarefritt • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ All programvara och alla system",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40 % minskning av overhead för äldre infrastruktur",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Ladda ner inbyggt Windows-installationsprogram (Setup.exe • 64-bitars)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Ladda ner installationsfil (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 GRUNDARENS LABB OCH PORTAL FÖR KOMMERSIELL DISTRIBUTION",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Grundare ing. Salims labb",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Säkerhet och regelefterlevnad",
+    "🛡️ Compliance & Security": "🛡️ Efterlevnad och säkerhet",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Portal för hantering av programvarulicenser • Uteslutande för Salim Aziza, grundare och chefsarkitekt • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Verifierad SEPA- och nederländsk BTW-efterlevnad",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA och executive concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Omedelbar white-label-licensberäknare och offert (PDF)"
   }
 }

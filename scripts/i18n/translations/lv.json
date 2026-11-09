@@ -1,6 +1,6 @@
 {
   "language": "lv",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez CoreSync pēdām)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Pašreizējās operatīvās un administratīvās mēneša izmaksas:",
     "Current Software & Workflow Maturity Level:": "Pašreizējais programmatūras un darbplūsmu brieduma līmenis:",
     "Custom Brand Colors, Logo & Domain": "Pielāgotas zīmola krāsas, logotips un domēns",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Pielāgota mākoņa platforma + izpildvaras informācijas paneļi (60% ietaupījums)",
     "Custom Cloud Software & Systems": "Pielāgota mākoņa programmatūra un sistēmas",
     "Custom Software & Platforms": "Pielāgota programmatūra un platformas",
     "Database Optimization & API Orchestration": "Datubāzes optimizācija un API orķestrācija",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Uzņēmuma digitālā licences atslēga:",
     "Enterprise ERP & Financial Ledger Architecture": "Uzņēmuma ERP un finanšu virsgrāmatas arhitektūra",
     "Enterprise Financial Savings & Efficiency Engine": "Uzņēmuma finanšu ietaupījumu un efektivitātes dzinējs",
+    "Enterprise Systems & Cloud Architectures": "Uzņēmumu sistēmas un mākoņa arhitektūras",
     "Enterprise Web Platforms (React & Next.js)": "Uzņēmuma tīmekļa platformas (React un Next.js)",
     "Enterprise security audit & DDoS hardening": "Uzņēmuma drošības audits un DDoS nostiprināšana",
     "Estimated Budget (EUR €)": "Paredzamais budžets (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skenējiet QR kodu ar tālruņa kameru, lai kontaktu saglabātu acumirklī",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Dibinātāja un galvenā arhitekta Salim Aziza kriptogrāfijas portāls",
     "🔒 256-bit SSL Encrypted": "🔒 256 bitu SSL šifrēšana",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% pieejamība un bankas līmeņa šifrēšana"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% pieejamība un bankas līmeņa šifrēšana",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Digitāli parakstīta un sertificēta 100% bez ļaunprogrammatūras • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Visa programmatūra un sistēmas",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40% mazākas mantotās infrastruktūras izmaksas",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Lejupielādēt vietējo Windows instalētāju (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Lejupielādēt instalācijas failu (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 DIBINĀTĀJA LABORATORIJA UN KOMERCIĀLĀS IZPLATĪŠANAS PORTĀLS",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Dibinātāja inž. Salima laboratorija",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Drošība un normatīvā atbilstība",
+    "🛡️ Compliance & Security": "🛡️ Atbilstība un drošība",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Programmatūras licenču pārvaldības portāls • Tikai Salimam Azizam, dibinātājam un galvenajam arhitektam • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Pārbaudīta SEPA un Nīderlandes BTW atbilstība",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA un izpildvaras concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Tūlītējs White-Label licences kalkulators un piedāvājums (PDF)"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Mevcut Operasyonel ve İdari Aylık Maliyet:",
     "Current Software & Workflow Maturity Level:": "Mevcut Yazılım ve İş Akışı Olgunluk Düzeyi:",
     "Custom Brand Colors, Logo & Domain": "Özel Marka Renkleri, Logo ve Alan Adı",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Özel Bulut Platformu + Yönetici Panoları (%60 tasarruf)",
     "Custom Cloud Software & Systems": "Özel Bulut Yazılımı ve Sistemleri",
     "Custom Software & Platforms": "Özel Yazılım ve Platformlar",
     "Database Optimization & API Orchestration": "Veritabanı Optimizasyonu ve API Orkestrasyonu",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Kurumsal Dijital Lisans Anahtarı:",
     "Enterprise ERP & Financial Ledger Architecture": "Kurumsal ERP ve Finansal Defter Mimarisi",
     "Enterprise Financial Savings & Efficiency Engine": "Kurumsal Finansal Tasarruf ve Verimlilik Motoru",
+    "Enterprise Systems & Cloud Architectures": "Kurumsal Sistemler ve Bulut Mimarileri",
     "Enterprise Web Platforms (React & Next.js)": "Kurumsal Web Platformları (React ve Next.js)",
     "Enterprise security audit & DDoS hardening": "Kurumsal güvenlik denetimi ve DDoS sertleştirme",
     "Estimated Budget (EUR €)": "Tahmini Bütçe (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Kişiyi anında kaydetmek için QR kodunu telefon kameranla tara",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kurucu ve Baş Mimar Salim Aziza'nın Kriptografik Portalı",
     "🔒 256-bit SSL Encrypted": "🔒 256-bit SSL Şifreli",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 %99,99 Erişilebilirlik ve Banka Düzeyi Şifreleme"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 %99,99 Erişilebilirlik ve Banka Düzeyi Şifreleme",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Dijital olarak imzalanmış ve sertifikalı %100 kötü amaçlı yazılımdan arınmış • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Tüm Yazılımlar ve Sistemler",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 Eski altyapı yükünde %40 azalma",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Yerel Windows Yükleyicisini İndir (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Kurulum Dosyasını İndir (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 KURUCUNUN LABORATUVARI VE TİCARİ DAĞITIM PORTALI",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Kurucu Müh. Salim'in Laboratuvarı",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Güvenlik ve Mevzuat Uyumu",
+    "🛡️ Compliance & Security": "🛡️ Uyum ve Güvenlik",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Yazılım Lisans Yönetim Portalı • Yalnızca Kurucu ve Baş Mimar Salim Aziza için • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Doğrulanmış SEPA ve Hollanda BTW Uyumu",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA ve Yönetici Concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Anında White-Label Lisans Hesaplayıcı ve Teklif (PDF)"
   }
 }

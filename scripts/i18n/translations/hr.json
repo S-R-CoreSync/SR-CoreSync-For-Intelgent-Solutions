@@ -1,6 +1,6 @@
 {
   "language": "hr",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (bez traga CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Trenutni operativni i administrativni mjesečni trošak:",
     "Current Software & Workflow Maturity Level:": "Trenutna razina zrelosti softvera i radnih procesa:",
     "Custom Brand Colors, Logo & Domain": "Prilagođene boje brenda, logotip i domena",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Prilagođena cloud platforma + izvršni nadzorni paneli (60 % uštede)",
     "Custom Cloud Software & Systems": "Prilagođeni cloud softver i sustavi",
     "Custom Software & Platforms": "Prilagođeni softver i platforme",
     "Database Optimization & API Orchestration": "Optimizacija baze podataka i orkestracija API-ja",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Digitalni licencni ključ za poduzeća:",
     "Enterprise ERP & Financial Ledger Architecture": "Enterprise ERP i arhitektura financijske glavne knjige",
     "Enterprise Financial Savings & Efficiency Engine": "Motor financijskih ušteda i učinkovitosti",
+    "Enterprise Systems & Cloud Architectures": "Enterprise sustavi i cloud arhitekture",
     "Enterprise Web Platforms (React & Next.js)": "Enterprise web platforme (React i Next.js)",
     "Enterprise security audit & DDoS hardening": "Enterprise sigurnosna revizija i DDoS očvršćivanje",
     "Estimated Budget (EUR €)": "Procijenjeni proračun (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skenirajte QR kod kamerom telefona za trenutačno spremanje kontakta",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kriptografski portal osnivača i glavnog arhitekta Salima Azize",
     "🔒 256-bit SSL Encrypted": "🔒 256-bitno SSL šifriranje",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % dostupnost i šifriranje na razini banke"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % dostupnost i šifriranje na razini banke",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Digitalno potpisano i certificirano 100% bez zlonamjernog softvera • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Sav softver i sustavi",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40 % manje troškova naslijeđene infrastrukture",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Preuzmi izvorni Windows instalater (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Preuzmi instalacijsku datoteku (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 LABORATORIJ OSNIVAČA I PORTAL KOMERCIJALNE DISTRIBUCIJE",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Laboratorij osnivača ing. Salima",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Sigurnost i regulatorna usklađenost",
+    "🛡️ Compliance & Security": "🛡️ Usklađenost i sigurnost",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Portal za upravljanje softverskim licencama • Isključivo za Salima Azizu, osnivača i glavnog arhitekta • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Provjerena usklađenost sa SEPA i nizozemskim BTW-om",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA i izvršni concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Trenutačni kalkulator i ponuda White-Label licence (PDF)"
   }
 }

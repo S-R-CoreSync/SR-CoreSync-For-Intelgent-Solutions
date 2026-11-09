@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Jelenlegi működési és adminisztratív havi költség:",
     "Current Software & Workflow Maturity Level:": "A szoftverek és munkafolyamatok jelenlegi érettségi szintje:",
     "Custom Brand Colors, Logo & Domain": "Egyedi márkaszínek, logó és domain",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Egyedi felhőplatform + vezetői irányítópultok (60% megtakarítás)",
     "Custom Cloud Software & Systems": "Egyedi felhőszoftverek és rendszerek",
     "Custom Software & Platforms": "Egyedi szoftverek és platformok",
     "Database Optimization & API Orchestration": "Adatbázis-optimalizálás és API-orkesztráció",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Vállalati digitális licenckulcs:",
     "Enterprise ERP & Financial Ledger Architecture": "Vállalati ERP- és pénzügyi főkönyv-architektúra",
     "Enterprise Financial Savings & Efficiency Engine": "Pénzügyi megtakarítási és hatékonysági motor",
+    "Enterprise Systems & Cloud Architectures": "Vállalati rendszerek és felhőarchitektúrák",
     "Enterprise Web Platforms (React & Next.js)": "Vállalati webplatformok (React és Next.js)",
     "Enterprise security audit & DDoS hardening": "Vállalati biztonsági audit és DDoS-keményítés",
     "Estimated Budget (EUR €)": "Becsült költségvetés (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Olvassa be a QR-kódot a telefon kamerájával a névjegy azonnali mentéséhez",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Az alapító és vezető építész Salim Aziza kriptográfiai portálja",
     "🔒 256-bit SSL Encrypted": "🔒 256 bites SSL titkosítás",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99%-os rendelkezésre állás és banki szintű titkosítás"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99%-os rendelkezésre állás és banki szintű titkosítás",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Digitálisan aláírva és tanúsítva, 100%-ban malware-mentes • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Minden szoftver és rendszer",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40%-os csökkenés az örökölt infrastruktúra költségeiben",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Natív Windows-telepítő letöltése (Setup.exe • 64 bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Telepítő futtatható fájl letöltése (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 AZ ALAPÍTÓ LABORJA ÉS KERESKEDELMI TERJESZTÉSI PORTÁL",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Az alapító okl. Salim laborja",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Biztonság és szabályozási megfelelés",
+    "🛡️ Compliance & Security": "🛡️ Megfelelés és biztonság",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Szoftverlicenc-kezelő portál • Kizárólag Salim Aziza, alapító és vezető építész számára • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Ellenőrzött SEPA- és holland BTW-megfelelés",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA és executive concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Azonnali white-label licenckalkulátor és ajánlat (PDF)"
   }
 }

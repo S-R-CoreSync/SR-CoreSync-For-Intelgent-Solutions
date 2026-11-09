@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "تێچووی مانگانەی کارکردن و بەڕێوەبردنی ئێستا:",
     "Current Software & Workflow Maturity Level:": "ئاستی گەیشتوویی ئێستای نەرمەکاڵا و کار:",
     "Custom Brand Colors, Logo & Domain": "ڕەنگەکانی براندی تایبەت، لۆگۆ و دۆمەین",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "پلاتفۆرمی هەوری تایبەت + داشبۆردەکانی جێبەجێکار (٦٠٪ پاشەکەوت)",
     "Custom Cloud Software & Systems": "نەرمەکاڵا و سیستەمەکانی هەوری تایبەت",
     "Custom Software & Platforms": "نەرمەکاڵا و پلاتفۆرمەکانی تایبەت",
     "Database Optimization & API Orchestration": "باشترکردنی بنکەدراوە و ئۆرکیستراسیۆنی API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "کلیلی مۆڵەتی دیجیتاڵی کۆمپانیا:",
     "Enterprise ERP & Financial Ledger Architecture": "تەلارسازی ERP و دەفتەری دارایی کۆمپانیا",
     "Enterprise Financial Savings & Efficiency Engine": "بزوێنەری پاشەکەوت و کارایی دارایی کۆمپانیا",
+    "Enterprise Systems & Cloud Architectures": "سیستەمەکانی کۆمپانیا و تەلارسازییەکانی هەور",
     "Enterprise Web Platforms (React & Next.js)": "پلاتفۆرمەکانی وێبی کۆمپانیا (React و Next.js)",
     "Enterprise security audit & DDoS hardening": "پشکنینی ئاسایشی کۆمپانیا و بەهێزکردنی DDoS",
     "Estimated Budget (EUR €)": "بودجەی خەمڵێنراو (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 بۆ پاشەکەوتکردنی پەیوەندی بە دەستبەجێ، کۆدی QR بە کامێرای مۆبایلەکەت بسکان بکە",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 پۆرتالی کریپتۆگرافیای دامەزرێنەر و سەرەتەلارساز سالم عزیزە",
     "🔒 256-bit SSL Encrypted": "🔒 بە SSL ی 256-bit شفرکراوە",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 ٩٩٫٩٩٪ بەردەستبوون و شفرکردنی ئاستی بانک"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 ٩٩٫٩٩٪ بەردەستبوون و شفرکردنی ئاستی بانک",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 بە شێوەی دیجیتاڵی واژووکراو و بڕوانامەدار ١٠٠٪ بێ مالویر • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ هەموو نەرمەکاڵا و سیستەمەکان",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 ٤٠٪ کەمبوون لە تێچووی ژێرخانی کۆن",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 دامەزرێنەری ڕەسەنی Windows دابەزێنە (Setup.exe • ٦٤-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 پەڕگەی دامەزراندن دابەزێنە (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 تاقیگەی دامەزرێنەر و پۆرتالی دابەشکردنی بازرگانی",
+    "🚀 Founder Eng. Salim's Lab": "🚀 تاقیگەی دامەزرێنەر ئەندازیار سالم",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ ٢. ئاسایش و پابەندبوون بە ڕێکخستن",
+    "🛡️ Compliance & Security": "🛡️ پابەندبوون و ئاسایش",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ پۆرتالی بەڕێوەبردنی مۆڵەتی نەرمەکاڵا • تەنها بۆ سالم عزیزە، دامەزرێنەر و سەرەتەلارساز • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ پابەندبوونی SEPA و BTW ی هۆڵەندی پشتڕاستکراوە",
+    "🟢 100/100 Core Vitals": "🟢 ١٠٠/١٠٠ Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 ٤. SLA و concierge ی جێبەجێکار",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 حیسابکەر و پێشنیاری مۆڵەتی White-Label ی دەستبەجێ (PDF)"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "ku",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Lêçûna Mehane ya Operasyonel û Rêvebirinê ya Niha:",
     "Current Software & Workflow Maturity Level:": "Asta Gihîştinê ya Niha ya Nermalavê û Kar:",
     "Custom Brand Colors, Logo & Domain": "Rengên Branda Taybet, Logo û Domain",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Platforma Cloud a Taybet + Panoyên Rêveber (%60 teserûf)",
     "Custom Cloud Software & Systems": "Nermalava û Sîstemên Cloud ên Taybet",
     "Custom Software & Platforms": "Nermalav û Platformên Taybet",
     "Database Optimization & API Orchestration": "Optimîzasyona Danegehê û Orkestrasyona API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Kilîta Lîsansa Dîjîtal a Pargîdaniyê:",
     "Enterprise ERP & Financial Ledger Architecture": "Mîmariya ERP û Deftera Darayî ya Pargîdaniyê",
     "Enterprise Financial Savings & Efficiency Engine": "Motora Teserûf û Karbidestiya Darayî ya Pargîdaniyê",
+    "Enterprise Systems & Cloud Architectures": "Sîstemên Pargîdaniyê û Mîmariyên Cloud",
     "Enterprise Web Platforms (React & Next.js)": "Platformên Web ên Pargîdaniyê (React û Next.js)",
     "Enterprise security audit & DDoS hardening": "Auditê ewlekariya pargîdaniyê û hişkkirina DDoS",
     "Estimated Budget (EUR €)": "Budçeya Texmînkirî (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Ji bo ku têkiliyê tavilê tomar bikî, koda QR bi kameraya telefonê skan bike",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portala Krîptografîk a Damezrêner û Serek-Mîmar Salim Aziza",
     "🔒 256-bit SSL Encrypted": "🔒 Bi SSL a 256-bit Şîfrekirî",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% Berdestbûn û Şîfrekirina Asta Bankê"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% Berdestbûn û Şîfrekirina Asta Bankê",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Bi awayekî dîjîtal îmzekirî û sertîfîkayî 100% bê malwar • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Hemû Nermalav û Sîstem",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40% kêmbûn di lêçûna binesaziya kevn de",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Sazkerê Xwecihî yê Windows Dakêşe (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Pelê Sazkirinê Dakêşe (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 LABORA DAMEZRÊNER Û PORTALA BELAVKIRINA BAZIRGANÎ",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Labora Damezrêner End. Salim",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Ewlekarî û Lihevhatina Rêziknameyê",
+    "🛡️ Compliance & Security": "🛡️ Lihevhatin û Ewlekarî",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Portala Rêvebiriya Lîsansa Nermalavê • Tenê ji bo Salim Aziza, Damezrêner û Serek-Mîmar • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Lihevhatina SEPA û BTW ya Holendî ya Verastkirî",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA û Concierge ya Rêveber",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Hesabker û Pêşniyara Lîsansa White-Label a Tavilê (PDF)"
   }
 }

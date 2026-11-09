@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Costul operațional și administrativ lunar actual:",
     "Current Software & Workflow Maturity Level:": "Nivelul actual de maturitate al software-ului și fluxurilor de lucru:",
     "Custom Brand Colors, Logo & Domain": "Culori de brand, logo și domeniu personalizate",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Platformă cloud personalizată + panouri executive (60% economie)",
     "Custom Cloud Software & Systems": "Software și sisteme cloud personalizate",
     "Custom Software & Platforms": "Software și platforme personalizate",
     "Database Optimization & API Orchestration": "Optimizarea bazelor de date și orchestrarea API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Cheie digitală de licență enterprise:",
     "Enterprise ERP & Financial Ledger Architecture": "Arhitectură ERP și registru financiar enterprise",
     "Enterprise Financial Savings & Efficiency Engine": "Motor de economii financiare și eficiență",
+    "Enterprise Systems & Cloud Architectures": "Sisteme enterprise și arhitecturi cloud",
     "Enterprise Web Platforms (React & Next.js)": "Platforme web enterprise (React și Next.js)",
     "Enterprise security audit & DDoS hardening": "Audit de securitate enterprise și hardening DDoS",
     "Estimated Budget (EUR €)": "Buget estimat (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Scanează codul QR cu camera telefonului pentru a salva contactul instant",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portalul criptografic al fondatorului și arhitectului-șef Salim Aziza",
     "🔒 256-bit SSL Encrypted": "🔒 Criptare SSL pe 256 de biți",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Disponibilitate 99,99% și criptare de nivel bancar"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Disponibilitate 99,99% și criptare de nivel bancar",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Semnat digital și certificat 100% fără malware • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Tot software-ul și sistemele",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 Reducere de 40% a costurilor infrastructurii legacy",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Descarcă instalatorul nativ Windows (Setup.exe • 64 biți)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Descarcă executabilul de instalare (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 LABORATORUL FONDATORULUI ȘI PORTALUL DE DISTRIBUȚIE COMERCIALĂ",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Laboratorul fondatorului Ing. Salim",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Securitate și conformitate reglementară",
+    "🛡️ Compliance & Security": "🛡️ Conformitate și securitate",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Portal de gestionare a licențelor software • Exclusiv pentru Salim Aziza, fondator și arhitect-șef • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Conformitate SEPA și BTW olandeză verificată",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA și concierge executiv",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Calculator și ofertă instantanee de licență white-label (PDF)"
   }
 }

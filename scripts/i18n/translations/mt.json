@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Kost Operattiv u Amministrattiv Mensili Attwali:",
     "Current Software & Workflow Maturity Level:": "Livell Attwali tal-Maturità tas-Softwer u l-Flussi tax-Xogħol:",
     "Custom Brand Colors, Logo & Domain": "Kuluri tal-Brand, Logo u Dominju Personalizzati",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Pjattaforma Cloud Personalizzata + Dashboards Eżekuttivi (60% iffrankar)",
     "Custom Cloud Software & Systems": "Softwer u Sistemi Cloud Personalizzati",
     "Custom Software & Platforms": "Softwer u Pjattaformi Personalizzati",
     "Database Optimization & API Orchestration": "Ottimizzazzjoni tad-Database u Orkestrazzjoni tal-API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Ċavetta tal-Liċenzja Diġitali tal-Intrapriża:",
     "Enterprise ERP & Financial Ledger Architecture": "Arkitettura ERP u Ktieb Finanzjarju tal-Intrapriża",
     "Enterprise Financial Savings & Efficiency Engine": "Magna tat-Tfaddil Finanzjarju u l-Effiċjenza",
+    "Enterprise Systems & Cloud Architectures": "Sistemi tal-Intrapriża u Arkitetturi Cloud",
     "Enterprise Web Platforms (React & Next.js)": "Pjattaformi Web tal-Intrapriża (React u Next.js)",
     "Enterprise security audit & DDoS hardening": "Awdit tas-sigurtà tal-intrapriża u tħardjar DDoS",
     "Estimated Budget (EUR €)": "Baġit Stmat (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skennja l-kodiċi QR bil-kamera tat-telefon biex issalva l-kuntatt mill-ewwel",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portal Kriptografiku tal-Fundatur u Arkitett Ewlieni Salim Aziza",
     "🔒 256-bit SSL Encrypted": "🔒 SSL b'256-bit Encryption",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99.99% Disponibbiltà u Encryption ta' Livell Bankarju"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99.99% Disponibbiltà u Encryption ta' Livell Bankarju",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Firem diġitalment u ċċertifikat 100% ħieles mill-malware • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Is-Softwer u s-Sistemi Kollha",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 Tnaqqis ta' 40% fl-ispejjeż tal-infrastruttura antika",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Niżżel l-Installer Nattiv għal Windows (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Niżżel il-Fajl tal-Installazzjoni (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 IL-LABORATORJU TAL-FUNDATUR U L-PORTAL TAD-DISTRIBUZZJONI KUMMERĊJALI",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Il-Laboratorju tal-Fundatur Inġ. Salim",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Sigurtà u Konformità Regolatorja",
+    "🛡️ Compliance & Security": "🛡️ Konformità u Sigurtà",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Portal tal-Ġestjoni tal-Liċenzji tas-Softwer • Esklużivament għal Salim Aziza, Fundatur u Arkitett Ewlieni • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Konformità SEPA u BTW Olandiża Verifikata",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA u Concierge Eżekuttiv",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Kalkulatur u Kwotazzjoni Instantanja tal-Liċenzja White-Label (PDF)"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "cs",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Schválené provozní základní parametry",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (bez stopy CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Současné provozní a administrativní měsíční náklady:",
     "Current Software & Workflow Maturity Level:": "Současná úroveň vyspělosti softwaru a pracovních postupů:",
     "Custom Brand Colors, Logo & Domain": "Vlastní barvy značky, logo a doména",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Zakázková cloudová platforma + executive dashboardy (60% úspora)",
     "Custom Cloud Software & Systems": "Vlastní cloudový software a systémy",
     "Custom Software & Platforms": "Vlastní software a platformy",
     "Database Optimization & API Orchestration": "Optimalizace databáze a orchestrace API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Podnikový digitální licenční klíč:",
     "Enterprise ERP & Financial Ledger Architecture": "Podniková architektura ERP a finančního účetnictví",
     "Enterprise Financial Savings & Efficiency Engine": "Engine finančních úspor a efektivity",
+    "Enterprise Systems & Cloud Architectures": "Podnikové systémy a cloudové architektury",
     "Enterprise Web Platforms (React & Next.js)": "Podnikové webové platformy (React a Next.js)",
     "Enterprise security audit & DDoS hardening": "Podnikový bezpečnostní audit a DDoS hardening",
     "Estimated Budget (EUR €)": "Odhadovaný rozpočet (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Naskenujte QR kód fotoaparátem telefonu a okamžitě uložte kontakt",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kryptografický portál zakladatele a hlavního architekta Salima Azizy",
     "🔒 256-bit SSL Encrypted": "🔒 256bitové SSL šifrování",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% dostupnost a šifrování na bankovní úrovni"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% dostupnost a šifrování na bankovní úrovni",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Digitálně podepsáno a certifikováno 100% bez malwaru • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Veškerý software a systémy",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40% snížení režie starší infrastruktury",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Stáhnout nativní instalátor pro Windows (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Stáhnout instalační soubor (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 LABORATOŘ ZAKLADATELE A PORTÁL KOMERČNÍ DISTRIBUCE",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Laboratoř zakladatele Ing. Salima",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Bezpečnost a regulatorní shoda",
+    "🛡️ Compliance & Security": "🛡️ Shoda a bezpečnost",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Portál správy softwarových licencí • Výhradně pro Salima Azizu, zakladatele a hlavního architekta • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Ověřená shoda se SEPA a nizozemskou BTW",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA a executive concierge",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Okamžitá kalkulačka a nabídka white-label licence (PDF)"
   }
 }

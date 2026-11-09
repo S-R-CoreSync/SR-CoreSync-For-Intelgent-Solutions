@@ -1,6 +1,6 @@
 {
   "language": "fr",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paramètres opérationnels de base approuvés",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (aucune trace CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Coût mensuel opérationnel et administratif actuel :",
     "Current Software & Workflow Maturity Level:": "Niveau actuel de maturité des logiciels et des workflows :",
     "Custom Brand Colors, Logo & Domain": "Couleurs de marque, logo et domaine personnalisés",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Plateforme cloud sur mesure + tableaux de bord exécutifs (60 % d'économies)",
     "Custom Cloud Software & Systems": "Logiciels et systèmes cloud sur mesure",
     "Custom Software & Platforms": "Logiciels et plateformes sur mesure",
     "Database Optimization & API Orchestration": "Optimisation des bases de données et orchestration d'API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Clé de licence numérique d'entreprise :",
     "Enterprise ERP & Financial Ledger Architecture": "Architecture ERP et grand livre financier d'entreprise",
     "Enterprise Financial Savings & Efficiency Engine": "Moteur d'économies financières et d'efficacité",
+    "Enterprise Systems & Cloud Architectures": "Systèmes d'entreprise et architectures cloud",
     "Enterprise Web Platforms (React & Next.js)": "Plateformes web d'entreprise (React et Next.js)",
     "Enterprise security audit & DDoS hardening": "Audit de sécurité d'entreprise et durcissement DDoS",
     "Estimated Budget (EUR €)": "Budget estimé (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Scannez le code QR avec l'appareil photo du téléphone pour enregistrer le contact instantanément",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portail cryptographique du fondateur et architecte en chef Salim Aziza",
     "🔒 256-bit SSL Encrypted": "🔒 Chiffrement SSL 256 bits",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Disponibilité de 99,99 % et chiffrement de niveau bancaire"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Disponibilité de 99,99 % et chiffrement de niveau bancaire",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Signé numériquement et certifié 100 % sans malware • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Tous les logiciels et systèmes",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40 % de réduction des coûts d'infrastructure héritée",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Télécharger l'installateur natif Windows (Setup.exe • 64 bits)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Télécharger l'exécutable d'installation (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 LABORATOIRE DU FONDATEUR ET PORTAIL DE DISTRIBUTION COMMERCIALE",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Laboratoire du fondateur Ing. Salim",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Sécurité et conformité réglementaire",
+    "🛡️ Compliance & Security": "🛡️ Conformité et sécurité",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Portail de gestion des licences logicielles • Exclusivement pour Salim Aziza, fondateur et architecte en chef • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Conformité SEPA et BTW néerlandaise vérifiée",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA et concierge exécutif",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Calculateur et devis instantanés de licence white-label (PDF)"
   }
 }

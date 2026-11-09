@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 421,
+  "count": 437,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -104,6 +104,7 @@
     "Current Operational & Administrative Monthly Cost:": "Costas Míosúil Oibriúcháin agus Riaracháin Reatha:",
     "Current Software & Workflow Maturity Level:": "Leibhéal Aibíochta Reatha na mbogearraí agus na sreafaí oibre:",
     "Custom Brand Colors, Logo & Domain": "Dathanna Branda, Lógó agus Fearann Saincheaptha",
+    "Custom Cloud Platform + Executive Dashboards (60% savings)": "Ardán Néal Saincheaptha + Deais Feidhmiúcháin (60% coigilt)",
     "Custom Cloud Software & Systems": "Bogearraí agus Córais Néal Saincheaptha",
     "Custom Software & Platforms": "Bogearraí agus Ardáin Saincheaptha",
     "Database Optimization & API Orchestration": "Optamú Bunachar Sonraí agus Orcastrú API",
@@ -153,6 +154,7 @@
     "Enterprise Digital License Key:": "Eochair Cheadúnais Dhigiteach Fiontair:",
     "Enterprise ERP & Financial Ledger Architecture": "Ailtireacht ERP agus Mórleabhar Airgeadais Fiontair",
     "Enterprise Financial Savings & Efficiency Engine": "Inneall Coigiltis Airgeadais agus Éifeachtúlachta",
+    "Enterprise Systems & Cloud Architectures": "Córais Fiontair agus Ailtireachtaí Néal",
     "Enterprise Web Platforms (React & Next.js)": "Ardáin Ghréasáin Fiontair (React agus Next.js)",
     "Enterprise security audit & DDoS hardening": "Iniúchadh slándála fiontair agus cruasú DDoS",
     "Estimated Budget (EUR €)": "Buiséad Measta (EUR €)",
@@ -422,6 +424,20 @@
     "📸 Scan QR code with your phone camera to save contact instantly": "📸 Scan an cód QR le ceamara do ghutháin chun an teagmháil a shábháil láithreach",
     "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Tairseach Chripteagrafach an Bhunaitheora agus an Phríomh-Ailtire Salim Aziza",
     "🔒 256-bit SSL Encrypted": "🔒 Criptiú SSL 256-giotán",
-    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Infhaighteacht 99.99% agus Criptiú ar Leibhéal Bainc"
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Infhaighteacht 99.99% agus Criptiú ar Leibhéal Bainc",
+    "🔒 Digitally Signed & Certified 100% Malware-Free • S&R CoreSync For Intelligent Solutions": "🔒 Sínithe go digiteach agus deimhnithe 100% saor ó mhalware • S&R CoreSync For Intelligent Solutions",
+    "🗂️ All Software & Systems": "🗂️ Gach Bogearraí agus Córas",
+    "🚀 40% Reduction in Legacy Infrastructure Overhead": "🚀 40% Laghdú ar Bharrachostais Bonneagair Oidhreachta",
+    "🚀 Download Native Windows Installer (Setup.exe • 64-bit)": "🚀 Íoslódáil Suiteálaí Dúchasach Windows (Setup.exe • 64-bit)",
+    "🚀 Download Setup Executable (Setup.exe)": "🚀 Íoslódáil Inrite Suiteála (Setup.exe)",
+    "🚀 FOUNDER'S LAB & COMMERCIAL DISTRIBUTION PORTAL": "🚀 SAOTHARLANN AN BHUNATHEORA AGUS TAIRSEACH DHÁILEADH TRÁCHTÁLA",
+    "🚀 Founder Eng. Salim's Lab": "🚀 Saotharlann an Bhunaitheora In. Salim",
+    "🛡️ 2. Security & Regulatory Compliance": "🛡️ 2. Slándáil agus Comhlíonadh Rialúcháin",
+    "🛡️ Compliance & Security": "🛡️ Comhlíonadh agus Slándáil",
+    "🛡️ Software License Management Portal • Exclusively for Salim Aziza, Founder & Chief Architect • S&R CoreSync For Intelligent Solutions": "🛡️ Tairseach Bainistíochta Ceadúnas Bogearraí • Go heisiach do Salim Aziza, Bunaitheoir agus Príomh-Ailtire • S&R CoreSync For Intelligent Solutions",
+    "🛡️ Verified SEPA & Dutch BTW Tax Compliance": "🛡️ Comhlíonadh SEPA agus BTW Ollannach Fíoraithe",
+    "🟢 100/100 Core Vitals": "🟢 100/100 Core Vitals",
+    "🤝 4. SLA & Executive Concierge": "🤝 4. SLA agus Concierge Feidhmiúcháin",
+    "🧮 Instant White-Label License Calculator & Quote (PDF)": "🧮 Áireamhán agus Luachan Ceadúnais White-Label Láithreach (PDF)"
   }
 }
