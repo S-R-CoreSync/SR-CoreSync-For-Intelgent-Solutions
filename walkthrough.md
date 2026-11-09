@@ -10,6 +10,7 @@
 - **التوثيق:** قسم جديد «نتيجة فحص كل الروابط القديمة المرشحة» في `docs/RETIRED-URLS.md`.
 - **الاستنتاج:** لا توجد روابط مكشوفة تحتاج إزالة إضافية؛ يبقى إجراء GSC على رابطَي الأرشيف فقط.
 - **إضافة لاحقة (SEO):** أُدرجت `3d-product-configurator.html` في `sitemap.xml` (lastmod `2026-11-07`، priority `0.75`) لأنها صفحة منتج حقيقية ومربوطة من `index.html` و`dynamic-qr-studio.html` لكنها كانت غائبة عن الخريطة. عدد الروابط 87 → 88، وأُعيد بناء `_site` مع 0 مراجع مكسورة.
+- **تحسين SEO:** إضافة canonical + robots + Open Graph + Twitter Card إلى `3d-product-configurator.html` (صورة `og-preview-3d-mockup.jpg`). جميع البوابات (publish_set, site_links, csp --check) ناجحة.
 
 ---
 

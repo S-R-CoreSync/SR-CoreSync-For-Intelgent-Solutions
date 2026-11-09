@@ -14,6 +14,7 @@
 - **التوثيق:** تحديث `docs/RETIRED-URLS.md` بقسم فحص كامل وجداول مصنّفة.
 - **الإغلاق:** نُفِّذ طلب الإزالة المؤقتة في Google Search Console للبادئة `https://sr-coresync.com/_trash_160/` بتاريخ 09 نوفمبر 2026؛ وأُعيد التحقق الحيّ بعد الطلب: الرابطان يعيدان **404**. ملف الروابط المسحوبة مغلق نهائيًا.
 - **إضافة SEO:** إدراج `3d-product-configurator.html` في `sitemap.xml` (lastmod 2026-11-07، priority 0.75) — كانت مربوطة من الصفحة الرئيسية و`dynamic-qr-studio.html` لكنها غائبة عن الخريطة. الخريطة 87 → 88 رابطًا، وإعادة بناء `_site` + `validate_publish_set.py` + `check_site_links.py` ناجحة (0 مراجع مكسورة).
+- **تحسين SEO:** إضافة canonical + robots + Open Graph + Twitter Card إلى `3d-product-configurator.html` (صورة `og-preview-3d-mockup.jpg`). بوابات `validate_publish_set.py` و`check_site_links.py` و`build_csp.py --check` ناجحة (192 hash).
 
 ---
 

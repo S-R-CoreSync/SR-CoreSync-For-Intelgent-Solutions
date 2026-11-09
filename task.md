@@ -8,6 +8,7 @@
 - [x] **توثيق النتيجة:** إضافة قسم «نتيجة فحص كل الروابط القديمة المرشحة» إلى `docs/RETIRED-URLS.md` بجداول مفصّلة.
 - [x] **إغلاق ملف الإزالة:** نُفِّذ طلب الإزالة المؤقتة في Google Search Console للبادئة `https://sr-coresync.com/_trash_160/` (09 نوفمبر 2026)، وأُعيد التحقق الحيّ: الرابطان → **404**. الملف مغلق نهائيًا.
 - [x] **إصلاح SEO:** إضافة `3d-product-configurator.html` إلى `sitemap.xml` (lastmod 2026-11-07، priority 0.75) بعد أن كانت صفحة منتج حقيقية ومربوطة لكنها غير مُدرجة. عدد روابط الخريطة: 87 → 88، وإعادة بناء `_site` والتحقق: 0 مراجع مكسورة.
+- [x] **تحسين SEO للصفحة:** إضافة `<link rel="canonical">` و`robots` ووسوم Open Graph + Twitter Card إلى `3d-product-configurator.html` (صورة `og-preview-3d-mockup.jpg`)؛ `check_site_links.py` و`build_csp.py --check` ناجحان.
 
 ---
 
