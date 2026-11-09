@@ -51,7 +51,10 @@ def main():
     broken_sources = collections.defaultdict(set)
     pages = 0
 
-    for dirpath, _dirnames, filenames in os.walk(target):
+    for dirpath, dirnames, filenames in os.walk(target):
+        # Local archives, browser profiles and build output are not part of the
+        # publish set: auditing them on the source tree only produces noise.
+        dirnames[:] = [d for d in dirnames if not d.startswith(('.', '_')) and d != 'node_modules']
         for name in filenames:
             if not name.lower().endswith('.html'):
                 continue
