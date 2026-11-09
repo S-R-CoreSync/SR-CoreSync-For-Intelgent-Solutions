@@ -1,6 +1,6 @@
 {
   "language": "da",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkendte operationelle basisparametre",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (ingen CoreSync-fodaftryk)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suveræne globale sprog (29 understøttede sprog og momsordninger)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Officielt digitalt kontaktkort • smart vCard",
     "💡 Cloud store with automated ERP": "💡 Cloudbutik med automatiseret ERP",
-    "💬 Instant WhatsApp Chat": "💬 Øjeblikkelig WhatsApp-chat"
+    "💬 Instant WhatsApp Chat": "💬 Øjeblikkelig WhatsApp-chat",
+    "💬 Request Demo (Eng. Salim)": "💬 Anmod om demo (ing. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Køb og licensér straks via iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Kreditkort (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Udviklerværktøjer og Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 System (ing. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Officiel hollandsk BTW-faktura",
+    "📇 Save Contact Directly (.vcf)": "📇 Gem kontakt direkte (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Realtidsanalyse af cashflow og avance",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Omfattende pakke- og funktionssammenligning",
+    "📊 Enterprise ERP & Tax compliance": "📊 Enterprise-ERP og skattecompliance",
+    "📊 Financial & Tax Solutions": "📊 Finansielle og skattemæssige løsninger",
+    "📊 Financial ERP (CFO Hub)": "📊 Finansiel ERP (CFO-hub)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Skat og ERP (hr. Raed)",
+    "📥 Download High-Resolution QR": "📥 Download QR i høj opløsning",
+    "📱 Smart cloud app with AI concierge": "📱 Smart cloudapp med AI-concierge",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Scan QR-koden med telefonens kamera for at gemme kontakten med det samme",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kryptografisk portal for grundlægger og chief architect Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 256-bit SSL-kryptering",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % oppetid og kryptering på bankniveau"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Κυρίαρχες παγκόσμιες γλώσσες (29 υποστηριζόμενες γλώσσες και καθεστώτα ΦΠΑ)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Επίσημη ψηφιακή κάρτα επαφής • έξυπνη vCard",
     "💡 Cloud store with automated ERP": "💡 Κατάστημα cloud με αυτοματοποιημένο ERP",
-    "💬 Instant WhatsApp Chat": "💬 Άμεση συνομιλία WhatsApp"
+    "💬 Instant WhatsApp Chat": "💬 Άμεση συνομιλία WhatsApp",
+    "💬 Request Demo (Eng. Salim)": "💬 Αίτημα demo (Μηχ. Σαλίμ)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Αγορά και αδειοδότηση άμεσα μέσω iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Πιστωτική κάρτα (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Εργαλεία προγραμματιστών και Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Σύστημα (Μηχ. Σαλίμ)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Επίσημο ολλανδικό τιμολόγιο BTW",
+    "📇 Save Contact Directly (.vcf)": "📇 Αποθήκευση επαφής απευθείας (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Ανάλυση ταμειακών ροών και περιθωρίου κέρδους σε πραγματικό χρόνο",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Ολοκληρωμένη σύγκριση πακέτων και λειτουργιών",
+    "📊 Enterprise ERP & Tax compliance": "📊 Εταιρικό ERP και φορολογική συμμόρφωση",
+    "📊 Financial & Tax Solutions": "📊 Χρηματοοικονομικές και φορολογικές λύσεις",
+    "📊 Financial ERP (CFO Hub)": "📊 Χρηματοοικονομικό ERP (κόμβος CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Φόροι και ERP (κ. Raed)",
+    "📥 Download High-Resolution QR": "📥 Λήψη QR υψηλής ανάλυσης",
+    "📱 Smart cloud app with AI concierge": "📱 Έξυπνη εφαρμογή cloud με AI concierge",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Σαρώστε τον κωδικό QR με την κάμερα του τηλεφώνου για άμεση αποθήκευση της επαφής",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Κρυπτογραφική πύλη του ιδρυτή και επικεφαλής αρχιτέκτονα Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 Κρυπτογράφηση SSL 256-bit",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% διαθεσιμότητα και κρυπτογράφηση τραπεζικού επιπέδου"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "lt",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (be CoreSync pėdsakų)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suverenios pasaulinės kalbos (29 palaikomos kalbos ir PVM režimai)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Oficiali skaitmeninė vizitinė kortelė • išmani vCard",
     "💡 Cloud store with automated ERP": "💡 Debesijos parduotuvė su automatizuotu ERP",
-    "💬 Instant WhatsApp Chat": "💬 Momentinis WhatsApp pokalbis"
+    "💬 Instant WhatsApp Chat": "💬 Momentinis WhatsApp pokalbis",
+    "💬 Request Demo (Eng. Salim)": "💬 Prašyti demonstravimo (inž. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Įsigykite ir licencijuokite akimirksniu per iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Kredito kortelė (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Kūrėjų įrankiai ir Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Sistema (inž. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Oficiali Nyderlandų BTW sąskaita",
+    "📇 Save Contact Directly (.vcf)": "📇 Išsaugoti kontaktą tiesiogiai (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Realiojo laiko pinigų srautų ir pelno maržos analizė",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Išsami paketų ir funkcijų palyginimas",
+    "📊 Enterprise ERP & Tax compliance": "📊 Įmonės ERP ir mokesčių atitiktis",
+    "📊 Financial & Tax Solutions": "📊 Finansiniai ir mokesčių sprendimai",
+    "📊 Financial ERP (CFO Hub)": "📊 Finansinis ERP (CFO centras)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Mokesčiai ir ERP (p. Raed)",
+    "📥 Download High-Resolution QR": "📥 Atsisiųsti didelės raiškos QR",
+    "📱 Smart cloud app with AI concierge": "📱 Išmanioji debesijos programėlė su AI concierge",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Nuskenuokite QR kodą telefono kamera, kad kontaktą išsaugotumėte akimirksniu",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Įkūrėjo ir vyriausiojo architekto Salim Aziza kriptografinis portalas",
+    "🔒 256-bit SSL Encrypted": "🔒 256 bitų SSL šifravimas",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % prieinamumas ir bankinio lygio šifravimas"
   }
 }

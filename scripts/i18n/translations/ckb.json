@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 زمانە جیهانییەکانی سەروەر (٢٩ زمانی پشتگیریکراو و ڕژێمەکانی BTW)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 کارتی پەیوەندی دیجیتاڵی فەرمی • vCard ی زیرەک",
     "💡 Cloud store with automated ERP": "💡 فرۆشگای هەوری لەگەڵ ERP ی خۆکار",
-    "💬 Instant WhatsApp Chat": "💬 گفتوگۆی WhatsApp ی دەستبەجێ"
+    "💬 Instant WhatsApp Chat": "💬 گفتوگۆی WhatsApp ی دەستبەجێ",
+    "💬 Request Demo (Eng. Salim)": "💬 داوای دیمۆ (ئەندازیار سالم)",
+    "💳 Buy & License Instantly via iDEAL": "💳 بە iDEAL دەستبەجێ بیکڕە و مۆڵەت وەربگرە",
+    "💳 Credit Card (Visa/Mastercard)": "💳 کارتی بانک (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 ئامرازەکانی گەشەپێدەر و Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 سیستەم (ئەندازیار سالم)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 فاتوورەی باجی BTW ی فەرمی هۆڵەندی",
+    "📇 Save Contact Directly (.vcf)": "📇 پەیوەندی ڕاستەوخۆ پاشەکەوت بکە (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 شیکاری ڕەوتی کاش و مارجینی قازانج بە کاتی ڕاستەقینە",
+    "📊 Comprehensive Package & Feature Comparison": "📊 بەراوردکاری گشتگیر لە نێوان پاکێت و تایبەتمەندییەکان",
+    "📊 Enterprise ERP & Tax compliance": "📊 ERP ی کۆمپانیا و پابەندبوون بە باج",
+    "📊 Financial & Tax Solutions": "📊 چارەسەرە داراییەکان و باج",
+    "📊 Financial ERP (CFO Hub)": "📊 ERP ی دارایی (ناوەندی CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 باج و ERP (بەڕێز ڕەعد)",
+    "📥 Download High-Resolution QR": "📥 QR بە ڕوونی بەرز دابەزێنە",
+    "📱 Smart cloud app with AI concierge": "📱 ئەپی هەوری زیرەک لەگەڵ concierge ی AI",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 بۆ پاشەکەوتکردنی پەیوەندی بە دەستبەجێ، کۆدی QR بە کامێرای مۆبایلەکەت بسکان بکە",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 پۆرتالی کریپتۆگرافیای دامەزرێنەر و سەرەتەلارساز سالم عزیزە",
+    "🔒 256-bit SSL Encrypted": "🔒 بە SSL ی 256-bit شفرکراوە",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 ٩٩٫٩٩٪ بەردەستبوون و شفرکردنی ئاستی بانک"
   }
 }

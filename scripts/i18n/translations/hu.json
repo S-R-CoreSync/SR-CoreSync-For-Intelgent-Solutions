@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Szuverén világnyelvek (29 támogatott nyelv és áfarendszer)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Hivatalos digitális névjegykártya • okos vCard",
     "💡 Cloud store with automated ERP": "💡 Felhőáruház automatizált ERP-vel",
-    "💬 Instant WhatsApp Chat": "💬 Azonnali WhatsApp-csevegés"
+    "💬 Instant WhatsApp Chat": "💬 Azonnali WhatsApp-csevegés",
+    "💬 Request Demo (Eng. Salim)": "💬 Demó kérése (okl. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Azonnali vásárlás és licencelés iDEAL-lal",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Bankkártya (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Fejlesztői eszközök és Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Rendszer (okl. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Hivatalos holland BTW-számla",
+    "📇 Save Contact Directly (.vcf)": "📇 Névjegy mentése közvetlenül (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Valós idejű cashflow- és haszonkulcs-analitika",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Átfogó csomag- és funkció-összehasonlítás",
+    "📊 Enterprise ERP & Tax compliance": "📊 Vállalati ERP és adómegfelelés",
+    "📊 Financial & Tax Solutions": "📊 Pénzügyi és adózási megoldások",
+    "📊 Financial ERP (CFO Hub)": "📊 Pénzügyi ERP (CFO központ)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Adó és ERP (Raed úr)",
+    "📥 Download High-Resolution QR": "📥 Nagy felbontású QR letöltése",
+    "📱 Smart cloud app with AI concierge": "📱 Intelligens felhőalkalmazás AI concierge-dzsel",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Olvassa be a QR-kódot a telefon kamerájával a névjegy azonnali mentéséhez",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Az alapító és vezető építész Salim Aziza kriptográfiai portálja",
+    "🔒 256-bit SSL Encrypted": "🔒 256 bites SSL titkosítás",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99%-os rendelkezésre állás és banki szintű titkosítás"
   }
 }

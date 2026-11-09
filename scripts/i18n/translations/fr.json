@@ -1,6 +1,6 @@
 {
   "language": "fr",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paramètres opérationnels de base approuvés",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (aucune trace CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Langues mondiales souveraines (29 langues prises en charge et régimes de TVA)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Carte de visite numérique officielle • vCard intelligente",
     "💡 Cloud store with automated ERP": "💡 Boutique cloud avec ERP automatisé",
-    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp instantané"
+    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp instantané",
+    "💬 Request Demo (Eng. Salim)": "💬 Demander une démo (Ing. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Acheter et licencier instantanément via iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Carte bancaire (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Outils développeurs et Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Système (Ing. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Facture officielle BTW néerlandaise",
+    "📇 Save Contact Directly (.vcf)": "📇 Enregistrer le contact directement (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Analyse en temps réel de la trésorerie et de la marge bénéficiaire",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Comparaison complète des offres et fonctionnalités",
+    "📊 Enterprise ERP & Tax compliance": "📊 ERP d'entreprise et conformité fiscale",
+    "📊 Financial & Tax Solutions": "📊 Solutions financières et fiscales",
+    "📊 Financial ERP (CFO Hub)": "📊 ERP financier (hub CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Fiscalité et ERP (M. Raed)",
+    "📥 Download High-Resolution QR": "📥 Télécharger le QR en haute résolution",
+    "📱 Smart cloud app with AI concierge": "📱 Application cloud intelligente avec concierge IA",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Scannez le code QR avec l'appareil photo du téléphone pour enregistrer le contact instantanément",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portail cryptographique du fondateur et architecte en chef Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 Chiffrement SSL 256 bits",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Disponibilité de 99,99 % et chiffrement de niveau bancaire"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "bg",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Одобрени оперативни базови параметри",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (без следа от CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Суверенни световни езици (29 поддържани езика и режими на ДДС)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Официална дигитална контактна карта • интелигентна vCard",
     "💡 Cloud store with automated ERP": "💡 Облачен магазин с автоматизиран ERP",
-    "💬 Instant WhatsApp Chat": "💬 Незабавен WhatsApp чат"
+    "💬 Instant WhatsApp Chat": "💬 Незабавен WhatsApp чат",
+    "💬 Request Demo (Eng. Salim)": "💬 Заявка за демонстрация (инж. Салим)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Купете и лицензирайте незабавно чрез iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Кредитна карта (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Инструменти за разработчици и Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Система (инж. Салим)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Официална холандска фактура за BTW",
+    "📇 Save Contact Directly (.vcf)": "📇 Запазете контакта директно (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Анализ на паричния поток и маржа на печалбата в реално време",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Подробно сравнение на пакети и функции",
+    "📊 Enterprise ERP & Tax compliance": "📊 Корпоративен ERP и данъчно съответствие",
+    "📊 Financial & Tax Solutions": "📊 Финансови и данъчни решения",
+    "📊 Financial ERP (CFO Hub)": "📊 Финансов ERP (CFO хъб)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Данъци и ERP (г-н Раед)",
+    "📥 Download High-Resolution QR": "📥 Изтеглете QR с висока резолюция",
+    "📱 Smart cloud app with AI concierge": "📱 Интелигентно облачно приложение с AI консиерж",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Сканирайте QR кода с камерата на телефона, за да запазите контакта незабавно",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Криптографски портал на основателя и главен архитект Салим Азиза",
+    "🔒 256-bit SSL Encrypted": "🔒 256-битово SSL криптиране",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% наличност и криптиране на банково ниво"
   }
 }

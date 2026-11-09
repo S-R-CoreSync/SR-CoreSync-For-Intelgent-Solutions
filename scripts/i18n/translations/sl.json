@@ -1,6 +1,6 @@
 {
   "language": "sl",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (brez sledi CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suvereni svetovni jeziki (29 podprtih jezikov in režimov DDV)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Uradna digitalna vizitka • pametna vCard",
     "💡 Cloud store with automated ERP": "💡 Trgovina v oblaku z avtomatiziranim ERP",
-    "💬 Instant WhatsApp Chat": "💬 Takojšen klepet WhatsApp"
+    "💬 Instant WhatsApp Chat": "💬 Takojšen klepet WhatsApp",
+    "💬 Request Demo (Eng. Salim)": "💬 Zahtevaj predstavitev (inž. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Kupi in licenciraj takoj prek iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Kreditna kartica (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Razvijalska orodja in Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Sistem (inž. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Uradni nizozemski račun BTW",
+    "📇 Save Contact Directly (.vcf)": "📇 Shrani stik neposredno (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Analiza denarnega toka in marže dobička v realnem času",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Izčrpna primerjava paketov in funkcij",
+    "📊 Enterprise ERP & Tax compliance": "📊 Enterprise ERP in davčna skladnost",
+    "📊 Financial & Tax Solutions": "📊 Finančne in davčne rešitve",
+    "📊 Financial ERP (CFO Hub)": "📊 Finančni ERP (stičišče CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Davki in ERP (g. Raed)",
+    "📥 Download High-Resolution QR": "📥 Prenesi QR visoke ločljivosti",
+    "📱 Smart cloud app with AI concierge": "📱 Pametna oblačna aplikacija z AI concierge",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skenirajte kodo QR s kamero telefona, da stik takoj shranite",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kriptografski portal ustanovitelja in glavnega arhitekta Salima Azize",
+    "🔒 256-bit SSL Encrypted": "🔒 256-bitno šifriranje SSL",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % razpoložljivost in šifriranje na ravni banke"
   }
 }

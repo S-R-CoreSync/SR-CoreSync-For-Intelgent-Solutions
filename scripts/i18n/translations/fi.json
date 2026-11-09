@@ -1,6 +1,6 @@
 {
   "language": "fi",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ei CoreSync-jälkeä)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suvereenit maailmankielet (29 tuettua kieltä ja ALV-järjestelmää)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Virallinen digitaalinen käyntikortti • älykäs vCard",
     "💡 Cloud store with automated ERP": "💡 Pilvikauppa automatisoidulla ERP:llä",
-    "💬 Instant WhatsApp Chat": "💬 Välitön WhatsApp-keskustelu"
+    "💬 Instant WhatsApp Chat": "💬 Välitön WhatsApp-keskustelu",
+    "💬 Request Demo (Eng. Salim)": "💬 Pyydä demo (ins. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Osta ja lisensoi heti iDEALilla",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Luottokortti (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Kehittäjätyökalut ja Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Järjestelmä (ins. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Virallinen hollantilainen BTW-lasku",
+    "📇 Save Contact Directly (.vcf)": "📇 Tallenna yhteystieto suoraan (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Reaaliaikainen kassavirta- ja myyntikateanalyysi",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Kattava paketti- ja ominaisuusvertailu",
+    "📊 Enterprise ERP & Tax compliance": "📊 Yrityksen ERP ja verovaatimustenmukaisuus",
+    "📊 Financial & Tax Solutions": "📊 Talous- ja veroratkaisut",
+    "📊 Financial ERP (CFO Hub)": "📊 Talous-ERP (CFO-keskus)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Verot ja ERP (hr. Raed)",
+    "📥 Download High-Resolution QR": "📥 Lataa korkean resoluution QR",
+    "📱 Smart cloud app with AI concierge": "📱 Älykäs pilvisovellus AI-concierge-palvelulla",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skannaa QR-koodi puhelimen kameralla ja tallenna yhteystieto heti",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Perustajan ja pääarkkitehdin Salim Azizan kryptografinen portaali",
+    "🔒 256-bit SSL Encrypted": "🔒 256-bittinen SSL-salaus",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % käytettävyys ja pankkitason salaus"
   }
 }

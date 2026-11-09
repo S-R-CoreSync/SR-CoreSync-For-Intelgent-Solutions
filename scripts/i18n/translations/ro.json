@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Limbi globale suverane (29 de limbi acceptate și regimuri de TVA)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Carte de vizită digitală oficială • vCard inteligent",
     "💡 Cloud store with automated ERP": "💡 Magazin cloud cu ERP automatizat",
-    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp instantaneu"
+    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp instantaneu",
+    "💬 Request Demo (Eng. Salim)": "💬 Solicită demo (Ing. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Cumpără și licențiază instant prin iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Card de credit (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Instrumente pentru dezvoltatori și Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Sistem (Ing. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Factură oficială BTW olandeză",
+    "📇 Save Contact Directly (.vcf)": "📇 Salvează contactul direct (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Analiză în timp real a fluxului de numerar și a marjei de profit",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Comparație completă de pachete și funcționalități",
+    "📊 Enterprise ERP & Tax compliance": "📊 ERP enterprise și conformitate fiscală",
+    "📊 Financial & Tax Solutions": "📊 Soluții financiare și fiscale",
+    "📊 Financial ERP (CFO Hub)": "📊 ERP financiar (hub CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Taxe și ERP (dl Raed)",
+    "📥 Download High-Resolution QR": "📥 Descarcă QR la rezoluție înaltă",
+    "📱 Smart cloud app with AI concierge": "📱 Aplicație cloud inteligentă cu concierge AI",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Scanează codul QR cu camera telefonului pentru a salva contactul instant",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portalul criptografic al fondatorului și arhitectului-șef Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 Criptare SSL pe 256 de biți",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Disponibilitate 99,99% și criptare de nivel bancar"
   }
 }

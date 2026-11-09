@@ -1,6 +1,6 @@
 {
   "language": "de",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Genehmigte operative Basisparameter",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (keine CoreSync-Spuren)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Souveräne Weltsprachen (29 unterstützte Sprachen und MwSt.-Regime)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Offizielle digitale Kontaktkarte • smarte vCard",
     "💡 Cloud store with automated ERP": "💡 Cloud-Shop mit automatisiertem ERP",
-    "💬 Instant WhatsApp Chat": "💬 Sofortiger WhatsApp-Chat"
+    "💬 Instant WhatsApp Chat": "💬 Sofortiger WhatsApp-Chat",
+    "💬 Request Demo (Eng. Salim)": "💬 Demo anfragen (Dipl.-Ing. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Sofort kaufen und lizenzieren über iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Kreditkarte (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Entwickler-Tools und Cloud-SDK",
+    "💻 System (Eng. Salim)": "💻 System (Dipl.-Ing. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Offizielle niederländische BTW-Rechnung",
+    "📇 Save Contact Directly (.vcf)": "📇 Kontakt direkt speichern (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Echtzeit-Cashflow- und Gewinnmargen-Analyse",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Umfassender Paket- und Funktionsvergleich",
+    "📊 Enterprise ERP & Tax compliance": "📊 Enterprise-ERP und Steuerkonformität",
+    "📊 Financial & Tax Solutions": "📊 Finanz- und Steuerlösungen",
+    "📊 Financial ERP (CFO Hub)": "📊 Finanz-ERP (CFO-Hub)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Steuern und ERP (Hr. Raed)",
+    "📥 Download High-Resolution QR": "📥 QR-Code in hoher Auflösung herunterladen",
+    "📱 Smart cloud app with AI concierge": "📱 Smarte Cloud-App mit KI-Concierge",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 QR-Code mit der Handykamera scannen, um den Kontakt sofort zu speichern",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kryptografisches Portal von Gründer und Chief Architect Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 256-Bit-SSL-verschlüsselt",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % Verfügbarkeit und Verschlüsselung auf Bankniveau"
   }
 }

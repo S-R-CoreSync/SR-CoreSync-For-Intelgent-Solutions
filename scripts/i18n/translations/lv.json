@@ -1,6 +1,6 @@
 {
   "language": "lv",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez CoreSync pēdām)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suverēnas pasaules valodas (29 atbalstītas valodas un PVN režīmi)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Oficiāla digitālā vizītkarte • viedā vCard",
     "💡 Cloud store with automated ERP": "💡 Mākoņa veikals ar automatizētu ERP",
-    "💬 Instant WhatsApp Chat": "💬 Tūlītēja WhatsApp saruna"
+    "💬 Instant WhatsApp Chat": "💬 Tūlītēja WhatsApp saruna",
+    "💬 Request Demo (Eng. Salim)": "💬 Pieprasīt demonstrējumu (inž. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Pērc un licencē acumirklī ar iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Kredītkarte (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Izstrādātāju rīki un Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Sistēma (inž. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Oficiāls Nīderlandes BTW rēķins",
+    "📇 Save Contact Directly (.vcf)": "📇 Saglabāt kontaktu tieši (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Reāllaika naudas plūsmas un peļņas maržas analīze",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Visaptverošs pakotņu un funkciju salīdzinājums",
+    "📊 Enterprise ERP & Tax compliance": "📊 Uzņēmuma ERP un nodokļu atbilstība",
+    "📊 Financial & Tax Solutions": "📊 Finanšu un nodokļu risinājumi",
+    "📊 Financial ERP (CFO Hub)": "📊 Finanšu ERP (CFO centrs)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Nodokļi un ERP (k-gs Raed)",
+    "📥 Download High-Resolution QR": "📥 Lejupielādēt augstas izšķirtspējas QR",
+    "📱 Smart cloud app with AI concierge": "📱 Viedā mākoņa lietotne ar AI concierge",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skenējiet QR kodu ar tālruņa kameru, lai kontaktu saglabātu acumirklī",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Dibinātāja un galvenā arhitekta Salim Aziza kriptogrāfijas portāls",
+    "🔒 256-bit SSL Encrypted": "🔒 256 bitu SSL šifrēšana",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% pieejamība un bankas līmeņa šifrēšana"
   }
 }

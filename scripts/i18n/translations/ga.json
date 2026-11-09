@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Teangacha domhanda ceannasacha (29 teanga le tacaíocht agus córais CBL)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Cárta teagmhála digiteach oifigiúil • vCard chliste",
     "💡 Cloud store with automated ERP": "💡 Siopa néal le ERP uathoibrithe",
-    "💬 Instant WhatsApp Chat": "💬 Comhrá WhatsApp láithreach"
+    "💬 Instant WhatsApp Chat": "💬 Comhrá WhatsApp láithreach",
+    "💬 Request Demo (Eng. Salim)": "💬 Iarr Taispeántas (In. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Ceannaigh agus Ceadúnaigh Láithreach trí iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Cárta Creidmheasa (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Uirlisí Forbróra agus Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Córas (In. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Sonrasc Oifigiúil BTW Ollannach",
+    "📇 Save Contact Directly (.vcf)": "📇 Sábháil an Teagmháil go Díreach (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Anailís Fíor-ama ar Shreabhadh Airgid agus Corrlach Brabúis",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Comparáid Chuimsitheach Pacáiste agus Gnéithe",
+    "📊 Enterprise ERP & Tax compliance": "📊 ERP Fiontair agus Comhlíonadh Cánach",
+    "📊 Financial & Tax Solutions": "📊 Réitigh Airgeadais agus Cánach",
+    "📊 Financial ERP (CFO Hub)": "📊 ERP Airgeadais (Mol CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Cánacha agus ERP (An tUasal Raed)",
+    "📥 Download High-Resolution QR": "📥 Íoslódáil QR Ardtaifeach",
+    "📱 Smart cloud app with AI concierge": "📱 Aip néal cliste le concierge AI",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Scan an cód QR le ceamara do ghutháin chun an teagmháil a shábháil láithreach",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Tairseach Chripteagrafach an Bhunaitheora agus an Phríomh-Ailtire Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 Criptiú SSL 256-giotán",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 Infhaighteacht 99.99% agus Criptiú ar Leibhéal Bainc"
   }
 }

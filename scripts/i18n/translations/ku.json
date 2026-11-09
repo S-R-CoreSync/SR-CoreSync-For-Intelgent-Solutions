@@ -1,6 +1,6 @@
 {
   "language": "ku",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Zimanên cîhanî yên serwer (29 zimanên piştgirîkirî û rejîmên BTW)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Karta têkiliyê ya dîjîtal a fermî • vCard a jîr",
     "💡 Cloud store with automated ERP": "💡 Firotgeha hêwrî bi ERP ya otomatîk",
-    "💬 Instant WhatsApp Chat": "💬 Sohbeta WhatsApp a tavilê"
+    "💬 Instant WhatsApp Chat": "💬 Sohbeta WhatsApp a tavilê",
+    "💬 Request Demo (Eng. Salim)": "💬 Daxwaza Demo (End. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Bi iDEAL re Tavilê Bikire û Lîsans Bike",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Qerta Krediyê (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Amûrên Pêşdebiran û Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Sîstem (End. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Fatûreya Bacê ya Fermî ya BTW ya Holendî",
+    "📇 Save Contact Directly (.vcf)": "📇 Têkiliyê Rasterast Tomar Bike (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Analîza Herikîna Drav û Marjîna Qezencê ya Dem-rast",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Berawirdkirina Berfireh a Pakêt û Taybetmendiyan",
+    "📊 Enterprise ERP & Tax compliance": "📊 ERP ya Pargîdaniyê û Lihevhatina Bacê",
+    "📊 Financial & Tax Solutions": "📊 Çareseriyên Darayî û Bacê",
+    "📊 Financial ERP (CFO Hub)": "📊 ERP ya Darayî (Navenda CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Bac û ERP (Birêz Raed)",
+    "📥 Download High-Resolution QR": "📥 QR a Bi Resolution Bilind Dakêşe",
+    "📱 Smart cloud app with AI concierge": "📱 Serlêdana hêwrî ya jîr bi concierge ya AI",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Ji bo ku têkiliyê tavilê tomar bikî, koda QR bi kameraya telefonê skan bike",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portala Krîptografîk a Damezrêner û Serek-Mîmar Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 Bi SSL a 256-bit Şîfrekirî",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99% Berdestbûn û Şîfrekirina Asta Bankê"
   }
 }

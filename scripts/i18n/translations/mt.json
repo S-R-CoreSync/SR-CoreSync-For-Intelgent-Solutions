@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Lingwi globali sovrani (29 lingwa appoġġjati u reġimi tal-VAT)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Karta tal-kuntatt diġitali uffiċjali • vCard intelliġenti",
     "💡 Cloud store with automated ERP": "💡 Maħżen cloud b'ERP awtomatizzat",
-    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp istantanja"
+    "💬 Instant WhatsApp Chat": "💬 Chat WhatsApp istantanja",
+    "💬 Request Demo (Eng. Salim)": "💬 Itlob Demo (Inġ. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Ixtri u Liċenzja Mill-Ewwel permezz ta' iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Karta tal-Kreditu (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Għodod tal-Iżviluppaturi u Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Sistema (Inġ. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Fattura Uffiċjali BTW Olandiża",
+    "📇 Save Contact Directly (.vcf)": "📇 Issejvja l-Kuntatt Direttament (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Analitika tal-Fluss tal-Flus u l-Marġni tal-Qligħ f'Ħin Reali",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Paragun Komprensiv tal-Pakketti u l-Funzjonijiet",
+    "📊 Enterprise ERP & Tax compliance": "📊 ERP tal-Intrapriża u Konformità Fiskali",
+    "📊 Financial & Tax Solutions": "📊 Soluzzjonijiet Finanzjarji u Fiskali",
+    "📊 Financial ERP (CFO Hub)": "📊 ERP Finanzjarju (Hub tas-CFO)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Taxxa u ERP (Sur Raed)",
+    "📥 Download High-Resolution QR": "📥 Niżżel QR b'Riżoluzzjoni Għolja",
+    "📱 Smart cloud app with AI concierge": "📱 App cloud intelliġenti b'concierge AI",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Skennja l-kodiċi QR bil-kamera tat-telefon biex issalva l-kuntatt mill-ewwel",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Portal Kriptografiku tal-Fundatur u Arkitett Ewlieni Salim Aziza",
+    "🔒 256-bit SSL Encrypted": "🔒 SSL b'256-bit Encryption",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99.99% Disponibbiltà u Encryption ta' Livell Bankarju"
   }
 }

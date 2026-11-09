@@ -1,6 +1,6 @@
 {
   "language": "sk",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Schválené prevádzkové základné parametre",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez stopy CoreSync)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Suverénne svetové jazyky (29 podporovaných jazykov a režimov DPH)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Oficiálna digitálna vizitka • inteligentná vCard",
     "💡 Cloud store with automated ERP": "💡 Cloudový obchod s automatizovaným ERP",
-    "💬 Instant WhatsApp Chat": "💬 Okamžitý chat na WhatsAppe"
+    "💬 Instant WhatsApp Chat": "💬 Okamžitý chat na WhatsAppe",
+    "💬 Request Demo (Eng. Salim)": "💬 Požiadať o demo (Ing. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 Kúpte a licencujte okamžite cez iDEAL",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Platobná karta (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Vývojárske nástroje a Cloud SDK",
+    "💻 System (Eng. Salim)": "💻 Systém (Ing. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Oficiálna holandská faktúra BTW",
+    "📇 Save Contact Directly (.vcf)": "📇 Uložiť kontakt priamo (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Analýza peňažných tokov a ziskovej marže v reálnom čase",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Komplexné porovnanie balíkov a funkcií",
+    "📊 Enterprise ERP & Tax compliance": "📊 Podnikový ERP a daňová compliance",
+    "📊 Financial & Tax Solutions": "📊 Finančné a daňové riešenia",
+    "📊 Financial ERP (CFO Hub)": "📊 Finančný ERP (CFO hub)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Dane a ERP (pán Raed)",
+    "📥 Download High-Resolution QR": "📥 Stiahnuť QR vo vysokom rozlíšení",
+    "📱 Smart cloud app with AI concierge": "📱 Inteligentná cloudová aplikácia s AI concierge",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Naskenujte QR kód fotoaparátom telefónu a okamžite uložte kontakt",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kryptografický portál zakladateľa a hlavného architekta Salima Azizu",
+    "🔒 256-bit SSL Encrypted": "🔒 256-bitové SSL šifrovanie",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 99,99 % dostupnosť a šifrovanie na bankovej úrovni"
   }
 }

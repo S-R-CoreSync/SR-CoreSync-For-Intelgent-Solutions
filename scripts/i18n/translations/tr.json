@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 402,
+  "count": 421,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
@@ -403,6 +403,25 @@
     "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)": "🌐 Egemen küresel diller (29 desteklenen dil ve KDV rejimi)",
     "👑 Official Digital Contact Card • Smart vCard": "👑 Resmî dijital iletişim kartı • akıllı vCard",
     "💡 Cloud store with automated ERP": "💡 Otomatik ERP'li bulut mağaza",
-    "💬 Instant WhatsApp Chat": "💬 Anında WhatsApp sohbeti"
+    "💬 Instant WhatsApp Chat": "💬 Anında WhatsApp sohbeti",
+    "💬 Request Demo (Eng. Salim)": "💬 Demo Talep Et (Müh. Salim)",
+    "💳 Buy & License Instantly via iDEAL": "💳 iDEAL ile Anında Satın Al ve Lisansla",
+    "💳 Credit Card (Visa/Mastercard)": "💳 Kredi Kartı (Visa/Mastercard)",
+    "💻 Developer Tools & Cloud SDK": "💻 Geliştirici Araçları ve Bulut SDK",
+    "💻 System (Eng. Salim)": "💻 Sistem (Müh. Salim)",
+    "📄 Official Dutch BTW Tax Invoice": "📄 Resmî Hollanda BTW Faturası",
+    "📇 Save Contact Directly (.vcf)": "📇 Kişiyi Doğrudan Kaydet (.vcf)",
+    "📈 Real-Time Cashflow & Profit Margin Analytics": "📈 Gerçek Zamanlı Nakit Akışı ve Kâr Marjı Analitiği",
+    "📊 Comprehensive Package & Feature Comparison": "📊 Kapsamlı Paket ve Özellik Karşılaştırması",
+    "📊 Enterprise ERP & Tax compliance": "📊 Kurumsal ERP ve Vergi Uyumu",
+    "📊 Financial & Tax Solutions": "📊 Finansal ve Vergi Çözümleri",
+    "📊 Financial ERP (CFO Hub)": "📊 Finansal ERP (CFO Merkezi)",
+    "📊 Tax & ERP (Mr. Raed)": "📊 Vergi ve ERP (Bay Raed)",
+    "📥 Download High-Resolution QR": "📥 Yüksek Çözünürlüklü QR İndir",
+    "📱 Smart cloud app with AI concierge": "📱 AI concierge'li akıllı bulut uygulaması",
+    "📸 Scan QR code with your phone camera to save contact instantly": "📸 Kişiyi anında kaydetmek için QR kodunu telefon kameranla tara",
+    "🔐 Founder & Chief Architect Salim Aziza's Cryptographic Portal": "🔐 Kurucu ve Baş Mimar Salim Aziza'nın Kriptografik Portalı",
+    "🔒 256-bit SSL Encrypted": "🔒 256-bit SSL Şifreli",
+    "🔒 99.99% Availability & Bank-Grade Encryption": "🔒 %99,99 Erişilebilirlik ve Banka Düzeyi Şifreleme"
   }
 }
