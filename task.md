@@ -11,6 +11,7 @@
 - [x] **تحسين SEO للصفحة:** إضافة `<link rel="canonical">` و`robots` ووسوم Open Graph + Twitter Card إلى `3d-product-configurator.html` (صورة `og-preview-3d-mockup.jpg`)؛ `check_site_links.py` و`build_csp.py --check` ناجحان.
 - [x] **توحيد SEO (8 صفحات):** إضافة canonical + robots + OG + Twitter Card إلى صفحات منتج/استوديو في sitemap كانت تفتقرها: `3d-mockup`، `ai-concierge-simulator`، `logo-studio`، `multi-cbdc-bridge`، `social-8k-studio`، `social-campaign-hub`، `whitelabel-calculator`، `zkp-confidential-enclave`. صور OG: مطابقة (preview-3d-mockup, ai-concierge-rag, preview-whitelabel-calculator) أو fallback `og-software.jpg`. جميع البوابات ناجحة.
 - [x] **توحيد SEO (38 صفحة):** تطبيق canonical + robots + OG + Twitter Card على 38 صفحة منتج/استوديو/بوابة legitimate (غير مدرجة في sitemap) كانت تفتقرها. اختيار صور OG بتطابق tokens (autonomous-tax-audit، brand-identity-roi، sovereign-arbitration-hub، client-portal، ecommerce-conversion، zero-trust، ...). إصلاح stray `>>` (bug في insertion). جميع البوابات ناجحة (publish_set, site_links, csp --check).
+- [x] **SEO صفحات مستبعدة (9):** إضافة canonical + OG + Twitter Card + robots `noindex, nofollow` إلى 9 صفحات (clgid-contract، clgid-prototype، contract-of2026-fin-pdf، contract-of2026-pdf، export-banner-founders-erp، ip-nda-smart-contract، perf-audit، preview-agent-widget، verify). OG fallback `og-software.jpg`. جميع البوابات ناجحة.
 
 ---
 
