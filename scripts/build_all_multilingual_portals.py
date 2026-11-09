@@ -841,15 +841,41 @@ def replace_any_switcher(html_content, new_dropdown_html, page_type="demo"):
     return html_content
 
 def inject_or_replace_apple_dock(html_content, code, page_type="demo", is_subfolder=False):
-    """
-    Injects or updates the Apple macOS Language & Flags Dock before </body>.
-    """
+    """ Injects or updates the Apple macOS Language & Flags Dock before </body>.
+
+    Idempotent: any previous launchpad modal block is removed first, so repeated
+    builds can never accumulate copies of the dock or the 29-language modal. """
     dock_html = build_apple_dock_html(code, page_type=page_type, is_subfolder=is_subfolder)
+
+    def _remove_block(html, comment_marker):
+        idx = html.find(comment_marker)
+        if idx == -1:
+            return html
+        div_start = html.find('<div', idx)
+        if div_start == -1:
+            return html
+        depth, j = 0, div_start
+        while True:
+            o = html.find('<div', j)
+            c = html.find('</div>', j)
+            if o != -1 and o < c:
+                depth += 1
+                j = o + 4
+            else:
+                if c == -1:
+                    return html[:idx]
+                depth -= 1
+                j = c + 6
+                if depth == 0:
+                    return html[:idx] + html[j:]
+
+    html_content = _remove_block(html_content, '<!-- Apple macOS Launchpad Modal')
+
     pattern_dock = r'<!-- Apple macOS Sovereign Language & Flags Dock -->[\s\S]*?</aside>'
     if re.search(pattern_dock, html_content):
-        return re.sub(pattern_dock, dock_html, html_content, count=1)
-    else:
-        return html_content.replace('</body>', dock_html + '\n</body>', 1)
+        return re.sub(pattern_dock, lambda m: dock_html, html_content, count=1)
+    return html_content.replace('</body>', dock_html + '\n</body>')
+
 
 def update_file(file_path, current_lang_code, page_type="demo", is_subfolder=False):
     with open(file_path, 'r', encoding='utf-8') as f:
