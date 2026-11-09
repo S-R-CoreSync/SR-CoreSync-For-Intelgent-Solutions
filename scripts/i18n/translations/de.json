@@ -1,6 +1,6 @@
 {
   "language": "de",
-  "count": 441,
+  "count": 443,
   "strings": {
     "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\"-Badge",
     "1. Approved Operational Baseline Parameters": "1. Genehmigte operative Basisparameter",
@@ -352,6 +352,8 @@
     "Within 24 Hours (Support Tickets)": "Innerhalb von 24 Stunden (Support-Tickets)",
     "Within 4 Hours (Email + WhatsApp)": "Innerhalb von 4 Stunden (E-Mail + WhatsApp)",
     "Your Genuine Digital License Key:": "Ihr echter digitaler Lizenzschlüssel:",
+    "إغلاق / Close": "Schließen",
+    "إغلاق / Schließen": "Schließen",
     "↺ Reset & Clear": "↺ Zurücksetzen und löschen",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % weniger manuelle Bearbeitungsstunden",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise-KI und Integrationen",

@@ -2062,6 +2062,27 @@
             transform: translateY(-1px);
         }
     </style>
+<style id="sr-act1-css">
+/* ACT1 hero rebuild: quiet CTA, sectors marquee, portals quiet, ken-burns, AI guide pulse */
+.hero-btn-quiet{background:transparent!important;border:1px solid rgba(212,175,55,.45)!important;color:#ecd9a0!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.hero-btn-quiet:hover{background:rgba(212,175,55,.09)!important;border-color:rgba(212,175,55,.8)!important}
+.hero-sectors-marquee{display:flex;align-items:center;gap:.75rem;overflow:hidden}
+.hero-sectors-viewport{flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.hero-sectors-track{display:inline-flex;width:max-content;animation:srMarquee 32s linear infinite}
+[dir="rtl"] .hero-sectors-track{animation-name:srMarqueeRtl}
+.hero-sectors-half{display:inline-flex;align-items:center;gap:.5rem;padding-inline-end:.5rem}
+.hero-sectors-marquee:hover .hero-sectors-track{animation-play-state:paused}
+@keyframes srMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes srMarqueeRtl{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.hero-quick-portals-strip--quiet{opacity:.62;gap:.9rem}
+.hero-quick-portals-strip--quiet .hero-quick-portal-link{font-size:.82rem;background:none;border:none;box-shadow:none;padding:.15rem .2rem}
+.hero-quick-portals-strip--quiet .hero-quick-portal-btn,.hero-quick-portals-strip--quiet .hero-sound-toggle-btn{transform:scale(.9);opacity:.85}
+.section-founders-showcase video.video{animation:srKenBurns 34s ease-in-out infinite alternate;will-change:transform}
+@keyframes srKenBurns{from{transform:scale(1) translateY(0)}to{transform:scale(1.06) translateY(-1.2%)}}
+.ai-guide-pulse{scroll-margin-top:96px;animation:srGuidePulse 2.4s ease-out 1;border-radius:18px}
+@keyframes srGuidePulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.55)}70%{box-shadow:0 0 0 24px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+@media (prefers-reduced-motion:reduce){.hero-sectors-track,.section-founders-showcase video.video,.ai-guide-pulse{animation:none!important}}
+</style>
     <!-- S&R CoreSync Sovereign GDPR & Dutch AVG Cookie & Privacy Consent Hub -->
     <link rel="stylesheet" href="./css/sr-privacy-banner.css?v=20261102-p0-matrix">
     <link rel="stylesheet" href="./css/sr-header-support.css?v=20261102-p0-matrix">
@@ -2407,43 +2428,17 @@
                                     <!-- أزرار الإجراءات الرئيسية المدمجة (Action Buttons) -->
                                     <div class="hero-reference__actions hero-actions-compact">
                                         <div class="hero-actions-row">
-                                            <a href="demo.html" class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-demo hero-btn-primary-highlight" title="تجربة المنصة السحابية الحية فوراً">
+                                            <a href="demo.html" class="tf-btn hero-reference__action hero-btn-quiet hero-btn-demo" title="تجربة المنصة السحابية الحية فوراً">
                                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
                                                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                                                 </svg>
                                                 <span>تجربة النظام السحابي الحي ⚡</span>
                                             </a>
-                                            <button type="button" onclick="openIdeaModal()" class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-vip hero-btn-primary-highlight" title="تحليل فكرتك وتوجيه مشروعك فوراً بالذكاء الاصطناعي">
-                                                <span>✨ حلل فكرتك بالذكاء الاصطناعي</span>
-                                            </button>
+                                            
                                         </div>
                                     </div>
 
                                     <!-- روابط البوابات والاستشارات المدمجة مع مفتاح الصوت اللمسي -->
-                                    <div class="hero-quick-portals-strip">
-                                        <a href="developer-portal.html" class="hero-quick-portal-link">بوابة المطورين ⚡</a>
-                                        <span class="hero-portal-sep">•</span>
-                                        <a href="partner-portal.html" class="hero-quick-portal-link">بوابة الوكلاء والتراخيص 💼</a>
-                                        <span class="hero-portal-sep">•</span>
-                                        <button type="button" class="hero-quick-portal-btn" data-sr-call="openExecutiveBookingModal">حجز استشارة خاصة 👔</button>
-                                        <span class="hero-portal-sep">•</span>
-                                        <button type="button" class="hero-sound-toggle-btn" id="srSoundToggleBtn" onclick="toggleSoundMute()" title="تبديل المؤثرات الصوتية اللمسية">🔊 صوت الواجهة</button>
-                                    </div>
-
-                                    <!-- رقاقات التخصصات السريعة في صف واحد متناسق -->
-                                    <div class="hero-compact-sectors-row" aria-label="قطاعات متخصصة:">
-                                        <span class="hero-compact-sectors-label">تخصصاتنا:</span>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 حلول FinTech</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 وكلاء AI</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 سلاسل إمداد</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 متاجر إلكترونية</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ مركز CLGID</button>
-                                    </div>
-
-                                    <!-- شريط مؤشرات الثقة المدمج والمصغر -->
-                                    <!-- شريط كتابة الفكرة وهندسة المشروع الفوري بالذكاء الاصطناعي (Hero AI Idea Prompt Bar) -->
-
                                     <div class="hero-ai-idea-bar" id="heroAiIdeaBar">
 
                                         <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
@@ -2480,9 +2475,7 @@
 
                                         </form>
 
-                                    </div>
-
-                                    <div class="hero-trust-metrics-strip hero-trust-compact" aria-label="مؤشرات الأداء والاعتماد الأوروبي">
+                                    </div><div class="hero-trust-metrics-strip hero-trust-compact" aria-label="مؤشرات الأداء والاعتماد الأوروبي">
                                         <div class="trust-metric-item">
                                             <span class="metric-val">99.99%</span>
                                             <span class="metric-lbl">جاهزية سحابية</span>
@@ -2502,6 +2495,24 @@
                                             <span class="metric-val">Amsterdam HQ</span>
                                             <span class="metric-lbl">مقر أمستردام</span>
                                         </div>
+                                    </div><div class="hero-compact-sectors-row hero-sectors-marquee"><span class="hero-compact-sectors-label">تخصصاتنا:</span><div class="hero-sectors-viewport"><div class="hero-sectors-track"><div class="hero-sectors-half"><button type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 حلول FinTech</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 وكلاء AI</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 سلاسل إمداد</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 متاجر إلكترونية</button>
+                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ مركز CLGID</button></div><div class="hero-sectors-half" aria-hidden="true"><button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 حلول FinTech</button>
+                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
+                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 وكلاء AI</button>
+                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 سلاسل إمداد</button>
+                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 متاجر إلكترونية</button>
+                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ مركز CLGID</button></div></div></div></div><div class="hero-quick-portals-strip hero-quick-portals-strip--quiet">
+                                        <a href="developer-portal.html" class="hero-quick-portal-link">بوابة المطورين ⚡</a>
+                                        <span class="hero-portal-sep">•</span>
+                                        <a href="partner-portal.html" class="hero-quick-portal-link">بوابة الوكلاء والتراخيص 💼</a>
+                                        <span class="hero-portal-sep">•</span>
+                                        <button type="button" class="hero-quick-portal-btn" data-sr-call="openExecutiveBookingModal">حجز استشارة خاصة 👔</button>
+                                        <span class="hero-portal-sep">•</span>
+                                        <button type="button" class="hero-sound-toggle-btn" id="srSoundToggleBtn" onclick="toggleSoundMute()" title="تبديل المؤثرات الصوتية اللمسية">🔊 صوت الواجهة</button>
                                     </div>
                                 </div>
                             </div>
@@ -10468,6 +10479,7 @@
     <script>!function () { let e = 0; let t = null; let n = 0, o = !0; window.updateSlideUI = function () { document.querySelectorAll("#slidesTrack .showcase-slide-item").forEach((t, n) => { n === e ? t.classList.add("active") : t.classList.remove("active") }); for (let t = 0; t < 3; t++) { const n = document.getElementById(`slideDot${t}`); n && (t === e ? n.classList.add("active") : n.classList.remove("active")) } window.resetProgressBar && window.resetProgressBar() }, window.nextSlide = function () { e = (e + 1) % 3, window.updateSlideUI() }, window.prevSlide = function () { e = (e - 1 + 3) % 3, window.updateSlideUI() }, window.goToSlide = function (t) { e = t, window.updateSlideUI() }, window.resetProgressBar = function () { n = 0; const e = document.getElementById("sliderProgressBar"); e && (e.style.width = "0%") }, window.startAutoPlay = function () { window.stopAutoPlay(), n = 0; const e = 200 / 6e3 * 100; t = setInterval(() => { if (!o) return; n += e; const t = document.getElementById("sliderProgressBar"); t && (t.style.width = `${Math.min(n, 100)}%`), n >= 100 && window.nextSlide() }, 200) }, window.stopAutoPlay = function () { t && clearInterval(t) }, window.pauseSliderAutoPlay = function () { o = !1, window.updatePlaybackBtnState && window.updatePlaybackBtnState() }, window.resumeSliderAutoPlay = function () { const e = document.getElementById("viewSlider"); e && !e.classList.contains("showcase-is-hidden") && (o = !0, window.updatePlaybackBtnState && window.updatePlaybackBtnState()) }, window.togglePlayback = function () { o = !o, window.updatePlaybackBtnState && window.updatePlaybackBtnState() }, window.updatePlaybackBtnState = function () { const e = document.getElementById("playbackIcon"), t = document.getElementById("playbackText"); e && t && (o ? (e.textContent = "⏸", t.textContent = "إيقاف مؤقت") : (e.textContent = "▶", t.textContent = "تشغيل تلقائي")) }; let i = 0, a = 0; const s = document.getElementById("sliderViewport"); s && (s.addEventListener("touchstart", e => { i = e.changedTouches[0].screenX }, { passive: !0 }), s.addEventListener("touchend", e => { a = e.changedTouches[0].screenX; const t = a - i; Math.abs(t) > 40 && (t > 0 ? window.prevSlide() : window.nextSlide()) }, { passive: !0 })), window.setShowcaseView = function (e) { const t = document.getElementById("viewSlider"), n = document.getElementById("viewEmblem"), i = document.getElementById("viewSalim"), a = document.getElementById("viewRaed"), s = document.getElementById("viewDual"), d = document.getElementById("tabSlider"), c = document.getElementById("tabEmblem"), l = document.getElementById("tabSalim"), r = document.getElementById("tabRaed"), u = document.getElementById("tabDual");[d, c, l, r, u].forEach(e => { e && e.classList.remove("active") }), [t, n, i, a, s].forEach(e => { e && e.classList.add("showcase-is-hidden") }), "slider" === e ? (t && t.classList.remove("showcase-is-hidden"), d && d.classList.add("active"), o = !0, window.startAutoPlay()) : (window.stopAutoPlay(), "emblem" === e ? (n && n.classList.remove("showcase-is-hidden"), c && c.classList.add("active")) : "salim" === e ? (i && i.classList.remove("showcase-is-hidden"), l && l.classList.add("active")) : "raed" === e ? (a && a.classList.remove("showcase-is-hidden"), r && r.classList.add("active")) : "dual" === e && (s && s.classList.remove("showcase-is-hidden"), u && u.classList.add("active"))) }; const d = { salim: { name: "م. محمد سليم عزيزة", role: "المسؤول التقني وكبير مهندسي السحابة والذكاء الاصطناعي & CTO", qrImg: "assets/qr-founder-salim.png", vcfFile: "assets/salim-aziza.vcf", vcfDownload: "Mohammad-Salim-Aziza-CoreSync.vcf", qrDownload: "SR-CoreSync-QR-Salim-Aziza.png" }, raed: { name: "أ. رائد كعكة", role: "المستشار المالي ومطور نظم ERP & CFO", qrImg: "assets/qr-founder-raed.png", vcfFile: "assets/raed-kaaka.vcf", vcfDownload: "Mohammad-Raed-Kaaka-CoreSync.vcf", qrDownload: "SR-CoreSync-QR-Raed-Kaaka.png" }, emblem: { name: "S&R CoreSync For Intelligent Solutions", role: "الشعار المؤسسي الرسمي • For Intelligent Solutions", qrImg: "assets/qr-company-emblem.png", vcfFile: "assets/sr-coresync.vcf", vcfDownload: "SR-CoreSync-Official.vcf", qrDownload: "SR-CoreSync-Official-QR.png" } }; let c = "salim"; window.openFoundersQrModal = function (e) { const t = d[e] || d.salim, n = document.getElementById("foundersQrModal"); if (!n) return; document.getElementById("foundersQrName").textContent = t.name, document.getElementById("foundersQrRole").textContent = t.role, document.getElementById("foundersQrImg").src = t.qrImg; const o = document.getElementById("foundersQrVcf"); o.href = t.vcfFile, o.setAttribute("download", t.vcfDownload); const i = document.getElementById("foundersQrDl"); i.href = t.qrImg, i.setAttribute("download", t.qrDownload), n.classList.add("active"), document.body.style.overflow = "hidden" }, window.closeFoundersQrModal = function () { const e = document.getElementById("foundersQrModal"); e && (e.classList.remove("active"), document.body.style.overflow = "") }, window.openFoundersLightbox = function (e, t, n) { c = n || (e.includes("raed") ? "raed" : e.includes("emblem") ? "emblem" : "salim"); const o = document.getElementById("foundersLightboxModal"), i = document.getElementById("foundersLightboxImg"); if (o && i) { i.src = e, i.alt = t; const n = e.replace(".jpg", "-4k.jpg"), a = document.getElementById("foundersLb4k"); a && (a.href = n, a.setAttribute("download", n.split("/").pop())); const s = document.getElementById("foundersLbHd"); s && (s.href = e, s.setAttribute("download", e.split("/").pop())), o.classList.add("active"), document.body.style.overflow = "hidden" } }, window.openQrFromFoundersLightbox = function () { window.closeFoundersLightbox(), window.openFoundersQrModal(c) }, window.closeFoundersLightbox = function () { const e = document.getElementById("foundersLightboxModal"); e && (e.classList.remove("active"), document.body.style.overflow = "") }, document.addEventListener("keydown", e => { "Escape" === e.key && window.closeFoundersLightbox() }), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", () => { window.setShowcaseView("slider") }) : window.setShowcaseView("slider"), function () { const e = document.getElementById("heroEmblemCard"), t = document.getElementById("heroEmblemStage"); if (!e || !t) return; let n = null, o = 0, i = 0, a = 0, s = 0; function d() { a += .12 * (o - a), s += .12 * (i - s), e.style.setProperty("--tilt-x", `${a.toFixed(2)}deg`), e.style.setProperty("--tilt-y", `${s.toFixed(2)}deg`), n = Math.abs(o - a) > .05 || Math.abs(i - s) > .05 ? requestAnimationFrame(d) : null } function c(a) { const s = t.getBoundingClientRect(), c = s.left + s.width / 2, l = s.top + s.height / 2, r = Math.max(-1, Math.min(1, (a.clientX - c) / (s.width / 2))), u = Math.max(-1, Math.min(1, (a.clientY - l) / (s.height / 2))); o = 18 * -u, i = 18 * r; const m = Math.max(0, Math.min(100, (a.clientX - s.left) / s.width * 100)), w = Math.max(0, Math.min(100, (a.clientY - s.top) / s.height * 100)); e.style.setProperty("--mouse-x", `${m.toFixed(1)}%`), e.style.setProperty("--mouse-y", `${w.toFixed(1)}%`), n || (n = requestAnimationFrame(d)) } function l() { o = 0, i = 0, e.style.setProperty("--mouse-x", "50%"), e.style.setProperty("--mouse-y", "50%"), n || (n = requestAnimationFrame(d)) } t.addEventListener("mousemove", c, { passive: !0 }), t.addEventListener("mouseleave", l, { passive: !0 }), t.addEventListener("touchmove", e => { e.touches.length > 0 && c(e.touches[0]) }, { passive: !0 }), t.addEventListener("touchend", l, { passive: !0 }) }(), function () { const e = document.getElementById("heroMotionCanvas"); if (!e) return; const t = e.getContext("2d"); if (!t) return; let n = 0, o = 0, i = [], a = null, s = { x: null, y: null, radius: 140 }; function d() { const t = e.parentElement; t && (n = e.width = t.clientWidth, o = e.height = t.clientHeight, function () { i = []; const e = Math.min(55, Math.floor(n * o / 22e3)); for (let t = 0; t < e; t++)i.push({ x: Math.random() * n, y: Math.random() * o, vx: .45 * (Math.random() - .5), vy: .45 * (Math.random() - .5), radius: 2.2 * Math.random() + 1, color: Math.random() > .4 ? "rgba(197, 168, 128, " : "rgba(110, 231, 183, ", alpha: .5 * Math.random() + .25, pulse: Math.random() * Math.PI }) }()) } function c() { t.clearRect(0, 0, n, o); for (let e = 0; e < i.length; e++)for (let n = e + 1; n < i.length; n++) { const o = i[e].x - i[n].x, a = i[e].y - i[n].y, s = Math.sqrt(o * o + a * a); if (s < 115) { const o = .22 * (1 - s / 115); t.beginPath(), t.moveTo(i[e].x, i[e].y), t.lineTo(i[n].x, i[n].y), t.strokeStyle = `rgba(197, 168, 128, ${o})`, t.lineWidth = .85, t.stroke() } } for (let e = 0; e < i.length; e++) { const a = i[e]; if (a.x += a.vx, a.y += a.vy, a.x < 0 && (a.x = n), a.x > n && (a.x = 0), a.y < 0 && (a.y = o), a.y > o && (a.y = 0), null !== s.x && null !== s.y) { const e = s.x - a.x, t = s.y - a.y, n = Math.sqrt(e * e + t * t); if (n < s.radius) { const o = 1.5 * (1 - n / s.radius); a.x -= e / n * o, a.y -= t / n * o } } a.pulse += .03; const d = a.alpha + .15 * Math.sin(a.pulse); t.beginPath(), t.arc(a.x, a.y, a.radius, 0, 2 * Math.PI), t.fillStyle = a.color + Math.max(.1, d) + ")", t.shadowBlur = 10, t.shadowColor = "rgba(197, 168, 128, 0.4)", t.fill(), t.shadowBlur = 0 } a = requestAnimationFrame(c) } window.addEventListener("resize", d, { passive: !0 }), window.addEventListener("mousemove", t => { const n = e.getBoundingClientRect(); t.clientY >= n.top && t.clientY <= n.bottom ? (s.x = t.clientX - n.left, s.y = t.clientY - n.top) : (s.x = null, s.y = null) }, { passive: !0 }), document.addEventListener("visibilitychange", () => { document.hidden ? a && cancelAnimationFrame(a) : a = requestAnimationFrame(c) }), d(), a = requestAnimationFrame(c) }(), function () { let e = null, t = null, n = !1, o = [], i = null, a = null; function s() { const t = window.AudioContext || window.webkitAudioContext; return t ? (e || (e = new t), "suspended" === e.state && e.resume(), e) : null } function d(e) { const t = document.getElementById("heroSoundToggle"), n = document.getElementById("heroSoundLabel"), o = document.getElementById("heroSoundIcon"); if (!t || !n || !o) return; const i = document.documentElement.getAttribute("data-page-language") || "ar"; e ? (t.classList.add("is-active"), o.textContent = "🔊", n.textContent = "en" === i ? "Ambient Audio: Active" : "nl" === i ? "Ambient Geluid: Actief" : "الصوت المحيطي: نَشِط") : (t.classList.remove("is-active"), o.textContent = "🔈", n.textContent = "en" === i ? "Ambient Audio Experience (Click to Play)" : "nl" === i ? "Ambient Geluidservaring (Klik om te starten)" : "تجربة الصوت المحيطي (اضغط للتشغيل)") } window.toggleHeroAmbientSound = function () { n ? function () { if (!e || !t || !n) return; const i = e; t.gain.setValueAtTime(t.gain.value, i.currentTime), t.gain.exponentialRampToValueAtTime(.001, i.currentTime + 1.2), setTimeout(() => { if (o.forEach(e => { try { e.stop(), e.disconnect() } catch (e) { } }), o = [], a) try { a.stop(), a.disconnect() } catch (e) { } n = !1, d(!1) }, 1250) }() : function () { const e = s(); if (!e) return; t = e.createGain(), t.gain.setValueAtTime(.001, e.currentTime), t.gain.exponentialRampToValueAtTime(.14, e.currentTime + 2.5), i = e.createBiquadFilter(), i.type = "lowpass", i.frequency.setValueAtTime(420, e.currentTime), i.Q.setValueAtTime(2, e.currentTime), a = e.createOscillator(), a.frequency.setValueAtTime(.12, e.currentTime); const c = e.createGain(); c.gain.setValueAtTime(160, e.currentTime), a.connect(c), c.connect(i.frequency), a.start(), o = [], [110, 164.81, 220, 277.18, 415.3].forEach((t, n) => { const a = e.createOscillator(); a.type = n % 2 == 0 ? "sine" : "triangle", a.frequency.setValueAtTime(t, e.currentTime); const s = e.createOscillator(); s.frequency.setValueAtTime(.2 + .05 * n, e.currentTime); const d = e.createGain(); d.gain.setValueAtTime(1.8, e.currentTime), s.connect(d), d.connect(a.frequency), s.start(); const c = e.createGain(); c.gain.setValueAtTime(0 === n ? .28 : .16, e.currentTime), a.connect(c), c.connect(i), a.start(), o.push(a, s) }), i.connect(t), t.connect(e.destination), n = !0, d(!0) }() }, window.playHeroMicroTone = function (e = 660, t = "sine", o = .25) { if (!n) return; const i = s(); if (i) try { const n = i.createOscillator(), a = i.createGain(); n.type = t, n.frequency.setValueAtTime(e, i.currentTime), a.gain.setValueAtTime(.04, i.currentTime), a.gain.exponentialRampToValueAtTime(.001, i.currentTime + o), n.connect(a), a.connect(i.destination), n.start(), n.stop(i.currentTime + o) } catch (e) { } }; const c = document.getElementById("heroEmblemCard"); c && c.addEventListener("mouseenter", () => { window.playHeroMicroTone(880, "sine", .35) }) }() }();</script>
 
     <script src="./js/sr-lead-dispatcher.js" defer></script>
+   <script src="./js/sr-ai-guide.js?v=20261109-a1" defer></script>
     <script src="./js/sr-brand-inspector.js" defer></script>
     <script src="./js/sr-live-feed.js" defer></script>
     <script src="./js/enterprise-suite.min.js?v=20261102-p0-matrix" defer></script>
@@ -10518,73 +10530,362 @@
 
 
     <!-- Apple macOS Sovereign Language & Flags Dock -->
-    <aside class="apple-macos-dock-wrapper" id="appleMacosDockWrapper" aria-label="Sovereign Language Quick Dock">
-        <div class="apple-macos-dock" id="appleMacosDock">
-            <a href="./de/index.html?lang=de&noredirect=1" class="apple-dock-item"
-                onclick="try{sessionStorage.setItem('sr_user_lang_locked','de');localStorage.setItem('sr_lang_pref','de');}catch(e){}"
-                data-tooltip="Deutsch (German)" aria-label="Deutsch (German)">
-                <img src="./assets/flags/de.png" alt="DE" class="apple-dock-flag" width="28" height="19" loading="lazy"
-                    decoding="async">
-                <span class="apple-dock-dot"></span>
-            </a>
-            <a href="./fr/index.html?lang=fr&noredirect=1" class="apple-dock-item"
-                onclick="try{sessionStorage.setItem('sr_user_lang_locked','fr');localStorage.setItem('sr_lang_pref','fr');}catch(e){}"
-                data-tooltip="Français (French)" aria-label="Français (French)">
-                <img src="./assets/flags/fr.png" alt="FR" class="apple-dock-flag" width="28" height="19" loading="lazy"
-                    decoding="async">
-                <span class="apple-dock-dot"></span>
-            </a>
-            <a href="./nl/index.html?lang=nl&noredirect=1" class="apple-dock-item"
-                onclick="try{sessionStorage.setItem('sr_user_lang_locked','nl');localStorage.setItem('sr_lang_pref','nl');}catch(e){}"
-                data-tooltip="Nederlands (Dutch)" aria-label="Nederlands (Dutch)">
-                <img src="./assets/flags/nl.png" alt="NL" class="apple-dock-flag" width="28" height="19" loading="lazy"
-                    decoding="async">
-                <span class="apple-dock-dot"></span>
-            </a>
-            <a href="./en/index.html?lang=en&noredirect=1" class="apple-dock-item"
-                onclick="try{sessionStorage.setItem('sr_user_lang_locked','en');localStorage.setItem('sr_lang_pref','en');}catch(e){}"
-                data-tooltip="English (English)" aria-label="English (English)">
-                <img src="./assets/flags/gb.png" alt="EN" class="apple-dock-flag" width="28" height="19" loading="lazy"
-                    decoding="async">
-                <span class="apple-dock-dot"></span>
-            </a>
-            <a href="./es/index.html?lang=es&noredirect=1" class="apple-dock-item"
-                onclick="try{sessionStorage.setItem('sr_user_lang_locked','es');localStorage.setItem('sr_lang_pref','es');}catch(e){}"
-                data-tooltip="Español (Spanish)" aria-label="Español (Spanish)">
-                <img src="./assets/flags/es.png" alt="ES" class="apple-dock-flag" width="28" height="19" loading="lazy"
-                    decoding="async">
-                <span class="apple-dock-dot"></span>
-            </a>
-            <a href="./index.html?lang=ar&noredirect=1" class="apple-dock-item active"
-                onclick="try{sessionStorage.setItem('sr_user_lang_locked','ar');localStorage.setItem('sr_lang_pref','ar');}catch(e){}"
-                data-tooltip="العربية (Arabic (HQ Master))" aria-label="العربية (Arabic (HQ Master))">
-                <img src="./assets/flags/sa.png" alt="AR" class="apple-dock-flag" width="28" height="19" loading="lazy"
-                    decoding="async">
-                <span class="apple-dock-dot"></span>
-            </a>
-            <a href="./tr/index.html?lang=tr&noredirect=1" class="apple-dock-item"
-                onclick="try{sessionStorage.setItem('sr_user_lang_locked','tr');localStorage.setItem('sr_lang_pref','tr');}catch(e){}"
-                data-tooltip="Türkçe (Turkish)" aria-label="Türkçe (Turkish)">
-                <img src="./assets/flags/tr.png" alt="TR" class="apple-dock-flag" width="28" height="19" loading="lazy"
-                    decoding="async">
-                <span class="apple-dock-dot"></span>
-            </a>
-            <div class="apple-dock-separator"></div>
-            <button type="button" class="apple-dock-item apple-dock-launchpad-btn" id="appleDockLaunchpadBtn"
-                data-tooltip="جميع اللغات الـ 29 (Launchpad)" aria-label="Open Full 29 Languages Menu"
-                onclick="toggleAppleDockLaunchpad(event)">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path
-                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                    </path>
-                </svg>
-                <span class="apple-dock-badge">29</span>
-            </button>
+<aside class="apple-macos-dock-wrapper" id="appleMacosDockWrapper" aria-label="Sovereign Language Quick Dock">
+    <div class="apple-macos-dock" id="appleMacosDock">
+        <a href="./de/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','de');}catch(e){}" data-tooltip="Deutsch (German)" aria-label="Deutsch (German)">
+            <img src="./assets/flags/de.png" alt="DE" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-dot"></span>
+        </a>
+        <a href="./fr/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','fr');}catch(e){}" data-tooltip="Français (French)" aria-label="Français (French)">
+            <img src="./assets/flags/fr.png" alt="FR" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-dot"></span>
+        </a>
+        <a href="./nl/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','nl');}catch(e){}" data-tooltip="Nederlands (Dutch)" aria-label="Nederlands (Dutch)">
+            <img src="./assets/flags/nl.png" alt="NL" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-dot"></span>
+        </a>
+        <a href="./en/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','en');}catch(e){}" data-tooltip="English (English)" aria-label="English (English)">
+            <img src="./assets/flags/gb.png" alt="EN" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-dot"></span>
+        </a>
+        <a href="./es/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','es');}catch(e){}" data-tooltip="Español (Spanish)" aria-label="Español (Spanish)">
+            <img src="./assets/flags/es.png" alt="ES" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-dot"></span>
+        </a>
+        <a href="./index.html" class="apple-dock-item active" onclick="try{localStorage.setItem('sr_lang_pref','ar');}catch(e){}" data-tooltip="العربية (Arabic (HQ Master))" aria-label="العربية (Arabic (HQ Master))">
+            <img src="./assets/flags/sa.png" alt="AR" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-dot"></span>
+        </a>
+        <a href="./tr/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','tr');}catch(e){}" data-tooltip="Türkçe (Turkish)" aria-label="Türkçe (Turkish)">
+            <img src="./assets/flags/tr.png" alt="TR" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-dot"></span>
+        </a>
+        <div class="apple-dock-separator"></div>
+        <button type="button" class="apple-dock-item apple-dock-launchpad-btn" id="appleDockLaunchpadBtn" data-tooltip="جميع اللغات الـ 29 (Launchpad)" aria-label="Open Full 29 Languages Menu" onclick="toggleAppleDockLaunchpad(event)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span class="apple-dock-badge">29</span>
+        </button>
+    </div>
+</aside>
+<!-- Apple macOS Launchpad Modal (29 Sovereign Languages Grid) -->
+<div class="apple-launchpad-overlay" id="appleMacosLaunchpadOverlay" aria-modal="true" role="dialog" aria-label="Apple Launchpad - All 29 Languages">
+    <div class="apple-launchpad-backdrop" onclick="toggleAppleDockLaunchpad(event)"></div>
+    <div class="apple-launchpad-window">
+        <div class="apple-launchpad-header">
+            <div class="apple-launchpad-title-wrap">
+                <div class="apple-launchpad-dots">
+                    <span class="apple-dot apple-dot-red" onclick="toggleAppleDockLaunchpad(event)" title="إغلاق / Close"></span>
+                    <span class="apple-dot apple-dot-yellow"></span>
+                    <span class="apple-dot apple-dot-green"></span>
+                </div>
+                <h3 class="apple-launchpad-title">🌐 اللغات السيادية المعتمدة (29 لغة ونظاماً ضريبياً)</h3>
+            </div>
+            <button type="button" class="apple-launchpad-close-btn" onclick="toggleAppleDockLaunchpad(event)" aria-label="Close">✕</button>
         </div>
-    </aside>
+        <div class="apple-launchpad-search-wrap">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="appleLaunchpadSearchInput" class="apple-launchpad-search-input" placeholder="ابحث عن دولة، لغة، أو نسبة الضريبة... / Search language, country, VAT..." autocomplete="off">
+        </div>
+        <div class="apple-launchpad-body">
+            <div class="apple-launchpad-grid" id="appleLaunchpadGrid">
+                <a href="./de/index.html" class="apple-launchpad-card" data-code="de" data-name="deutsch german" onclick="try{localStorage.setItem('sr_lang_pref','de');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/de.png" alt="DE" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Deutsch</span>
+                            <span class="apple-launchpad-sub">German</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">MwSt 19%</span>
+                </a>
+                <a href="./fr/index.html" class="apple-launchpad-card" data-code="fr" data-name="français french" onclick="try{localStorage.setItem('sr_lang_pref','fr');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/fr.png" alt="FR" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Français</span>
+                            <span class="apple-launchpad-sub">French</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">TVA 20%</span>
+                </a>
+                <a href="./nl/index.html" class="apple-launchpad-card" data-code="nl" data-name="nederlands dutch" onclick="try{localStorage.setItem('sr_lang_pref','nl');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/nl.png" alt="NL" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Nederlands</span>
+                            <span class="apple-launchpad-sub">Dutch</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">BTW 21%</span>
+                </a>
+                <a href="./en/index.html" class="apple-launchpad-card" data-code="en" data-name="english english" onclick="try{localStorage.setItem('sr_lang_pref','en');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/gb.png" alt="EN" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">English</span>
+                            <span class="apple-launchpad-sub">English</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">VAT 20%</span>
+                </a>
+                <a href="./es/index.html" class="apple-launchpad-card" data-code="es" data-name="español spanish" onclick="try{localStorage.setItem('sr_lang_pref','es');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/es.png" alt="ES" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Español</span>
+                            <span class="apple-launchpad-sub">Spanish</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">IVA 21%</span>
+                </a>
+                <a href="./it/index.html" class="apple-launchpad-card" data-code="it" data-name="italiano italian" onclick="try{localStorage.setItem('sr_lang_pref','it');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/it.png" alt="IT" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Italiano</span>
+                            <span class="apple-launchpad-sub">Italian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">IVA 22%</span>
+                </a>
+                <a href="./sv/index.html" class="apple-launchpad-card" data-code="sv" data-name="svenska swedish" onclick="try{localStorage.setItem('sr_lang_pref','sv');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/se.png" alt="SV" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Svenska</span>
+                            <span class="apple-launchpad-sub">Swedish</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">MOMS 25%</span>
+                </a>
+                <a href="./no/index.html" class="apple-launchpad-card" data-code="no" data-name="norsk norwegian" onclick="try{localStorage.setItem('sr_lang_pref','no');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/no.png" alt="NO" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Norsk</span>
+                            <span class="apple-launchpad-sub">Norwegian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">MVA 25%</span>
+                </a>
+                <a href="./da/index.html" class="apple-launchpad-card" data-code="da" data-name="dansk danish" onclick="try{localStorage.setItem('sr_lang_pref','da');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/dk.png" alt="DA" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Dansk</span>
+                            <span class="apple-launchpad-sub">Danish</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">MOMS 25%</span>
+                </a>
+                <a href="./fi/index.html" class="apple-launchpad-card" data-code="fi" data-name="suomi finnish" onclick="try{localStorage.setItem('sr_lang_pref','fi');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/fi.png" alt="FI" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Suomi</span>
+                            <span class="apple-launchpad-sub">Finnish</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">ALV 25.5%</span>
+                </a>
+                <a href="./pl/index.html" class="apple-launchpad-card" data-code="pl" data-name="polski polish" onclick="try{localStorage.setItem('sr_lang_pref','pl');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/pl.png" alt="PL" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Polski</span>
+                            <span class="apple-launchpad-sub">Polish</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">VAT 23%</span>
+                </a>
+                <a href="./pt/index.html" class="apple-launchpad-card" data-code="pt" data-name="português portuguese" onclick="try{localStorage.setItem('sr_lang_pref','pt');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/pt.png" alt="PT" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Português</span>
+                            <span class="apple-launchpad-sub">Portuguese</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">IVA 23%</span>
+                </a>
+                <a href="./el/index.html" class="apple-launchpad-card" data-code="el" data-name="ελληνικά greek" onclick="try{localStorage.setItem('sr_lang_pref','el');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/gr.png" alt="EL" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Ελληνικά</span>
+                            <span class="apple-launchpad-sub">Greek</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">ΦΠΑ 24%</span>
+                </a>
+                <a href="./cs/index.html" class="apple-launchpad-card" data-code="cs" data-name="čeština czech" onclick="try{localStorage.setItem('sr_lang_pref','cs');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/cz.png" alt="CS" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Čeština</span>
+                            <span class="apple-launchpad-sub">Czech</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">DPH 21%</span>
+                </a>
+                <a href="./ro/index.html" class="apple-launchpad-card" data-code="ro" data-name="română romanian" onclick="try{localStorage.setItem('sr_lang_pref','ro');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/ro.png" alt="RO" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Română</span>
+                            <span class="apple-launchpad-sub">Romanian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">TVA 19%</span>
+                </a>
+                <a href="./hu/index.html" class="apple-launchpad-card" data-code="hu" data-name="magyar hungarian" onclick="try{localStorage.setItem('sr_lang_pref','hu');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/hu.png" alt="HU" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Magyar</span>
+                            <span class="apple-launchpad-sub">Hungarian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">ÁFA 27%</span>
+                </a>
+                <a href="./bg/index.html" class="apple-launchpad-card" data-code="bg" data-name="български bulgarian" onclick="try{localStorage.setItem('sr_lang_pref','bg');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/bg.png" alt="BG" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Български</span>
+                            <span class="apple-launchpad-sub">Bulgarian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">ДДС 20%</span>
+                </a>
+                <a href="./sk/index.html" class="apple-launchpad-card" data-code="sk" data-name="slovenčina slovak" onclick="try{localStorage.setItem('sr_lang_pref','sk');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/sk.png" alt="SK" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Slovenčina</span>
+                            <span class="apple-launchpad-sub">Slovak</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">DPH 20%</span>
+                </a>
+                <a href="./hr/index.html" class="apple-launchpad-card" data-code="hr" data-name="hrvatski croatian" onclick="try{localStorage.setItem('sr_lang_pref','hr');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/hr.png" alt="HR" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Hrvatski</span>
+                            <span class="apple-launchpad-sub">Croatian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">PDV 25%</span>
+                </a>
+                <a href="./lt/index.html" class="apple-launchpad-card" data-code="lt" data-name="lietuvių lithuanian" onclick="try{localStorage.setItem('sr_lang_pref','lt');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/lt.png" alt="LT" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Lietuvių</span>
+                            <span class="apple-launchpad-sub">Lithuanian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">PVM 21%</span>
+                </a>
+                <a href="./sl/index.html" class="apple-launchpad-card" data-code="sl" data-name="slovenščina slovenian" onclick="try{localStorage.setItem('sr_lang_pref','sl');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/si.png" alt="SL" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Slovenščina</span>
+                            <span class="apple-launchpad-sub">Slovenian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">DDV 22%</span>
+                </a>
+                <a href="./lv/index.html" class="apple-launchpad-card" data-code="lv" data-name="latviešu latvian" onclick="try{localStorage.setItem('sr_lang_pref','lv');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/lv.png" alt="LV" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Latviešu</span>
+                            <span class="apple-launchpad-sub">Latvian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">PVN 21%</span>
+                </a>
+                <a href="./et/index.html" class="apple-launchpad-card" data-code="et" data-name="eesti estonian" onclick="try{localStorage.setItem('sr_lang_pref','et');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/ee.png" alt="ET" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Eesti</span>
+                            <span class="apple-launchpad-sub">Estonian</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">KM 22%</span>
+                </a>
+                <a href="./ga/index.html" class="apple-launchpad-card" data-code="ga" data-name="gaeilge irish" onclick="try{localStorage.setItem('sr_lang_pref','ga');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/ie.png" alt="GA" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Gaeilge</span>
+                            <span class="apple-launchpad-sub">Irish</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">CBL 23%</span>
+                </a>
+                <a href="./mt/index.html" class="apple-launchpad-card" data-code="mt" data-name="malti maltese" onclick="try{localStorage.setItem('sr_lang_pref','mt');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/mt.png" alt="MT" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Malti</span>
+                            <span class="apple-launchpad-sub">Maltese</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">VAT 18%</span>
+                </a>
+                <a href="./index.html" class="apple-launchpad-card active" data-code="ar" data-name="العربية arabic (hq master)" onclick="try{localStorage.setItem('sr_lang_pref','ar');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/sa.png" alt="AR" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">العربية</span>
+                            <span class="apple-launchpad-sub">Arabic (HQ Master)</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">VAT 15%</span>
+                </a>
+                <a href="./tr/index.html" class="apple-launchpad-card" data-code="tr" data-name="türkçe turkish" onclick="try{localStorage.setItem('sr_lang_pref','tr');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/tr.png" alt="TR" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Türkçe</span>
+                            <span class="apple-launchpad-sub">Turkish</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">KDV 20%</span>
+                </a>
+                <a href="./ku/index.html" class="apple-launchpad-card" data-code="ku" data-name="kurdî (kurmancî) kurdish (kurmanji)" onclick="try{localStorage.setItem('sr_lang_pref','ku');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/iq.png" alt="KU" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">Kurdî (Kurmancî)</span>
+                            <span class="apple-launchpad-sub">Kurdish (Kurmanji)</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">Tax 5%</span>
+                </a>
+                <a href="./ckb/index.html" class="apple-launchpad-card" data-code="ckb" data-name="کوردی (سۆرانی) kurdish (sorani)" onclick="try{localStorage.setItem('sr_lang_pref','ckb');}catch(e){}">
+                    <div class="apple-launchpad-card-left">
+                        <img src="./assets/flags/iq.png" alt="CKB" class="apple-launchpad-flag" width="28" height="19">
+                        <div class="apple-launchpad-text">
+                            <span class="apple-launchpad-native">کوردی (سۆرانی)</span>
+                            <span class="apple-launchpad-sub">Kurdish (Sorani)</span>
+                        </div>
+                    </div>
+                    <span class="apple-launchpad-vat">باج ٥٪</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Apple macOS Launchpad Modal (29 Sovereign Languages Grid) -->
     <div class="apple-launchpad-overlay" id="appleMacosLaunchpadOverlay" aria-modal="true" role="dialog"
         aria-label="Apple Launchpad - All 29 Languages">

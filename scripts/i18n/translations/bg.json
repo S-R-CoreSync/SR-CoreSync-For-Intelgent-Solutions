@@ -1,6 +1,6 @@
 {
   "language": "bg",
-  "count": 441,
+  "count": 442,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Значка „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Одобрени оперативни базови параметри",
@@ -352,6 +352,7 @@
     "Within 24 Hours (Support Tickets)": "В рамките на 24 часа (тикети за поддръжка)",
     "Within 4 Hours (Email + WhatsApp)": "В рамките на 4 часа (имейл + WhatsApp)",
     "Your Genuine Digital License Key:": "Вашият автентичен цифров лицензен ключ:",
+    "إغلاق / Close": "Затвори",
     "↺ Reset & Clear": "↺ Нулиране и изчистване",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% намаление на ръчните часове за обработка",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Корпоративен AI и интеграции",

@@ -1,6 +1,6 @@
 {
   "language": "cs",
-  "count": 441,
+  "count": 442,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Odznak „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Schválené provozní základní parametry",
@@ -352,6 +352,7 @@
     "Within 24 Hours (Support Tickets)": "Do 24 hodin (support tickety)",
     "Within 4 Hours (Email + WhatsApp)": "Do 4 hodin (e-mail + WhatsApp)",
     "Your Genuine Digital License Key:": "Váš autentický digitální licenční klíč:",
+    "إغلاق / Close": "Zavřít",
     "↺ Reset & Clear": "↺ Obnovit a vymazat",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% snížení ručních hodin zpracování",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Podniková AI a integrace",

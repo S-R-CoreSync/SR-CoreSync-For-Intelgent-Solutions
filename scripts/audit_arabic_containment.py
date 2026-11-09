@@ -50,6 +50,9 @@ AR_DATA_LINE = re.compile(r'^\s*ar\s*:')
 
 ALLOWED_TEXT = {
     'العربية',          # native name of Arabic in the language switcher
+    'کوردی',            # native name of Kurdish (Kurmanji card, launchpad)
+    'سۆرانی',           # native name of Kurdish Sorani (ckb card, launchpad)
+    'باج ٥٪',           # native VAT badge on the ckb language card
 }
 
 

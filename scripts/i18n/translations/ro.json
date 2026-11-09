@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 441,
+  "count": 442,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Insignă „Powered by CoreSync”",
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
@@ -352,6 +352,7 @@
     "Within 24 Hours (Support Tickets)": "În 24 de ore (tichete de suport)",
     "Within 4 Hours (Email + WhatsApp)": "În 4 ore (e-mail + WhatsApp)",
     "Your Genuine Digital License Key:": "Cheia dvs. digitală autentică de licență:",
+    "إغلاق / Close": "Închide",
     "↺ Reset & Clear": "↺ Resetează și șterge",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ Reducere de 65% a orelor de procesare manuală",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. AI enterprise și integrări",

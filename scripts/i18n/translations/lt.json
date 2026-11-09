@@ -1,6 +1,6 @@
 {
   "language": "lt",
-  "count": 441,
+  "count": 442,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Ženklelis „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
@@ -352,6 +352,7 @@
     "Within 24 Hours (Support Tickets)": "Per 24 valandas (palaikymo užklausos)",
     "Within 4 Hours (Email + WhatsApp)": "Per 4 valandas (el. paštas + WhatsApp)",
     "Your Genuine Digital License Key:": "Jūsų autentiškas skaitmeninis licencijos raktas:",
+    "إغلاق / Close": "Uždaryti",
     "↺ Reset & Clear": "↺ Atstatyti ir išvalyti",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % mažiau rankinio apdorojimo valandų",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Įmonės AI ir integracijos",

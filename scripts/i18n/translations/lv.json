@@ -1,6 +1,6 @@
 {
   "language": "lv",
-  "count": 441,
+  "count": 442,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Žetons “Powered by CoreSync”",
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
@@ -352,6 +352,7 @@
     "Within 24 Hours (Support Tickets)": "24 stundu laikā (atbalsta pieprasījumi)",
     "Within 4 Hours (Email + WhatsApp)": "4 stundu laikā (e-pasts + WhatsApp)",
     "Your Genuine Digital License Key:": "Jūsu īstā digitālā licences atslēga:",
+    "إغلاق / Close": "Aizvērt",
     "↺ Reset & Clear": "↺ Atiestatīt un notīrīt",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % samazinājums manuālās apstrādes stundās",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Uzņēmuma AI un integrācijas",

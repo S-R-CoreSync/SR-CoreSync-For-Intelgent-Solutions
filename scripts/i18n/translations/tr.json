@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 441,
+  "count": 443,
   "strings": {
     "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\" rozeti",
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
@@ -352,6 +352,8 @@
     "Within 24 Hours (Support Tickets)": "24 Saat İçinde (Destek Talepleri)",
     "Within 4 Hours (Email + WhatsApp)": "4 Saat İçinde (E-posta + WhatsApp)",
     "Your Genuine Digital License Key:": "Gerçek Dijital Lisans Anahtarınız:",
+    "إغلاق / Close": "Kapat",
+    "إغلاق / Kapat": "Kapat",
     "↺ Reset & Clear": "↺ Sıfırla ve temizle",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ Manuel işlem saatlerinde %65 azalma",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Kurumsal AI ve Entegrasyonlar",

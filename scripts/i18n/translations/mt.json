@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 441,
+  "count": 442,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Badge \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
@@ -352,6 +352,7 @@
     "Within 24 Hours (Support Tickets)": "Fi 24 Siegħa (Tickets tal-Appoġġ)",
     "Within 4 Hours (Email + WhatsApp)": "Fi 4 Sigħat (Email + WhatsApp)",
     "Your Genuine Digital License Key:": "Iċ-Ċavetta tal-Liċenzja Diġitali Ġenwina tiegħek:",
+    "إغلاق / Close": "Agħlaq",
     "↺ Reset & Clear": "↺ Irrisettja u Naddaf",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% Tnaqqis fis-Sigħat tal-Ipproċessar Manwali",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. AI tal-Intrapriża u Integrazzjonijiet",
