@@ -7,7 +7,15 @@
 
 ---
 
-### [2026-11-09] — المرحلة 171-ب: تدقيق الروابط القديمة (33 رابطًا) — لا روابط مكشوفة
+### [2026-11-09] — المرحلة 172: فصول تحديث الهيكلية 9–11 (الصفحة الأم)
+- **الفصل 9 — `<h1>` واحد لكل مستند:** تحويل عنوان العلامة داخل `<noscript>` من `<h1>` إلى `<p>` مع الحفاظ على اللون والوزن البصري؛ الصفحة الأم صارت بعنوان `h1` واحد بعد أن كان اثنين.
+- **الفصل 10 — معرّفات فريدة:** إعادة تسمية التكرار الثاني إلى `socialCheckoutItemTitle` و`newsletterFormFooter` و`softwareGridContainerWl` في `index.html`، و`socialCheckoutItemTitle` في `ckb/index.html`. المعرّفات: 413 بلا أي تكرار (كانت 3 مكرّرة تُفسد `getElementById`).
+- **الفصل 11 — مراسٍ حيّة:** `href="#privacy-preferences"` → `privacy.html#cookies` (هدف موجود فعلًا). رابط `#terms` بقي معلّقًا لعدم وجود صفحة شروط في المشروع.
+- **الأداة:** `scripts/act_structure_fixes.py` — سكربت idempotent بوضع `--act 9|10|11 --dry-run`، يصلح لإعادة التطبيق على أي صفحة.
+- **التحقق:** `validate.js` ✅ · `check_inline_scripts.mjs` ✅ (495 سكربت + 98 JSON-LD) · `build_csp.py --check` ✅ (198 hash) · فحص DOM الحيّ: `h1=1`، `dupIds=[]`، `privacyHref=privacy.html#cookies`.
+
+---
+ (33 رابطًا) — لا روابط مكشوفة
 - **الهدف:** التأكد من أن كل صفحة قديمة (تطويرية أو محذوفة) تعيد 404، وليست مكشوفة للفهرسة.
 - **التنفيذ:** فحص 33 رابطًا محليًا وحَيًّا: 13 صفحة `EXCLUDED_DEV_PAGES` + 19 صفحة محذوفة من Git + رابطَي `_trash_160`.
 - **النتيجة:** 30 رابطًا → 404 ✅. و4 صفحات حيّة لكنها **مشروعة** (`3d-product-configurator`، `multi-cbdc-bridge`، `sovereign-arbitration-hub`، `zkp-confidential-enclave`) لأنها متعقَّبة في Git ومربوطة من `sitemap.xml` وصفحات مجموعة الحلول السيادية — فاستُبعدت من قائمة الإزالة.
