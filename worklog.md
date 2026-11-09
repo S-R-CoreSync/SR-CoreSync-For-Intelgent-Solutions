@@ -13,6 +13,7 @@
 - **النتيجة:** 30 رابطًا → 404 ✅. و4 صفحات حيّة لكنها **مشروعة** (`3d-product-configurator`، `multi-cbdc-bridge`، `sovereign-arbitration-hub`، `zkp-confidential-enclave`) لأنها متعقَّبة في Git ومربوطة من `sitemap.xml` وصفحات مجموعة الحلول السيادية — فاستُبعدت من قائمة الإزالة.
 - **التوثيق:** تحديث `docs/RETIRED-URLS.md` بقسم فحص كامل وجداول مصنّفة.
 - **الإغلاق:** نُفِّذ طلب الإزالة المؤقتة في Google Search Console للبادئة `https://sr-coresync.com/_trash_160/` بتاريخ 09 نوفمبر 2026؛ وأُعيد التحقق الحيّ بعد الطلب: الرابطان يعيدان **404**. ملف الروابط المسحوبة مغلق نهائيًا.
+- **إضافة SEO:** إدراج `3d-product-configurator.html` في `sitemap.xml` (lastmod 2026-11-07، priority 0.75) — كانت مربوطة من الصفحة الرئيسية و`dynamic-qr-studio.html` لكنها غائبة عن الخريطة. الخريطة 87 → 88 رابطًا، وإعادة بناء `_site` + `validate_publish_set.py` + `check_site_links.py` ناجحة (0 مراجع مكسورة).
 
 ---
 

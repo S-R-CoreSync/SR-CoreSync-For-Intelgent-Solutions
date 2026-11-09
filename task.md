@@ -7,6 +7,7 @@
 - [x] **استبعاد 4 صفحات حيّة مشروعة من قائمة الإزالة:** `3d-product-configurator.html` و`multi-cbdc-bridge.html` و`sovereign-arbitration-hub.html` و`zkp-confidential-enclave.html` — متعقَّبة في Git، منشورة، ومربوطة داخليًا (3 منها في `sitemap.xml` وضمن مجموعة الحلول السيادية).
 - [x] **توثيق النتيجة:** إضافة قسم «نتيجة فحص كل الروابط القديمة المرشحة» إلى `docs/RETIRED-URLS.md` بجداول مفصّلة.
 - [x] **إغلاق ملف الإزالة:** نُفِّذ طلب الإزالة المؤقتة في Google Search Console للبادئة `https://sr-coresync.com/_trash_160/` (09 نوفمبر 2026)، وأُعيد التحقق الحيّ: الرابطان → **404**. الملف مغلق نهائيًا.
+- [x] **إصلاح SEO:** إضافة `3d-product-configurator.html` إلى `sitemap.xml` (lastmod 2026-11-07، priority 0.75) بعد أن كانت صفحة منتج حقيقية ومربوطة لكنها غير مُدرجة. عدد روابط الخريطة: 87 → 88، وإعادة بناء `_site` والتحقق: 0 مراجع مكسورة.
 
 ---
 

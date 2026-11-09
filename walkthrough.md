@@ -9,6 +9,7 @@
   3. **النتيجة:** 30 رابطًا → 404 (آمنة)، و4 صفحات حيّة **مشروعة** استُبعدت من قائمة الإزالة: `3d-product-configurator.html`، `multi-cbdc-bridge.html`، `sovereign-arbitration-hub.html`، `zkp-confidential-enclave.html` — لأنها متعقَّبة في Git ومربوطة من `sitemap.xml` وصفحات مجموعة الحلول السيادية.
 - **التوثيق:** قسم جديد «نتيجة فحص كل الروابط القديمة المرشحة» في `docs/RETIRED-URLS.md`.
 - **الاستنتاج:** لا توجد روابط مكشوفة تحتاج إزالة إضافية؛ يبقى إجراء GSC على رابطَي الأرشيف فقط.
+- **إضافة لاحقة (SEO):** أُدرجت `3d-product-configurator.html` في `sitemap.xml` (lastmod `2026-11-07`، priority `0.75`) لأنها صفحة منتج حقيقية ومربوطة من `index.html` و`dynamic-qr-studio.html` لكنها كانت غائبة عن الخريطة. عدد الروابط 87 → 88، وأُعيد بناء `_site` مع 0 مراجع مكسورة.
 
 ---
 
