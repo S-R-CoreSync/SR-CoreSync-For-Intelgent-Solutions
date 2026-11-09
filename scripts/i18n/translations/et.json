@@ -1,6 +1,6 @@
 {
   "language": "et",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Kinnitatud operatiivsed baasparameetrid",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (ilma CoreSync'i jäljeta)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9% / 21% arveldamine ja HACCP allergeenide märgistamine",
     "✓ Cashflow runway forecasting engine": "✓ Rahavoogude prognoosimootor",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Kliendipoolne nullteadmisega AES-256 krüpteerimine",
-    "✓ Cloud Transformation Playbook": "✓ Pilvetransformatsiooni playbook"
+    "✓ Cloud Transformation Playbook": "✓ Pilvetransformatsiooni playbook",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Sihtotstarbeline suveräänne mudel ettevõtte andmetel",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitaalsed liikmekaardid kohese QR-kinnitamisega",
+    "✓ Direct Executive Advisory": "✓ Otsene juhtkonna nõustamine",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Otsene krüpteeritud tunnel Amsterdam AMS-01 klastrisse",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Krüpteeritud pilvesaadetis juhatusele",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Täielik vastavus Euroopa e-arvete standardile EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Mapsi marsruutimine ja digitaalne tarnekinnitus",
+    "✓ Instant Sandbox Access": "✓ Kohene juurdepääs sandboxile",
+    "✓ Instant optical recognition & table parsing": "✓ Kohene optiline tuvastus ja tabelite sõelumine",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Kohesed kassaarvelduse aruanded vahetuse lõpus",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Juriidiline AI-assistent (RAG) ja turvaline dokumendihoidla",
+    "✓ Local AES-256 encrypted database": "✓ Kohalik AES-256 krüpteeritud andmebaas",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Kohalik AES-256 krüpteeritud andmebaas (null pilvesõltuvust)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA-autentimine, auditi logid ja GDPR-i privaatsustööriistad",
+    "✓ Medication reminders & drug interaction checker": "✓ Ravimite meeldetuletused ja ravimite koostoimete kontroll",
+    "✓ Microsecond execution speed with complete test suites": "✓ Mikrosekundiline täitmiskiirus täielike testikomplektidega",
+    "✓ Official XML tax returns & audit reports": "✓ Ametlikud XML-maksudeklaratsioonid ja auditiaruanded",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Reaalajas südamelöögi telemeetria ja SLA-vastavuse mõõdikud",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Tšekiprinteri ja optilise vöötkoodilugeja integratsioon"
   }
 }

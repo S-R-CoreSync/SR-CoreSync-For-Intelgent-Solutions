@@ -1,6 +1,6 @@
 {
   "language": "fr",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paramètres opérationnels de base approuvés",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (aucune trace CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Facturation BTW 9 % / 21 % et étiquetage des allergènes HACCP",
     "✓ Cashflow runway forecasting engine": "✓ Moteur de prévision de trésorerie",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Chiffrement AES-256 à connaissance nulle côté client",
-    "✓ Cloud Transformation Playbook": "✓ Playbook de transformation cloud"
+    "✓ Cloud Transformation Playbook": "✓ Playbook de transformation cloud",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Modèle souverain dédié sur les données d'entreprise",
+    "✓ Digital membership cards with instant QR verification": "✓ Cartes de membre numériques avec vérification QR instantanée",
+    "✓ Direct Executive Advisory": "✓ Conseil exécutif direct",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Tunnel chiffré direct vers le cluster Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Envoi cloud chiffré au comité de direction",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Conformité totale à la norme européenne de facturation électronique EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Itinéraires Google Maps et preuve de livraison numérique",
+    "✓ Instant Sandbox Access": "✓ Accès instantané au sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ Reconnaissance optique et analyse de tableaux instantanées",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Rapports instantanés d'arrêté de caisse à la clôture du poste",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Assistant juridique IA (RAG) et coffre-fort documentaire sécurisé",
+    "✓ Local AES-256 encrypted database": "✓ Base de données locale chiffrée AES-256",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Base de données locale chiffrée AES-256 (aucune dépendance au cloud)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ Authentification MFA, journaux d'audit et outils de confidentialité GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ Rappels de médicaments et vérificateur d'interactions médicamenteuses",
+    "✓ Microsecond execution speed with complete test suites": "✓ Vitesse d'exécution en microsecondes avec suites de tests complètes",
+    "✓ Official XML tax returns & audit reports": "✓ Déclarations fiscales XML officielles et rapports d'audit",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Télémétrie de heartbeat en temps réel et métriques de conformité SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Intégration imprimante à tickets et lecteur optique de codes-barres"
   }
 }

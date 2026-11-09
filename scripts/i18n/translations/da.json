@@ -1,6 +1,6 @@
 {
   "language": "da",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkendte operationelle basisparametre",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (ingen CoreSync-fodaftryk)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % fakturering og HACCP-allergenmærkning",
     "✓ Cashflow runway forecasting engine": "✓ Cashflow-prognosemotor",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Client-side zero-knowledge AES-256-kryptering",
-    "✓ Cloud Transformation Playbook": "✓ Cloud Transformation Playbook"
+    "✓ Cloud Transformation Playbook": "✓ Cloud Transformation Playbook",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Dedikeret suveræn model på virksomhedsdata",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitale medlemskort med øjeblikkelig QR-verificering",
+    "✓ Direct Executive Advisory": "✓ Direkte ledelsesrådgivning",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Direkte krypteret tunnel til Amsterdam AMS-01-klyngen",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Krypteret cloudafsendelse til direktionen",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Fuld overensstemmelse med den europæiske e-faktureringsstandard EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps-routing og digital leveringsdokumentation",
+    "✓ Instant Sandbox Access": "✓ Øjeblikkelig sandbox-adgang",
+    "✓ Instant optical recognition & table parsing": "✓ Øjeblikkelig optisk genkendelse og tabelparsing",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Øjeblikkelige kasseafstemninger ved vagtskifte",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Juridisk AI-assistent (RAG) og sikker dokumentboks",
+    "✓ Local AES-256 encrypted database": "✓ Lokal AES-256-krypteret database",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Lokal AES-256-krypteret database (nul cloudafhængighed)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA-godkendelse, revisionslogs og GDPR-privatlivsværktøjer",
+    "✓ Medication reminders & drug interaction checker": "✓ Medicinpåmindelser og kontrol af lægemiddelinteraktioner",
+    "✓ Microsecond execution speed with complete test suites": "✓ Mikrosekund-hastighed med komplette testsuiter",
+    "✓ Official XML tax returns & audit reports": "✓ Officielle XML-skatteangivelser og revisionsrapporter",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Realtids-heartbeat-telemetri og SLA-overholdelsesmålinger",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integration af bonprinter og optisk stregkodescanner"
   }
 }

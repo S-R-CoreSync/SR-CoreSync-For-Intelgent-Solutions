@@ -1,6 +1,6 @@
 {
   "language": "lv",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez CoreSync pēdām)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % rēķini un HACCP alerģēnu marķēšana",
     "✓ Cashflow runway forecasting engine": "✓ Naudas plūsmas prognozēšanas dzinējs",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Klienta puses nulles zināšanu AES-256 šifrēšana",
-    "✓ Cloud Transformation Playbook": "✓ Mākoņa transformācijas playbook"
+    "✓ Cloud Transformation Playbook": "✓ Mākoņa transformācijas playbook",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Īpašs suverēns modelis uzņēmuma datos",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitālās dalības kartes ar tūlītēju QR pārbaudi",
+    "✓ Direct Executive Advisory": "✓ Tieša vadības konsultēšana",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Tiešs šifrēts tunelis uz Amsterdam AMS-01 klasteri",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Šifrēta mākoņa nosūtīšana valdei",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Pilnīga atbilstība Eiropas e-rēķinu standartam EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps maršrutēšana un digitāls piegādes pierādījums",
+    "✓ Instant Sandbox Access": "✓ Tūlītēja piekļuve sandbox videi",
+    "✓ Instant optical recognition & table parsing": "✓ Tūlītēja optiskā atpazīšana un tabulu analīze",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Tūlītēji kases saskaņošanas pārskati maiņas noslēgumā",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Juridiskais AI asistents (RAG) un droša dokumentu glabātuve",
+    "✓ Local AES-256 encrypted database": "✓ Vietējā AES-256 šifrētā datubāze",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Vietējā AES-256 šifrētā datubāze (nulle atkarības no mākoņa)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA autentifikācija, audita žurnāli un GDPR privātuma rīki",
+    "✓ Medication reminders & drug interaction checker": "✓ Zāļu atgādinājumi un zāļu mijiedarbības pārbaudītājs",
+    "✓ Microsecond execution speed with complete test suites": "✓ Izpildes ātrums mikrosekundēs ar pilniem testu komplektiem",
+    "✓ Official XML tax returns & audit reports": "✓ Oficiālas XML nodokļu deklarācijas un audita pārskati",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Reāllaika sirdspukstu telemetrija un SLA atbilstības rādītāji",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Čeku printera un optiskā svītrkodu skenera integrācija"
   }
 }

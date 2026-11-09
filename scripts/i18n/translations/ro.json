@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Facturare BTW 9% / 21% și etichetarea alergenilor HACCP",
     "✓ Cashflow runway forecasting engine": "✓ Motor de prognoză a fluxului de numerar",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Criptare AES-256 cu cunoaștere zero pe partea clientului",
-    "✓ Cloud Transformation Playbook": "✓ Playbook de transformare cloud"
+    "✓ Cloud Transformation Playbook": "✓ Playbook de transformare cloud",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Model suveran dedicat pe datele companiei",
+    "✓ Digital membership cards with instant QR verification": "✓ Carduri de membru digitale cu verificare QR instantanee",
+    "✓ Direct Executive Advisory": "✓ Consultanță executivă directă",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Tunel criptat direct către clusterul Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Trimitere criptată în cloud către consiliul de administrație",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Conformitate deplină cu standardul european de facturare electronică EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Rutare Google Maps și dovadă digitală de livrare",
+    "✓ Instant Sandbox Access": "✓ Acces instantaneu la sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ Recunoaștere optică și analiză de tabele instantanee",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Rapoarte instantanee de reconciliere a casieriei la închiderea turei",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Asistent juridic AI (RAG) și seif securizat de documente",
+    "✓ Local AES-256 encrypted database": "✓ Bază de date locală criptată AES-256",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Bază de date locală criptată AES-256 (zero dependență de cloud)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ Autentificare MFA, jurnale de audit și instrumente de confidențialitate GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ Memento-uri pentru medicamente și verificator de interacțiuni medicamentoase",
+    "✓ Microsecond execution speed with complete test suites": "✓ Viteză de execuție în microsecunde cu suite de teste complete",
+    "✓ Official XML tax returns & audit reports": "✓ Declarații fiscale XML oficiale și rapoarte de audit",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrie heartbeat în timp real și metrici de conformitate SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrare imprimantă de bonuri și scaner optic de coduri de bare"
   }
 }

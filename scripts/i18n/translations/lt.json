@@ -1,6 +1,6 @@
 {
   "language": "lt",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (be CoreSync pėdsakų)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % sąskaitų išrašymas ir HACCP alergenų ženklinimas",
     "✓ Cashflow runway forecasting engine": "✓ Pinigų srautų prognozavimo variklis",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Kliento pusės nulinio žinojimo AES-256 šifravimas",
-    "✓ Cloud Transformation Playbook": "✓ Debesijos transformacijos playbook"
+    "✓ Cloud Transformation Playbook": "✓ Debesijos transformacijos playbook",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Skirtas suverenus modelis įmonės duomenims",
+    "✓ Digital membership cards with instant QR verification": "✓ Skaitmeninės narystės kortelės su momentiniu QR tikrinimu",
+    "✓ Direct Executive Advisory": "✓ Tiesioginės vadovybės konsultacijos",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Tiesioginis šifruotas tunelis į Amsterdam AMS-01 klasterį",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Šifruotas debesijos siuntimas valdybai",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Visiškas atitikimas Europos e. sąskaitų standartui EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps maršrutizavimas ir skaitmeninis pristatymo įrodymas",
+    "✓ Instant Sandbox Access": "✓ Momentinė prieiga prie sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ Momentinis optinis atpažinimas ir lentelių analizė",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Momentinės kasos suderinimo ataskaitos baigiant pamainą",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Teisinis AI asistentas (RAG) ir saugi dokumentų saugykla",
+    "✓ Local AES-256 encrypted database": "✓ Vietinė AES-256 šifruota duomenų bazė",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Vietinė AES-256 šifruota duomenų bazė (nulinė priklausomybė nuo debesijos)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA autentifikavimas, audito žurnalai ir GDPR privatumo įrankiai",
+    "✓ Medication reminders & drug interaction checker": "✓ Vaistų priminimai ir vaistų sąveikos tikrintuvas",
+    "✓ Microsecond execution speed with complete test suites": "✓ Vykdymo greitis mikrosekundėmis su pilnais testų rinkiniais",
+    "✓ Official XML tax returns & audit reports": "✓ Oficialios XML mokesčių deklaracijos ir audito ataskaitos",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Realiojo laiko širdies plakimo telemetrija ir SLA atitikties rodikliai",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Kvitu spausdintuvo ir optinio brūkšninių kodų skaitytuvo integracija"
   }
 }

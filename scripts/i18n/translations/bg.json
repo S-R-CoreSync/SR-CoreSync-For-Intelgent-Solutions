@@ -1,6 +1,6 @@
 {
   "language": "bg",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Одобрени оперативни базови параметри",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (без следа от CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Фактуриране BTW 9% / 21% и HACCP етикетиране на алергени",
     "✓ Cashflow runway forecasting engine": "✓ Двигател за прогнозиране на паричния поток",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Клиентско AES-256 криптиране с нулево знание",
-    "✓ Cloud Transformation Playbook": "✓ Плейбук за облачна трансформация"
+    "✓ Cloud Transformation Playbook": "✓ Плейбук за облачна трансформация",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Специализиран суверенен модел върху корпоративни данни",
+    "✓ Digital membership cards with instant QR verification": "✓ Цифрови членски карти с незабавна QR проверка",
+    "✓ Direct Executive Advisory": "✓ Директно консултиране на ръководството",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Директен криптиран тунел до клъстера Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Криптирано облачно изпращане до управителния съвет",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Пълно съответствие с европейския стандарт за електронно фактуриране EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Маршрутизация с Google Maps и цифрово доказателство за доставка",
+    "✓ Instant Sandbox Access": "✓ Незабавен достъп до Sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ Незабавно оптично разпознаване и анализ на таблици",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Отчети за касова равносиетка при приключване на смяна",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Правен AI асистент (RAG) и защитено хранилище за документи",
+    "✓ Local AES-256 encrypted database": "✓ Локална AES-256 криптирана база данни",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Локална AES-256 криптирана база данни (без зависимост от облак)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA удостоверяване, одитни дневници и GDPR инструменти за поверителност",
+    "✓ Medication reminders & drug interaction checker": "✓ Напомняния за лекарства и проверка на лекарствени взаимодействия",
+    "✓ Microsecond execution speed with complete test suites": "✓ Скорост на изпълнение в микросекунди с пълни тестови пакети",
+    "✓ Official XML tax returns & audit reports": "✓ Официални XML данъчни декларации и одитни отчети",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Телеметрия на сърдечен ритъм в реално време и показатели за съответствие със SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Интеграция с принтер за касови бележки и оптичен баркод скенер"
   }
 }

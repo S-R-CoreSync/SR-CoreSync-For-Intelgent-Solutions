@@ -1,6 +1,6 @@
 {
   "language": "nl",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Goedgekeurde operationele basisparameters",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (geen CoreSync-voetafdruk)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Btw 9% / 21% facturatie en HACCP-allergeenlabeling",
     "✓ Cashflow runway forecasting engine": "✓ Cashflow-prognose-engine",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Client-side zero-knowledge AES-256-versleuteling",
-    "✓ Cloud Transformation Playbook": "✓ Cloud Transformation Playbook"
+    "✓ Cloud Transformation Playbook": "✓ Cloud Transformation Playbook",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Toegewijd soeverein model op bedrijfsgegevens",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitale lidmaatschapskaarten met directe QR-verificatie",
+    "✓ Direct Executive Advisory": "✓ Directe executive-advisering",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Directe versleutelde tunnel naar het Amsterdam AMS-01-cluster",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Versleutelde cloudverzending naar de raad van bestuur",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Volledige naleving van de Europese e-factureringsnorm EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps-routering en digitaal leveringsbewijs",
+    "✓ Instant Sandbox Access": "✓ Directe sandbox-toegang",
+    "✓ Instant optical recognition & table parsing": "✓ Directe optische herkenning en tabelparsing",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Directe kasafstemmingsrapporten bij dienstsluiting",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Juridische AI-assistent (RAG) en beveiligde documentkluis",
+    "✓ Local AES-256 encrypted database": "✓ Lokale AES-256-versleutelde database",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Lokale AES-256-versleutelde database (geen cloudafhankelijkheid)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA-authenticatie, auditlogs en GDPR-privacytools",
+    "✓ Medication reminders & drug interaction checker": "✓ Medicatieherinneringen en controle op medicatie-interacties",
+    "✓ Microsecond execution speed with complete test suites": "✓ Microseconde-uitvoeringssnelheid met volledige testsuites",
+    "✓ Official XML tax returns & audit reports": "✓ Officiële XML-belastingaangiften en auditrapporten",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Realtime heartbeat-telemetrie en SLA-nalevingsstatistieken",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integratie van bonprinter en optische barcodescanner"
   }
 }

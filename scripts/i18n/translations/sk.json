@@ -1,6 +1,6 @@
 {
   "language": "sk",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Schválené prevádzkové základné parametre",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez stopy CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fakturácia BTW 9 % / 21 % a HACCP označovanie alergénov",
     "✓ Cashflow runway forecasting engine": "✓ Engine na prognózu cashflow",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Klientské šifrovanie AES-256 s nulovou znalosťou",
-    "✓ Cloud Transformation Playbook": "✓ Playbook cloudovej transformácie"
+    "✓ Cloud Transformation Playbook": "✓ Playbook cloudovej transformácie",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Vyhradený suverénny model na firemných dátach",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitálne členské karty s okamžitým overením QR",
+    "✓ Direct Executive Advisory": "✓ Priame poradenstvo pre vedenie",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Priamy šifrovaný tunel ku klastru Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Šifrované cloudové odosielanie predstavenstvu",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Plná zhoda s európskym štandardom e-fakturácie EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Smerovanie Google Maps a digitálne potvrdenie doručenia",
+    "✓ Instant Sandbox Access": "✓ Okamžitý prístup k sandboxu",
+    "✓ Instant optical recognition & table parsing": "✓ Okamžité optické rozpoznávanie a analýza tabuliek",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Okamžité prehľady pokladničnej uzávierky pri ukončení zmeny",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Právny AI asistent (RAG) a bezpečný trezor dokumentov",
+    "✓ Local AES-256 encrypted database": "✓ Lokálna databáza šifrovaná AES-256",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Lokálna databáza šifrovaná AES-256 (nulová závislosť od cloudu)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA autentifikácia, auditné záznamy a nástroje súkromia GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ Pripomienky liekov a kontrola liekových interakcií",
+    "✓ Microsecond execution speed with complete test suites": "✓ Rýchlosť vykonávania v mikrosekundách s kompletnými testovacími sadami",
+    "✓ Official XML tax returns & audit reports": "✓ Oficiálne XML daňové priznania a audítorské správy",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetria srdcového tepu v reálnom čase a metriky zhody so SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrácia tlačiarne účteniek a optického čítača čiarových kódov"
   }
 }

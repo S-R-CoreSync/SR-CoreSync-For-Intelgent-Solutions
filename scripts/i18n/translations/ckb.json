@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ فاتوورەی BTW ٩٪ / ٢١٪ و نیشانکردنی ئەلێرجنی HACCP",
     "✓ Cashflow runway forecasting engine": "✓ بزوێنەری پێشبینینی ڕەوتی کاش",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ شفرکردنی AES-256 ی سفر-زانینی لای کڕیار",
-    "✓ Cloud Transformation Playbook": "✓ پلەیبووکی گۆڕانی هەور"
+    "✓ Cloud Transformation Playbook": "✓ پلەیبووکی گۆڕانی هەور",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ مۆدێلی سەروەری تایبەت لەسەر داتای کۆمپانیا",
+    "✓ Digital membership cards with instant QR verification": "✓ کارتەکانی ئەندامێتی دیجیتاڵی لەگەڵ پشتڕاستکردنەوەی QR ی دەستبەجێ",
+    "✓ Direct Executive Advisory": "✓ ڕاوێژی جێبەجێکاری ڕاستەوخۆ",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ تونێلی شفرکراوی ڕاستەوخۆ بۆ کۆمەڵەی Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ ناردنی هەوری شفرکراو بۆ دەستەی بەڕێوەبردن",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ پابەندبوونی تەواو بە ستانداردی فاتوورەی ئەلیکترۆنی ئەورووپی EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ ڕێڕەوی Google Maps و بەڵگەی گەیاندنی دیجیتاڵی",
+    "✓ Instant Sandbox Access": "✓ دەستگەیشتنی دەستبەجێ بە Sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ ناسینەوەی ئۆپتیکی دەستبەجێ و شیکردنەوەی خشتەکان",
+    "✓ Instant shift-close cash reconciliation reports": "✓ ڕاپۆرتی ڕێکخستنی کاش بە دەستبەجێ لە کاتی داخستنی شەوەت",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ یاریدەدەری AI ی یاسایی (RAG) و سندوقی بەڵگەنامەی پارێزراو",
+    "✓ Local AES-256 encrypted database": "✓ داتابەیسی شفرکراوی AES-256 ی ناوخۆیی",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ داتابەیسی شفرکراوی AES-256 ی ناوخۆیی (سفر پشتبەستن بە هەور)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ پشتڕاستکردنەوەی MFA، تۆمارەکانی پشکنین و ئامرازەکانی تایبەتمەندی GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ بیرخستنەوەی دەرمان و پشکنەری کارلێکی دەرمان",
+    "✓ Microsecond execution speed with complete test suites": "✓ خێرایی جێبەجێکردن بە مایکرۆچرکە لەگەڵ کۆمەڵە تاقیکردنەوەی تەواو",
+    "✓ Official XML tax returns & audit reports": "✓ بەیاننامەکانی باجی XML ی فەرمی و ڕاپۆرتەکانی پشکنین",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ تێلێمەتری لێدانی دڵی کاتی ڕاستەقینە و پێوەرەکانی پابەندبوون بە SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ یەکخستنی چاپەری وەسڵ و سکانەری بارکۆدی ئۆپتیکی"
   }
 }

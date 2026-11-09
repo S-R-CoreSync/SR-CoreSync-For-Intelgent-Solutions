@@ -1,6 +1,6 @@
 {
   "language": "fi",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ei CoreSync-jälkeä)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % laskutus ja HACCP-allergeenimerkinnät",
     "✓ Cashflow runway forecasting engine": "✓ Kassavirran ennustemoottori",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Asiakaspään nollatieto AES-256-salaus",
-    "✓ Cloud Transformation Playbook": "✓ Pilvitransformation playbook"
+    "✓ Cloud Transformation Playbook": "✓ Pilvitransformation playbook",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Yritysdatalla toimiva oma suvereeni malli",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitaaliset jäsenkortit välittömällä QR-vahvistuksella",
+    "✓ Direct Executive Advisory": "✓ Suora johdon neuvonanto",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Suora salattu tunneli Amsterdam AMS-01 -klusteriin",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Salattu pilvilähetys hallitukselle",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Täysi yhdenmukaisuus eurooppalaisen e-laskustandardin EN 16931 kanssa",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps -reititys ja digitaalinen toimitusvahvistus",
+    "✓ Instant Sandbox Access": "✓ Välitön sandbox-pääsy",
+    "✓ Instant optical recognition & table parsing": "✓ Välitön optinen tunnistus ja taulukkojen jäsennys",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Välittömät kassan täsmäytysraportit vuoron sulkeutuessa",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Juridinen AI-avustaja (RAG) ja turvallinen asiakirjasäilö",
+    "✓ Local AES-256 encrypted database": "✓ Paikallinen AES-256-salattu tietokanta",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Paikallinen AES-256-salattu tietokanta (ei pilviriippuvuutta)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA-todennus, audit-lokit ja GDPR-tietosuojatyökalut",
+    "✓ Medication reminders & drug interaction checker": "✓ Lääkemuistutukset ja lääkeyhteisvaikutusten tarkistus",
+    "✓ Microsecond execution speed with complete test suites": "✓ Mikrosekuntien suoritusnopeus täydellisillä testipaketeilla",
+    "✓ Official XML tax returns & audit reports": "✓ Viralliset XML-veroilmoitukset ja auditointiraportit",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Reaaliaikainen syke-telemetria ja SLA-vaatimustenmukaisuuden mittarit",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Kuittitulostimen ja optisen viivakoodilukijan integrointi"
   }
 }

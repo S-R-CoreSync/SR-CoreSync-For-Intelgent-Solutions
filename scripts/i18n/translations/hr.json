@@ -1,6 +1,6 @@
 {
   "language": "hr",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (bez traga CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fakturiranje BTW 9 % / 21 % i HACCP označavanje alergena",
     "✓ Cashflow runway forecasting engine": "✓ Motor za predviđanje novčanog toka",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Klijentsko AES-256 šifriranje s nultim znanjem",
-    "✓ Cloud Transformation Playbook": "✓ Playbook cloud transformacije"
+    "✓ Cloud Transformation Playbook": "✓ Playbook cloud transformacije",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Namjenski suvereni model na korporativnim podacima",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitalne članske kartice s trenutnom QR provjerom",
+    "✓ Direct Executive Advisory": "✓ Izravno savjetovanje uprave",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Izravni šifrirani tunel do klastera Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Šifrirano cloud slanje upravnom odboru",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Potpuna usklađenost s europskim standardom e-fakturiranja EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Usmjeravanje Google Maps i digitalna potvrda dostave",
+    "✓ Instant Sandbox Access": "✓ Trenutačni pristup sandboxu",
+    "✓ Instant optical recognition & table parsing": "✓ Trenutačno optičko prepoznavanje i raščlamba tablica",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Trenutačna izvješća o usklađenju blagajne pri zatvaranju smjene",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Pravni AI asistent (RAG) i siguran trezor dokumenata",
+    "✓ Local AES-256 encrypted database": "✓ Lokalna AES-256 šifrirana baza podataka",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Lokalna AES-256 šifrirana baza podataka (nula ovisnosti o cloudu)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA autentifikacija, revizijski zapisi i GDPR alati za privatnost",
+    "✓ Medication reminders & drug interaction checker": "✓ Podsjetnici na lijekove i provjera interakcija lijekova",
+    "✓ Microsecond execution speed with complete test suites": "✓ Brzina izvršavanja u mikrosekundama s potpunim testnim paketima",
+    "✓ Official XML tax returns & audit reports": "✓ Službene XML porezne prijave i revizijska izvješća",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrija otkucaja u stvarnom vremenu i metrike usklađenosti sa SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integracija pisača računa i optičkog čitača crtičnih kodova"
   }
 }

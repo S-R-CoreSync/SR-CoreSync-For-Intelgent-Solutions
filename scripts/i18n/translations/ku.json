@@ -1,6 +1,6 @@
 {
   "language": "ku",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fatûreya BTW 9% / 21% û nîşankirina alerjenê HACCP",
     "✓ Cashflow runway forecasting engine": "✓ Motora pêşbîniya herikîna drav",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Şîfrekirina AES-256 ya zero-knowledge a aliyê xerîdar",
-    "✓ Cloud Transformation Playbook": "✓ Playbooka Veguheztina Cloud"
+    "✓ Cloud Transformation Playbook": "✓ Playbooka Veguheztina Cloud",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Modela serwer a taybet li ser daneyên pargîdaniyê",
+    "✓ Digital membership cards with instant QR verification": "✓ Qertên endamtiyê yên dîjîtal bi verastkirina QR ya tavilê",
+    "✓ Direct Executive Advisory": "✓ Şêwirmendiya Rêveber a Rasterast",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Tunela şîfrekirî ya rasterast bo koma Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Şandina hêwrî ya şîfrekirî bo desteya rêveberiyê",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Pêbendbûna tevahî bi standarda e-fatûreya Ewropî EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Rêveçûna Google Maps û belgeya radestkirinê ya dîjîtal",
+    "✓ Instant Sandbox Access": "✓ Gihîştina Sandboxê ya Tavilê",
+    "✓ Instant optical recognition & table parsing": "✓ Naskirina optîk a tavilê û analîza tabloyan",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Raporên lihevanîna kasa ya tavilê li dawiya dorê",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Alîkarê AI yê hiqûqî (RAG) û qutiya belgeyên ewle",
+    "✓ Local AES-256 encrypted database": "✓ Danegeha şîfrekirî ya AES-256 ya herêmî",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Danegeha şîfrekirî ya AES-256 ya herêmî (sifir girêdana bi hêwrê)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ Nasnameya MFA, tomargehên kontrolê û amûrên nepenîtiyê yên GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ Bîranînên dermanan û kontrolkera hevkarîya dermanan",
+    "✓ Microsecond execution speed with complete test suites": "✓ Leza cîbicîkirina mîkrosaniyeyê bi komeleyên testê yên temam",
+    "✓ Official XML tax returns & audit reports": "✓ Danezaniyên bacê yên fermî yên XML û raporên kontrolê",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrîya dilpêlê ya dem-rast û pîvanên lihevhatina SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Entegrasyona çapera wergirtinê û skanera barkodê ya optîk"
   }
 }

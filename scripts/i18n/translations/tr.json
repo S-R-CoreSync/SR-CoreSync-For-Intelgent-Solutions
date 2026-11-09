@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW %9 / %21 faturalandırma ve HACCP alerjen etiketleme",
     "✓ Cashflow runway forecasting engine": "✓ Nakit akışı öngörü motoru",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ İstemci taraflı sıfır bilgi AES-256 şifreleme",
-    "✓ Cloud Transformation Playbook": "✓ Bulut Dönüşüm Playbook'u"
+    "✓ Cloud Transformation Playbook": "✓ Bulut Dönüşüm Playbook'u",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Kurumsal veriler üzerinde özel egemen model",
+    "✓ Digital membership cards with instant QR verification": "✓ Anında QR doğrulamalı dijital üyelik kartları",
+    "✓ Direct Executive Advisory": "✓ Doğrudan Yönetici Danışmanlığı",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Amsterdam AMS-01 kümesine doğrudan şifreli tünel",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Yönetim kuruluna şifreli bulut gönderimi",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Avrupa EN 16931 e-fatura standardına tam uyum",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps yönlendirme ve dijital teslimat kanıtı",
+    "✓ Instant Sandbox Access": "✓ Anında Sandbox Erişimi",
+    "✓ Instant optical recognition & table parsing": "✓ Anında optik tanıma ve tablo ayrıştırma",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Vardiya kapanışında anında kasa mutabakat raporları",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Hukuki AI asistanı (RAG) ve güvenli belge kasası",
+    "✓ Local AES-256 encrypted database": "✓ Yerel AES-256 şifreli veritabanı",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Yerel AES-256 şifreli veritabanı (sıfır bulut bağımlılığı)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA kimlik doğrulama, denetim günlükleri ve GDPR gizlilik araçları",
+    "✓ Medication reminders & drug interaction checker": "✓ İlaç hatırlatıcıları ve ilaç etkileşim denetleyicisi",
+    "✓ Microsecond execution speed with complete test suites": "✓ Eksiksiz test paketleriyle mikrosaniye yürütme hızı",
+    "✓ Official XML tax returns & audit reports": "✓ Resmî XML vergi beyannameleri ve denetim raporları",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Gerçek zamanlı heartbeat telemetrisi ve SLA uyum metrikleri",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Fiş yazıcısı ve optik barkod okuyucu entegrasyonu"
   }
 }

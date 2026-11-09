@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fatturar BTW 9% / 21% u tikkettar tal-allerġeni HACCP",
     "✓ Cashflow runway forecasting engine": "✓ Magna tal-previżjoni tal-fluss tal-flus",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Encryption AES-256 ta' konoxxenza żero fuq in-naħa tal-klijent",
-    "✓ Cloud Transformation Playbook": "✓ Playbook tat-Trasformazzjoni tal-Cloud"
+    "✓ Cloud Transformation Playbook": "✓ Playbook tat-Trasformazzjoni tal-Cloud",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Mudell Sovran Dedikat fuq Data tal-Intrapriża",
+    "✓ Digital membership cards with instant QR verification": "✓ Kards tal-membrija diġitali b'verifika QR instantanja",
+    "✓ Direct Executive Advisory": "✓ Konsulenza Eżekuttiva Diretta",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Tunnel encrypted dirett lejn il-cluster Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Tbagħit cloud encrypted lill-bord maniġerjali",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Konformità sħiħa mal-istandard Ewropew tal-fatturar elettroniku EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Rotot Google Maps u prova tal-kunsinna diġitali",
+    "✓ Instant Sandbox Access": "✓ Aċċess Instantanju għas-Sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ Rikonoxximent ottiku u parsing tat-tabelli instantanji",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Rapporti instantanji tar-rikonċiljazzjoni tal-flus fil-għeluq tax-xift",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Assistent legali AI (RAG) u kaxxafort tad-dokumenti sikur",
+    "✓ Local AES-256 encrypted database": "✓ Database lokali encrypted AES-256",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Database lokali encrypted AES-256 (żero dipendenza mill-cloud)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ Awtentikazzjoni MFA, logs tal-awditjar u għodod tal-privatezza GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ Tifkiriet tal-mediċini u verifikatur tal-interazzjonijiet tal-mediċini",
+    "✓ Microsecond execution speed with complete test suites": "✓ Veloċità tal-eżekuzzjoni f'mikrosekondi b'suites tat-test kompluti",
+    "✓ Official XML tax returns & audit reports": "✓ Dikjarazzjonijiet tat-taxxa XML uffiċjali u rapporti tal-awditjar",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Telemetrija tal-polz f'ħin reali u metriċi tal-konformità SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrazzjoni tal-printer tar-riċevuti u scanner ottiku tal-barcode"
   }
 }

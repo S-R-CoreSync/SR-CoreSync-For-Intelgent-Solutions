@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9% / 21% számlázás és HACCP allergénjelölés",
     "✓ Cashflow runway forecasting engine": "✓ Pénzforgalmi előrejelző motor",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Kliensoldali nulla tudású AES-256 titkosítás",
-    "✓ Cloud Transformation Playbook": "✓ Felhőtranszformációs playbook"
+    "✓ Cloud Transformation Playbook": "✓ Felhőtranszformációs playbook",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Dedikált szuverén modell vállalati adatokon",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitális tagsági kártyák azonnali QR-ellenőrzéssel",
+    "✓ Direct Executive Advisory": "✓ Közvetlen vezetői tanácsadás",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Közvetlen titkosított alagút az Amsterdam AMS-01 klaszterhez",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Titkosított felhőtovábbítás az igazgatóságnak",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Teljes megfelelés az európai EN 16931 e-számlázási szabványnak",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps útvonaltervezés és digitális szállítási igazolás",
+    "✓ Instant Sandbox Access": "✓ Azonnali sandbox-hozzáférés",
+    "✓ Instant optical recognition & table parsing": "✓ Azonnali optikai felismerés és táblázatelemzés",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Azonnali kasszaegyeztetési jelentések műszakzáráskor",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Jogi AI-asszisztens (RAG) és biztonságos dokumentumszéf",
+    "✓ Local AES-256 encrypted database": "✓ Helyi AES-256 titkosított adatbázis",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Helyi AES-256 titkosított adatbázis (nulla felhőfüggőség)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA-hitelesítés, auditnaplók és GDPR adatvédelmi eszközök",
+    "✓ Medication reminders & drug interaction checker": "✓ Gyógyszer-emlékeztetők és gyógyszer-interakció ellenőrző",
+    "✓ Microsecond execution speed with complete test suites": "✓ Mikroszekundumos végrehajtási sebesség teljes tesztcsomagokkal",
+    "✓ Official XML tax returns & audit reports": "✓ Hivatalos XML adóbevallások és auditjelentések",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Valós idejű heartbeat telemetria és SLA-megfelelési mutatók",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Nyugtanyomtató és optikai vonalkódolvasó integráció"
   }
 }

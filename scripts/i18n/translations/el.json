@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Τιμολόγηση BTW 9% / 21% και επισήμανση αλλεργιογόνων HACCP",
     "✓ Cashflow runway forecasting engine": "✓ Μηχανή πρόβλεψης ταμειακών ροών",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Κρυπτογράφηση AES-256 μηδενικής γνώσης στην πλευρά του πελάτη",
-    "✓ Cloud Transformation Playbook": "✓ Playbook μετασχηματισμού cloud"
+    "✓ Cloud Transformation Playbook": "✓ Playbook μετασχηματισμού cloud",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Αποκλειστικό κυρίαρχο μοντέλο σε εταιρικά δεδομένα",
+    "✓ Digital membership cards with instant QR verification": "✓ Ψηφιακές κάρτες μέλους με άμεση επαλήθευση QR",
+    "✓ Direct Executive Advisory": "✓ Άμεση συμβουλευτική διοίκησης",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Άμεση κρυπτογραφημένη σήραγγα προς το σύμπλεγμα Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Κρυπτογραφημένη αποστολή cloud στο διοικητικό συμβούλιο",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Πλήρης συμμόρφωση με το ευρωπαϊκό πρότυπο ηλεκτρονικής τιμολόγησης EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Δρομολόγηση Google Maps και ψηφιακή απόδειξη παράδοσης",
+    "✓ Instant Sandbox Access": "✓ Άμεση πρόσβαση στο sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ Άμεση οπτική αναγνώριση και ανάλυση πινάκων",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Άμεσες αναφορές ταμειακής συμφωνίας στο κλείσιμο βάρδιας",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Νομικός βοηθός AI (RAG) και ασφαλές θησαυροφυλάκιο εγγράφων",
+    "✓ Local AES-256 encrypted database": "✓ Τοπική βάση δεδομένων κρυπτογραφημένη με AES-256",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Τοπική βάση δεδομένων κρυπτογραφημένη με AES-256 (μηδενική εξάρτηση από cloud)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ Έλεγχος ταυτότητας MFA, αρχεία ελέγχου και εργαλεία απορρήτου GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ Υπενθυμίσεις φαρμάκων και έλεγχος αλληλεπιδράσεων φαρμάκων",
+    "✓ Microsecond execution speed with complete test suites": "✓ Ταχύτητα εκτέλεσης σε μικροδευτερόλεπτα με πλήρεις σουίτες δοκιμών",
+    "✓ Official XML tax returns & audit reports": "✓ Επίσημες φορολογικές δηλώσεις XML και αναφορές ελέγχου",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Τηλεμετρία παλμού σε πραγματικό χρόνο και μετρήσεις συμμόρφωσης SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Ενσωμάτωση εκτυπωτή αποδείξεων και οπτικού σαρωτή barcode"
   }
 }

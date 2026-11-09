@@ -1,6 +1,6 @@
 {
   "language": "no",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkjente operasjonelle grunnparametere",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ingen CoreSync-fotavtrykk)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % fakturering og HACCP-allergenmerking",
     "✓ Cashflow runway forecasting engine": "✓ Kontantstrømprognosemotor",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Klientside zero-knowledge AES-256-kryptering",
-    "✓ Cloud Transformation Playbook": "✓ Playbook for skytransformasjon"
+    "✓ Cloud Transformation Playbook": "✓ Playbook for skytransformasjon",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Dedikert suveren modell på virksomhetsdata",
+    "✓ Digital membership cards with instant QR verification": "✓ Digitale medlemskort med umiddelbar QR-verifisering",
+    "✓ Direct Executive Advisory": "✓ Direkte ledelsesrådgivning",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Direkte kryptert tunnel til Amsterdam AMS-01-klyngen",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Kryptert skysending til konsernledelsen",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Full samsvar med den europeiske e-faktureringsstandarden EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Google Maps-ruting og digital leveringsbekreftelse",
+    "✓ Instant Sandbox Access": "✓ Umiddelbar sandbox-tilgang",
+    "✓ Instant optical recognition & table parsing": "✓ Umiddelbar optisk gjenkjenning og tabellparsing",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Umiddelbare kasseavstemmingsrapporter ved vaktslutt",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Juridisk AI-assistent (RAG) og sikker dokumentboks",
+    "✓ Local AES-256 encrypted database": "✓ Lokal AES-256-kryptert database",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Lokal AES-256-kryptert database (null skyavhengighet)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ MFA-autentisering, revisjonslogger og GDPR-personverntiltak",
+    "✓ Medication reminders & drug interaction checker": "✓ Medisinpåminnelser og sjekk av legemiddelinteraksjoner",
+    "✓ Microsecond execution speed with complete test suites": "✓ Utførelseshastighet i mikrosekunder med komplette testpakker",
+    "✓ Official XML tax returns & audit reports": "✓ Offisielle XML-selvangivelser og revisjonsrapporter",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Sanntids hjertepuls-telemetri og SLA-samsvarsmålinger",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Integrasjon av kvitteringsprinter og optisk strekkodeleser"
   }
 }

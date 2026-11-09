@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 364,
+  "count": 383,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -365,6 +365,25 @@
     "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Sonrascú BTW 9% / 21% agus lipéadú ailléirginí HACCP",
     "✓ Cashflow runway forecasting engine": "✓ Inneall réamhaisnéise sreafa airgid",
     "✓ Client-side zero-knowledge AES-256 encryption": "✓ Criptiú AES-256 náid-eolais ar thaobh an chliaint",
-    "✓ Cloud Transformation Playbook": "✓ Leabhar Imeartha um Chlaochlú Néal"
+    "✓ Cloud Transformation Playbook": "✓ Leabhar Imeartha um Chlaochlú Néal",
+    "✓ Dedicated Sovereign Model on Enterprise Data": "✓ Múnla ceannasach tiomnaithe ar shonraí fiontair",
+    "✓ Digital membership cards with instant QR verification": "✓ Cártaí ballraíochta digiteacha le fíorú QR láithreach",
+    "✓ Direct Executive Advisory": "✓ Comhairleoireacht Feidhmiúcháin Dhíreach",
+    "✓ Direct encrypted tunnel to Amsterdam AMS-01 cluster": "✓ Tollán criptithe díreach chuig braisle Amsterdam AMS-01",
+    "✓ Encrypted cloud dispatch to executive management board": "✓ Seoladh néal criptithe chuig an mbord bainistíochta",
+    "✓ Full compliance with European EN 16931 e-invoicing standard": "✓ Comhlíonadh iomlán le caighdeán Eorpach ríomhshonrascaithe EN 16931",
+    "✓ Google Maps routing & digital proof of delivery": "✓ Ródú Google Maps agus cruthúnas seachadta digiteach",
+    "✓ Instant Sandbox Access": "✓ Rochtain Láithreach ar Sandbox",
+    "✓ Instant optical recognition & table parsing": "✓ Aithint optúil agus parsáil táblaí láithreach",
+    "✓ Instant shift-close cash reconciliation reports": "✓ Tuarascálacha réitithe airgid láithreach ag deireadh sealad",
+    "✓ Legal AI assistant (RAG) & secure document vault": "✓ Cúntóir dlíthiúil AI (RAG) agus cruinneog doiciméad slán",
+    "✓ Local AES-256 encrypted database": "✓ Bunachar sonraí áitiúil criptithe AES-256",
+    "✓ Local AES-256 encrypted database (zero cloud dependency)": "✓ Bunachar sonraí áitiúil criptithe AES-256 (gan spleáchas néil)",
+    "✓ MFA authentication, audit logs & GDPR privacy tools": "✓ Fíordheimhniú MFA, logaí iniúchta agus uirlisí príobháideachais GDPR",
+    "✓ Medication reminders & drug interaction checker": "✓ Meabhrúcháin cógais agus seiceálaí idirghníomhaíochtaí drugaí",
+    "✓ Microsecond execution speed with complete test suites": "✓ Luas forghníomhaithe micriseacainne le hiomlán tacair tástála",
+    "✓ Official XML tax returns & audit reports": "✓ Tuairisceáin chánach XML oifigiúla agus tuarascálacha iniúchta",
+    "✓ Real-time heartbeat telemetry and SLA compliance metrics": "✓ Teiliméadracht bhuille croí fíor-ama agus méadraí comhlíonta SLA",
+    "✓ Receipt printer & optical barcode scanner integration": "✓ Comhtháthú printéir admhála agus scanóra optúil barrachóid"
   }
 }
