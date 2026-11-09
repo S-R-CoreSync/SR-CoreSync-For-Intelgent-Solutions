@@ -1,6 +1,6 @@
 {
   "language": "sv",
-  "count": 443,
+  "count": 446,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Märke \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Godkända operativa basparametrar",
@@ -354,6 +354,9 @@
     "Your Genuine Digital License Key:": "Din äkta digitala licensnyckel:",
     "إغلاق / Close": "Stäng",
     "إغلاق / Stäng": "Stäng",
+    "المختبر والشراكات": "Laboratorium & partnerskap",
+    "ترخيص White-Label": "White-label-licensiering",
+    "سوق البرمجيات": "Programvarubutik",
     "↺ Reset & Clear": "↺ Återställ och rensa",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % minskning av manuella bearbetningstimmar",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise-AI och integrationer",

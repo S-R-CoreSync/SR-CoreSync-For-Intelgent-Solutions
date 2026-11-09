@@ -1,6 +1,6 @@
 {
   "language": "hr",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Značka „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "Unutar 4 sata (e-pošta + WhatsApp)",
     "Your Genuine Digital License Key:": "Vaš autentični digitalni licencni ključ:",
     "إغلاق / Close": "Zatvori",
+    "المختبر والشراكات": "Laboratorij i partnerstva",
+    "ترخيص White-Label": "White-Label licenciranje",
+    "سوق البرمجيات": "Trgovina softverom",
     "↺ Reset & Clear": "↺ Poništi i očisti",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % manje sati ručne obrade",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise AI i integracije",

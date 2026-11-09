@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "„Powered by CoreSync” jelvény",
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "4 órán belül (e-mail + WhatsApp)",
     "Your Genuine Digital License Key:": "Az Ön hiteles digitális licenckulcsa:",
     "إغلاق / Close": "Bezárás",
+    "المختبر والشراكات": "Labor és partnerségek",
+    "ترخيص White-Label": "White-label licencelés",
+    "سوق البرمجيات": "Szoftverbolt",
     "↺ Reset & Clear": "↺ Visszaállítás és törlés",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65%-kal kevesebb manuális feldolgozási óra",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Vállalati AI és integrációk",

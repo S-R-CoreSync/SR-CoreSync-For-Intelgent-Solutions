@@ -1,6 +1,6 @@
 {
   "language": "fi",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Merkki \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "4 tunnissa (sähköposti + WhatsApp)",
     "Your Genuine Digital License Key:": "Aito digitaalinen lisenssiavain:",
     "إغلاق / Close": "Sulje",
+    "المختبر والشراكات": "Laboratorio ja kumppanuudet",
+    "ترخيص White-Label": "White-label-lisensointi",
+    "سوق البرمجيات": "Ohjelmistokauppa",
     "↺ Reset & Clear": "↺ Nollaa ja tyhjennä",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % vähemmän manuaalisia käsittelytunteja",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Yrityksen AI ja integraatiot",

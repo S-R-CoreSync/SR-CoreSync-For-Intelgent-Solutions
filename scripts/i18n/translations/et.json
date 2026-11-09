@@ -1,6 +1,6 @@
 {
   "language": "et",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Märgis „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Kinnitatud operatiivsed baasparameetrid",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "4 tunni jooksul (e-post + WhatsApp)",
     "Your Genuine Digital License Key:": "Teie ehtne digitaalne litsentsivõti:",
     "إغلاق / Close": "Sulge",
+    "المختبر والشراكات": "Laboratoorium ja partnerlussuhted",
+    "ترخيص White-Label": "White-label litsentsimine",
+    "سوق البرمجيات": "Tarkvarapood",
     "↺ Reset & Clear": "↺ Lähtesta ja tühjenda",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% vähem käsitsi töötlemise tunde",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Ettevõtte AI ja integratsioonid",

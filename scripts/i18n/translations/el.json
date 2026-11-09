@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Σήμα «Powered by CoreSync»",
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "Εντός 4 ωρών (email + WhatsApp)",
     "Your Genuine Digital License Key:": "Το γνήσιο ψηφιακό κλειδί άδειάς σας:",
     "إغلاق / Close": "Κλείσιμο",
+    "المختبر والشراكات": "Εργαστήριο και συνεργασίες",
+    "ترخيص White-Label": "Άδειες white-label",
+    "سوق البرمجيات": "Κατάστημα λογισμικού",
     "↺ Reset & Clear": "↺ Επαναφορά και εκκαθάριση",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% μείωση στις ώρες χειροκίνητης επεξεργασίας",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Εταιρικό AI και ενσωματώσεις",

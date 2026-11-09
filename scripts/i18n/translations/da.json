@@ -1,6 +1,6 @@
 {
   "language": "da",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\"-badge",
     "1. Approved Operational Baseline Parameters": "1. Godkendte operationelle basisparametre",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "Inden for 4 timer (e-mail + WhatsApp)",
     "Your Genuine Digital License Key:": "Din ægte digitale licensnøgle:",
     "إغلاق / Close": "Luk",
+    "المختبر والشراكات": "Laboratorium & partnerskaber",
+    "ترخيص White-Label": "White-label-licensering",
+    "سوق البرمجيات": "Softwarebutik",
     "↺ Reset & Clear": "↺ Nulstil og ryd",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % reduktion i manuelle behandlingstimer",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise-AI og integrationer",

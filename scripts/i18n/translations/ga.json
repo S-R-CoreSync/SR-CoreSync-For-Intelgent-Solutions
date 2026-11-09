@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Suaitheantas \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "Laistigh de 4 Uair (Ríomhphost + WhatsApp)",
     "Your Genuine Digital License Key:": "Do Eochair Cheadúnais Dhigitigh Fhíor:",
     "إغلاق / Close": "Dún",
+    "المختبر والشراكات": "Saotharlann agus Comhpháirtíochtaí",
+    "ترخيص White-Label": "Ceadúnas White-Label",
+    "سوق البرمجيات": "Siopa Bogearraí",
     "↺ Reset & Clear": "↺ Athshocraigh agus Glan",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% Laghdú ar Uaireanta Próiseála Láimhe",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. AI Fiontair agus Comhtháthuithe",

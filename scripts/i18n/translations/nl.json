@@ -1,6 +1,6 @@
 {
   "language": "nl",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\"-badge",
     "1. Approved Operational Baseline Parameters": "1. Goedgekeurde operationele basisparameters",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "Binnen 4 uur (e-mail + WhatsApp)",
     "Your Genuine Digital License Key:": "Uw authentieke digitale licentiesleutel:",
     "إغلاق / Close": "Sluiten",
+    "المختبر والشراكات": "Lab & partnerschappen",
+    "ترخيص White-Label": "White-label-licenties",
+    "سوق البرمجيات": "Softwaremarkt",
     "↺ Reset & Clear": "↺ Resetten en wissen",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% minder handmatige verwerkingsuren",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise-AI en integraties",

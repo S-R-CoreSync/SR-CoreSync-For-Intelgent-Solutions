@@ -1,6 +1,6 @@
 {
   "language": "de",
-  "count": 443,
+  "count": 446,
   "strings": {
     "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\"-Badge",
     "1. Approved Operational Baseline Parameters": "1. Genehmigte operative Basisparameter",
@@ -354,6 +354,9 @@
     "Your Genuine Digital License Key:": "Ihr echter digitaler Lizenzschlüssel:",
     "إغلاق / Close": "Schließen",
     "إغلاق / Schließen": "Schließen",
+    "المختبر والشراكات": "Labor & Partnerschaften",
+    "ترخيص White-Label": "White-Label-Lizenzierung",
+    "سوق البرمجيات": "Software-Marktplatz",
     "↺ Reset & Clear": "↺ Zurücksetzen und löschen",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % weniger manuelle Bearbeitungsstunden",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise-KI und Integrationen",

@@ -1,7 +1,10 @@
 {
   "language": "en",
-  "count": 1,
+  "count": 4,
   "strings": {
-    "إغلاق / Close": "Close"
+    "إغلاق / Close": "Close",
+    "المختبر والشراكات": "Lab & Partnerships",
+    "ترخيص White-Label": "White-Label Licensing",
+    "سوق البرمجيات": "Software Store"
   }
 }

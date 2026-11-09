@@ -1,6 +1,6 @@
 {
   "language": "cs",
-  "count": 442,
+  "count": 445,
   "strings": {
     "\"Powered by CoreSync\" Badge": "Odznak „Powered by CoreSync“",
     "1. Approved Operational Baseline Parameters": "1. Schválené provozní základní parametry",
@@ -353,6 +353,9 @@
     "Within 4 Hours (Email + WhatsApp)": "Do 4 hodin (e-mail + WhatsApp)",
     "Your Genuine Digital License Key:": "Váš autentický digitální licenční klíč:",
     "إغلاق / Close": "Zavřít",
+    "المختبر والشراكات": "Laboratoř a partnerství",
+    "ترخيص White-Label": "White-label licencování",
+    "سوق البرمجيات": "Obchod se softwarem",
     "↺ Reset & Clear": "↺ Obnovit a vymazat",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% snížení ručních hodin zpracování",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Podniková AI a integrace",

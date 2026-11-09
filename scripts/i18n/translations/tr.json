@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 443,
+  "count": 446,
   "strings": {
     "\"Powered by CoreSync\" Badge": "\"Powered by CoreSync\" rozeti",
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
@@ -354,6 +354,9 @@
     "Your Genuine Digital License Key:": "Gerçek Dijital Lisans Anahtarınız:",
     "إغلاق / Close": "Kapat",
     "إغلاق / Kapat": "Kapat",
+    "المختبر والشراكات": "Laboratuvar ve Ortaklıklar",
+    "ترخيص White-Label": "White-Label Lisanslama",
+    "سوق البرمجيات": "Yazılım Mağazası",
     "↺ Reset & Clear": "↺ Sıfırla ve temizle",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ Manuel işlem saatlerinde %65 azalma",
     "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Kurumsal AI ve Entegrasyonlar",
