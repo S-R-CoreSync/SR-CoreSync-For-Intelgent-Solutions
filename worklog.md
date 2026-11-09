@@ -16,6 +16,7 @@
 - **إضافة SEO:** إدراج `3d-product-configurator.html` في `sitemap.xml` (lastmod 2026-11-07، priority 0.75) — كانت مربوطة من الصفحة الرئيسية و`dynamic-qr-studio.html` لكنها غائبة عن الخريطة. الخريطة 87 → 88 رابطًا، وإعادة بناء `_site` + `validate_publish_set.py` + `check_site_links.py` ناجحة (0 مراجع مكسورة).
 - **تحسين SEO:** إضافة canonical + robots + Open Graph + Twitter Card إلى `3d-product-configurator.html` (صورة `og-preview-3d-mockup.jpg`). بوابات `validate_publish_set.py` و`check_site_links.py` و`build_csp.py --check` ناجحة (192 hash).
 - **توحيد SEO:** تطبيق canonical + robots + OG + Twitter Card على 8 صفحات منتج/استوديو كانت تفتقرها (`3d-mockup`، `ai-concierge-simulator`، `logo-studio`، `multi-cbdc-bridge`، `social-8k-studio`، `social-campaign-hub`، `whitelabel-calculator`، `zkp-confidential-enclave`). صور OG مطابقة أو fallback `og-software.jpg`. جميع البوابات ناجحة.
+- **توحيد SEO (38 صفحة):** تطبيق canonical + robots + OG + Twitter Card على 38 صفحة منتج/استوديو/بوابة legitimate (غير مدرجة في sitemap) كانت تفتقرها. اختيار صور OG بتطابق tokens. إصلاح stray `>>`. جميع البوابات ناجحة.
 - **إصلاح:** إغلاق وسم `description` meta (كان `>>` زائدًا) في 8 صفحات + `3d-product-configurator`؛ إعادة التحقق (publish_set, site_links, csp --check) ناجح.
 
 ---
