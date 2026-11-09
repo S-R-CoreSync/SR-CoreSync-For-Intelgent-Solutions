@@ -9,6 +9,7 @@
 - [x] **إغلاق ملف الإزالة:** نُفِّذ طلب الإزالة المؤقتة في Google Search Console للبادئة `https://sr-coresync.com/_trash_160/` (09 نوفمبر 2026)، وأُعيد التحقق الحيّ: الرابطان → **404**. الملف مغلق نهائيًا.
 - [x] **إصلاح SEO:** إضافة `3d-product-configurator.html` إلى `sitemap.xml` (lastmod 2026-11-07، priority 0.75) بعد أن كانت صفحة منتج حقيقية ومربوطة لكنها غير مُدرجة. عدد روابط الخريطة: 87 → 88، وإعادة بناء `_site` والتحقق: 0 مراجع مكسورة.
 - [x] **تحسين SEO للصفحة:** إضافة `<link rel="canonical">` و`robots` ووسوم Open Graph + Twitter Card إلى `3d-product-configurator.html` (صورة `og-preview-3d-mockup.jpg`)؛ `check_site_links.py` و`build_csp.py --check` ناجحان.
+- [x] **توحيد SEO (8 صفحات):** إضافة canonical + robots + OG + Twitter Card إلى صفحات منتج/استوديو في sitemap كانت تفتقرها: `3d-mockup`، `ai-concierge-simulator`، `logo-studio`، `multi-cbdc-bridge`، `social-8k-studio`، `social-campaign-hub`، `whitelabel-calculator`، `zkp-confidential-enclave`. صور OG: مطابقة (preview-3d-mockup, ai-concierge-rag, preview-whitelabel-calculator) أو fallback `og-software.jpg`. جميع البوابات ناجحة.
 
 ---
 
