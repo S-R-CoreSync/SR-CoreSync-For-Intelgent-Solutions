@@ -1,0 +1,195 @@
+{
+  "languages": 27,
+  "unique_untranslated_strings": 475,
+  "per_language": {
+    "bg": 473,
+    "hr": 473,
+    "hu": 473,
+    "lt": 473,
+    "ro": 473,
+    "sk": 473,
+    "sl": 473,
+    "nl": 472,
+    "ku": 472,
+    "cs": 472,
+    "da": 472,
+    "el": 472,
+    "et": 472,
+    "fi": 472,
+    "ga": 472,
+    "lv": 472,
+    "mt": 472,
+    "no": 472,
+    "pl": 472,
+    "pt": 472,
+    "sv": 472,
+    "de": 470,
+    "tr": 470,
+    "es": 470,
+    "fr": 470,
+    "it": 470,
+    "ckb": 26
+  },
+  "most_widespread": [
+    {
+      "string": "Amsterdam HQ, The Netherlands | European Union & Global Delivery",
+      "languages": 27
+    },
+    {
+      "string": "Aurelia Luxury Atelier — Den Haag",
+      "languages": 27
+    },
+    {
+      "string": "Bakery ERP • Fleet",
+      "languages": 27
+    },
+    {
+      "string": "Boutique Aurum — Rotterdam",
+      "languages": 27
+    },
+    {
+      "string": "Civic Tech • White-Label",
+      "languages": 27
+    },
+    {
+      "string": "Cloud POS • Driver Web App • HACCP • BTW 9% / 21%",
+      "languages": 27
+    },
+    {
+      "string": "Co-Founder & CFO // Financial ERP Architect",
+      "languages": 27
+    },
+    {
+      "string": "Co-Founder & CTO // Lead Cloud Systems Architect",
+      "languages": 27
+    },
+    {
+      "string": "Enterprise Cloud Architecture, ERP & Financial Intelligence Systems",
+      "languages": 27
+    },
+    {
+      "string": "LogiTrans B.V. — Amsterdam",
+      "languages": 27
+    },
+    {
+      "string": "OmniVenture GmbH — Frankfurt",
+      "languages": 27
+    },
+    {
+      "string": "S&R CORESYNC FOR INTELLIGENT SOLUTIONS",
+      "languages": 27
+    },
+    {
+      "string": "S&R Cloud Terminal Agent",
+      "languages": 27
+    },
+    {
+      "string": "S&R Cloud Terminal Agent v1.0",
+      "languages": 27
+    },
+    {
+      "string": "S&R CloudPOS Connector v3.1",
+      "languages": 27
+    },
+    {
+      "string": "S&R FlowScan AI Mobile",
+      "languages": 27
+    },
+    {
+      "string": "S&R FlowScan AI Mobile v1.8",
+      "languages": 27
+    },
+    {
+      "string": "S&R SecureVault B2B v2.0",
+      "languages": 27
+    },
+    {
+      "string": "S&R TaxSync Desktop v2.4 Pro",
+      "languages": 27
+    },
+    {
+      "string": "S&R UNIVERSAL PLATFORMS • WHITE-LABEL",
+      "languages": 27
+    },
+    {
+      "string": "SVG • PNG 4K • EPS • PDF",
+      "languages": 27
+    },
+    {
+      "string": "Ultra-HD 4K & Sovereign Precision",
+      "languages": 27
+    },
+    {
+      "string": "Web (Next.js) • iOS & Android (Expo) • AR / NL / EN",
+      "languages": 27
+    },
+    {
+      "string": "Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN",
+      "languages": 27
+    },
+    {
+      "string": "v2.4 Pro • Windows 11/10 (64-bit) & macOS",
+      "languages": 27
+    },
+    {
+      "string": "🌐 Sovereign Global Languages (29 Supported Languages & VAT Regimes)",
+      "languages": 27
+    },
+    {
+      "string": "\"Powered by CoreSync\" Badge",
+      "languages": 26
+    },
+    {
+      "string": "1. Approved Operational Baseline Parameters",
+      "languages": 26
+    },
+    {
+      "string": "100% White-Label (Zero CoreSync Footprint)",
+      "languages": 26
+    },
+    {
+      "string": "100% responsive, high-end bespoke UI/UX",
+      "languages": 26
+    },
+    {
+      "string": "100,000 visits / month",
+      "languages": 26
+    },
+    {
+      "string": "100/100 Core Web Vitals speed optimization",
+      "languages": 26
+    },
+    {
+      "string": "12+ Years Software Systems Engineering",
+      "languages": 26
+    },
+    {
+      "string": "14-Day Money-Back Satisfaction Guarantee",
+      "languages": 26
+    },
+    {
+      "string": "180 days 24/7 priority SLA support",
+      "languages": 26
+    },
+    {
+      "string": "2 Live Interactive Zoom Sessions",
+      "languages": 26
+    },
+    {
+      "string": "2. Financial Return & Cost-Efficiency Simulation",
+      "languages": 26
+    },
+    {
+      "string": "24/7 Critical System & Server Hotline",
+      "languages": 26
+    },
+    {
+      "string": "250 GB Ultra-Fast NVMe",
+      "languages": 26
+    },
+    {
+      "string": "3 unique creative logo concepts",
+      "languages": 26
+    }
+  ]
+}

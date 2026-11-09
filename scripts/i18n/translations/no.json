@@ -1,0 +1,13 @@
+{
+  "_note": "Proof-of-pipeline sample. Keys are the exact English strings listed in i18n/gaps/no.json. Fill from there language by language; scripts/apply_translations.py rewrites only text nodes.",
+  "strings": {
+    "Skip to main content": "Hopp til hovedinnhold",
+    "Digital Transformation & ERP": "Digital transformasjon og ERP",
+    "Certified Principal Cloud Architect": "Sertifisert ledende skyarkitekt",
+    "Enterprise AI & LLM Automation": "Bedrifts-AI og LLM-automatisering",
+    "12+ Years Software Systems Engineering": "12+ års erfaring med programvaresystemer",
+    "Senior Financial & ERP Consultant": "Senior rådgiver innen finans og ERP",
+    "Odoo & Enterprise ERP Systems Architect": "Systemarkitekt for Odoo og bedrifts-ERP",
+    "IFRS & European Corporate Tax Compliance": "IFRS og europeisk selskapsbeskatning"
+  }
+}
