@@ -8,6 +8,28 @@ on:
   workflow_dispatch:
 
 jobs:
+  # ---------------------------------------------------------------------------
+  # The main-branch ruleset requires a status check with this exact name, but no
+  # job emitted it - so every pull request sat on "Expected / Required" forever
+  # and could never merge. This job *is* that check: it runs the repository
+  # scanner rather than deleting the rule, which is the stronger fix.
+  # ---------------------------------------------------------------------------
+  credentials-audit:
+    name: Audit Repository Credentials & Private Keys
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Scan tracked files for credentials, private keys and API tokens
+        run: python scripts/audit_secrets.py
+
   validate:
     runs-on: ubuntu-latest
 
