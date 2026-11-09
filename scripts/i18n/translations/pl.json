@@ -1,6 +1,6 @@
 {
   "language": "pl",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Zatwierdzone bazowe parametry operacyjne",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (zero śladu CoreSync)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "W ciągu 15 minut (bezpośrednia linia 24/7/365)",
     "Within 24 Hours (Support Tickets)": "W ciągu 24 godzin (zgłoszenia wsparcia)",
     "Within 4 Hours (Email + WhatsApp)": "W ciągu 4 godzin (e-mail + WhatsApp)",
-    "Your Genuine Digital License Key:": "Twój autentyczny cyfrowy klucz licencyjny:"
+    "Your Genuine Digital License Key:": "Twój autentyczny cyfrowy klucz licencyjny:",
+    "↺ Reset & Clear": "↺ Resetuj i wyczyść",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% mniej godzin ręcznej obróbki",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. AI korporacyjne i integracje",
+    "⚡ Generate New Cryptographic License Key": "⚡ Wygeneruj nowy kryptograficzny klucz licencyjny",
+    "⚡ Instant Automated Key Delivery": "⚡ Natychmiastowa automatyczna dostawa klucza",
+    "⚡ Launch Interactive Simulator": "⚡ Uruchom interaktywny symulator",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Odpowiedź poniżej sekundy i gotowość PWA offline",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 oddziałów medycznych i asystent zdrowia AI",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 profile operacyjne: Orientalny • Turecki • Europejskie rzemiosło",
+    "✓ AI & Process Automation": "✓ AI i automatyzacja procesów",
+    "✓ Advanced + Custom DPA Agreement": "✓ Zaawansowana + dostosowana umowa DPA",
+    "✓ Advanced Cloud Architecture": "✓ Zaawansowana architektura chmurowa",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automatyczne generowanie europejskich faktur UBL i PEPPOL",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automatyczna kategoryzacja dla operacji i paliwa flotowego",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automatyczne zaplanowane rotacje kopii zapasowych i hashowanie",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fakturowanie BTW 9% / 21% i oznaczanie alergenów HACCP",
+    "✓ Cashflow runway forecasting engine": "✓ Silnik prognozowania przepływów pieniężnych",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Szyfrowanie AES-256 typu zero-knowledge po stronie klienta",
+    "✓ Cloud Transformation Playbook": "✓ Playbook transformacji chmurowej"
   }
 }

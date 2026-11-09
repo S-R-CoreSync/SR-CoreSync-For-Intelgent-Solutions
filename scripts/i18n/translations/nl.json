@@ -1,6 +1,6 @@
 {
   "language": "nl",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Goedgekeurde operationele basisparameters",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (geen CoreSync-voetafdruk)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Binnen 15 minuten (24/7/365 directe hotline)",
     "Within 24 Hours (Support Tickets)": "Binnen 24 uur (supporttickets)",
     "Within 4 Hours (Email + WhatsApp)": "Binnen 4 uur (e-mail + WhatsApp)",
-    "Your Genuine Digital License Key:": "Uw authentieke digitale licentiesleutel:"
+    "Your Genuine Digital License Key:": "Uw authentieke digitale licentiesleutel:",
+    "↺ Reset & Clear": "↺ Resetten en wissen",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% minder handmatige verwerkingsuren",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise-AI en integraties",
+    "⚡ Generate New Cryptographic License Key": "⚡ Nieuwe cryptografische licentiesleutel genereren",
+    "⚡ Instant Automated Key Delivery": "⚡ Directe geautomatiseerde sleutellevering",
+    "⚡ Launch Interactive Simulator": "⚡ Interactieve simulator starten",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Sub-seconde respons en offline PWA-gereedheid",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 medische afdelingen en AI-gezondheidsassistent",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 bedrijfsprofielen: Orientaals • Turks • Europees ambachtelijk",
+    "✓ AI & Process Automation": "✓ AI en procesautomatisering",
+    "✓ Advanced + Custom DPA Agreement": "✓ Geavanceerde + aangepaste DPA-overeenkomst",
+    "✓ Advanced Cloud Architecture": "✓ Geavanceerde cloudarchitectuur",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Geautomatiseerde Europese UBL- en PEPPOL-factuurgeneratie",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Geautomatiseerde categorisatie voor operations en wagenparkbrandstof",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automatische geplande back-uprotaties en hashing",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Btw 9% / 21% facturatie en HACCP-allergeenlabeling",
+    "✓ Cashflow runway forecasting engine": "✓ Cashflow-prognose-engine",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Client-side zero-knowledge AES-256-versleuteling",
+    "✓ Cloud Transformation Playbook": "✓ Cloud Transformation Playbook"
   }
 }

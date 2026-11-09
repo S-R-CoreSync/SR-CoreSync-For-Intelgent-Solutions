@@ -1,6 +1,6 @@
 {
   "language": "fi",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ei CoreSync-jälkeä)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 minuutissa (24/7/365 suora linja)",
     "Within 24 Hours (Support Tickets)": "24 tunnissa (tukipyynnöt)",
     "Within 4 Hours (Email + WhatsApp)": "4 tunnissa (sähköposti + WhatsApp)",
-    "Your Genuine Digital License Key:": "Aito digitaalinen lisenssiavain:"
+    "Your Genuine Digital License Key:": "Aito digitaalinen lisenssiavain:",
+    "↺ Reset & Clear": "↺ Nollaa ja tyhjennä",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % vähemmän manuaalisia käsittelytunteja",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Yrityksen AI ja integraatiot",
+    "⚡ Generate New Cryptographic License Key": "⚡ Luo uusi kryptografinen lisenssiavain",
+    "⚡ Instant Automated Key Delivery": "⚡ Välitön automaattinen avaimen toimitus",
+    "⚡ Launch Interactive Simulator": "⚡ Käynnistä interaktiivinen simulaattori",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Alle sekunnin vaste ja offline-PWA-valmius",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 lääketieteen osastoa ja AI-terveysavustaja",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 toimintaprofiilia: itämäinen • turkkilainen • eurooppalainen käsityö",
+    "✓ AI & Process Automation": "✓ AI ja prosessien automatisointi",
+    "✓ Advanced + Custom DPA Agreement": "✓ Edistynyt + räätälöity DPA-sopimus",
+    "✓ Advanced Cloud Architecture": "✓ Edistynyt pilviarkkitehtuuri",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automaattinen eurooppalainen UBL- ja PEPPOL-laskujen luonti",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automaattinen luokittelu toimintoihin ja kaluston polttoaineeseen",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automaattiset ajoitetut varmuuskopioiden kierrot ja tiivistys",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % laskutus ja HACCP-allergeenimerkinnät",
+    "✓ Cashflow runway forecasting engine": "✓ Kassavirran ennustemoottori",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Asiakaspään nollatieto AES-256-salaus",
+    "✓ Cloud Transformation Playbook": "✓ Pilvitransformation playbook"
   }
 }

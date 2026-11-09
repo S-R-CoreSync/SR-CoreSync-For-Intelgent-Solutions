@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Laistigh de 15 Nóiméad (Líne Dhearg Dhíreach 24/7/365)",
     "Within 24 Hours (Support Tickets)": "Laistigh de 24 Uair (Ticéid Tacaíochta)",
     "Within 4 Hours (Email + WhatsApp)": "Laistigh de 4 Uair (Ríomhphost + WhatsApp)",
-    "Your Genuine Digital License Key:": "Do Eochair Cheadúnais Dhigitigh Fhíor:"
+    "Your Genuine Digital License Key:": "Do Eochair Cheadúnais Dhigitigh Fhíor:",
+    "↺ Reset & Clear": "↺ Athshocraigh agus Glan",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% Laghdú ar Uaireanta Próiseála Láimhe",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. AI Fiontair agus Comhtháthuithe",
+    "⚡ Generate New Cryptographic License Key": "⚡ Eochair Cheadúnais Chripteagrafach Nua a Ghiniúint",
+    "⚡ Instant Automated Key Delivery": "⚡ Seachadadh Eochrach Uathoibríoch Láithreach",
+    "⚡ Launch Interactive Simulator": "⚡ Seol an tInsamhlóir Idirghníomhach",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Freagairt faoi bhun soicind agus ullmhacht PWA as líne",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 roinn leighis agus cúntóir sláinte AI",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 phróifíl oibriúcháin: Oirthearach • Tuircis • Ceardaíocht Eorpach",
+    "✓ AI & Process Automation": "✓ AI agus Uathoibriú Próiseas",
+    "✓ Advanced + Custom DPA Agreement": "✓ Comhaontú DPA Casta + Saincheaptha",
+    "✓ Advanced Cloud Architecture": "✓ Ailtireacht Néal Casta",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Giniúint sonrasc Eorpach UBL agus PEPPOL go huathoibríoch",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Catagóiriú uathoibríoch d'oibríochtaí agus breosla cabhlaigh",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Roinnt chúltaca sceidealaithe agus haiseáil uathoibríoch",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Sonrascú BTW 9% / 21% agus lipéadú ailléirginí HACCP",
+    "✓ Cashflow runway forecasting engine": "✓ Inneall réamhaisnéise sreafa airgid",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Criptiú AES-256 náid-eolais ar thaobh an chliaint",
+    "✓ Cloud Transformation Playbook": "✓ Leabhar Imeartha um Chlaochlú Néal"
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Εντός 15 λεπτών (24/7/365 άμεση γραμμή)",
     "Within 24 Hours (Support Tickets)": "Εντός 24 ωρών (δελτία υποστήριξης)",
     "Within 4 Hours (Email + WhatsApp)": "Εντός 4 ωρών (email + WhatsApp)",
-    "Your Genuine Digital License Key:": "Το γνήσιο ψηφιακό κλειδί άδειάς σας:"
+    "Your Genuine Digital License Key:": "Το γνήσιο ψηφιακό κλειδί άδειάς σας:",
+    "↺ Reset & Clear": "↺ Επαναφορά και εκκαθάριση",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% μείωση στις ώρες χειροκίνητης επεξεργασίας",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Εταιρικό AI και ενσωματώσεις",
+    "⚡ Generate New Cryptographic License Key": "⚡ Δημιουργία νέου κρυπτογραφικού κλειδιού άδειας",
+    "⚡ Instant Automated Key Delivery": "⚡ Άμεση αυτοματοποιημένη παράδοση κλειδιού",
+    "⚡ Launch Interactive Simulator": "⚡ Εκκίνηση διαδραστικού εξομοιωτή",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Απόκριση κάτω του δευτερολέπτου και ετοιμότητα offline PWA",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 ιατρικά τμήματα και AI βοηθός υγείας",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 προφίλ λειτουργίας: Ανατολίτικο • Τουρκικό • Ευρωπαϊκή χειροτεχνία",
+    "✓ AI & Process Automation": "✓ AI και αυτοματοποίηση διαδικασιών",
+    "✓ Advanced + Custom DPA Agreement": "✓ Προηγμένη + προσαρμοσμένη συμφωνία DPA",
+    "✓ Advanced Cloud Architecture": "✓ Προηγμένη αρχιτεκτονική cloud",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Αυτοματοποιημένη δημιουργία ευρωπαϊκών τιμολογίων UBL και PEPPOL",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Αυτόματη κατηγοριοποίηση για λειτουργίες και καύσιμα στόλου",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Αυτόματες προγραμματισμένες εναλλαγές αντιγράφων και hashing",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Τιμολόγηση BTW 9% / 21% και επισήμανση αλλεργιογόνων HACCP",
+    "✓ Cashflow runway forecasting engine": "✓ Μηχανή πρόβλεψης ταμειακών ροών",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Κρυπτογράφηση AES-256 μηδενικής γνώσης στην πλευρά του πελάτη",
+    "✓ Cloud Transformation Playbook": "✓ Playbook μετασχηματισμού cloud"
   }
 }

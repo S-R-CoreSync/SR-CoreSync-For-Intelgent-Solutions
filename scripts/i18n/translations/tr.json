@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 Dakika İçinde (7/24/365 Doğrudan Hat)",
     "Within 24 Hours (Support Tickets)": "24 Saat İçinde (Destek Talepleri)",
     "Within 4 Hours (Email + WhatsApp)": "4 Saat İçinde (E-posta + WhatsApp)",
-    "Your Genuine Digital License Key:": "Gerçek Dijital Lisans Anahtarınız:"
+    "Your Genuine Digital License Key:": "Gerçek Dijital Lisans Anahtarınız:",
+    "↺ Reset & Clear": "↺ Sıfırla ve temizle",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ Manuel işlem saatlerinde %65 azalma",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Kurumsal AI ve Entegrasyonlar",
+    "⚡ Generate New Cryptographic License Key": "⚡ Yeni Kriptografik Lisans Anahtarı Oluştur",
+    "⚡ Instant Automated Key Delivery": "⚡ Anında Otomatik Anahtar Teslimi",
+    "⚡ Launch Interactive Simulator": "⚡ Etkileşimli Simülatörü Başlat",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Saniye altı yanıt ve çevrimdışı PWA hazırlığı",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 tıbbi departman ve AI sağlık asistanı",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 çalışma profili: Oryantal • Türk • Avrupa Zanaat",
+    "✓ AI & Process Automation": "✓ AI ve Süreç Otomasyonu",
+    "✓ Advanced + Custom DPA Agreement": "✓ Gelişmiş + Özel DPA Anlaşması",
+    "✓ Advanced Cloud Architecture": "✓ Gelişmiş Bulut Mimarisi",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Otomatik Avrupa UBL ve PEPPOL fatura oluşturma",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Operasyonlar ve filo yakıtı için otomatik kategorizasyon",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Otomatik zamanlanmış yedek rotasyonları ve hashing",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW %9 / %21 faturalandırma ve HACCP alerjen etiketleme",
+    "✓ Cashflow runway forecasting engine": "✓ Nakit akışı öngörü motoru",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ İstemci taraflı sıfır bilgi AES-256 şifreleme",
+    "✓ Cloud Transformation Playbook": "✓ Bulut Dönüşüm Playbook'u"
   }
 }

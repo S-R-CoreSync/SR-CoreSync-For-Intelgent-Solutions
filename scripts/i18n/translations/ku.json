@@ -1,6 +1,6 @@
 {
   "language": "ku",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Di nav 15 deqeyan de (24/7/365 xeta rasterast)",
     "Within 24 Hours (Support Tickets)": "Di nav 24 saetan de (tîketên piştgiriyê)",
     "Within 4 Hours (Email + WhatsApp)": "Di nav 4 saetan de (e-name + WhatsApp)",
-    "Your Genuine Digital License Key:": "Kilîda we ya lîsansa dîjîtal a rastîn:"
+    "Your Genuine Digital License Key:": "Kilîda we ya lîsansa dîjîtal a rastîn:",
+    "↺ Reset & Clear": "↺ Vesaz bike û paqij bike",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% kêmbûn di demjimêrên pêvajoya destan de",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. AI û Entegrasyonên Pargîdaniyê",
+    "⚡ Generate New Cryptographic License Key": "⚡ Kilîda Lîsansa Krîptografîk a Nû Çêke",
+    "⚡ Instant Automated Key Delivery": "⚡ Radestkirina Kilîdê ya Otomatîk a Tavilê",
+    "⚡ Launch Interactive Simulator": "⚡ Sîmulatora Interaktîf Bidest Bixe",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Bersiva bin-saniyeyê û amadebûna PWA ya offline",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 beşên bijîşkî û alîkarê tenduristiyê yê AI",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 profîlên xebitandinê: Rojhilatî • Tirkî • Hunera Ewropî",
+    "✓ AI & Process Automation": "✓ AI û Otomasyona Pêvajoyê",
+    "✓ Advanced + Custom DPA Agreement": "✓ Peymana DPA ya Pêşketî + Taybet",
+    "✓ Advanced Cloud Architecture": "✓ Mîmariya Cloud a Pêşketî",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Çêkirina fatûreya UBL û PEPPOL a Ewropî ya otomatîk",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Kategorîzasyona otomatîk ji bo operasyon û sotemeniya fîloyê",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Zivirandinên paşgirê yên plansazkirî û hashing",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fatûreya BTW 9% / 21% û nîşankirina alerjenê HACCP",
+    "✓ Cashflow runway forecasting engine": "✓ Motora pêşbîniya herikîna drav",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Şîfrekirina AES-256 ya zero-knowledge a aliyê xerîdar",
+    "✓ Cloud Transformation Playbook": "✓ Playbooka Veguheztina Cloud"
   }
 }

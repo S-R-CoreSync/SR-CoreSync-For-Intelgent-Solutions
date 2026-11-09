@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Fi 15-il Minuta (Linja Diretta 24/7/365)",
     "Within 24 Hours (Support Tickets)": "Fi 24 Siegħa (Tickets tal-Appoġġ)",
     "Within 4 Hours (Email + WhatsApp)": "Fi 4 Sigħat (Email + WhatsApp)",
-    "Your Genuine Digital License Key:": "Iċ-Ċavetta tal-Liċenzja Diġitali Ġenwina tiegħek:"
+    "Your Genuine Digital License Key:": "Iċ-Ċavetta tal-Liċenzja Diġitali Ġenwina tiegħek:",
+    "↺ Reset & Clear": "↺ Irrisettja u Naddaf",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% Tnaqqis fis-Sigħat tal-Ipproċessar Manwali",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. AI tal-Intrapriża u Integrazzjonijiet",
+    "⚡ Generate New Cryptographic License Key": "⚡ Iġġenera Ċavetta Ġdida tal-Liċenzja Kriptografika",
+    "⚡ Instant Automated Key Delivery": "⚡ Kunsinna Awtomatika Instantanja taċ-Ċavetta",
+    "⚡ Launch Interactive Simulator": "⚡ Ibda s-Simulatur Interattiv",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Rispons ta' inqas minn sekonda u PWA offline lesta",
+    "✓ 16 medical departments & AI health assistant": "✓ 16-il dipartiment mediku u assistent tas-saħħa bl-AI",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 profili operattivi: Orjentali • Tork • Artiġjanat Ewropew",
+    "✓ AI & Process Automation": "✓ AI u Awtomazzjoni tal-Proċessi",
+    "✓ Advanced + Custom DPA Agreement": "✓ Ftehim DPA Avvanzat + Personalizzat",
+    "✓ Advanced Cloud Architecture": "✓ Arkitettura Cloud Avvanzata",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Ġenerazzjoni awtomatizzata ta' fatturi Ewropej UBL u PEPPOL",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Kategorizzazzjoni awtomatika għall-operazzjonijiet u l-fjuwil tal-flotta",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Rotazzjonijiet ta' backup skedati u hashing awtomatici",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fatturar BTW 9% / 21% u tikkettar tal-allerġeni HACCP",
+    "✓ Cashflow runway forecasting engine": "✓ Magna tal-previżjoni tal-fluss tal-flus",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Encryption AES-256 ta' konoxxenza żero fuq in-naħa tal-klijent",
+    "✓ Cloud Transformation Playbook": "✓ Playbook tat-Trasformazzjoni tal-Cloud"
   }
 }

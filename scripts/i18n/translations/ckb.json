@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "لە ماوەی ١٥ خولەکدا (٢٤/٧/٣٦٥ هێڵی ڕاستەوخۆ)",
     "Within 24 Hours (Support Tickets)": "لە ماوەی ٢٤ کاتژمێردا (تیکێتی پشتگیری)",
     "Within 4 Hours (Email + WhatsApp)": "لە ماوەی ٤ کاتژمێردا (ئیمەیل + WhatsApp)",
-    "Your Genuine Digital License Key:": "کلیلی مۆڵەتی دیجیتاڵی ڕەسەنی تۆ:"
+    "Your Genuine Digital License Key:": "کلیلی مۆڵەتی دیجیتاڵی ڕەسەنی تۆ:",
+    "↺ Reset & Clear": "↺ ڕیسێت و پاککردنەوە",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ ٦٥٪ کەمبوون لە کاتژمێرەکانی پرۆسێسی دەستی",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ ٣. AI و یەکخستنەکانی کۆمپانیا",
+    "⚡ Generate New Cryptographic License Key": "⚡ کلیلی مۆڵەتی کریپتۆگرافیای نوێ دروست بکە",
+    "⚡ Instant Automated Key Delivery": "⚡ گەیاندنی خۆکاری کلیلی دەستبەجێ",
+    "⚡ Launch Interactive Simulator": "⚡ سیمولاتۆری کارلێکەر دەستپێبکە",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ وەڵامدانەوەی ژێر چرکە و ئامادەیی PWA ی ئۆفلاین",
+    "✓ 16 medical departments & AI health assistant": "✓ ١٦ بەشی پزیشکی و یاریدەدەری تەندروستی AI",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ ٣ پرۆفایلی کارکردن: ڕۆژهەڵاتی • تورکی • دەستکردی ئەورووپی",
+    "✓ AI & Process Automation": "✓ AI و ئۆتۆماتیککردنی پرۆسێس",
+    "✓ Advanced + Custom DPA Agreement": "✓ ڕێککەوتنی DPA ی پێشکەوتوو + تایبەت",
+    "✓ Advanced Cloud Architecture": "✓ تەلارسازی هەوری پێشکەوتوو",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ دروستکردنی خۆکاری فاتوورەی UBL و PEPPOL ی ئەورووپی",
+    "✓ Automated categorization for operations & fleet fuel": "✓ پۆلێنکردنی خۆکار بۆ کارەکان و سووتەمەنی فلۆت",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ خولانەوەی پاڵپشتی خشتەکراو و hashing",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ فاتوورەی BTW ٩٪ / ٢١٪ و نیشانکردنی ئەلێرجنی HACCP",
+    "✓ Cashflow runway forecasting engine": "✓ بزوێنەری پێشبینینی ڕەوتی کاش",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ شفرکردنی AES-256 ی سفر-زانینی لای کڕیار",
+    "✓ Cloud Transformation Playbook": "✓ پلەیبووکی گۆڕانی هەور"
   }
 }

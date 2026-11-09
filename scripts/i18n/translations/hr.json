@@ -1,6 +1,6 @@
 {
   "language": "hr",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Odobreni operativni osnovni parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (bez traga CoreSync)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Unutar 15 minuta (24/7/365 izravna linija)",
     "Within 24 Hours (Support Tickets)": "Unutar 24 sata (zahtjevi za podršku)",
     "Within 4 Hours (Email + WhatsApp)": "Unutar 4 sata (e-pošta + WhatsApp)",
-    "Your Genuine Digital License Key:": "Vaš autentični digitalni licencni ključ:"
+    "Your Genuine Digital License Key:": "Vaš autentični digitalni licencni ključ:",
+    "↺ Reset & Clear": "↺ Poništi i očisti",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % manje sati ručne obrade",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise AI i integracije",
+    "⚡ Generate New Cryptographic License Key": "⚡ Generiraj novi kriptografski licencni ključ",
+    "⚡ Instant Automated Key Delivery": "⚡ Trenutačna automatizirana dostava ključa",
+    "⚡ Launch Interactive Simulator": "⚡ Pokreni interaktivni simulator",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Odziv ispod sekunde i spremnost offline PWA",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 medicinskih odjela i AI zdravstveni asistent",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 profila rada: Orijentalni • Turski • Europski obrt",
+    "✓ AI & Process Automation": "✓ AI i automatizacija procesa",
+    "✓ Advanced + Custom DPA Agreement": "✓ Napredni + prilagođeni DPA sporazum",
+    "✓ Advanced Cloud Architecture": "✓ Napredna cloud arhitektura",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automatizirano generiranje europskih UBL i PEPPOL računa",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automatska kategorizacija za operacije i gorivo voznog parka",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automatske zakazane rotacije sigurnosnih kopija i hashiranje",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ Fakturiranje BTW 9 % / 21 % i HACCP označavanje alergena",
+    "✓ Cashflow runway forecasting engine": "✓ Motor za predviđanje novčanog toka",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Klijentsko AES-256 šifriranje s nultim znanjem",
+    "✓ Cloud Transformation Playbook": "✓ Playbook cloud transformacije"
   }
 }

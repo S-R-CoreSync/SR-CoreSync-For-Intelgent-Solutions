@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 percen belül (24/7/365 közvetlen vonal)",
     "Within 24 Hours (Support Tickets)": "24 órán belül (támogatási jegyek)",
     "Within 4 Hours (Email + WhatsApp)": "4 órán belül (e-mail + WhatsApp)",
-    "Your Genuine Digital License Key:": "Az Ön hiteles digitális licenckulcsa:"
+    "Your Genuine Digital License Key:": "Az Ön hiteles digitális licenckulcsa:",
+    "↺ Reset & Clear": "↺ Visszaállítás és törlés",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65%-kal kevesebb manuális feldolgozási óra",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Vállalati AI és integrációk",
+    "⚡ Generate New Cryptographic License Key": "⚡ Új kriptográfiai licenckulcs létrehozása",
+    "⚡ Instant Automated Key Delivery": "⚡ Azonnali automatikus kulcskézbesítés",
+    "⚡ Launch Interactive Simulator": "⚡ Interaktív szimulátor indítása",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Másodperc alatti válasz és offline PWA-készség",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 orvosi osztály és AI egészségügyi asszisztens",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 működési profil: keleti • török • európai kézműves",
+    "✓ AI & Process Automation": "✓ AI és folyamatautomatizálás",
+    "✓ Advanced + Custom DPA Agreement": "✓ Fejlett + egyedi DPA-megállapodás",
+    "✓ Advanced Cloud Architecture": "✓ Fejlett felhőarchitektúra",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automatikus európai UBL és PEPPOL számlagenerálás",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automatikus kategorizálás az üzemeltetéshez és a flotta üzemanyagához",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automatikus ütemezett biztonsági mentés-rotációk és hashelés",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9% / 21% számlázás és HACCP allergénjelölés",
+    "✓ Cashflow runway forecasting engine": "✓ Pénzforgalmi előrejelző motor",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Kliensoldali nulla tudású AES-256 titkosítás",
+    "✓ Cloud Transformation Playbook": "✓ Felhőtranszformációs playbook"
   }
 }

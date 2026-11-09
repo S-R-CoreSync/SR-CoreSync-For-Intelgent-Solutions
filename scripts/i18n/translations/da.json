@@ -1,6 +1,6 @@
 {
   "language": "da",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkendte operationelle basisparametre",
     "100% White-Label (Zero CoreSync Footprint)": "100% white-label (ingen CoreSync-fodaftryk)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Inden for 15 minutter (24/7/365 direkte hotline)",
     "Within 24 Hours (Support Tickets)": "Inden for 24 timer (supportbilletter)",
     "Within 4 Hours (Email + WhatsApp)": "Inden for 4 timer (e-mail + WhatsApp)",
-    "Your Genuine Digital License Key:": "Din ægte digitale licensnøgle:"
+    "Your Genuine Digital License Key:": "Din ægte digitale licensnøgle:",
+    "↺ Reset & Clear": "↺ Nulstil og ryd",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % reduktion i manuelle behandlingstimer",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Enterprise-AI og integrationer",
+    "⚡ Generate New Cryptographic License Key": "⚡ Generér ny kryptografisk licensnøgle",
+    "⚡ Instant Automated Key Delivery": "⚡ Øjeblikkelig automatisk nøglelevering",
+    "⚡ Launch Interactive Simulator": "⚡ Start interaktiv simulator",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Sub-sekund respons og offline PWA-parathed",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 medicinske afdelinger og AI-sundhedsassistent",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 driftsprofiler: Orientalsk • Tyrkisk • Europæisk håndværk",
+    "✓ AI & Process Automation": "✓ AI og procesautomatisering",
+    "✓ Advanced + Custom DPA Agreement": "✓ Avanceret + tilpasset DPA-aftale",
+    "✓ Advanced Cloud Architecture": "✓ Avanceret cloudarkitektur",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automatisk europæisk UBL- og PEPPOL-fakturagenerering",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automatisk kategorisering til drift og flådebrændstof",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automatiske planlagte backuprotationer og hashing",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % fakturering og HACCP-allergenmærkning",
+    "✓ Cashflow runway forecasting engine": "✓ Cashflow-prognosemotor",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Client-side zero-knowledge AES-256-kryptering",
+    "✓ Cloud Transformation Playbook": "✓ Cloud Transformation Playbook"
   }
 }

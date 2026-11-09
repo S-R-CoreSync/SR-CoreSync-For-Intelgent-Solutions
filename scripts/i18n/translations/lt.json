@@ -1,6 +1,6 @@
 {
   "language": "lt",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (be CoreSync pėdsakų)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "Per 15 minučių (24/7/365 tiesioginė linija)",
     "Within 24 Hours (Support Tickets)": "Per 24 valandas (palaikymo užklausos)",
     "Within 4 Hours (Email + WhatsApp)": "Per 4 valandas (el. paštas + WhatsApp)",
-    "Your Genuine Digital License Key:": "Jūsų autentiškas skaitmeninis licencijos raktas:"
+    "Your Genuine Digital License Key:": "Jūsų autentiškas skaitmeninis licencijos raktas:",
+    "↺ Reset & Clear": "↺ Atstatyti ir išvalyti",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % mažiau rankinio apdorojimo valandų",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Įmonės AI ir integracijos",
+    "⚡ Generate New Cryptographic License Key": "⚡ Generuoti naują kriptografinį licencijos raktą",
+    "⚡ Instant Automated Key Delivery": "⚡ Momentinis automatinis rakto pristatymas",
+    "⚡ Launch Interactive Simulator": "⚡ Paleisti interaktyvųjį imituoklį",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Reakcija per mažiau nei sekundę ir neprisijungusio PWA pasirengimas",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 medicinos skyrių ir AI sveikatos asistentas",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 veiklos profiliai: Rytietiškas • Turkiškas • Europos amatas",
+    "✓ AI & Process Automation": "✓ AI ir procesų automatizavimas",
+    "✓ Advanced + Custom DPA Agreement": "✓ Išplėstinė + individuali DPA sutartis",
+    "✓ Advanced Cloud Architecture": "✓ Išplėstinė debesijos architektūra",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automatinis Europos UBL ir PEPPOL sąskaitų generavimas",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automatinis kategorizavimas operacijoms ir parko degalams",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automatiniai suplanuoti atsarginių kopijų rotacijos ir maišos",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % sąskaitų išrašymas ir HACCP alergenų ženklinimas",
+    "✓ Cashflow runway forecasting engine": "✓ Pinigų srautų prognozavimo variklis",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Kliento pusės nulinio žinojimo AES-256 šifravimas",
+    "✓ Cloud Transformation Playbook": "✓ Debesijos transformacijos playbook"
   }
 }

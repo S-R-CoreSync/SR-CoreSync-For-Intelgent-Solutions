@@ -1,6 +1,6 @@
 {
   "language": "et",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Kinnitatud operatiivsed baasparameetrid",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (ilma CoreSync'i jäljeta)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 minuti jooksul (24/7/365 otseiliin)",
     "Within 24 Hours (Support Tickets)": "24 tunni jooksul (tugipiletid)",
     "Within 4 Hours (Email + WhatsApp)": "4 tunni jooksul (e-post + WhatsApp)",
-    "Your Genuine Digital License Key:": "Teie ehtne digitaalne litsentsivõti:"
+    "Your Genuine Digital License Key:": "Teie ehtne digitaalne litsentsivõti:",
+    "↺ Reset & Clear": "↺ Lähtesta ja tühjenda",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65% vähem käsitsi töötlemise tunde",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Ettevõtte AI ja integratsioonid",
+    "⚡ Generate New Cryptographic License Key": "⚡ Loo uus krüptograafiline litsentsivõti",
+    "⚡ Instant Automated Key Delivery": "⚡ Kohene automaatne võtme kohaletoimetamine",
+    "⚡ Launch Interactive Simulator": "⚡ Käivita interaktiivne simulaator",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ All-sekundiline reageerimine ja offline PWA valmisolek",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 meditsiiniosakonda ja AI terviseassistent",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 tööprofiili: idamaine • türgi • Euroopa käsitöö",
+    "✓ AI & Process Automation": "✓ AI ja protsesside automatiseerimine",
+    "✓ Advanced + Custom DPA Agreement": "✓ Täiustatud + kohandatud DPA leping",
+    "✓ Advanced Cloud Architecture": "✓ Täiustatud pilvearhitektuur",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automatiseeritud Euroopa UBL ja PEPPOL arvete genereerimine",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automaatne kategoriseerimine operatsioonide ja autopargi kütuse jaoks",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automaatsed planeeritud varukoopiate rotatsioonid ja räsimine",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9% / 21% arveldamine ja HACCP allergeenide märgistamine",
+    "✓ Cashflow runway forecasting engine": "✓ Rahavoogude prognoosimootor",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Kliendipoolne nullteadmisega AES-256 krüpteerimine",
+    "✓ Cloud Transformation Playbook": "✓ Pilvetransformatsiooni playbook"
   }
 }

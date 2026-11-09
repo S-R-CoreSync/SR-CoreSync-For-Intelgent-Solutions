@@ -1,6 +1,6 @@
 {
   "language": "lv",
-  "count": 345,
+  "count": 364,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez CoreSync pēdām)",
@@ -346,6 +346,25 @@
     "Within 15 Minutes (24/7/365 Direct Red-Line)": "15 minūšu laikā (24/7/365 tiešā līnija)",
     "Within 24 Hours (Support Tickets)": "24 stundu laikā (atbalsta pieprasījumi)",
     "Within 4 Hours (Email + WhatsApp)": "4 stundu laikā (e-pasts + WhatsApp)",
-    "Your Genuine Digital License Key:": "Jūsu īstā digitālā licences atslēga:"
+    "Your Genuine Digital License Key:": "Jūsu īstā digitālā licences atslēga:",
+    "↺ Reset & Clear": "↺ Atiestatīt un notīrīt",
+    "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ 65 % samazinājums manuālās apstrādes stundās",
+    "⚡ 3. Enterprise AI & Integrations": "⚡ 3. Uzņēmuma AI un integrācijas",
+    "⚡ Generate New Cryptographic License Key": "⚡ Ģenerēt jaunu kriptogrāfisko licences atslēgu",
+    "⚡ Instant Automated Key Delivery": "⚡ Tūlītēja automātiska atslēgas piegāde",
+    "⚡ Launch Interactive Simulator": "⚡ Palaist interaktīvo simulatoru",
+    "⚡ Sub-second response & offline PWA readiness": "⚡ Atbilde zem sekundes un bezsaistes PWA gatavība",
+    "✓ 16 medical departments & AI health assistant": "✓ 16 medicīnas nodaļas un AI veselības asistents",
+    "✓ 3 operating profiles: Oriental • Turkish • European Artisan": "✓ 3 darbības profili: Austrumu • Turku • Eiropas amatniecība",
+    "✓ AI & Process Automation": "✓ AI un procesu automatizācija",
+    "✓ Advanced + Custom DPA Agreement": "✓ Uzlabots + pielāgots DPA līgums",
+    "✓ Advanced Cloud Architecture": "✓ Uzlabota mākoņa arhitektūra",
+    "✓ Automated European UBL & PEPPOL invoice generation": "✓ Automatizēta Eiropas UBL un PEPPOL rēķinu ģenerēšana",
+    "✓ Automated categorization for operations & fleet fuel": "✓ Automātiska kategorizēšana operācijām un parka degvielai",
+    "✓ Automatic scheduled backup rotations & hashing": "✓ Automātiskas plānotas dublējumu rotācijas un jaucējvērtības",
+    "✓ BTW 9% / 21% invoicing & HACCP allergen labeling": "✓ BTW 9 % / 21 % rēķini un HACCP alerģēnu marķēšana",
+    "✓ Cashflow runway forecasting engine": "✓ Naudas plūsmas prognozēšanas dzinējs",
+    "✓ Client-side zero-knowledge AES-256 encryption": "✓ Klienta puses nulles zināšanu AES-256 šifrēšana",
+    "✓ Cloud Transformation Playbook": "✓ Mākoņa transformācijas playbook"
   }
 }
