@@ -1,6 +1,6 @@
 {
   "language": "lt",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (be CoreSync pėdsakų)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Suplanuokite nemokamą vadovybės plano sesiją ←",
     "Seamless deep integration with enterprise ERP ledgers": "Sklandi gili integracija su įmonės ERP didžiosiomis knygomis",
     "Secure Client Portal 🔐": "Saugus klientų portalas 🔐",
+    "Secure Enterprise Cloud Workspace": "Saugus įmonės debesų darbo plotas",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Saugus atsiskaitymas pagal ES standartus (PSD2 / SCA)",
+    "Security & Risk Governance": "Saugumas ir rizikos valdymas",
+    "Security • Military Grade": "Saugumas • karinis lygis",
+    "Select Your Dutch Bank:": "Pasirinkite savo Nyderlandų banką:",
+    "Semi-Annual System Architecture Audit": "Pusmetinė sistemos architektūros auditas",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Išsiųsti oficialią BTW sąskaitą el. paštu (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Vyresnysis įmonės sprendimų architektas",
     "Senior Financial & ERP Consultant": "Vyresnysis finansų ir ERP konsultantas",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Vyresnysis finansinių sistemų architektas ir ES reglamentų specialistas",
+    "Share via WhatsApp 📱": "Bendrinti per WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Prisijungti prie darbo srities 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Pereiti prie pagrindinio turinio",
-    "Smart NFC Card 📲": "Išmanioji NFC kortelė 📲"
+    "Smart Apps & AI": "Išmaniosios programėlės ir AI",
+    "Smart NFC Card 📲": "Išmanioji NFC kortelė 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Išmanusis ROI ir įmonės kaštų taupymo variklis",
+    "Software Architecture Synchronization & ERP Core": "Programinės įrangos architektūros sinchronizavimas ir ERP branduolys",
+    "Sovereign Architectural Briefing 🛡️": "Suverenus architektūros brifingas 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Suverenus izoliuotas klasteris (fizinis)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Pasakykite arba parašykite savo projekto idėją... AI iš karto sukurs jūsų vykdomąjį planą!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Savarankiška neprisijungusi mokesčių ERP ir apskaitos programinė įranga, kuri apskaičiuoja BTW/PT ir generuoja patikrintas mokesčių deklaracijas."
   }
 }

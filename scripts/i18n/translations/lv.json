@@ -1,6 +1,6 @@
 {
   "language": "lv",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Apstiprināti operatīvie bāzes parametri",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (bez CoreSync pēdām)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Rezervējiet bezmaksas vadības ceļa kartes sesiju ←",
     "Seamless deep integration with enterprise ERP ledgers": "Nevainojama dziļa integrācija ar uzņēmuma ERP virsgrāmatām",
     "Secure Client Portal 🔐": "Droša klientu portāls 🔐",
+    "Secure Enterprise Cloud Workspace": "Droša uzņēmuma mākoņa darbvieta",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Drošs maksājums saskaņā ar ES standartiem (PSD2 / SCA)",
+    "Security & Risk Governance": "Drošība un riska pārvaldība",
+    "Security • Military Grade": "Drošība • militārā līmenī",
+    "Select Your Dutch Bank:": "Izvēlieties savu Nīderlandes banku:",
+    "Semi-Annual System Architecture Audit": "Pusgada sistēmas arhitektūras audits",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Nosūtīt oficiālu BTW rēķinu uz e-pastu (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Vecākais uzņēmuma risinājumu arhitekts",
     "Senior Financial & ERP Consultant": "Vecākais finanšu un ERP konsultants",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Vecākais finanšu sistēmu arhitekts un ES regulējuma speciālists",
+    "Share via WhatsApp 📱": "Kopīgot WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Pieteikties darbvietā 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Pāriet uz galveno saturu",
-    "Smart NFC Card 📲": "Viedā NFC karte 📲"
+    "Smart Apps & AI": "Viedās lietotnes un AI",
+    "Smart NFC Card 📲": "Viedā NFC karte 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Viedais ROI un uzņēmuma izmaksu ietaupījuma dzinējs",
+    "Software Architecture Synchronization & ERP Core": "Programmatūras arhitektūras sinhronizācija un ERP kodols",
+    "Sovereign Architectural Briefing 🛡️": "Suverēns arhitektūras brīfings 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Suverēns izolēts klasteris (fizisks)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Pasakiet vai uzrakstiet savas projekta idejas... AI acumirklī izveidos jūsu izpildes plānu!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Patstāvīga bezsaistes nodokļu ERP un grāmatvedības programmatūra, kas aprēķina BTW/PVN un ģenerē pārbaudītas nodokļu deklarācijas."
   }
 }

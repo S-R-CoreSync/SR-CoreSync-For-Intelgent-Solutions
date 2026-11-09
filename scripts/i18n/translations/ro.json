@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Programați o sesiune gratuită de foaie de parcurs executivă ←",
     "Seamless deep integration with enterprise ERP ledgers": "Integrare profundă fără probleme cu registrele ERP enterprise",
     "Secure Client Portal 🔐": "Portal client securizat 🔐",
+    "Secure Enterprise Cloud Workspace": "Spațiu de lucru cloud enterprise securizat",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Plată securizată conform standardelor UE (PSD2 / SCA)",
+    "Security & Risk Governance": "Securitate și guvernanța riscurilor",
+    "Security • Military Grade": "Securitate • nivel militar",
+    "Select Your Dutch Bank:": "Selectați banca dvs. olandeză:",
+    "Semi-Annual System Architecture Audit": "Audit semestrial al arhitecturii sistemului",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Trimite factura oficială BTW pe e-mail (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Arhitect senior de soluții enterprise",
     "Senior Financial & ERP Consultant": "Consultant senior în finanțe și ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Arhitect senior de sisteme financiare și specialist în reglementări UE",
+    "Share via WhatsApp 📱": "Distribuie prin WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Conectați-vă la spațiul de lucru 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Salt la conținutul principal",
-    "Smart NFC Card 📲": "Card NFC inteligent 📲"
+    "Smart Apps & AI": "Aplicații inteligente și AI",
+    "Smart NFC Card 📲": "Card NFC inteligent 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Motor inteligent de ROI și economii de costuri enterprise",
+    "Software Architecture Synchronization & ERP Core": "Sincronizarea arhitecturii software și nucleul ERP",
+    "Sovereign Architectural Briefing 🛡️": "Briefing arhitectural suveran 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Cluster suveran izolat (fizic)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Vorbiți sau scrieți ideea proiectului... AI vă construiește instant planul executiv!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Software autonom de ERP fiscal și contabilitate offline care calculează BTW/TVA și generează declarații fiscale verificate."
   }
 }

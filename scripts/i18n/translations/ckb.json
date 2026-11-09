@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
     "100% White-Label (Zero CoreSync Footprint)": "100% وایت-لەیبڵ (بێ شوێنپێی CoreSync)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "دانیشتنی ڕێڕەوی بەڕێوەبەری بێبەرامبەر دابنێ ←",
     "Seamless deep integration with enterprise ERP ledgers": "یەکخستنی قووڵی بێکێشەی لەگەڵ دەفتەرەکانی ERPی کۆمپانیا",
     "Secure Client Portal 🔐": "پۆرتاڵی کڕیاری پارێزراو 🔐",
+    "Secure Enterprise Cloud Workspace": "شوێنی کاری هەوری کۆمپانیای پارێزراو",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "پارەدانی پارێزراو بەپێی ستانداردەکانی یەکێتی ئەورووپا (PSD2 / SCA)",
+    "Security & Risk Governance": "ئاسایش و بەڕێوەبردنی مەترسی",
+    "Security • Military Grade": "ئاسایش • ئاستی سەربازی",
+    "Select Your Dutch Bank:": "بانکە هۆڵەندییەکەت هەڵبژێرە:",
+    "Semi-Annual System Architecture Audit": "پشکنینی تەلارسازی سیستەمی نیوەساڵانە",
+    "Send Official BTW Invoice (PDF) to Email 📧": "پسووڵەی فەرمی BTW بۆ ئیمەیل بنێرە (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "تەلارسازی چارەسەرەکانی کۆمپانیای پایەبەرز",
     "Senior Financial & ERP Consultant": "ڕاوێژکاری باڵای دارایی و ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "تەلارسازی سیستەمە داراییەکانی پایەبەرز و شارەزای ڕێکخستنی یەکێتی ئەورووپا",
+    "Share via WhatsApp 📱": "بە WhatsApp هاوبەش بکە 📱",
+    "Sign In to Workspace 🔐": "بچۆ ژوورەوە بۆ شوێنی کار 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "بڕۆ بۆ ناوەڕۆکی سەرەکی",
-    "Smart NFC Card 📲": "کارتی NFCی زیرەک 📲"
+    "Smart Apps & AI": "ئەپە زیرەکەکان و AI",
+    "Smart NFC Card 📲": "کارتی NFCی زیرەک 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "بزوێنەری زیرەکی ROI و پاشەکەوتی تێچووی کۆمپانیا",
+    "Software Architecture Synchronization & ERP Core": "هاوکاتکردنی تەلارسازی نەرمەکاڵا و ناوکی ERP",
+    "Sovereign Architectural Briefing 🛡️": "بریفینگی تەلارسازی سەروەر 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "کۆمەڵەی جیاکراوەی سەروەر (فیزیکی)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "بیرۆکەی پرۆژەکەت بە دەنگ یان بە نووسین بڵێ... AI دەستبەجێ بلوپرینتی جێبەجێکاریت دروست دەکات!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "نەرمەکاڵای ERP و ژمێریاری باجی سەربەخۆی ئۆفلاین کە BTW/VAT حیساب دەکات و بەیاننامەکانی باجی پشتڕاستکراوە دروست دەکات."
   }
 }

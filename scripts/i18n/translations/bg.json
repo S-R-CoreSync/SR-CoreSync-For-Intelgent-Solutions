@@ -1,6 +1,6 @@
 {
   "language": "bg",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Одобрени оперативни базови параметри",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (без следа от CoreSync)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Планирайте безплатна сесия за изпълнителен пътен план ←",
     "Seamless deep integration with enterprise ERP ledgers": "Безпроблемна дълбока интеграция с корпоративни ERP счетоводства",
     "Secure Client Portal 🔐": "Сигурен клиентски портал 🔐",
+    "Secure Enterprise Cloud Workspace": "Сигурно корпоративно облачно работно пространство",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Сигурно плащане в съответствие със стандартите на ЕС (PSD2 / SCA)",
+    "Security & Risk Governance": "Сигурност и управление на риска",
+    "Security • Military Grade": "Сигурност • военен клас",
+    "Select Your Dutch Bank:": "Изберете вашата холандска банка:",
+    "Semi-Annual System Architecture Audit": "Полугодишен одит на системната архитектура",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Изпратете официална BTW фактура по имейл (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Старши архитект на корпоративни решения",
     "Senior Financial & ERP Consultant": "Старши консултант по финанси и ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Старши архитект на финансови системи и специалист по регулации на ЕС",
+    "Share via WhatsApp 📱": "Споделете чрез WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Вход в работното пространство 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Към основното съдържание",
-    "Smart NFC Card 📲": "Интелигентна NFC карта 📲"
+    "Smart Apps & AI": "Умни приложения и AI",
+    "Smart NFC Card 📲": "Интелигентна NFC карта 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Умен механизъм за ROI и корпоративни икономии",
+    "Software Architecture Synchronization & ERP Core": "Синхронизация на софтуерната архитектура и ERP ядро",
+    "Sovereign Architectural Briefing 🛡️": "Суверенен архитектурен брифинг 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Суверенен изолиран клъстер (физически)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Говорете или напишете идеята си за проект... AI незабавно ще изгради вашия изпълнителен план!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Самостоятелен офлайн данъчен ERP и счетоводен софтуер, който изчислява BTW/ДДС и генерира проверени данъчни декларации."
   }
 }

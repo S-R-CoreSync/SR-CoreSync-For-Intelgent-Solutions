@@ -1,6 +1,6 @@
 {
   "language": "fi",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Hyväksytyt operatiiviset perusparametrit",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (ei CoreSync-jälkeä)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Varaa maksuton johtoryhmän tiekarttasessio ←",
     "Seamless deep integration with enterprise ERP ledgers": "Saumaton syvä integraatio yrityksen ERP-pääkirjoihin",
     "Secure Client Portal 🔐": "Turvallinen asiakasportaali 🔐",
+    "Secure Enterprise Cloud Workspace": "Turvallinen yrityksen pilvityötila",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Turvallinen maksutapahtuma EU-standardien mukaisesti (PSD2 / SCA)",
+    "Security & Risk Governance": "Turvallisuus ja riskienhallinta",
+    "Security • Military Grade": "Turvallisuus • sotilastaso",
+    "Select Your Dutch Bank:": "Valitse alankomaalainen pankkisi:",
+    "Semi-Annual System Architecture Audit": "Puolivuosittainen järjestelmäarkkitehtuurin auditointi",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Lähetä virallinen BTW-lasku sähköpostiin (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Vanhempi yritysratkaisujen arkkitehti",
     "Senior Financial & ERP Consultant": "Vanhempi talous- ja ERP-konsultti",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Vanhempi finanssijärjestelmien arkkitehti ja EU-sääntelyn asiantuntija",
+    "Share via WhatsApp 📱": "Jaa WhatsAppissa 📱",
+    "Sign In to Workspace 🔐": "Kirjaudu työtilaan 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Siirry pääsisältöön",
-    "Smart NFC Card 📲": "Älykäs NFC-kortti 📲"
+    "Smart Apps & AI": "Älykkäät sovellukset ja AI",
+    "Smart NFC Card 📲": "Älykäs NFC-kortti 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Älykäs ROI- ja yrityssäästömoottori",
+    "Software Architecture Synchronization & ERP Core": "Ohjelmistoarkkitehtuurin synkronointi ja ERP-ydin",
+    "Sovereign Architectural Briefing 🛡️": "Suvereeni arkkitehtuuribriefing 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Suvereeni eristetty klusteri (fyysinen)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Puhu tai kirjoita projektisi idea... AI rakentaa johtoryhmäsuunnitelmasi heti!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Itsenäinen offline-vero-ERP ja kirjanpito-ohjelmisto, joka laskee BTW/ALV:n ja tuottaa vahvistetut veroilmoitukset."
   }
 }

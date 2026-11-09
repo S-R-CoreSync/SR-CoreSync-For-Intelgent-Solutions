@@ -1,6 +1,6 @@
 {
   "language": "mt",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri Bażiċi Operattivi Approvati",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bla Ebda Traċċa ta' CoreSync)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Ippjana Sessjoni tal-Roadmap Eżekuttiva b'xejn ←",
     "Seamless deep integration with enterprise ERP ledgers": "Integrazzjoni profonda bla xkiel mal-kotba ERP tal-intrapriża",
     "Secure Client Portal 🔐": "Portal tal-Klijent Sikur 🔐",
+    "Secure Enterprise Cloud Workspace": "Spazju tax-Xogħol Cloud tal-Intrapriża Sikur",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Ħlas sikur konformi mal-istandards tal-UE (PSD2 / SCA)",
+    "Security & Risk Governance": "Sigurtà u Governanza tar-Riskju",
+    "Security • Military Grade": "Sigurtà • Grad Militari",
+    "Select Your Dutch Bank:": "Agħżel il-Bank Olandiż tiegħek:",
+    "Semi-Annual System Architecture Audit": "Awdit Semestrali tal-Arkitettura tas-Sistema",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Ibgħat Fattura BTW Uffiċjali bl-Email (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Arckitett Anzjan tas-Soluzzjonijiet tal-Intrapriża",
     "Senior Financial & ERP Consultant": "Konsulent Anzjan tal-Finanzi u ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Arckitett Anzjan tas-Sistemi Finanzjarji u Speċjalista tar-Regolamenti tal-UE",
+    "Share via WhatsApp 📱": "Aqsam permezz ta' WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Idħol fl-Ispazju tax-Xogħol 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Aqbeż għall-kontenut prinċipali",
-    "Smart NFC Card 📲": "Karta NFC Intelliġenti 📲"
+    "Smart Apps & AI": "Apps Intelliġenti u AI",
+    "Smart NFC Card 📲": "Karta NFC Intelliġenti 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Magna Intelliġenti tar-ROI u t-Tfaddil fl-Ispejjeż",
+    "Software Architecture Synchronization & ERP Core": "Sinkronizzazzjoni tal-Arkitettura tas-Softwer u l-Qalba ERP",
+    "Sovereign Architectural Briefing 🛡️": "Briefing Arkitetturali Sovran 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Cluster Iżolat Sovran (Fiżiku)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Tkellem jew ikteb l-idea tal-proġett tiegħek... l-AI tibni mill-ewwel il-pjan eżekuttiv tiegħek!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Softwer awtonomu tal-ERP fiskali u l-kontabilità offline li jikkalkula BTW/VAT u jiġġenera dikjarazzjonijiet tat-taxxa verifikati."
   }
 }

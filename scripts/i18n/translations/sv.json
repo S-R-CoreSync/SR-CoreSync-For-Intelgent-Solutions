@@ -1,6 +1,6 @@
 {
   "language": "sv",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkända operativa basparametrar",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (inga CoreSync-spår)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Boka en kostnadsfri executive roadmap-session ←",
     "Seamless deep integration with enterprise ERP ledgers": "Sömlös djup integration med företagets ERP-huvudböcker",
     "Secure Client Portal 🔐": "Säker kundportal 🔐",
+    "Secure Enterprise Cloud Workspace": "Säkert enterprise-molnarbetsyta",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Säker betalning i enlighet med EU-standarder (PSD2 / SCA)",
+    "Security & Risk Governance": "Säkerhet och riskstyrning",
+    "Security • Military Grade": "Säkerhet • militär klass",
+    "Select Your Dutch Bank:": "Välj din nederländska bank:",
+    "Semi-Annual System Architecture Audit": "Halvårsvis systemarkitekturrevision",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Skicka officiell BTW-faktura via e-post (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Senior enterprise solutions-arkitekt",
     "Senior Financial & ERP Consultant": "Senior rådgivare inom finans och ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Senior arkitekt för finansiella system och EU-regleringsspecialist",
+    "Share via WhatsApp 📱": "Dela via WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Logga in på arbetsytan 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Hoppa till huvudinnehåll",
-    "Smart NFC Card 📲": "Smart NFC-kort 📲"
+    "Smart Apps & AI": "Smarta appar och AI",
+    "Smart NFC Card 📲": "Smart NFC-kort 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Smart ROI- och enterprise-besparingsmotor",
+    "Software Architecture Synchronization & ERP Core": "Programvaruarkitektur-synkronisering och ERP-kärna",
+    "Sovereign Architectural Briefing 🛡️": "Suverän arkitektur-briefing 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Suverän isolerad kluster (fysisk)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Tala eller skriv din projektidé... AI bygger omedelbart din executive blueprint!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Fristående offline skatte-ERP och redovisningsprogramvara som beräknar BTW/moms och genererar verifierade deklarationer."
   }
 }

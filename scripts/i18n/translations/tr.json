@@ -1,6 +1,6 @@
 {
   "language": "tr",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Onaylanmış Operasyonel Temel Parametreler",
     "100% White-Label (Zero CoreSync Footprint)": "%100 White-Label (Sıfır CoreSync İzi)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Ücretsiz Yönetici Yol Haritası Oturumu Planla ←",
     "Seamless deep integration with enterprise ERP ledgers": "Kurumsal ERP defterleriyle sorunsuz derin entegrasyon",
     "Secure Client Portal 🔐": "Güvenli Müşteri Portalı 🔐",
+    "Secure Enterprise Cloud Workspace": "Güvenli Kurumsal Bulut Çalışma Alanı",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "AB standartlarına uygun güvenli ödeme (PSD2 / SCA)",
+    "Security & Risk Governance": "Güvenlik ve Risk Yönetişimi",
+    "Security • Military Grade": "Güvenlik • Askeri Düzey",
+    "Select Your Dutch Bank:": "Hollanda Bankanızı Seçin:",
+    "Semi-Annual System Architecture Audit": "Altı Aylık Sistem Mimarisi Denetimi",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Resmî BTW Faturasını E-postaya Gönder (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Kıdemli Kurumsal Çözümler Mimarı",
     "Senior Financial & ERP Consultant": "Kıdemli Finans ve ERP Danışmanı",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Kıdemli Finansal Sistemler Mimarı ve AB Düzenleme Uzmanı",
+    "Share via WhatsApp 📱": "WhatsApp ile Paylaş 📱",
+    "Sign In to Workspace 🔐": "Çalışma Alanına Giriş Yap 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Ana içeriğe geç",
-    "Smart NFC Card 📲": "Akıllı NFC Kartı 📲"
+    "Smart Apps & AI": "Akıllı Uygulamalar ve AI",
+    "Smart NFC Card 📲": "Akıllı NFC Kartı 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Akıllı ROI ve Kurumsal Maliyet Tasarrufu Motoru",
+    "Software Architecture Synchronization & ERP Core": "Yazılım Mimarisi Senkronizasyonu ve ERP Çekirdeği",
+    "Sovereign Architectural Briefing 🛡️": "Egemen Mimari Brifingi 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Egemen İzole Küme (Fiziksel)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Proje fikrinizi konuşun veya yazın... AI yönetici planınızı anında oluşturur!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "BTW/KDV hesaplayan ve doğrulanmış vergi beyannameleri üreten bağımsız çevrimdışı vergi ERP ve muhasebe yazılımı."
   }
 }

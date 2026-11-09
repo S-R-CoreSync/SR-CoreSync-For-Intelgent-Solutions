@@ -1,6 +1,6 @@
 {
   "language": "hu",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Jóváhagyott operatív alapparaméterek",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (nulla CoreSync-lábnyom)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Foglaljon ingyenes vezetői ütemterv-munkamenetet ←",
     "Seamless deep integration with enterprise ERP ledgers": "Zökkenőmentes mély integráció vállalati ERP főkönyvekkel",
     "Secure Client Portal 🔐": "Biztonságos ügyfélportál 🔐",
+    "Secure Enterprise Cloud Workspace": "Biztonságos vállalati felhő-munkaterület",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Biztonságos fizetés az EU szabványai szerint (PSD2 / SCA)",
+    "Security & Risk Governance": "Biztonság és kockázatirányítás",
+    "Security • Military Grade": "Biztonság • katonai szint",
+    "Select Your Dutch Bank:": "Válassza ki holland bankját:",
+    "Semi-Annual System Architecture Audit": "Féléves rendszerarchitektúra-audit",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Hivatalos BTW-számla küldése e-mailben (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Vezető vállalati megoldás-architekt",
     "Senior Financial & ERP Consultant": "Szenior pénzügyi és ERP-tanácsadó",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Vezető pénzügyi rendszerarchitekt és EU-szabályozási szakértő",
+    "Share via WhatsApp 📱": "Megosztás WhatsAppon 📱",
+    "Sign In to Workspace 🔐": "Bejelentkezés a munkaterületre 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Ugrás a fő tartalomra",
-    "Smart NFC Card 📲": "Okos NFC-kártya 📲"
+    "Smart Apps & AI": "Okos alkalmazások és AI",
+    "Smart NFC Card 📲": "Okos NFC-kártya 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Okos ROI- és vállalati költségmegtakarítási motor",
+    "Software Architecture Synchronization & ERP Core": "Szoftverarchitektúra-szinkronizáció és ERP mag",
+    "Sovereign Architectural Briefing 🛡️": "Szuverén architektúra-briefing 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Szuverén izolált klaszter (fizikai)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Mondja el vagy írja le projektötletét... az AI azonnal felépíti vezetői tervét!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Önálló offline adó-ERP és könyvelési szoftver, amely BTW/áfát számol és ellenőrzött adóbevallásokat készít."
   }
 }

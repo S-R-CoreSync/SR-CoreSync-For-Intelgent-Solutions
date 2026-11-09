@@ -1,6 +1,6 @@
 {
   "language": "el",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Εγκεκριμένες επιχειρησιακές βασικές παράμετροι",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (μηδενικό αποτύπωμα CoreSync)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Προγραμματίστε δωρεάν συνεδρία εκτελεστικού οδικού χάρτη ←",
     "Seamless deep integration with enterprise ERP ledgers": "Απρόσκοπτη βαθιά ενσωμάτωση με εταιρικά καθολικά ERP",
     "Secure Client Portal 🔐": "Ασφαλής πύλη πελατών 🔐",
+    "Secure Enterprise Cloud Workspace": "Ασφαλής εταιρικός χώρος εργασίας cloud",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Ασφαλής ολοκλήρωση πληρωμής σύμφωνα με τα πρότυπα της ΕΕ (PSD2 / SCA)",
+    "Security & Risk Governance": "Ασφάλεια και διακυβέρνηση κινδύνων",
+    "Security • Military Grade": "Ασφάλεια • στρατιωτικού επιπέδου",
+    "Select Your Dutch Bank:": "Επιλέξτε την ολλανδική σας τράπεζα:",
+    "Semi-Annual System Architecture Audit": "Εξαμηνιαίος έλεγχος αρχιτεκτονικής συστήματος",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Αποστολή επίσημου τιμολογίου BTW μέσω email (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Ανώτερος αρχιτέκτονας εταιρικών λύσεων",
     "Senior Financial & ERP Consultant": "Ανώτερος Σύμβουλος Χρηματοοικονομικών και ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Ανώτερος αρχιτέκτονας χρηματοοικονομικών συστημάτων και ειδικός κανονισμών ΕΕ",
+    "Share via WhatsApp 📱": "Κοινοποίηση μέσω WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Σύνδεση στον χώρο εργασίας 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Μετάβαση στο κύριο περιεχόμενο",
-    "Smart NFC Card 📲": "Έξυπνη Κάρτα NFC 📲"
+    "Smart Apps & AI": "Έξυπνες εφαρμογές και AI",
+    "Smart NFC Card 📲": "Έξυπνη Κάρτα NFC 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Έξυπνη μηχανή ROI και εταιρικών εξοικονομήσεων",
+    "Software Architecture Synchronization & ERP Core": "Συγχρονισμός αρχιτεκτονικής λογισμικού και πυρήνας ERP",
+    "Sovereign Architectural Briefing 🛡️": "Κυρίαρχο αρχιτεκτονικό briefing 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Κυρίαρχο απομονωμένο σύμπλεγμα (φυσικό)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Μιλήστε ή γράψτε την ιδέα του έργου σας... το AI δημιουργεί αμέσως το εκτελεστικό σας σχέδιο!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Αυτόνομο λογισμικό φορολογικού ERP και λογιστικής εκτός σύνδεσης που υπολογίζει BTW/ΦΠΑ και παράγει επαληθευμένες φορολογικές δηλώσεις."
   }
 }

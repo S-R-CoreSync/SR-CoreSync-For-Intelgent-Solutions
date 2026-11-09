@@ -1,6 +1,6 @@
 {
   "language": "de",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Genehmigte operative Basisparameter",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (keine CoreSync-Spuren)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Kostenlose Executive-Roadmap-Sitzung buchen ←",
     "Seamless deep integration with enterprise ERP ledgers": "Nahtlose tiefe Integration in Enterprise-ERP-Hauptbücher",
     "Secure Client Portal 🔐": "Sicheres Kundenportal 🔐",
+    "Secure Enterprise Cloud Workspace": "Sichere Enterprise-Cloud-Arbeitsumgebung",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Sicherer Checkout gemäß EU-Standards (PSD2 / SCA)",
+    "Security & Risk Governance": "Sicherheit und Risikobeherrschung",
+    "Security • Military Grade": "Sicherheit • militärisches Niveau",
+    "Select Your Dutch Bank:": "Wählen Sie Ihre niederländische Bank:",
+    "Semi-Annual System Architecture Audit": "Halbjährliches Systemarchitektur-Audit",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Offizielle BTW-Rechnung (PDF) per E-Mail senden 📧",
+    "Senior Enterprise Solutions Architect": "Senior Enterprise Solutions Architect",
     "Senior Financial & ERP Consultant": "Senior-Berater für Finanzen und ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Senior-Architekt für Finanzsysteme und EU-Regulierungsspezialist",
+    "Share via WhatsApp 📱": "Über WhatsApp teilen 📱",
+    "Sign In to Workspace 🔐": "Beim Arbeitsbereich anmelden 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Zum Hauptinhalt springen",
-    "Smart NFC Card 📲": "Intelligente NFC-Karte 📲"
+    "Smart Apps & AI": "Smarte Apps und KI",
+    "Smart NFC Card 📲": "Intelligente NFC-Karte 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Smarte ROI- und Enterprise-Kosteneinsparungs-Engine",
+    "Software Architecture Synchronization & ERP Core": "Softwarearchitektur-Synchronisierung und ERP-Kern",
+    "Sovereign Architectural Briefing 🛡️": "Souveränes Architektur-Briefing 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Souveräner isolierter Cluster (physisch)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Sprechen oder schreiben Sie Ihre Projektidee... KI erstellt sofort Ihren Executive Blueprint!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Eigenständige Offline-Steuer-ERP- und Buchhaltungssoftware, die BTW berechnet und geprüfte Steuererklärungen erzeugt."
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "ku",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametreyên Bingehîn ên Operasyonel ên Pejirandî",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Bê Şopa CoreSync)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Sessyona Rêxistina Rêveber a Belaş Plan Bike ←",
     "Seamless deep integration with enterprise ERP ledgers": "Yekbûna kûr a bêkêmasî bi defterên ERP yên pargîdaniyê re",
     "Secure Client Portal 🔐": "Portala Xerîdar a Ewle 🔐",
+    "Secure Enterprise Cloud Workspace": "Cihê Kar a Cloud a Pargîdaniyê ya Ewle",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Dayina pereyan a ewle li gorî standardên YE (PSD2 / SCA)",
+    "Security & Risk Governance": "Ewlekarî û Rêvebiriya Metirsiyê",
+    "Security • Military Grade": "Ewlekarî • Asta Leşkerî",
+    "Select Your Dutch Bank:": "Banka xwe ya Holendî Hilbijêre:",
+    "Semi-Annual System Architecture Audit": "Kontrola Mîmariya Sîstemê ya Nîvsalane",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Fatûreya BTW ya Fermî bi E-nameyê Bişîne (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Mîmarê Çareseriyên Pargîdaniyê yê Payebilind",
     "Senior Financial & ERP Consultant": "Şêwirmendê Payebilind yê Darayî û ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Mîmarê Sîstemên Darayî yên Payebilind û Pisporê Rêziknameya YE",
+    "Share via WhatsApp 📱": "Bi WhatsApp re Parve Bike 📱",
+    "Sign In to Workspace 🔐": "Têkeve Cihê Kar 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Here navenda bingehîn",
-    "Smart NFC Card 📲": "Karta NFC ya Aqilmend 📲"
+    "Smart Apps & AI": "Serlêdanên Jîr û AI",
+    "Smart NFC Card 📲": "Karta NFC ya Aqilmend 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Motora Jîr a ROI û Teserûfa Lêçûnên Pargîdaniyê",
+    "Software Architecture Synchronization & ERP Core": "Senkronîzasyona Mîmariya Nermalavê û Navika ERP",
+    "Sovereign Architectural Briefing 🛡️": "Brîfînga Mîmariyê ya Serwer 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Komika Îzole ya Serwer (Fizîkî)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Fikra projeya xwe biaxive an binivîse... AI dîmena we ya rêveberiyê di cih de çêdike!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Nermalava ERP û hesabgiriya bacê ya serbixwe ya offline ku BTW/VAT hesab dike û danezaniyên bacê yên verastkirî çêdike."
   }
 }

@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 288,
+  "count": 307,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -287,8 +287,27 @@
     "Schedule Free Executive Roadmap Session ←": "Sceideal Seisiún Saor in aisce um Chlár Oibre Feidhmiúcháin ←",
     "Seamless deep integration with enterprise ERP ledgers": "Comhtháthú domhain gan uaim le mórleabhair ERP fiontair",
     "Secure Client Portal 🔐": "Tairseach Chliaint Slán 🔐",
+    "Secure Enterprise Cloud Workspace": "Spás Oibre Néal Fiontair Slán",
+    "Secure checkout compliant with EU standards (PSD2 / SCA)": "Íocaíocht shlán de réir chaighdeáin an AE (PSD2 / SCA)",
+    "Security & Risk Governance": "Slándáil agus Rialachas Riosca",
+    "Security • Military Grade": "Slándáil • Grád Míleata",
+    "Select Your Dutch Bank:": "Roghnaigh Do Bhanc Ollannach:",
+    "Semi-Annual System Architecture Audit": "Iniúchadh Ailtireachta Córais Leathbhliantúil",
+    "Send Official BTW Invoice (PDF) to Email 📧": "Seol Sonrasc Oifigiúil BTW chuig Ríomhphost (PDF) 📧",
+    "Senior Enterprise Solutions Architect": "Ailtire Sinsearach Réitigh Fiontair",
     "Senior Financial & ERP Consultant": "Comhairleoir Sinsearach Airgeadais agus ERP",
+    "Senior Financial Systems Architect & EU Regulatory Specialist": "Ailtire Sinsearach Córas Airgeadais agus Speisialtóir Rialacháin AE",
+    "Share via WhatsApp 📱": "Roinn trí WhatsApp 📱",
+    "Sign In to Workspace 🔐": "Sínigh Isteach don Spás Oibre 🔐",
+    "Signature Creative & Digital Solutions": "Signature Creative & Digital Solutions",
     "Skip to main content": "Téigh go dtí an príomhábhar",
-    "Smart NFC Card 📲": "Cárta NFC Cliste 📲"
+    "Smart Apps & AI": "Aipeanna Cliste agus AI",
+    "Smart NFC Card 📲": "Cárta NFC Cliste 📲",
+    "Smart ROI & Enterprise Cost-Savings Engine": "Inneall Cliste ROI agus Coigiltis Costais Fiontair",
+    "Software Architecture Synchronization & ERP Core": "Sioncronú Ailtireachta Bogearraí agus Croí ERP",
+    "Sovereign Architectural Briefing 🛡️": "Briefing Ailtireachta Ceannasach 🛡️",
+    "Sovereign Isolated Cluster (Physical)": "Braisle Iomarcach Ceannasach (Fisiciúil)",
+    "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Labhair nó scríobh smaoineamh do thionscadail... cruthóidh AI do phlean feidhmiúcháin láithreach!",
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Bogearraí ERP cánach agus cuntasaíochta neamhspleách as líne a ríomhann BTW/CBL agus a ghineann tuairisceáin chánach fíoraithe."
   }
 }
