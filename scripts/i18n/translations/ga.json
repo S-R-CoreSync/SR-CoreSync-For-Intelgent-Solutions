@@ -1,6 +1,6 @@
 {
   "language": "ga",
-  "count": 307,
+  "count": 326,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Paraiméadair Bhunlíne Oibriúcháin Ceadaithe",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (Gan Lorg CoreSync)",
@@ -61,6 +61,7 @@
     "Central administrative control dashboard": "Deais rialaithe riaracháin lárnach",
     "Certified & Compliant ✓": "Deimhnithe agus Comhlíontach ✓",
     "Certified Master Brand Kit": "Máistirphacáiste Branda Deimhnithe",
+    "Certified PEPPOL BIS Billing 3.0 e-invoicing and automated Dutch VAT (9% & 21%) accounting integration.": "Ríomhshonrascú deimhnithe PEPPOL BIS Billing 3.0 agus comhtháthú cuntasaíochta uathoibríoch BTW Ollannach (9% & 21%).",
     "Certified Principal Cloud Architect": "Príomh-Ailtire Néal Deimhnithe",
     "Champagne Royal Gold (#C5A880) & Deep Obsidian": "Ór Ríoga Seaimpéin (#C5A880) agus Obsidian Domhain",
     "Chief Cloud & AI Architect & CTO • Available for 2026 Enterprise Projects": "Chief Cloud & AI Architect & CTO • Ar fáil do Thionscadail Fiontair 2026",
@@ -308,6 +309,24 @@
     "Sovereign Architectural Briefing 🛡️": "Briefing Ailtireachta Ceannasach 🛡️",
     "Sovereign Isolated Cluster (Physical)": "Braisle Iomarcach Ceannasach (Fisiciúil)",
     "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Labhair nó scríobh smaoineamh do thionscadail... cruthóidh AI do phlean feidhmiúcháin láithreach!",
-    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Bogearraí ERP cánach agus cuntasaíochta neamhspleách as líne a ríomhann BTW/CBL agus a ghineann tuairisceáin chánach fíoraithe."
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Bogearraí ERP cánach agus cuntasaíochta neamhspleách as líne a ríomhann BTW/CBL agus a ghineann tuairisceáin chánach fíoraithe.",
+    "Strict NDAs, full IP ownership protection & transparent revenue share.": "NDAnna docht, cosaint iomlán ar mhaoin intleachtúil agus comhroinnt ioncaim thrédhearcach.",
+    "Strict compliance with European privacy laws, full encryption at rest & transit, zero unauthorized telemetry.": "Comhlíonadh docht le dlíthe príobháideachais na hEorpa, criptiú iomlán ar a scíth agus ar an mbealach, nialas teiliméadracht neamhúdaraithe.",
+    "Strict financial governance, encryption & audit readiness": "Rialachas airgeadais docht, criptiú agus ullmhacht iniúchta",
+    "Stripe + Credit Cards": "Stripe + Cártaí Creidmheasa",
+    "Submit High-Priority Support Ticket": "Cuir Ticéad Tacaíochta Ardríochta isteach",
+    "Supported payment providers and checkout rails": "Soláthraithe íocaíochta agus bealaí íocaíochta a thacaítear leo",
+    "System APIs & Webhooks Access": "Rochtain ar APIanna agus Webhooks an Chórais",
+    "System Uptime & Stability": "Am Insroichte agus Cobhsaíocht an Chórais",
+    "TLS 1.3 + Enhanced SSL Certificates": "TLS 1.3 + Deimhniúcháin SSL Fheabhsaithe",
+    "Tap the Share icon in Safari, then select \"Add to Home Screen\".": "Tapáil deilbhín Roinn in Safari, ansin roghnaigh \"Cuir leis an Scáileán Baile\".",
+    "Tap the microphone to speak, or write your project requirements below...": "Tapáil an micreafón chun labhairt, nó scríobh riachtanais do thionscadail thíos...",
+    "Target Product / Solution:": "Sprioc-Táirge / Réiteach:",
+    "Team / Staff Count": "Foireann / Líon Foirne",
+    "Team Training & Knowledge Transfer": "Oiliúint Foirne agus Aistriú Eolais",
+    "Team or Employee Count:": "Líon na Foirne nó na bhFostaithe:",
+    "Technical & Systems Architecture": "Ailtireacht Theicniúil agus Córais",
+    "Technical Support Response Times": "Amanna Freagartha Tacaíochta Teicniúla",
+    "Test Interactive Software Simulator ⚡": "Tástáil Insamhlóir Bogearraí Idirghníomhach ⚡"
   }
 }

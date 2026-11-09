@@ -1,6 +1,6 @@
 {
   "language": "ro",
-  "count": 307,
+  "count": 326,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Parametri operaționali de bază aprobați",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (fără urmă CoreSync)",
@@ -61,6 +61,7 @@
     "Central administrative control dashboard": "Panou central de control administrativ",
     "Certified & Compliant ✓": "Certificat și conform ✓",
     "Certified Master Brand Kit": "Kit de brand master certificat",
+    "Certified PEPPOL BIS Billing 3.0 e-invoicing and automated Dutch VAT (9% & 21%) accounting integration.": "Facturare electronică certificată PEPPOL BIS Billing 3.0 și integrare contabilă automată a BTW olandez (9% și 21%).",
     "Certified Principal Cloud Architect": "Arhitect cloud principal certificat",
     "Champagne Royal Gold (#C5A880) & Deep Obsidian": "Aur regal șampanie (#C5A880) și obsidian profund",
     "Chief Cloud & AI Architect & CTO • Available for 2026 Enterprise Projects": "Chief Cloud & AI Architect & CTO • Disponibil pentru proiecte enterprise 2026",
@@ -308,6 +309,24 @@
     "Sovereign Architectural Briefing 🛡️": "Briefing arhitectural suveran 🛡️",
     "Sovereign Isolated Cluster (Physical)": "Cluster suveran izolat (fizic)",
     "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Vorbiți sau scrieți ideea proiectului... AI vă construiește instant planul executiv!",
-    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Software autonom de ERP fiscal și contabilitate offline care calculează BTW/TVA și generează declarații fiscale verificate."
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Software autonom de ERP fiscal și contabilitate offline care calculează BTW/TVA și generează declarații fiscale verificate.",
+    "Strict NDAs, full IP ownership protection & transparent revenue share.": "NDA-uri stricte, protecție deplină a proprietății intelectuale și partajare transparentă a veniturilor.",
+    "Strict compliance with European privacy laws, full encryption at rest & transit, zero unauthorized telemetry.": "Conformitate strictă cu legile europene privind confidențialitatea, criptare completă în repaus și în tranzit, zero telemetrie neautorizată.",
+    "Strict financial governance, encryption & audit readiness": "Guvernanță financiară strictă, criptare și pregătire pentru audit",
+    "Stripe + Credit Cards": "Stripe + carduri de credit",
+    "Submit High-Priority Support Ticket": "Trimite un tichet de asistență cu prioritate ridicată",
+    "Supported payment providers and checkout rails": "Furnizori de plăți și canale de plată acceptate",
+    "System APIs & Webhooks Access": "Acces la API-urile și webhook-urile sistemului",
+    "System Uptime & Stability": "Disponibilitatea și stabilitatea sistemului",
+    "TLS 1.3 + Enhanced SSL Certificates": "TLS 1.3 + certificate SSL îmbunătățite",
+    "Tap the Share icon in Safari, then select \"Add to Home Screen\".": "Atingeți pictograma Partajare din Safari, apoi selectați „Adaugă la ecranul principal”.",
+    "Tap the microphone to speak, or write your project requirements below...": "Atingeți microfonul pentru a vorbi sau scrieți cerințele proiectului mai jos...",
+    "Target Product / Solution:": "Produs / soluție țintă:",
+    "Team / Staff Count": "Echipă / număr de angajați",
+    "Team Training & Knowledge Transfer": "Instruirea echipei și transferul de cunoștințe",
+    "Team or Employee Count:": "Numărul de membri ai echipei sau angajați:",
+    "Technical & Systems Architecture": "Arhitectură tehnică și de sistem",
+    "Technical Support Response Times": "Timpii de răspuns ai asistenței tehnice",
+    "Test Interactive Software Simulator ⚡": "Testați simulatorul software interactiv ⚡"
   }
 }

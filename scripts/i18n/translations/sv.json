@@ -1,6 +1,6 @@
 {
   "language": "sv",
-  "count": 307,
+  "count": 326,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Godkända operativa basparametrar",
     "100% White-Label (Zero CoreSync Footprint)": "100 % white-label (inga CoreSync-spår)",
@@ -61,6 +61,7 @@
     "Central administrative control dashboard": "Central administrativ kontrollpanel",
     "Certified & Compliant ✓": "Certifierad och compliant ✓",
     "Certified Master Brand Kit": "Certifierat master brand kit",
+    "Certified PEPPOL BIS Billing 3.0 e-invoicing and automated Dutch VAT (9% & 21%) accounting integration.": "Certifierad PEPPOL BIS Billing 3.0 e-fakturering och automatiserad integration av nederländsk BTW (9 % och 21 %) i bokföringen.",
     "Certified Principal Cloud Architect": "Certifierad ledande molnarkitekt",
     "Champagne Royal Gold (#C5A880) & Deep Obsidian": "Champagne Royal Gold (#C5A880) och djup obsidian",
     "Chief Cloud & AI Architect & CTO • Available for 2026 Enterprise Projects": "Chief Cloud & AI Architect & CTO • Tillgänglig för enterprise-projekt 2026",
@@ -308,6 +309,24 @@
     "Sovereign Architectural Briefing 🛡️": "Suverän arkitektur-briefing 🛡️",
     "Sovereign Isolated Cluster (Physical)": "Suverän isolerad kluster (fysisk)",
     "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Tala eller skriv din projektidé... AI bygger omedelbart din executive blueprint!",
-    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Fristående offline skatte-ERP och redovisningsprogramvara som beräknar BTW/moms och genererar verifierade deklarationer."
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Fristående offline skatte-ERP och redovisningsprogramvara som beräknar BTW/moms och genererar verifierade deklarationer.",
+    "Strict NDAs, full IP ownership protection & transparent revenue share.": "Strikta NDA:er, fullt skydd av immateriella rättigheter och transparent intäktsdelning.",
+    "Strict compliance with European privacy laws, full encryption at rest & transit, zero unauthorized telemetry.": "Strikt efterlevnad av europeiska integritetslagar, full kryptering i vila och under överföring, noll obehörig telemetri.",
+    "Strict financial governance, encryption & audit readiness": "Strikt finansiell styrning, kryptering och revisionsberedskap",
+    "Stripe + Credit Cards": "Stripe + kreditkort",
+    "Submit High-Priority Support Ticket": "Skicka supportärende med hög prioritet",
+    "Supported payment providers and checkout rails": "Stödda betalningsleverantörer och betalningskanaler",
+    "System APIs & Webhooks Access": "Åtkomst till system-API:er och webhooks",
+    "System Uptime & Stability": "Systemets drifttid och stabilitet",
+    "TLS 1.3 + Enhanced SSL Certificates": "TLS 1.3 + förbättrade SSL-certifikat",
+    "Tap the Share icon in Safari, then select \"Add to Home Screen\".": "Tryck på delningsikonen i Safari och välj sedan ”Lägg till på hemskärmen”.",
+    "Tap the microphone to speak, or write your project requirements below...": "Tryck på mikrofonen för att tala, eller skriv dina projektkrav nedan...",
+    "Target Product / Solution:": "Målprodukt / lösning:",
+    "Team / Staff Count": "Team / antal anställda",
+    "Team Training & Knowledge Transfer": "Teamutbildning och kunskapsöverföring",
+    "Team or Employee Count:": "Antal teammedlemmar eller anställda:",
+    "Technical & Systems Architecture": "Teknisk och systemarkitektur",
+    "Technical Support Response Times": "Svarstider för teknisk support",
+    "Test Interactive Software Simulator ⚡": "Testa interaktiv mjukvarusimulator ⚡"
   }
 }

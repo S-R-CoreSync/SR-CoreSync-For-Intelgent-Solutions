@@ -1,6 +1,6 @@
 {
   "language": "bg",
-  "count": 307,
+  "count": 326,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Одобрени оперативни базови параметри",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (без следа от CoreSync)",
@@ -61,6 +61,7 @@
     "Central administrative control dashboard": "Централен административен контролен панел",
     "Certified & Compliant ✓": "Сертифицирано и съответстващо ✓",
     "Certified Master Brand Kit": "Сертифициран master brand kit",
+    "Certified PEPPOL BIS Billing 3.0 e-invoicing and automated Dutch VAT (9% & 21%) accounting integration.": "Сертифицирано електронно фактуриране PEPPOL BIS Billing 3.0 и автоматизирана интеграция в счетоводството на холандски BTW (9% и 21%).",
     "Certified Principal Cloud Architect": "Сертифициран главен облачен архитект",
     "Champagne Royal Gold (#C5A880) & Deep Obsidian": "Шампанско кралско злато (#C5A880) и дълбок обсидиан",
     "Chief Cloud & AI Architect & CTO • Available for 2026 Enterprise Projects": "Chief Cloud & AI Architect & CTO • На разположение за корпоративни проекти 2026",
@@ -308,6 +309,24 @@
     "Sovereign Architectural Briefing 🛡️": "Суверенен архитектурен брифинг 🛡️",
     "Sovereign Isolated Cluster (Physical)": "Суверенен изолиран клъстер (физически)",
     "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Говорете или напишете идеята си за проект... AI незабавно ще изгради вашия изпълнителен план!",
-    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Самостоятелен офлайн данъчен ERP и счетоводен софтуер, който изчислява BTW/ДДС и генерира проверени данъчни декларации."
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Самостоятелен офлайн данъчен ERP и счетоводен софтуер, който изчислява BTW/ДДС и генерира проверени данъчни декларации.",
+    "Strict NDAs, full IP ownership protection & transparent revenue share.": "Строги NDA, пълна защита на интелектуалната собственост и прозрачно споделяне на приходите.",
+    "Strict compliance with European privacy laws, full encryption at rest & transit, zero unauthorized telemetry.": "Стриктно спазване на европейските закони за поверителност, пълно криптиране при съхранение и пренос, нула неоторизирана телеметрия.",
+    "Strict financial governance, encryption & audit readiness": "Строго финансово управление, криптиране и готовност за одит",
+    "Stripe + Credit Cards": "Stripe + кредитни карти",
+    "Submit High-Priority Support Ticket": "Подайте заявка за поддръжка с висок приоритет",
+    "Supported payment providers and checkout rails": "Поддържани доставчици на плащания и канали за плащане",
+    "System APIs & Webhooks Access": "Достъп до системни API и Webhooks",
+    "System Uptime & Stability": "Време на работа и стабилност на системата",
+    "TLS 1.3 + Enhanced SSL Certificates": "TLS 1.3 + разширени SSL сертификати",
+    "Tap the Share icon in Safari, then select \"Add to Home Screen\".": "Докоснете иконата за споделяне в Safari, след което изберете „Добавяне към началния екран“.",
+    "Tap the microphone to speak, or write your project requirements below...": "Докоснете микрофона, за да говорите, или напишете изискванията си за проекта по-долу...",
+    "Target Product / Solution:": "Целеви продукт / решение:",
+    "Team / Staff Count": "Екип / брой служители",
+    "Team Training & Knowledge Transfer": "Обучение на екипа и трансфер на знания",
+    "Team or Employee Count:": "Брой на екипа или служителите:",
+    "Technical & Systems Architecture": "Техническа и системна архитектура",
+    "Technical Support Response Times": "Времена за отговор на техническата поддръжка",
+    "Test Interactive Software Simulator ⚡": "Тествайте интерактивния софтуерен симулатор ⚡"
   }
 }

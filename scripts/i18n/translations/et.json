@@ -1,6 +1,6 @@
 {
   "language": "et",
-  "count": 307,
+  "count": 326,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Kinnitatud operatiivsed baasparameetrid",
     "100% White-Label (Zero CoreSync Footprint)": "100% White-Label (ilma CoreSync'i jäljeta)",
@@ -61,6 +61,7 @@
     "Central administrative control dashboard": "Keskne halduskontrolli armatuurlaud",
     "Certified & Compliant ✓": "Sertifitseeritud ja vastav ✓",
     "Certified Master Brand Kit": "Sertifitseeritud master-brändikomplekt",
+    "Certified PEPPOL BIS Billing 3.0 e-invoicing and automated Dutch VAT (9% & 21%) accounting integration.": "Sertifitseeritud PEPPOL BIS Billing 3.0 e-arvete ja Hollandi BTW (9% ja 21%) automatiseeritud raamatupidamisintegratsioon.",
     "Certified Principal Cloud Architect": "Sertifitseeritud juhtiv pilvearhitekt",
     "Champagne Royal Gold (#C5A880) & Deep Obsidian": "Šampanja kuninglik kuld (#C5A880) ja sügav obsidiaan",
     "Chief Cloud & AI Architect & CTO • Available for 2026 Enterprise Projects": "Chief Cloud & AI Architect & CTO • Saadaval 2026. aasta ettevõtteprojektidele",
@@ -308,6 +309,24 @@
     "Sovereign Architectural Briefing 🛡️": "Suveräänne arhitektuuribriifing 🛡️",
     "Sovereign Isolated Cluster (Physical)": "Suveräänne isoleeritud klaster (füüsiline)",
     "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Rääkige või kirjutage oma projekti idee... AI loob kohe teie juhtimisplaani!",
-    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Iseseisev võrguühenduseta maksu-ERP ja raamatupidamistarkvara, mis arvutab BTW/käibemaksu ja koostab kontrollitud maksudeklaratsioonid."
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Iseseisev võrguühenduseta maksu-ERP ja raamatupidamistarkvara, mis arvutab BTW/käibemaksu ja koostab kontrollitud maksudeklaratsioonid.",
+    "Strict NDAs, full IP ownership protection & transparent revenue share.": "Ranged NDA-d, täielik intellektuaalomandi kaitse ja läbipaistev tulude jagamine.",
+    "Strict compliance with European privacy laws, full encryption at rest & transit, zero unauthorized telemetry.": "Range vastavus Euroopa privaatsusseadustele, täielik krüpteerimine nii salvestamisel kui edastamisel, null volitamata telemeetriat.",
+    "Strict financial governance, encryption & audit readiness": "Range finantsjuhtimine, krüpteerimine ja auditivalmidus",
+    "Stripe + Credit Cards": "Stripe + krediitkaardid",
+    "Submit High-Priority Support Ticket": "Esita kõrge prioriteediga tugiteenuse pilet",
+    "Supported payment providers and checkout rails": "Toetatud makseteenuse pakkujad ja maksekanalid",
+    "System APIs & Webhooks Access": "Juurdepääs süsteemi API-dele ja webhookidele",
+    "System Uptime & Stability": "Süsteemi tööaeg ja stabiilsus",
+    "TLS 1.3 + Enhanced SSL Certificates": "TLS 1.3 + täiustatud SSL-sertifikaadid",
+    "Tap the Share icon in Safari, then select \"Add to Home Screen\".": "Puuduta Safaris jagamise ikooni ja vali seejärel „Lisa avakuvale“.",
+    "Tap the microphone to speak, or write your project requirements below...": "Rääkimiseks puuduta mikrofoni või kirjuta oma projekti nõuded allpool...",
+    "Target Product / Solution:": "Sihttoode / lahendus:",
+    "Team / Staff Count": "Meeskond / töötajate arv",
+    "Team Training & Knowledge Transfer": "Meeskonna koolitus ja teadmiste üleandmine",
+    "Team or Employee Count:": "Meeskonna või töötajate arv:",
+    "Technical & Systems Architecture": "Tehniline ja süsteemiarhitektuur",
+    "Technical Support Response Times": "Tehnilise toe vastamisajad",
+    "Test Interactive Software Simulator ⚡": "Testi interaktiivset tarkvarasimulaatorit ⚡"
   }
 }

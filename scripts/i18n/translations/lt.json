@@ -1,6 +1,6 @@
 {
   "language": "lt",
-  "count": 307,
+  "count": 326,
   "strings": {
     "1. Approved Operational Baseline Parameters": "1. Patvirtinti operaciniai baziniai parametrai",
     "100% White-Label (Zero CoreSync Footprint)": "100 % White-Label (be CoreSync pėdsakų)",
@@ -61,6 +61,7 @@
     "Central administrative control dashboard": "Centrinė administracinė valdymo panelė",
     "Certified & Compliant ✓": "Sertifikuota ir atitinkanti reikalavimus ✓",
     "Certified Master Brand Kit": "Sertifikuotas pagrindinis prekės ženklo rinkinys",
+    "Certified PEPPOL BIS Billing 3.0 e-invoicing and automated Dutch VAT (9% & 21%) accounting integration.": "Sertifikuotas PEPPOL BIS Billing 3.0 e. sąskaitų faktūrų išrašymas ir automatizuota Nyderlandų BTW (9 % ir 21 %) apskaitos integracija.",
     "Certified Principal Cloud Architect": "Sertifikuotas vyriausiasis debesų architektas",
     "Champagne Royal Gold (#C5A880) & Deep Obsidian": "Šampano karališkasis auksas (#C5A880) ir gilus obsidianas",
     "Chief Cloud & AI Architect & CTO • Available for 2026 Enterprise Projects": "Chief Cloud & AI Architect & CTO • Prieinamas 2026 m. įmonių projektams",
@@ -308,6 +309,24 @@
     "Sovereign Architectural Briefing 🛡️": "Suverenus architektūros brifingas 🛡️",
     "Sovereign Isolated Cluster (Physical)": "Suverenus izoliuotas klasteris (fizinis)",
     "Speak or write your project idea... AI will engineer your executive blueprint instantly!": "Pasakykite arba parašykite savo projekto idėją... AI iš karto sukurs jūsų vykdomąjį planą!",
-    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Savarankiška neprisijungusi mokesčių ERP ir apskaitos programinė įranga, kuri apskaičiuoja BTW/PT ir generuoja patikrintas mokesčių deklaracijas."
+    "Standalone offline tax ERP and accounting software calculating BTW/VAT and generating verified tax returns.": "Savarankiška neprisijungusi mokesčių ERP ir apskaitos programinė įranga, kuri apskaičiuoja BTW/PT ir generuoja patikrintas mokesčių deklaracijas.",
+    "Strict NDAs, full IP ownership protection & transparent revenue share.": "Griežtos NDA sutartys, visiška intelektinės nuosavybės apsauga ir skaidrus pajamų pasidalijimas.",
+    "Strict compliance with European privacy laws, full encryption at rest & transit, zero unauthorized telemetry.": "Griežtas Europos privatumo įstatymų laikymasis, visiškas šifravimas saugant ir perduodant, nulis neteisėtos telemetrijos.",
+    "Strict financial governance, encryption & audit readiness": "Griežtas finansų valdymas, šifravimas ir pasirengimas auditui",
+    "Stripe + Credit Cards": "Stripe + kredito kortelės",
+    "Submit High-Priority Support Ticket": "Pateikti aukšto prioriteto pagalbos užklausą",
+    "Supported payment providers and checkout rails": "Palaikomi mokėjimų teikėjai ir atsiskaitymo kanalai",
+    "System APIs & Webhooks Access": "Prieiga prie sistemos API ir webhook'ų",
+    "System Uptime & Stability": "Sistemos veikimo laikas ir stabilumas",
+    "TLS 1.3 + Enhanced SSL Certificates": "TLS 1.3 + patobulinti SSL sertifikatai",
+    "Tap the Share icon in Safari, then select \"Add to Home Screen\".": "„Safari“ bakstelėkite bendrinimo piktogramą, tada pasirinkite „Pridėti prie pradžios ekrano“.",
+    "Tap the microphone to speak, or write your project requirements below...": "Bakstelėkite mikrofoną, kad kalbėtumėte, arba žemiau parašykite projekto reikalavimus...",
+    "Target Product / Solution:": "Tikslinis produktas / sprendimas:",
+    "Team / Staff Count": "Komanda / darbuotojų skaičius",
+    "Team Training & Knowledge Transfer": "Komandos mokymas ir žinių perdavimas",
+    "Team or Employee Count:": "Komandos arba darbuotojų skaičius:",
+    "Technical & Systems Architecture": "Techninė ir sistemų architektūra",
+    "Technical Support Response Times": "Techninės pagalbos atsakymo laikai",
+    "Test Interactive Software Simulator ⚡": "Išbandyti interaktyvų programinės įrangos simuliatorių ⚡"
   }
 }
