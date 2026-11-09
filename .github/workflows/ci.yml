@@ -86,6 +86,9 @@ jobs:
       - name: Translation leakage gate (ratchet)
         run: python scripts/audit_translation_leakage.py --allow-english 151
 
+  - name: Arabic containment gate (no Arabic UI text on non-Arabic pages)
+    run: python scripts/audit_arabic_containment.py
+
       - name: Test the Cloudflare Lead Capture Worker
         run: node scripts/test_lead_worker.mjs
 
