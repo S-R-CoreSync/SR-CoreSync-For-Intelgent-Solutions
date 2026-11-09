@@ -1,6 +1,6 @@
 {
   "language": "ckb",
-  "count": 441,
+  "count": 442,
   "strings": {
     "\"Powered by CoreSync\" Badge": "نیشانەی \"Powered by CoreSync\"",
     "1. Approved Operational Baseline Parameters": "1. پارامیتەرە بنەڕەتییەکانی کارکردنی پەسەندکراو",
@@ -352,6 +352,7 @@
     "Within 24 Hours (Support Tickets)": "لە ماوەی ٢٤ کاتژمێردا (تیکێتی پشتگیری)",
     "Within 4 Hours (Email + WhatsApp)": "لە ماوەی ٤ کاتژمێردا (ئیمەیل + WhatsApp)",
     "Your Genuine Digital License Key:": "کلیلی مۆڵەتی دیجیتاڵی ڕەسەنی تۆ:",
+    "إغلاق / Close": "داخستن",
     "↺ Reset & Clear": "↺ ڕیسێت و پاککردنەوە",
     "⏱️ 65% Reduction in Manual Processing Hours": "⏱️ ٦٥٪ کەمبوون لە کاتژمێرەکانی پرۆسێسی دەستی",
     "⚡ 3. Enterprise AI & Integrations": "⚡ ٣. AI و یەکخستنەکانی کۆمپانیا",
