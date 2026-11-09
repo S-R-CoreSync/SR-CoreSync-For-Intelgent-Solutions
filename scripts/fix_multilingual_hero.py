@@ -12,6 +12,17 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 BASE_DIR = SCRIPTS_DIR.parent
 LOCALES_PATH = SCRIPTS_DIR / "portal_hero_locales.json"
 SHARED_STYLESHEET = "../css/multilingual-hero-layout.css"
+
+
+def locale_inline_css(code):
+    """Return the consolidated inline stylesheet filename for a language code."""
+    if code == "ckb":
+        return "inline-ckb.css"
+    if code == "nl":
+        return "inline-nl.css"
+    if code in ("en", "de"):
+        return "inline-en.css"
+    return "inline-ltr.css"
 INLINE_STYLESHEET = re.compile(
     r'<link\b[^>]*href=(["\'])\.\./css/inline-[^"\']+\.css\1[^>]*>',
     re.IGNORECASE,
@@ -202,7 +213,7 @@ def normalize_index_html(content, code):
     links = list(INLINE_STYLESHEET.finditer(content))
     if len(links) != 1:
         raise ValueError(f"{code}/index.html: expected one locale inline stylesheet link")
-    expected_link = f'<link rel="stylesheet" href="../css/inline-{code}.css">'
+    expected_link = f'<link rel="stylesheet" href="../css/{locale_inline_css(code)}">'
     content = (
         content[:links[0].start()]
         + expected_link
@@ -234,7 +245,7 @@ def normalize_index_html(content, code):
 
 def validate_index_content(content, code):
     issues = []
-    expected_inline = f'href="../css/inline-{code}.css"'
+    expected_inline = f'href="../css/{locale_inline_css(code)}"'
     if content.count(expected_inline) != 1:
         issues.append(f"{code}/index.html: locale-specific CSS link is missing or duplicated")
     if content.count(SHARED_STYLESHEET) != 1:
@@ -314,7 +325,7 @@ def main():
             content = normalized
         issues.extend(validate_index_content(content, code))
 
-        css_path = BASE_DIR / "css" / f"inline-{code}.css"
+        css_path = BASE_DIR / "css" / locale_inline_css(code)
         if not css_path.is_file():
             issues.append(f"css/inline-{code}.css: locale stylesheet is missing")
 
