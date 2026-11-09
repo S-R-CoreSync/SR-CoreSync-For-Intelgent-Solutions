@@ -46,6 +46,13 @@ EXCLUDED_DIRS = {
 # screenshot into the published artefact the way .zwork nearly did.
 ALLOWED_DOT_DIRS = {'.nojekyll', '.well-known'}
 
+# Underscore-prefixed directories are local archives and staging folders
+# (_site, _trash_*, _css_archive_*). They are never site content: publishing
+# _trash_160 exposed 474 duplicate pages (406 MB) to search engines. The only
+# underscore-named entries that do ship are root files such as _headers, so
+# the rule is scoped to directories on purpose.
+EXCLUDED_DIR_PREFIXES = ('_',)
+
 # ---------------------------------------------------------------------------
 # Root level files that are never published.
 # ---------------------------------------------------------------------------
@@ -153,6 +160,9 @@ def is_excluded(rel_path):
 
     if name in EXCLUDED_DIRS:
         return True
+    # Any underscore-prefixed directory is a local archive / staging folder.
+    if any(part.startswith(EXCLUDED_DIR_PREFIXES) for part in parts[:-1]):
+        return True
     # Any dot-directory (including at the repository root) is tooling state
     # unless explicitly allow-listed. Stops .venv / .agents / etc. leaking.
     if name.startswith('.') and name not in ALLOWED_DOT_DIRS:
@@ -178,6 +188,7 @@ def iter_publish_files(root=None):
         dirnames[:] = sorted(
             d for d in dirnames
             if d not in EXCLUDED_DIRS
+            and not d.startswith(EXCLUDED_DIR_PREFIXES)
             and not (d.startswith('.') and d not in ALLOWED_DOT_DIRS)
             and not d.endswith(SAVED_PAGE_DIR_SUFFIX)
         )

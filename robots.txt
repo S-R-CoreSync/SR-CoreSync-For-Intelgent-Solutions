@@ -10,5 +10,12 @@ Disallow: /dist/
 Disallow: /.agents/
 Disallow: /.git/
 
+# Local archives / staging folders that are never part of the published site.
+# They are excluded from the publish set as well; this line only stops engines
+# from probing legacy paths that a previous deployment may still serve.
+Disallow: /_trash_
+Disallow: /_css_archive_
+Disallow: /_site/
+
 # Official Multilingual XML Sitemap
 Sitemap: https://sr-coresync.com/sitemap.xml

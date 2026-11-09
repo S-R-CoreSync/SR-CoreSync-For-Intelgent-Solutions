@@ -71,3 +71,7 @@ workers/**/tail*.out*
 _site/
 .chrome-*/
 temp_chrome_print_dir*/
+
+# Local cleanup archives (never committed, never published)
+_trash_*/
+_css_archive_*/

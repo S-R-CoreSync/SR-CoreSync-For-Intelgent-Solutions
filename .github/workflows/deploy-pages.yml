@@ -169,6 +169,21 @@ jobs:
         run: python scripts/prepare_publish_set.py
 
       # ---------------------------------------------------------------------
+      # Guard: the artifact must not contain broken local references.
+      #
+      # The Nov 2026 "fast cleanup" deleted css/dananajmah-bundle.min.css and
+      # 23 per-language stylesheets while 53 pages still linked them, and
+      # renamed the hero video without updating its 31 references. The CI job
+      # caught it, but this workflow did not depend on CI, so the 404s shipped
+      # to production. These two checks make the deploy workflow self-guarding.
+      # ---------------------------------------------------------------------
+      - name: Verify publish set integrity (no broken local references)
+        run: |
+          set -euo pipefail
+          python scripts/validate_publish_set.py
+          python scripts/check_site_links.py
+
+      # ---------------------------------------------------------------------
       # Guard: fail the deployment if anything sensitive slipped through.
       # ---------------------------------------------------------------------
       - name: Verify no server-side material is published
