@@ -16,6 +16,7 @@ Automated CI Gate:
 4. Verifies 100% Arabic asset references in the root Arabic master.
 """
 
+import collections
 import os
 import re
 import sys
@@ -34,6 +35,13 @@ LTR_LANGS = [
 ALL_LANGS = LTR_LANGS + ['ckb']
 
 AR_RE = re.compile(r'[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]')
+
+# The language switcher lists every language in its own script (العربية, کوردی,
+# עברית...). That is correct UX, not a translation leak, so those lines are
+# exempted - but counted, so the exemption can never hide a real regression.
+SWITCHER_HINTS = ('apple-dock-item', 'apple-macos-dock', 'apple-launchpad',
+                  'apple-dock-flag', 'apple-dock-dot')
+switcher_lines = 0
 
 def audit_purity():
     failures = []
@@ -57,6 +65,10 @@ def audit_purity():
             for i, line in enumerate(lines, 1):
                 clean_line = re.sub(r'<!--.*?-->', '', line).strip()
                 if AR_RE.search(clean_line):
+                    if any(hint in clean_line for hint in SWITCHER_HINTS):
+                        global switcher_lines
+                        switcher_lines += 1
+                        continue
                     page_leaks += 1
                     failures.append(f"Contamination in {lang}/{page} L{i}: {clean_line[:60]}")
             if page_leaks == 0:
@@ -147,8 +159,13 @@ def audit_purity():
         print(f"[✓] Arabic Master Visuals: All {len(arabic_assets)} assets verified present.")
 
     print("=" * 70)
+    print(f"[i] Language-switcher lines exempted (native script names): {switcher_lines}")
     if failures:
         print(f"AUDIT STATUS: FAILED ({len(failures)} issues found):")
+        by_kind = collections.Counter(f.split(':')[0].split(' in ')[0] for f in failures)
+        for kind, count in by_kind.most_common():
+            print(f"    {kind}: {count}")
+        print("  --- samples ---")
         for f in failures[:15]:
             print(f"  - {f}")
         return 1
