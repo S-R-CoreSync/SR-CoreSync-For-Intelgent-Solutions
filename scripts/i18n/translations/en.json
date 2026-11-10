@@ -1,10 +1,22 @@
 {
   "language": "en",
-  "count": 4,
+  "count": 16,
   "strings": {
+    "3 أشهر استضافة مجانية + دومين.": "3 months of free hosting + domain.",
+    "RFQ أو WhatsApp — استشارة مجانية 30 دقيقة.": "RFQ or WhatsApp — free 30-minute consultation.",
+    "Stripe, Mollie (iDEAL), SEPA, PayPal.": "Stripe, Mollie (iDEAL), SEPA, PayPal.",
     "إغلاق / Close": "Close",
     "المختبر والشراكات": "Lab & Partnerships",
     "ترخيص White-Label": "White-Label Licensing",
-    "سوق البرمجيات": "Software Store"
+    "سوق البرمجيات": "Software Store",
+    "كم يستغرق تنفيذ موقع/متجر؟": "How long does it take to build a website/store?",
+    "كيف أبدأ؟": "How do I get started?",
+    "ما طرق الدفع المقبولة؟": "Which payment methods are accepted?",
+    "موقع: 2-4 اسابيع. متجر: 4-6 اسابيع.": "Website: 2–4 weeks. Store: 4–6 weeks.",
+    "نعم — باقات صيانة.": "Yes — maintenance plans.",
+    "نعم، 100%.": "Yes, 100%.",
+    "هل أملك الكود المصدري؟": "Do I own the source code?",
+    "هل تشمل الأسعار الاستضافة والدومين؟": "Do the prices include hosting and a domain?",
+    "هل تقدمون صيانة بعد التسليم؟": "Do you provide maintenance after delivery?"
   }
 }

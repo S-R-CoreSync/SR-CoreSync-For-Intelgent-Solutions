@@ -17,12 +17,14 @@ from deploy_sovereign_multilingual import LANGUAGES  # noqa: E402
 LANDING_LOCALES_PATH = SCRIPTS_DIR / "portal_shared_sections_locales.json"
 TRACKER_LOCALES_PATH = SCRIPTS_DIR / "portal_demo_tracker_locales.json"
 LANDING_SECTION_IDS = (
-    "services-faq",
     "services-compare",
     "tech-pillars",
     "insights",
 )
-FRONT_SECTION_IDS = LANDING_SECTION_IDS[:3]
+# software-hub and testimonials carry per-page content (products, platform
+# licences, quotes) that is translated inside each language page; managing
+# them here required a full master->locale table for every product string.
+FRONT_SECTION_IDS = ("services-compare", "tech-pillars")
 REQUIRED_LOCALIZED_TEXT = (
     "Autonomous AI Agents & Enterprise LLMs",
     "EU AI Act 2026",
