@@ -14,9 +14,10 @@ from fix_multilingual_hero import validate_index_content  # noqa: E402
 
 
 INDEX_SECTIONS = (
-    "founders-showcase",
-    "trust-band",
+    "hero",
     "about",
+    "trust-band",
+    "founders-showcase",
     "services",
     "services-compare",
     "tech-pillars",
