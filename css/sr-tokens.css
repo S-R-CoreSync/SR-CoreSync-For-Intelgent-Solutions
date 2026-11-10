@@ -1,0 +1,37 @@
+/* S&R CoreSync - design tokens + jump strip
+   Single source for spacing, colour and radius: new components read these
+   instead of hard-coding hex values, so the palette cannot drift again. */
+:root{
+  --sr-space-1:.25rem; --sr-space-2:.5rem; --sr-space-3:.75rem; --sr-space-4:1rem;
+  --sr-space-5:1.5rem; --sr-space-6:2rem; --sr-space-7:3rem;
+  --sr-gold:#d4af37; --sr-gold-soft:#f0d79a; --sr-gold-text:#ecd9a0;
+  --sr-ink:#090b0e; --sr-paper:#f4f1e6; --sr-muted:rgba(233,226,207,.72);
+  --sr-line:rgba(216,178,94,.28); --sr-line-strong:rgba(216,178,94,.6);
+  --sr-radius-sm:10px; --sr-radius-md:18px; --sr-radius-pill:999px;
+  --sr-blur:blur(10px);
+}
+/* Jump strip: one tap to any stage. In flow on purpose - the page already has
+   five fixed overlays and a sixth would fight them on small screens. */
+.sr-jump{
+  display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center;
+  max-width:min(100%, 720px); margin:var(--sr-space-5) auto var(--sr-space-6);
+  padding:0 var(--sr-space-4);
+}
+.sr-jump a{
+  display:inline-flex; align-items:center; gap:.45rem;
+  padding:.5rem .95rem; border-radius:var(--sr-radius-pill);
+  border:1px solid var(--sr-line); background:rgba(9,11,14,.55);
+  color:var(--sr-muted); font-size:.82rem; line-height:1.2; text-decoration:none;
+  white-space:nowrap; transition:color .2s ease, border-color .2s ease, background .2s ease;
+}
+.sr-jump a svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;flex:0 0 auto}
+.sr-jump a:hover,.sr-jump a:focus-visible{
+  color:var(--sr-gold-text); border-color:var(--sr-line-strong);
+  background:rgba(212,175,55,.1); outline:none;
+}
+@media (max-width:520px){
+  .sr-jump{flex-wrap:nowrap; overflow-x:auto; justify-content:flex-start; scrollbar-width:none}
+  .sr-jump::-webkit-scrollbar{display:none}
+  .sr-jump a{font-size:.76rem; padding:.45rem .8rem}
+}
+@media (prefers-reduced-motion:reduce){ .sr-jump a{transition:none} }
