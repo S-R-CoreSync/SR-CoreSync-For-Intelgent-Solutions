@@ -1622,9 +1622,14 @@ html[lang="ckb"] .hero-cinematic .hero-reference__title .hero-title-line__text,
 
 </style>
 <style id="sr-act1-css">
-/* ACT1 hero rebuild (mirrored to every language): one quiet CTA, no VIP shout */
-.hero-btn-quiet{background:transparent!important;border:1px solid rgba(212,175,55,.45)!important;color:#ecd9a0!important;box-shadow:none!important;backdrop-filter:blur(4px)}
-.hero-btn-quiet:hover{background:rgba(212,175,55,.09)!important;border-color:rgba(212,175,55,.8)!important}
+/* ACT1 hero rebuild (mirrored to every language): one quiet CTA, no VIP shout.
+   Specificity is raised to a.hero-btn-demo.hero-btn-quiet on purpose: the loud
+   .hero-btn-primary-highlight rules live in a body-level style block, so an
+   equal-specificity rule in <head> would lose on document order and leave the
+   button gold-on-white instead of quiet. */
+a.hero-btn-demo.hero-btn-quiet{background:transparent!important;border:1px solid rgba(212,175,55,.45)!important;color:#ecd9a0!important;box-shadow:none!important;text-shadow:none!important;backdrop-filter:blur(4px)}
+a.hero-btn-demo.hero-btn-quiet:hover{background:rgba(212,175,55,.09)!important;border-color:rgba(212,175,55,.82)!important;color:#f0d79a!important;box-shadow:none!important}
+a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!important}
 </style>
 </head>
 
