@@ -245,8 +245,10 @@ def normalize_index_html(content, code):
 
 def validate_index_content(content, code):
     issues = []
-    expected_inline = f'href="../css/{locale_inline_css(code)}"'
-    if content.count(expected_inline) != 1:
+    inline_name = locale_inline_css(code)
+    inline_pattern = re.compile(
+        r'href="\.\./css/' + re.escape(inline_name) + r'(?:\?[^"]*)?"')
+    if len(inline_pattern.findall(content)) != 1:
         issues.append(f"{code}/index.html: locale-specific CSS link is missing or duplicated")
     if content.count(SHARED_STYLESHEET) != 1:
         issues.append(f"{code}/index.html: shared hero stylesheet link is missing or duplicated")
