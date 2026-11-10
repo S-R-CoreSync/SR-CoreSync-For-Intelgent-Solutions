@@ -406,6 +406,20 @@ a.hero-btn-demo.hero-btn-quiet{background:transparent!important;border:1px solid
 a.hero-btn-demo.hero-btn-quiet:hover{background:rgba(212,175,55,.09)!important;border-color:rgba(212,175,55,.82)!important;color:#f0d79a!important;box-shadow:none!important}
 a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!important}
 </style>
+<style id="sr-about-value-css">
+/* Stage 2 of the approved ladder: three value cards answering "why us".
+   Kept in the same glass/gold language as the trust band and the pricing
+   badges; one column under 900px so the founders block keeps its width. */
+.about-value{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.05rem;margin:0 0 2.3rem}
+.about-value__card{background:rgba(9,11,14,.55);border:1px solid rgba(216,178,94,.28);border-radius:18px;padding:1.3rem 1.2rem;backdrop-filter:blur(6px);display:flex;flex-direction:column;gap:.55rem;transition:border-color .25s ease}
+.about-value__card:hover{border-color:rgba(216,178,94,.6)}
+.about-value__icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(216,178,94,.35);color:#f0d79a}
+.about-value__title{font-size:1.02rem;font-weight:700;color:#f4f1e6;margin:0;line-height:1.4}
+.about-value__body{font-size:.9rem;line-height:1.7;color:rgba(233,226,207,.72);margin:0}
+.about-value__badge{align-self:flex-start;margin-top:.15rem;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:#f0d79a;border:1px solid rgba(216,178,94,.32);border-radius:999px;padding:.2rem .65rem;white-space:nowrap}
+@media (max-width:900px){.about-value{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.about-value__card{transition:none}}
+</style>
 </head>
 
 <body class="counter-scroll preloader-complete">
@@ -1096,6 +1110,8 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                 <img loading="lazy" decoding="async" width="1440" height="906" src="../assets/bg-about.webp" alt="Backdrop">
             </div>
             <div class="container-executive-about position-relative z-5">
+                <div class="about-value"><div class="about-value__card"><span class="about-value__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><h3 class="about-value__title">Koodin täysi omistajuus</h3><p class="about-value__body">Lähdekoodi ja immateriaalioikeudet siirtyvät kokonaan sinulle - ilman pakollista tilausta ja ilman toimittajalukkoa.</p><span class="about-value__badge">100% IP</span></div><div class="about-value__card"><span class="about-value__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 18a4 4 0 010-8 5.5 5.5 0 0110.6 1.5A3.5 3.5 0 0117.5 18H7z"/><path d="M12 21v-3"/></svg></span><h3 class="about-value__title">Eurooppalainen pilvisuvereniteetti</h3><p class="about-value__body">Ylläpito Amsterdamissa GDPR-, NIS2- ja eIDAS-vaatimusten mukaisesti - tietosi pysyvät Euroopan unionissa.</p><span class="about-value__badge">AMS-IX</span></div><div class="about-value__card"><span class="about-value__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0111 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 19a4.5 4.5 0 016 0"/></svg></span><h3 class="about-value__title">Suoraan perustajilta</h3><p class="about-value__body">Työskentelet suoraan ins. Salim Azizan ja Raed Kaakan kanssa - ilman välittäjiä ja lisähallintotasoja.</p><span class="about-value__badge">CTO + CFO</span></div></div>
+                
                 <div class="executive-about-grid">
                     
                     <div class="executive-grid-salim">
