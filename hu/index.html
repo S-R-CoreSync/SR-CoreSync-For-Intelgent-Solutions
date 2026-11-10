@@ -421,6 +421,23 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
 @media (prefers-reduced-motion:reduce){.about-value__card{transition:none}}
 </style>
 <link rel="stylesheet" href="../css/sr-tokens.css">
+<style id="sr-process-guarantees-css">
+/* Stage 5 + 6: how we work, and what we guarantee.
+   Reuses the tokens file so spacing and gold stay in one place. */
+.sr-block{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+.sr-block__head{max-width:820px;margin:0 auto 2rem;text-align:center}
+.sr-block__eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sr-gold-text, #ecd9a0);border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:999px;padding:.25rem .8rem;margin-bottom:.9rem}
+.sr-block__title{font-size:clamp(1.5rem,2.4vw,2.1rem);font-weight:800;color:var(--sr-paper, #f4f1e6);margin:0 0 .6rem}
+.sr-block__sub{font-size:.95rem;line-height:1.7;color:var(--sr-muted, rgba(233,226,207,.72));margin:0}
+.sr-steps,.sr-pledges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;list-style:none;margin:0;padding:0}
+.sr-steps li,.sr-pledges li{background:rgba(9,11,14,.55);border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:18px;padding:1.1rem 1.05rem}
+.sr-steps__num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid rgba(216,178,94,.45);color:#f0d79a;font-size:.8rem;font-weight:800;margin-bottom:.55rem}
+.sr-steps__title,.sr-pledges__title{font-size:.98rem;font-weight:700;color:#f4f1e6;margin:0 0 .35rem;line-height:1.4}
+.sr-steps__meta{display:block;font-size:.72rem;letter-spacing:.04em;color:#f0d79a;margin-bottom:.4rem}
+.sr-steps__body,.sr-pledges__body{font-size:.86rem;line-height:1.65;color:rgba(233,226,207,.72);margin:0}
+@media (max-width:980px){.sr-steps,.sr-pledges{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sr-steps,.sr-pledges{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body class="counter-scroll preloader-complete">
@@ -2106,6 +2123,7 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                 </div>
             </div>
         </section>
+<section class="flat-spacing" id="process" data-section><div class="sr-block"><div class="sr-block__head"><span class="sr-block__eyebrow">Így dolgozunk</span><h2 class="sr-block__title">Négy lépés az ötlettől a tulajdonig</h2><p class="sr-block__sub">Nincs nyitott óra és nincs homályos hatókör: minden lépésnek van időtartama és írásos eredménye.</p></div><ol class="sr-steps"><li><span class="sr-steps__num">1</span><span class="sr-steps__meta">45 perc</span><h3 class="sr-steps__title">Feltárás</h3><p class="sr-steps__body">Egy ülés a rendszer megértésére; ingyenes hatókör-jegyzettel távozik.</p></li><li><span class="sr-steps__num">2</span><span class="sr-steps__meta">3-5 nap</span><h3 class="sr-steps__title">Fix hatókör</h3><p class="sr-steps__body">Írásos ajánlat világos tételekkel - nyitott órák és meglepetések nélkül.</p></li><li><span class="sr-steps__num">3</span><span class="sr-steps__meta">2-8 hét</span><h3 class="sr-steps__title">Szakaszos átadás</h3><p class="sr-steps__body">Működő tesztkörnyezet az első héttől, minden szakaszban átvizsgálással.</p></li><li><span class="sr-steps__num">4</span><span class="sr-steps__meta">Átadáskor</span><h3 class="sr-steps__title">Tulajdonátruházás</h3><p class="sr-steps__body">Kód, dokumentáció, kulcsok és csapatképzés, szerződésben rögzítve.</p></li></ol></div></section>
 
 <section class="flat-spacing section-software-hub" id="software-hub" data-section>
             <div class="container">
@@ -3767,6 +3785,7 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                 </div>
             </div>
         </section>
+<section class="flat-spacing" id="guarantees" data-section><div class="sr-block"><div class="sr-block__head"><span class="sr-block__eyebrow">Írásos garanciák</span><h2 class="sr-block__title">Négy vállalás a szerződésben, nem a prezentációban</h2><p class="sr-block__sub">Minden itteni garanciának van egy záradéka a feltételekben vagy a megfelelőségi anyagban.</p></div><ol class="sr-pledges"><li><span class="sr-steps__num">1</span><span class="sr-steps__meta">Tulajdon</span><h3 class="sr-pledges__title">A kód a tiéd</h3><p class="sr-pledges__body">A forráskód és a szellemi tulajdon a végleges fizetéskor átszáll, szerződésben rögzítve.</p></li><li><span class="sr-steps__num">2</span><span class="sr-steps__meta">Kilépés</span><h3 class="sr-pledges__title">Nincs bezárás</h3><p class="sr-pledges__body">Teljes átadás kérésre: nincs függés a szervereinktől vagy licencünktől.</p></li><li><span class="sr-steps__num">3</span><span class="sr-steps__meta">Szolgáltatás</span><h3 class="sr-pledges__title">99,9% SLA</h3><p class="sr-pledges__body">Hostolt platformokra, írásos szolgáltatási jóváírással túllépés esetén.</p></li><li><span class="sr-steps__num">4</span><span class="sr-steps__meta">Adatok</span><h3 class="sr-pledges__title">Csak Amszterdam</h3><p class="sr-pledges__body">Az adatok az EU-ban maradnak, hozzájárulás nélkül nem mennek külföldre.</p></li></ol></div></section>
 
         
         
