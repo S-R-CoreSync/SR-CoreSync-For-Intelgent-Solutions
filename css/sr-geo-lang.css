@@ -15,10 +15,10 @@
    ========================================================================== */
 
 :root {
-    --sr-geolang-gold: #c5a880;
+    --sr-geolang-gold: #d4af37;
     --sr-geolang-gold-light: #f3dfba;
     --sr-geolang-bg: rgba(5, 12, 9, 0.96);
-    --sr-geolang-border: rgba(197, 168, 128, 0.30);
+    --sr-geolang-border: rgba(212,175,55, 0.30);
     --sr-geolang-emerald: #10b981;
     --sr-geolang-emerald-light: #6ee7b7;
 }
@@ -66,12 +66,12 @@ html[dir="rtl"] .sr-geolang-banner {
     gap: 14px;
     padding: 10px 18px;
     background: rgba(7, 16, 12, 0.94);
-    border: 1px solid rgba(197, 168, 128, 0.45);
+    border: 1px solid rgba(212,175,55, 0.45);
     border-radius: 999px;
     -webkit-backdrop-filter: blur(28px) saturate(190%);
     backdrop-filter: blur(28px) saturate(190%);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75),
-                0 0 25px rgba(197, 168, 128, 0.18),
+                0 0 25px rgba(212,175,55, 0.18),
                 inset 0 1px 0 rgba(255, 255, 255, 0.15);
     flex-wrap: nowrap;
 }
@@ -142,12 +142,12 @@ html[dir="rtl"] .sr-geolang-banner {
     background: linear-gradient(135deg, var(--sr-geolang-gold), #d4b896);
     color: #040806;
     border-color: var(--sr-geolang-gold);
-    box-shadow: 0 2px 10px rgba(197, 168, 128, 0.35);
+    box-shadow: 0 2px 10px rgba(212,175,55, 0.35);
 }
 
 .sr-geolang-btn--primary:hover {
     background: linear-gradient(135deg, var(--sr-geolang-gold-light), var(--sr-geolang-gold));
-    box-shadow: 0 4px 18px rgba(197, 168, 128, 0.55);
+    box-shadow: 0 4px 18px rgba(212,175,55, 0.55);
     transform: translateY(-1px);
 }
 
