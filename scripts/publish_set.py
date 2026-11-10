@@ -187,6 +187,33 @@ def is_excluded(rel_path):
     return False
 
 
+# ---------------------------------------------------------------------------
+# Assets no published page can reach.
+#
+# 55.6 MB of the artefact was brand exports whose file name appears in no
+# HTML/CSS/JS/JSON of the repository (mostly JPG twins of the WebP files the
+# pages actually load). They stay in git - only the deploy artefact skips them,
+# which keeps the Pages sync inside its 10-minute budget. The list is data, not
+# code, so it can be reviewed and regenerated without touching this module.
+# ---------------------------------------------------------------------------
+DEAD_ASSET_LIST = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), 'publish_dead_assets.txt')
+
+
+def _load_dead_assets():
+    try:
+        with open(DEAD_ASSET_LIST, encoding='utf-8') as handle:
+            return {
+                line.strip() for line in handle
+                if line.strip() and not line.lstrip().startswith('#')
+            }
+    except OSError:
+        return set()
+
+
+DEAD_ASSETS = _load_dead_assets()
+
+
 def iter_publish_files(root=None):
     """Yield every repository-relative path that belongs to the publish set."""
     base = root or ROOT
@@ -204,6 +231,8 @@ def iter_publish_files(root=None):
         for name in sorted(filenames):
             rel = (rel_dir + '/' + name) if rel_dir else name
             if is_excluded(rel):
+                continue
+            if rel in DEAD_ASSETS:
                 continue
             if name.lower().endswith('.html') and _is_saved_page(
                     os.path.join(dirpath, name)):
