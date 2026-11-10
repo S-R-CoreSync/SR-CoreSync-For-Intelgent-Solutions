@@ -16,6 +16,7 @@ from fix_multilingual_hero import validate_index_content  # noqa: E402
 INDEX_SECTIONS = (
     "founders-showcase",
     "trust-band",
+    "about",
     "services",
     "services-compare",
     "tech-pillars",
@@ -25,7 +26,6 @@ INDEX_SECTIONS = (
     "roi-calculator",
     "faq",
     "executive-solutions-stage",
-    "about",
     "contact",
     "compliance",
     "newsletter",

@@ -200,6 +200,20 @@ async function main() {
         console.log('='.repeat(72));
         return;
     }
+    // A publish set that exists but has no css/js/assets is a broken build, not a
+    // site with dead pages. Without them the local server 404s every shared asset
+    // and the audit prints N page failures with zero JS errors, which points the
+    // investigation at the markup instead of at the artefact. Stay blocking, but
+    // name the real cause.
+    const missingBaselines = ['index.html', 'css', 'js', 'assets']
+        .filter(p => !existsSync(join(SITE, p)));
+    if (missingBaselines.length) {
+        console.log('='.repeat(72));
+        console.log('BLOCKED - publish set is incomplete: missing ' + missingBaselines.join(', '));
+        console.log('Rebuild it: python scripts/prepare_publish_set.py');
+        console.log('='.repeat(72));
+        process.exit(1);
+    }
     PORT = await findFreePort(9222);
     HTTP_PORT = await findFreePort(8099);
     console.log(`DevTools port ${PORT}, site server port ${HTTP_PORT}`);

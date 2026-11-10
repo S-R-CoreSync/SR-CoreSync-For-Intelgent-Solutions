@@ -237,4 +237,28 @@ document.addEventListener('DOMContentLoaded', initZoomInteractions);
 } else {
 initZoomInteractions();
 }
+
+/* ---------------------------------------------------------------------------
+ * About film - deferred playback.
+ *
+ * The value-proposition section now sits directly under the hero, and its
+ * background film used to be fetched with fetchpriority="high" + autoplay.
+ * That competes with the founder poster, which is the LCP element. The markup
+ * is preload="none", so this is what brings the film in: the first time the
+ * frame is within 200px of the viewport, and once only.
+ * ------------------------------------------------------------------------- */
+(function lazyAboutFilm() {
+  const film = document.querySelector('video[src*="about-founder-cinematic"]');
+  if (!film) return;
+  const start = () => { film.play().catch(() => {}); };
+  if (!('IntersectionObserver' in window)) { start(); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      start();
+      io.disconnect();
+    });
+  }, { rootMargin: '200px' });
+  io.observe(film);
+})();
 })();

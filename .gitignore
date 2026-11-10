@@ -69,6 +69,8 @@ workers/**/tail*.out*
 
 # Local publish staging directory used by the GitHub Pages workflow
 _site/
+_site.next/
+_site.prev/
 .chrome-*/
 temp_chrome_print_dir*/
 

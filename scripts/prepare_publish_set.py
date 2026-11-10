@@ -33,6 +33,15 @@ from publish_set import (  # noqa: E402
 )
 
 STAGE = os.path.join(ROOT, '_site')
+# The publish set is staged beside the live tree and swapped in only once every
+# file is copied and the guard passes. `_site` used to be deleted in place and
+# repopulated, so any interruption - Ctrl-C, a locked file, a full disk - left a
+# half-built tree, and the five gates that read `_site` then reported a site full
+# of dead pages: 30 failed browser pages, 48 "missing" local references, a stale
+# CSP manifest. Building beside the live tree keeps the last good artefact
+# intact. Both siblings start with '_', so publish_set.py never ships them.
+STAGE_NEXT = os.path.join(ROOT, '_site.next')
+STAGE_PREV = os.path.join(ROOT, '_site.prev')
 
 
 def main():
@@ -40,43 +49,68 @@ def main():
     print('S&R CoreSync - Building the GitHub Pages publish set')
     print('=' * 70)
 
-    if os.path.isdir(STAGE):
-        shutil.rmtree(STAGE)
-    os.makedirs(STAGE)
+    # Never build in place: a copy that dies halfway must not be able to hide the
+    # previous artefact from the gates that audit it.
+    for stale in (STAGE_NEXT, STAGE_PREV):
+        if os.path.isdir(stale):
+            shutil.rmtree(stale)
+    os.makedirs(STAGE_NEXT)
 
     files = publish_set()
     copied = 0
     total_bytes = 0
 
-    for rel in files:
-        src = os.path.join(ROOT, rel.replace('/', os.sep))
-        dst = os.path.join(STAGE, rel.replace('/', os.sep))
-        dst_dir = os.path.dirname(dst)
-        if dst_dir and not os.path.isdir(dst_dir):
-            os.makedirs(dst_dir)
-        shutil.copy2(src, dst)
-        copied += 1
-        total_bytes += os.path.getsize(src)
+    try:
+        for rel in files:
+            src = os.path.join(ROOT, rel.replace('/', os.sep))
+            dst = os.path.join(STAGE_NEXT, rel.replace('/', os.sep))
+            dst_dir = os.path.dirname(dst)
+            if dst_dir and not os.path.isdir(dst_dir):
+                os.makedirs(dst_dir)
+            shutil.copy2(src, dst)
+            copied += 1
+            total_bytes += os.path.getsize(src)
+    except OSError as exc:
+        shutil.rmtree(STAGE_NEXT, ignore_errors=True)
+        print('-' * 70)
+        print('FAILED: staging the publish set did not finish: %s' % exc)
+        print('The previous _site/ build is untouched.')
+        return 1
 
-    print('Copied %d files (%.2f MB) into _site/' % (copied, total_bytes / 1024.0 / 1024.0))
+    print('Copied %d files (%.2f MB) into _site.next/' % (copied, total_bytes / 1024.0 / 1024.0))
 
     # Guard: nothing forbidden may exist inside the staging directory.
     failures = []
     for bad in FORBIDDEN_PUBLISHED:
-        target = os.path.join(STAGE, bad)
+        target = os.path.join(STAGE_NEXT, bad)
         if os.path.exists(target):
             failures.append('Forbidden path present in the publish set: %s' % bad)
 
     for req in REQUIRED_PUBLISHED:
-        if not os.path.exists(os.path.join(STAGE, req)):
+        if not os.path.exists(os.path.join(STAGE_NEXT, req)):
             failures.append('Required publish file missing: %s' % req)
 
     if failures:
+        shutil.rmtree(STAGE_NEXT, ignore_errors=True)
         print('-' * 70)
         print('FAILED:')
         for f in failures:
             print('  X ' + f)
+        print('The previous _site/ build is untouched.')
         return 1
+
+    # Promote the verified build with two directory renames on one volume, so the
+    # window where `_site` is absent is a filesystem call wide instead of the
+    # minutes a file-by-file copy takes.
+    if os.path.isdir(STAGE):
+        os.rename(STAGE, STAGE_PREV)
+    try:
+        os.rename(STAGE_NEXT, STAGE)
+    except OSError:
+        if os.path.isdir(STAGE_PREV):
+            os.rename(STAGE_PREV, STAGE)
+        raise
+    shutil.rmtree(STAGE_PREV, ignore_errors=True)
 
     print('Guard passed: no server-side material in the publish set.')
     print('=' * 70)
