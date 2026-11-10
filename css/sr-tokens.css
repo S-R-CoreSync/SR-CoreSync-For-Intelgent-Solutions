@@ -55,3 +55,16 @@
   #pricing .text-white-64,#pricing .desc,#pricing p{color:#333 !important}
   video,iframe,.hero-sectors-marquee{display:none !important}
 }
+
+/* Command palette (Ctrl/Cmd+K). Same tokens as the rest of the chrome. */
+.sr-cmd{position:fixed;inset:0;z-index:100090;display:flex;align-items:flex-start;justify-content:center;padding:12vh 1rem 1rem;background:rgba(4,6,8,.72);backdrop-filter:blur(3px)}
+.sr-cmd[hidden]{display:none}
+.sr-cmd__panel{width:min(620px,100%);background:#0b0f14;border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -30px #000}
+.sr-cmd__input{width:100%;border:0;border-bottom:1px solid var(--sr-line, rgba(216,178,94,.22));background:transparent;color:#f4f1e6;font-size:1rem;padding:1rem 1.1rem;outline:none}
+.sr-cmd__list{list-style:none;margin:0;padding:.4rem;max-height:52vh;overflow:auto}
+.sr-cmd__list li a{display:block;padding:.6rem .8rem;border-radius:10px;color:rgba(233,226,207,.86);text-decoration:none;font-size:.92rem}
+.sr-cmd__list li.is-active a,.sr-cmd__list li a:hover{background:rgba(212,175,55,.12);color:#f0d79a}
+.sr-cmd__empty{padding:.9rem;color:rgba(233,226,207,.5);text-align:center}
+.sr-cmd__foot{margin:0;padding:.5rem .9rem .7rem;font-size:.72rem;color:rgba(233,226,207,.45);border-top:1px solid rgba(216,178,94,.16)}
+html.sr-cmd-open{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.sr-cmd{backdrop-filter:none}}
