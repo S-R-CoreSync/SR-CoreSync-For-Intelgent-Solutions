@@ -255,7 +255,7 @@
                     <div class="sr-privacy-modal-header">
                         <div class="sr-privacy-modal-title-wrap">
                             <h3 id="srPrivacyModalTitle">
-                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#c5a880" stroke-width="2.2">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#d4af37" stroke-width="2.2">
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                 </svg>
                                 <span>${t.modalTitle}</span>

@@ -25,7 +25,7 @@ const brands = {
         name: 'SARLOR',
         tagline: 'Fatayer & Mana\'ish • Artisanal Syrian Eatery',
         primaryColor: '#c82333',
-        secondaryColor: '#c5a880',
+        secondaryColor: '#d4af37',
         accentColor: '#f9d342',
         darkColor: '#0a0d0c',
         year: '2024',
@@ -35,7 +35,7 @@ const brands = {
             <defs>
                 <linearGradient id="sarlorGold" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#f5e1a4" />
-                    <stop offset="50%" stop-color="#c5a880" />
+                    <stop offset="50%" stop-color="#d4af37" />
                     <stop offset="100%" stop-color="#9a7b4f" />
                 </linearGradient>
                 <linearGradient id="sarlorCrimson" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -76,7 +76,7 @@ const brands = {
         id: 'oasis',
         name: 'OASIS',
         tagline: 'Integrated Luxury Architectural & Hospitality Identity',
-        primaryColor: '#c5a880',
+        primaryColor: '#d4af37',
         secondaryColor: '#1d2a24',
         accentColor: '#38bdf8',
         darkColor: '#05100c',
@@ -87,7 +87,7 @@ const brands = {
             <defs>
                 <linearGradient id="oasisGold" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="40%" stop-color="#c5a880" />
+                    <stop offset="40%" stop-color="#d4af37" />
                     <stop offset="100%" stop-color="#8c734b" />
                 </linearGradient>
             </defs>
@@ -110,7 +110,7 @@ const brands = {
         name: 'TONEH',
         tagline: 'Digital-First Streaming Media & Bilingual Typography Brand',
         primaryColor: '#6366f1',
-        secondaryColor: '#c5a880',
+        secondaryColor: '#d4af37',
         accentColor: '#ec4899',
         darkColor: '#070913',
         year: '2023',
@@ -133,7 +133,7 @@ const brands = {
                     <rect x="28" y="16" width="8" height="32" rx="4" fill="#3b82f6"/>
                 </g>
                 <text x="85" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="64" font-weight="900" fill="url(#tonehNeon)" letter-spacing="6">TONEH</text>
-                <text x="88" y="98" font-family="'Montserrat', sans-serif" font-size="14" font-weight="600" fill="#c5a880" letter-spacing="8">MEDIA NETWORK</text>
+                <text x="88" y="98" font-family="'Montserrat', sans-serif" font-size="14" font-weight="600" fill="#d4af37" letter-spacing="8">MEDIA NETWORK</text>
             </g>
         </svg>`
     },
@@ -141,7 +141,7 @@ const brands = {
         id: 'lumina',
         name: 'LUMINA CAFÉ',
         tagline: 'Artisan Coffee Roastery & Eco Packaging Architecture',
-        primaryColor: '#c5a880',
+        primaryColor: '#d4af37',
         secondaryColor: '#3e2723',
         accentColor: '#10b981',
         darkColor: '#0e0b08',
@@ -152,7 +152,7 @@ const brands = {
             <defs>
                 <linearGradient id="coffeeGold" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#f3e5ab" />
-                    <stop offset="50%" stop-color="#c5a880" />
+                    <stop offset="50%" stop-color="#d4af37" />
                     <stop offset="100%" stop-color="#8d6e40" />
                 </linearGradient>
             </defs>
@@ -176,7 +176,7 @@ const brands = {
         id: 'coresync',
         name: 'CORESYNC',
         tagline: 'Enterprise Cloud Architecture & Financial Systems',
-        primaryColor: '#c5a880',
+        primaryColor: '#d4af37',
         secondaryColor: '#010907',
         accentColor: '#38bdf8',
         darkColor: '#010907',
@@ -187,7 +187,7 @@ const brands = {
             <defs>
                 <linearGradient id="csGold" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#fdfbf7" />
-                    <stop offset="45%" stop-color="#c5a880" />
+                    <stop offset="45%" stop-color="#d4af37" />
                     <stop offset="100%" stop-color="#937549" />
                 </linearGradient>
             </defs>
@@ -293,7 +293,7 @@ LEGAL & COPYRIGHT:
 
     // Also write a lightweight HTML print spec
     const htmlSpec = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>${b.name} Brand Guidelines</title>
-<style>body{font-family:sans-serif;background:#010907;color:#fff;padding:40px;line-height:1.6}.box{border:1px solid #c5a880;padding:24px;border-radius:12px;background:rgba(255,255,255,0.04)}h1{color:#c5a880;margin-top:0}</style>
+<style>body{font-family:sans-serif;background:#010907;color:#fff;padding:40px;line-height:1.6}.box{border:1px solid #d4af37;padding:24px;border-radius:12px;background:rgba(255,255,255,0.04)}h1{color:#d4af37;margin-top:0}</style>
 </head><body><div class="box"><h1>${b.name} • Brand Guidelines</h1><p>${b.tagline}</p><pre>${specSheet}</pre></div></body></html>`;
     fs.writeFileSync(path.join(pdfDir, `${b.id}-brand-guidelines.html`), htmlSpec, 'utf8');
 

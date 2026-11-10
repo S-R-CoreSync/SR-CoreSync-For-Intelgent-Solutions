@@ -761,7 +761,7 @@
                             </div>
                             <div class="es-quote-total-row grand-total">
                                 <span>${t.grandTotalLabel}</span>
-                                <span id="quoteGrandTotal" style="color: #c5a880;">€0</span>
+                                <span id="quoteGrandTotal" style="color: #d4af37;">€0</span>
                             </div>
                         </div>
                     </div>
@@ -2712,7 +2712,7 @@
             </div>
 
             <!-- Project KPI Header -->
-            <div style="background:rgba(197,168,128,0.06);border:1px solid rgba(197,168,128,0.25);border-radius:12px;padding:14px;margin-bottom:14px;">
+            <div style="background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.25);border-radius:12px;padding:14px;margin-bottom:14px;">
                 <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
                     <div>
                         <div style="font-size:0.72rem;color:rgba(255,255,255,0.5);">رقم المشروع السحابي</div>
@@ -2886,7 +2886,7 @@
         `).join('');
 
         result.innerHTML = `
-            <div style="background:rgba(197,168,128,0.06);border:1px solid rgba(197,168,128,0.2);border-radius:12px;padding:14px;margin-top:14px;">
+            <div style="background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.2);border-radius:12px;padding:14px;margin-top:14px;">
                 <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
                     <div style="font-weight:900;color:var(--es-gold);">${code}</div>
                     <div style="font-weight:700;color:#ffffff;">${proj.client}</div>
@@ -3223,17 +3223,17 @@
   }
   .deck-page { width: 210mm; min-height: 297mm; padding: 14mm 16mm; page-break-after: always; position: relative; margin: 0 auto; background: #010907; }
   .deck-cover { background: linear-gradient(135deg, #010907 0%, #021a12 50%, #010907 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-  .deck-logo-text { font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg, #c5a880, #f3dfba); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
+  .deck-logo-text { font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg, #d4af37, #f3dfba); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
   .deck-tagline { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 30px; }
-  .deck-gold-line { width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c5a880, transparent); margin: 0 auto 30px; }
+  .deck-gold-line { width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #d4af37, transparent); margin: 0 auto 30px; }
   .deck-title { font-size: 1.5rem; font-weight: 900; color: #ffffff; margin-bottom: 12px; }
   .deck-date { font-size: 0.85rem; color: rgba(255,255,255,0.45); }
   
-  .deck-section { background: #0a1a12; border-radius: 14px; padding: 18px 20px; margin-bottom: 16px; border: 1px solid rgba(197,168,128,0.22); }
-  .deck-section h2 { color: #c5a880; font-size: 1.05rem; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(197,168,128,0.2); display: flex; align-items: center; gap: 8px; }
+  .deck-section { background: #0a1a12; border-radius: 14px; padding: 18px 20px; margin-bottom: 16px; border: 1px solid rgba(212,175,55,0.22); }
+  .deck-section h2 { color: #d4af37; font-size: 1.05rem; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(212,175,55,0.2); display: flex; align-items: center; gap: 8px; }
   
   .deck-kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
-  .deck-kpi { background: rgba(197,168,128,0.08); border: 1px solid rgba(197,168,128,0.2); border-radius: 10px; padding: 12px; text-align: center; }
+  .deck-kpi { background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.2); border-radius: 10px; padding: 12px; text-align: center; }
   .deck-kpi-val { font-size: 1.5rem; font-weight: 900; color: #f3dfba; }
   .deck-kpi-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); margin-top: 2px; }
 
@@ -3243,12 +3243,12 @@
   .deck-chart-box canvas { width: 100% !important; max-height: 180px !important; }
 
   .deck-service { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
-  .deck-service-icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(197,168,128,0.12); border: 1px solid rgba(197,168,128,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .deck-service-icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
   .deck-service-title { font-size: 0.85rem; font-weight: 800; color: #ffffff; margin-bottom: 2px; }
   .deck-service-desc { font-size: 0.74rem; color: rgba(255,255,255,0.65); line-height: 1.45; }
 
   .deck-leaders { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .deck-leader { background: rgba(197,168,128,0.06); border: 1px solid rgba(197,168,128,0.2); border-radius: 12px; padding: 14px; }
+  .deck-leader { background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.2); border-radius: 12px; padding: 14px; }
   .deck-leader-name { font-size: 0.95rem; font-weight: 900; color: #f3dfba; margin-bottom: 2px; }
   .deck-leader-role { font-size: 0.74rem; color: #6ee7b7; font-weight: 700; }
 
@@ -3256,7 +3256,7 @@
   .deck-contact-item { background: rgba(6,182,212,0.08); border: 1px solid rgba(56,189,248,0.2); border-radius: 8px; padding: 10px; text-align: center; font-size: 0.76rem; color: #e0f2fe; }
 
   .deck-print-bar { position: fixed; top: 12px; right: 12px; z-index: 9999; display: flex; gap: 8px; }
-  .deck-print-btn { background: #c5a880; color: #010907; border: none; padding: 8px 16px; border-radius: 999px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+  .deck-print-btn { background: #d4af37; color: #010907; border: none; padding: 8px 16px; border-radius: 999px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
   @media print {
     .deck-print-bar { display: none !important; }
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #010907 !important; }
@@ -3404,8 +3404,8 @@
           datasets: [{
             label: 'مؤشر CoreSync',
             data: [99, 96, 94, 98, 95],
-            backgroundColor: 'rgba(197, 168, 128, 0.25)',
-            borderColor: '#c5a880',
+            backgroundColor: 'rgba(212,175,55, 0.25)',
+            borderColor: '#d4af37',
             pointBackgroundColor: '#f3dfba'
           }]
         },
@@ -3586,7 +3586,7 @@
                     <!-- شريط الإجراءات: اسم العميل وتصدير PDF -->
                     <div class="es-compare-actions-bar">
                         <div class="es-client-name-wrap">
-                            <span style="font-size:0.85rem; color:#c5a880; font-weight:700;">🏢 المنشأة / العميل:</span>
+                            <span style="font-size:0.85rem; color:#d4af37; font-weight:700;">🏢 المنشأة / العميل:</span>
                             <input type="text" id="esCompareClientName" class="es-client-input" placeholder="أدخل اسم شركتكم لإدراجه بالتقرير (اختياري)">
                         </div>
                         <button type="button" class="es-compare-pdf-btn" onclick="window.exportComparisonPDF()">
@@ -3598,9 +3598,9 @@
                         <thead>
                             <tr>
                                 <th>الميزة والقدرة التقنية</th>
-                                <th>الهوية البصرية<br><span style="color:#c5a880; font-size:0.9rem;" data-eur-price="590" class="base-col-price">€590</span></th>
-                                <th>تصميم المواقع<br><span style="color:#c5a880; font-size:0.9rem;" data-eur-price="980" class="base-col-price">€980</span></th>
-                                <th>متجر إلكتروني + ERP<br><span style="color:#c5a880; font-size:0.9rem;" data-eur-price="1450" class="base-col-price">€1,450</span></th>
+                                <th>الهوية البصرية<br><span style="color:#d4af37; font-size:0.9rem;" data-eur-price="590" class="base-col-price">€590</span></th>
+                                <th>تصميم المواقع<br><span style="color:#d4af37; font-size:0.9rem;" data-eur-price="980" class="base-col-price">€980</span></th>
+                                <th>متجر إلكتروني + ERP<br><span style="color:#d4af37; font-size:0.9rem;" data-eur-price="1450" class="base-col-price">€1,450</span></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -3749,7 +3749,7 @@
                 <title>وثيقة مقارنة الباقات الرسمية - S&R CoreSync For Intelligent Solutions</title>
                 <style>
                     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 35px; color: #111; line-height: 1.6; }
-                    .header { border-bottom: 2px solid #c5a880; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
+                    .header { border-bottom: 2px solid #d4af37; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
                     .logo { font-size: 22px; font-weight: 800; color: #0a0e0c; }
                     .meta { font-size: 13px; color: #666; text-align: left; }
                     .dossier-tag { display: inline-block; background: #f4ecdf; color: #8e6d3e; padding: 4px 12px; border-radius: 6px; font-weight: bold; font-size: 13px; margin-bottom: 8px; }
@@ -3914,7 +3914,7 @@
             const max = parseFloat(slider.max) || 100;
             const val = parseFloat(slider.value) || 0;
             const pct = Math.max(0, Math.min(100, ((val - min) / (max - min)) * 100));
-            slider.style.background = `linear-gradient(to right, #c5a880 0%, #c5a880 ${pct}%, rgba(255, 255, 255, 0.12) ${pct}%, rgba(255, 255, 255, 0.12) 100%)`;
+            slider.style.background = `linear-gradient(to right, #d4af37 0%, #d4af37 ${pct}%, rgba(255, 255, 255, 0.12) ${pct}%, rgba(255, 255, 255, 0.12) 100%)`;
         }
 
         updateSliderTrack(teamSlider);

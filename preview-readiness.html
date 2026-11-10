@@ -16,14 +16,14 @@
            S&R SOVEREIGN DESIGN TOKENS
         ============================================================ */
         :root {
-            --sr-gold:       #c5a880;
+            --sr-gold:       #d4af37;
             --sr-gold-light: #f3dfba;
             --sr-gold-dark:  #8c734b;
             --sr-emerald:    #10b981;
             --sr-emerald-dim:#0d9268;
             --sr-bg:         #040806;
             --sr-surface:    rgba(10, 19, 14, 0.92);
-            --sr-border:     rgba(197, 168, 128, 0.22);
+            --sr-border:     rgba(212,175,55, 0.22);
             --sr-border-em:  rgba(16, 185, 129, 0.30);
             --sr-text:       #e8e8e8;
             --sr-text-dim:   rgba(232, 232, 232, 0.55);
@@ -34,7 +34,7 @@
         body {
             background: var(--sr-bg);
             background-image:
-                radial-gradient(ellipse 70% 50% at 15% 20%, rgba(197,168,128,0.055) 0%, transparent 65%),
+                radial-gradient(ellipse 70% 50% at 15% 20%, rgba(212,175,55,0.055) 0%, transparent 65%),
                 radial-gradient(ellipse 60% 45% at 85% 75%, rgba(16,185,129,0.04) 0%, transparent 60%);
             color: var(--sr-text);
             font-family: 'Alexandria', 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -73,7 +73,7 @@
             height: 40px;
             border-radius: 50%;
             border: 1.5px solid var(--sr-gold);
-            box-shadow: 0 0 14px rgba(197, 168, 128, 0.35);
+            box-shadow: 0 0 14px rgba(212,175,55, 0.35);
         }
 
         .rd-brand-text h1 {
@@ -94,7 +94,7 @@
             align-items: center;
             gap: 8px;
             padding: 9px 20px;
-            background: rgba(197, 168, 128, 0.1);
+            background: rgba(212,175,55, 0.1);
             border: 1px solid var(--sr-border);
             border-radius: 40px;
             color: var(--sr-gold);
@@ -107,9 +107,9 @@
         }
 
         .rd-back-btn:hover {
-            background: rgba(197, 168, 128, 0.18);
+            background: rgba(212,175,55, 0.18);
             border-color: var(--sr-gold);
-            box-shadow: 0 0 18px rgba(197, 168, 128, 0.2);
+            box-shadow: 0 0 18px rgba(212,175,55, 0.2);
         }
 
         /* ============================================================
@@ -260,7 +260,7 @@
         }
 
         .rd-q-card.answered {
-            border-color: rgba(197, 168, 128, 0.4);
+            border-color: rgba(212,175,55, 0.4);
         }
 
         .rd-q-card.answered::before {
@@ -268,7 +268,7 @@
         }
 
         .rd-q-card:hover {
-            box-shadow: 0 8px 40px rgba(197, 168, 128, 0.08);
+            box-shadow: 0 8px 40px rgba(212,175,55, 0.08);
         }
 
         .rd-q-header {
@@ -287,8 +287,8 @@
             justify-content: center;
             font-size: 1.3rem;
             flex-shrink: 0;
-            background: rgba(197, 168, 128, 0.1);
-            border: 1px solid rgba(197, 168, 128, 0.2);
+            background: rgba(212,175,55, 0.1);
+            border: 1px solid rgba(212,175,55, 0.2);
         }
 
         .rd-q-icon.em {
@@ -344,8 +344,8 @@
         }
 
         .rd-option:hover {
-            border-color: rgba(197, 168, 128, 0.35);
-            background: rgba(197, 168, 128, 0.05);
+            border-color: rgba(212,175,55, 0.35);
+            background: rgba(212,175,55, 0.05);
         }
 
         .rd-option.selected {
@@ -611,7 +611,7 @@
         }
 
         .rd-cta-reset:hover {
-            border-color: rgba(197, 168, 128, 0.35);
+            border-color: rgba(212,175,55, 0.35);
             color: var(--sr-gold);
         }
 
@@ -746,7 +746,7 @@
                 <h3 id="rd-maturity-title">أجب على الأسئلة لرؤية نتيجتك</h3>
                 <p id="rd-maturity-desc">سيُحدَّث هذا الشريط تلقائياً مع كل إجابة. النتيجة الكاملة = 100 نقطة.</p>
             </div>
-            <div class="rd-maturity-score-pill" id="rd-maturity-pill" style="border-color: rgba(197,168,128,0.3); color: var(--sr-gold);">
+            <div class="rd-maturity-score-pill" id="rd-maturity-pill" style="border-color: rgba(212,175,55,0.3); color: var(--sr-gold);">
                 0 / 100
             </div>
         </div>
@@ -912,7 +912,7 @@
               desc: 'تقدم ملحوظ! بعض الثغرات في الامتثال أو الأتمتة. نستطيع سدها خلال مرحلة واحدة.' },
             { min: 61, max: 80,  icon: '🟢', title: 'مرحلة التسارع المؤسسي',         color: '#10b981', pill: 'bg: rgba(16,185,129,0.15); border-color: #10b981; color: #10b981;',
               desc: 'مؤسستك في وضع متقدم. خطوات التحسين المتبقية ستحقق ميزة تنافسية قوية في السوق الأوروبي.' },
-            { min: 81, max: 100, icon: '🏆', title: 'مرحلة السيادة الرقمية الكاملة', color: '#c5a880', pill: 'bg: rgba(197,168,128,0.15); border-color: #c5a880; color: #c5a880;',
+            { min: 81, max: 100, icon: '🏆', title: 'مرحلة السيادة الرقمية الكاملة', color: '#d4af37', pill: 'bg: rgba(212,175,55,0.15); border-color: #d4af37; color: #d4af37;',
               desc: 'ممتاز! مؤسستك تعمل بمعايير الجيل القادم. نرشح الارتقاء لباقة Sovereign Enterprise لحماية هذا التفوق.' }
         ];
 
@@ -1124,12 +1124,12 @@
                     i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
                 }
                 ctx.closePath();
-                ctx.strokeStyle = 'rgba(197, 168, 128, 0.12)';
+                ctx.strokeStyle = 'rgba(212,175,55, 0.12)';
                 ctx.lineWidth = 1;
                 ctx.stroke();
 
                 // Ring label
-                ctx.fillStyle = 'rgba(197, 168, 128, 0.35)';
+                ctx.fillStyle = 'rgba(212,175,55, 0.35)';
                 ctx.font = `${10 * 0.9}px Alexandria, sans-serif`;
                 ctx.textAlign = 'center';
                 ctx.fillText(ring, cx + 4, cy - r + 12);
@@ -1141,7 +1141,7 @@
                 ctx.beginPath();
                 ctx.moveTo(cx, cy);
                 ctx.lineTo(cx + R * Math.cos(angle), cy + R * Math.sin(angle));
-                ctx.strokeStyle = 'rgba(197, 168, 128, 0.15)';
+                ctx.strokeStyle = 'rgba(212,175,55, 0.15)';
                 ctx.lineWidth = 1;
                 ctx.stroke();
             }
@@ -1159,7 +1159,7 @@
 
             const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, R);
             grad.addColorStop(0, 'rgba(16, 185, 129, 0.45)');
-            grad.addColorStop(1, 'rgba(197, 168, 128, 0.15)');
+            grad.addColorStop(1, 'rgba(212,175,55, 0.15)');
             ctx.fillStyle = grad;
             ctx.fill();
             ctx.strokeStyle = 'rgba(16, 185, 129, 0.85)';
@@ -1174,7 +1174,7 @@
                 const y = cy + r * Math.sin(angle);
                 ctx.beginPath();
                 ctx.arc(x, y, 4, 0, Math.PI * 2);
-                ctx.fillStyle = v >= 80 ? '#c5a880' : '#10b981';
+                ctx.fillStyle = v >= 80 ? '#d4af37' : '#10b981';
                 ctx.fill();
                 ctx.strokeStyle = '#fff';
                 ctx.lineWidth = 1.5;

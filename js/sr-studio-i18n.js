@@ -441,8 +441,8 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 7px;
-                background: rgba(197, 168, 128, 0.12);
-                border: 1px solid rgba(197, 168, 128, 0.35);
+                background: rgba(212,175,55, 0.12);
+                border: 1px solid rgba(212,175,55, 0.35);
                 color: #f3dfba;
                 padding: 6px 14px;
                 border-radius: 20px;
@@ -455,10 +455,10 @@
                 box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
             }
             .sr-lang-pill-btn:hover {
-                background: rgba(197, 168, 128, 0.24);
+                background: rgba(212,175,55, 0.24);
                 border-color: #f3dfba;
                 transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35);
+                box-shadow: 0 6px 20px rgba(212,175,55, 0.35);
             }
             .sr-lang-arrow {
                 font-size: 0.72rem;
@@ -488,9 +488,9 @@
                 max-width: 820px;
                 max-height: 86vh;
                 background: linear-gradient(135deg, rgba(8, 22, 16, 0.98), rgba(4, 10, 8, 0.98));
-                border: 1px solid rgba(197, 168, 128, 0.45);
+                border: 1px solid rgba(212,175,55, 0.45);
                 border-radius: 18px;
-                box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(197, 168, 128, 0.15);
+                box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212,175,55, 0.15);
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
@@ -501,7 +501,7 @@
                 justify-content: space-between;
                 padding: 16px 22px;
                 background: rgba(13, 34, 26, 0.6);
-                border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+                border-bottom: 1px solid rgba(212,175,55, 0.2);
             }
             .sr-i18n-title {
                 margin: 0;
@@ -515,7 +515,7 @@
             .sr-i18n-search-wrap {
                 padding: 12px 20px;
                 background: rgba(0, 0, 0, 0.3);
-                border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+                border-bottom: 1px solid rgba(212,175,55, 0.15);
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -543,14 +543,14 @@
                 justify-content: space-between;
                 padding: 10px 14px;
                 background: rgba(255, 255, 255, 0.03);
-                border: 1px solid rgba(197, 168, 128, 0.18);
+                border: 1px solid rgba(212,175,55, 0.18);
                 border-radius: 10px;
                 cursor: pointer;
                 transition: all 0.2s ease;
                 text-align: inherit;
             }
             .sr-i18n-launchpad-card:hover {
-                background: rgba(197, 168, 128, 0.15);
+                background: rgba(212,175,55, 0.15);
                 border-color: #f3dfba;
                 transform: translateY(-2px);
             }
@@ -581,14 +581,14 @@
             .sr-i18n-vat {
                 font-size: 0.65rem;
                 color: #f3dfba;
-                background: rgba(197, 168, 128, 0.12);
-                border: 1px solid rgba(197, 168, 128, 0.25);
+                background: rgba(212,175,55, 0.12);
+                border: 1px solid rgba(212,175,55, 0.25);
                 padding: 2px 5px;
                 border-radius: 5px;
             }
             .sr-i18n-close-btn {
                 background: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(197, 168, 128, 0.25);
+                border: 1px solid rgba(212,175,55, 0.25);
                 color: #cbd5e1;
                 width: 30px;
                 height: 30px;

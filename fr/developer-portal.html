@@ -17,12 +17,12 @@
             --bg-dark: #020705;
             --bg-card: rgba(8, 20, 15, 0.78);
             --bg-elevated: rgba(14, 28, 22, 0.88);
-            --gold-primary: #c5a880;
+            --gold-primary: #d4af37;
             --gold-bright: #f3dfba;
-            --gold-glow: rgba(197, 168, 128, 0.4);
+            --gold-glow: rgba(212,175,55, 0.4);
             --emerald-accent: #10b981;
             --emerald-glow: rgba(16, 185, 129, 0.35);
-            --border-gold: rgba(197, 168, 128, 0.28);
+            --border-gold: rgba(212,175,55, 0.28);
             --border-hover: rgba(243, 223, 186, 0.65);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
@@ -40,7 +40,7 @@
         body {
             background-color: var(--bg-dark);
             background-image: 
-                radial-gradient(circle at 15% 10%, rgba(197, 168, 128, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 15% 10%, rgba(212,175,55, 0.08) 0%, transparent 45%),
                 radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
                 linear-gradient(rgba(2, 7, 5, 0.94), rgba(2, 7, 5, 0.98)),
                 url('./assets/grid.png');
@@ -128,7 +128,7 @@
 
         .nav-btn:hover {
             border-color: var(--gold-bright);
-            background: rgba(197, 168, 128, 0.15);
+            background: rgba(212,175,55, 0.15);
             box-shadow: 0 0 14px var(--gold-glow);
             color: #ffffff;
         }
@@ -236,7 +236,7 @@
 
         .endpoint-nav-item:hover,
         .endpoint-nav-item.active {
-            background: rgba(197, 168, 128, 0.12);
+            background: rgba(212,175,55, 0.12);
             border-color: var(--border-gold);
             color: #ffffff;
         }
@@ -267,7 +267,7 @@
             border: 1px solid var(--gold-primary);
             border-radius: 20px;
             padding: 28px;
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(197, 168, 128, 0.2);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212,175,55, 0.2);
             display: grid;
             grid-template-columns: 200px 1fr;
             gap: 28px;
@@ -294,7 +294,7 @@
             padding: 6px;
             background: conic-gradient(from 0deg, var(--gold-bright), #10b981, var(--gold-primary), var(--gold-bright));
             animation: rotateHolo 8s linear infinite;
-            box-shadow: 0 0 25px rgba(197, 168, 128, 0.4);
+            box-shadow: 0 0 25px rgba(212,175,55, 0.4);
         }
 
         @keyframes rotateHolo {
@@ -370,7 +370,7 @@
 
         .avatar-speech-box {
             background: rgba(2, 8, 5, 0.65);
-            border: 1px solid rgba(197, 168, 128, 0.22);
+            border: 1px solid rgba(212,175,55, 0.22);
             border-radius: 12px;
             padding: 16px;
             font-size: 0.95rem;
@@ -458,7 +458,7 @@
         }
 
         .lang-btn.active {
-            background: rgba(197, 168, 128, 0.2);
+            background: rgba(212,175,55, 0.2);
             color: var(--gold-bright);
         }
 
@@ -481,7 +481,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 14px;
-            border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+            border-bottom: 1px solid rgba(212,175,55, 0.15);
             padding-bottom: 16px;
         }
 
@@ -504,7 +504,7 @@
         /* Interactive Live Console */
         .api-console-box {
             background: rgba(3, 10, 7, 0.95);
-            border: 1px solid rgba(197, 168, 128, 0.25);
+            border: 1px solid rgba(212,175,55, 0.25);
             border-radius: 12px;
             overflow: hidden;
             display: grid;
@@ -535,7 +535,7 @@
             width: 100%;
             height: 220px;
             background: rgba(6, 14, 10, 0.8);
-            border: 1px solid rgba(197, 168, 128, 0.2);
+            border: 1px solid rgba(212,175,55, 0.2);
             border-radius: 8px;
             color: #e2e8f0;
             font-family: var(--font-code);
@@ -612,7 +612,7 @@
 
         .sim-ledger-box {
             background: rgba(2, 8, 5, 0.85);
-            border: 1px solid rgba(197, 168, 128, 0.3);
+            border: 1px solid rgba(212,175,55, 0.3);
             border-radius: 12px;
             padding: 16px;
         }
@@ -627,7 +627,7 @@
         .ledger-table th, .ledger-table td {
             padding: 8px 12px;
             text-align: right;
-            border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+            border-bottom: 1px solid rgba(212,175,55, 0.15);
         }
 
         .ledger-table th {
@@ -643,7 +643,7 @@
             display: flex;
             gap: 10px;
             margin-bottom: 16px;
-            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+            border-bottom: 1px solid rgba(212,175,55, 0.2);
             padding-bottom: 10px;
         }
 
@@ -679,7 +679,7 @@
 
         .sdk-install-box {
             background: #020604;
-            border: 1px solid rgba(197, 168, 128, 0.3);
+            border: 1px solid rgba(212,175,55, 0.3);
             border-radius: 10px;
             padding: 12px 18px;
             display: flex;
@@ -697,7 +697,7 @@
         }
 
         .sdk-copy-btn {
-            background: rgba(197, 168, 128, 0.15);
+            background: rgba(212,175,55, 0.15);
             border: 1px solid var(--border-gold);
             color: var(--gold-bright);
             padding: 6px 12px;

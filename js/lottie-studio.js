@@ -68,7 +68,7 @@ function openLottieSocialCard() {
     metrics: [
       { label: 'معدل السرعة وسلاسة الحركة', val: `${speed}x`, sub: '60 FPS Full Vector Animation', color: '#10b981' },
       { label: 'توليد كود CSS Keyframes', val: '100% Pure', sub: 'بدون مكتبات خارجية', color: '#38bdf8' },
-      { label: 'دقة الرسم والإخراج', val: '8K Vector', sub: 'متطابق مع كافة الشاشات', color: '#c5a880' }
+      { label: 'دقة الرسم والإخراج', val: '8K Vector', sub: 'متطابق مع كافة الشاشات', color: '#d4af37' }
     ]
   });
 }
@@ -174,12 +174,12 @@ document.addEventListener('DOMContentLoaded', () => {
     exportCssBtn.addEventListener('click', () => {
       const speed = parseFloat((speedRange && speedRange.value) || 1);
       const duration = (2 / speed).toFixed(2);
-      const color = (colorPicker && colorPicker.value) || '#c5a880';
+      const color = (colorPicker && colorPicker.value) || '#d4af37';
       const css = `/* S&R CoreSync - Micro-Interactions Keyframes */
 @keyframes srLottiePulse {
-  0% { transform: scale(1) rotate(0deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(197, 168, 128, 0.3)); }
+  0% { transform: scale(1) rotate(0deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(212,175,55, 0.3)); }
   50% { transform: scale(1.08) rotate(180deg); opacity: 0.92; filter: drop-shadow(0 0 25px ${color}); }
-  100% { transform: scale(1) rotate(360deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(197, 168, 128, 0.3)); }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(212,175,55, 0.3)); }
 }
 
 .sr-lottie-animated {

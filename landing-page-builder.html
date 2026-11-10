@@ -30,12 +30,12 @@
 
     <style>
         :root {
-            --sr-gold: #c5a880;
+            --sr-gold: #d4af37;
             --sr-gold-light: #f3dfba;
             --sr-gold-dark: #8c734b;
             --sr-bg-root: #030806;
             --sr-bg-card: rgba(8, 18, 13, 0.88);
-            --sr-border: rgba(197, 168, 128, 0.22);
+            --sr-border: rgba(212,175,55, 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -101,7 +101,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(197, 168, 128, 0.12);
+            background: rgba(212,175,55, 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -215,7 +215,7 @@
 
         .theme-btn.active, .theme-btn:hover {
             border-color: var(--sr-gold);
-            background: rgba(197, 168, 128, 0.15);
+            background: rgba(212,175,55, 0.15);
         }
 
         .btn-export {
@@ -239,7 +239,7 @@
 
         .btn-export:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(197, 168, 128, 0.4);
+            box-shadow: 0 10px 25px rgba(212,175,55, 0.4);
         }
 
         /* مساحة المعاينة الحية */
@@ -275,7 +275,7 @@
 
         .artboard-container {
             padding: 30px;
-            background: radial-gradient(circle at 50% 0%, rgba(197, 168, 128, 0.07) 0%, transparent 70%);
+            background: radial-gradient(circle at 50% 0%, rgba(212,175,55, 0.07) 0%, transparent 70%);
         }
 
         /* أقسام صفحة الهبوط المولدة */
@@ -314,7 +314,7 @@
             border: none;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 4px 20px rgba(197, 168, 128, 0.35);
+            box-shadow: 0 4px 20px rgba(212,175,55, 0.35);
         }
 
         /* حاسبة العائد الاستثماري ROI */
@@ -400,8 +400,8 @@
 
         .pricing-card.featured {
             border-color: var(--sr-gold);
-            background: linear-gradient(180deg, rgba(197, 168, 128, 0.12) 0%, rgba(5, 12, 8, 0.8) 100%);
-            box-shadow: 0 10px 30px rgba(197, 168, 128, 0.15);
+            background: linear-gradient(180deg, rgba(212,175,55, 0.12) 0%, rgba(5, 12, 8, 0.8) 100%);
+            box-shadow: 0 10px 30px rgba(212,175,55, 0.15);
         }
 
         .pricing-plan-name { font-size: 1.1rem; font-weight: 800; color: #ffffff; margin-bottom: 6px; }
@@ -511,7 +511,7 @@
 
                 <!-- 1. واجهة الهيرو -->
                 <div class="landing-hero-section">
-                    <img src="./assets/sr-core-emblem.svg" width="60" height="60" style="margin-bottom:14px; filter: drop-shadow(0 0 12px rgba(197, 168, 128, 0.4));">
+                    <img src="./assets/sr-core-emblem.svg" width="60" height="60" style="margin-bottom:14px; filter: drop-shadow(0 0 12px rgba(212,175,55, 0.4));">
                     <h2 class="landing-hero-headline" id="artboardHeadline">ضاعف كفاءة مؤسستك بالذكاء الاصطناعي السيادي</h2>
                     <p class="landing-hero-sub" id="artboardSub">حلول سحابية مؤتمتة ومعزولة تضمن لك سيادة البيانات وخفض التكاليف التشغيلية بنسبة تصل إلى 45%.</p>
                     <a href="#bookingSection" class="landing-cta-btn" id="artboardCta">احجز استشارتك المجانية الآن ⚡</a>
@@ -645,7 +645,7 @@
                 document.documentElement.style.setProperty('--sr-gold', '#38bdf8');
                 document.documentElement.style.setProperty('--sr-gold-light', '#7dd3fc');
             } else {
-                document.documentElement.style.setProperty('--sr-gold', '#c5a880');
+                document.documentElement.style.setProperty('--sr-gold', '#d4af37');
                 document.documentElement.style.setProperty('--sr-gold-light', '#f3dfba');
             }
         }

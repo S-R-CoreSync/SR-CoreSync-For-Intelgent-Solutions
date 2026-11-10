@@ -68,3 +68,14 @@
 .sr-cmd__foot{margin:0;padding:.5rem .9rem .7rem;font-size:.72rem;color:rgba(233,226,207,.45);border-top:1px solid rgba(216,178,94,.16)}
 html.sr-cmd-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sr-cmd{backdrop-filter:none}}
+
+/* Language hint: reuses the switcher labels, so no copy of its own. Sits above
+   the dock and never covers content on small screens. */
+.sr-lang-hint{position:fixed;inset-inline-start:12px;bottom:96px;z-index:99998;display:inline-flex;align-items:center;gap:.25rem;
+  background:rgba(9,11,14,.94);border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:999px;padding:.3rem .45rem;
+  box-shadow:0 12px 30px -16px #000;backdrop-filter:blur(8px)}
+.sr-lang-hint__link{display:inline-flex;align-items:center;gap:.4rem;color:var(--sr-gold-text, #ecd9a0);text-decoration:none;font-size:.8rem;padding:.15rem .35rem}
+.sr-lang-hint__link svg{opacity:.85}
+.sr-lang-hint__close{border:0;background:transparent;color:rgba(233,226,207,.55);font-size:1rem;line-height:1;cursor:pointer;padding:.1rem .3rem}
+.sr-lang-hint__close:hover{color:#f0d79a}
+@media (max-width:520px){.sr-lang-hint{bottom:88px;font-size:.75rem}}

@@ -131,7 +131,7 @@
 
                 ctx.beginPath();
                 ctx.arc(d.x, d.y, d.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(197, 168, 128, 0.4)';
+                ctx.fillStyle = 'rgba(212,175,55, 0.4)';
                 ctx.fill();
 
                 // خطوط التوصيل الشبكية
@@ -142,7 +142,7 @@
                         ctx.beginPath();
                         ctx.moveTo(d.x, d.y);
                         ctx.lineTo(d2.x, d2.y);
-                        ctx.strokeStyle = `rgba(197, 168, 128, ${(1 - dist / 130) * 0.15})`;
+                        ctx.strokeStyle = `rgba(212,175,55, ${(1 - dist / 130) * 0.15})`;
                         ctx.lineWidth = 0.75;
                         ctx.stroke();
                     }

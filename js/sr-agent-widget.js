@@ -493,7 +493,7 @@
             <!-- Unified Floating Launcher Trigger -->
             <button class="sr-agent-launcher" id="sr-agent-launcher" title="المستشار الذكي التنفيذي — اسأل المساعد" aria-label="المستشار الذكي التنفيذي — اسأل المساعد">
                 <span class="sr-agent-pulse-dot" aria-hidden="true"></span>
-                <svg class="sr-agent-launcher-icon" viewBox="0 0 24 24" fill="none" stroke="#c5a880" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg class="sr-agent-launcher-icon" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
                 <span class="sr-agent-launcher-text">اسأل المستشار الذكي 🤖</span>

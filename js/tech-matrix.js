@@ -213,7 +213,7 @@ const TechMatrix = {
       badge: 'مقارنات الأنظمة ⚖️',
       url: window.location.href,
       metrics: [
-        { label: 'باقة الشركات الكبرى Enterprise', val: '€ 1,199', sub: 'تكامل سيادي ERP 100%', color: '#c5a880' },
+        { label: 'باقة الشركات الكبرى Enterprise', val: '€ 1,199', sub: 'تكامل سيادي ERP 100%', color: '#d4af37' },
         { label: 'زمن الاستجابة السحابية', val: '0.05s', sub: 'أداء Edge فائق السرعة', color: '#10b981' },
         { label: 'التوفير السنوي المقدر ROI', val: '€ 14,800', sub: 'توفير تكاليف الصيانة', color: '#38bdf8' }
       ]
@@ -321,7 +321,7 @@ const TechMatrix = {
   <title>مصفوفة المقارنات الفنية والتقنية • S&R CoreSync</title>
   <style>
     body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: rtl; background: #fff; color: #0f172a; padding: 40px; margin: 0; }
-    .header { border-bottom: 2px solid #c5a880; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+    .header { border-bottom: 2px solid #d4af37; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
     .title { font-size: 22px; font-weight: bold; color: #0b192c; }
     table { width: 100%; border-collapse: collapse; margin: 25px 0; }
     th, td { border: 1px solid #cbd5e1; padding: 12px; text-align: right; }

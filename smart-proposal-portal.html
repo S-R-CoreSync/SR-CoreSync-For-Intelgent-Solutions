@@ -28,9 +28,9 @@
 
     <style>
         :root {
-            --gold: #c5a880; --gold-l: #f3dfba; --gold-d: #8c734b;
+            --gold: #d4af37; --gold-l: #f3dfba; --gold-d: #8c734b;
             --bg: #040806; --card: rgba(10,22,15,0.86);
-            --border: rgba(197,168,128,0.22);
+            --border: rgba(212,175,55,0.22);
             --cyan: #38bdf8; --emerald: #10b981;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,14 +50,14 @@
 
         /* Hero */
         .hero { text-align:center; padding:50px 20px 30px; max-width:860px; margin:0 auto; position:relative; z-index:2; }
-        .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(197,168,128,.12); border:1px solid var(--border); color:var(--gold-l); padding:6px 18px; border-radius:999px; font-size:.85rem; font-weight:700; margin-bottom:16px; }
+        .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(212,175,55,.12); border:1px solid var(--border); color:var(--gold-l); padding:6px 18px; border-radius:999px; font-size:.85rem; font-weight:700; margin-bottom:16px; }
         .hero h1 { font-size:2.4rem; font-weight:900; background:linear-gradient(135deg,#fff 40%,var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; line-height:1.3; margin-bottom:14px; }
         .hero p { color:#cbd5e1; font-size:1.05rem; margin-bottom:28px; }
 
         /* التبويبات الرئيسية */
         .tabs-row { display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
         .tab-btn { padding:10px 22px; border-radius:12px; font-size:.9rem; font-weight:700; border:1.5px solid var(--border); background:rgba(10,20,15,.6); color:#cbd5e1; cursor:pointer; font-family:inherit; transition:all .25s; }
-        .tab-btn.active, .tab-btn:hover { border-color:var(--gold); background:rgba(197,168,128,.15); color:#fff; box-shadow:0 0 18px rgba(197,168,128,.2); }
+        .tab-btn.active, .tab-btn:hover { border-color:var(--gold); background:rgba(212,175,55,.15); color:#fff; box-shadow:0 0 18px rgba(212,175,55,.2); }
 
         /* الشبكة */
         .layout { max-width:1280px; margin:0 auto; padding:0 24px 80px; display:grid; grid-template-columns:1fr 1fr; gap:28px; }
@@ -67,31 +67,31 @@
         .panel { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px; backdrop-filter:blur(12px); }
         .panel-title { font-size:1.2rem; font-weight:800; color:var(--gold-l); display:flex; align-items:center; gap:10px; margin-bottom:22px; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,.07); }
         .form-label { display:block; font-size:.82rem; font-weight:700; color:var(--gold); margin-bottom:7px; }
-        .form-input { width:100%; background:rgba(5,12,8,.8); border:1px solid rgba(197,168,128,.18); color:#f8fafc; padding:10px 14px; border-radius:10px; font-family:inherit; font-size:.9rem; outline:none; transition:border-color .2s; margin-bottom:16px; }
+        .form-input { width:100%; background:rgba(5,12,8,.8); border:1px solid rgba(212,175,55,.18); color:#f8fafc; padding:10px 14px; border-radius:10px; font-family:inherit; font-size:.9rem; outline:none; transition:border-color .2s; margin-bottom:16px; }
         .form-input:focus { border-color:var(--gold); }
         select.form-input { cursor:pointer; }
         .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
 
         /* بنود العرض */
         .proposal-items { width:100%; border-collapse:collapse; margin-bottom:14px; }
-        .proposal-items th { background:rgba(197,168,128,.1); color:var(--gold-l); font-size:.78rem; font-weight:700; padding:9px 10px; text-align:right; }
+        .proposal-items th { background:rgba(212,175,55,.1); color:var(--gold-l); font-size:.78rem; font-weight:700; padding:9px 10px; text-align:right; }
         .proposal-items td { padding:7px 6px; border-bottom:1px solid rgba(255,255,255,.05); }
-        .proposal-items td input { width:100%; background:rgba(5,12,8,.6); border:1px solid rgba(197,168,128,.14); color:#f8fafc; padding:7px 10px; border-radius:8px; font-family:inherit; font-size:.84rem; outline:none; }
+        .proposal-items td input { width:100%; background:rgba(5,12,8,.6); border:1px solid rgba(212,175,55,.14); color:#f8fafc; padding:7px 10px; border-radius:8px; font-family:inherit; font-size:.84rem; outline:none; }
         .btn-add { background:rgba(16,185,129,.12); border:1px dashed rgba(16,185,129,.4); color:var(--emerald); padding:7px 14px; border-radius:10px; font-weight:700; font-size:.84rem; cursor:pointer; font-family:inherit; transition:all .2s; margin-bottom:16px; }
         .btn-add:hover { background:rgba(16,185,129,.22); }
         .btn-del { background:none; border:none; color:#ef4444; font-size:1.05rem; cursor:pointer; padding:2px 6px; border-radius:6px; }
 
         /* زر التوليد */
         .btn-gen { width:100%; padding:14px; background:linear-gradient(135deg,var(--gold),var(--gold-d)); color:#040806; border:none; border-radius:14px; font-weight:900; font-size:1rem; cursor:pointer; font-family:inherit; transition:all .25s; margin-top:4px; }
-        .btn-gen:hover { box-shadow:0 12px 30px rgba(197,168,128,.35); transform:translateY(-2px); }
+        .btn-gen:hover { box-shadow:0 12px 30px rgba(212,175,55,.35); transform:translateY(-2px); }
 
         /* ورقة العرض (Preview) */
         .proposal-sheet { background:#fff; color:#1a1a2e; border-radius:16px; padding:32px; box-shadow:0 20px 50px rgba(0,0,0,.6); font-family:'IBM Plex Sans Arabic','Alexandria',sans-serif; direction:rtl; }
-        .ps-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:22px; padding-bottom:18px; border-bottom:2.5px solid #c5a880; }
+        .ps-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:22px; padding-bottom:18px; border-bottom:2.5px solid #d4af37; }
         .ps-logo img { width:52px; height:52px; }
         .ps-company { font-size:1.1rem; font-weight:900; color:#0a2010; }
         .ps-company-sub { font-size:.72rem; color:#666; margin-top:2px; }
-        .ps-title { font-size:1.6rem; font-weight:900; color:#c5a880; }
+        .ps-title { font-size:1.6rem; font-weight:900; color:#d4af37; }
         .ps-ref { font-size:.82rem; color:#555; margin-top:4px; }
         .ps-parties { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:20px; }
         .ps-label { font-size:.7rem; font-weight:800; color:#888; text-transform:uppercase; letter-spacing:.5px; margin-bottom:5px; }
@@ -100,14 +100,14 @@
 
         /* جدول بنود العرض */
         .ps-table { width:100%; border-collapse:collapse; margin-bottom:18px; }
-        .ps-table th { background:#f8f4ee; color:#0a2010; font-size:.78rem; font-weight:800; padding:9px 12px; border-bottom:2px solid #c5a880; text-align:right; }
+        .ps-table th { background:#f8f4ee; color:#0a2010; font-size:.78rem; font-weight:800; padding:9px 12px; border-bottom:2px solid #d4af37; text-align:right; }
         .ps-table td { padding:9px 12px; font-size:.86rem; border-bottom:1px solid #eee; color:#2a2a2a; }
         .ps-totals { background:#f8f4ee; padding:16px; border-radius:10px; margin-bottom:20px; }
         .ps-row { display:flex; justify-content:space-between; font-size:.87rem; color:#333; margin-bottom:4px; }
-        .ps-grand { font-weight:900; font-size:1.08rem; color:#0a2010; border-top:1.5px solid #c5a880; padding-top:8px; margin-top:4px; }
+        .ps-grand { font-weight:900; font-size:1.08rem; color:#0a2010; border-top:1.5px solid #d4af37; padding-top:8px; margin-top:4px; }
 
         /* التوقيع الإلكتروني */
-        .sig-box { border:2px dashed #c5a880; border-radius:12px; height:90px; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:.88rem; cursor:crosshair; position:relative; background:#fafaf8; overflow:hidden; margin-bottom:12px; }
+        .sig-box { border:2px dashed #d4af37; border-radius:12px; height:90px; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:.88rem; cursor:crosshair; position:relative; background:#fafaf8; overflow:hidden; margin-bottom:12px; }
         .sig-canvas { position:absolute; inset:0; cursor:crosshair; }
         .sig-actions { display:flex; gap:10px; margin-bottom:18px; }
         .btn-sig-clear { background:rgba(239,68,68,.12); border:1px solid rgba(239,68,68,.3); color:#ef4444; padding:6px 14px; border-radius:8px; font-size:.82rem; font-weight:700; cursor:pointer; font-family:inherit; }
@@ -119,16 +119,16 @@
         /* أزرار الإجراءات */
         .action-bar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
         .btn-action { display:inline-flex; align-items:center; gap:7px; background:rgba(10,22,15,.8); border:1px solid var(--border); color:#cbd5e1; padding:9px 18px; border-radius:10px; font-size:.85rem; font-weight:700; cursor:pointer; font-family:inherit; transition:all .2s; }
-        .btn-action:hover, .btn-action.primary { background:linear-gradient(135deg,rgba(197,168,128,.25),rgba(197,168,128,.1)); border-color:var(--gold); color:#fff; }
+        .btn-action:hover, .btn-action.primary { background:linear-gradient(135deg,rgba(212,175,55,.25),rgba(212,175,55,.1)); border-color:var(--gold); color:#fff; }
 
         /* مؤشر الخطوات */
         .steps-row { display:flex; align-items:center; justify-content:center; gap:0; margin-bottom:30px; }
         .step { display:flex; align-items:center; }
-        .step-dot { width:34px; height:34px; border-radius:50%; background:rgba(197,168,128,.15); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.85rem; color:#94a3b8; transition:all .3s; }
+        .step-dot { width:34px; height:34px; border-radius:50%; background:rgba(212,175,55,.15); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.85rem; color:#94a3b8; transition:all .3s; }
         .step-dot.active { background:var(--gold); border-color:var(--gold-l); color:#040806; }
         .step-dot.done { background:var(--emerald); border-color:var(--emerald); color:#fff; }
         .step-label { font-size:.75rem; color:#64748b; margin-top:4px; text-align:center; }
-        .step-line { width:50px; height:2px; background:rgba(197,168,128,.18); }
+        .step-line { width:50px; height:2px; background:rgba(212,175,55,.18); }
         .step-line.done { background:var(--emerald); }
         .step-col { display:flex; flex-direction:column; align-items:center; }
 
@@ -297,7 +297,7 @@
                     </div>
                 </div>
 
-                <div style="background:#f8f4ee; padding:12px 16px; border-radius:10px; margin-bottom:18px; border-right:3px solid #c5a880;">
+                <div style="background:#f8f4ee; padding:12px 16px; border-radius:10px; margin-bottom:18px; border-right:3px solid #d4af37;">
                     <div class="ps-label">موضوع العرض</div>
                     <div style="font-size:.95rem; font-weight:700; color:#0a2010;" id="propSubject">—</div>
                 </div>
@@ -338,7 +338,7 @@
                         <span style="font-size:.62rem; color:#ccc;">عرض ملزم قانونياً بعد التوقيع الرقمي المعتمد</span>
                     </div>
                     <div class="ps-sig-preview">
-                        <canvas id="sigPreview" width="100" height="45" style="border-bottom:1.5px solid #c5a880;"></canvas>
+                        <canvas id="sigPreview" width="100" height="45" style="border-bottom:1.5px solid #d4af37;"></canvas>
                         <div class="ps-sig-label">توقيع العميل المعتمد</div>
                     </div>
                 </div>
@@ -352,7 +352,7 @@
                 <div class="success-msg" id="successMsg">
                     <div style="font-size:2rem; margin-bottom:8px;">🎉</div>
                     <div style="font-size:1.1rem; font-weight:800; color:#10b981; margin-bottom:6px;">تم اعتماد العقد وإرساله بنجاح!</div>
-                    <div style="font-size:.9rem; color:#94a3b8;">تم إرسال نسخة موقعة للعميل عبر البريد الإلكتروني والواتساب. رقم العقد: <span id="contractRef" style="color:#c5a880; font-weight:800;"></span></div>
+                    <div style="font-size:.9rem; color:#94a3b8;">تم إرسال نسخة موقعة للعميل عبر البريد الإلكتروني والواتساب. رقم العقد: <span id="contractRef" style="color:#d4af37; font-weight:800;"></span></div>
                 </div>
             </div>
         </div>

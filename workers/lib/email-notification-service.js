@@ -131,8 +131,8 @@ class EmailNotificationService {
   <title>Officiële Licentie &amp; BTW Factuur - S&amp;R CoreSync For Intelligent Solutions</title>
   <style>
     body { margin:0; padding:0; background:#010907; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#ffffff; }
-    .email-wrapper { max-width:640px; margin:20px auto; background:#071410; border:1px solid rgba(197,168,128,0.25); border-radius:12px; overflow:hidden; }
-    .header { padding:32px 24px; text-align:center; background:linear-gradient(180deg, #0d231c 0%, #071410 100%); border-bottom:1px solid rgba(197,168,128,0.15); }
+    .email-wrapper { max-width:640px; margin:20px auto; background:#071410; border:1px solid rgba(212,175,55,0.25); border-radius:12px; overflow:hidden; }
+    .header { padding:32px 24px; text-align:center; background:linear-gradient(180deg, #0d231c 0%, #071410 100%); border-bottom:1px solid rgba(212,175,55,0.15); }
     .title { color:#f3dfba; margin:8px 0 0; font-size:22px; font-weight:700; }
     .subtitle { color:rgba(255,255,255,0.64); font-size:13px; margin:4px 0 0; }
     .content { padding:32px 24px; }
@@ -140,8 +140,8 @@ class EmailNotificationService {
     .key-badge { font-family:monospace; font-size:18px; font-weight:bold; color:#10b981; letter-spacing:1px; background:rgba(16,185,129,0.1); padding:8px 16px; border-radius:6px; display:inline-block; }
     .invoice-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:13px; }
     .invoice-table th, .invoice-table td { padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.08); text-align:left; }
-    .invoice-table th { color:#c5a880; font-weight:600; }
-    .total-row td { border-top:2px solid #c5a880; font-size:15px; font-weight:bold; color:#ffffff; }
+    .invoice-table th { color:#d4af37; font-weight:600; }
+    .total-row td { border-top:2px solid #d4af37; font-size:15px; font-weight:bold; color:#ffffff; }
     .btn-action { display:inline-block; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:#ffffff; text-decoration:none; font-weight:600; padding:12px 28px; border-radius:6px; margin:16px 0; }
     .footer { padding:24px; background:#030907; border-top:1px solid rgba(255,255,255,0.06); font-size:11px; color:rgba(255,255,255,0.45); text-align:center; line-height:1.6; }
   </style>
@@ -166,7 +166,7 @@ class EmailNotificationService {
         </div>
       </div>
 
-      <h3 style="color:#c5a880; margin-top:32px; font-size:16px;">Specificatie BTW Factuur (${invoiceNumber})</h3>
+      <h3 style="color:#d4af37; margin-top:32px; font-size:16px;">Specificatie BTW Factuur (${invoiceNumber})</h3>
       <table class="invoice-table">
         <thead>
           <tr>
@@ -203,7 +203,7 @@ class EmailNotificationService {
 
     <div class="footer">
       S&amp;R CoreSync For Intelligent Solutions • Keizersgracht, 1016 Amsterdam, Nederland<br>
-      Voor technische ondersteuning: <a href="mailto:info@sr-coresync.com" style="color:#c5a880;">info@sr-coresync.com</a> of WhatsApp: +31 6 1811 1116.<br>
+      Voor technische ondersteuning: <a href="mailto:info@sr-coresync.com" style="color:#d4af37;">info@sr-coresync.com</a> of WhatsApp: +31 6 1811 1116.<br>
       Dit document geldt als officieel digitaal betalingsbewijs conform de Nederlandse belastingwetgeving.
     </div>
   </div>

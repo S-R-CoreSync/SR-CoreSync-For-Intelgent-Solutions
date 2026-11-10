@@ -13,7 +13,7 @@ function drawGauge(ctx, value, max, label, unit) {
   // Background track (Subtle gold-slate ring)
   ctx.beginPath();
   ctx.arc(center, center, radius, 0, 2 * Math.PI);
-  ctx.strokeStyle = 'rgba(197, 168, 128, 0.15)';
+  ctx.strokeStyle = 'rgba(212,175,55, 0.15)';
   ctx.lineWidth = 10;
   ctx.stroke();
 
@@ -126,7 +126,7 @@ function runAudit() {
         scoreBadge.style.color = '#10b981';
       } else if (score >= 75) {
         scoreBadge.textContent = 'أداء جيد جداً (Grade A)';
-        scoreBadge.style.color = '#c5a880';
+        scoreBadge.style.color = '#d4af37';
       } else {
         scoreBadge.textContent = 'يحتاج إلى تحسينات سحابية';
         scoreBadge.style.color = '#f59e0b';
@@ -173,7 +173,7 @@ function exportPDF() {
   <title>تقرير فحص الأداء والسرعة • S&R CoreSync</title>
   <style>
     body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: rtl; background: #fff; color: #0f172a; padding: 40px; margin: 0; }
-    .header { border-bottom: 2px solid #c5a880; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+    .header { border-bottom: 2px solid #d4af37; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
     .title { font-size: 22px; font-weight: bold; color: #0b192c; }
     .meta { font-size: 12px; color: #64748b; }
     .score-banner { background: #0b192c; color: #fff; padding: 20px; border-radius: 8px; margin: 25px 0; display: flex; align-items: center; justify-content: space-between; }
@@ -196,7 +196,7 @@ function exportPDF() {
 
   <div class="score-banner">
     <div>
-      <h2 style="margin:0 0 8px 0; font-size: 18px; color: #c5a880;">التقييم الإجمالي للأداء السحابي</h2>
+      <h2 style="margin:0 0 8px 0; font-size: 18px; color: #d4af37;">التقييم الإجمالي للأداء السحابي</h2>
       <div style="font-size: 13px; color: #cbd5e1;">الرابط المفحوص: ${targetUrl}</div>
     </div>
     <div style="text-align: center;">
@@ -276,7 +276,7 @@ function openPerfAuditSocialCard() {
     metrics: [
       { label: 'التقييم العام للأداء', val: `${score} / 100`, sub: 'أداء سيادي فائق (Grade A+)', color: '#10b981' },
       { label: 'رسم أكبر عنصر LCP', val: `${metrics.LCP}s`, sub: 'أقل من المعيار العالمي 2.5s', color: '#38bdf8' },
-      { label: 'سرعة الاستجابة FID', val: `${metrics.FID}ms`, sub: 'استجابة تفاعلية فورية', color: '#c5a880' }
+      { label: 'سرعة الاستجابة FID', val: `${metrics.FID}ms`, sub: 'استجابة تفاعلية فورية', color: '#d4af37' }
     ]
   });
 }

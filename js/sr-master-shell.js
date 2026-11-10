@@ -287,9 +287,9 @@
         overlay.innerHTML = `
             <div style="
                 background: linear-gradient(145deg, rgba(10, 24, 19, 0.98), rgba(2, 11, 8, 0.98));
-                border: 1px solid rgba(197, 168, 128, 0.35);
+                border: 1px solid rgba(212,175,55, 0.35);
                 border-radius: 18px; max-width: 520px; width: 100%;
-                padding: 26px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(197, 168, 128, 0.15);
+                padding: 26px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(212,175,55, 0.15);
                 position: relative; overflow: hidden;
             ">
                 <div style="position: absolute; top: 0; right: 0; left: 0; height: 3px; background: rgba(255, 255, 255, 0.1);">
@@ -318,7 +318,7 @@
                     </div>
                     <div style="display: flex; gap: 8px;">
                         <button type="button" onclick="window.closeRouteCard()" style="padding: 10px 18px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); color: #e2e8f0; border-radius: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 700;">تعديل الفكرة</button>
-                        <button type="button" id="srRouteConfirmBtn" style="padding: 10px 22px; background: linear-gradient(135deg, #d4af37, #c5a880); border: none; color: #020b08; border-radius: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 900; display: flex; align-items: center; gap: 6px;">انتقال فوري ⚡</button>
+                        <button type="button" id="srRouteConfirmBtn" style="padding: 10px 22px; background: linear-gradient(135deg, #d4af37, #d4af37); border: none; color: #020b08; border-radius: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 900; display: flex; align-items: center; gap: 6px;">انتقال فوري ⚡</button>
                     </div>
                 </div>
             </div>
@@ -947,13 +947,13 @@
             '@page { size: A4; margin: 18mm 15mm; }' +
             '* { box-sizing: border-box; font-family: "Segoe UI", Tahoma, Arial, sans-serif; }' +
             'body { background: #ffffff; color: #0a1016; margin: 0; padding: 25px; line-height: 1.6; }' +
-            '.doc-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #c5a880; padding-bottom: 16px; margin-bottom: 22px; }' +
+            '.doc-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #d4af37; padding-bottom: 16px; margin-bottom: 22px; }' +
             '.doc-logo-title { font-size: 22px; font-weight: 900; color: #070d0a; margin: 0; }' +
             '.doc-logo-sub { font-size: 13px; color: #8c734b; font-weight: 700; margin: 2px 0 0; }' +
             '.doc-meta { text-align: left; font-size: 11px; color: #555; }' +
-            '.doc-badge { display: inline-block; background: #fdf8ef; border: 1px solid #c5a880; color: #8c734b; font-weight: 800; font-size: 11px; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; }' +
+            '.doc-badge { display: inline-block; background: #fdf8ef; border: 1px solid #d4af37; color: #8c734b; font-weight: 800; font-size: 11px; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; }' +
             '.doc-title { font-size: 20px; font-weight: 800; color: #070d0a; margin: 0 0 14px; }' +
-            '.query-card { background: #f8f9fa; border-right: 4px solid #c5a880; padding: 12px 16px; margin-bottom: 22px; border-radius: 4px; }' +
+            '.query-card { background: #f8f9fa; border-right: 4px solid #d4af37; padding: 12px 16px; margin-bottom: 22px; border-radius: 4px; }' +
             '.query-card p { margin: 0; font-style: italic; color: #333; font-weight: 600; font-size: 14px; }' +
             '.matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }' +
             '.matrix-box { border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px; background: #fafbfc; }' +
@@ -966,7 +966,7 @@
             '.sign-block { text-align: right; }' +
             '.sign-title { font-size: 13px; font-weight: 800; color: #070d0a; margin: 0; }' +
             '.sign-role { font-size: 11px; color: #64748b; margin: 2px 0 0; }' +
-            '.seal-box { border: 2px dashed #c5a880; border-radius: 50%; width: 95px; height: 95px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #8c734b; font-size: 10px; font-weight: 800; transform: rotate(-5deg); }' +
+            '.seal-box { border: 2px dashed #d4af37; border-radius: 50%; width: 95px; height: 95px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #8c734b; font-size: 10px; font-weight: 800; transform: rotate(-5deg); }' +
             '</style>' +
             '</head>' +
             '<body>' +
@@ -1216,7 +1216,7 @@
                 }
                 .sr-pwa-btn-inner {
                     background: linear-gradient(135deg, rgba(8, 24, 18, 0.95), rgba(13, 38, 28, 0.95));
-                    border: 1px solid rgba(197, 168, 128, 0.4);
+                    border: 1px solid rgba(212,175,55, 0.4);
                     color: var(--sr-gold-light, #f3dfba);
                     padding: 10px 18px;
                     border-radius: 999px;
@@ -1291,11 +1291,11 @@
                     <p style="font-size:0.92rem; color:#f8fafc; margin:0;">
                         يمكنكم تثبيت منصة <strong>S&R CoreSync</strong> واستوديوهاتها كـ Progressive Web App مستقل يعمل بسرعة فائقة وبدون اتصال بالإنترنت.
                     </p>
-                    <div style="background:rgba(8, 20, 15, 0.8); border:1px solid rgba(197, 168, 128, 0.25); border-radius:12px; padding:16px;">
+                    <div style="background:rgba(8, 20, 15, 0.8); border:1px solid rgba(212,175,55, 0.25); border-radius:12px; padding:16px;">
                         <div style="font-weight:bold; color:#10b981; margin-bottom:6px;">📱 لمستخدمي iPhone و iPad (متصفح Safari):</div>
                         <div style="font-size:0.85rem; color:#cbd5e1;">اضغط على أيقونة المشاركة <strong>(Share ⎋)</strong> في أسفل الشاشة، ثم اختر <strong>"إضافة إلى الصفحة الرئيسية ➕"</strong>.</div>
                     </div>
-                    <div style="background:rgba(8, 20, 15, 0.8); border:1px solid rgba(197, 168, 128, 0.25); border-radius:12px; padding:16px;">
+                    <div style="background:rgba(8, 20, 15, 0.8); border:1px solid rgba(212,175,55, 0.25); border-radius:12px; padding:16px;">
                         <div style="font-weight:bold; color:#38bdf8; margin-bottom:6px;">💻 لمستخدمي أجهزة الكمبيوتر (Chrome / Edge):</div>
                         <div style="font-size:0.85rem; color:#cbd5e1;">اضغط على أيقونة التثبيت في شريط العنوان أعلى المتصفح <strong>(Install App 🖥️)</strong> لتثبيت المنظومة كتطبيق سطح مكتب.</div>
                     </div>

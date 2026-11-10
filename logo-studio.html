@@ -38,7 +38,7 @@
       --card-border: rgba(255, 255, 255, 0.08);
       --accent-cyan: #06b6d4;
       --accent-emerald: #10b981;
-      --gold-royal: #c5a880;
+      --gold-royal: #d4af37;
     }
     body {
       background-color: var(--bg);
@@ -75,7 +75,7 @@
       border-radius: 9999px;
     }
     .card-3d-custom-wrap {
-      background: radial-gradient(circle at 80% 20%, rgba(197, 168, 128, 0.25) 0%, #0d0d12 70%);
+      background: radial-gradient(circle at 80% 20%, rgba(212,175,55, 0.25) 0%, #0d0d12 70%);
       transform-style: preserve-3d;
       perspective: 1000px;
     }
@@ -289,7 +289,7 @@
               <label class="block text-xs font-semibold text-zinc-300 mb-2">لوحات الألوان المعتمدة:</label>
               <div class="grid grid-cols-5 gap-2">
                 <button type="button" data-sr-call="setColorTheme" data-sr-args='["#0ea5e9", "#0284c7"]' class="h-8 rounded-lg bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] border border-cyan-400 hover:scale-105 transition shadow-sm shadow-cyan-500/30" title="Quantum Azure (الأصلي المعتمد)" aria-label="Quantum Azure"></button>
-                <button type="button" data-sr-call="setColorTheme" data-sr-args='["#c5a880", "#e6ca9f"]' class="h-8 rounded-lg bg-gradient-to-r from-[#c5a880] to-[#e6ca9f] border border-amber-300 hover:scale-105 transition shadow-sm shadow-amber-400/30" title="Royal Champagne Gold (الذهبي الملكي)" aria-label="Royal Champagne Gold"></button>
+                <button type="button" data-sr-call="setColorTheme" data-sr-args='["#d4af37", "#e6ca9f"]' class="h-8 rounded-lg bg-gradient-to-r from-[#d4af37] to-[#e6ca9f] border border-amber-300 hover:scale-105 transition shadow-sm shadow-amber-400/30" title="Royal Champagne Gold (الذهبي الملكي)" aria-label="Royal Champagne Gold"></button>
                 <button type="button" data-sr-call="setColorTheme" data-sr-args='["#06b6d4", "#10b981"]' class="h-8 rounded-lg bg-gradient-to-r from-[#06b6d4] to-[#10b981] border border-white/20 hover:scale-105 transition" title="Cyber Cyan & Emerald" aria-label="Cyber Cyan & Emerald"></button>
                 <button type="button" data-sr-call="setColorTheme" data-sr-args='["#6366f1", "#06b6d4"]' class="h-8 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#06b6d4] border border-white/20 hover:scale-105 transition" title="Indigo & Cyan" aria-label="Indigo & Cyan"></button>
                 <button type="button" data-sr-call="setColorTheme" data-sr-args='["#3b82f6", "#8b5cf6"]' class="h-8 rounded-lg bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] border border-white/20 hover:scale-105 transition" title="Blue & Purple AI" aria-label="Blue & Purple AI"></button>
@@ -659,11 +659,11 @@
           <i data-lucide="droplet" class="w-3.5 h-3.5 text-amber-400"></i> باليت الألوان الرسمية المعتمدة (انقر على أي كود لنسخه):
         </h4>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div class="bg-[#09090b] border border-white/10 rounded-xl p-3 cursor-pointer hover:border-amber-400/50 transition group" data-sr-call="copyColorCode" data-sr-args='["#c5a880"]'>
-            <div class="h-14 rounded-lg bg-[#c5a880] mb-2 shadow-md"></div>
+          <div class="bg-[#09090b] border border-white/10 rounded-xl p-3 cursor-pointer hover:border-amber-400/50 transition group" data-sr-call="copyColorCode" data-sr-args='["#d4af37"]'>
+            <div class="h-14 rounded-lg bg-[#d4af37] mb-2 shadow-md"></div>
             <div class="text-xs font-bold text-white">الذهب الملكي (Royal Gold)</div>
             <div class="text-[11px] font-code text-amber-300 mt-1 flex items-center justify-between">
-              <span>#c5a880</span>
+              <span>#d4af37</span>
               <i data-lucide="copy" class="w-3 h-3 opacity-0 group-hover:opacity-100 transition"></i>
             </div>
           </div>
@@ -819,15 +819,15 @@
                   <!-- Simplified High Quality Geometric QR Code Shape -->
                   <rect x="0" y="0" width="30" height="30" fill="#000" rx="3" />
                   <rect x="5" y="5" width="20" height="20" fill="#fff" rx="2" />
-                  <rect x="9" y="9" width="12" height="12" fill="#c5a880" rx="1" />
+                  <rect x="9" y="9" width="12" height="12" fill="#d4af37" rx="1" />
                   
                   <rect x="70" y="0" width="30" height="30" fill="#000" rx="3" />
                   <rect x="75" y="5" width="20" height="20" fill="#fff" rx="2" />
-                  <rect x="79" y="9" width="12" height="12" fill="#c5a880" rx="1" />
+                  <rect x="79" y="9" width="12" height="12" fill="#d4af37" rx="1" />
 
                   <rect x="0" y="70" width="30" height="30" fill="#000" rx="3" />
                   <rect x="5" y="75" width="20" height="20" fill="#fff" rx="2" />
-                  <rect x="9" y="79" width="12" height="12" fill="#c5a880" rx="1" />
+                  <rect x="9" y="79" width="12" height="12" fill="#d4af37" rx="1" />
 
                   <!-- Pattern dots -->
                   <rect x="36" y="8" width="8" height="8" fill="#000" />
@@ -996,14 +996,14 @@
       if (id === 0) {
         if (btn0) btn0.className = "p-3 rounded-xl border border-cyan-500 bg-cyan-500/20 text-cyan-300 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition ring-1 ring-cyan-400 shadow-md shadow-cyan-500/10";
         if (btn4) btn4.className = "p-3 rounded-xl border border-white/10 bg-white/5 text-zinc-400 hover:text-white text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition";
-        if (color1 === '#facc15' || color1 === '#c5a880') {
+        if (color1 === '#facc15' || color1 === '#d4af37') {
           setColorTheme('#0ea5e9', '#0284c7');
         }
       } else if (id === 4) {
         if (btn0) btn0.className = "p-3 rounded-xl border border-white/10 bg-white/5 text-zinc-400 hover:text-white text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition";
         if (btn4) btn4.className = "p-3 rounded-xl border border-amber-400 bg-amber-500/20 text-amber-300 text-xs font-semibold flex flex-col items-center justify-center gap-1.5 transition ring-1 ring-amber-400 shadow-md shadow-amber-500/10";
-        if (color1 !== '#facc15' && color1 !== '#c5a880') {
-          setColorTheme('#c5a880', '#e6ca9f');
+        if (color1 !== '#facc15' && color1 !== '#d4af37') {
+          setColorTheme('#d4af37', '#e6ca9f');
         }
       }
       updateLogo();
@@ -1478,9 +1478,9 @@
               <stop offset="75%" stop-color="#0d0d12"/>
             </radialGradient>
           </defs>
-          <rect width="850" height="550" rx="30" fill="url(#cardGrad)" stroke="#c5a880" stroke-width="4"/>
+          <rect width="850" height="550" rx="30" fill="url(#cardGrad)" stroke="#d4af37" stroke-width="4"/>
           <text x="60" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#ffffff">S&amp;R CORESYNC</text>
-          <text x="60" y="110" font-family="'JetBrains Mono', monospace" font-size="16" fill="#c5a880" letter-spacing="4">SOLUTIONS B.V.</text>
+          <text x="60" y="110" font-family="'JetBrains Mono', monospace" font-size="16" fill="#d4af37" letter-spacing="4">SOLUTIONS B.V.</text>
           
           <text x="60" y="270" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="#ffffff">Eng. Mohammad Salim Aziza</text>
           <text x="60" y="305" font-family="'JetBrains Mono', monospace" font-size="18" fill="#f59e0b">Co-Founder &amp; CTO // Cloud Architect</text>
@@ -1490,7 +1490,7 @@
           
           <line x1="60" y1="465" x2="790" y2="465" stroke="#333" stroke-width="2"/>
           <text x="60" y="505" font-family="'JetBrains Mono', monospace" font-size="16" fill="#a1a1aa">Keizersgracht 482, Amsterdam</text>
-          <text x="650" y="505" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700" fill="#c5a880">KVK: 84920194</text>
+          <text x="650" y="505" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700" fill="#d4af37">KVK: 84920194</text>
         </svg>`;
       }
       return '';
@@ -1523,7 +1523,7 @@
         currentVariant = 4;
         const colorTmp1 = color1;
         const colorTmp2 = color2;
-        color1 = '#c5a880';
+        color1 = '#d4af37';
         color2 = '#e6ca9f';
         const svgRoyalGold = generateSvgString(true, 300);
         zip.file("02-Logo-Royal-Neon-Gold.svg", svgRoyalGold);
@@ -1549,7 +1549,7 @@
           kvk: "84920194",
           btw: "NL863920194B01",
           colors: {
-            royalGold: { hex: "#c5a880", rgb: "rgb(197, 168, 128)", usage: "Primary Luxury Brand & High-Tier Assets" },
+            royalGold: { hex: "#d4af37", rgb: "rgb(197, 168, 128)", usage: "Primary Luxury Brand & High-Tier Assets" },
             cyberCyan: { hex: "#38bdf8", rgb: "rgb(56, 189, 248)", usage: "Cloud Architecture & Tech Interfaces" },
             fintechEmerald: { hex: "#10b981", rgb: "rgb(16, 185, 129)", usage: "Financial Metrics & Positive Trends" },
             obsidianBlack: { hex: "#010907", rgb: "rgb(1, 9, 7)", usage: "Deep Background Canvas" }
@@ -1565,14 +1565,14 @@
         // 6. ملف متغيرات التصميم للمطورين (CSS Variables)
         const cssVariables = `/* S&R CoreSync For Intelligent Solutions - Official Brand Tokens */
 :root {
-  --sr-royal-gold: #c5a880;
+  --sr-royal-gold: #d4af37;
   --sr-royal-gold-hover: #e0c59e;
   --sr-cyber-cyan: #38bdf8;
   --sr-fintech-emerald: #10b981;
   --sr-obsidian-black: #010907;
   --sr-font-brand: 'Plus Jakarta Sans', -apple-system, sans-serif;
   --sr-font-arabic: 'Alexandria', 'IBM Plex Sans Arabic', sans-serif;
-  --sr-border-glow: 0 0 25px rgba(197, 168, 128, 0.25);
+  --sr-border-glow: 0 0 25px rgba(212,175,55, 0.25);
 }
 `;
         zip.file("06-Brand-Design-Tokens.css", cssVariables);
@@ -1602,7 +1602,7 @@ FILES INCLUDED IN THIS PACKAGE:
 USAGE RULES:
 - Minimum clear space around the emblem must be at least 25% of the emblem width.
 - Do not alter the monogram ligature proportions (S&R).
-- For financial and enterprise portals, use Royal Gold (#c5a880) or Titanium Cyan (#38bdf8).
+- For financial and enterprise portals, use Royal Gold (#d4af37) or Titanium Cyan (#38bdf8).
 
 (c) 2026 S&R CoreSync For Intelligent Solutions All rights reserved.
 `;

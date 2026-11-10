@@ -8,18 +8,18 @@
         :root {
             --bg-deep: #060b09;
             --bg-card: #0c1511;
-            --gold: #c5a880;
+            --gold: #d4af37;
             --gold-light: #e6ca9f;
             --text-white: #ffffff;
             --text-dim: #94a3b8;
             --accent-green: #10b981;
-            --border-line: rgba(197, 168, 128, 0.25);
+            --border-line: rgba(212,175,55, 0.25);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: var(--bg-deep); color: var(--text-white); padding: 24px; min-height: 100vh; display: flex; flex-direction: column; }
         header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-line); padding-bottom: 16px; margin-bottom: 24px; }
         .logo { display: flex; align-items: center; gap: 12px; }
-        .logo-emblem { width: 44px; height: 44px; background: linear-gradient(135deg, #10b981, #c5a880); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #060b09; font-size: 1.2rem; }
+        .logo-emblem { width: 44px; height: 44px; background: linear-gradient(135deg, #10b981, #d4af37); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #060b09; font-size: 1.2rem; }
         .logo h1 { font-size: 1.25rem; font-weight: 800; color: #fff; }
         .logo p { font-size: 0.78rem; color: var(--text-dim); }
         .status-badge { background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-green); color: var(--accent-green); padding: 4px 12px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; }
@@ -30,10 +30,10 @@
         label { display: block; font-size: 0.82rem; color: var(--text-dim); margin-bottom: 6px; }
         input, select { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border-line); border-radius: 8px; padding: 10px 14px; color: #fff; font-size: 0.95rem; }
         input:focus, select:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.08); }
-        .calc-result { background: rgba(197, 168, 128, 0.08); border: 1px solid var(--gold); border-radius: 10px; padding: 16px; margin-top: 16px; }
+        .calc-result { background: rgba(212,175,55, 0.08); border: 1px solid var(--gold); border-radius: 10px; padding: 16px; margin-top: 16px; }
         .calc-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
-        .calc-row.total { font-size: 1.15rem; font-weight: 800; color: var(--gold-light); border-top: 1px solid rgba(197,168,128,0.3); padding-top: 8px; margin-top: 8px; }
-        .btn { background: linear-gradient(135deg, #c5a880, #8f6834); color: #060b09; border: none; border-radius: 8px; padding: 12px 18px; font-weight: 800; cursor: pointer; width: 100%; margin-top: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.92rem; text-decoration: none; }
+        .calc-row.total { font-size: 1.15rem; font-weight: 800; color: var(--gold-light); border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 8px; }
+        .btn { background: linear-gradient(135deg, #d4af37, #8f6834); color: #060b09; border: none; border-radius: 8px; padding: 12px 18px; font-weight: 800; cursor: pointer; width: 100%; margin-top: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.92rem; text-decoration: none; }
         .btn:hover { filter: brightness(1.15); }
         .btn-secondary { background: rgba(255,255,255,0.08); border: 1px solid var(--border-line); color: #fff; }
         .btn-secondary:hover { background: rgba(255,255,255,0.15); }

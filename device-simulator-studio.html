@@ -28,12 +28,12 @@
 
     <style>
         :root {
-            --sr-gold:        #c5a880;
+            --sr-gold:        #d4af37;
             --sr-gold-light:  #f3dfba;
             --sr-gold-dark:   #8c734b;
             --sr-bg-root:     #030705;
             --sr-bg-card:     rgba(8, 18, 12, 0.88);
-            --sr-border:      rgba(197, 168, 128, 0.22);
+            --sr-border:      rgba(212,175,55, 0.22);
             --sr-cyan:        #38bdf8;
             --sr-emerald:     #10b981;
         }
@@ -100,7 +100,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(197, 168, 128, 0.12);
+            background: rgba(212,175,55, 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -155,9 +155,9 @@
         .device-btn.active,
         .device-btn:hover {
             border-color: var(--sr-gold);
-            background: rgba(197, 168, 128, 0.15);
+            background: rgba(212,175,55, 0.15);
             color: #fff;
-            box-shadow: 0 0 18px rgba(197, 168, 128, 0.2);
+            box-shadow: 0 0 18px rgba(212,175,55, 0.2);
         }
 
         .url-bar {
@@ -239,7 +239,7 @@
 
         .phone-shell:hover {
             transform: rotateY(0deg) rotateX(0deg);
-            box-shadow: 0 50px 100px rgba(0,0,0,0.9), 0 0 30px rgba(197,168,128,0.15);
+            box-shadow: 0 50px 100px rgba(0,0,0,0.9), 0 0 30px rgba(212,175,55,0.15);
         }
 
         .phone-notch {
@@ -287,7 +287,7 @@
 
         .tablet-shell:hover {
             transform: rotateY(0deg) rotateX(0deg);
-            box-shadow: 0 60px 110px rgba(0,0,0,0.85), 0 0 35px rgba(197,168,128,0.12);
+            box-shadow: 0 60px 110px rgba(0,0,0,0.85), 0 0 35px rgba(212,175,55,0.12);
         }
 
         .tablet-camera {
@@ -466,7 +466,7 @@
 
         <!-- شريط إدخال URL -->
         <div class="url-bar">
-            <span style="color:#c5a880; font-size:0.85rem; font-weight:700; white-space:nowrap;">🔗 معاينة رابط:</span>
+            <span style="color:#d4af37; font-size:0.85rem; font-weight:700; white-space:nowrap;">🔗 معاينة رابط:</span>
             <input type="text" id="urlInput" placeholder="https://sr-coresync.com أو أي رابط..." value="./index.html" dir="ltr">
             <button class="url-go-btn" onclick="loadURL()">عرض</button>
         </div>

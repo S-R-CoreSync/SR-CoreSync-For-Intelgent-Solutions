@@ -14,7 +14,7 @@
             --bg-obsidian: #030806;
             --bg-card: #071510;
             --bg-card-hover: #0b1f18;
-            --gold-primary: #c5a880;
+            --gold-primary: #d4af37;
             --gold-light: #f3dfba;
             --gold-dark: #917752;
             --emerald: #10b981;
@@ -22,7 +22,7 @@
             --amber: #f59e0b;
             --crimson: #ef4444;
             --border-dim: #183327;
-            --border-gold: #c5a880;
+            --border-gold: #d4af37;
         }
 
         * {
@@ -39,7 +39,7 @@
             min-height: 100vh;
             background-image:
                 radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(197, 168, 128, 0.06) 0%, transparent 45%);
+                radial-gradient(circle at 85% 85%, rgba(212,175,55, 0.06) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
         }
@@ -84,7 +84,7 @@
             height: 44px;
             border-radius: 10px;
             border: 1px solid var(--gold-primary);
-            box-shadow: 0 0 15px rgba(197, 168, 128, 0.2);
+            box-shadow: 0 0 15px rgba(212,175,55, 0.2);
         }
 
         .brand-title {
@@ -129,8 +129,8 @@
 
         .nav-link.gold {
             color: var(--gold-light);
-            border-color: rgba(197, 168, 128, 0.35);
-            background: rgba(197, 168, 128, 0.08);
+            border-color: rgba(212,175,55, 0.35);
+            background: rgba(212,175,55, 0.08);
         }
 
         .hero {
@@ -357,7 +357,7 @@
 
         .station-btn:hover, .station-btn.selected {
             border-color: var(--gold-primary);
-            background: rgba(197, 168, 128, 0.12);
+            background: rgba(212,175,55, 0.12);
         }
 
         .station-head {
@@ -746,7 +746,7 @@
                     qber: '0.29% QBER',
                     keyrate: '1.50 Mbps',
                     failover: '9.6 ms',
-                    beamColor: '#c5a880',
+                    beamColor: '#d4af37',
                     log: '[EMP-SHIELD] Faraday & Optical Isolation active — Zero packet loss during simulated G5 solar storm.'
                 }
             };
@@ -868,7 +868,7 @@
 
                         ctx.beginPath();
                         ctx.arc(g.x, g.y, 14, 0, Math.PI * 2);
-                        ctx.fillStyle = (g.key === activeStation) ? '#c5a880' : '#071510';
+                        ctx.fillStyle = (g.key === activeStation) ? '#d4af37' : '#071510';
                         ctx.fill();
                         ctx.strokeStyle = '#f3dfba';
                         ctx.lineWidth = 2;

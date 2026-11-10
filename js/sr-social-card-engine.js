@@ -82,11 +82,11 @@
         }
         .sr-social-modal-card {
           background: linear-gradient(135deg, rgba(8, 22, 16, 0.98), rgba(4, 10, 8, 0.98));
-          border: 1px solid rgba(197, 168, 128, 0.35);
+          border: 1px solid rgba(212,175,55, 0.35);
           border-radius: 18px;
           width: 100%;
           max-width: 920px;
-          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(197, 168, 128, 0.15);
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(212,175,55, 0.15);
           overflow: hidden;
           transform: translateY(20px);
           transition: transform 0.25s ease;
@@ -99,7 +99,7 @@
           align-items: center;
           justify-content: space-between;
           padding: 16px 24px;
-          border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+          border-bottom: 1px solid rgba(212,175,55, 0.2);
           background: rgba(13, 34, 26, 0.6);
         }
         .sr-social-close-btn {
@@ -119,7 +119,7 @@
         .sr-social-canvas-wrap {
           width: 100%;
           background: #020504;
-          border: 1px solid rgba(197, 168, 128, 0.25);
+          border: 1px solid rgba(212,175,55, 0.25);
           border-radius: 12px;
           overflow: hidden;
           box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -149,13 +149,13 @@
           border: none;
         }
         .sr-social-btn--gold {
-          background: linear-gradient(135deg, #c5a880, #8c734b);
+          background: linear-gradient(135deg, #d4af37, #8c734b);
           color: #030806;
-          box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+          box-shadow: 0 4px 15px rgba(212,175,55, 0.3);
         }
         .sr-social-btn--gold:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 22px rgba(197, 168, 128, 0.45);
+          box-shadow: 0 6px 22px rgba(212,175,55, 0.45);
         }
         .sr-social-btn--linkedin {
           background: #0a66c2; color: #fff;
@@ -170,12 +170,12 @@
           background: #1e293b; transform: translateY(-2px);
         }
         .sr-social-btn--outline {
-          background: rgba(197, 168, 128, 0.1);
+          background: rgba(212,175,55, 0.1);
           color: #f3dfba;
-          border: 1px solid rgba(197, 168, 128, 0.3);
+          border: 1px solid rgba(212,175,55, 0.3);
         }
         .sr-social-btn--outline:hover {
-          background: rgba(197, 168, 128, 0.2);
+          background: rgba(212,175,55, 0.2);
         }
       `;
       document.head.appendChild(style);
@@ -198,17 +198,17 @@
     ctx.fillRect(0, 0, w, h);
 
     // 2. Ornate Golden Borders & Corner Accents
-    ctx.strokeStyle = 'rgba(197, 168, 128, 0.35)';
+    ctx.strokeStyle = 'rgba(212,175,55, 0.35)';
     ctx.lineWidth = 3;
     ctx.strokeRect(30, 30, w - 60, h - 60);
 
-    ctx.strokeStyle = '#c5a880';
+    ctx.strokeStyle = '#d4af37';
     ctx.lineWidth = 1.5;
     ctx.strokeRect(38, 38, w - 76, h - 76);
 
     // Corner decorative brackets
     const cSize = 25;
-    ctx.fillStyle = '#c5a880';
+    ctx.fillStyle = '#d4af37';
     // Top-left
     ctx.fillRect(26, 26, cSize, 5); ctx.fillRect(26, 26, 5, cSize);
     // Top-right
@@ -219,7 +219,7 @@
     ctx.fillRect(w - 26 - cSize, h - 31, cSize, 5); ctx.fillRect(w - 31, h - 26 - cSize, 5, cSize);
 
     // 3. Top Header Branding
-    ctx.fillStyle = '#c5a880';
+    ctx.fillStyle = '#d4af37';
     ctx.font = 'bold 24px "Alexandria", sans-serif';
     ctx.textAlign = 'right';
     ctx.fillText('S&R CoreSync For Intelligent Solutions', w - 80, 85);
@@ -230,11 +230,11 @@
 
     // Category / Badge
     const category = config.badge || 'استوديو الابتكار الرقمي';
-    ctx.fillStyle = 'rgba(197, 168, 128, 0.15)';
+    ctx.fillStyle = 'rgba(212,175,55, 0.15)';
     ctx.beginPath();
     ctx.roundRect(80, 65, 260, 42, 8);
     ctx.fill();
-    ctx.strokeStyle = 'rgba(197, 168, 128, 0.4)';
+    ctx.strokeStyle = 'rgba(212,175,55, 0.4)';
     ctx.stroke();
 
     ctx.fillStyle = '#f3dfba';
@@ -263,7 +263,7 @@
     const metrics = config.metrics || [
       { label: 'تقييم الأداء العام', val: '98 / 100', sub: 'امتياز هندسي معتمد ✓', color: '#10b981' },
       { label: 'زمن أول بايت TTFB', val: '0.15s', sub: 'Edge CDN فائق السرعة', color: '#38bdf8' },
-      { label: 'التوفير السنوي التقديري', val: '€ 14,800', sub: 'عائد استثماري ROI فوري', color: '#c5a880' }
+      { label: 'التوفير السنوي التقديري', val: '€ 14,800', sub: 'عائد استثماري ROI فوري', color: '#d4af37' }
     ];
 
     metrics.forEach((m, i) => {
@@ -274,7 +274,7 @@
       ctx.beginPath();
       ctx.roundRect(curX, cardY, cardW, cardH, 12);
       ctx.fill();
-      ctx.strokeStyle = 'rgba(197, 168, 128, 0.25)';
+      ctx.strokeStyle = 'rgba(212,175,55, 0.25)';
       ctx.lineWidth = 1.5;
       ctx.stroke();
 
@@ -296,7 +296,7 @@
     });
 
     // 6. Bottom Verification Ribbon
-    ctx.fillStyle = '#c5a880';
+    ctx.fillStyle = '#d4af37';
     ctx.font = '700 16px "Alexandria", sans-serif';
     ctx.textAlign = 'right';
     ctx.fillText('✓ موثق ومعتمد رسمياً وفق المعايير الأوروبية GDPR • S&R CoreSync Platform', w - 80, 565);
