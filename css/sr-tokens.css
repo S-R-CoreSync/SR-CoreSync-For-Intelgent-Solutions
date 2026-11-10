@@ -35,3 +35,23 @@
   .sr-jump a{font-size:.76rem; padding:.45rem .8rem}
 }
 @media (prefers-reduced-motion:reduce){ .sr-jump a{transition:none} }
+
+/* ---------------------------------------------------------------------------
+ * Print: procurement teams still print. On paper the page becomes the offer:
+ * chrome removed, prices black on white, no page-break inside a plan card.
+ * ------------------------------------------------------------------------- */
+@media print{
+  @page{margin:14mm}
+  html,body{background:#fff !important;color:#111 !important}
+  .sr-quick-dock-container,.apple-macos-dock-wrapper,.srlf-wrap,.floating-follow,
+  .sr-jump,.sr-privacy-banner,.sr-logo-lightbox-overlay,.sr-exec-modal,
+  .call-modal-overlay,.sr-portal-modal-overlay,.chat-widget,.ai-concierge,
+  header.site-header,.tf-header,#navMoreDropdown,nav[data-sr-decision-bar]{display:none !important}
+  a{color:#111 !important;text-decoration:none !important}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:.75em;color:#444}
+  section{break-inside:avoid;page-break-inside:avoid;padding:10mm 0 !important}
+  .wg-plan,.plan-card,.price-card{break-inside:avoid;border:1px solid #ccc !important;background:#fff !important}
+  .plan-badge{border:1px solid #999 !important;color:#111 !important}
+  #pricing .text-white-64,#pricing .desc,#pricing p{color:#333 !important}
+  video,iframe,.hero-sectors-marquee{display:none !important}
+}
