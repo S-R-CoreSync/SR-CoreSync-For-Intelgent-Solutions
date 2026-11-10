@@ -214,6 +214,27 @@ def _load_dead_assets():
 DEAD_ASSETS = _load_dead_assets()
 
 
+# ---------------------------------------------------------------------------
+# Assets served from the repository instead of the artefact (see
+# scripts/publish_remote_assets.txt). Downloads and lightbox sources only; the
+# pages point at raw.githubusercontent.com for exactly these paths.
+# ---------------------------------------------------------------------------
+REMOTE_ASSET_LIST = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), 'publish_remote_assets.txt')
+
+
+def _load_list(path):
+    try:
+        with open(path, encoding='utf-8') as handle:
+            return {line.strip() for line in handle
+                    if line.strip() and not line.lstrip().startswith('#')}
+    except OSError:
+        return set()
+
+
+REMOTE_ASSETS = _load_list(REMOTE_ASSET_LIST)
+
+
 def iter_publish_files(root=None):
     """Yield every repository-relative path that belongs to the publish set."""
     base = root or ROOT
@@ -232,7 +253,7 @@ def iter_publish_files(root=None):
             rel = (rel_dir + '/' + name) if rel_dir else name
             if is_excluded(rel):
                 continue
-            if rel in DEAD_ASSETS:
+            if rel in DEAD_ASSETS or rel in REMOTE_ASSETS:
                 continue
             if name.lower().endswith('.html') and _is_saved_page(
                     os.path.join(dirpath, name)):
