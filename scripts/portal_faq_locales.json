@@ -277,5 +277,47 @@
     "a": "Pracujemy metodą migracji z równoległą symulacją. Konektory API i synchronizacja zapisów powstają w izolowanym środowisku testowym, a wszystkie konta i przepływy są weryfikowane. Przejście na produkcję następuje dopiero po 100% weryfikacji — bez sekundy przestoju (zero downtime)."
    }
   }
+ },
+ "sv": {
+  "heading": "Vanliga frågor",
+  "faq": {
+   "06": {
+    "q": "Äger vi källkoden och databaserna fullt ut (IP Ownership)?",
+    "a": "<strong>Ja, till 100 %.</strong> Våra avtal överför alla rättigheter till källkod, design och databaser till ert företag – utan begränsningar, utan licensavgifter och utan dolda prenumerationer. Ni får också fullständig arkitektur- och säkerhetsdokumentation så att ert team kan vidareutveckla systemet självständigt."
+   },
+   "07": {
+    "q": "Hur hanteras fakturor och skatt för företag i Nederländerna och EU?",
+    "a": "Vi utfärdar officiella europeiska skattefakturor, registrerade hos den nederländska skattemyndigheten (Belastingdienst), med momsnummer (btw-nummer) och KvK-nummer. Företag med säte i Nederländerna kan återfå 21 % moms; för företag inom EU tillämpas omvänd skattskyldighet (0 % moms). Beloppen är fullt avdragsgilla som driftkostnader."
+   },
+   "08": {
+    "q": "Hur säkerställer ni datakonfidentialitet och systemsäkerhet enligt europeiska standarder (GDPR)?",
+    "a": "Vi arbetar GDPR-compliant och undertecknar före start ett ömsesidigt, juridiskt bindande sekretessavtal (NDA). Vi använder end-to-end-kryptering (TLS 1.3 / AES-256), hosting på suveräna europeiska servrar med 99,9 % tillgänglighet och dagliga krypterade säkerhetskopior."
+   },
+   "09": {
+    "q": "Vi använder redan befintliga ekonomisystem – hur garanterar ni integration och migrering utan driftstopp?",
+    "a": "Vi arbetar med parallell simuleringsmigrering. API-kopplingar och synkronisering av verifikationer byggs i en isolerad testmiljö och alla konton och flöden verifieras. Produktionssättning sker först efter 100 % verifiering – utan en sekunds avbrott (zero downtime)."
+   }
+  }
+ },
+ "da": {
+  "heading": "Ofte stillede spørgsmål",
+  "faq": {
+   "06": {
+    "q": "Ejer vi kildekoden og databaserne fuldt ud (IP Ownership)?",
+    "a": "<strong>Ja, 100 %.</strong> Vores kontrakter overfører alle rettigheder til kildekode, design og databaser til jeres virksomhed – uden begrænsninger, uden licensafgifter og uden skjulte abonnementer. I modtager desuden fuld arkitektur- og sikkerhedsdokumentation, så jeres team selv kan videreudvikle systemet."
+   },
+   "07": {
+    "q": "Hvordan håndteres fakturaer og skat for virksomheder i Holland og EU?",
+    "a": "Vi udsteder officielle europæiske skattefakturaer, registreret hos den hollandske skattemyndighed (Belastingdienst), med momsnummer (btw-nummer) og KvK-nummer. Virksomheder med hjemsted i Holland kan få 21 % moms tilbage; for virksomheder i EU anvendes omvendt betalingspligt (0 % moms). Beløbene er fuldt fradragsberettigede som driftsomkostninger."
+   },
+   "08": {
+    "q": "Hvordan sikrer I fortrolighed om vores data og systemernes sikkerhed efter europæiske standarder (GDPR)?",
+    "a": "Vi arbejder GDPR-kompliant og underskriver inden opstart en gensidig, juridisk bindende fortrolighedsaftale (NDA). Vi anvender end-to-end-kryptering (TLS 1.3 / AES-256), hosting på suveræne europæiske servere med 99,9 % oppetid og daglige krypterede backups."
+   },
+   "09": {
+    "q": "Vi bruger allerede eksisterende økonomisystemer – hvordan sikrer I integration og migrering uden driftsstop?",
+    "a": "Vi arbejder med parallel simuleringsmigrering. API-konnektorer og synkronisering af posteringer udvikles i et isoleret testmiljø, og alle konti og flows verificeres. Produktionssætning sker først efter 100 % verifikation – uden ét sekunds afbrydelse (zero downtime)."
+   }
+  }
  }
 }
