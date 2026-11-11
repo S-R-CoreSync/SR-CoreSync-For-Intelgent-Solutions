@@ -113,6 +113,13 @@ jobs:
       # The id-level parity check above cannot see that 26 languages lost the
       # plan card, four FAQ answers and the estimator. This one measures content
       # and only reports until every language is repaired (then flip --strict).
+      # Same failure class one level deeper: the ids can all be present while a
+      # block added to the master later never reached the 27 other pages. Report
+      # now, flip to --strict once the transplant wave reaches zero.
+      - name: Report structure drift against the master (non-blocking)
+        continue-on-error: true
+        run: python docs/audit_structure_vs_master.py --strict
+
       - name: Report content parity inside the sections (non-blocking)
         continue-on-error: true
         run: python scripts/check_content_depth_parity.py
