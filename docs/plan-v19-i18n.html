@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تحديث الخطة والهيكلية — الإصدار 19 · S&amp;R CoreSync</title>
+<style>
+ :root{--ink:#0b1218;--panel:#111b24;--line:#243343;--gold:#d4af37;--text:#e8eef4;--muted:#9db0c2;--ok:#2f9e6b;--gap:#c0392b}
+ *{box-sizing:border-box} body{margin:0;background:var(--ink);color:var(--text);font-family:"Segoe UI",Tahoma,sans-serif;line-height:1.8}
+ .wrap{max-width:1120px;margin:0 auto;padding:32px 20px 72px}
+ .kicker{color:var(--gold);letter-spacing:.14em;font-size:.75rem}
+ h1{font-size:clamp(1.5rem,3vw,2.2rem);margin:.3em 0}
+ h2{font-size:1.2rem;margin:2.2em 0 .5em;color:var(--gold);border-inline-start:4px solid var(--gold);padding-inline-start:12px}
+ h3{font-size:1rem;margin:1.4em 0 .3em}
+ .meta{color:var(--muted);font-size:.88rem}
+ .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0}
+ .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+ .kpi b{display:block;font-size:1.8rem;color:var(--gold)} .kpi span{font-size:.84rem;color:var(--muted)}
+ table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.85rem;background:var(--panel);border:1px solid var(--line)}
+ th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:right}
+ thead th{color:var(--gold);background:#0e1922} tbody th{font-family:ui-monospace,Consolas,monospace}
+ td.ok{color:#7fe3b0;text-align:center;font-weight:700}
+ td.gap{color:#ff9a8c;text-align:center;font-weight:700;background:rgba(192,57,43,.12)}
+ .callout{border:1px solid var(--line);border-inline-start:4px solid var(--gold);background:var(--panel);border-radius:10px;padding:14px 16px;margin:16px 0}
+ .callout.bad{border-inline-start-color:var(--gap)} .callout.good{border-inline-start-color:var(--ok)}
+ code{background:#0a131a;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:.85em;direction:ltr;display:inline-block}
+ ol.steps{counter-reset:s;list-style:none;padding:0} ol.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 50px 12px 14px;position:relative;margin-bottom:9px}
+ ol.steps li::before{content:counter(s);position:absolute;inset-inline-start:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:#111;font-weight:700;display:grid;place-items:center;font-size:.8rem}
+ ul.tight li{margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker">S&amp;R CORESYNC · تحديث الخطة والهيكلية</div>
+<h1>الإصدار 19 — المرحلة الثانية: تكافؤ المحتوى</h1>
+<p class="meta">مبني من <code>docs/content_depth.json</code> المقيس على الشجرة الحالية · الأربعاء، 11 نوفمبر 2026 · 21:40</p>
+
+<h2>1. الخلاصة</h2>
+<div class="kpis">
+ <div class="kpi"><b>19 / 19</b><span>قسمًا بترتيب واحد في 29 صفحة</span></div>
+ <div class="kpi"><b dir="ltr">27 / 27</b><span>لغة بصفر أسئلة إنجليزية</span></div>
+ <div class="kpi"><b dir="ltr">27 / 27</b><span>لغة بثلاثية المحتوى كاملة (خطط · أسئلة · خدمات)</span></div>
+ <div class="kpi"><b dir="ltr">2 / 27</b><span>لغة فيها المُقدِّر التفاعلي</span></div>
+</div>
+<div class="callout good">
+<b>الحصيلة:</b> بنية الصفحة أُغلقت نهائيًا (الفصول 1–9)، وبطاقات الخطط (12/12) والأسئلة (15/15) وبطاقات الخدمات (6/6) صارت متطابقة في كل اللغات.
+وفي موجة الأسئلة خرجت <b>الأسئلة الإنجليزية</b> من 22 صفحة (196 سؤالًا وجوابًا)، فصارت <b>27/27</b> لغة بصفر أسئلة إنجليزية.
+ما تبقّى ليس انحراف بنية ولا نقص نص، بل <b>نقل المُقدِّر التفاعلي</b> إلى بقية اللغات.
+</div>
+
+<h2>2. البنود الثلاثة التي كان الإصدار 18 يعدّها عالقة</h2>
+<table>
+ <thead><tr><th>البند (تشخيص الإصدار 18)</th><th>الحالة الآن</th><th>الدليل المقيس</th></tr></thead>
+ <tbody>
+  <tr><th scope="row">بطاقة السوشيال €890</th><td class="ok">مُغلقة</td><td>12/12 بطاقة في كل لغة عبر <code>apply_plan_card.py</code></td></tr>
+  <tr><th scope="row">أربعة أسئلة غائبة</th><td class="ok">مُغلقة</td><td>15/15 سؤالًا في كل لغة عبر <code>apply_faq_locales.py</code></td></tr>
+  <tr><th scope="row">المُقدِّر التفاعلي</th><td class="gap">مفتوحة جزئيًا</td><td>2 لغة فقط (ckb · de) من أصل 27</td></tr>
+ </tbody>
+</table>
+<div class="callout">
+<b>تصحيح منهجي:</b> الإصدار 18 قاس «غياب وحدة» في المُقدِّر. الصحيح أنه <b>ميزة مبنيّة فعلًا</b>
+(<code>js/sr-estimator.js</code> · <code>css/sr-estimator.css</code>) بلا نافذة حجز: زرّ الحجز يُحذف عند النقل،
+ويُستبدل بمسار واتساب — وهو القرار الذي أوصى به الإصدار 18 ونُفِّذ على الألمانية أولًا.
+</div>
+
+<h2>3. مصفوفة المحتوى الحقيقية</h2>
+<p class="meta">«أسئلة إنجليزية» = عدد الأسئلة التي ما زالت بصياغة إنجليزية في صفحة غير إنجليزية. الصفر هو المطلوب.</p>
+<table>
+ <thead><tr><th>اللغة</th><th>بطاقات الخطط / 12</th><th>الأسئلة / 15</th><th>أسئلة إنجليزية</th><th>المُقدِّر</th></tr></thead>
+ <tbody><tr><th scope="row">bg</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">ckb</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="ok">✓</td></tr><tr><th scope="row">cs</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">da</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">de</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="ok">✓</td></tr><tr><th scope="row">el</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">en</th><td class="ok">12</td><td class="ok">15</td><td class="ok">14</td><td class="gap">—</td></tr><tr><th scope="row">es</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">et</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">fi</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">fr</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">ga</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">hr</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">hu</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">it</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">ku</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">lt</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">lv</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">mt</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">nl</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">no</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">pl</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">pt</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">ro</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">sk</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">sl</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">sv</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr><tr><th scope="row">tr</th><td class="ok">12</td><td class="ok">15</td><td class="ok">0</td><td class="gap">—</td></tr></tbody>
+</table>
+
+<h2>4. الفجوة الوحيدة الباقية: المُقدِّر</h2>
+<div class="callout good"><b>إغلاق كامل:</b> لا يوجد سؤال واحد بالإنجليزية في أي صفحة غير إنجليزية — بقايا قسم الأسئلة انتهت.</div>
+<div class="callout bad">
+ ما تبقّى بناءً على القياس: <b>25</b> لغة بلا مُقدِّر تفاعلي،
+ مقابل <b>2</b> تعمل (ckb · de).
+</div>
+<h3>لماذا هو «وحدة تركيب» لا «ميزة جديدة»</h3>
+<ul class="tight">
+ <li>الوحدة مستخرجة ومُختبرة: <code>js/sr-estimator.js</code> + <code>css/sr-estimator.css</code>، وتعمل على الألمانية والكردية السورانية.</li>
+ <li>التسميات كلها في ملف واحد: <code>scripts/portal_estimator_locales.json</code> — <b>55 تسمية</b> لكل لغة، ولا حاجة لمسّ الـHTML.</li>
+ <li>التركيب أمر واحد: <code>python scripts/install_estimator.py --lang XX</code> ثم إعادة القياس.</li>
+ <li>زر الحجز يُحذف تلقائيًا عند النقل، فلا يظهر زر ميت في صفحة بلا نافذة حجز.</li>
+</ul>
+
+<h2>5. الطريقة المعتمدة للموجة</h2>
+<div class="callout">
+<b>موجة متوازية:</b> وكيل مستقل لكل لغة، يعدّل ملفّه فقط، بلا git — والأب يلتزم ويقيس.<br>
+<code>1)</code> <code>python scripts/i18n_scan_english.py --lang XX --csv docs/i18n-en/XX.csv</code><br>
+<code>2)</code> خريطة <code>XX.map.json</code>: الإنجليزي ← الترجمة، الأطول أولًا<br>
+<code>3)</code> <code>python scripts/apply_text_map.py --lang XX --map XX.map.json --all</code><br>
+<code>4)</code> إعادة المسح (الرقم يجب أن ينزل) · ثم البوابات
+</div>
+
+<h2>6. حلقة التحقق (انسخها حرفيًا)</h2>
+<pre><code>node scripts/validate.js
+python scripts/check_site_links.py
+python scripts/build_csp.py &amp;&amp; python scripts/build_csp.py --check
+python scripts/audit_arabic_containment.py
+python scripts/audit_language_purity.py
+python scripts/check_content_depth_parity.py --json docs/content_depth.json
+python docs/measure_structure.py &amp;&amp; python docs/build_plan_page_v19.py</code></pre>
+
+<h2>7. قواعد ثابتة لا تُخترق</h2>
+<ol class="steps">
+ <li><b>عدّل الأصل لا الفرع:</b> صفحات اللغات تُولَّد من <code>index.html</code>؛ أي تعديل يدوي عليها يُمسح عند التوليد التالي.</li>
+ <li><b>النصوص على مستوى العقدة:</b> لا استبدال نصي عام (يفسد JSON-LD). كل نص جديد = مفتاح ترجمة ×26.</li>
+ <li><b>البصمات:</b> أي تغيير في <code>&lt;style&gt;</code>/<code>&lt;script&gt;</code> داخليًا يستلزم <code>build_csp.py</code>؛ فضّل السكربتات الخارجية في <code>js/</code>.</li>
+ <li><b>بوابة العربية حاجبة:</b> لا نص عربي ظاهر في صفحة غير عربية — <code>audit_arabic_containment.py</code>.</li>
+ <li><b>عتبة التسريب معلوماتية:</b> <code>--allow-english 151</code> لا تُرفع أبدًا؛ القياس الحقيقي هو قسم الأسئلة.</li>
+ <li><b>الالتزام بالإنجليزية عبر ملف:</b> <code>git commit -F msg.txt</code> — لا رسائل متعددة الأسطر في PowerShell.</li>
+ <li><b>فصل واحد = commit واحد:</b> <code>git revert &lt;sha&gt;</code> يعيد الفصل كاملًا دون سواه.</li>
+</ol>
+<p class="meta">يُعاد توليد هذا الملف بـ <code>python docs/build_plan_page_v19.py</code> بعد تحديث القياس.</p>
+</div>
+</body>
+</html>

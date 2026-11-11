@@ -1,13 +1,17 @@
-"""Export the structure plan to PDF so it can be followed from another IDE.
+"""Export a plan page to PDF so it can be followed from another IDE.
 
-Kept separate from build_plan_page.py because it needs a browser; the chain is
-  python docs/build_plan_page.py && python docs/build_plan_pdf.py
+  python docs/build_plan_pdf.py                       # the v18 structure page
+  python docs/build_plan_pdf.py --html docs/plan-v19-i18n.html --pdf docs/plan-v19-i18n.pdf
+
+Kept separate from the page builders because it needs a browser; the chain is
+  python docs/build_plan_page_v19.py && python docs/build_plan_pdf.py --html docs/plan-v19-i18n.html --pdf docs/plan-v19-i18n.pdf
 """
-import pathlib, subprocess, sys
+import argparse
+import pathlib
+import subprocess
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-HTML = ROOT / "docs" / "plan-v18-structure.html"
-PDF = ROOT / "docs" / "plan-v18-structure.pdf"
 CHROME = [
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
     r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
@@ -16,20 +20,27 @@ CHROME = [
 
 
 def main():
-    if not HTML.exists():
-        print("build the page first:")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--html", default="docs/plan-v18-structure.html")
+    ap.add_argument("--pdf", default="docs/plan-v18-structure.pdf")
+    args = ap.parse_args()
+
+    html = (ROOT / args.html) if not pathlib.Path(args.html).is_absolute() else pathlib.Path(args.html)
+    pdf = (ROOT / args.pdf) if not pathlib.Path(args.pdf).is_absolute() else pathlib.Path(args.pdf)
+    if not html.exists():
+        print("build the page first:", html)
         return 2
     binary = next((c for c in CHROME if pathlib.Path(c).exists()), None)
     if not binary:
         print("no Chrome/Edge found for PDF export")
         return 3
-    profile = pathlib.Path(r"C:\Windows\Temp\sr-plan-pdf")
+    profile = pathlib.Path(r"C:\Windows\Temp") / ("sr-plan-pdf-" + pdf.stem)
     subprocess.run([binary, "--headless=new", "--disable-gpu", "--no-first-run",
                     f"--user-data-dir={profile}", "--no-pdf-header-footer",
-                    "--print-to-pdf=" + str(PDF), HTML.as_uri()],
+                    "--print-to-pdf=" + str(pdf), html.as_uri()],
                    check=False, capture_output=True)
-    if PDF.exists():
-        print(f"wrote {PDF} ({PDF.stat().st_size:,} bytes)")
+    if pdf.exists():
+        print(f"wrote {pdf} ({pdf.stat().st_size:,} bytes)")
         return 0
     print("PDF was not produced")
     return 4

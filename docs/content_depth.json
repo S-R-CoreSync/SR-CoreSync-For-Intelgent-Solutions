@@ -10,7 +10,7 @@
   "bg": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
@@ -24,14 +24,14 @@
   "cs": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "da": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
@@ -45,7 +45,7 @@
   "el": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
@@ -66,14 +66,14 @@
   "et": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "fi": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
@@ -87,56 +87,56 @@
   "ga": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "hr": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "hu": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "it": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "ku": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "lt": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "lv": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "mt": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
@@ -150,56 +150,56 @@
   "no": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "pl": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "pt": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "ro": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "sk": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 6,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "sl": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "sv": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   },
   "tr": {
    "plans": 12,
    "faq": 15,
-   "faq_english": 11,
+   "faq_english": 0,
    "estimator": 0,
    "services": 6
   }

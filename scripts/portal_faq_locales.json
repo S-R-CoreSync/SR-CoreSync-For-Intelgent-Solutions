@@ -233,6 +233,30 @@
    "09": {
     "q": "Usiamo già sistemi finanziari esistenti: come garantite integrazione e migrazione senza fermare l'operatività?",
     "a": "Lavoriamo con una migrazione a simulazione parallela. I connettori API e la sincronizzazione delle scritture vengono sviluppati in un ambiente di test isolato e tutti i conti e i flussi vengono verificati. Il passaggio in produzione avviene solo dopo una verifica al 100%, senza un secondo di interruzione (zero downtime)."
+   },
+   "01": {
+    "q": "Quanto tempo richiede in genere lo sviluppo di software su misura o l'implementazione di un ERP?",
+    "a": "Le piattaforme di medie dimensioni e le integrazioni ERP richiedono in genere da 4 a 8 settimane. Prima dell'avvio consegniamo una tabella di marcia scandita da fasi di avanzamento e gli schemi di architettura, con dimostrazioni settimanali dell'implementazione in diretta."
+   },
+   "10": {
+    "q": "Quanto tempo occorre per realizzare un sito web o un negozio online?",
+    "a": "Sito web: 2–4 settimane. Negozio online: 4–6 settimane."
+   },
+   "12": {
+    "q": "Quali metodi di pagamento accettate?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Il codice sorgente è di mia proprietà?",
+    "a": "Sì, al 100%."
+   },
+   "14": {
+    "q": "Offrite manutenzione dopo la consegna?",
+    "a": "Sì — piani di manutenzione."
+   },
+   "15": {
+    "q": "Come posso iniziare?",
+    "a": "RFQ o WhatsApp — consulenza gratuita di 30 minuti."
    }
   }
  },
@@ -254,6 +278,30 @@
    "09": {
     "q": "Já usamos sistemas financeiros existentes: como garantem a integração e a migração sem interromper a atividade?",
     "a": "Trabalhamos com migração por simulação paralela. Os conectores API e a sincronização de lançamentos são desenvolvidos num ambiente de teste isolado e todas as contas e fluxos são verificados. A passagem a produção só acontece após verificação a 100%, sem um segundo de interrupção (zero downtime)."
+   },
+   "01": {
+    "q": "Quanto tempo demora, habitualmente, o desenvolvimento de software à medida ou a implementação de um ERP?",
+    "a": "As plataformas de média dimensão e as integrações ERP demoram tipicamente 4 a 8 semanas. Apresentamos um roteiro orientado a marcos e os planos de arquitetura antes do arranque, acompanhados de demonstrações semanais da implementação em direto."
+   },
+   "10": {
+    "q": "Quanto tempo demora a criar um website ou uma loja?",
+    "a": "Website: 2–4 semanas. Loja: 4–6 semanas."
+   },
+   "12": {
+    "q": "Que métodos de pagamento são aceites?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Sou eu o proprietário do código-fonte?",
+    "a": "Sim, a 100%."
+   },
+   "14": {
+    "q": "Prestam manutenção após a entrega?",
+    "a": "Sim — planos de manutenção."
+   },
+   "15": {
+    "q": "Como começo?",
+    "a": "RFQ ou WhatsApp — consulta gratuita de 30 minutos."
    }
   }
  },
@@ -275,6 +323,30 @@
    "09": {
     "q": "Korzystamy już z istniejących systemów finansowych — jak zapewniacie integrację i migrację bez zatrzymywania działalności?",
     "a": "Pracujemy metodą migracji z równoległą symulacją. Konektory API i synchronizacja zapisów powstają w izolowanym środowisku testowym, a wszystkie konta i przepływy są weryfikowane. Przejście na produkcję następuje dopiero po 100% weryfikacji — bez sekundy przestoju (zero downtime)."
+   },
+   "01": {
+    "q": "Ile czasu zajmuje zwykle wdrożenie oprogramowania na zamówienie lub systemu ERP?",
+    "a": "Typowe platformy średniej wielkości i integracje ERP zajmują od 4 do 8 tygodni. Przed startem projektu otrzymują Państwo plan działania oparty na kamieniach milowych oraz projekty architektury, a do tego cotygodniowe prezentacje wdrożenia na żywo."
+   },
+   "10": {
+    "q": "Ile trwa budowa strony internetowej lub sklepu?",
+    "a": "Strona internetowa: 2–4 tygodnie. Sklep: 4–6 tygodni."
+   },
+   "12": {
+    "q": "Jakie metody płatności są akceptowane?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Czy jestem właścicielem kodu źródłowego?",
+    "a": "Tak, 100%."
+   },
+   "14": {
+    "q": "Czy oferują Państwo utrzymanie po wdrożeniu?",
+    "a": "Tak — pakiety utrzymania."
+   },
+   "15": {
+    "q": "Jak rozpocząć współpracę?",
+    "a": "RFQ lub WhatsApp — bezpłatna 30-minutowa konsultacja."
    }
   }
  },
@@ -296,6 +368,50 @@
    "09": {
     "q": "Vi använder redan befintliga ekonomisystem – hur garanterar ni integration och migrering utan driftstopp?",
     "a": "Vi arbetar med parallell simuleringsmigrering. API-kopplingar och synkronisering av verifikationer byggs i en isolerad testmiljö och alla konton och flöden verifieras. Produktionssättning sker först efter 100 % verifiering – utan en sekunds avbrott (zero downtime)."
+   },
+   "01": {
+    "q": "Hur lång tid tar det vanligtvis att utveckla anpassad programvara eller införa ERP?",
+    "a": "Typiska medelstora plattformar och ERP-integrationer tar 4 till 8 veckor. Vi tar fram en milstolpsstyrd färdplan och arkitekturritningar före uppstart, tillsammans med veckovisa live-demonstrationer av driftsättningen."
+   },
+   "02": {
+    "q": "Tillhandahåller ni tjänster till internationella företag utanför Nederländerna?",
+    "a": "Absolut. Vårt huvudkontor ligger i Amsterdam i Nederländerna, och vi utvecklar aktivt lösningar för företagskunder i hela Europeiska unionen, Storbritannien, Saudiarabien, Förenade Arabemiraten, Qatar och Kuwait via säkra digitala kanaler och ledningsgenomgångar."
+   },
+   "03": {
+    "q": "Vad skiljer S&amp;R CoreSync från traditionella programvarubyråer?",
+    "a": "Vår exklusiva konkurrensfördel ligger i den sällsynta samverkan mellan våra två grundande partners: en chefsarkitekt inom programvara och AI (Partner S) och en specialist på företagsekonomi och ERP (Partner R), vilket säkerställer att varje teknisk lösning tjänar lönsamhet, affärstillväxt och finansiell regelefterlevnad från dag ett."
+   },
+   "04": {
+    "q": "Vilka avtalsvillkor och milstolpsbaserade betalningsupplägg tillämpar ni?",
+    "a": "Vi arbetar enligt bindande europeiska tjänsteavtal som följer nederländsk lag. Uppdragen struktureras kring transparenta milstolpar, vanligtvis med en inledande förskottsbetalning på 50 % vid uppstart, medan återstående belopp förfaller vid slutlig användaracceptans och verifiering."
+   },
+   "05": {
+    "q": "Erbjuder ni löpande teknisk support, övervakning och uppdateringar efter lansering?",
+    "a": "Ja. Varje projekt omfattar en heltäckande garantitid efter lansering med proaktiv övervakning. Vi erbjuder även flexibla månatliga CoreCare-avtal för att säkerställa kontinuerlig hög tillgänglighet, zero-day-säkerhetsuppdateringar och prestandaoptimering."
+   },
+   "10": {
+    "q": "Hur lång tid tar det att bygga en webbplats eller butik?",
+    "a": "Webbplats: 2–4 veckor. Butik: 4–6 veckor."
+   },
+   "11": {
+    "q": "Ingår hosting och domän i priserna?",
+    "a": "3 månaders gratis hosting + domän."
+   },
+   "12": {
+    "q": "Vilka betalningsmetoder accepteras?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Äger jag källkoden?",
+    "a": "Ja, 100 %."
+   },
+   "14": {
+    "q": "Erbjuder ni underhåll efter leverans?",
+    "a": "Ja – underhållspaket."
+   },
+   "15": {
+    "q": "Hur kommer jag igång?",
+    "a": "RFQ eller WhatsApp – kostnadsfri konsultation på 30 minuter."
    }
   }
  },
@@ -317,6 +433,50 @@
    "09": {
     "q": "Vi bruger allerede eksisterende økonomisystemer – hvordan sikrer I integration og migrering uden driftsstop?",
     "a": "Vi arbejder med parallel simuleringsmigrering. API-konnektorer og synkronisering af posteringer udvikles i et isoleret testmiljø, og alle konti og flows verificeres. Produktionssætning sker først efter 100 % verifikation – uden ét sekunds afbrydelse (zero downtime)."
+   },
+   "01": {
+    "q": "Hvor lang tid tager specialudviklet software eller ERP-implementering typisk?",
+    "a": "Typiske mellemstore platforme og ERP-integrationer tager 4 til 8 uger. Inden opstart leverer vi en milepælsstyret køreplan og arkitekturdesign samt ugentlige live-demonstrationer af implementeringen."
+   },
+   "02": {
+    "q": "Leverer I også ydelser til internationale virksomheder uden for Holland?",
+    "a": "Absolut. Vores hovedkontor ligger i Amsterdam i Holland, og vi udvikler aktivt løsninger til erhvervskunder i hele Den Europæiske Union, Storbritannien, Saudi-Arabien, De Forenede Arabiske Emirater, Qatar og Kuwait via sikre digitale kanaler og møder på ledelsesniveau."
+   },
+   "03": {
+    "q": "Hvad adskiller S&amp;R CoreSync fra traditionelle softwarebureauer?",
+    "a": "Vores eksklusive konkurrencefordel ligger i det sjældne samspil mellem vores to grundlæggere: en ledende software- og AI-arkitekt (Partner S) og en virksomhedsøkonomisk ERP-specialist (Partner R), hvilket sikrer, at enhver teknisk løsning understøtter rentabilitet, forretningsvækst og skattemæssig compliance fra dag ét."
+   },
+   "04": {
+    "q": "Hvilke kontraktvilkår og milepælsbaserede betalingsstrukturer arbejder I med?",
+    "a": "Vi arbejder ud fra bindende europæiske serviceaftaler i overensstemmelse med hollandsk ret. Projekterne er struktureret omkring gennemsigtige milepæle, typisk med en indledende opstartsbetaling på 50 %, mens restbeløbet forfalder ved endelig brugeraccept og verifikation."
+   },
+   "05": {
+    "q": "Tilbyder I løbende teknisk support, overvågning og opdateringer efter lancering?",
+    "a": "Ja. Hvert projekt omfatter en altomfattende garantiperiode efter lancering med proaktiv overvågning. Vi tilbyder desuden fleksible månedlige CoreCare-aftaler, der sikrer kontinuerlig høj tilgængelighed, zero-day-sikkerhedsopdateringer og ydelsesoptimering."
+   },
+   "10": {
+    "q": "Hvor lang tid tager det at bygge en hjemmeside eller en webshop?",
+    "a": "Hjemmeside: 2–4 uger. Webshop: 4–6 uger."
+   },
+   "11": {
+    "q": "Er hosting og domæne inkluderet i priserne?",
+    "a": "3 måneders gratis hosting + domæne."
+   },
+   "12": {
+    "q": "Hvilke betalingsmetoder accepterer I?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Ejer jeg kildekoden?",
+    "a": "Ja, 100 %."
+   },
+   "14": {
+    "q": "Tilbyder I vedligeholdelse efter levering?",
+    "a": "Ja — vedligeholdelsesaftaler."
+   },
+   "15": {
+    "q": "Hvordan kommer jeg i gang?",
+    "a": "RFQ eller WhatsApp — gratis 30-minutters konsultation."
    }
   }
  },
@@ -338,6 +498,50 @@
    "09": {
     "q": "Vi bruker allerede eksisterende økonomisystemer – hvordan sikrer dere integrasjon og migrering uten driftsstans?",
     "a": "Vi arbeider med parallell simuleringsmigrering. API-koblinger og synkronisering av bilag bygges i et isolert testmiljø, og alle kontoer og flyter verifiseres. Produksjonssetting skjer først etter 100 % verifisering – uten ett sekunds avbrudd (zero downtime)."
+   },
+   "01": {
+    "q": "Hvor lang tid tar det vanligvis å utvikle skreddersydd programvare eller innføre ERP?",
+    "a": "Typiske mellomstore plattformer og ERP-integrasjoner tar 4 til 8 uker. Vi leverer et milepælsbasert veikart og arkitekturblåkopier før oppstart, sammen med ukentlige live-demonstrasjoner av utrullingen."
+   },
+   "02": {
+    "q": "Leverer dere tjenester til internasjonale virksomheter utenfor Nederland?",
+    "a": "Absolutt. Hovedkontoret vårt ligger i Amsterdam i Nederland, men vi utvikler aktivt løsninger for bedriftskunder i hele EU, Storbritannia, Saudi-Arabia, De forente arabiske emirater, Qatar og Kuwait – gjennom sikre digitale kanaler og ledelsesgjennomganger."
+   },
+   "03": {
+    "q": "Hva skiller S&amp;R CoreSync fra tradisjonelle programvarebyråer?",
+    "a": "Vår eksklusive konkurransefordel ligger i det sjeldne samspillet mellom de to grunnleggerpartnerne: en ledende programvare- og AI-arkitekt (Partner S) og en spesialist på bedriftsøkonomi og ERP (Partner R). Det sikrer at hver teknisk løsning tjener lønnsomhet, vekst og skattemessig etterlevelse fra dag én."
+   },
+   "04": {
+    "q": "Hvilke kontraktsvilkår og milepælsbaserte betalingsmodeller bruker dere?",
+    "a": "Vi arbeider etter bindende europeiske tjenesteavtaler i samsvar med nederlandsk lov. Prosjektene struktureres rundt transparente milepæler, vanligvis med en oppstartsbetaling på 50 %, mens resten forfaller ved endelig brukergodkjenning og verifisering."
+   },
+   "05": {
+    "q": "Tilbyr dere løpende teknisk støtte, overvåking og oppdateringer etter lansering?",
+    "a": "Ja. Hvert prosjekt inkluderer en altomfattende garantiperiode etter lansering med proaktiv overvåking. Vi tilbyr også fleksible månedlige CoreCare-avtaler som sikrer kontinuerlig høy tilgjengelighet, sikkerhetsoppdateringer mot null-dagers sårbarheter og ytelsesoptimalisering."
+   },
+   "10": {
+    "q": "Hvor lang tid tar det å bygge et nettsted eller nettbutikk?",
+    "a": "Nettsted: 2–4 uker. Nettbutikk: 4–6 uker."
+   },
+   "11": {
+    "q": "Er hosting og domene inkludert i prisene?",
+    "a": "3 måneder gratis hosting + domene."
+   },
+   "12": {
+    "q": "Hvilke betalingsmetoder godtas?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Eier jeg kildekoden?",
+    "a": "Ja, 100 %."
+   },
+   "14": {
+    "q": "Tilbyr dere vedlikehold etter levering?",
+    "a": "Ja – vedlikeholdsavtaler."
+   },
+   "15": {
+    "q": "Hvordan kommer jeg i gang?",
+    "a": "RFQ eller WhatsApp – gratis 30-minutters konsultasjon."
    }
   }
  },
@@ -359,6 +563,50 @@
    "09": {
     "q": "Käytämme jo olemassa olevia talousjärjestelmiä – miten takaatte integraation ja migraation ilman käyttökatkoja?",
     "a": "Työskentelemme rinnakkaisen simulaatiomigraation menetelmällä. API-liittimet ja vientien synkronointi rakennetaan eristetyssä testiympäristössä ja kaikki tilit ja virrat varmennetaan. Tuotantoon siirrytään vasta 100 % varmennuksen jälkeen – ilman sekunninkaan keskeytystä (zero downtime)."
+   },
+   "01": {
+    "q": "Kuinka kauan räätälöidyn ohjelmiston tai ERP-järjestelmän käyttöönotto yleensä kestää?",
+    "a": "Tyypilliset keskikokoiset alustat ja ERP-integraatiot kestävät 4–8 viikkoa. Tarjoamme ennen aloitusta virstanpylväisiin perustuvan etenemissuunnitelman ja arkkitehtuurikuvaukset sekä viikoittaiset live-demonstraatiot käyttöönotosta."
+   },
+   "02": {
+    "q": "Tarjoatteko palveluitanne kansainvälisille yrityksille Alankomaiden ulkopuolella?",
+    "a": "Ehdottomasti. Vaikka pääkonttorimme sijaitsee Amsterdamissa Alankomaissa, kehitämme aktiivisesti ratkaisuja yritysasiakkaille eri puolilla Euroopan unionia, Yhdistyneessä kuningaskunnassa, Saudi-Arabiassa, Arabiemiirikunnissa, Qatarissa ja Kuwaitissa turvallisten digitaalisten kanavien ja johdon katselmusten kautta."
+   },
+   "03": {
+    "q": "Mikä erottaa S&amp;R CoreSyncin tavanomaisista ohjelmistotoimistoista?",
+    "a": "Yksinomainen kilpailuetumme syntyy kahden perustajakumppanimme harvinaisesta yhteisvaikutuksesta – pääohjelmisto- ja AI-arkkitehti (Kumppani S) ja yritystalouden ERP-erikoisasiantuntija (Kumppani R) – mikä varmistaa, että jokainen tekninen ratkaisu palvelee kannattavuutta, liiketoiminnan kasvua ja verotuksellista vaatimustenmukaisuutta ensimmäisestä päivästä alkaen."
+   },
+   "04": {
+    "q": "Mitkä ovat sopimusehtonne ja virstanpylväspohjaiset maksurakenteenne?",
+    "a": "Toimimme Alankomaiden lain mukaisten sitovien eurooppalaisten palvelusopimusten pohjalta. Toimeksiannot rakennetaan läpinäkyvien virstanpylväiden varaan: tyypillisesti aloitus 50 %:n käynnistysmaksulla, ja loppuosa erääntyy käyttäjän lopullisen hyväksynnän ja verifioinnin jälkeen."
+   },
+   "05": {
+    "q": "Tarjoatteko jatkuvaa teknistä tukea, valvontaa ja päivityksiä lanseerauksen jälkeen?",
+    "a": "Kyllä. Jokainen projekti sisältää kattavan takuuajan lanseerauksen jälkeen sekä ennakoivan valvonnan. Tarjoamme lisäksi joustavia kuukausittaisia CoreCare-palvelusopimuksia, jotka varmistavat jatkuvan korkean käytettävyyden, zero-day-tietoturvapäivitykset ja suorituskyvyn optimoinnin."
+   },
+   "10": {
+    "q": "Kuinka kauan verkkosivuston tai verkkokaupan rakentaminen kestää?",
+    "a": "Verkkosivusto: 2–4 viikkoa. Verkkokauppa: 4–6 viikkoa."
+   },
+   "11": {
+    "q": "Sisältyvätkö hinnat hostingiin ja verkkotunnukseen?",
+    "a": "3 kuukautta ilmaista hostingia + verkkotunnus."
+   },
+   "12": {
+    "q": "Mitkä maksutavat hyväksytään?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Omistanko lähdekoodin?",
+    "a": "Kyllä, 100 %."
+   },
+   "14": {
+    "q": "Tarjoatteko ylläpitoa toimituksen jälkeen?",
+    "a": "Kyllä — ylläpitopaketit."
+   },
+   "15": {
+    "q": "Miten aloitan?",
+    "a": "RFQ tai WhatsApp — ilmainen 30 minuutin konsultaatio."
    }
   }
  },
@@ -380,6 +628,30 @@
    "09": {
     "q": "Používáme již existující finanční systémy – jak zajistíte integraci a migraci bez přerušení provozu?",
     "a": "Pracujeme metodou paralelní simulační migrace. API konektory a synchronizace účetních zápisů vznikají v izolovaném testovacím prostředí a všechny účty a toky se ověřují. Do produkce přecházíme až po 100% ověření – bez jediné sekundy výpadku (zero downtime)."
+   },
+   "01": {
+    "q": "Jak dlouho obvykle trvá vývoj zakázkového softwaru nebo nasazení ERP?",
+    "a": "Typická středně velká řešení a integrace ERP trvají 4 až 8 týdnů. Před zahájením prací připravíme plán postupu podle milníků a architektonické podklady, doprovázené týdenními ukázkami nasazení v reálném provozu."
+   },
+   "10": {
+    "q": "Jak dlouho trvá vytvoření webu nebo e-shopu?",
+    "a": "Web: 2–4 týdny. E-shop: 4–6 týdnů."
+   },
+   "12": {
+    "q": "Jaké platební metody jsou akceptovány?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Vlastním zdrojový kód?",
+    "a": "Ano, ze 100 %."
+   },
+   "14": {
+    "q": "Poskytujete po dodání údržbu?",
+    "a": "Ano — plány údržby."
+   },
+   "15": {
+    "q": "Jak mohu začít?",
+    "a": "RFQ nebo WhatsApp — bezplatná 30minutová konzultace."
    }
   }
  },
@@ -401,6 +673,30 @@
    "09": {
     "q": "Folosim deja sisteme financiare existente – cum garantați integrarea și migrarea fără întreruperea activității?",
     "a": "Lucrăm cu migrare prin simulare paralelă. Conectorii API și sincronizarea înregistrărilor sunt dezvoltate într-un mediu de test izolat, iar toate conturile și fluxurile sunt verificate. Trecerea în producție are loc doar după verificare 100% — fără nicio secundă de întrerupere (zero downtime)."
+   },
+   "01": {
+    "q": "Cât durează de obicei implementarea unui software personalizat sau a unui sistem ERP?",
+    "a": "Platformele de dimensiuni medii și integrările ERP durează de obicei între 4 și 8 săptămâni. Înainte de demarare vă oferim un plan etapizat cu repere clare și schițe de arhitectură, însoțit de demonstrații live săptămânale ale implementării."
+   },
+   "10": {
+    "q": "Cât durează realizarea unui site sau a unui magazin online?",
+    "a": "Site: 2–4 săptămâni. Magazin online: 4–6 săptămâni."
+   },
+   "12": {
+    "q": "Ce metode de plată sunt acceptate?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Dețin codul sursă?",
+    "a": "Da, 100%."
+   },
+   "14": {
+    "q": "Oferiți mentenanță după livrare?",
+    "a": "Da — planuri de mentenanță."
+   },
+   "15": {
+    "q": "Cum încep?",
+    "a": "RFQ sau WhatsApp — consultație gratuită de 30 de minute."
    }
   }
  },
@@ -422,6 +718,30 @@
    "09": {
     "q": "Már használunk meglévő pénzügyi rendszereket – hogyan biztosítják az integrációt és a migrációt a működés leállítása nélkül?",
     "a": "Párhuzamos szimulációs migrációval dolgozunk. Az API-kapcsolatok és a könyvelési tételek szinkronizálása izolált tesztkörnyezetben készül, és minden számla és folyamat ellenőrzésre kerül. Az éles bevezetés csak 100%-os ellenőrzés után történik – egyetlen másodperc kiesés nélkül (zero downtime)."
+   },
+   "01": {
+    "q": "Mennyi ideig tart általában az egyedi szoftverek vagy az ERP bevezetése?",
+    "a": "A tipikus közepes méretű platformok és ERP-integrációk 4–8 hetet vesznek igénybe. A projektindítás előtt mérföldkövekre épülő ütemtervet és architektúra-terveket biztosítunk, amelyeket heti élő bevezetési bemutatók kísérnek."
+   },
+   "10": {
+    "q": "Mennyi ideig tart egy weboldal vagy webáruház felépítése?",
+    "a": "Weboldal: 2–4 hét. Webáruház: 4–6 hét."
+   },
+   "12": {
+    "q": "Milyen fizetési módokat fogadnak el?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "A forráskód az én tulajdonomba kerül?",
+    "a": "Igen, 100%-ban."
+   },
+   "14": {
+    "q": "Biztosítanak karbantartást az átadás után?",
+    "a": "Igen – karbantartási csomagok."
+   },
+   "15": {
+    "q": "Hogyan kezdhetem el?",
+    "a": "RFQ vagy WhatsApp – ingyenes 30 perces konzultáció."
    }
   }
  },
@@ -443,6 +763,26 @@
    "09": {
     "q": "Používame už existujúce finančné systémy – ako zabezpečíte integráciu a migráciu bez prerušenia prevádzky?",
     "a": "Pracujeme metódou paralelnej simulačnej migrácie. API konektory a synchronizácia účtovných zápisov vznikajú v izolovanom testovacom prostredí a všetky účty a toky sa overujú. Do produkcie prechádzame až po 100 % overení – bez jedinej sekundy výpadku (zero downtime)."
+   },
+   "10": {
+    "q": "Ako dlho trvá vytvorenie webovej stránky/obchodu?",
+    "a": "Webová stránka: 2–4 týždne. Obchod: 4–6 týždňov."
+   },
+   "12": {
+    "q": "Aké platobné metódy sú akceptované?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Vlastním zdrojový kód?",
+    "a": "Áno, 100 %."
+   },
+   "14": {
+    "q": "Poskytujete údržbu aj po dodaní?",
+    "a": "Áno — plány údržby."
+   },
+   "15": {
+    "q": "Ako začať?",
+    "a": "RFQ alebo WhatsApp — bezplatná 30-minútová konzultácia."
    }
   }
  },
@@ -464,6 +804,50 @@
    "09": {
     "q": "Jau naudojame esamas finansų sistemas – kaip užtikrinate integraciją ir migraciją be veiklos sustabdymo?",
     "a": "Dirbame lygiagrečios simuliacijos migracijos metodu. API jungtys ir įrašų sinchronizavimas kuriami izoliuotoje testavimo aplinkoje, o visos sąskaitos ir srautai patikrinami. Perėjimas prie produkcijos vyksta tik po 100 % patikros – be nė vienos sekundės prastovos (zero downtime)."
+   },
+   "01": {
+    "q": "Kiek laiko paprastai užima individualios programinės įrangos ar ERP diegimas?",
+    "a": "Įprastai vidutinės apimties platformos ir ERP integracijos užima 4–8 savaites. Prieš pradedant darbus pateikiame etapais pagrįstą veiksmų planą ir architektūros brėžinius, o kas savaitę rengiame tiesiogines diegimo demonstracijas."
+   },
+   "02": {
+    "q": "Ar teikiate paslaugas tarptautinėms įmonėms už Nyderlandų ribų?",
+    "a": "Be abejo. Nors mūsų būstinė yra Amsterdame, Nyderlanduose, aktyviai kuriame sprendimus įmonių klientams visoje Europos Sąjungoje, Jungtinėje Karalystėje, Saudo Arabijoje, Jungtiniuose Arabų Emyratuose, Katare ir Kuveite, bendraudami saugiais skaitmeniniais kanalais ir rengdami vadovybės lygmens apžvalgas."
+   },
+   "03": {
+    "q": "Kuo S&amp;R CoreSync skiriasi nuo tradicinių programinės įrangos agentūrų?",
+    "a": "Mūsų išskirtinis konkurencinis pranašumas – reta dviejų steigėjų partnerių sinergija: vyriausiasis programinės įrangos ir AI architektas (Partneris S) ir įmonių finansų ERP specialistas (Partneris R), užtikrinanti, kad kiekvienas techninis sprendimas nuo pirmos dienos tarnautų pelningumui, verslo augimui ir mokesčių atitikčiai."
+   },
+   "04": {
+    "q": "Kokios jūsų sutarčių sąlygos ir etapais pagrįsta mokėjimų struktūra?",
+    "a": "Dirbame pagal įpareigojančias Europos paslaugų sutartis, atitinkančias Nyderlandų teisę. Projektai struktūruojami pagal skaidrius etapus – paprastai pradedama nuo 50 % pradinio mobilizacijos avanso, o likusi suma mokama po galutinio naudotojo priėmimo ir patikros."
+   },
+   "05": {
+    "q": "Ar teikiate nuolatinę techninę pagalbą, stebėjimą ir atnaujinimus po paleidimo?",
+    "a": "Taip. Kiekvienas projektas apima viską apimantį garantinį laikotarpį po paleidimo su proaktyviu stebėjimu. Taip pat siūlome lanksčius mėnesinius CoreCare priežiūros paketus, užtikrinančius nuolatinį aukštą prieinamumą, nulinės dienos saugumo atnaujinimus ir našumo derinimą."
+   },
+   "10": {
+    "q": "Kiek laiko užima sukurti svetainę / el. parduotuvę?",
+    "a": "Svetainė: 2–4 savaitės. Parduotuvė: 4–6 savaitės."
+   },
+   "11": {
+    "q": "Ar į kainas įskaičiuota priegloba ir domenas?",
+    "a": "3 mėnesiai nemokamos prieglobos + domenas."
+   },
+   "12": {
+    "q": "Kokie mokėjimo būdai priimami?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Ar man priklauso šaltinio kodas?",
+    "a": "Taip, 100 %."
+   },
+   "14": {
+    "q": "Ar teikiate priežiūrą po perdavimo?",
+    "a": "Taip – priežiūros paketai."
+   },
+   "15": {
+    "q": "Kaip pradėti?",
+    "a": "RFQ arba WhatsApp – nemokama 30 minučių konsultacija."
    }
   }
  },
@@ -485,6 +869,50 @@
    "09": {
     "q": "Mēs jau izmantojam esošās finanšu sistēmas – kā jūs nodrošināt integrāciju un migrāciju bez darbības pārtraukšanas?",
     "a": "Mēs strādājam ar paralēlās simulācijas migrāciju. API savienotāji un ierakstu sinhronizācija tiek veidota izolētā testa vidē, un visi konti un plūsmas tiek pārbaudītas. Pāreja uz produkciju notiek tikai pēc 100 % pārbaudes – bez nevienas sekundes dīkstāves (zero downtime)."
+   },
+   "01": {
+    "q": "Cik ilgi parasti aizņem pielāgotas programmatūras vai ERP ieviešana?",
+    "a": "Vidēja lieluma platformu un ERP integrāciju projekti parasti aizņem 4 līdz 8 nedēļas. Pirms darba sākuma mēs nodrošinām ar atskaites punktiem balstītu ceļa karti un arhitektūras shēmas, kā arī iknedēļas tiešsaistes ieviešanas demonstrācijas."
+   },
+   "02": {
+    "q": "Vai jūs sniedzat pakalpojumus starptautiskiem uzņēmumiem ārpus Nīderlandes?",
+    "a": "Protams. Mūsu galvenā mītne atrodas Amsterdamā, Nīderlandē, un mēs aktīvi izstrādājam risinājumus uzņēmumu klientiem visā Eiropas Savienībā, Apvienotajā Karalistē, Saūda Arābijā, AAE, Katarā un Kuveitā, izmantojot drošus digitālos kanālus un vadības līmeņa pārskatus."
+   },
+   "03": {
+    "q": "Kas atšķir S&amp;R CoreSync no tradicionālajām programmatūras aģentūrām?",
+    "a": "Mūsu ekskluzīvā konkurences priekšrocība ir retā abu dibinātāju partneru sinerģija: galvenais programmatūras un AI arhitekts (Partneris S) un korporatīvo finanšu ERP speciālists (Partneris R), kas nodrošina, ka katrs tehniskais risinājums jau no pirmās dienas kalpo rentabilitātei, uzņēmuma izaugsmei un fiskālajai atbilstībai."
+   },
+   "04": {
+    "q": "Kādi ir jūsu līguma nosacījumi un atskaites punktu maksājumu struktūra?",
+    "a": "Mēs strādājam saskaņā ar saistošiem Eiropas pakalpojumu līgumiem, kas atbilst Nīderlandes tiesību aktiem. Projekti tiek strukturēti pēc pārredzamiem atskaites punktiem, parasti sākot ar sākotnēju 50 % mobilizācijas avansa maksājumu, bet atlikušie līdzekļi ir jāsamaksā pēc galīgās lietotāja pieņemšanas un pārbaudes."
+   },
+   "05": {
+    "q": "Vai jūs nodrošināt nepārtrauktu tehnisko atbalstu, uzraudzību un atjauninājumus pēc palaišanas?",
+    "a": "Jā. Katrs projekts ietver visaptverošu garantijas periodu pēc palaišanas ar proaktīvu uzraudzību. Mēs piedāvājam arī elastīgus ikmēneša CoreCare atbalsta līgumus, lai nodrošinātu nepārtrauktu augstu pieejamību, zero-day drošības atjauninājumus un veiktspējas optimizāciju."
+   },
+   "10": {
+    "q": "Cik ilgi aizņem mājaslapas vai veikala izveide?",
+    "a": "Mājaslapa: 2–4 nedēļas. Veikals: 4–6 nedēļas."
+   },
+   "11": {
+    "q": "Vai cenās ir iekļauta mitināšana un domēns?",
+    "a": "3 mēneši bezmaksas mitināšanas + domēns."
+   },
+   "12": {
+    "q": "Kādi maksājumu veidi ir pieejami?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Vai man pieder pirmkods?",
+    "a": "Jā, 100 %."
+   },
+   "14": {
+    "q": "Vai jūs nodrošināt uzturēšanu pēc piegādes?",
+    "a": "Jā — uzturēšanas plāni."
+   },
+   "15": {
+    "q": "Kā man sākt?",
+    "a": "RFQ vai WhatsApp — bezmaksas 30 minūšu konsultācija."
    }
   }
  },
@@ -506,6 +934,50 @@
    "09": {
     "q": "Že uporabljamo obstoječe finančne sisteme – kako zagotavljate integracijo in migracijo brez prekinitve poslovanja?",
     "a": "Delamo z metodo vzporedne simulacijske migracije. API konektorji in sinhronizacija knjižb nastajajo v izoliranem testnem okolju, vsi računi in tokovi pa so preverjeni. Prehod v produkcijo se zgodi šele po 100 % preverjanju – brez ene same sekunde izpada (zero downtime)."
+   },
+   "01": {
+    "q": "Koliko časa običajno traja razvoj programske opreme po meri ali uvedba ERP?",
+    "a": "Tipične platforme srednje velikosti in integracije ERP trajajo 4 do 8 tednov. Pred začetkom projekta pripravimo načrt z jasnimi mejniki in arhitekturne načrte, ki jih spremljajo tedenske demonstracije delovanja v živo."
+   },
+   "02": {
+    "q": "Ali nudite storitve mednarodnim podjetjem zunaj Nizozemske?",
+    "a": "Vsekakor. Naš sedež je v Amsterdamu na Nizozemskem, hkrati pa aktivno razvijamo rešitve za poslovne stranke po vsej Evropski uniji, v Veliki Britaniji, Savdski Arabiji, Združenih arabskih emiratih, Katarju in Kuvajtu prek varnih digitalnih kanalov in rednih pregledov z vodstvom."
+   },
+   "03": {
+    "q": "Kaj loči S&amp;R CoreSync od klasičnih programerskih agencij?",
+    "a": "Naša izključna konkurenčna prednost je redka sinergija med obema ustanovnima partnerjema: vodilnim arhitektom programske opreme in AI (partner S) ter strokovnjakom za korporativne finance in ERP (partner R), ki zagotavlja, da vsaka tehnična rešitev od prvega dne služi dobičkonosnosti, rasti poslovanja in davčni skladnosti."
+   },
+   "04": {
+    "q": "Kakšni so vaši pogodbeni pogoji in struktura plačil po mejnikih?",
+    "a": "Poslujemo na podlagi zavezujočih evropskih pogodb o storitvah v skladu z nizozemsko zakonodajo. Projekti so zasnovani na preglednih mejnikih, običajno z začetnim 50 % avansom za mobilizacijo, preostanek pa zapade po končnem prevzemu in preverjanju s strani uporabnika."
+   },
+   "05": {
+    "q": "Ali zagotavljate stalno tehnično podporo, spremljanje in posodobitve po lansiranju?",
+    "a": "Da. Vsak projekt vključuje celovito garancijsko obdobje po lansiranju s proaktivnim spremljanjem. Nudimo tudi prilagodljive mesečne pakete CoreCare, ki zagotavljajo stalno visoko razpoložljivost, varnostne posodobitve zero-day in optimizacijo zmogljivosti."
+   },
+   "10": {
+    "q": "Koliko časa traja izdelava spletne strani/trgovine?",
+    "a": "Spletna stran: 2–4 tedne. Trgovina: 4–6 tednov."
+   },
+   "11": {
+    "q": "Ali cene vključujejo gostovanje in domeno?",
+    "a": "3 mesece brezplačnega gostovanja + domena."
+   },
+   "12": {
+    "q": "Katere načine plačila sprejemate?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Ali sem lastnik izvorne kode?",
+    "a": "Da, 100 %."
+   },
+   "14": {
+    "q": "Ali nudite vzdrževanje po dostavi?",
+    "a": "Da – paketi vzdrževanja."
+   },
+   "15": {
+    "q": "Kako začnem?",
+    "a": "RFQ ali WhatsApp – brezplačen 30-minutni posvet."
    }
   }
  },
@@ -527,6 +999,30 @@
    "09": {
     "q": "Već koristimo postojeće financijske sustave – kako jamčite integraciju i migraciju bez prekida poslovanja?",
     "a": "Radimo metodom paralelne simulacijske migracije. API konektori i sinkronizacija knjiženja razvijaju se u izoliranom testnom okruženju, a svi računi i tokovi se provjeravaju. Prelazak u produkciju događa se tek nakon 100 % provjere – bez ijedne sekunde zastoja (zero downtime)."
+   },
+   "01": {
+    "q": "Koliko obično traje razvoj softvera po mjeri ili uvođenje ERP-a?",
+    "a": "Tipične platforme srednje veličine i ERP integracije traju 4 do 8 tjedana. Prije početka pružamo plan temeljen na prekretnicama i nacrte arhitekture, uz tjedne demonstracije uvođenja uživo."
+   },
+   "10": {
+    "q": "Koliko traje izrada web stranice ili trgovine?",
+    "a": "Web stranica: 2–4 tjedna. Trgovina: 4–6 tjedana."
+   },
+   "12": {
+    "q": "Koje su metode plaćanja prihvaćene?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Posjedujem li izvorni kod?",
+    "a": "Da, 100 %."
+   },
+   "14": {
+    "q": "Nudite li održavanje nakon isporuke?",
+    "a": "Da — planovi održavanja."
+   },
+   "15": {
+    "q": "Kako mogu početi?",
+    "a": "RFQ ili WhatsApp — besplatna 30-minutna konzultacija."
    }
   }
  },
@@ -548,6 +1044,30 @@
    "09": {
     "q": "Вече използваме съществуващи финансови системи – как гарантирате интеграция и миграция без прекъсване на дейността?",
     "a": "Работим с метод на паралелна симулационна миграция. API конекторите и синхронизацията на счетоводните записи се разработват в изолирана тестова среда и всички сметки и потоци се проверяват. Преминаването към продукция става само след 100 % проверка – без нито една секунда прекъсване (zero downtime)."
+   },
+   "01": {
+    "q": "Колко време обикновено отнема внедряването на персонализиран софтуер или ERP?",
+    "a": "Типичните платформи със среден размер и ERP интеграциите отнемат от 4 до 8 седмици. Предоставяме план за изпълнение, ориентиран към етапи, и архитектурни схеми преди старта, придружени от седмични демонстрации на внедряването в реално време."
+   },
+   "10": {
+    "q": "Колко време отнема изграждането на уебсайт или онлайн магазин?",
+    "a": "Уебсайт: 2–4 седмици. Магазин: 4–6 седмици."
+   },
+   "12": {
+    "q": "Какви начини на плащане се приемат?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Притежавам ли изходния код?",
+    "a": "Да, 100%."
+   },
+   "14": {
+    "q": "Предлагате ли поддръжка след доставката?",
+    "a": "Да — планове за поддръжка."
+   },
+   "15": {
+    "q": "Как да започна?",
+    "a": "RFQ или WhatsApp — безплатна 30-минутна консултация."
    }
   }
  },
@@ -569,6 +1089,50 @@
    "09": {
     "q": "Me kasutame juba olemasolevaid finantssüsteeme – kuidas tagate integratsiooni ja migratsiooni ilma tegevust katkestamata?",
     "a": "Töötame paralleelse simulatsioonimigratsiooni meetodil. API-konnektorid ja kannete sünkroonimine luuakse isoleeritud testkeskkonnas ning kõik kontod ja voogud kontrollitakse. Tootmisse minnakse alles pärast 100% kontrolli – ilma ühegi sekundi seisakuta (zero downtime)."
+   },
+   "01": {
+    "q": "Kui kaua kulub tavaliselt eritarkvara või ERP kasutuselevõtuks?",
+    "a": "Tüüpilised keskmise suurusega platvormid ja ERP-integratsioonid valmivad 4 kuni 8 nädalaga. Enne projekti algust esitame verstapostidel põhineva teekaardi ja arhitektuuriplaanid, mille juurde kuuluvad iganädalased reaalajas demonstratsioonid."
+   },
+   "02": {
+    "q": "Kas pakute teenuseid rahvusvahelistele ettevõtetele väljaspool Hollandit?",
+    "a": "Kindlasti. Meie peakontor asub Hollandis Amsterdamis, kuid arendame aktiivselt lahendusi ettevõtetest klientidele kogu Euroopa Liidus, Ühendkuningriigis, Saudi Araabias, Araabia Ühendemiraatides, Kataris ja Kuveidis, kasutades turvalisi digitaalkanaleid ja juhtkonnale suunatud ülevaatekohtumisi."
+   },
+   "03": {
+    "q": "Mis eristab ettevõtet S&amp;R CoreSync tavapärastest tarkvaraagentuuridest?",
+    "a": "Meie eristuv konkurentsieelis peitub kahe asutajapartneri haruldases koostoimes: juhtiv tarkvara- ja AI-arhitekt (Partner S) ning ettevõtete finantsvaldkonna ERP-spetsialist (Partner R), mis tagab, et iga tehniline lahendus toetab kasumlikkust, ärikasvu ja maksunõuete täitmist juba esimesest päevast."
+   },
+   "04": {
+    "q": "Millised on teie lepingutingimused ja verstapostipõhine maksegraafik?",
+    "a": "Töötame Hollandi õigusega kooskõlas olevate siduvate Euroopa teenuselepingute alusel. Projektid on üles ehitatud läbipaistvatele verstapostidele, alustades tavaliselt 50% suuruse ettemaksuga, ning ülejäänud summa tasutakse pärast lõplikku kasutajapoolset vastuvõttu ja kontrolli."
+   },
+   "05": {
+    "q": "Kas pakute pärast käivitamist jätkuvat tehnilist tuge, monitooringut ja uuendusi?",
+    "a": "Jah. Iga projekt sisaldab kõikehõlmavat garantiiperioodi pärast käivitamist koos ennetava monitooringuga. Lisaks pakume paindlikke igakuiseid CoreCare hoolduspakette, mis tagavad pideva kõrge käideldavuse, nullpäeva turvauuendused ja jõudluse häälestamise."
+   },
+   "10": {
+    "q": "Kui kaua kulub veebisaidi või veebipoe loomiseks?",
+    "a": "Veebisait: 2–4 nädalat. Veebipood: 4–6 nädalat."
+   },
+   "11": {
+    "q": "Kas hinnad sisaldavad majutust ja domeeni?",
+    "a": "3 kuud tasuta majutust + domeen."
+   },
+   "12": {
+    "q": "Milliseid makseviise aktsepteeritakse?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Kas lähtekood kuulub mulle?",
+    "a": "Jah, 100%."
+   },
+   "14": {
+    "q": "Kas pakute pärast üleandmist hooldust?",
+    "a": "Jah — hoolduspaketid."
+   },
+   "15": {
+    "q": "Kuidas alustada?",
+    "a": "RFQ või WhatsApp — tasuta 30-minutiline konsultatsioon."
    }
   }
  },
@@ -590,6 +1154,50 @@
    "09": {
     "q": "Χρησιμοποιούμε ήδη υπάρχοντα χρηματοοικονομικά συστήματα – πώς διασφαλίζετε την ενσωμάτωση και τη μετάβαση χωρίς διακοπή της λειτουργίας;",
     "a": "Εργαζόμαστε με μέθοδο παράλληλης προσομοιωτικής μετανάστευσης. Τα API connectors και ο συγχρονισμός εγγραφών αναπτύσσονται σε απομονωμένο περιβάλλον δοκιμών και όλοι οι λογαριασμοί και οι ροές επαληθεύονται. Η μετάβαση σε παραγωγή γίνεται μόνο μετά από 100% επαλήθευση – χωρίς ούτε ένα δευτερόλεπτο διακοπής (zero downtime)."
+   },
+   "01": {
+    "q": "Πόσο χρόνο απαιτεί συνήθως η ανάπτυξη προσαρμοσμένου λογισμικού ή η εγκατάσταση ERP;",
+    "a": "Οι τυπικές μεσαίου μεγέθους πλατφόρμες και οι ενσωματώσεις ERP απαιτούν 4 έως 8 εβδομάδες. Πριν από την έναρξη παρέχουμε οδικό χάρτη βασισμένο σε ορόσημα και σχέδια αρχιτεκτονικής, μαζί με εβδομαδιαίες ζωντανές επιδείξεις της ανάπτυξης."
+   },
+   "02": {
+    "q": "Παρέχετε υπηρεσίες σε διεθνείς επιχειρήσεις εκτός των Κάτω Χωρών;",
+    "a": "Ασφαλώς. Αν και η έδρα μας βρίσκεται στο Άμστερνταμ των Κάτω Χωρών, αναπτύσσουμε ενεργά λύσεις για εταιρικούς πελάτες σε όλη την Ευρωπαϊκή Ένωση, το Ηνωμένο Βασίλειο, τη Σαουδική Αραβία, τα ΗΑΕ, το Κατάρ και το Κουβέιτ, μέσω ασφαλών ψηφιακών καναλιών και συναντήσεων ανασκόπησης με τη διοίκηση."
+   },
+   "03": {
+    "q": "Τι διακρίνει την S&amp;R CoreSync από συμβατικά πρακτορεία λογισμικού;",
+    "a": "Το αποκλειστικό ανταγωνιστικό μας πλεονέκτημα έγκειται στη σπάνια συνέργεια των δύο ιδρυτικών εταίρων μας: ενός Επικεφαλής Αρχιτέκτονα Λογισμικού &amp; AI (Εταίρος S) και ενός Ειδικού Εταιρικών Χρηματοοικονομικών &amp; ERP (Εταίρος R), ώστε κάθε τεχνική λύση να υπηρετεί την κερδοφορία, την ανάπτυξη της επιχείρησης και τη φορολογική συμμόρφωση από την πρώτη ημέρα."
+   },
+   "04": {
+    "q": "Ποιοι είναι οι όροι συνεργασίας και η δομή πληρωμών βάσει οροσήμων;",
+    "a": "Λειτουργούμε βάσει δεσμευτικών ευρωπαϊκών συμβάσεων παροχής υπηρεσιών, σύμφωνων με το ολλανδικό δίκαιο. Οι συνεργασίες δομούνται γύρω από διαφανή ορόσημα και ξεκινούν συνήθως με αρχική προκαταβολή 50% για την κινητοποίηση, ενώ το υπόλοιπο ποσό οφείλεται με την τελική αποδοχή και επαλήθευση από τον χρήστη."
+   },
+   "05": {
+    "q": "Παρέχετε συνεχή τεχνική υποστήριξη, παρακολούθηση και ενημερώσεις μετά την κυκλοφορία;",
+    "a": "Ναι. Κάθε έργο περιλαμβάνει περίοδο εγγύησης μετά την κυκλοφορία με πλήρη κάλυψη και προληπτική παρακολούθηση. Παρέχουμε επίσης ευέλικτες μηνιαίες συνδρομές CoreCare, ώστε να διασφαλίζεται συνεχής υψηλή διαθεσιμότητα, ενημερώσεις ασφαλείας μηδενικής ημέρας και βελτιστοποίηση απόδοσης."
+   },
+   "10": {
+    "q": "Πόσο χρόνο απαιτεί η κατασκευή ιστοτόπου/ηλεκτρονικού καταστήματος;",
+    "a": "Ιστότοπος: 2–4 εβδομάδες. Κατάστημα: 4–6 εβδομάδες."
+   },
+   "11": {
+    "q": "Περιλαμβάνουν οι τιμές φιλοξενία και domain;",
+    "a": "3 μήνες δωρεάν φιλοξενία + domain."
+   },
+   "12": {
+    "q": "Ποιες μέθοδοι πληρωμής γίνονται δεκτές;",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Είμαι ιδιοκτήτης του πηγαίου κώδικα;",
+    "a": "Ναι, κατά 100%."
+   },
+   "14": {
+    "q": "Παρέχετε συντήρηση μετά την παράδοση;",
+    "a": "Ναι — πακέτα συντήρησης."
+   },
+   "15": {
+    "q": "Πώς μπορώ να ξεκινήσω;",
+    "a": "RFQ ή WhatsApp — δωρεάν συμβουλευτική συνάντηση 30 λεπτών."
    }
   }
  },
@@ -611,6 +1219,50 @@
    "09": {
     "q": "Diġà nużaw sistemi finanzjarji eżistenti – kif tiżguraw l-integrazzjoni u l-migrazzjoni mingħajr ma titwaqqaf l-operazzjoni?",
     "a": "Naħdmu bil-metodu ta' migrazzjoni b'simulazzjoni parallela. Il-konnetturi API u s-sinkronizzazzjoni tad-dħul jinbnew f'ambjent tat-test iżolat u l-kontijiet u l-flussi kollha jiġu verifikati. Il-passaġġ għall-produzzjoni jsir biss wara verifika ta' 100% – mingħajr sekonda waħda ta' waqfien (zero downtime)."
+   },
+   "01": {
+    "q": "Kemm iddum normalment l-implimentazzjoni ta' software apposta jew ta' ERP?",
+    "a": "Pjattaformi ta' daqs medju u integrazzjonijiet ERP tipiċi jieħdu minn 4 sa 8 ġimgħat. Nipprovdu pjan direzzjonali msejjes fuq stadji u abbozzi tal-arkitettura qabel il-bidu tax-xogħol, flimkien ma' dimostrazzjonijiet ħajjin tal-implimentazzjoni kull ġimgħa."
+   },
+   "02": {
+    "q": "Tipprovdu servizzi lil intrapriżi internazzjonali barra mill-Olanda?",
+    "a": "Bla dubju. Għalkemm il-kwartieri ġenerali tagħna jinsabu f'Amsterdam, fl-Olanda, aħna nfasslu b'mod attiv soluzzjonijiet għal klijenti tal-intrapriża madwar l-Unjoni Ewropea, ir-Renju Unit, l-Arabja Sawdija, l-UAE, il-Qatar u l-Kuwajt permezz ta' kanali diġitali siguri u reviżjonijiet eżekuttivi."
+   },
+   "03": {
+    "q": "X'jiddistingwi S&amp;R CoreSync minn aġenziji tas-software konvenzjonali?",
+    "a": "Il-vantaġġ kompetittiv esklużiv tagħna jinsab fis-sinerġija rari bejn iż-żewġ msieħba fundaturi tagħna: Arkitett Prinċipali tas-Software u l-AI (Sieħeb S) u Speċjalista Korporattiv Finanzjarju tal-ERP (Sieħeb R), li jiżguraw li kull soluzzjoni teknika sservi l-profittabbiltà, it-tkabbir tan-negozju u l-konformità fiskali mill-ewwel jum."
+   },
+   "04": {
+    "q": "X'inhuma t-termini tal-kuntratt u l-istruttura tal-ħlas skont l-istadji?",
+    "a": "Naħdmu taħt ftehimiet ta' servizz Ewropej vinkolanti u konformi mal-liġi Olandiża. Il-proġetti huma strutturati madwar stadji trasparenti, u normalment jibdew b'ħlas inizjali ta' 50% mal-bidu, filwaqt li l-bilanċ jitħallas wara l-aċċettazzjoni u l-verifika finali mill-utent."
+   },
+   "05": {
+    "q": "Tipprovdu appoġġ tekniku kontinwu, monitoraġġ u aġġornamenti wara t-tnedija?",
+    "a": "Iva. Kull proġett jinkludi perjodu ta' garanzija komprensiv wara t-tnedija, flimkien ma' monitoraġġ proattiv. Nipprovdu wkoll abbonamenti flessibbli ta' CoreCare ta' kull xahar biex niżguraw disponibbiltà għolja kontinwa, aġġornamenti tas-sigurtà zero-day u rfinar tal-prestazzjoni."
+   },
+   "10": {
+    "q": "Kemm iddum il-bini ta' sit web jew ta' ħanut online?",
+    "a": "Sit web: 2–4 ġimgħat. Ħanut: 4–6 ġimgħat."
+   },
+   "11": {
+    "q": "Il-prezzijiet jinkludu l-hosting u d-dominju?",
+    "a": "3 xhur hosting b'xejn + dominju."
+   },
+   "12": {
+    "q": "Liema metodi ta' ħlas huma aċċettati?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Jien sid il-kodiċi sors?",
+    "a": "Iva, 100%."
+   },
+   "14": {
+    "q": "Tipprovdu manutenzjoni wara l-kunsinna?",
+    "a": "Iva — pjanijiet ta' manutenzjoni."
+   },
+   "15": {
+    "q": "Kif nibda?",
+    "a": "RFQ jew WhatsApp — konsultazzjoni b'xejn ta' 30 minuta."
    }
   }
  },
@@ -632,6 +1284,50 @@
    "09": {
     "q": "Mevcut finansal sistemlerimizi kullanıyoruz – entegrasyon ve geçişi operasyonu durdurmadan nasıl garanti ediyorsunuz?",
     "a": "Paralel simülasyon geçiş yöntemiyle çalışıyoruz. API bağlantıları ve kayıt senkronizasyonu izole test ortamında geliştirilir, tüm hesaplar ve akışlar doğrulanır. Canlıya geçiş ancak %100 doğrulamadan sonra yapılır – tek saniye kesinti olmadan (zero downtime)."
+   },
+   "01": {
+    "q": "Özel yazılım veya ERP kurulumu genellikle ne kadar sürer?",
+    "a": "Tipik orta ölçekli platformlar ve ERP entegrasyonları 4 ila 8 hafta sürer. Başlangıçtan önce kilometre taşı odaklı bir yol haritası ve mimari planları sunuyoruz; buna haftalık canlı kurulum demoları eşlik eder."
+   },
+   "02": {
+    "q": "Hollanda dışındaki uluslararası kuruluşlara hizmet veriyor musunuz?",
+    "a": "Kesinlikle. Merkezimiz Hollanda'nın Amsterdam kentinde olmakla birlikte, Avrupa Birliği, Birleşik Krallık, Suudi Arabistan, BAE, Katar ve Kuveyt genelindeki kurumsal müşteriler için güvenli dijital kanallar ve yönetici toplantıları aracılığıyla aktif olarak çözümler geliştiriyoruz."
+   },
+   "03": {
+    "q": "S&amp;R CoreSync'i geleneksel yazılım ajanslarından ayıran nedir?",
+    "a": "Ayrıcalıklı rekabet avantajımız, iki kurucu ortağımız arasındaki ender sinerjiden kaynaklanır: Baş Yazılım ve AI Mimarı (Ortak S) ile Kurumsal Finansal ERP Uzmanı (Ortak R). Bu sinerji, her teknik çözümün ilk günden itibaren kârlılığa, iş büyümesine ve mali uyuma hizmet etmesini güvence altına alır."
+   },
+   "04": {
+    "q": "Sözleşme koşullarınız ve kilometre taşı bazlı ödeme yapınız nedir?",
+    "a": "Hollanda hukukuna uygun, bağlayıcı Avrupa hizmet sözleşmeleri kapsamında çalışıyoruz. İş birlikleri şeffaf kilometre taşları etrafında yapılandırılır; genellikle %50 başlangıç ödemesiyle başlar, kalan tutar nihai kullanıcı kabulü ve doğrulamasının ardından ödenir."
+   },
+   "05": {
+    "q": "Lansman sonrası sürekli teknik destek, izleme ve güncelleme sağlıyor musunuz?",
+    "a": "Evet. Her proje, proaktif izleme içeren kapsamlı bir lansman sonrası garanti dönemi kapsar. Ayrıca kesintisiz yüksek erişilebilirlik, sıfır gün güvenlik güncellemeleri ve performans optimizasyonu için esnek aylık CoreCare bakım paketleri sunuyoruz."
+   },
+   "10": {
+    "q": "Bir web sitesi/mağaza oluşturmak ne kadar sürer?",
+    "a": "Web sitesi: 2–4 hafta. Mağaza: 4–6 hafta."
+   },
+   "11": {
+    "q": "Fiyatlara barındırma ve alan adı dahil mi?",
+    "a": "3 ay ücretsiz barındırma + alan adı."
+   },
+   "12": {
+    "q": "Hangi ödeme yöntemleri kabul ediliyor?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Kaynak kodun sahibi ben miyim?",
+    "a": "Evet, %100."
+   },
+   "14": {
+    "q": "Teslimattan sonra bakım sağlıyor musunuz?",
+    "a": "Evet — bakım paketleri."
+   },
+   "15": {
+    "q": "Nasıl başlarım?",
+    "a": "RFQ veya WhatsApp — ücretsiz 30 dakikalık danışmanlık."
    }
   }
  },
@@ -674,6 +1370,50 @@
    "09": {
     "q": "Úsáidimid córais airgeadais atá ann cheana – conas a chinntíonn sibh comhtháthú agus aistriú gan an obair a stopadh?",
     "a": "Oibrímid le haistriú insamhalta comhthreomhar. Tógtar na cónaisc API agus sioncrónú na n-iontrálacha i dtimpeallacht tástála iargúlta agus déantar gach cuntas agus sruth a fhíorú. Ní dhéantar an t-aistriú chuig an táirgeadh ach tar éis fíorú 100% – gan aon soicind amháin de mhíchumas (zero downtime)."
+   },
+   "01": {
+    "q": "Cén fad a thógann sé de ghnáth chun bogearraí saincheaptha nó ERP a imscaradh?",
+    "a": "Tógann ardáin mheánmhéide agus comhtháthuithe ERP idir 4 agus 8 seachtainí go hiondúil. Cuirimid treochlár atá tiomáinte ag garspriocanna agus pleananna ailtireachta ar fáil roimh thús an tionscadail, mar aon le taispeántais bheo imscartha gach seachtain."
+   },
+   "02": {
+    "q": "An gcuireann sibh seirbhísí ar fáil d'fhiontair idirnáisiúnta lasmuigh den Ísiltír?",
+    "a": "Cinnte. Cé go bhfuil ár gceanncheathrú in Amstardam, san Ísiltír, déanaimid réitigh a innealtóireacht go gníomhach d'fhiontair ar fud an Aontais Eorpaigh, sa Ríocht Aontaithe, san Araib Shádach, in Aontas na nÉimíríochtaí Arabacha, i gCatar agus i gCuáit trí chainéil dhigiteacha shlána agus trí athbhreithnithe feidhmiúcháin."
+   },
+   "03": {
+    "q": "Cad a dhealaíonn S&amp;R CoreSync ó ghníomhaireachtaí bogearraí traidisiúnta?",
+    "a": "Tá ár mbuntáiste iomaíoch eisiach le fáil sa tsineirgíocht neamhchoitianta idir ár mbeirt chomhpháirtithe bhunaitheora: Ailtire Príomhúil Bogearraí agus AI (Comhpháirtí S) agus Speisialtóir Corparáideach Airgeadais ERP (Comhpháirtí R), rud a chinntíonn go bhfreastalaíonn gach réiteach teicniúil ar bhrabúsacht, ar fhás gnó agus ar chomhlíontacht fhioscach ón gcéad lá."
+   },
+   "04": {
+    "q": "Cad iad na téarmaí conarthacha agus na struchtúir íocaíochta de réir garsprioc?",
+    "a": "Oibrímid faoi chomhaontuithe seirbhíse Eorpacha atá ceangailteach ó thaobh dlí agus comhlíontach le dlí na hÍsiltíre. Déantar gach tionscadal a struchtúrú timpeall garspriocanna trédhearcacha, ag tosú go hiondúil le réamhíocaíocht shlógaidh de 50%, agus bíonn an fuílleach dlite tar éis glactha agus fíoraithe deiridh ón úsáideoir."
+   },
+   "05": {
+    "q": "An gcuireann sibh tacaíocht theicniúil leanúnach, faireachán agus nuashonruithe ar fáil tar éis seolta?",
+    "a": "Sea. Cuimsíonn gach tionscadal tréimhse bharánta iomlán tar éis seolta, mar aon le faireachán réamhghníomhach. Cuirimid síntiúis choinneála mhíosúla sholúbtha CoreCare ar fáil freisin chun infhaighteacht ard leanúnach, nuashonruithe slándála náid-lae agus tiúnadh feidhmíochta a chinntiú."
+   },
+   "10": {
+    "q": "Cén fad a thógann sé suíomh Gréasáin nó siopa a thógáil?",
+    "a": "Suíomh Gréasáin: 2–4 seachtainí. Siopa: 4–6 seachtainí."
+   },
+   "11": {
+    "q": "An bhfuil óstáil agus fearann san áireamh sna praghsanna?",
+    "a": "3 mhí d'óstáil shaor in aisce + fearann."
+   },
+   "12": {
+    "q": "Cad iad na modhanna íocaíochta a nglactar leo?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "An mise a shealbhaíonn an cód foinse?",
+    "a": "Sea, 100%."
+   },
+   "14": {
+    "q": "An gcuireann sibh cothabháil ar fáil tar éis seachadta?",
+    "a": "Sea — pleananna cothabhála."
+   },
+   "15": {
+    "q": "Conas a thosaím?",
+    "a": "RFQ nó WhatsApp — comhairliúchán saor in aisce 30 nóiméad."
    }
   }
  },
@@ -695,6 +1435,50 @@
    "09": {
     "q": "Em jixwe pergalên darayî yên heyî bikar tînin – hûn çawa entegrasyon û veguhastinê bê rawestandina kar misoger dikin?",
     "a": "Em bi rêbaza veguhastina simulasyona hevdem dixebitin. Girêdanên API û hevdengkirina tomaran di hawîrdoreke testê ya veqetandî de têne çêkirin û hemû hesab û herikîn têne piştrastkirin. Derbasa berhemê tenê piştî piştrastkirina 100% tê kirin – bê yek çirkeyê rawestan (zero downtime)."
+   },
+   "01": {
+    "q": "Çêkirin û sazkirina nermalava taybet an ERP bi gelemperî çiqas dem digire?",
+    "a": "Platformên mezinahiya navîn û entegrasyonên ERP bi gelemperî 4 heta 8 hefteyan digirin. Berî destpêkê em nexşerêyeke li ser bingeha qonaxan û planên arkîtektûrê pêşkêşî we dikin, ligel nimayîşên zindî yên sazkirinê ku her hefte têne pêşkêşkirin."
+   },
+   "02": {
+    "q": "Hûn ji bo pargîdaniyên navneteweyî yên li derveyî Holandayê jî xizmetan pêşkêş dikin?",
+    "a": "Bê guman. Her çend navenda me li Amsterdamê, Holanda ye jî, em bi awayekî çalak ji bo xerîdarên pargîdaniyî li seranserê Yekîtiya Ewropayê, Keyaniya Yekbûyî, Erebistana Siûdî, Îmarat, Qeter û Kuweytê çareseriyan pêşdixin, bi kanalên dîjîtal yên ewle û bi civînên rêveberiyê."
+   },
+   "03": {
+    "q": "Tiştê ku S&amp;R CoreSync ji ajansên nermalavê yên kevneşopî cuda dike çi ye?",
+    "a": "Avantaja me ya reqabetê ya taybet di hemdengiya nadir a di navbera her du hevkarên me yên damezrîner de ye: Arkîtektê Nermalav &amp; AI yê Sereke (Hevkar S) û Pisporê ERP yê Darayî yê Pargîdaniyê (Hevkar R); ev yek misoger dike ku her çareseriya teknîkî ji roja yekem ve xizmeta qezencê, mezinbûna karsaziyê û lihevhatina maliyeyî dike."
+   },
+   "04": {
+    "q": "Mercên peymanê û strukturên dayîna drav ên li ser bingeha qonaxan çi ne?",
+    "a": "Em li gorî peymanên xizmetê yên ewropî yên girêdayî û lihevhatî bi qanûna Holandayê kar dikin. Xebat li dora qonaxên zelal tê avakirin; bi gelemperî bi pêş-dayîna destpêkê ya 50% dest pê dike û mayî piştî qebûl û piştrastkirina dawî ya bikarhêner tê dayîn."
+   },
+   "05": {
+    "q": "Piştî destpêkirinê hûn piştgiriya teknîkî, çavdêrî û nûvekirinên berdewam pêşkêş dikin?",
+    "a": "Erê. Her proje heyameke garantiyê ya piştî destpêkirinê ya berfireh û bi çavdêriya pêşîgir vedihewîne. Her wiha em abonetiyên CoreCare yên mehane û nerm pêşkêş dikin, da ku berdestbûna bilind a berdewam, nûvekirinên ewlehiyê yên roja sifirê û başkirina performansê misoger bin."
+   },
+   "10": {
+    "q": "Çêkirina malperekê an dukanekê çiqas dem digire?",
+    "a": "Malper: 2–4 hefte. Dukan: 4–6 hefte."
+   },
+   "11": {
+    "q": "Bihayên me mêvandarî û domainê dihewînin?",
+    "a": "3 meh mêvandarî + domain belaş."
+   },
+   "12": {
+    "q": "Kîjan rêbazên dayînê têne pejirandin?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Ma ez xwediyê koda çavkaniyê me?",
+    "a": "Erê, bi 100%."
+   },
+   "14": {
+    "q": "Hûn piştî radestkirinê lênêrînê pêşkêş dikin?",
+    "a": "Erê — planên lênêrînê."
+   },
+   "15": {
+    "q": "Ez çawa dest pê bikim?",
+    "a": "RFQ an WhatsApp — şêwirmendiya belaş a 30 deqîqeyan."
    }
   }
  }
