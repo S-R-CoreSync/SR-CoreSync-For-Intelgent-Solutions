@@ -2768,7 +2768,344 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                 </div>
 
             </div>
-        </section>
+        <div class="sp-tabs" role="tablist"><button type="button" class="sp-tab is-active" role="tab" data-key="store" id="sp-tab-store" aria-controls="sp-panel-store" aria-selected="true"><span>Mercato software</span></button><button type="button" class="sp-tab" role="tab" data-key="wl" id="sp-tab-wl" aria-controls="sp-panel-wl" aria-selected="false" tabindex="-1"><span>Licenza White-Label</span></button><button type="button" class="sp-tab" role="tab" data-key="lab" id="sp-tab-lab" aria-controls="sp-panel-lab" aria-selected="false" tabindex="-1"><span>Laboratorio e partnership</span></button></div>
+<div class="sp-panel" id="sp-panel-store" role="tabpanel" aria-labelledby="sp-tab-store"><div class="software-filter-bar">
+                    <button type="button" class="software-filter-pill active" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["all"]' data-sr-this="last">
+                        <span>🗂️ Tutto il software e i sistemi</span>
+                        <span class="pill-count">9 prodotti</span>
+                    </button>
+                    <button type="button" class="software-filter-pill software-filter-pill--platforms"
+                        data-sr-call="filterSoftwareMarketplace" data-sr-args='["platforms"]' data-sr-this="last">
+                        <span>🏛️ Piattaforme di identità pronte per la licenza</span>
+                        <span class="pill-count">3 piattaforme</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["accounting"]' data-sr-this="last">
+                        <span>📊 Soluzioni contabili e finanziarie autonome</span>
+                        <span class="pill-count">3 soluzioni</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["developer"]' data-sr-this="last">
+                        <span>💻 Software per sviluppatori, cloud e SDK</span>
+                        <span class="pill-count">3 strumenti</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["lab"]' data-sr-this="last">
+                        <span>🚀 Laboratorio progetti del fondatore Ing. Salim</span>
+                        <span class="pill-count">Esclusivo</span>
+                    </button>
+                </div><div class="row g-4 mb-4" id="softwareGridContainer">
+
+                    <!-- 1. S&R TaxSync Desktop -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--featured">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">💻</span>
+                                    <span class="status-badge status-completed software-card-badge">Il più richiesto ★ •
+                                        Offline Desktop</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R TaxSync Desktop</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.4 Pro • Windows 11/10 (64-bit) &amp; macOS
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Software desktop contabile e fiscale autonomo, funziona offline per calcolare l'IVA/BTW al 21% e 9% e generare dichiarazioni XML
+                                    per le autorità fiscali olandesi e del Golfo secondo gli standard Belastingdienst.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Dati e operazioni cifrati localmente, senza connessione</li>
+                                    <li>✓ Generazione ed esportazione di dichiarazioni fiscali XML certificate</li>
+                                    <li>✓ Stampa di fatture ufficiali conformi a EN 16931</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 189</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Licenza
+                                        annuale / dispositivo</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["taxsync"]'
+                                       >
+                                        <span>⚡ Pronto all uso</span>
+                                    </button>
+                                    <a href="downloads/SR-TaxSync-Web-App.html" download="SR-TaxSync-Web-App.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. S&R CloudPOS Connector -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--green">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">⚡</span>
+                                    <span class="status-badge software-card-badge--green">Punti vendita • POS Agent</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R CloudPOS Connector</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v3.1 Agent Service • Windows POS Terminal
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Agente software leggero che collega le casse di negozi e ristoranti all ERP cloud
+                                    per sincronizzare magazzino e liquidità senza cambiare i dispositivi esistenti.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Integrazione con stampanti termiche e codici a barre</li>
+                                    <li>✓ Magazzino e vendite offline con ripristino automatico</li>
+                                    <li>✓ Quadratura di cassa e inventario in tempo reale a fine turno</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--green">€ 25</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">mensile /
+                                        punto vendita</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["cloudpos"]'
+                                       >
+                                        <span>⚡ Pronto all uso</span>
+                                    </button>
+                                    <a href="downloads/SR-CloudPOS-Terminal.html" download="SR-CloudPOS-Terminal.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. S&R FlowScan AI Mobile -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--blue">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">📱</span>
+                                    <span class="status-badge software-card-badge--blue">Scansione intelligente • Mobile OCR
+                                        AI</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R FlowScan AI Mobile</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.8 AI Engine • iOS 17+ &amp; Android 14+ PWA
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    App mobile per scansionare con la fotocamera ricevute e fatture cartacee ed estrarre
+                                    i dati fiscali e gli importi automaticamente, trasferendoli in tempo reale all ERP.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Estrazione OCR con precisione del 99,4%</li>
+                                    <li>✓ Classificazione automatica delle spese operative e carburante</li>
+                                    <li>✓ Sincronizzazione cloud con la dashboard direzionale</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--blue">€ 9.99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">mensile /
+                                        utente</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["flowscan", "mobile"]'
+                                       >
+                                        <span>⚡ Pronto all uso</span>
+                                    </button>
+                                    <a href="downloads/SR-FlowScan-Mobile-App.html"
+                                        download="SR-FlowScan-Mobile-App.html" class="tf-btn software-btn-sim"
+                                       >
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. S&R Financial AI SDK -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🧩</span>
+                                    <span class="status-badge software-card-badge">Per sviluppatori e aziende • Developer
+                                        SDK</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Financial AI SDK</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.2 Dev • Python / Node.js / C# / REST
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Libreria software per integrare algoritmi di previsione finanziaria, fatturazione e conformità
+                                    nelle proprie applicazioni, in modo semplice e molto rapido.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Pacchetti pronti per Node.js (npm) e Python (pip)</li>
+                                    <li>✓ Previsione di liquidità e riconciliazione fatture con IA</li>
+                                    <li>✓ Documentazione completa con esempi eseguibili</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">mensile
+                                        (50k API Calls)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["sdk"]'
+                                       >
+                                        <span>⚡ Pronto all uso</span>
+                                    </button>
+                                    <a href="downloads/SR-Financial-AI-SDK.html" download="SR-Financial-AI-SDK.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. S&R SecureVault B2B -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--purple">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🛡️</span>
+                                    <span class="status-badge software-card-badge--purple">Crittografia militare • AES-256
+                                        GDPR</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R SecureVault B2B</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.0 • Win Server / Linux / Cloud Docker
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Crittografia e protezione dei backup di database e documenti sensibili secondo AES-256
+                                    con server isolati ad Amsterdam, conformi al 100% al GDPR.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Crittografia e decrittografia locali con un clic</li>
+                                    <li>✓ Protezione avanzata di database SQL e documenti</li>
+                                    <li>✓ Strumento CLI per automazione e backup programmati</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--purple">€ 49</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">mensile
+                                        (1TB Encrypted)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["vault"]'
+                                       >
+                                        <span>⚡ Pronto all uso</span>
+                                    </button>
+                                    <a href="downloads/SR-SecureVault-App.html" download="SR-SecureVault-App.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. S&R Cloud Terminal Agent -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--featured">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">⚙️</span>
+                                    <span class="status-badge software-card-badge">Gestione server • DevOps Agent</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Cloud Terminal Agent</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.0 DevOps • Windows / Linux CLI
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Agente cloud avanzato per monitorare server microservizi, consumo CPU e memoria
+                                    e riavviare automaticamente i servizi con avvisi immediati.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Monitoraggio live con Heartbeat e metriche SLA</li>
+                                    <li>✓ Consumo di memoria ultraleggero (meno di 15 MB)</li>
+                                    <li>✓ Connessione diretta al cluster di Amsterdam AMS-01</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 39</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">mensile /
+                                        Cluster</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["sdk"]'
+                                       >
+                                        <span>⚡ Pronto all uso</span>
+                                    </button>
+                                    <a href="downloads/SR-Financial-AI-SDK.html" download="SR-Financial-AI-SDK.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- ===== منصات S&R العامة القابلة للLicenza (Universal White-Label Platforms) ===== --></div></div>
+            </section>
 <section class="section-testimonial flat-spacing tf-btn-swiper-main" id="testimonials" data-section>
             <h6 class="mini-title text-caption text-white-64 text-center">
                 Scelto da leader enterprise e gruppi aziendali
