@@ -31,7 +31,7 @@
 <div class="wrap">
 <div class="kicker">S&amp;R CORESYNC · تحديث الخطة والهيكلية</div>
 <h1>الإصدار 18 — ما تحقّق فعلًا اليوم</h1>
-<p class="meta">مبني من <code>docs/content_depth.json</code> المقيس على الشجرة الحالية · الأربعاء، 11 نوفمبر 2026 · 06:22 مساءً</p>
+<p class="meta">مبني من <code>docs/content_depth.json</code> المقيس على الشجرة الحالية · الأربعاء، 11 نوفمبر 2026 · 07:18 مساءً</p>
 
 <h2>1. الخلاصة</h2>
 <div class="kpis">
@@ -69,10 +69,12 @@
 
 <h2>5. كيف تُضاف لغة</h2>
 <div class="callout">
-<code>1)</code> املأ <code>scripts/portal_faq_locales.json</code> و<code>portal_plan_locales.json</code> بمفاتيح اللغة ·
-<code>2)</code> <code>python scripts/apply_faq_locales.py --lang XX</code> ·
-<code>3)</code> <code>python scripts/apply_plan_card.py --lang XX</code> ·
-<code>4)</code> <code>python scripts/check_content_depth_parity.py --strict</code> · ثم البوابات المعتادة.
+<b>الطريقة المعتمدة — موجة متوازية لكل لغة:</b><br>
+<code>1)</code> <code>python scripts/i18n_scan_english.py --lang XX --csv docs/i18n-en/XX.csv</code><br>
+<code>2)</code> خريطة JSON: النص الإنجليزي ← الترجمة (15–20 نصًا، الأطول أولًا)<br>
+<code>3)</code> <code>python scripts/apply_text_map.py --lang XX --map XX.map.json --all</code><br>
+<code>4)</code> إعادة المسح (الرقم يجب أن ينزل) · ثم <code>validate.js</code> و<code>audit_language_purity.py</code><br>
+<b>الموجة:</b> وكيل مستقل لكل لغة، يعدّل صفحته فقط، بلا git — والأب يلتزم ويقيس.
 </div>
 <p class="meta">الملف يُعاد توليده بـ <code>python docs/build_plan_page.py</code> بعد تحديث القياس بـ <code>python docs/measure_structure.py</code>.</p>
 </div>
