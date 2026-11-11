@@ -6,11 +6,14 @@
            docs/_extract/estimator-grid.html. Without it only the option block
            is installed - which is what shipped on de by mistake: buttons, no
            total and no call to action.
-  --replace  remove an existing estimator block first (default when one is found).
 
 Labels come from scripts/portal_estimator_locales.json, keyed by the Arabic
 source string. A previous install - partial or in the wrong language - is
 removed before the new one goes in, so the command is idempotent.
+
+The WhatsApp message segments are written onto the widget root as data-wa-*,
+read from the "_whatsapp" block of the same file. Without them the shared module
+falls back to Arabic, which is only right on the master page.
 
 The booking button is dropped unless the page defines #executiveBookingModal:
 a dead button is worse than an absent one.
@@ -31,14 +34,15 @@ BLOCKS = {
     "full": ROOT / "docs" / "_extract" / "estimator-grid.html",
 }
 ATTRS = ("alt", "title", "placeholder", "aria-label", "data-title", "data-days")
+WA = ("title", "type", "scope", "lang", "pay", "speed", "total", "duration", "days")
 
 
 def norm(v):
     return re.sub(r"\s+", " ", v or "").strip()
 
 
-def block_end(raw, marker):
-    """Balanced <div> end for the element containing marker."""
+def span_of(raw, marker):
+    """Balanced <div> span of the element containing marker."""
     i = raw.find(marker)
     if i < 0:
         return None
@@ -84,7 +88,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    labels = json.loads(LOCALES.read_text(encoding="utf-8")).get(args.lang, {})
+    db = json.loads(LOCALES.read_text(encoding="utf-8"))
+    labels = db.get(args.lang, {})
     if not labels:
         print(f"no labels for {args.lang}")
         return 2
@@ -98,10 +103,17 @@ def main():
             print("   -", m[:100])
         return 3
 
+    wa = db.get("_whatsapp", {}).get(args.lang, {})
+    for key in WA:
+        if wa.get(key):
+            node.set("data-wa-" + key, wa[key])
+    if not wa:
+        print(f"{args.lang}: no _whatsapp segments - the WhatsApp text stays Arabic")
+
     page = ROOT / args.lang / "index.html"
     html = page.read_text(encoding="utf-8", errors="replace")
 
-    if "executiveBookingModal" not in html:
+    if 'id="executiveBookingModal"' not in html:
         for btn in node.xpath(".//*[@data-sr-call='transferEstimatorToVipBooking']"):
             btn.getparent().remove(btn)
 
@@ -109,7 +121,7 @@ def main():
 
     removed = 0
     for marker in ("cost-estimator-grid", "cost-estimator-controls"):
-        span = block_end(html, marker)
+        span = span_of(html, marker)
         if span:
             html = html[:span[0]] + html[span[1]:]
             removed += 1
@@ -127,7 +139,7 @@ def main():
         html = html.replace("</body>", '<script src="../js/sr-estimator.js?v=20261112" defer></script>\n</body>', 1)
 
     print(f"{args.lang}: {'full' if args.full else 'controls'} installed "
-          f"({len(markup):,} chars, removed {removed} old block)")
+          f"({len(markup):,} chars, removed {removed} old block, wa={'yes' if wa else 'arabic default'})")
     if args.dry_run:
         print("dry run - nothing written")
         return 0

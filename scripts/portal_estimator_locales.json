@@ -65,5 +65,18 @@
   "فتح نافذة حجز VIP مع تفاصيل هذا التقدير": "VIP-Buchungsfenster mit den Details dieser Kalkulation öffnen",
   "مدة الإنجاز المتوقعة:": "Voraussichtliche Umsetzungsdauer:",
   "🧮 حاسبة تراخيص White-Label الفورية (PDF)": "🧮 Sofortrechner für White-Label-Lizenzen (PDF)"
+ },
+ "_whatsapp": {
+  "de": {
+   "title": "*Neue Projektanfrage – S&R CoreSync*",
+   "type": "📦 *Typ:*",
+   "scope": "📄 *Umfang:*",
+   "lang": "🌐 *Sprachen:*",
+   "pay": "💳 *Zahlung:*",
+   "speed": "⚡ *Lieferung:*",
+   "total": "💰 *Gesamtschätzung: €{v}*",
+   "duration": "⏱ *Voraussichtliche Dauer: {v}*",
+   "days": "5 - 7 Arbeitstage"
+  }
  }
 }
