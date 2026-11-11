@@ -487,5 +487,47 @@
     "a": "Mēs strādājam ar paralēlās simulācijas migrāciju. API savienotāji un ierakstu sinhronizācija tiek veidota izolētā testa vidē, un visi konti un plūsmas tiek pārbaudītas. Pāreja uz produkciju notiek tikai pēc 100 % pārbaudes – bez nevienas sekundes dīkstāves (zero downtime)."
    }
   }
+ },
+ "sl": {
+  "heading": "Pogosta vprašanja",
+  "faq": {
+   "06": {
+    "q": "Ali smo popolni lastniki izvorne kode in baz podatkov (IP Ownership)?",
+    "a": "<strong>Da, 100 %.</strong> Naše pogodbe prenesejo vse pravice do izvorne kode, oblikovanja in baz podatkov na vaše podjetje – brez omejitev, brez licenčnin in brez skritih naročnin. Prejmete tudi popolno dokumentacijo arhitekture in varnosti, da lahko vaša ekipa sistem samostojno razvija."
+   },
+   "07": {
+    "q": "Kako so urejeni računi in davki za podjetja na Nizozemskem in v EU?",
+    "a": "Izdajamo uradne evropske davčne račune, registrirane pri nizozemski davčni upravi (Belastingdienst), z DDV številko (btw-nummer) in številko KvK. Podjetja s sedežem na Nizozemskem lahko zahtevajo vračilo 21 % DDV; za podjetja v EU velja obrnjena davčna obveznost (0 % DDV). Zneski so v celoti odbitni kot poslovni stroški."
+   },
+   "08": {
+    "q": "Kako zagotavljate zaupnost naših podatkov in varnost sistemov po evropskih standardih (GDPR)?",
+    "a": "Delamo v skladu z GDPR in pred začetkom podpišemo vzajemno, pravno zavezujočo pogodbo o zaupnosti (NDA). Uporabljamo celovito šifriranje (TLS 1.3 / AES-256), gostovanje na suverenih evropskih strežnikih z 99,9 % razpoložljivostjo in dnevne šifrirane varnostne kopije."
+   },
+   "09": {
+    "q": "Že uporabljamo obstoječe finančne sisteme – kako zagotavljate integracijo in migracijo brez prekinitve poslovanja?",
+    "a": "Delamo z metodo vzporedne simulacijske migracije. API konektorji in sinhronizacija knjižb nastajajo v izoliranem testnem okolju, vsi računi in tokovi pa so preverjeni. Prehod v produkcijo se zgodi šele po 100 % preverjanju – brez ene same sekunde izpada (zero downtime)."
+   }
+  }
+ },
+ "hr": {
+  "heading": "Česta pitanja",
+  "faq": {
+   "06": {
+    "q": "Posjedujemo li u potpunosti izvorni kod i baze podataka (IP Ownership)?",
+    "a": "<strong>Da, 100 %.</strong> Naši ugovori prenose sva prava na izvorni kod, dizajn i baze podataka na vašu tvrtku – bez ograničenja, bez licencnih naknada i bez skrivenih pretplata. Dobivate i potpunu dokumentaciju arhitekture i sigurnosti kako bi vaš tim mogao samostalno razvijati sustav."
+   },
+   "07": {
+    "q": "Kako se rješavaju računi i porezi za tvrtke u Nizozemskoj i EU?",
+    "a": "Izdajemo službene europske porezne račune registrirane kod nizozemske porezne uprave (Belastingdienst), s PDV brojem (btw-nummer) i brojem KvK. Tvrtke sa sjedištem u Nizozemskoj mogu zatražiti povrat 21 % PDV-a; za tvrtke u EU primjenjuje se prijenos porezne obveze (0 % PDV). Iznosi su u potpunosti odbitni kao poslovni troškovi."
+   },
+   "08": {
+    "q": "Kako jamčite povjerljivost naših podataka i sigurnost sustava prema europskim standardima (GDPR)?",
+    "a": "Radimo u skladu s GDPR-om i prije početka potpisujemo uzajamni, pravno obvezujući ugovor o povjerljivosti (NDA). Primjenjujemo end-to-end enkripciju (TLS 1.3 / AES-256), hosting na suverenim europskim poslužiteljima s 99,9 % dostupnosti i svakodnevne šifrirane sigurnosne kopije."
+   },
+   "09": {
+    "q": "Već koristimo postojeće financijske sustave – kako jamčite integraciju i migraciju bez prekida poslovanja?",
+    "a": "Radimo metodom paralelne simulacijske migracije. API konektori i sinkronizacija knjiženja razvijaju se u izoliranom testnom okruženju, a svi računi i tokovi se provjeravaju. Prelazak u produkciju događa se tek nakon 100 % provjere – bez ijedne sekunde zastoja (zero downtime)."
+   }
+  }
  }
 }
