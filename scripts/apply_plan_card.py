@@ -48,6 +48,17 @@ def main():
                 matched += 1
             else:
                 unmatched.add(key)
+        # alt / title / aria-label are visible to screen readers and audits
+        for attr in ("alt", "title", "aria-label"):
+            value = el.get(attr)
+            if not value or not value.strip():
+                continue
+            key = norm(value)
+            if key in loc:
+                el.set(attr, loc[key])
+                matched += 1
+            else:
+                unmatched.add(key)
 
     if unmatched:
         print(f"{args.lang}: {len(unmatched)} text nodes have no translation:")
@@ -56,6 +67,10 @@ def main():
         return 3
 
     new_card = LH.tostring(root, encoding="unicode")
+    # the card lives one level below the site root in every localized page
+    new_card = new_card.replace('src="./assets/', 'src="../assets/')
+    new_card = new_card.replace('href="./assets/', 'href="../assets/')
+    new_card = new_card.replace('src="./js/', 'src="../js/')
 
     page_path = ROOT / args.lang / "index.html"
     html = page_path.read_text(encoding="utf-8", errors="replace")

@@ -84,5 +84,135 @@
     "a": "Wij werken met een parallelle simulatiemigratie. API-koppelingen en het synchroniseren van boekingen worden in een geïsoleerde testomgeving gebouwd en alle rekeningen en stromen worden getest. De overgang naar productie volgt pas na 100% verificatie — zonder één seconde uitval van uw dagelijkse werkzaamheden (zero downtime)."
    }
   }
+ },
+ "fr": {
+  "heading": "Questions fréquentes",
+  "faq": {
+   "01": {
+    "q": "Combien de temps prend le développement d'un système ou d'une application ?",
+    "a": "Comptez généralement 4 à 8 semaines pour les projets et plateformes de taille moyenne. Avant le démarrage, vous recevez un calendrier détaillé et des rapports d'avancement hebdomadaires."
+   },
+   "02": {
+    "q": "Proposez-vous vos services aux entreprises hors des Pays-Bas ?",
+    "a": "Oui, sans restriction. Notre siège est à Amsterdam et nous accompagnons des clients dans toute l'Union européenne ainsi qu'en Arabie saoudite, aux Émirats arabes unis, au Qatar et au Koweït, via des canaux numériques et des visioconférences régulières."
+   },
+   "03": {
+    "q": "Qu'est-ce qui distingue S&R CoreSync des agences de développement classiques ?",
+    "a": "La différence tient à la combinaison rare des deux fondateurs : un architecte logiciel et cloud expérimenté (associé S) et un spécialiste finance et ERP (associé R). La solution technique sert donc dès le premier jour la rentabilité, le modèle d'affaires et la conformité financière."
+   },
+   "04": {
+    "q": "Comment sont organisés le contrat et les paiements ?",
+    "a": "Nous travaillons avec des contrats formels régis par le droit européen. Les paiements sont liés à des jalons clairs : 50 % au démarrage, le solde après recette et tests finaux."
+   },
+   "05": {
+    "q": "Assurez-vous un support et des mises à jour après la livraison ?",
+    "a": "Oui. Toutes nos formules incluent une période de garantie et de support après la mise en ligne. Nous proposons en plus des forfaits de maintenance mensuels flexibles pour que votre système reste performant et sûr 24 h/24."
+   },
+   "06": {
+    "q": "Le code source et les bases de données nous appartiennent-ils entièrement (IP Ownership) ?",
+    "a": "<strong>Oui, à 100 %.</strong> Nos contrats transfèrent l'intégralité des droits sur le code source, les designs et les bases de données à votre entreprise — sans restriction, sans redevance de licence et sans abonnement caché. Vous recevez également une documentation complète d'architecture et de sécurité pour que votre équipe puisse évoluer en toute autonomie."
+   },
+   "07": {
+    "q": "Comment sont gérées la facturation et la TVA pour les entreprises aux Pays-Bas et dans l'UE ?",
+    "a": "Nous émettons des factures fiscales européennes officielles, enregistrées auprès de l'administration fiscale néerlandaise (Belastingdienst), avec numéro de TVA (btw-nummer) et numéro KvK. Les entreprises établies aux Pays-Bas peuvent récupérer les 21 % de TVA ; pour les entreprises de l'UE, l'autoliquidation s'applique (0 % de TVA). Les montants sont intégralement déductibles en charges d'exploitation."
+   },
+   "08": {
+    "q": "Comment garantissez-vous la confidentialité de nos données et la sécurité de nos systèmes selon les normes européennes (RGPD) ?",
+    "a": "Nous travaillons en conformité RGPD et signons avant tout démarrage un accord de confidentialité (NDA) mutuel et juridiquement contraignant. Nous appliquons un chiffrement de bout en bout (TLS 1.3 / AES-256), un hébergement sur serveurs européens souverains avec 99,9 % de disponibilité et des sauvegardes chiffrées quotidiennes."
+   },
+   "09": {
+    "q": "Nous utilisons déjà des systèmes financiers — comment garantir l'intégration et la migration sans interrompre l'activité ?",
+    "a": "Nous procédons par migration en simulation parallèle. Les connecteurs API et la synchronisation des écritures sont développés dans un environnement de test isolé, et tous les comptes et flux sont vérifiés. Le basculement en production n'a lieu qu'après vérification à 100 % — sans une seconde d'interruption (zéro downtime)."
+   },
+   "10": {
+    "q": "Combien de temps pour un site ou une boutique ?",
+    "a": "Site : 2 à 4 semaines. Boutique : 4 à 6 semaines."
+   },
+   "11": {
+    "q": "Les prix incluent-ils l'hébergement et le domaine ?",
+    "a": "3 mois d'hébergement offerts + domaine."
+   },
+   "12": {
+    "q": "Quels moyens de paiement acceptez-vous ?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Suis-je propriétaire du code source ?",
+    "a": "Oui, à 100 %."
+   },
+   "14": {
+    "q": "Assurez-vous la maintenance après la livraison ?",
+    "a": "Oui — forfaits de maintenance."
+   },
+   "15": {
+    "q": "Comment démarrer ?",
+    "a": "RFQ ou WhatsApp — consultation gratuite de 30 minutes."
+   }
+  }
+ },
+ "es": {
+  "heading": "Preguntas frecuentes",
+  "faq": {
+   "01": {
+    "q": "¿Cuánto tarda normalmente desarrollar un sistema o una aplicación?",
+    "a": "En proyectos y plataformas de tamaño medio suelen ser de 4 a 8 semanas. Antes de empezar recibe un calendario detallado e informes de avance semanales."
+   },
+   "02": {
+    "q": "¿Ofrecen sus servicios a empresas fuera de los Países Bajos?",
+    "a": "Sí, sin restricciones. Nuestra sede está en Ámsterdam y atendemos a clientes de toda la Unión Europea, así como de Arabia Saudí, Emiratos Árabes Unidos, Catar y Kuwait, mediante canales digitales y videollamadas periódicas."
+   },
+   "03": {
+    "q": "¿Qué diferencia a S&R CoreSync de una agencia de software convencional?",
+    "a": "La diferencia es la combinación poco habitual de sus dos fundadores: un arquitecto de software y cloud con amplia experiencia (socio S) y un especialista en finanzas y ERP (socio R). Así la solución técnica sirve desde el primer día a la rentabilidad, al modelo de negocio y al cumplimiento financiero."
+   },
+   "04": {
+    "q": "¿Cómo se gestionan el contrato y los pagos?",
+    "a": "Trabajamos con contratos formales conforme al derecho europeo. Los pagos se vinculan a hitos claros: 50 % al inicio y el resto tras la aceptación y las pruebas finales."
+   },
+   "05": {
+    "q": "¿Ofrecen soporte y actualizaciones después de la entrega?",
+    "a": "Sí. Todos los paquetes incluyen un periodo de garantía y soporte tras la puesta en marcha. Además ofrecemos planes de mantenimiento mensuales flexibles para que su sistema siga rindiendo y seguro las 24 horas."
+   },
+   "06": {
+    "q": "¿El código fuente y las bases de datos pasan íntegramente a nuestra propiedad (IP Ownership)?",
+    "a": "<strong>Sí, al 100 %.</strong> Nuestros contratos transfieren a su empresa todos los derechos sobre el código fuente, los diseños y las bases de datos, sin restricciones, sin cánones de licencia y sin suscripciones ocultas. Recibirá además documentación completa de arquitectura y seguridad para que su equipo pueda ampliar el sistema de forma autónoma."
+   },
+   "07": {
+    "q": "¿Cómo se gestionan las facturas y los impuestos para empresas en los Países Bajos y la UE?",
+    "a": "Emitimos facturas fiscales europeas oficiales, registradas ante la administración tributaria neerlandesa (Belastingdienst), con número de IVA (btw-nummer) y número de la KvK. Las empresas establecidas en los Países Bajos pueden recuperar el 21 % del IVA; para empresas de la UE se aplica la inversión del sujeto pasivo (0 % de IVA). Los importes son totalmente deducibles como gasto de explotación."
+   },
+   "08": {
+    "q": "¿Cómo garantizan la confidencialidad de nuestros datos y la seguridad de nuestros sistemas según la normativa europea (RGPD)?",
+    "a": "Trabajamos conforme al RGPD y firmamos antes de empezar un acuerdo de confidencialidad (NDA) mutuo y jurídicamente vinculante. Aplicamos cifrado de extremo a extremo (TLS 1.3 / AES-256), alojamiento en servidores europeos soberanos con un 99,9 % de disponibilidad y copias de seguridad cifradas a diario."
+   },
+   "09": {
+    "q": "Ya usamos sistemas financieros propios: ¿cómo garantizan la integración y la migración sin interrumpir la actividad?",
+    "a": "Trabajamos con migración por simulación paralela. Los conectores API y la sincronización de asientos se desarrollan en un entorno de pruebas aislado y se verifican todas las cuentas y flujos. El paso a producción solo se realiza tras una verificación del 100 %, sin un solo segundo de interrupción (cero downtime)."
+   },
+   "10": {
+    "q": "¿Cuánto tarda una web o una tienda?",
+    "a": "Web: 2–4 semanas. Tienda: 4–6 semanas."
+   },
+   "11": {
+    "q": "¿Los precios incluyen alojamiento y dominio?",
+    "a": "3 meses de alojamiento gratis + dominio."
+   },
+   "12": {
+    "q": "¿Qué métodos de pago aceptan?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "¿El código fuente es mío?",
+    "a": "Sí, al 100 %."
+   },
+   "14": {
+    "q": "¿Ofrecen mantenimiento después de la entrega?",
+    "a": "Sí — planes de mantenimiento."
+   },
+   "15": {
+    "q": "¿Cómo empiezo?",
+    "a": "RFQ o WhatsApp — consulta gratuita de 30 minutos."
+   }
+  }
  }
 }

@@ -1865,7 +1865,7 @@
    }
   },
   "es": {
-   "bytes": 616326,
+   "bytes": 625987,
    "sections": {
     "hero": {
      "tag": "section",
@@ -1917,7 +1917,7 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 34063,
+     "bytes": 33942,
      "li": 0,
      "article": 0,
      "h2h3": 4,
@@ -2013,15 +2013,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 57017,
-     "li": 64,
+     "bytes": 61220,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1440
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1564
     },
     "guarantees": {
      "tag": "section",
@@ -2037,7 +2037,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300396,
+     "bytes": 305651,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -2045,7 +2045,7 @@
      "img": 45,
      "button": 71,
      "cards": 77,
-     "text": 12339
+     "text": 12617
     },
     "executive-solutions-stage": {
      "tag": "section",
@@ -2564,7 +2564,7 @@
    }
   },
   "fr": {
-   "bytes": 616915,
+   "bytes": 626779,
    "sections": {
     "hero": {
      "tag": "section",
@@ -2616,7 +2616,7 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 34044,
+     "bytes": 33923,
      "li": 0,
      "article": 0,
      "h2h3": 4,
@@ -2712,15 +2712,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 57094,
-     "li": 64,
+     "bytes": 61275,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1451
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1575
     },
     "guarantees": {
      "tag": "section",
@@ -2736,7 +2736,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300647,
+     "bytes": 306127,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -2744,7 +2744,7 @@
      "img": 45,
      "button": 71,
      "cards": 77,
-     "text": 12342
+     "text": 12639
     },
     "executive-solutions-stage": {
      "tag": "section",
