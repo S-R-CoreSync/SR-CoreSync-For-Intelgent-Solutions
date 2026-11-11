@@ -6,8 +6,17 @@ non-English portals answers all 15 questions in its own language
 The 22-language wave wrote 196 question/answer pairs through
 `scripts/portal_faq_locales.json` + `scripts/apply_faq_locales.py`.
 
-What is left is not copy, it is a component: the interactive **estimator**
-exists only on `de` and `ckb` (2/27).
+What is left is not copy, it is a component: the interactive **estimator** is
+installed on `de` and `ckb` only. `de` is fully translated (55/55 labels, no
+booking button, no dead control). `ckb` still carries the **Arabic** labels and
+a `transferEstimatorToVipBooking` button that opens nothing, because that page
+has no `executiveBookingModal`.
+
+## `ckb` first, then the other 24
+
+Either give `ckb` the 55 Sorani labels and drop the booking button, or remove
+the Arabic block from the Kurdish page until the labels exist - an Arabic
+calculator on a Kurdish page is worse than no calculator.
 
 ## The estimator, one language at a time
 
@@ -23,8 +32,10 @@ python scripts/audit_language_purity.py
 **Blocker to close before scaling to 25 languages:** `js/sr-estimator.js`
 composes the WhatsApp enquiry in Arabic inside the code
 (`bookEstimatorViaWhatsApp`), and falls back to `"5 - 7 أيام عمل"` for the
-duration. A German or Kurdish visitor therefore sends an Arabic message.
-The Arabic-containment gate cannot see it: it reads page text, not JS strings.
+duration. Today the damage is confined to `ckb` and the Arabic master, but the
+first new language ported will send an Arabic enquiry in its own name.
+The Arabic-containment gate cannot see it: it reads page text, not JS strings,
+and it exempts languages written in Arabic script.
 Move the eight message segments into `portal_estimator_locales.json` under
 `whatsapp`, pass them as `data-*` on the widget root, and fall back to English.
 

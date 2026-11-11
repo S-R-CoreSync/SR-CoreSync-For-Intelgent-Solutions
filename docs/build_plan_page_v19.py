@@ -105,7 +105,7 @@ doc = f"""<!DOCTYPE html>
  <tbody>
   <tr><th scope="row">بطاقة السوشيال €890</th><td class="ok">مُغلقة</td><td>12/12 بطاقة في كل لغة عبر <code>apply_plan_card.py</code></td></tr>
   <tr><th scope="row">أربعة أسئلة غائبة</th><td class="ok">مُغلقة</td><td>15/15 سؤالًا في كل لغة عبر <code>apply_faq_locales.py</code></td></tr>
-  <tr><th scope="row">المُقدِّر التفاعلي</th><td class="gap">مفتوحة جزئيًا</td><td>{len(estimator)} لغة فقط ({' · '.join(sorted(estimator))}) من أصل {len(LANGS)}</td></tr>
+  <tr><th scope="row">المُقدِّر التفاعلي</th><td class="gap">مفتوحة</td><td>لغتان مركّبتان: <code>de</code> بترجمة كاملة (55/55) · <code>ckb</code> التسميات فيه ما زالت <b>عربية</b> وزر الحجز فيه ميت</td></tr>
  </tbody>
 </table>
 <div class="callout">
@@ -124,12 +124,19 @@ doc = f"""<!DOCTYPE html>
 <h2>4. الفجوة الوحيدة الباقية: المُقدِّر</h2>
 {"" if residue else '<div class="callout good"><b>إغلاق كامل:</b> لا يوجد سؤال واحد بالإنجليزية في أي صفحة غير إنجليزية — بقايا قسم الأسئلة انتهت.</div>'}
 <div class="callout bad">
- ما تبقّى بناءً على القياس: <b>{len(LANGS) - len(estimator)}</b> لغة بلا مُقدِّر تفاعلي،
- مقابل <b>{len(estimator)}</b> تعمل ({' · '.join(sorted(estimator))}).
+<b>ما يقيسه التقرير:</b> <b>{len(LANGS) - len(estimator)}</b> لغة بلا مُقدِّر، و<b>{len(estimator)}</b> فيه مُقدِّر ({' · '.join(sorted(estimator))}).
+<b>وما لا يقيسه:</b> المُقدِّر في <code>ckb</code> مركّب لكن تسمياته <b>عربية</b> (خيارات المجموعات، زر واتساب، عنوان نافذة VIP)، وزر الحجز فيه لا يفتح شيئًا لأن الصفحة بلا <code>executiveBookingModal</code>.
+أي أن المكسب الحقيقي لغة واحدة: <code>de</code>.
+</div>
+<h3>مانع النقل — يجب إغلاقه قبل التوسّع</h3>
+<div class="callout bad">
+<code>js/sr-estimator.js</code> يبني رسالة واتساب <b>بالعربية داخل الكود</b>، واحتياطي المدة فيه <code>"5 - 7 أيام عمل"</code>.
+الأثر اليوم محصور في <code>ckb</code> والصفحة الأم؛ لكن أول لغة جديدة تُنقل ستُرسل استفسارًا عربيًا باسمها.
+بوابة احتواء العربية لا ترى ذلك: تفحص نص الصفحة لا سلاسل JS، وتستثني اللغات ذات الكتابة العربية.
 </div>
 <h3>لماذا هو «وحدة تركيب» لا «ميزة جديدة»</h3>
 <ul class="tight">
- <li>الوحدة مستخرجة ومُختبرة: <code>js/sr-estimator.js</code> + <code>css/sr-estimator.css</code>، وتعمل على الألمانية والكردية السورانية.</li>
+ <li>الوحدة مستخرجة ومُختبرة: <code>js/sr-estimator.js</code> + <code>css/sr-estimator.css</code>، وتعمل على الألمانية بلا نافذة حجز.</li>
  <li>التسميات كلها في ملف واحد: <code>scripts/portal_estimator_locales.json</code> — <b>55 تسمية</b> لكل لغة، ولا حاجة لمسّ الـHTML.</li>
  <li>التركيب أمر واحد: <code>python scripts/install_estimator.py --lang XX</code> ثم إعادة القياس.</li>
  <li>زر الحجز يُحذف تلقائيًا عند النقل، فلا يظهر زر ميت في صفحة بلا نافذة حجز.</li>
