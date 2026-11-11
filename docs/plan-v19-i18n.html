@@ -108,7 +108,21 @@ python scripts/audit_language_purity.py
 python scripts/check_content_depth_parity.py --json docs/content_depth.json
 python docs/measure_structure.py &amp;&amp; python docs/build_plan_page_v19.py</code></pre>
 
-<h2>7. قواعد ثابتة لا تُخترق</h2>
+<h2>7. خطة الإنجاز إلى 100% — أربع بوابات</h2>
+<div class="callout">
+<b>محور الترجمة:</b> الـ77 نصًّا الجديدة تُترجم <b>عربي ← إنجليزي</b> مرة واحدة، ثم <b>إنجليزي ← 26 لغة</b>. الإنجليزية محور ترجمة، لا محور هيكلية — صفحتها منحرفة مثل الباقي (كل كتل الأصل = 0 فيها).
+</div>
+<ol class="steps">
+ <li><b>البوابة 1 — رقاقات الهيرو:</b> 7 نصوص (6 رقاقات + تسمية الشريط). القبول: <code>hero-compact-chip = 12</code> في 27 صفحة. التكلفة: 7 × 26 = 182 ترجمة.</li>
+ <li><b>البوابة 2 — لوحات السوق الخمس:</b> 60 نصًّا. القبول: <code>sp-panel = 11</code> · <code>sp-tab = 8</code>. التكلفة: 1,560 ترجمة.</li>
+ <li><b>البوابة 3 — الضمانات والأزرار:</b> 11 نصًّا. القبول: <code>sr-guarantee-pill = 5</code> و<code>software-btn-sim/-calc = 3 + 3</code>.</li>
+ <li><b>البوابة 4 — تنظيف الأصل:</b> إخراج الفوتر المدفون من <code>#faq</code> في <code>index.html</code> فقط، ثم تصبح عدّادات الأسئلة قابلة للمقارنة، ثم يُفعَّل <code>--strict</code> حاجزًا.</li>
+</ol>
+<div class="callout good">
+<b>معيار «100%» المعتمد:</b> <code>python docs/audit_structure_vs_master.py</code> يُرجع <b>0 من 27</b> صفحة منحرفة، و<code>--strict</code> يمرّ في CI دون <code>continue-on-error</code>. أي أن الإنجاز يُقاس بأمر واحد، لا بتقدير.
+</div>
+
+<h2>8. قواعد ثابتة لا تُخترق</h2>
 <ol class="steps">
  <li><b>عدّل الأصل لا الفرع:</b> صفحات اللغات تُولَّد من <code>index.html</code>؛ أي تعديل يدوي عليها يُمسح عند التوليد التالي.</li>
  <li><b>النصوص على مستوى العقدة:</b> لا استبدال نصي عام (يفسد JSON-LD). كل نص جديد = مفتاح ترجمة ×26.</li>
