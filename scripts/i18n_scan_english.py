@@ -53,9 +53,14 @@ def main():
         text = re.sub(r"\s+", " ", el.text or "").strip()
         if len(text) < 18:
             continue
-        hits = len(EN.findall(text))
-        words = len(text.split())
-        if hits < 2 or words < 3:
+        # brand and product names are not English prose; strip them first
+        probe = text
+        for brand in BRANDS:
+            probe = re.sub(re.escape(brand), " ", probe, flags=re.I)
+        probe = re.sub(r"[•·|/–—-]+", " ", probe)
+        hits = len(EN.findall(probe))
+        words = len(probe.split())
+        if hits < 2 or words < 4:
             continue
         if is_brand_only(text):
             continue
