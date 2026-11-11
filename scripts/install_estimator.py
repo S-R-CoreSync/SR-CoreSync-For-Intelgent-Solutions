@@ -1,36 +1,57 @@
-"""Install the cost estimator (calculator + WhatsApp button, no booking modal)
-into one language page.
+"""Install the cost estimator into one language page.
 
-  python scripts/install_estimator.py --lang de [--dry-run]
+  python scripts/install_estimator.py --lang de --full [--dry-run]
 
-The block comes from the master; labels come from scripts/portal_estimator_locales.json.
-The booking button is removed because these pages have no booking modal, and a
-dead button is worse than an absent one.
+  --full   install the whole widget (options + total + timeline + CTA) from
+           docs/_extract/estimator-grid.html. Without it only the option block
+           is installed - which is what shipped on de by mistake: buttons, no
+           total and no call to action.
+  --replace  remove an existing estimator block first (default when one is found).
+
+Labels come from scripts/portal_estimator_locales.json, keyed by the Arabic
+source string. A previous install - partial or in the wrong language - is
+removed before the new one goes in, so the command is idempotent.
+
+The booking button is dropped unless the page defines #executiveBookingModal:
+a dead button is worse than an absent one.
 """
-import argparse, json, pathlib, re, sys
+import argparse
+import json
+import pathlib
+import re
+import sys
+
 from lxml import html as LH
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BLOCK = ROOT / "docs" / "_extract" / "estimator.html"
 LOCALES = ROOT / "scripts" / "portal_estimator_locales.json"
+SKIP = {"590", "\u20ac", "\u2713"}          # numbers and glyphs, not prose
+BLOCKS = {
+    "controls": ROOT / "docs" / "_extract" / "estimator.html",
+    "full": ROOT / "docs" / "_extract" / "estimator-grid.html",
+}
+ATTRS = ("alt", "title", "placeholder", "aria-label", "data-title", "data-days")
 
 
 def norm(v):
     return re.sub(r"\s+", " ", v or "").strip()
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--lang", required=True)
-    ap.add_argument("--dry-run", action="store_true")
-    args = ap.parse_args()
+def block_end(raw, marker):
+    """Balanced <div> end for the element containing marker."""
+    i = raw.find(marker)
+    if i < 0:
+        return None
+    start = raw.rfind("<div", 0, i)
+    depth = 0
+    for m in re.finditer(r"<div\b|</div>", raw[start:]):
+        depth += 1 if m.group(0).startswith("<div") else -1
+        if depth == 0:
+            return start, start + m.end()
+    return None
 
-    labels = json.loads(LOCALES.read_text(encoding="utf-8")).get(args.lang, {})
-    if not labels:
-        print(f"no labels for {args.lang}")
-        return 2
 
-    node = LH.fragment_fromstring(BLOCK.read_text(encoding="utf-8"))
+def localise(node, labels):
     missing = []
     for el in node.iter():
         if not isinstance(el.tag, str):
@@ -43,48 +64,75 @@ def main():
             if key in labels and labels[key]:
                 lead = value[:len(value) - len(value.lstrip())]
                 setattr(el, attr, lead + labels[key])
-            else:
+            elif key not in SKIP:
                 missing.append(key)
-        for attr in ("alt", "title", "placeholder", "aria-label", "data-title", "data-days"):
+        for attr in ATTRS:
             value = el.get(attr)
             if value and value.strip():
                 key = norm(value)
                 if key in labels and labels[key]:
                     el.set(attr, labels[key])
-                else:
+                elif key not in SKIP:
                     missing.append(key)
+    return missing
 
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--lang", required=True)
+    ap.add_argument("--full", action="store_true")
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
+
+    labels = json.loads(LOCALES.read_text(encoding="utf-8")).get(args.lang, {})
+    if not labels:
+        print(f"no labels for {args.lang}")
+        return 2
+
+    source = BLOCKS["full" if args.full else "controls"]
+    node = LH.fragment_fromstring(source.read_text(encoding="utf-8"))
+    missing = localise(node, labels)
     if missing:
-        print(f"{args.lang}: {len(set(missing))} labels missing, first: {sorted(set(missing))[:4]}")
+        print(f"{args.lang}: {len(set(missing))} labels missing")
+        for m in sorted(set(missing))[:8]:
+            print("   -", m[:100])
         return 3
 
-    for btn in node.xpath(".//*[@data-sr-call='transferEstimatorToVipBooking']"):
-        btn.getparent().remove(btn)
-
-    block = LH.tostring(node, encoding="unicode")
     page = ROOT / args.lang / "index.html"
     html = page.read_text(encoding="utf-8", errors="replace")
-    if "cost-estimator-controls" in html:
-        print(f"{args.lang}: estimator already present")
-        return 0
+
+    if "executiveBookingModal" not in html:
+        for btn in node.xpath(".//*[@data-sr-call='transferEstimatorToVipBooking']"):
+            btn.getparent().remove(btn)
+
+    markup = LH.tostring(node, encoding="unicode").strip()
+
+    removed = 0
+    for marker in ("cost-estimator-grid", "cost-estimator-controls"):
+        span = block_end(html, marker)
+        if span:
+            html = html[:span[0]] + html[span[1]:]
+            removed += 1
+            break
 
     m = re.search(r'<section[^>]*id="pricing"', html)
     if not m:
         print(f"{args.lang}: pricing section not found")
         return 4
+    html = html[:m.start()] + markup + "\n\n            " + html[m.start():]
 
-    html = html[:m.start()] + block.strip() + "\n\n            " + html[m.start():]
     if "sr-estimator.css" not in html:
-        html = html.replace("</head>", '<link rel="stylesheet" href="../css/sr-estimator.css?v=20261111">\n</head>', 1)
+        html = html.replace("</head>", '<link rel="stylesheet" href="../css/sr-estimator.css?v=20261112">\n</head>', 1)
     if "sr-estimator.js" not in html:
-        html = html.replace("</body>", '<script src="../js/sr-estimator.js?v=20261111" defer></script>\n</body>', 1)
+        html = html.replace("</body>", '<script src="../js/sr-estimator.js?v=20261112" defer></script>\n</body>', 1)
 
-    print(f"{args.lang}: estimator inserted ({len(block):,} chars)")
+    print(f"{args.lang}: {'full' if args.full else 'controls'} installed "
+          f"({len(markup):,} chars, removed {removed} old block)")
     if args.dry_run:
         print("dry run - nothing written")
         return 0
     page.write_text(html, encoding="utf-8", newline="")
-    print(f"wrote {page}")
+    print("wrote", page)
     return 0
 
 

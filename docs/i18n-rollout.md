@@ -7,16 +7,27 @@ The 22-language wave wrote 196 question/answer pairs through
 `scripts/portal_faq_locales.json` + `scripts/apply_faq_locales.py`.
 
 What is left is not copy, it is a component: the interactive **estimator** is
-installed on `de` and `ckb` only. `de` is fully translated (55/55 labels, no
-booking button, no dead control). `ckb` still carries the **Arabic** labels and
-a `transferEstimatorToVipBooking` button that opens nothing, because that page
-has no `executiveBookingModal`.
+installed on `de` and `ckb` only, and only one of them works.
 
-## `ckb` first, then the other 24
+  ckb  complete inline implementation (state, recalculation, total, booking
+       modal) - works, but every string is Arabic, including the WhatsApp
+       message body
+  de   options only, and the module it loads (`js/sr-estimator.js`) uses
+       `_estimatorState`, which no page except the Arabic master defines;
+       no `estimatorTotalAmount` either. The first click throws ReferenceError.
 
-Either give `ckb` the 55 Sorani labels and drop the booking button, or remove
-the Arabic block from the Kurdish page until the labels exist - an Arabic
-calculator on a Kurdish page is worse than no calculator.
+So `de` was never functional. Shipping it a total and a call to action would
+hide that, which is why the v19.1 correction reverted the page.
+
+## What the module needs before any wave
+
+1. declare `_estimatorState` inside `js/sr-estimator.js`, initialise it from
+   `localStorage`, mark the active options and calculate once on load;
+2. read the WhatsApp message segments from `data-wa-*` on the widget root, with
+   an English fallback - Arabic literals must leave the shared file;
+3. install the whole grid (`--full`), not the option block: the total, the
+   timeline and the CTA live in `docs/_extract/estimator-grid.html`;
+4. smoke-test in a browser on one page before touching the other 25.
 
 ## The estimator, one language at a time
 
@@ -29,13 +40,11 @@ python scripts/check_content_depth_parity.py              # estimator > 0
 python scripts/audit_language_purity.py
 ```
 
-**Blocker to close before scaling to 25 languages:** `js/sr-estimator.js`
-composes the WhatsApp enquiry in Arabic inside the code
-(`bookEstimatorViaWhatsApp`), and falls back to `"5 - 7 أيام عمل"` for the
-duration. Today the damage is confined to `ckb` and the Arabic master, but the
-first new language ported will send an Arabic enquiry in its own name.
-The Arabic-containment gate cannot see it: it reads page text, not JS strings,
-and it exempts languages written in Arabic script.
+**Blocker to close before scaling to 25 languages:** the shared module has no
+state of its own and composes the WhatsApp enquiry in Arabic inside the code,
+falling back to `"5 - 7 أيام عمل"` for the duration. The containment gate cannot
+see it: it reads page text, not JS strings, and it exempts Arabic-script
+languages.
 Move the eight message segments into `portal_estimator_locales.json` under
 `whatsapp`, pass them as `data-*` on the widget root, and fall back to English.
 
