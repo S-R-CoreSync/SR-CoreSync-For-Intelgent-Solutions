@@ -6556,7 +6556,7 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                     tags: ["هوية فاخرة", "شعار", "تغليف مخصص"],
                     year: "2024",
                     client: "Oasis Studio",
-                    type: "ناسنامەی بینراوی تەواو",
+                    type: "هوية بصرية متكاملة",
                     loc: "أمستردام، هولندا",
                     preview: null,
                     desc: "بناء وتطوير هوية بصرية عصرية راقية تعكس الهدوء والفخامة والتوازن الطبيعي، مع أدلة متكاملة للعلامة التجارية وتطبيقات التغليف الرقمية والورقية الموجهة للسوق الأوروبي الممتاز.",
@@ -6863,7 +6863,7 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                     tags: ["شعار وهوية", "دليل العلامة Brand Book", "قرطاسية فاخرة"],
                     year: "2026",
                     client: "Aurelia Atelier Ltd",
-                    type: "ناسنامەی بینراوی تەواو",
+                    type: "هوية بصرية متكاملة",
                     loc: "لندن، المملكة المتحدة",
                     preview: null,
                     desc: "بناء هوية بصرية راقية بالأسود والذهبي تشمل الشعار والنظام الطباعي ولوحة الألوان، مع دليل علامة تجارية شامل وتصاميم بطاقات العمل والقرطاسية والتغليف بالطباعة النافرة والرقائق الذهبية.",
@@ -7357,11 +7357,11 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
         // حاسبة الميزانية التفاعلية - منطق JS الكامل
         // -----------------------------------------------------===
         const _estimatorState = {
-            type: { val: 'identity', price: 590, days: '5 - 7 أيام عمل', title: 'ناسنامەی بینراوی تەواو' },
-            pages: { val: 'basic',    price: 0,   title: 'بنەڕەتی (١ - ٥ لاپەڕە)' },
-            lang:  { val: 'single',   price: 0,   title: 'یەک زمانی سەرەکی' },
-            pay:   { val: 'none',     price: 0,   title: 'بێ پارەدانی ئەلیکترۆنی' },
-            speed: { val: 'standard', price: 0,   title: 'گەیاندنی ئاسایی' }
+            type: { val: 'identity', price: 590, days: '5 - 7 أيام عمل', title: 'هوية بصرية متكاملة' },
+            pages: { val: 'basic',    price: 0,   title: 'أساسي (1 - 5 صفحات)' },
+            lang:  { val: 'single',   price: 0,   title: 'لغة واحدة أساسية' },
+            pay:   { val: 'none',     price: 0,   title: 'بدون دفع إلكتروني' },
+            speed: { val: 'standard', price: 0,   title: 'تسليم قياسي' }
         };
 
         function updateEstimatorOption(btn) {
@@ -7439,7 +7439,69 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                 `💰 *التقدير الإجمالي: €${total.toLocaleString('en')}*`,
                 `⏱ *المدة المتوقعة: ${_estimatorState.type.days}*`
             ].join('%0A');
-            window.open(`https://wa.me/31618111116"${key}"]`);
+            window.open(`https://wa.me/31618111116?text=${encodeURIComponent(lines.replace(/%0A/g, '\n'))}`, '_blank');
+        }
+
+        function transferEstimatorToVipBooking() {
+            const vipModal = document.getElementById('executiveBookingModal');
+            if (!vipModal) return;
+            // تحديد نوع الاستشارة كـ creative وإظهار حقل الباقة
+            const sessionTypeEl = document.getElementById('bookingSessionType');
+            if (sessionTypeEl) {
+                sessionTypeEl.value = 'creative';
+                if (typeof togglePackageField === 'function') togglePackageField(sessionTypeEl);
+            }
+            // ملء حقل الملاحظات بالتقدير المختار
+            const notesEl = document.getElementById('bookingNotes') || document.getElementById('executiveNotes');
+            if (notesEl) {
+                const total = Object.values(_estimatorState).reduce((sum, g) => sum + (g.price || 0), 0);
+                notesEl.value = `تقدير الحاسبة التفاعلية:\n- النوع: ${_estimatorState.type.title}\n- النطاق: ${_estimatorState.pages.title}\n- اللغات: ${_estimatorState.lang.title}\n- الدفع: ${_estimatorState.pay.title}\n- التسليم: ${_estimatorState.speed.title}\n- إجمالي التقدير: €${total.toLocaleString('en')}`;
+            }
+            vipModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // تبديل وضع العرض الأوسع (Wide View)
+        function toggleWideView() {
+            const modal = document.getElementById('projectModal');
+            const expandText = document.getElementById('projectModalExpandText');
+            if (!modal) return;
+
+            const isWide = modal.classList.toggle('is-wide');
+            if (expandText) {
+                expandText.textContent = isWide ? 'إظهار التفاصيل' : 'عرض أوسع';
+            }
+        }
+
+        // داخستن النافذة بزر الهروب Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+                if (typeof closeDirectCallModal === 'function') closeDirectCallModal();
+            }
+        });
+
+        // تهيئة ميزات الواجهة المتقدمة عند التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. شريط تقدم القراءة (Scroll Progress Bar)
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                const pb = document.getElementById('scroll-progress');
+                if(pb) pb.style.width = scrolled + '%';
+            });
+
+            // 2. استرجاع حالة حاسبة الميزانية من الجلسة السابقة (Persistent Estimator)
+            try {
+                const savedState = localStorage.getItem('sr_estimator_state');
+                if (savedState) {
+                    const parsed = JSON.parse(savedState);
+                    Object.keys(parsed).forEach(key => {
+                        if (_estimatorState[key]) {
+                            _estimatorState[key] = parsed[key];
+                            // تحديث الزر المرئي
+                            const groupWrapper = document.querySelector(`.estimator-options[data-group-parent="${key}"]`);
                             if (groupWrapper) {
                                 const btn = groupWrapper.querySelector(`[data-val="${parsed[key].val}"]`);
                                 if (btn) {
@@ -8613,7 +8675,116 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                 status: 'بث سينمائي مباشر • هندسة النظم والذكاء الاصطناعي',
                 bio: 'المطور المسؤول عن بناء وتحديث المنظومات والحلول البرمجية المتكاملة لكبرى الشركات والمؤسسات. نعمل على تقديم بنية رقمية سحابية متقدمة تشمل تطبيقات الهواتف الذكية، المنصات الرقمية السريعة، وأنظمة الذكاء الاصطناعي المخصصة لمساعدة عملائنا على تحقيق أقصى كفاءة تشغيلية.',
                 signature: './assets/signature-neon.svg?v=dana_v2',
-                contactUrl: 'https://wa.me/31618111116"M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+                contactUrl: 'https://wa.me/31618111116?text=' + encodeURIComponent('مرحباً م. سليم عزيزة، أود مناقشة مشروع برمجيات وحلول سحابية/ذكاء اصطناعي لشركتنا.')
+            },
+            raed: {
+                name: 'أ. رائد كعكة',
+                role: 'المدير المالي وشريك مؤسس // CFO',
+                status: 'عرض بصري حي عالي الدقة • الأنظمة المحاسبية والـ ERP والضرائب',
+                bio: 'متخصص في تصميم وتطوير الأنظمة المحاسبية والمالية للشركات والمؤسسات (ERP)، وإدارة قواعد البيانات ودمج الحلول البرمجية مع الأنظمة والتشريعات المالية لمساعدة الشركات على إدارة حساباتها بدقة وسهولة متناهية وفق أعلى المعايير في هولندا وأوروبا والشرق الأوسط.',
+                signature: './assets/signature-neon-raed.svg?v=dana_v2',
+                contactUrl: 'https://wa.me/31618111116?text=' + encodeURIComponent('مرحباً أ. رائد كعكة، أود استشارة حول الأنظمة المحاسبية ERP والتشريعات المالية.')
+            }
+        };
+
+        let currentCinemaFounder = 'salim';
+
+        function openFounderCinema(founder = 'salim') {
+            const modal = document.getElementById('founderCinemaModal');
+            if (!modal) return;
+            currentCinemaFounder = founder;
+            applyFounderCinemaData(founder);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            LuxuryAudio.play('open');
+
+            if (founder === 'salim') {
+                const vid = document.getElementById('cinemaVideoSalim');
+                if (vid) {
+                    vid.currentTime = 0;
+                    vid.play().catch(() => {});
+                }
+            }
+        }
+
+        function closeFounderCinema() {
+            const modal = document.getElementById('founderCinemaModal');
+            if (modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                LuxuryAudio.play('close');
+                const vid = document.getElementById('cinemaVideoSalim');
+                if (vid) {
+                    vid.pause();
+                }
+            }
+        }
+
+        function switchFounderCinema(founder) {
+            if (founder === currentCinemaFounder) return;
+            currentCinemaFounder = founder;
+            LuxuryAudio.play('switch');
+            applyFounderCinemaData(founder);
+        }
+
+        function applyFounderCinemaData(founder) {
+            const data = FOUNDER_CINEMA_DATA[founder];
+            if (!data) return;
+
+            const nameEl = document.getElementById('cinemaFounderName');
+            const roleEl = document.getElementById('cinemaFounderRole');
+            const statusEl = document.getElementById('cinemaLiveStatus');
+            const bioEl = document.getElementById('cinemaBioText');
+            const sigEl = document.getElementById('cinemaSignature');
+            const contactBtn = document.getElementById('cinemaContactBtn');
+
+            if (nameEl) nameEl.textContent = data.name;
+            if (roleEl) roleEl.textContent = data.role;
+            if (statusEl) statusEl.textContent = data.status;
+            if (bioEl) bioEl.textContent = data.bio;
+            if (sigEl) {
+                sigEl.src = data.signature;
+                sigEl.alt = data.name;
+            }
+            if (contactBtn) contactBtn.href = data.contactUrl;
+
+            const btnSalim = document.getElementById('cinemaSwitchSalim');
+            const btnRaed = document.getElementById('cinemaSwitchRaed');
+            const paneSalim = document.getElementById('cinemaPaneSalim');
+            const paneRaed = document.getElementById('cinemaPaneRaed');
+            const vid = document.getElementById('cinemaVideoSalim');
+
+            if (vid && !vid.playsInline) {
+                vid.playsInline = true;
+            }
+
+            if (founder === 'salim') {
+                if (btnSalim) btnSalim.classList.add('active');
+                if (btnRaed) btnRaed.classList.remove('active');
+                if (paneSalim) paneSalim.classList.remove('sr-cinema-pane-hidden');
+                if (paneRaed) paneRaed.classList.add('sr-cinema-pane-hidden');
+                if (vid) {
+                    vid.play().catch(() => {});
+                }
+            } else {
+                if (btnSalim) btnSalim.classList.remove('active');
+                if (btnRaed) btnRaed.classList.add('active');
+                if (paneSalim) paneSalim.classList.add('sr-cinema-pane-hidden');
+                if (paneRaed) paneRaed.classList.remove('sr-cinema-pane-hidden');
+                if (vid) {
+                    vid.pause();
+                }
+            }
+        }
+
+        function toggleCinemaVideoPlay() {
+            const vid = document.getElementById('cinemaVideoSalim');
+            const icon = document.getElementById('cinemaPlayIcon');
+            if (!vid) return;
+            LuxuryAudio.play('switch');
+            if (vid.paused) {
+                vid.play().catch(() => {});
+                if (icon) icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
             } else {
                 vid.pause();
                 if (icon) icon.innerHTML = '<polygon points="5,3 19,12 5,21"/>';
@@ -9340,7 +9511,213 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                         `━━━━━━━━━━━━━━━━━━━━\n` +
                         `_أود مناقشة خطة التدقيق المالي والأتمتة السحابية لشركتنا مع الاستشاري التنفيذي._`;
             if (typeof LuxuryAudio !== 'undefined') LuxuryAudio.play('open');
-            window.open(`https://wa.me/31618111116"sandbox-card-header">
+            window.open(`https://wa.me/31618111116?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        function sendRoiDirectEmail() {
+            const subject = encodeURIComponent('طلب تدقيق مالي ودراسة جدوى ROI - S&R CoreSync For Intelligent Solutions');
+            const body = encodeURIComponent(
+                `تحية طيبة فريق S&R CoreSync For Intelligent Solutions،\n\n` +
+                `قمت بحساب مؤشرات التوفير عبر حاسبة الـ ROI على موقعكم وكانت النتائج كالتالي:\n` +
+                `- التكلفة التشغيلية الشهرية: €${calculatedRoiData.costMonthly.toLocaleString()}\n` +
+                `- حجم الفريق: ${calculatedRoiData.teamSize} موظف\n` +
+                `- التوفير السنوي المتوقع: €${calculatedRoiData.annualSavings.toLocaleString()}\n` +
+                `- ساعات العمل المستردة شهرياً: ${calculatedRoiData.hoursSaved} ساعة\n` +
+                `- مضاعف العائد الاستثماري: ${calculatedRoiData.multiplier}x\n\n` +
+                `نرجو الپەیوەندیمان پێوەبکە لترتيب جلسة استشارية وتدقيق مالي وسحابي مفصل لشركتنا.\n\n` +
+                `مع خالص التقدير،`
+            );
+            if (typeof LuxuryAudio !== 'undefined') LuxuryAudio.play('open');
+            window.location.href = `mailto:info@sr-coresync.com?subject=${subject}&body=${body}`;
+        }
+
+        function applyRoiToConsultation() {
+            closeRoiCalculatorModal();
+            openExecutiveBookingModal('both');
+            const notesEl = document.getElementById('bookingNotes');
+            if (notesEl) {
+                notesEl.value = `نتائج حاسبة التوفير ROI التقديرية: تكلفة شهرية €${calculatedRoiData.costMonthly.toLocaleString()}، فريق عمل ${calculatedRoiData.teamSize} موظف، توفير سنوي متوقع €${calculatedRoiData.annualSavings.toLocaleString()}، توفير ${calculatedRoiData.hoursSaved} ساعة شهرياً، عائد ${calculatedRoiData.multiplier}x. نود مناقشة تفاصيل خطة التوفير والأتمتة لشركتنا.`;
+            }
+        }
+
+        // ==========================================
+        // 3. نافذة العرض الحي السريع للنظام (Live Demo Quick Showcase Modal)
+        // ==========================================
+        function openRoiPdfModal() {
+            const modal = document.getElementById('roiPdfModal');
+            if (!modal) return;
+
+            let teamSize = 15;
+            let manualHours = 8;
+            let hourlyRateEur = 28;
+            let solutionText = 'تكامل ERP كامل + أتمتة محاسبية';
+            let efficiencyRate = 0.75;
+            let paybackMonths = '1.2 شهر';
+            let annualSavings = 131040;
+            let hoursSaved = 4680;
+
+            const teamSlider = document.getElementById('roiCompanySize');
+            const hoursSlider = document.getElementById('roiManualHours');
+            const salarySlider = document.getElementById('roiAvgSalary');
+            const solutionSelect = document.getElementById('roiSolutionType');
+
+            if (teamSlider && hoursSlider && salarySlider && solutionSelect) {
+                teamSize = parseInt(teamSlider.value, 10) || 15;
+                manualHours = parseInt(hoursSlider.value, 10) || 8;
+                hourlyRateEur = parseFloat(salarySlider.value) || 28;
+                efficiencyRate = parseFloat(solutionSelect.value) || 0.75;
+                solutionText = solutionSelect.options[solutionSelect.selectedIndex].text;
+                const totalHours = teamSize * manualHours * 52;
+                hoursSaved = Math.round(totalHours * efficiencyRate);
+                annualSavings = Math.round(hoursSaved * hourlyRateEur);
+                const paybackElem = document.getElementById('roiPaybackMonths');
+                if (paybackElem) paybackMonths = paybackElem.textContent.trim();
+            } else if (typeof calculatedRoiData !== 'undefined' && calculatedRoiData) {
+                teamSize = calculatedRoiData.teamSize || 12;
+                annualSavings = calculatedRoiData.annualSavings || 19500;
+                hoursSaved = (calculatedRoiData.hoursSaved || 96) * 12;
+                solutionText = 'أتمتة سحابية وحلول ERP مؤسسية متكاملة';
+                paybackMonths = '1.8 شهر';
+            }
+
+            const teamValEl = document.getElementById('roiPdfTeamVal');
+            const hoursValEl = document.getElementById('roiPdfHoursVal');
+            const salaryValEl = document.getElementById('roiPdfSalaryVal');
+            const solutionValEl = document.getElementById('roiPdfSolutionVal');
+            const hoursSavedValEl = document.getElementById('roiPdfHoursSavedVal');
+            const effGainValEl = document.getElementById('roiPdfEffGainVal');
+            const paybackValEl = document.getElementById('roiPdfPaybackVal');
+            const savingsValEl = document.getElementById('roiPdfSavingsVal');
+            const dateEl = document.getElementById('roiPdfDate');
+            const refEl = document.getElementById('roiPdfRef');
+
+            if (teamValEl) teamValEl.textContent = `${teamSize} موظفاً`;
+            if (hoursValEl) hoursValEl.textContent = `${manualHours} ساعات / أسبوع`;
+            if (salaryValEl) salaryValEl.textContent = `€ ${hourlyRateEur} / ساعة`;
+            if (solutionValEl) solutionValEl.textContent = solutionText;
+            if (hoursSavedValEl) hoursSavedValEl.textContent = `${hoursSaved.toLocaleString()} ساعة/سنة`;
+            if (effGainValEl) effGainValEl.textContent = `+${Math.round(efficiencyRate * 100)}%`;
+            if (paybackValEl) paybackValEl.textContent = `${paybackMonths} فقط بعد الإطلاق`;
+            if (savingsValEl) savingsValEl.textContent = `€ ${annualSavings.toLocaleString()}`;
+
+            if (dateEl) {
+                const now = new Date();
+                dateEl.textContent = now.toLocaleDateString('ar-NL', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+            if (refEl) {
+                refEl.textContent = 'REF-CS-ROI-2026-' + Math.floor(1000 + Math.random() * 9000);
+            }
+
+            if (typeof closeRoiCalculatorModal === 'function') {
+                closeRoiCalculatorModal();
+            }
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            if (typeof LuxuryAudio !== 'undefined') LuxuryAudio.play('open');
+        }
+
+        function closeRoiPdfModal() {
+            const modal = document.getElementById('roiPdfModal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                if (typeof LuxuryAudio !== 'undefined') LuxuryAudio.play('close');
+            }
+        }
+
+        window.printRoiReport = function() {
+            window.print();
+        };
+
+        function shareRoiPdfWhatsApp() {
+            const clientNameInput = document.getElementById('roiPdfClientName');
+            const clientName = clientNameInput ? clientNameInput.value.trim() : 'المؤسسة المستهدفة';
+            const savings = document.getElementById('roiPdfSavingsVal') ? document.getElementById('roiPdfSavingsVal').textContent : '';
+            const hours = document.getElementById('roiPdfHoursSavedVal') ? document.getElementById('roiPdfHoursSavedVal').textContent : '';
+            const team = document.getElementById('roiPdfTeamVal') ? document.getElementById('roiPdfTeamVal').textContent : '';
+            const payback = document.getElementById('roiPdfPaybackVal') ? document.getElementById('roiPdfPaybackVal').textContent : '';
+
+            const msg = `*تقرير دراسة الجدوى الاستثمارية والوفر السنوي - S&R CoreSync For Intelligent Solutions*\n` +
+                        `━━━━━━━━━━━━━━━━━━━━\n` +
+                        `🏢 *الشركة:* ${clientName}\n` +
+                        `👥 *حجم الفريق:* ${team}\n` +
+                        `💰 *صافي الوفر المالي السنوي المتوقع:* ${savings}\n` +
+                        `⏱️ *الساعات المستردة سنوياً:* ${hours}\n` +
+                        `📈 *فترة استرداد رأس المال:* ${payback}\n` +
+                        `━━━━━━━━━━━━━━━━━━━━\n` +
+                        `_تم استخراج التقرير عبر Smart ROI Engine المعتمد لشركة S&R CoreSync For Intelligent Solutions_`;
+
+            window.open(`https://wa.me/31618111116?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        const DEMO_TAB_CONTENTS = {
+            erp: {
+                title: 'منظومة إدارة الموارد المحاسبية والمالية الذكية (S&R Cloud ERP)',
+                desc: 'ربط مالي ومحاسبي شامل متوافق بالكامل مع معايير IFRS والأنظمة الضريبية الأوروبية والخليجية.',
+                features: [
+                    '✓ فوترة ذكية مؤتمتة متوافقة مع الفاتورة الإلكترونية الأوروبية والخليجية (ZATCA / EU Peppol).',
+                    '✓ كشف تدفقات نقدية لحظي (Real-Time Cash Flow) وتقارير أرباح وخسائر تنبؤية.',
+                    '✓ إدارة المخزون، الموردين، والمبيعات متعددة العملات مع ترحيل قيود أوتوماتيكي بنسبة خطأ 0%.'
+                ],
+                metric: 'دقة ترحيل 99.9% • توفير 35+ ساعة عمل إدارية أسبوعياً'
+            },
+            cloud: {
+                title: 'هندسة البنية السحابية وأتمتة الذكاء الاصطناعي (Cloud & AI Core)',
+                desc: 'منصات سحابية مرنة وتطبيقات أعمال متطورة تعمل على خوادم فائقة الأمان والسرعة.',
+                features: [
+                    '✓ وكلاء ذكاء اصطناعي (AI Autonomous Agents) لمعالجة وتحليل الفواتير والمستندات أوتوماتيكياً.',
+                    '✓ بنية تحتية سحابية متقدمة مع توافرية 99.9% وزمن استجابة فائق السرعة أقل من 80ms.',
+                    '✓ تطبيقات ويب وهواتف ذكية فائقة الأداء بواجهات مستخدم عصرية وسهلة الاستخدام.'
+                ],
+                metric: 'زمن استجابة < 80ms • أمان مشفر متعدد الطبقات SSL/TLS'
+            },
+            gov: {
+                title: 'الحوكمة الرقمية، الأمان العالي، والامتثال القانوني (Security & Compliance)',
+                desc: 'حماية متطورة للبيانات المالية وحوكمة دقيقة للصلاحيات والتدقيق المحاسبي.',
+                features: [
+                    '✓ نظام إدارة صلاحيات دقيق (Role-Based Access Control) مع سجل تدقيق غير قابل للتلاعب (Audit Logs).',
+                    '✓ کۆپیکردن احتياطي آلي مشفر على خوادم متعددة المناطق الجغرافية لضمان استمرارية کارەکان.',
+                    '✓ تقارير مالية وتدقيق متكاملة وجاهزة للمدققين والمحاسبين القانونيين بضغطة زر.'
+                ],
+                metric: 'متوافق مع قوانين حماية البيانات العامة GDPR • تدقيق محاسبي معتمد'
+            }
+        };
+
+        function openLiveDemoQuickModal() {
+            const modal = document.getElementById('liveDemoQuickModal');
+            if (!modal) return;
+            switchDemoModalTab('erp');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            if (typeof LuxuryAudio !== 'undefined') LuxuryAudio.play('open');
+        }
+
+        function closeLiveDemoQuickModal() {
+            const modal = document.getElementById('liveDemoQuickModal');
+            if (modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                if (typeof LuxuryAudio !== 'undefined') LuxuryAudio.play('close');
+            }
+        }
+
+        function switchDemoModalTab(tabKey) {
+            const data = DEMO_TAB_CONTENTS[tabKey];
+            if (!data) return;
+
+            const btnErp = document.getElementById('demoTabBtnErp');
+            const btnCloud = document.getElementById('demoTabBtnCloud');
+            const btnGov = document.getElementById('demoTabBtnGov');
+            const contentBox = document.getElementById('demoTabContent');
+
+            if (btnErp) btnErp.classList.toggle('active', tabKey === 'erp');
+            if (btnCloud) btnCloud.classList.toggle('active', tabKey === 'cloud');
+            if (btnGov) btnGov.classList.toggle('active', tabKey === 'gov');
+
+            if (contentBox) {
+                contentBox.innerHTML = `
+                    <div class="sandbox-card-header">
                         <h4 class="sandbox-card-title">${data.title}</h4>
                         <span class="sandbox-card-pill">جاهز للاختبار</span>
                     </div>
