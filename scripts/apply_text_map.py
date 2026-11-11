@@ -26,6 +26,7 @@ def main():
     ap.add_argument("--lang", required=True)
     ap.add_argument("--map", required=True)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--all", action="store_true", help="replace every occurrence, not just the first")
     args = ap.parse_args()
 
     pairs = json.loads(pathlib.Path(args.map).read_text(encoding="utf-8"))
@@ -35,7 +36,7 @@ def main():
     done, missed = 0, []
     for source, target in pairs.items():
         rx = pattern_for(source)
-        text, n = rx.subn(html.escape(target, quote=False), text, count=1)
+        text, n = rx.subn(html.escape(target, quote=False), text, count=0 if args.all else 1)
         if n:
             done += 1
         else:
