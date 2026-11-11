@@ -571,5 +571,47 @@
     "a": "Töötame paralleelse simulatsioonimigratsiooni meetodil. API-konnektorid ja kannete sünkroonimine luuakse isoleeritud testkeskkonnas ning kõik kontod ja voogud kontrollitakse. Tootmisse minnakse alles pärast 100% kontrolli – ilma ühegi sekundi seisakuta (zero downtime)."
    }
   }
+ },
+ "el": {
+  "heading": "Συχνές ερωτήσεις",
+  "faq": {
+   "06": {
+    "q": "Κατέχουμε πλήρως τον πηγαίο κώδικα και τις βάσεις δεδομένων (IP Ownership);",
+    "a": "<strong>Ναι, κατά 100%.</strong> Τα συμβόλαιά μας μεταβιβάζουν όλα τα δικαιώματα στον πηγαίο κώδικα, στα σχέδια και στις βάσεις δεδομένων στην εταιρεία σας – χωρίς περιορισμούς, χωρίς δικαιώματα άδειας χρήσης και χωρίς κρυφές συνδρομές. Λαμβάνετε επίσης πλήρη τεκμηρίωση αρχιτεκτονικής και ασφάλειας, ώστε η ομάδα σας να μπορεί να αναπτύσσει το σύστημα αυτόνομα."
+   },
+   "07": {
+    "q": "Πώς χειρίζονται τα τιμολόγια και οι φόροι για εταιρείες στις Κάτω Χώρες και την ΕΕ;",
+    "a": "Εκδίδουμε επίσημα ευρωπαϊκά φορολογικά τιμολόγια, καταχωρισμένα στην ολλανδική φορολογική αρχή (Belastingdienst), με ΑΦΜ (btw-nummer) και αριθμό KvK. Οι εταιρείες με έδρα στις Κάτω Χώρες μπορούν να ζητήσουν επιστροφή 21% ΦΠΑ· για εταιρείες της ΕΕ εφαρμόζεται αντίστροφη χρέωση (0% ΦΠΑ). Τα ποσά εκπίπτουν πλήρως ως λειτουργικά έξοδα."
+   },
+   "08": {
+    "q": "Πώς διασφαλίζετε την εμπιστευτικότητα των δεδομένων μας και την ασφάλεια των συστημάτων σύμφωνα με τα ευρωπαϊκά πρότυπα (GDPR);",
+    "a": "Εργαζόμαστε σύμφωνα με τον GDPR και υπογράφουμε πριν την έναρξη αμοιβαία, νομικά δεσμευτική συμφωνία εμπιστευτικότητας (NDA). Εφαρμόζουμε κρυπτογράφηση από άκρο σε άκρο (TLS 1.3 / AES-256), φιλοξενία σε κυρίαρχους ευρωπαϊκούς διακομιστές με 99,9% διαθεσιμότητα και καθημερινά κρυπτογραφημένα αντίγραφα ασφαλείας."
+   },
+   "09": {
+    "q": "Χρησιμοποιούμε ήδη υπάρχοντα χρηματοοικονομικά συστήματα – πώς διασφαλίζετε την ενσωμάτωση και τη μετάβαση χωρίς διακοπή της λειτουργίας;",
+    "a": "Εργαζόμαστε με μέθοδο παράλληλης προσομοιωτικής μετανάστευσης. Τα API connectors και ο συγχρονισμός εγγραφών αναπτύσσονται σε απομονωμένο περιβάλλον δοκιμών και όλοι οι λογαριασμοί και οι ροές επαληθεύονται. Η μετάβαση σε παραγωγή γίνεται μόνο μετά από 100% επαλήθευση – χωρίς ούτε ένα δευτερόλεπτο διακοπής (zero downtime)."
+   }
+  }
+ },
+ "mt": {
+  "heading": "Mistoqsijiet frekwenti",
+  "faq": {
+   "06": {
+    "q": "Aħna sidien sħiħ tal-kodiċi sors u l-bażijiet tad-dejta (IP Ownership)?",
+    "a": "<strong>Iva, 100%.</strong> Il-kuntratti tagħna jittrasferixxu d-drittijiet kollha fuq il-kodiċi sors, id-disinji u l-bażijiet tad-dejta lill-kumpanija tagħkom – mingħajr restrizzjonijiet, mingħajr miżati tal-liċenzja u mingħajr abbonamenti moħbija. Tirċievu wkoll dokumentazzjoni sħiħa tal-arkitettura u tas-sigurtà, sabiex it-tim tagħkom ikun jista' jiżviluppa s-sistema b'mod awtonomu."
+   },
+   "07": {
+    "q": "Kif jiġu trattati l-fatturi u t-taxxi għall-kumpaniji fl-Olanda u fl-UE?",
+    "a": "Noħorġu fatturi fiskali Ewropej uffiċjali, reġistrati mal-awtorità tat-taxxa Olandiża (Belastingdienst), bin-numru tal-VAT (btw-nummer) u n-numru KvK. Kumpaniji residenti fl-Olanda jistgħu jitolbu lura 21% VAT; għall-kumpaniji tal-UE tapplika l-ħlas invers (0% VAT). L-ammonti huma kompletament deduċibbli bħala spejjeż operattivi."
+   },
+   "08": {
+    "q": "Kif tiżguraw il-kunfidenzjalità tad-dejta tagħna u s-sigurtà tas-sistemi skont l-istandards Ewropej (GDPR)?",
+    "a": "Naħdmu skont il-GDPR u qabel ma nibdew niffirmaw ftehim ta' kunfidenzjalità (NDA) reċiproku u legalment vinkolanti. Napplikaw encryption end-to-end (TLS 1.3 / AES-256), hosting fuq servers Ewropej sovrani b'99.9% disponibbiltà u backups encrypted ta' kuljum."
+   },
+   "09": {
+    "q": "Diġà nużaw sistemi finanzjarji eżistenti – kif tiżguraw l-integrazzjoni u l-migrazzjoni mingħajr ma titwaqqaf l-operazzjoni?",
+    "a": "Naħdmu bil-metodu ta' migrazzjoni b'simulazzjoni parallela. Il-konnetturi API u s-sinkronizzazzjoni tad-dħul jinbnew f'ambjent tat-test iżolat u l-kontijiet u l-flussi kollha jiġu verifikati. Il-passaġġ għall-produzzjoni jsir biss wara verifika ta' 100% – mingħajr sekonda waħda ta' waqfien (zero downtime)."
+   }
+  }
  }
 }
