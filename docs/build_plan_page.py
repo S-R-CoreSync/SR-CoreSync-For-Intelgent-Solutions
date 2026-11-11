@@ -60,7 +60,7 @@ doc = f"""<!DOCTYPE html>
 <div class="wrap">
 <div class="kicker">S&amp;R CORESYNC · تحديث الخطة والهيكلية</div>
 <h1>الإصدار 18 — ما تحقّق فعلًا اليوم</h1>
-<p class="meta">مبني من <code>docs/content_depth.json</code> المقيس على الشجرة الحالية · الأربعاء، 11 نوفمبر 2026 · 04:56 مساءً</p>
+<p class="meta">مبني من <code>docs/content_depth.json</code> المقيس على الشجرة الحالية · الأربعاء، 11 نوفمبر 2026 · 05:54 مساءً</p>
 
 <h2>1. الخلاصة</h2>
 <div class="kpis">
@@ -75,7 +75,7 @@ doc = f"""<!DOCTYPE html>
  <thead><tr><th>اللغة</th><th>بطاقات الخطط / {MASTER['plans']}</th><th>الأسئلة / {MASTER['faq']}</th><th>أسئلة إنجليزية</th><th>المُقدِّر</th></tr></thead>
  <tbody>{"".join(rows)}</tbody>
 </table>
-<div class="callout good"><b>أُنجز اليوم:</b> الألمانية والهولندية صارتا {MASTER['plans']} بطاقة و{MASTER['faq']} سؤالًا، بصفر أسئلة إنجليزية — عبر
+<div class="callout good"><b>أُنجز اليوم:</b> تسع لغات صارت {MASTER['plans']} بطاقة و{MASTER['faq']} سؤالًا؛ أربع منها بصفر أسئلة إنجليزية — عبر
 <code>scripts/apply_faq_locales.py</code> و<code>scripts/apply_plan_card.py</code> وملفّي بيانات في <code>scripts/portal_*_locales.json</code>.</div>
 
 <h2>3. تصحيح تشخيص الإصدار 17</h2>

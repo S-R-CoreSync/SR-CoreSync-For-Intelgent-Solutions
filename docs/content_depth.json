@@ -29,8 +29,8 @@
    "services": 6
   },
   "da": {
-   "plans": 11,
-   "faq": 11,
+   "plans": 12,
+   "faq": 15,
    "faq_english": 11,
    "estimator": 0,
    "services": 6
@@ -106,8 +106,8 @@
    "services": 6
   },
   "it": {
-   "plans": 11,
-   "faq": 11,
+   "plans": 12,
+   "faq": 15,
    "faq_english": 11,
    "estimator": 0,
    "services": 6
@@ -155,15 +155,15 @@
    "services": 6
   },
   "pl": {
-   "plans": 11,
-   "faq": 11,
+   "plans": 12,
+   "faq": 15,
    "faq_english": 11,
    "estimator": 0,
    "services": 6
   },
   "pt": {
-   "plans": 11,
-   "faq": 11,
+   "plans": 12,
+   "faq": 15,
    "faq_english": 11,
    "estimator": 0,
    "services": 6
@@ -190,8 +190,8 @@
    "services": 6
   },
   "sv": {
-   "plans": 11,
-   "faq": 11,
+   "plans": 12,
+   "faq": 15,
    "faq_english": 11,
    "estimator": 0,
    "services": 6

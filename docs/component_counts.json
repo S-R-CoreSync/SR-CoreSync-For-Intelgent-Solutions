@@ -12,7 +12,7 @@
  },
  "pages": {
   "bg": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -34,7 +34,7 @@
    "trust_marks": 0
   },
   "cs": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -45,18 +45,18 @@
    "trust_marks": 0
   },
   "da": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
-   "plan_cards": 11,
+   "plan_cards": 12,
    "estimator_options": 0,
-   "faq_items": 11,
+   "faq_items": 15,
    "process_steps": 0,
    "finder_tabs": 0,
    "trust_marks": 0
   },
   "de": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 12,
@@ -67,7 +67,7 @@
    "trust_marks": 0
   },
   "el": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -78,7 +78,7 @@
    "trust_marks": 0
   },
   "en": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -89,7 +89,7 @@
    "trust_marks": 0
   },
   "es": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 12,
@@ -100,7 +100,7 @@
    "trust_marks": 0
   },
   "et": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -111,7 +111,7 @@
    "trust_marks": 0
   },
   "fi": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -122,7 +122,7 @@
    "trust_marks": 0
   },
   "fr": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 12,
@@ -133,7 +133,7 @@
    "trust_marks": 0
   },
   "ga": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -144,7 +144,7 @@
    "trust_marks": 0
   },
   "hr": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -155,7 +155,7 @@
    "trust_marks": 0
   },
   "hu": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -166,18 +166,18 @@
    "trust_marks": 0
   },
   "it": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
-   "plan_cards": 11,
+   "plan_cards": 12,
    "estimator_options": 0,
-   "faq_items": 11,
+   "faq_items": 15,
    "process_steps": 0,
    "finder_tabs": 0,
    "trust_marks": 0
   },
   "ku": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -188,7 +188,7 @@
    "trust_marks": 0
   },
   "lt": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -199,7 +199,7 @@
    "trust_marks": 0
   },
   "lv": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -210,7 +210,7 @@
    "trust_marks": 0
   },
   "mt": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -221,7 +221,7 @@
    "trust_marks": 0
   },
   "nl": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 12,
@@ -232,7 +232,7 @@
    "trust_marks": 0
   },
   "no": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -243,29 +243,29 @@
    "trust_marks": 0
   },
   "pl": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
-   "plan_cards": 11,
+   "plan_cards": 12,
    "estimator_options": 0,
-   "faq_items": 11,
+   "faq_items": 15,
    "process_steps": 0,
    "finder_tabs": 0,
    "trust_marks": 0
   },
   "pt": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
-   "plan_cards": 11,
+   "plan_cards": 12,
    "estimator_options": 0,
-   "faq_items": 11,
+   "faq_items": 15,
    "process_steps": 0,
    "finder_tabs": 0,
    "trust_marks": 0
   },
   "ro": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -276,7 +276,7 @@
    "trust_marks": 0
   },
   "sk": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -287,7 +287,7 @@
    "trust_marks": 0
   },
   "sl": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,
@@ -298,18 +298,18 @@
    "trust_marks": 0
   },
   "sv": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
-   "plan_cards": 11,
+   "plan_cards": 12,
    "estimator_options": 0,
-   "faq_items": 11,
+   "faq_items": 15,
    "process_steps": 0,
    "finder_tabs": 0,
    "trust_marks": 0
   },
   "tr": {
-   "service_cards": 0,
+   "service_cards": 6,
    "pricing_rows": 16,
    "pricing_cells": 48,
    "plan_cards": 11,

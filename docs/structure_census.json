@@ -234,7 +234,7 @@
  },
  "pages": {
   "bg": {
-   "bytes": 615880,
+   "bytes": 621780,
    "sections": {
     "hero": {
      "tag": "section",
@@ -286,14 +286,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 34005,
+     "bytes": 39733,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 346
     },
     "services-compare": {
@@ -700,7 +700,7 @@
    }
   },
   "cs": {
-   "bytes": 613977,
+   "bytes": 619877,
    "sections": {
     "hero": {
      "tag": "section",
@@ -752,14 +752,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33878,
+     "bytes": 39606,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 320
     },
     "services-compare": {
@@ -933,7 +933,7 @@
    }
   },
   "da": {
-   "bytes": 613798,
+   "bytes": 629645,
    "sections": {
     "hero": {
      "tag": "section",
@@ -985,15 +985,15 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33868,
+     "bytes": 39478,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
-     "text": 296
+     "cards": 69,
+     "text": 297
     },
     "services-compare": {
      "tag": "section",
@@ -1081,15 +1081,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 56281,
-     "li": 64,
+     "bytes": 60345,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1165
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1254
     },
     "guarantees": {
      "tag": "section",
@@ -1105,7 +1105,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300034,
+     "bytes": 305715,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -1113,7 +1113,7 @@
      "img": 46,
      "button": 71,
      "cards": 77,
-     "text": 12094
+     "text": 12296
     },
     "executive-solutions-stage": {
      "tag": "section",
@@ -1166,7 +1166,7 @@
    }
   },
   "de": {
-   "bytes": 625502,
+   "bytes": 631522,
    "sections": {
     "hero": {
      "tag": "section",
@@ -1218,15 +1218,15 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33820,
+     "bytes": 39668,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
-     "text": 283
+     "cards": 69,
+     "text": 285
     },
     "services-compare": {
      "tag": "section",
@@ -1399,7 +1399,7 @@
    }
   },
   "el": {
-   "bytes": 616703,
+   "bytes": 622603,
    "sections": {
     "hero": {
      "tag": "section",
@@ -1451,14 +1451,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 34001,
+     "bytes": 39729,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 329
     },
     "services-compare": {
@@ -1632,7 +1632,7 @@
    }
   },
   "en": {
-   "bytes": 612911,
+   "bytes": 618847,
    "sections": {
     "hero": {
      "tag": "section",
@@ -1684,14 +1684,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33899,
+     "bytes": 39627,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 311
     },
     "services-compare": {
@@ -1865,7 +1865,7 @@
    }
   },
   "es": {
-   "bytes": 625987,
+   "bytes": 632009,
    "sections": {
     "hero": {
      "tag": "section",
@@ -1917,15 +1917,15 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33942,
+     "bytes": 39792,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
-     "text": 364
+     "cards": 69,
+     "text": 367
     },
     "services-compare": {
      "tag": "section",
@@ -2098,7 +2098,7 @@
    }
   },
   "et": {
-   "bytes": 614569,
+   "bytes": 620469,
    "sections": {
     "hero": {
      "tag": "section",
@@ -2150,14 +2150,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33929,
+     "bytes": 39657,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 294
     },
     "services-compare": {
@@ -2331,7 +2331,7 @@
    }
   },
   "fi": {
-   "bytes": 615271,
+   "bytes": 621171,
    "sections": {
     "hero": {
      "tag": "section",
@@ -2383,14 +2383,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33998,
+     "bytes": 39726,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 281
     },
     "services-compare": {
@@ -2564,7 +2564,7 @@
    }
   },
   "fr": {
-   "bytes": 626779,
+   "bytes": 632799,
    "sections": {
     "hero": {
      "tag": "section",
@@ -2616,15 +2616,15 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33923,
+     "bytes": 39771,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
-     "text": 353
+     "cards": 69,
+     "text": 356
     },
     "services-compare": {
      "tag": "section",
@@ -2797,7 +2797,7 @@
    }
   },
   "ga": {
-   "bytes": 616116,
+   "bytes": 622016,
    "sections": {
     "hero": {
      "tag": "section",
@@ -2849,14 +2849,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33968,
+     "bytes": 39696,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 329
     },
     "services-compare": {
@@ -3030,7 +3030,7 @@
    }
   },
   "hr": {
-   "bytes": 614897,
+   "bytes": 620797,
    "sections": {
     "hero": {
      "tag": "section",
@@ -3082,14 +3082,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33939,
+     "bytes": 39667,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 325
     },
     "services-compare": {
@@ -3263,7 +3263,7 @@
    }
   },
   "hu": {
-   "bytes": 614902,
+   "bytes": 620802,
    "sections": {
     "hero": {
      "tag": "section",
@@ -3315,14 +3315,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33953,
+     "bytes": 39681,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 296
     },
     "services-compare": {
@@ -3496,7 +3496,7 @@
    }
   },
   "it": {
-   "bytes": 615892,
+   "bytes": 631915,
    "sections": {
     "hero": {
      "tag": "section",
@@ -3548,14 +3548,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33976,
+     "bytes": 39580,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 342
     },
     "services-compare": {
@@ -3644,15 +3644,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 56846,
-     "li": 64,
+     "bytes": 60946,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1406
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1514
     },
     "guarantees": {
      "tag": "section",
@@ -3668,7 +3668,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300613,
+     "bytes": 306440,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -3676,7 +3676,7 @@
      "img": 46,
      "button": 71,
      "cards": 77,
-     "text": 12292
+     "text": 12538
     },
     "executive-solutions-stage": {
      "tag": "section",
@@ -3729,7 +3729,7 @@
    }
   },
   "ku": {
-   "bytes": 614595,
+   "bytes": 620495,
    "sections": {
     "hero": {
      "tag": "section",
@@ -3781,14 +3781,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33886,
+     "bytes": 39614,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 351
     },
     "services-compare": {
@@ -3962,7 +3962,7 @@
    }
   },
   "lt": {
-   "bytes": 616366,
+   "bytes": 622266,
    "sections": {
     "hero": {
      "tag": "section",
@@ -4014,14 +4014,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33959,
+     "bytes": 39687,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 321
     },
     "services-compare": {
@@ -4195,7 +4195,7 @@
    }
   },
   "lv": {
-   "bytes": 615126,
+   "bytes": 621026,
    "sections": {
     "hero": {
      "tag": "section",
@@ -4247,14 +4247,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33897,
+     "bytes": 39625,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 316
     },
     "services-compare": {
@@ -4428,7 +4428,7 @@
    }
   },
   "mt": {
-   "bytes": 616319,
+   "bytes": 622219,
    "sections": {
     "hero": {
      "tag": "section",
@@ -4480,14 +4480,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33979,
+     "bytes": 39707,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 329
     },
     "services-compare": {
@@ -4661,7 +4661,7 @@
    }
   },
   "nl": {
-   "bytes": 623436,
+   "bytes": 629447,
    "sections": {
     "hero": {
      "tag": "section",
@@ -4713,15 +4713,15 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33784,
+     "bytes": 39631,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
-     "text": 289
+     "cards": 69,
+     "text": 291
     },
     "services-compare": {
      "tag": "section",
@@ -4894,7 +4894,7 @@
    }
   },
   "no": {
-   "bytes": 613823,
+   "bytes": 619723,
    "sections": {
     "hero": {
      "tag": "section",
@@ -4946,14 +4946,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33853,
+     "bytes": 39581,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 296
     },
     "services-compare": {
@@ -5127,7 +5127,7 @@
    }
   },
   "pl": {
-   "bytes": 615903,
+   "bytes": 631841,
    "sections": {
     "hero": {
      "tag": "section",
@@ -5179,14 +5179,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33980,
+     "bytes": 39586,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 320
     },
     "services-compare": {
@@ -5275,15 +5275,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 56781,
-     "li": 64,
+     "bytes": 60883,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1313
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1412
     },
     "guarantees": {
      "tag": "section",
@@ -5299,7 +5299,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300571,
+     "bytes": 306309,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -5307,7 +5307,7 @@
      "img": 46,
      "button": 71,
      "cards": 77,
-     "text": 12189
+     "text": 12407
     },
     "executive-solutions-stage": {
      "tag": "section",
@@ -5360,7 +5360,7 @@
    }
   },
   "pt": {
-   "bytes": 616311,
+   "bytes": 632365,
    "sections": {
     "hero": {
      "tag": "section",
@@ -5412,14 +5412,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 34028,
+     "bytes": 39635,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 356
     },
     "services-compare": {
@@ -5508,15 +5508,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 56924,
-     "li": 64,
+     "bytes": 61016,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1437
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1546
     },
     "guarantees": {
      "tag": "section",
@@ -5532,7 +5532,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300647,
+     "bytes": 306510,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -5540,7 +5540,7 @@
      "img": 46,
      "button": 71,
      "cards": 77,
-     "text": 12330
+     "text": 12589
     },
     "executive-solutions-stage": {
      "tag": "section",
@@ -5593,7 +5593,7 @@
    }
   },
   "ro": {
-   "bytes": 615972,
+   "bytes": 621872,
    "sections": {
     "hero": {
      "tag": "section",
@@ -5645,14 +5645,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 34008,
+     "bytes": 39736,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 343
     },
     "services-compare": {
@@ -5826,7 +5826,7 @@
    }
   },
   "sk": {
-   "bytes": 614596,
+   "bytes": 620496,
    "sections": {
     "hero": {
      "tag": "section",
@@ -5878,14 +5878,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33924,
+     "bytes": 39652,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 323
     },
     "services-compare": {
@@ -6059,7 +6059,7 @@
    }
   },
   "sl": {
-   "bytes": 615027,
+   "bytes": 620927,
    "sections": {
     "hero": {
      "tag": "section",
@@ -6111,14 +6111,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33926,
+     "bytes": 39654,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 328
     },
     "services-compare": {
@@ -6292,7 +6292,7 @@
    }
   },
   "sv": {
-   "bytes": 614111,
+   "bytes": 629941,
    "sections": {
     "hero": {
      "tag": "section",
@@ -6344,14 +6344,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33896,
+     "bytes": 39497,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 297
     },
     "services-compare": {
@@ -6440,15 +6440,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 56360,
-     "li": 64,
+     "bytes": 60425,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1182
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1269
     },
     "guarantees": {
      "tag": "section",
@@ -6464,7 +6464,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300211,
+     "bytes": 305883,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -6472,7 +6472,7 @@
      "img": 46,
      "button": 71,
      "cards": 77,
-     "text": 12102
+     "text": 12301
     },
     "executive-solutions-stage": {
      "tag": "section",
@@ -6525,7 +6525,7 @@
    }
   },
   "tr": {
-   "bytes": 612850,
+   "bytes": 618749,
    "sections": {
     "hero": {
      "tag": "section",
@@ -6577,14 +6577,14 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33825,
+     "bytes": 39552,
      "li": 0,
      "article": 0,
      "h2h3": 4,
      "tr": 0,
      "img": 9,
      "button": 12,
-     "cards": 51,
+     "cards": 69,
      "text": 321
     },
     "services-compare": {
