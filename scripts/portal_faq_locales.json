@@ -655,5 +655,26 @@
     "a": "We work with parallel simulation migration. API connectors and posting synchronisation are built in an isolated test environment, and every account and flow is verified. The move to production happens only after 100% verification — without a single second of downtime."
    }
   }
+ },
+ "ga": {
+  "heading": "Ceisteanna coitianta",
+  "faq": {
+   "06": {
+    "q": "An muid féin a shealbhaíonn an cód foinse agus na bunachar sonraí go hiomlán (IP Ownership)?",
+    "a": "<strong>Sea, 100%.</strong> Aistríonn ár gconarthaí gach ceart ar an gcód foinse, ar na dearaí agus ar na bunachair sonraí chuig bhur gcomhlacht – gan srianta, gan táillí ceadúnais agus gan síntiúis fholaithe. Faigheann sibh freisin doiciméadú iomlán ar an ailtireacht agus ar an tslándáil, ionas gur féidir le bhur bhfoireann an córas a fhorbairt go neamhspleách."
+   },
+   "07": {
+    "q": "Conas a láimhseáiltear sonraisc agus cánacha do chomhlachtaí san Ísiltír agus san AE?",
+    "a": "Eisímid sonraisc chánach oifigiúla Eorpacha, cláraithe le húdarás cánach na hÍsiltíre (Belastingdienst), lena n-áirítear uimhir CBL (btw-nummer) agus uimhir KvK. Is féidir le comhlachtaí atá bunaithe san Ísiltír 21% CBL a éileamh ar ais; do chomhlachtaí AE cuirtear an mhalairt mhuirearú i bhfeidhm (0% CBL). Tá na méideanna go hiomlán inasbhainte mar chostais oibriúcháin."
+   },
+   "08": {
+    "q": "Conas a chinntíonn sibh rúndacht ár sonraí agus slándáil ár gcóras de réir caighdeán Eorpach (GDPR)?",
+    "a": "Oibrímid go comhlíontach le GDPR agus sínímid comhaontú rúndachta (NDA) comhpháirteach atá ceangailteach ó thaobh dlí sula dtosaíonn aon obair. Cuirimid criptiú ó cheann ceann i bhfeidhm (TLS 1.3 / AES-256), óstáil ar fhreastalaithe Eorpacha ceannasacha le 99.9% infhaighteacht agus cúltacaí criptithe laethúla."
+   },
+   "09": {
+    "q": "Úsáidimid córais airgeadais atá ann cheana – conas a chinntíonn sibh comhtháthú agus aistriú gan an obair a stopadh?",
+    "a": "Oibrímid le haistriú insamhalta comhthreomhar. Tógtar na cónaisc API agus sioncrónú na n-iontrálacha i dtimpeallacht tástála iargúlta agus déantar gach cuntas agus sruth a fhíorú. Ní dhéantar an t-aistriú chuig an táirgeadh ach tar éis fíorú 100% – gan aon soicind amháin de mhíchumas (zero downtime)."
+   }
+  }
  }
 }
