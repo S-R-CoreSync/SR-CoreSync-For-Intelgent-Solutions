@@ -613,5 +613,47 @@
     "a": "Naħdmu bil-metodu ta' migrazzjoni b'simulazzjoni parallela. Il-konnetturi API u s-sinkronizzazzjoni tad-dħul jinbnew f'ambjent tat-test iżolat u l-kontijiet u l-flussi kollha jiġu verifikati. Il-passaġġ għall-produzzjoni jsir biss wara verifika ta' 100% – mingħajr sekonda waħda ta' waqfien (zero downtime)."
    }
   }
+ },
+ "tr": {
+  "heading": "Sık sorulan sorular",
+  "faq": {
+   "06": {
+    "q": "Kaynak kodu ve veritabanları tamamen bize mi ait (IP Ownership)?",
+    "a": "<strong>Evet, %100.</strong> Sözleşmelerimiz kaynak kodu, tasarımlar ve veritabanları üzerindeki tüm hakları şirketinize devreder – kısıtlama, lisans ücreti ve gizli abonelik olmadan. Ayrıca ekibinizin sistemi bağımsız olarak geliştirebilmesi için tam mimari ve güvenlik dokümantasyonu alırsınız."
+   },
+   "07": {
+    "q": "Hollanda ve AB'deki şirketler için faturalar ve vergiler nasıl işliyor?",
+    "a": "Hollanda vergi idaresine (Belastingdienst) kayıtlı, KDV numarası (btw-nummer) ve KvK numarası içeren resmi Avrupa vergi faturaları düzenliyoruz. Hollanda'da yerleşik şirketler %21 KDV iadesi alabilir; AB şirketleri için ters vergi yükümlülüğü (%0 KDV) uygulanır. Tutarlar işletme gideri olarak tamamen indirilebilir."
+   },
+   "08": {
+    "q": "Verilerimizin gizliliğini ve sistemlerimizin güvenliğini Avrupa standartlarına (GDPR) göre nasıl sağlıyorsunuz?",
+    "a": "GDPR uyumlu çalışıyoruz ve başlamadan önce karşılıklı, hukuken bağlayıcı bir gizlilik sözleşmesi (NDA) imzalıyoruz. Uçtan uca şifreleme (TLS 1.3 / AES-256), %99,9 erişilebilirlikle egemen Avrupa sunucularında barındırma ve günlük şifreli yedekleme uyguluyoruz."
+   },
+   "09": {
+    "q": "Mevcut finansal sistemlerimizi kullanıyoruz – entegrasyon ve geçişi operasyonu durdurmadan nasıl garanti ediyorsunuz?",
+    "a": "Paralel simülasyon geçiş yöntemiyle çalışıyoruz. API bağlantıları ve kayıt senkronizasyonu izole test ortamında geliştirilir, tüm hesaplar ve akışlar doğrulanır. Canlıya geçiş ancak %100 doğrulamadan sonra yapılır – tek saniye kesinti olmadan (zero downtime)."
+   }
+  }
+ },
+ "en": {
+  "heading": "Frequently asked questions",
+  "faq": {
+   "06": {
+    "q": "Do we fully own the source code and databases (IP Ownership)?",
+    "a": "<strong>Yes, 100%.</strong> Our contracts transfer every right to the source code, designs and databases to your company — no restrictions, no licence fees and no hidden subscriptions. You also receive complete architecture and security documentation, so your team can extend the system independently."
+   },
+   "07": {
+    "q": "How are invoices and taxes handled for companies in the Netherlands and the EU?",
+    "a": "We issue official European tax invoices, registered with the Dutch tax authority (Belastingdienst), including the VAT number (btw-nummer) and the KvK number. Companies based in the Netherlands can reclaim 21% VAT; for EU companies the reverse-charge mechanism applies (0% VAT). The amounts are fully deductible as operating costs."
+   },
+   "08": {
+    "q": "How do you guarantee the confidentiality of our data and the security of our systems under European standards (GDPR)?",
+    "a": "We work GDPR-compliant and sign a mutual, legally binding non-disclosure agreement (NDA) before any work starts. We apply end-to-end encryption (TLS 1.3 / AES-256), hosting on sovereign European servers with 99.9% availability and daily encrypted backups."
+   },
+   "09": {
+    "q": "We already run existing financial systems — how do you guarantee integration and migration without stopping operations?",
+    "a": "We work with parallel simulation migration. API connectors and posting synchronisation are built in an isolated test environment, and every account and flow is verified. The move to production happens only after 100% verification — without a single second of downtime."
+   }
+  }
  }
 }

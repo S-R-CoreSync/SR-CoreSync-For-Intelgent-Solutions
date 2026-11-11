@@ -50,9 +50,9 @@
    "services": 6
   },
   "en": {
-   "plans": 11,
-   "faq": 11,
-   "faq_english": 11,
+   "plans": 12,
+   "faq": 15,
+   "faq_english": 14,
    "estimator": 0,
    "services": 6
   },
@@ -197,8 +197,8 @@
    "services": 6
   },
   "tr": {
-   "plans": 11,
-   "faq": 11,
+   "plans": 12,
+   "faq": 15,
    "faq_english": 11,
    "estimator": 0,
    "services": 6
