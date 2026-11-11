@@ -117,6 +117,8 @@ python docs/measure_structure.py &amp;&amp; python docs/build_plan_page_v19.py</
  <li><b>عتبة التسريب معلوماتية:</b> <code>--allow-english 151</code> لا تُرفع أبدًا؛ القياس الحقيقي هو قسم الأسئلة.</li>
  <li><b>الالتزام بالإنجليزية عبر ملف:</b> <code>git commit -F msg.txt</code> — لا رسائل متعددة الأسطر في PowerShell.</li>
  <li><b>فصل واحد = commit واحد:</b> <code>git revert &lt;sha&gt;</code> يعيد الفصل كاملًا دون سواه.</li>
+ <li><b>لا تفحص المصدر عندما يفحص CI المخرَج:</b> بوابة CSP تُشغّل بعد <code>prepare_publish_set.py</code>، فتبصم <code>_site.next/</code> (197 بصمة) لا الشجرة (165). فحص الشجرة يعطي <b>نجاحًا كذيبًا</b> ويؤجل العطل إلى الإنتاج.</li>
+ <li><b>الروابط المنسوخة تُقاس على القرص:</b> <code>scripts/fix_localized_root_links.py</code> — أي <code>href="./x.html"</code> في مجلد لغة تعني <code>xx/x.html</code>؛ إن لم يوجد فهو عطل نشر.</li>
 </ol>
 <p class="meta">يُعاد توليد هذا الملف بـ <code>python docs/build_plan_page_v19.py</code> بعد تحديث القياس.</p>
 </div>
