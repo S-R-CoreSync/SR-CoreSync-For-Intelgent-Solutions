@@ -214,5 +214,68 @@
     "a": "RFQ o WhatsApp — consulta gratuita de 30 minutos."
    }
   }
+ },
+ "it": {
+  "heading": "Domande frequenti",
+  "faq": {
+   "06": {
+    "q": "Il codice sorgente e i database passano interamente in nostra proprietà (IP Ownership)?",
+    "a": "<strong>Sì, al 100%.</strong> I nostri contratti trasferiscono alla vostra azienda ogni diritto su codice sorgente, design e database, senza limiti, senza royalty di licenza e senza abbonamenti nascosti. Riceverete inoltre la documentazione completa di architettura e sicurezza, così il vostro team potrà ampliare il sistema in autonomia."
+   },
+   "07": {
+    "q": "Come vengono gestite fatture e imposte per le aziende nei Paesi Bassi e nell'UE?",
+    "a": "Emetteremo fatture fiscali europee ufficiali, registrate presso l'amministrazione finanziaria olandese (Belastingdienst), con partita IVA (btw-nummer) e numero KVK. Le aziende con sede nei Paesi Bassi possono recuperare il 21% di IVA; per le aziende UE si applica l'inversione contabile (0% IVA). Gli importi sono interamente deducibili come costi operativi."
+   },
+   "08": {
+    "q": "Come garantite la riservatezza dei nostri dati e la sicurezza dei sistemi secondo gli standard europei (GDPR)?",
+    "a": "Lavoriamo in conformità al GDPR e firmiamo prima di iniziare un accordo di riservatezza (NDA) reciproco e vincolante. Applichiamo cifratura end-to-end (TLS 1.3 / AES-256), hosting su server europei sovrani con disponibilità del 99,9% e backup cifrati ogni giorno."
+   },
+   "09": {
+    "q": "Usiamo già sistemi finanziari esistenti: come garantite integrazione e migrazione senza fermare l'operatività?",
+    "a": "Lavoriamo con una migrazione a simulazione parallela. I connettori API e la sincronizzazione delle scritture vengono sviluppati in un ambiente di test isolato e tutti i conti e i flussi vengono verificati. Il passaggio in produzione avviene solo dopo una verifica al 100%, senza un secondo di interruzione (zero downtime)."
+   }
+  }
+ },
+ "pt": {
+  "heading": "Perguntas frequentes",
+  "faq": {
+   "06": {
+    "q": "O código-fonte e as bases de dados passam integralmente para a nossa propriedade (IP Ownership)?",
+    "a": "<strong>Sim, a 100%.</strong> Os nossos contratos transferem para a sua empresa todos os direitos sobre o código-fonte, os designs e as bases de dados, sem restrições, sem royalties de licença e sem subscrições ocultas. Receberá ainda documentação completa de arquitetura e segurança, para que a sua equipa possa evoluir com autonomia."
+   },
+   "07": {
+    "q": "Como são tratadas as faturas e os impostos para empresas nos Países Baixos e na UE?",
+    "a": "Emitimos faturas fiscais europeias oficiais, registadas na autoridade tributária neerlandesa (Belastingdienst), com número de IVA (btw-nummer) e número da KvK. As empresas sediadas nos Países Baixos podem recuperar os 21% de IVA; para empresas da UE aplica-se a autoliquidação (0% IVA). Os valores são integralmente dedutíveis como custos operacionais."
+   },
+   "08": {
+    "q": "Como garantem a confidencialidade dos nossos dados e a segurança dos sistemas segundo as normas europeias (RGPD)?",
+    "a": "Trabalhamos em conformidade com o RGPD e assinamos, antes de qualquer início, um acordo de confidencialidade (NDA) mútuo e juridicamente vinculativo. Aplicamos cifra ponta a ponta (TLS 1.3 / AES-256), alojamento em servidores europeus soberanos com 99,9% de disponibilidade e cópias de segurança cifradas diariamente."
+   },
+   "09": {
+    "q": "Já usamos sistemas financeiros existentes: como garantem a integração e a migração sem interromper a atividade?",
+    "a": "Trabalhamos com migração por simulação paralela. Os conectores API e a sincronização de lançamentos são desenvolvidos num ambiente de teste isolado e todas as contas e fluxos são verificados. A passagem a produção só acontece após verificação a 100%, sem um segundo de interrupção (zero downtime)."
+   }
+  }
+ },
+ "pl": {
+  "heading": "Najczęstsze pytania",
+  "faq": {
+   "06": {
+    "q": "Czy kod źródłowy i bazy danych przechodzą w całości na naszą własność (IP Ownership)?",
+    "a": "<strong>Tak, w 100%.</strong> Nasze umowy przenoszą na Państwa firmę wszystkie prawa do kodu źródłowego, projektów i baz danych — bez ograniczeń, bez opłat licencyjnych i bez ukrytych subskrypcji. Otrzymują Państwo również pełną dokumentację architektury i bezpieczeństwa, aby zespół mógł rozwijać system samodzielnie."
+   },
+   "07": {
+    "q": "Jak rozliczane są faktury i podatki dla firm w Holandii i UE?",
+    "a": "Wystawiamy oficjalne europejskie faktury podatkowe, zarejestrowane w holenderskiej administracji podatkowej (Belastingdienst), z numerem VAT (btw-nummer) i numerem KvK. Firmy z siedzibą w Holandii mogą odzyskać 21% VAT; dla firm z UE stosuje się odwrotne obciążenie (0% VAT). Kwoty są w pełni odliczalne jako koszty operacyjne."
+   },
+   "08": {
+    "q": "Jak zapewniacie poufność naszych danych i bezpieczeństwo systemów zgodnie z normami europejskimi (RODO)?",
+    "a": "Pracujemy zgodnie z RODO i przed rozpoczęciem podpisujemy wzajemną, prawnie wiążącą umowę o zachowaniu poufności (NDA). Stosujemy szyfrowanie end-to-end (TLS 1.3 / AES-256), hosting na suwerennych serwerach europejskich z dostępnością 99,9% oraz codzienne szyfrowane kopie zapasowe."
+   },
+   "09": {
+    "q": "Korzystamy już z istniejących systemów finansowych — jak zapewniacie integrację i migrację bez zatrzymywania działalności?",
+    "a": "Pracujemy metodą migracji z równoległą symulacją. Konektory API i synchronizacja zapisów powstają w izolowanym środowisku testowym, a wszystkie konta i przepływy są weryfikowane. Przejście na produkcję następuje dopiero po 100% weryfikacji — bez sekundy przestoju (zero downtime)."
+   }
+  }
  }
 }
