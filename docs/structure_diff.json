@@ -1,0 +1,918 @@
+{
+ "master": {
+  "order": [
+   "hero",
+   "about",
+   "trust-band",
+   "founders-showcase",
+   "services",
+   "services-compare",
+   "tech-pillars",
+   "compliance",
+   "process",
+   "software-hub",
+   "testimonials",
+   "roi-calculator",
+   "pricing",
+   "guarantees",
+   "faq",
+   "executive-solutions-stage",
+   "contact",
+   "newsletter",
+   "insights"
+  ],
+  "footers": 4
+ },
+ "pages": {
+  "bg": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "ckb": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -10
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "btn": -3
+    },
+    "pricing": {
+     "h2h3": -5
+    },
+    "faq": {
+     "cards": -9,
+     "li": -47,
+     "h2h3": -3,
+     "btn": -23
+    }
+   }
+  },
+  "cs": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "da": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "de": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -34,
+     "h2h3": -6,
+     "btn": -9
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "el": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "en": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "es": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "et": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "fi": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "fr": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "ga": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "hr": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "hu": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "it": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "ku": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "lt": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "lv": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "mt": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "nl": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "no": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "pl": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "pt": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "ro": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "sk": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "sl": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "sv": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  },
+  "tr": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": -8
+    },
+    "founders-showcase": {
+     "btn": -5
+    },
+    "services": {
+     "btn": -11
+    },
+    "software-hub": {
+     "cards": -9,
+     "btn": -19
+    },
+    "pricing": {
+     "cards": -35,
+     "h2h3": -6,
+     "btn": -27
+    },
+    "faq": {
+     "cards": -23,
+     "li": -59,
+     "h2h3": -9,
+     "btn": -56
+    }
+   }
+  }
+ }
+}

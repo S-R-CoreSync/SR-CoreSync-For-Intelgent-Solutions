@@ -55,6 +55,16 @@ def span_of(raw, marker):
     return None
 
 
+def div_end(raw, start):
+    """End offset of the div that begins at start."""
+    depth = 0
+    for m in re.finditer(r"<div\b|</div>", raw[start:]):
+        depth += 1 if m.group(0).startswith("<div") else -1
+        if depth == 0:
+            return start + m.end()
+    return -1
+
+
 def localise(node, labels):
     missing = []
     for el in node.iter():
@@ -131,7 +141,12 @@ def main():
     if not m:
         print(f"{args.lang}: pricing section not found")
         return 4
-    html = html[:m.start()] + markup + "\n\n            " + html[m.start():]
+    # The master keeps the widget inside #pricing, after the section header.
+    head = html.find('<div class="s-header', m.end())
+    at = div_end(html, head) if head > 0 else m.end()
+    if at < 0:
+        at = m.end()
+    html = html[:at] + "\n\n            " + markup + html[at:]
 
     if "sr-estimator.css" not in html:
         html = html.replace("</head>", '<link rel="stylesheet" href="../css/sr-estimator.css?v=20261112">\n</head>', 1)
