@@ -676,5 +676,26 @@
     "a": "Oibrímid le haistriú insamhalta comhthreomhar. Tógtar na cónaisc API agus sioncrónú na n-iontrálacha i dtimpeallacht tástála iargúlta agus déantar gach cuntas agus sruth a fhíorú. Ní dhéantar an t-aistriú chuig an táirgeadh ach tar éis fíorú 100% – gan aon soicind amháin de mhíchumas (zero downtime)."
    }
   }
+ },
+ "ku": {
+  "heading": "Pirsên gelemperî",
+  "faq": {
+   "06": {
+    "q": "Ma em bi temamî xwediyê koda çavkaniyê û databasan in (IP Ownership)?",
+    "a": "<strong>Erê, bi 100%.</strong> Peymanên me hemû mafên li ser koda çavkaniyê, dîzayn û databasan radestî pargîdaniya we dikin – bê sînorkirin, bê bedêla lîsansê û bê abonetiyên veşartî. Her wiha belgeyên tam ên arkîtektûr û ewlehiyê werdigirin, da ku tîma we bikaribe pergalê bi serbixwe pêşbixe."
+   },
+   "07": {
+    "q": "Fature û bac ji bo pargîdaniyên li Holandayê û Yekîtiya Ewropayê çawa têne rêvebirin?",
+    "a": "Em faturayên bacê yên fermî yên Ewropî derdixin, li daîreya bacê ya Holandayê (Belastingdienst) tomar bûne, bi hejmara VAT (btw-nummer) û hejmara KvK. Pargîdaniyên ku li Holandayê bin 21% VAT vedigerînin; ji bo pargîdaniyên YE pergalê berevajî (0% VAT) tê sepandin. Bikaranîna wan bi temamî wek lêçûna xebatê tê hesibandin."
+   },
+   "08": {
+    "q": "Hûn çawa nepenîtiya daneyên me û ewlehiya pergalên me li gorî standardên ewropî (GDPR) misoger dikin?",
+    "a": "Em li gorî GDPR dixebitin û berî destpêkê peymana nepenîtiyê ya dualî û bi qanûn girêdayî îmze dikin (NDA). Em şîfrekirina serî-bi-dawî bikar tînin (TLS 1.3 / AES-256), mêvandariyê li ser serverên ewropî yên serbixwe bi 99,9% berdestbûn û paşgirên şîfrekirî yên rojane."
+   },
+   "09": {
+    "q": "Em jixwe pergalên darayî yên heyî bikar tînin – hûn çawa entegrasyon û veguhastinê bê rawestandina kar misoger dikin?",
+    "a": "Em bi rêbaza veguhastina simulasyona hevdem dixebitin. Girêdanên API û hevdengkirina tomaran di hawîrdoreke testê ya veqetandî de têne çêkirin û hemû hesab û herikîn têne piştrastkirin. Derbasa berhemê tenê piştî piştrastkirina 100% tê kirin – bê yek çirkeyê rawestan (zero downtime)."
+   }
+  }
  }
 }
