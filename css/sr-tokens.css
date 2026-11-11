@@ -79,3 +79,15 @@ html.sr-cmd-open{overflow:hidden}
 .sr-lang-hint__close{border:0;background:transparent;color:rgba(233,226,207,.55);font-size:1rem;line-height:1;cursor:pointer;padding:.1rem .3rem}
 .sr-lang-hint__close:hover{color:#f0d79a}
 @media (max-width:520px){.sr-lang-hint{bottom:88px;font-size:.75rem}}
+
+/* Promise line under the value cards, and the three intent chips under the AI bar.
+   Chips are plain anchors: no JS, no extra request, keyboard reachable. */
+.sr-promise{max-width:760px;margin:0 auto 1.6rem;text-align:center;font-size:.98rem;line-height:1.7;
+  color:var(--sr-gold-text,#ecd9a0);letter-spacing:.01em}
+.sr-intent{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:.9rem 0 0}
+.sr-intent a{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .85rem;border-radius:999px;
+  border:1px solid rgba(216,178,94,.28);background:rgba(9,11,14,.45);color:rgba(233,226,207,.78);
+  font-size:.8rem;line-height:1.2;text-decoration:none;white-space:nowrap;transition:border-color .2s,color .2s}
+.sr-intent a:hover,.sr-intent a:focus-visible{border-color:rgba(216,178,94,.62);color:#f0d79a;outline:none}
+@media (max-width:520px){.sr-promise{font-size:.9rem}.sr-intent a{font-size:.74rem;padding:.38rem .7rem}}
+@media (prefers-reduced-motion:reduce){.sr-intent a{transition:none}}
