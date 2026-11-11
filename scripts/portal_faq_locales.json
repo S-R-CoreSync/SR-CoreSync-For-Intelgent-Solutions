@@ -361,5 +361,47 @@
     "a": "Työskentelemme rinnakkaisen simulaatiomigraation menetelmällä. API-liittimet ja vientien synkronointi rakennetaan eristetyssä testiympäristössä ja kaikki tilit ja virrat varmennetaan. Tuotantoon siirrytään vasta 100 % varmennuksen jälkeen – ilman sekunninkaan keskeytystä (zero downtime)."
    }
   }
+ },
+ "cs": {
+  "heading": "Časté dotazy",
+  "faq": {
+   "06": {
+    "q": "Vlastníme zdrojový kód a databáze zcela (IP Ownership)?",
+    "a": "<strong>Ano, ze 100 %.</strong> Naše smlouvy převádějí veškerá práva ke zdrojovému kódu, designům a databázím na vaši společnost – bez omezení, bez licenčních poplatků a bez skrytých předplatných. Získáte také kompletní dokumentaci architektury a zabezpečení, aby váš tým mohl systém samostatně rozvíjet."
+   },
+   "07": {
+    "q": "Jak jsou řešeny faktury a daně pro firmy v Nizozemsku a EU?",
+    "a": "Vystavujeme oficiální evropské daňové faktury registrované u nizozemské finanční správy (Belastingdienst) s číslem DPH (btw-nummer) a číslem KvK. Firmy se sídlem v Nizozemsku si mohou nárokovat vrácení 21 % DPH; pro firmy v EU platí přenesená daňová povinnost (0 % DPH). Částky jsou plně odčitatelné jako provozní náklady."
+   },
+   "08": {
+    "q": "Jak zajišťujete důvěrnost našich dat a bezpečnost systémů podle evropských standardů (GDPR)?",
+    "a": "Pracujeme v souladu s GDPR a před zahájením podepisujeme vzájemnou, právně závaznou dohodu o mlčenlivosti (NDA). Používáme end-to-end šifrování (TLS 1.3 / AES-256), hosting na suverénních evropských serverech s dostupností 99,9 % a denní šifrované zálohy."
+   },
+   "09": {
+    "q": "Používáme již existující finanční systémy – jak zajistíte integraci a migraci bez přerušení provozu?",
+    "a": "Pracujeme metodou paralelní simulační migrace. API konektory a synchronizace účetních zápisů vznikají v izolovaném testovacím prostředí a všechny účty a toky se ověřují. Do produkce přecházíme až po 100% ověření – bez jediné sekundy výpadku (zero downtime)."
+   }
+  }
+ },
+ "ro": {
+  "heading": "Întrebări frecvente",
+  "faq": {
+   "06": {
+    "q": "Deținem integral codul sursă și bazele de date (IP Ownership)?",
+    "a": "<strong>Da, 100%.</strong> Contractele noastre transferă toate drepturile asupra codului sursă, designului și bazelor de date către compania dumneavoastră — fără restricții, fără redevențe de licență și fără abonamente ascunse. Primiți și documentația completă de arhitectură și securitate, astfel încât echipa dumneavoastră să poată extinde sistemul independent."
+   },
+   "07": {
+    "q": "Cum sunt gestionate facturile și taxele pentru companiile din Țările de Jos și UE?",
+    "a": "Emitem facturi fiscale europene oficiale, înregistrate la administrația fiscală neerlandeză (Belastingdienst), cu număr de TVA (btw-nummer) și număr KvK. Companiile cu sediul în Țările de Jos pot recupera 21% TVA; pentru companiile din UE se aplică taxarea inversă (0% TVA). Sumele sunt integral deductibile ca cheltuieli operaționale."
+   },
+   "08": {
+    "q": "Cum garantați confidențialitatea datelor noastre și securitatea sistemelor conform standardelor europene (GDPR)?",
+    "a": "Lucrăm în conformitate cu GDPR și semnăm înainte de începere un acord de confidențialitate (NDA) reciproc și obligatoriu juridic. Folosim criptare end-to-end (TLS 1.3 / AES-256), găzduire pe servere europene suverane cu disponibilitate 99,9% și copii de siguranță criptate zilnic."
+   },
+   "09": {
+    "q": "Folosim deja sisteme financiare existente – cum garantați integrarea și migrarea fără întreruperea activității?",
+    "a": "Lucrăm cu migrare prin simulare paralelă. Conectorii API și sincronizarea înregistrărilor sunt dezvoltate într-un mediu de test izolat, iar toate conturile și fluxurile sunt verificate. Trecerea în producție are loc doar după verificare 100% — fără nicio secundă de întrerupere (zero downtime)."
+   }
+  }
  }
 }
