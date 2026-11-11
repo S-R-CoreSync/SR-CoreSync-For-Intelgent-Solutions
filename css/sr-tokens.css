@@ -44,7 +44,7 @@
   @page{margin:14mm}
   html,body{background:#fff !important;color:#111 !important}
   .sr-quick-dock-container,.apple-macos-dock-wrapper,.srlf-wrap,.floating-follow,
-  .sr-jump,.sr-privacy-banner,.sr-logo-lightbox-overlay,.sr-exec-modal,
+  .sr-jump,.sr-privacy-banner,.sr-logo-lightbox-overlay,body:not(.sr-printing-doc) .sr-exec-modal,
   .call-modal-overlay,.sr-portal-modal-overlay,.chat-widget,.ai-concierge,
   header.site-header,.tf-header,#navMoreDropdown,nav[data-sr-decision-bar]{display:none !important}
   a{color:#111 !important;text-decoration:none !important}
@@ -54,6 +54,13 @@
   .plan-badge{border:1px solid #999 !important;color:#111 !important}
   #pricing .text-white-64,#pricing .desc,#pricing p{color:#333 !important}
   video,iframe,.hero-sectors-marquee{display:none !important}
+  /* The legacy enterprise-suite sheets hide the whole document in print. They are
+     now scoped to body.sr-printing-doc, so a plain Ctrl+P prints the page. Never
+     target body here: the markup carries class="counter-scroll preloader-complete",
+     so a bare [class*="preloader"] blanks the whole document. */
+  .preloader,
+  #preloader,
+  [class*="preloader"]:not(body):not(html){display:none !important;visibility:hidden !important}
 }
 
 /* Command palette (Ctrl/Cmd+K). Same tokens as the rest of the chrome. */
