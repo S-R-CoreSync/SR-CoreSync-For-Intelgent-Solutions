@@ -445,5 +445,47 @@
     "a": "Pracujeme metódou paralelnej simulačnej migrácie. API konektory a synchronizácia účtovných zápisov vznikajú v izolovanom testovacom prostredí a všetky účty a toky sa overujú. Do produkcie prechádzame až po 100 % overení – bez jedinej sekundy výpadku (zero downtime)."
    }
   }
+ },
+ "lt": {
+  "heading": "Dažnai užduodami klausimai",
+  "faq": {
+   "06": {
+    "q": "Ar mes visiškai valdome šaltinio kodą ir duomenų bazes (IP Ownership)?",
+    "a": "<strong>Taip, 100 %.</strong> Mūsų sutartys perduoda visas teises į šaltinio kodą, dizainą ir duomenų bazes jūsų įmonei – be apribojimų, be licencijų mokesčių ir be paslėptų prenumeratų. Taip pat gausite išsamią architektūros ir saugumo dokumentaciją, kad jūsų komanda galėtų savarankiškai plėtoti sistemą."
+   },
+   "07": {
+    "q": "Kaip tvarkomos sąskaitos ir mokesčiai įmonėms Nyderlanduose ir ES?",
+    "a": "Išrašome oficialias Europos mokesčių sąskaitas, registruotas Nyderlandų mokesčių inspekcijoje (Belastingdienst), su PVM numeriu (btw-nummer) ir KvK numeriu. Nyderlanduose įsikūrusios įmonės gali susigrąžinti 21 % PVM; ES įmonėms taikomas atvirkštinis apmokestinimas (0 % PVM). Sumos visiškai atskaitomos kaip veiklos išlaidos."
+   },
+   "08": {
+    "q": "Kaip užtikrinate mūsų duomenų konfidencialumą ir sistemų saugumą pagal Europos standartus (BDAR)?",
+    "a": "Dirbame pagal BDAR ir prieš pradėdami pasirašome abipusę, teisiškai įpareigojančią konfidencialumo sutartį (NDA). Taikome ištisinį šifravimą (TLS 1.3 / AES-256), prieglobą suvereniuose Europos serveriuose su 99,9 % prieinamumu ir kasdienes šifruotas atsargines kopijas."
+   },
+   "09": {
+    "q": "Jau naudojame esamas finansų sistemas – kaip užtikrinate integraciją ir migraciją be veiklos sustabdymo?",
+    "a": "Dirbame lygiagrečios simuliacijos migracijos metodu. API jungtys ir įrašų sinchronizavimas kuriami izoliuotoje testavimo aplinkoje, o visos sąskaitos ir srautai patikrinami. Perėjimas prie produkcijos vyksta tik po 100 % patikros – be nė vienos sekundės prastovos (zero downtime)."
+   }
+  }
+ },
+ "lv": {
+  "heading": "Biežāk uzdotie jautājumi",
+  "faq": {
+   "06": {
+    "q": "Vai mēs pilnībā piederam pirmkodu un datubāzes (IP Ownership)?",
+    "a": "<strong>Jā, 100 %.</strong> Mūsu līgumi nodod visas tiesības uz pirmkodu, dizainu un datubāzēm jūsu uzņēmumam – bez ierobežojumiem, bez licences maksām un bez slēptiem abonementiem. Jūs saņemsiet arī pilnīgu arhitektūras un drošības dokumentāciju, lai jūsu komanda varētu patstāvīgi attīstīt sistēmu."
+   },
+   "07": {
+    "q": "Kā tiek kārtoti rēķini un nodokļi uzņēmumiem Nīderlandē un ES?",
+    "a": "Mēs izrakstām oficiālus Eiropas nodokļu rēķinus, kas reģistrēti Nīderlandes nodokļu administrācijā (Belastingdienst), ar PVN numuru (btw-nummer) un KvK numuru. Uzņēmumi, kas reģistrēti Nīderlandē, var atgūt 21 % PVN; ES uzņēmumiem piemēro apgriezto nodokļa maksāšanu (0 % PVN). Summas ir pilnībā atskaitāmas kā darbības izdevumi."
+   },
+   "08": {
+    "q": "Kā jūs nodrošināt mūsu datu konfidencialitāti un sistēmu drošību saskaņā ar Eiropas standartiem (VDAR)?",
+    "a": "Mēs strādājam saskaņā ar VDAR un pirms darba sākuma parakstām savstarpēju, juridiski saistošu konfidencialitātes līgumu (NDA). Mēs izmantojam pilnīgu šifrēšanu (TLS 1.3 / AES-256), mitināšanu suverēnos Eiropas serveros ar 99,9 % pieejamību un ikdienas šifrētas dublējumkopijas."
+   },
+   "09": {
+    "q": "Mēs jau izmantojam esošās finanšu sistēmas – kā jūs nodrošināt integrāciju un migrāciju bez darbības pārtraukšanas?",
+    "a": "Mēs strādājam ar paralēlās simulācijas migrāciju. API savienotāji un ierakstu sinhronizācija tiek veidota izolētā testa vidē, un visi konti un plūsmas tiek pārbaudītas. Pāreja uz produkciju notiek tikai pēc 100 % pārbaudes – bez nevienas sekundes dīkstāves (zero downtime)."
+   }
+  }
  }
 }
