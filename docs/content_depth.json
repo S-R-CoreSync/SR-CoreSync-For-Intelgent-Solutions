@@ -1,0 +1,207 @@
+{
+ "master": {
+  "plans": 12,
+  "faq": 15,
+  "faq_english": 0,
+  "estimator": 16,
+  "services": 6
+ },
+ "pages": {
+  "bg": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "ckb": {
+   "plans": 12,
+   "faq": 15,
+   "faq_english": 0,
+   "estimator": 17,
+   "services": 6
+  },
+  "cs": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "da": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "de": {
+   "plans": 12,
+   "faq": 15,
+   "faq_english": 0,
+   "estimator": 0,
+   "services": 6
+  },
+  "el": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "en": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "es": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "et": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "fi": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "fr": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "ga": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "hr": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "hu": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "it": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "ku": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "lt": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "lv": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "mt": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "nl": {
+   "plans": 12,
+   "faq": 15,
+   "faq_english": 0,
+   "estimator": 0,
+   "services": 6
+  },
+  "no": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "pl": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "pt": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "ro": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "sk": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "sl": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "sv": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  },
+  "tr": {
+   "plans": 11,
+   "faq": 11,
+   "faq_english": 11,
+   "estimator": 0,
+   "services": 6
+  }
+ }
+}

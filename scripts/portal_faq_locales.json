@@ -1,0 +1,88 @@
+{
+ "de": {
+  "heading": "Häufig gestellte Fragen",
+  "faq": {
+   "01": {
+    "q": "Wie lange dauert die Entwicklung eines Systems oder einer App in der Regel?",
+    "a": "Für mittlere Projekte und Plattformen liegen wir üblicherweise bei 4 bis 8 Wochen. Vor dem Start erhalten Sie einen detaillierten Zeitplan mit wöchentlichen Fortschrittsberichten."
+   },
+   "02": {
+    "q": "Bieten Sie Ihre Leistungen auch für Unternehmen außerhalb der Niederlande an?",
+    "a": "Ja, uneingeschränkt. Unser Sitz ist Amsterdam, und wir betreuen Kunden in der gesamten Europäischen Union sowie in Saudi-Arabien, den Vereinigten Arabischen Emiraten, Katar und Kuwait – über digitale Kanäle und regelmäßige Videokonferenzen."
+   },
+   "03": {
+    "q": "Was unterscheidet S&R CoreSync von klassischen Softwareagenturen?",
+    "a": "Der entscheidende Unterschied ist die seltene Kombination der beiden Gründer: ein erfahrener Software- und Cloud-Architekt (Partner S) und ein Finanz- und ERP-Fachmann (Partner R). Dadurch dient die technische Lösung vom ersten Tag an auch der Rentabilität, dem Geschäftsmodell und der finanziellen Compliance."
+   },
+   "04": {
+    "q": "Wie sind Vertragsabschluss und Zahlung geregelt?",
+    "a": "Wir arbeiten mit rechtsgültigen Verträgen nach europäischem Recht. Die Zahlungen sind an klare Meilensteine gebunden: 50 % bei Projektstart, der Rest nach Abnahme und Endtest."
+   },
+   "05": {
+    "q": "Bieten Sie nach der Übergabe laufenden Support und Updates?",
+    "a": "Ja. Alle Pakete enthalten eine Garantie- und Supportphase nach dem Livegang. Zusätzlich bieten wir flexible monatliche Wartungspakete, damit Ihr System rund um die Uhr leistungsfähig und sicher bleibt."
+   },
+   "06": {
+    "q": "Gehen Quellcode und Datenbanken vollständig in unser Eigentum über (IP Ownership)?",
+    "a": "<strong>Ja, zu 100 %.</strong> Mit unseren verbindlichen Verträgen gehen sämtliche Rechte am Quellcode, an den Designs und an den Datenbanken vollständig auf Ihr Unternehmen über – ohne Beschränkungen, ohne Lizenzbindung und ohne versteckte Abonnements. Sie erhalten zusätzlich eine vollständige Architektur- und Sicherheitsdokumentation, damit Ihr Team später eigenständig erweitern kann."
+   },
+   "07": {
+    "q": "Wie werden Rechnungen und Steuern für Unternehmen in den Niederlanden und der EU behandelt?",
+    "a": "Wir stellen offizielle europäische Steuerrechnungen aus, registriert bei der niederländischen Steuerbehörde (Belastingdienst), mit BTW-Nummer und KVK-Handelsregisternummer. In den Niederlanden ansässige Unternehmen können die 21 % BTW zurückfordern; für Unternehmen in der EU gilt das Reverse-Charge-Verfahren (0 % BTW). Die Beträge sind vollständig als Betriebsausgaben abzugsfähig."
+   },
+   "08": {
+    "q": "Wie gewährleisten Sie Datenvertraulichkeit und Systemsicherheit nach europäischen Standards (DSGVO)?",
+    "a": "Wir arbeiten DSGVO-konform und unterzeichnen vor Projektbeginn eine rechtsverbindliche gegenseitige Geheimhaltungsvereinbarung (NDA). Zum Einsatz kommen Ende-zu-Ende-Verschlüsselung (TLS 1.3 / AES-256), Hosting auf souveränen europäischen Servern mit 99,9 % Verfügbarkeit sowie tägliche verschlüsselte Backups."
+   },
+   "09": {
+    "q": "Wir nutzen bereits bestehende Finanzsysteme – wie stellen Sie Integration und Migration ohne Betriebsunterbrechung sicher?",
+    "a": "Wir arbeiten mit einer parallelen Simulationsmigration. API-Konnektoren und Buchungssynchronisation werden in einer isolierten Testumgebung programmiert, alle Konten und Prozesse werden geprüft. Die Produktivumschaltung erfolgt erst nach 100 % Verifikation – ohne eine Sekunde Ausfall Ihres Tagesgeschäfts (Zero Downtime)."
+   },
+   "10": {
+    "q": "Wie lange dauert die Umsetzung einer Website bzw. eines Shops?",
+    "a": "Website: 2–4 Wochen. Shop: 4–6 Wochen."
+   },
+   "11": {
+    "q": "Sind Hosting und Domain im Preis enthalten?",
+    "a": "3 Monate Hosting kostenlos + Domain."
+   },
+   "12": {
+    "q": "Welche Zahlungsmethoden werden akzeptiert?",
+    "a": "Stripe, Mollie (iDEAL), SEPA, PayPal."
+   },
+   "13": {
+    "q": "Gehört mir der Quellcode?",
+    "a": "Ja, zu 100 %."
+   },
+   "14": {
+    "q": "Bieten Sie nach der Übergabe Wartung an?",
+    "a": "Ja — Wartungspakete."
+   },
+   "15": {
+    "q": "Wie starte ich?",
+    "a": "RFQ oder WhatsApp — kostenlose 30-minütige Beratung."
+   }
+  }
+ },
+ "nl": {
+  "heading": "Veelgestelde vragen",
+  "faq": {
+   "06": {
+    "q": "Komen broncode en databases volledig in ons eigendom (IP Ownership)?",
+    "a": "<strong>Ja, voor 100%.</strong> Met onze bindende contracten gaan alle rechten op de broncode, de ontwerpen en de databases volledig over naar uw onderneming — zonder beperkingen, zonder licentieverplichting en zonder verborgen abonnementen. U ontvangt daarnaast volledige architectuur- en beveiligingsdocumentatie, zodat uw team later zelfstandig kan uitbreiden."
+   },
+   "07": {
+    "q": "Hoe worden facturen en belastingen geregeld voor bedrijven in Nederland en de EU?",
+    "a": "Wij stellen officiële Europese belastingfacturen op, geregistreerd bij de Belastingdienst, met btw-nummer en KVK-nummer. In Nederland gevestigde bedrijven kunnen de 21% btw terugvorderen; voor bedrijven in de EU geldt de verleggingsregeling (0% btw). De bedragen zijn volledig aftrekbaar als bedrijfskosten."
+   },
+   "08": {
+    "q": "Hoe waarborgt u de vertrouwelijkheid van onze gegevens en de veiligheid van onze systemen volgens Europese normen (AVG)?",
+    "a": "Wij werken AVG-conform en ondertekenen vóór de start een juridisch bindende wederzijdse geheimhoudingsovereenkomst (NDA). Er wordt end-to-end versleuteld (TLS 1.3 / AES-256), gehost op soevereine Europese servers met 99,9% beschikbaarheid en dagelijkse versleutelde back-ups."
+   },
+   "09": {
+    "q": "Wij gebruiken al bestaande financiële systemen – hoe garandeert u integratie en migratie zonder onderbreking?",
+    "a": "Wij werken met een parallelle simulatiemigratie. API-koppelingen en het synchroniseren van boekingen worden in een geïsoleerde testomgeving gebouwd en alle rekeningen en stromen worden getest. De overgang naar productie volgt pas na 100% verificatie — zonder één seconde uitval van uw dagelijkse werkzaamheden (zero downtime)."
+   }
+  }
+ }
+}

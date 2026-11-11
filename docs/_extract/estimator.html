@@ -1,0 +1,117 @@
+<div class="cost-estimator-controls">
+                                <!-- 01. نوع المشروع الأساسي -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">01</span>
+                                        نوع المشروع الأساسي:
+                                    </label>
+                                    <div class="estimator-options grid-2" id="estimatorGroupType">
+                                        <button type="button" class="estimator-option active" data-group="type" data-val="identity" data-price="590" data-days="5 - 7 أيام عمل" data-title="هوية بصرية متكاملة" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">هوية بصرية متكاملة</span>
+                                            <span class="option-badge">تبدأ من €590</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="type" data-val="website" data-price="980" data-days="7 - 12 يوم عمل" data-title="موقع ويب فاخر عالي الأداء" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">موقع ويب فاخر عالي الأداء</span>
+                                            <span class="option-badge">تبدأ من €980</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="type" data-val="ecommerce" data-price="1450" data-days="10 - 15 يوم عمل" data-title="متجر إلكتروني ذكي متكامل" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">متجر إلكتروني ذكي متكامل</span>
+                                            <span class="option-badge">تبدأ من €1,450</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="type" data-val="bundle" data-price="1990" data-days="14 - 20 يوم عمل" data-title="باقة الانطلاقة الشاملة المتكاملة" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">باقة الانطلاقة الشاملة المتكاملة</span>
+                                            <span class="option-badge">عرض التوفير €1,990</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 02. نطاق الصفحات / الكتالوج -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">02</span>
+                                        نطاق الصفحات والمنتجات:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupPages">
+                                        <button type="button" class="estimator-option active" data-group="pages" data-val="basic" data-price="0" data-title="أساسي (1 - 5 صفحات / 20 منتج)" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">أساسي (1 - 5 صفحات)</span>
+                                            <span class="option-price-diff">+€0 (متضمن)</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pages" data-val="medium" data-price="290" data-title="متوسط (حتى 15 صفحة / 100 منتج)" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">متوسط (حتى 15 صفحة)</span>
+                                            <span class="option-price-diff">+€290</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pages" data-val="enterprise" data-price="690" data-title="مؤسسي واسع النطاق (كتالوج غير محدود)" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">مؤسسي (غير محدود)</span>
+                                            <span class="option-price-diff">+€690</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 03. اللغات وتعدد العملات -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">03</span>
+                                        اللغات وتعدد العملات:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupLang">
+                                        <button type="button" class="estimator-option active" data-group="lang" data-val="single" data-price="0" data-title="لغة واحدة أساسية" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">لغة واحدة أساسية</span>
+                                            <span class="option-price-diff">+€0 (متضمن)</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="lang" data-val="dual" data-price="180" data-title="ثنائي اللغة (عربي + إنجليزي أو هولندي)" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">ثنائي اللغة (+ لغة إضافية)</span>
+                                            <span class="option-price-diff">+€180</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="lang" data-val="multi" data-price="350" data-title="متعدد اللغات (3 لغات فأكثر مع تعدد العملات)" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">متعدد اللغات (3 لغات فأكثر)</span>
+                                            <span class="option-price-diff">+€350</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 04. بوابات الدفع والربط المالي -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">04</span>
+                                        بوابات الدفع والتكامل المحاسبي:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupPay">
+                                        <button type="button" class="estimator-option active" data-group="pay" data-val="none" data-price="0" data-title="بدون بوابات دفع" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">بدون دفع إلكتروني</span>
+                                            <span class="option-price-diff">+€0</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pay" data-val="standard" data-price="240" data-title="بوابات دفع أوروبية (iDEAL + Stripe + Apple Pay)" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">بوابات دفع معتمدة (iDEAL &amp; Stripe)</span>
+                                            <span class="option-price-diff">+€240</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pay" data-val="erp" data-price="480" data-title="بوابات دفع + ربط محاسبي آلي ونظام ERP" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">دفع إلكتروني + ربط ERP تلقائي</span>
+                                            <span class="option-price-diff">+€480</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 05. سرعة التسليم -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">05</span>
+                                        أولوية وسرعة التسليم:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupSpeed">
+                                        <button type="button" class="estimator-option active" data-group="speed" data-val="standard" data-price="0" data-title="جدول زمني قياسي" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">تسليم قياسي</span>
+                                            <span class="option-price-diff">+€0</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="speed" data-val="fast" data-price="200" data-title="تسليم سريع ومكثف (-30% من الوقت)" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">تسليم سريع مكثف</span>
+                                            <span class="option-price-diff">+€200</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="speed" data-val="rush" data-price="450" data-title="أولوية VIP فائقة ومسار سريع جداً" data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">أولوية VIP فائقة</span>
+                                            <span class="option-price-diff">+€450</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            

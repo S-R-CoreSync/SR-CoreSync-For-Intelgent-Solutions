@@ -1166,7 +1166,7 @@
    }
   },
   "de": {
-   "bytes": 615686,
+   "bytes": 625502,
    "sections": {
     "hero": {
      "tag": "section",
@@ -1218,7 +1218,7 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33938,
+     "bytes": 33820,
      "li": 0,
      "article": 0,
      "h2h3": 4,
@@ -1226,7 +1226,7 @@
      "img": 9,
      "button": 12,
      "cards": 51,
-     "text": 282
+     "text": 283
     },
     "services-compare": {
      "tag": "section",
@@ -1314,15 +1314,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 56742,
-     "li": 64,
+     "bytes": 60987,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1133
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1232
     },
     "guarantees": {
      "tag": "section",
@@ -1338,7 +1338,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 300396,
+     "bytes": 305761,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -1346,7 +1346,7 @@
      "img": 45,
      "button": 71,
      "cards": 77,
-     "text": 12070
+     "text": 12262
     },
     "executive-solutions-stage": {
      "tag": "section",
@@ -4661,7 +4661,7 @@
    }
   },
   "nl": {
-   "bytes": 613200,
+   "bytes": 623436,
    "sections": {
     "hero": {
      "tag": "section",
@@ -4713,7 +4713,7 @@
     },
     "services": {
      "tag": "section",
-     "bytes": 33906,
+     "bytes": 33784,
      "li": 0,
      "article": 0,
      "h2h3": 4,
@@ -4809,15 +4809,15 @@
     },
     "pricing": {
      "tag": "section",
-     "bytes": 56090,
-     "li": 64,
+     "bytes": 60320,
+     "li": 72,
      "article": 0,
      "h2h3": 2,
      "tr": 21,
-     "img": 4,
-     "button": 14,
-     "cards": 4,
-     "text": 1171
+     "img": 5,
+     "button": 15,
+     "cards": 7,
+     "text": 1273
     },
     "guarantees": {
      "tag": "section",
@@ -4833,7 +4833,7 @@
     },
     "faq": {
      "tag": "section",
-     "bytes": 299600,
+     "bytes": 305408,
      "li": 21,
      "article": 3,
      "h2h3": 23,
@@ -4841,7 +4841,7 @@
      "img": 45,
      "button": 71,
      "cards": 77,
-     "text": 12080
+     "text": 12305
     },
     "executive-solutions-stage": {
      "tag": "section",
