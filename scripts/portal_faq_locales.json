@@ -529,5 +529,47 @@
     "a": "Radimo metodom paralelne simulacijske migracije. API konektori i sinkronizacija knjiženja razvijaju se u izoliranom testnom okruženju, a svi računi i tokovi se provjeravaju. Prelazak u produkciju događa se tek nakon 100 % provjere – bez ijedne sekunde zastoja (zero downtime)."
    }
   }
+ },
+ "bg": {
+  "heading": "Често задавани въпроси",
+  "faq": {
+   "06": {
+    "q": "Притежаваме ли изцяло изходния код и базите данни (IP Ownership)?",
+    "a": "<strong>Да, на 100 %.</strong> Нашите договори прехвърлят всички права върху изходния код, дизайните и базите данни на вашата компания – без ограничения, без лицензионни такси и без скрити абонаменти. Получавате и пълна документация за архитектурата и сигурността, за да може екипът ви да развива системата самостоятелно."
+   },
+   "07": {
+    "q": "Как се обработват фактурите и данъците за компании в Нидерландия и ЕС?",
+    "a": "Издаваме официални европейски данъчни фактури, регистрирани в нидерландската данъчна администрация (Belastingdienst), с ДДС номер (btw-nummer) и номер KvK. Компаниите със седалище в Нидерландия могат да възстановят 21 % ДДС; за компаниите в ЕС се прилага обратно начисляване (0 % ДДС). Сумите са напълно приспадащи се като оперативни разходи."
+   },
+   "08": {
+    "q": "Как гарантирате поверителността на нашите данни и сигурността на системите според европейските стандарти (GDPR)?",
+    "a": "Работим в съответствие с GDPR и преди началото подписваме взаимно, юридически обвързващо споразумение за поверителност (NDA). Прилагаме криптиране от край до край (TLS 1.3 / AES-256), хостинг на суверенни европейски сървъри с 99,9 % наличност и ежедневни криптирани резервни копия."
+   },
+   "09": {
+    "q": "Вече използваме съществуващи финансови системи – как гарантирате интеграция и миграция без прекъсване на дейността?",
+    "a": "Работим с метод на паралелна симулационна миграция. API конекторите и синхронизацията на счетоводните записи се разработват в изолирана тестова среда и всички сметки и потоци се проверяват. Преминаването към продукция става само след 100 % проверка – без нито една секунда прекъсване (zero downtime)."
+   }
+  }
+ },
+ "et": {
+  "heading": "Korduma kippuvad küsimused",
+  "faq": {
+   "06": {
+    "q": "Kas meile kuulub lähtekood ja andmebaasid täielikult (IP Ownership)?",
+    "a": "<strong>Jah, 100%.</strong> Meie lepingud annavad kõik õigused lähtekoodile, disainile ja andmebaasidele üle teie ettevõttele – ilma piiranguteta, litsentsitasudeta ja peidetud tellimusteta. Saate ka täieliku arhitektuuri- ja turvadokumentatsiooni, et teie meeskond saaks süsteemi iseseisvalt edasi arendada."
+   },
+   "07": {
+    "q": "Kuidas käsitletakse arveid ja makse Hollandi ja ELi ettevõtete jaoks?",
+    "a": "Väljastame ametlikud Euroopa maksuarved, mis on registreeritud Hollandi maksuametis (Belastingdienst), käibemaksunumbri (btw-nummer) ja KvK numbriga. Hollandis registreeritud ettevõtted saavad 21% käibemaksu tagasi; ELi ettevõtetele rakendub pöördmaksustamine (0% käibemaks). Summad on täielikult mahaarvatavad tegevuskuludena."
+   },
+   "08": {
+    "q": "Kuidas tagate meie andmete konfidentsiaalsuse ja süsteemide turvalisuse Euroopa standardite (GDPR) kohaselt?",
+    "a": "Töötame GDPR-iga kooskõlas ja allkirjastame enne töö algust vastastikuse, juriidiliselt siduva konfidentsiaalsuslepingu (NDA). Kasutame otsast-otsani krüpteerimist (TLS 1.3 / AES-256), majutust suveräänsetel Euroopa serveritel 99,9% käideldavusega ja igapäevaseid krüpteeritud varukoopiaid."
+   },
+   "09": {
+    "q": "Me kasutame juba olemasolevaid finantssüsteeme – kuidas tagate integratsiooni ja migratsiooni ilma tegevust katkestamata?",
+    "a": "Töötame paralleelse simulatsioonimigratsiooni meetodil. API-konnektorid ja kannete sünkroonimine luuakse isoleeritud testkeskkonnas ning kõik kontod ja voogud kontrollitakse. Tootmisse minnakse alles pärast 100% kontrolli – ilma ühegi sekundi seisakuta (zero downtime)."
+   }
+  }
  }
 }
