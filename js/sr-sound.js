@@ -2,7 +2,12 @@
    Rules baked in: off until the visitor asks for it, one sound per action,
    nothing longer than 160 ms, no loops, no reverb tails, no sound on load,
    scroll or hover. Generated with WebAudio, so there is no file to download and
-   nothing for the CSP to block. */
+   nothing for the CSP to block.
+
+   Dispatch uses the hooks the page already has (data-sr-call), not CSS classes,
+   so a restyle cannot silently break the sound. For asynchronous outcomes the
+   page can call window.srSound.play('success') or play('error') once it knows
+   the real result - this file never guesses. */
 (function () {
   'use strict';
   if (window.__srSound) return;
@@ -80,17 +85,38 @@
     if (RECIPES[name]) RECIPES[name]();
   }
 
-  var SWITCHERS = '[role="tab"], .sp-tab, .showcase-tab-btn, .nav-more-btn, .tab-btn, .software-filter-bar button';
-  var TOGGLERS = '.accordion-button, [aria-expanded], details > summary, .faq-question, .faq-item button';
+  var COPY = /copy/i;
+  var TOGGLE = /^(toggle|open|close)|faq/i;
+  var SWITCH = /(switch|tab|filter|slide|next|prev)/i;
 
   document.addEventListener('click', function (event) {
     var target = event.target;
     if (!target || !target.closest) return;
     if (target.closest('.sr-sound-toggle')) return;
-    if (target.closest(TOGGLERS)) { play('toggle'); return; }
-    if (target.closest(SWITCHERS)) { play('switch'); return; }
-    if (target.closest('[data-copy], .copy-btn, [class*="copy-link"]')) { play('copy'); return; }
-    if (target.closest('a[href], button')) { play('tap'); }
+
+    var hook = target.closest('[data-sr-call]');
+    var name = hook ? (hook.getAttribute('data-sr-call') || '') : '';
+
+    if (COPY.test(name) || target.closest('[data-copy], .copy-btn, [class*="copy-link"]')) {
+      play('copy'); return;
+    }
+    if (TOGGLE.test(name) || target.closest('details > summary, .accordion-action, .faq-question')) {
+      play('toggle'); return;
+    }
+    if (SWITCH.test(name) || target.closest('[role="tab"], .sp-tab, .showcase-tab-btn')) {
+      play('switch'); return;
+    }
+    if (target.closest('a[href], button')) play('tap');
+  }, true);
+
+  /* A blocked submit is knowable, so it may sound like an error. Success is not
+     knowable here, so it stays silent unless the page reports it. */
+  document.addEventListener('submit', function (event) {
+    var form = event.target;
+    if (!form || !form.elements) return;
+    var ok = true;
+    try { ok = form.checkValidity(); } catch (e) { ok = true; }
+    play(ok ? 'tap' : 'error');
   }, true);
 
   function paint(button) {
@@ -121,6 +147,7 @@
     button.setAttribute('title', 'Interface sound');
     button.addEventListener('click', function (event) {
       event.preventDefault();
+      event.stopPropagation();
       setEnabled(!enabled);
     });
     host.appendChild(button);
@@ -136,4 +163,4 @@
   else start();
 
   window.srSound = { play: play, setEnabled: setEnabled, isEnabled: function () { return enabled; } };
-})();
+})()
