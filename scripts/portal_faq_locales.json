@@ -403,5 +403,47 @@
     "a": "Lucrăm cu migrare prin simulare paralelă. Conectorii API și sincronizarea înregistrărilor sunt dezvoltate într-un mediu de test izolat, iar toate conturile și fluxurile sunt verificate. Trecerea în producție are loc doar după verificare 100% — fără nicio secundă de întrerupere (zero downtime)."
    }
   }
+ },
+ "hu": {
+  "heading": "Gyakori kérdések",
+  "faq": {
+   "06": {
+    "q": "Teljes mértékben a miénk a forráskód és az adatbázisok (IP Ownership)?",
+    "a": "<strong>Igen, 100%-ban.</strong> Szerződéseink a forráskódra, a designokra és az adatbázisokra vonatkozó összes jogot teljes egészében átruházzák az Ön cégére – korlátozások, licencdíjak és rejtett előfizetések nélkül. Emellett teljes architektúra- és biztonsági dokumentációt is kap, hogy csapata önállóan fejleszthesse tovább a rendszert."
+   },
+   "07": {
+    "q": "Hogyan kezelik a számlázást és az adókat a hollandiai és EU-s cégek esetében?",
+    "a": "Hivatalos európai adószámlákat állítunk ki, amelyeket a holland adóhatóságnál (Belastingdienst) regisztráltunk, feltüntetve az áfa-számot (btw-nummer) és a KvK-számot. A Hollandiában bejegyzett cégek visszaigényelhetik a 21% áfát; az EU-s cégek esetében fordított adózás érvényes (0% áfa). Az összegek teljes egészében működési költségként elszámolhatók."
+   },
+   "08": {
+    "q": "Hogyan garantálják adataink bizalmasságát és rendszereink biztonságát az európai előírások (GDPR) szerint?",
+    "a": "GDPR-megfelelően dolgozunk, és a munka megkezdése előtt kölcsönös, jogilag kötelező titoktartási megállapodást (NDA) írunk alá. Végponttól végpontig titkosítást (TLS 1.3 / AES-256), szuverén európai szervereken történő tárhelyet 99,9%-os rendelkezésre állással, valamint napi titkosított biztonsági mentéseket alkalmazunk."
+   },
+   "09": {
+    "q": "Már használunk meglévő pénzügyi rendszereket – hogyan biztosítják az integrációt és a migrációt a működés leállítása nélkül?",
+    "a": "Párhuzamos szimulációs migrációval dolgozunk. Az API-kapcsolatok és a könyvelési tételek szinkronizálása izolált tesztkörnyezetben készül, és minden számla és folyamat ellenőrzésre kerül. Az éles bevezetés csak 100%-os ellenőrzés után történik – egyetlen másodperc kiesés nélkül (zero downtime)."
+   }
+  }
+ },
+ "sk": {
+  "heading": "Časté otázky",
+  "faq": {
+   "06": {
+    "q": "Vlastníme zdrojový kód a databázy úplne (IP Ownership)?",
+    "a": "<strong>Áno, na 100 %.</strong> Naše zmluvy prevádzajú všetky práva k zdrojovému kódu, dizajnom a databázam na vašu spoločnosť – bez obmedzení, bez licenčných poplatkov a bez skrytých predplatných. Získate aj kompletnú dokumentáciu architektúry a zabezpečenia, aby váš tím mohol systém samostatne rozvíjať."
+   },
+   "07": {
+    "q": "Ako sú riešené faktúry a dane pre firmy v Holandsku a EÚ?",
+    "a": "Vystavujeme oficiálne európske daňové faktúry registrované u holandskej finančnej správy (Belastingdienst) s číslom DPH (btw-nummer) a číslom KvK. Firmy so sídlom v Holandsku si môžu uplatniť vrátenie 21 % DPH; pre firmy v EÚ platí prenesená daňová povinnosť (0 % DPH). Sumy sú plne odpočítateľné ako prevádzkové náklady."
+   },
+   "08": {
+    "q": "Ako zabezpečujete dôvernosť našich dát a bezpečnosť systémov podľa európskych štandardov (GDPR)?",
+    "a": "Pracujeme v súlade s GDPR a pred začatím podpisujeme vzájomnú, právne záväznú dohodu o mlčanlivosti (NDA). Používame end-to-end šifrovanie (TLS 1.3 / AES-256), hosting na suverénnych európskych serveroch s dostupnosťou 99,9 % a denné šifrované zálohy."
+   },
+   "09": {
+    "q": "Používame už existujúce finančné systémy – ako zabezpečíte integráciu a migráciu bez prerušenia prevádzky?",
+    "a": "Pracujeme metódou paralelnej simulačnej migrácie. API konektory a synchronizácia účtovných zápisov vznikajú v izolovanom testovacom prostredí a všetky účty a toky sa overujú. Do produkcie prechádzame až po 100 % overení – bez jedinej sekundy výpadku (zero downtime)."
+   }
+  }
  }
 }
