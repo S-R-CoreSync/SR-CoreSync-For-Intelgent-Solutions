@@ -12,6 +12,24 @@ from lxml import html as LH
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP = {"script", "style", "svg", "path", "rect", "line", "polyline", "circle"}
+
+BRANDS = ["S&R CoreSync For Intelligent Solutions", "S&R CORESYNC FOR INTELLIGENT SOLUTIONS",
+          "S&R CORESYNC", "For Intelligent Solutions", "Official Corporate Emblem",
+          "Brand Emblem", "S&R TaxSync Desktop", "S&R CloudPOS Connector",
+          "S&R FlowScan AI Mobile", "S&R Financial AI SDK", "S&R SecureVault B2B",
+          "S&R Cloud Terminal Agent", "S&R CivicSync", "S&R HealthBridge",
+          "S&R OmniBakery"]
+
+
+def is_brand_only(text):
+    """A line that carries nothing but the brand, a product name or an emblem label."""
+    rest = text
+    for brand in BRANDS:
+        rest = re.sub(re.escape(brand), " ", rest, flags=re.I)
+    rest = re.sub(r"[^A-Za-z\u00C0-\u024F]+", " ", rest)
+    words = [w for w in rest.split() if len(w) > 2]
+    return len(words) < 4
+
 EN = re.compile(r"\b(the|and|your|with|from|this|that|our|we|are|is|will|can|you|for|of|to|"
                 r"all|new|more|best|ready|solutions|systems|software|services)\b", re.I)
 
@@ -38,6 +56,8 @@ def main():
         hits = len(EN.findall(text))
         words = len(text.split())
         if hits < 2 or words < 3:
+            continue
+        if is_brand_only(text):
             continue
         # section = nearest ancestor with an id
         node, section = el, ""
