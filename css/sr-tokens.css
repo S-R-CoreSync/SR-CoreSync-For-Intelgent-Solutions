@@ -124,3 +124,10 @@ html.sr-cmd-open{overflow:hidden}
 .sr-legal-links a{color:rgba(233,226,207,.72);text-decoration:none}
 .sr-legal-links a:hover,.sr-legal-links a:focus-visible{color:#f0d79a;outline:none}
 .sr-legal-links span{opacity:.4}
+
+/* Cross-link from the value block to the full founder profile. */
+.founders-link{margin:1.5rem 0 0;text-align:center}
+.founders-link a{display:inline-flex;align-items:center;gap:.45rem;font-size:.87rem;
+  color:var(--sr-gold-text,#ecd9a0);text-decoration:none;border-bottom:1px solid rgba(216,178,94,.35);
+  padding-bottom:2px}
+.founders-link a:hover,.founders-link a:focus-visible{color:#f6e6b6;border-bottom-color:rgba(216,178,94,.72);outline:none}
