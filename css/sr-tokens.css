@@ -115,3 +115,12 @@ html.sr-cmd-open{overflow:hidden}
 .sr-consent__btn--yes{background:rgba(212,175,55,.16);border-color:rgba(216,178,94,.55);color:#f4e3b0}
 @media (max-width:520px){.sr-consent{inset-inline-start:10px;inset-block-end:10px;max-width:calc(100vw - 20px);padding:12px 13px}}
 @media (prefers-reduced-motion:reduce){.sr-consent__btn{transition:none}}
+
+/* Draft marker on the new terms sections, and the footer legal links. */
+.sr-legal-draft{font-size:.82rem;color:#d4af37;border:1px dashed rgba(212,175,55,.5);
+  border-radius:8px;padding:.6rem .8rem;margin:.4rem 0 1rem}
+.sr-legal-links{display:flex;gap:.6rem;justify-content:center;align-items:center;
+  padding:.7rem 0 .4rem;font-size:.82rem}
+.sr-legal-links a{color:rgba(233,226,207,.72);text-decoration:none}
+.sr-legal-links a:hover,.sr-legal-links a:focus-visible{color:#f0d79a;outline:none}
+.sr-legal-links span{opacity:.4}

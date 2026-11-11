@@ -303,6 +303,13 @@
     build();
   }
 
+  document.addEventListener('click', function (event) {
+    if (event.target.closest && event.target.closest('.sr-consent-open')) {
+      event.preventDefault();
+      build();
+    }
+  }, true);
+
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
 
