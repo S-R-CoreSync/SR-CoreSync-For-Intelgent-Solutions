@@ -2768,7 +2768,344 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                 </div>
 
             </div>
-        </section>
+        <div class="sp-tabs" role="tablist"><button type="button" class="sp-tab is-active" role="tab" data-key="store" id="sp-tab-store" aria-controls="sp-panel-store" aria-selected="true"><span>Piață de software</span></button><button type="button" class="sp-tab" role="tab" data-key="wl" id="sp-tab-wl" aria-controls="sp-panel-wl" aria-selected="false" tabindex="-1"><span>Licențiere White-Label</span></button><button type="button" class="sp-tab" role="tab" data-key="lab" id="sp-tab-lab" aria-controls="sp-panel-lab" aria-selected="false" tabindex="-1"><span>Laborator și parteneriate</span></button></div>
+<div class="sp-panel" id="sp-panel-store" role="tabpanel" aria-labelledby="sp-tab-store"><div class="software-filter-bar">
+                    <button type="button" class="software-filter-pill active" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["all"]' data-sr-this="last">
+                        <span>🗂️ Toate software-urile și sistemele</span>
+                        <span class="pill-count">9 produse</span>
+                    </button>
+                    <button type="button" class="software-filter-pill software-filter-pill--platforms"
+                        data-sr-call="filterSoftwareMarketplace" data-sr-args='["platforms"]' data-sr-this="last">
+                        <span>🏛️ Platforme de identitate pregătite pentru licențiere</span>
+                        <span class="pill-count">3 platforme</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["accounting"]' data-sr-this="last">
+                        <span>📊 Soluții contabile și financiare autonome</span>
+                        <span class="pill-count">3 soluții</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["developer"]' data-sr-this="last">
+                        <span>💻 Software pentru dezvoltatori, cloud și SDK</span>
+                        <span class="pill-count">3 instrumente</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["lab"]' data-sr-this="last">
+                        <span>🚀 Laboratorul de proiecte al fondatorului ing. Salim</span>
+                        <span class="pill-count">Exclusiv</span>
+                    </button>
+                </div><div class="row g-4 mb-4" id="softwareGridContainer">
+
+                    <!-- 1. S&R TaxSync Desktop -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--featured">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">💻</span>
+                                    <span class="status-badge status-completed software-card-badge">Cel mai solicitat ★ •
+                                        Offline Desktop</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R TaxSync Desktop</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.4 Pro • Windows 11/10 (64-bit) &amp; macOS
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Software desktop contabil și fiscal autonom, funcționează offline pentru a calcula TVA/BTW de 21% și 9% și a emite declarații XML
+                                    pentru autoritățile fiscale olandeze și din Golf conform standardelor Belastingdienst.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Date și operațiuni criptate local, fără conexiune</li>
+                                    <li>✓ Generare și export de declarații fiscale XML certificate</li>
+                                    <li>✓ Tipărire de facturi oficiale conform EN 16931</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 189</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Licență
+                                        anual / dispozitiv</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["taxsync"]'
+                                       >
+                                        <span>⚡ Gata de utilizare</span>
+                                    </button>
+                                    <a href="downloads/SR-TaxSync-Web-App.html" download="SR-TaxSync-Web-App.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. S&R CloudPOS Connector -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--green">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">⚡</span>
+                                    <span class="status-badge software-card-badge--green">Puncte de vânzare • POS Agent</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R CloudPOS Connector</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v3.1 Agent Service • Windows POS Terminal
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Agent software ușor care conectează casele magazinelor și restaurantelor la ERP-ul cloud
+                                    pentru a sincroniza stocurile și lichiditatea fără a schimba echipamentele existente.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Integrare cu imprimante termice și coduri de bare</li>
+                                    <li>✓ Stocuri și vânzări offline cu restaurare automată</li>
+                                    <li>✓ Decontare de casă și inventar în timp real la finalul fiecărui schimb</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--green">€ 25</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">lunar /
+                                        punct de vânzare</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["cloudpos"]'
+                                       >
+                                        <span>⚡ Gata de utilizare</span>
+                                    </button>
+                                    <a href="downloads/SR-CloudPOS-Terminal.html" download="SR-CloudPOS-Terminal.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. S&R FlowScan AI Mobile -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--blue">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">📱</span>
+                                    <span class="status-badge software-card-badge--blue">Scanare inteligentă • Mobile OCR
+                                        AI</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R FlowScan AI Mobile</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.8 AI Engine • iOS 17+ &amp; Android 14+ PWA
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Aplicație mobilă pentru scanarea cu camera a bonurilor și facturilor pe hârtie și extragerea
+                                    datelor fiscale și a sumelor automat, transferându-le în timp real către ERP.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Extracție OCR cu precizie de 99,4%</li>
+                                    <li>✓ Clasificare automată a cheltuielilor operaționale și de combustibil</li>
+                                    <li>✓ Sincronizare în cloud cu panoul de management</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--blue">€ 9.99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">lunar /
+                                        utilizator</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["flowscan", "mobile"]'
+                                       >
+                                        <span>⚡ Gata de utilizare</span>
+                                    </button>
+                                    <a href="downloads/SR-FlowScan-Mobile-App.html"
+                                        download="SR-FlowScan-Mobile-App.html" class="tf-btn software-btn-sim"
+                                       >
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. S&R Financial AI SDK -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🧩</span>
+                                    <span class="status-badge software-card-badge">Pentru dezvoltatori și companii • Developer
+                                        SDK</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Financial AI SDK</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.2 Dev • Python / Node.js / C# / REST
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Bibliotecă software pentru integrarea algoritmilor de prognoză financiară, facturare și conformitate
+                                    în propriile aplicații, simplu și foarte rapid.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Pachete gata pentru Node.js (npm) și Python (pip)</li>
+                                    <li>✓ Prognoză de lichiditate și reconciliere a facturilor cu IA</li>
+                                    <li>✓ Documentație completă cu exemple funcționale</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">lunar
+                                        (50k API Calls)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["sdk"]'
+                                       >
+                                        <span>⚡ Gata de utilizare</span>
+                                    </button>
+                                    <a href="downloads/SR-Financial-AI-SDK.html" download="SR-Financial-AI-SDK.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. S&R SecureVault B2B -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--purple">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🛡️</span>
+                                    <span class="status-badge software-card-badge--purple">Criptare militară • AES-256
+                                        GDPR</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R SecureVault B2B</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.0 • Win Server / Linux / Cloud Docker
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Criptare și protecție a copiilor de siguranță și documentelor sensibile conform AES-256
+                                    cu servere izolate în Amsterdam, 100% conforme cu GDPR.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Criptare și decriptare locală cu un clic</li>
+                                    <li>✓ Protecție avansată pentru bazele de date SQL și documente</li>
+                                    <li>✓ Instrument CLI pentru automatizare și copii programate</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--purple">€ 49</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">lunar
+                                        (1TB Encrypted)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["vault"]'
+                                       >
+                                        <span>⚡ Gata de utilizare</span>
+                                    </button>
+                                    <a href="downloads/SR-SecureVault-App.html" download="SR-SecureVault-App.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. S&R Cloud Terminal Agent -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--featured">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">⚙️</span>
+                                    <span class="status-badge software-card-badge">Administrare servere • DevOps Agent</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Cloud Terminal Agent</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.0 DevOps • Windows / Linux CLI
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Agent cloud avansat pentru monitorizarea serverelor de microservicii, consumului de CPU și memorie
+                                    și repornirea automată a serviciilor cu alerte imediate.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Monitorizare live cu Heartbeat și metrici SLA</li>
+                                    <li>✓ Consum de memorie ultra-redus (sub 15 MB)</li>
+                                    <li>✓ Conexiune directă la clusterul din Amsterdam AMS-01</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 39</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">lunar /
+                                        Cluster</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["sdk"]'
+                                       >
+                                        <span>⚡ Gata de utilizare</span>
+                                    </button>
+                                    <a href="downloads/SR-Financial-AI-SDK.html" download="SR-Financial-AI-SDK.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- ===== منصات S&R العامة القابلة للLicență (Universal White-Label Platforms) ===== --></div></div>
+            </section>
 <section class="section-testimonial flat-spacing tf-btn-swiper-main" id="testimonials" data-section>
             <h6 class="mini-title text-caption text-white-64 text-center">
                 Ales de lideri enterprise și grupuri de companii
