@@ -2790,6 +2790,343 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                                 <span>Toiminta offline- ja pilvitilassa</span>
                             </div>
                         </div>
+            <div class="sp-tabs" role="tablist"><button type="button" class="sp-tab is-active" role="tab" data-key="store" id="sp-tab-store" aria-controls="sp-panel-store" aria-selected="true"><span>Ohjelmistomarkkinat</span></button><button type="button" class="sp-tab" role="tab" data-key="wl" id="sp-tab-wl" aria-controls="sp-panel-wl" aria-selected="false" tabindex="-1"><span>White-label-lisensointi</span></button><button type="button" class="sp-tab" role="tab" data-key="lab" id="sp-tab-lab" aria-controls="sp-panel-lab" aria-selected="false" tabindex="-1"><span>Laboratorio ja kumppanuudet</span></button></div>
+<div class="sp-panel" id="sp-panel-store" role="tabpanel" aria-labelledby="sp-tab-store"><div class="software-filter-bar">
+                    <button type="button" class="software-filter-pill active" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["all"]' data-sr-this="last">
+                        <span>🗂️ Kaikki ohjelmistot ja järjestelmät</span>
+                        <span class="pill-count">9 tuotetta</span>
+                    </button>
+                    <button type="button" class="software-filter-pill software-filter-pill--platforms"
+                        data-sr-call="filterSoftwareMarketplace" data-sr-args='["platforms"]' data-sr-this="last">
+                        <span>🏛️ Yritysidentiteetin alustat, valmiina lisensointiin</span>
+                        <span class="pill-count">3 alustaa</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["accounting"]' data-sr-this="last">
+                        <span>📊 Itsenäiset kirjanpito- ja talousratkaisut</span>
+                        <span class="pill-count">3 ratkaisua</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["developer"]' data-sr-this="last">
+                        <span>💻 Kehittäjäohjelmistot, pilvi ja SDK</span>
+                        <span class="pill-count">3 työkalua</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["lab"]' data-sr-this="last">
+                        <span>🚀 Perustaja ins. Salimin projektilaboratorio</span>
+                        <span class="pill-count">Eksklusiivinen</span>
+                    </button>
+                </div><div class="row g-4 mb-4" id="softwareGridContainer">
+
+                    <!-- 1. S&R TaxSync Desktop -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--featured">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">💻</span>
+                                    <span class="status-badge status-completed software-card-badge">Kysytyin ★ •
+                                        Offline Desktop</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R TaxSync Desktop</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.4 Pro • Windows 11/10 (64-bit) &amp; macOS
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Itsenäinen kirjanpito- ja vero-ohjelmisto työpöydälle, toimii offline, laskee ALV/BTW 21 % ja 9 % ja tuottaa XML-ilmoitukset
+                                    Alankomaiden ja Persianlahden veroviranomaisille Belastingdienst-standardien mukaisesti.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Tiedot ja toiminnot salattu paikallisesti, ilman yhteyttä</li>
+                                    <li>✓ Sertifioitujen XML-veroilmoitusten luonti ja vienti</li>
+                                    <li>✓ Virallisten laskujen tulostus EN 16931 -standardin mukaisesti</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 189</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Lisenssi
+                                        vuosi / laite</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["taxsync"]'
+                                       >
+                                        <span>⚡ Käyttövalmis</span>
+                                    </button>
+                                    <a href="../downloads/SR-TaxSync-Web-App.html" download="SR-TaxSync-Web-App.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. S&R CloudPOS Connector -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--green">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">⚡</span>
+                                    <span class="status-badge software-card-badge--green">Myyntipisteet • POS Agent</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R CloudPOS Connector</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v3.1 Agent Service • Windows POS Terminal
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Kevyt ohjelmistoagentti, joka yhdistää kauppojen ja ravintoloiden kassat pilvi-ERP:iin
+                                    varastojen ja kassavirran synkronointiin ilman laitemuutoksia.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Integraatio lämpötulostimiin ja viivakoodeihin</li>
+                                    <li>✓ Varastot ja myynti offline-tilassa automaattisella palautuksella</li>
+                                    <li>✓ Kassaselvitys ja inventaario reaaliajassa jokaisen vuoron lopussa</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--green">€ 25</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">kuukausi /
+                                        myyntipiste</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["cloudpos"]'
+                                       >
+                                        <span>⚡ Käyttövalmis</span>
+                                    </button>
+                                    <a href="../downloads/SR-CloudPOS-Terminal.html" download="SR-CloudPOS-Terminal.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. S&R FlowScan AI Mobile -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--blue">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">📱</span>
+                                    <span class="status-badge software-card-badge--blue">Älykäs skannaus • Mobile OCR
+                                        AI</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R FlowScan AI Mobile</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.8 AI Engine • iOS 17+ &amp; Android 14+ PWA
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Mobiilisovellus kuittien ja paperilaskujen skannaamiseen kameralla ja
+                                    verotietojen ja summien automaattiseen poimintaan, siirto reaaliajassa ERP:iin.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ OCR-poiminta 99,4 % tarkkuudella</li>
+                                    <li>✓ Toiminta- ja polttoainekulujen automaattinen erittely</li>
+                                    <li>✓ Pilvisynkronointi hallintapaneelin kanssa</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--blue">€ 9.99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">kuukausi /
+                                        käyttäjä</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["flowscan", "mobile"]'
+                                       >
+                                        <span>⚡ Käyttövalmis</span>
+                                    </button>
+                                    <a href="../downloads/SR-FlowScan-Mobile-App.html"
+                                        download="SR-FlowScan-Mobile-App.html" class="tf-btn software-btn-sim"
+                                       >
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. S&R Financial AI SDK -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🧩</span>
+                                    <span class="status-badge software-card-badge">Kehittäjille ja yrityksille • Developer
+                                        SDK</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Financial AI SDK</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.2 Dev • Python / Node.js / C# / REST
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Ohjelmistokirjasto talousennusteiden, laskutuksen ja vaatimustenmukaisuuden algoritmien integrointiin
+                                    omiin sovelluksiin helposti ja erittäin nopeasti.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Valmiit paketit Node.js (npm) ja Python (pip)</li>
+                                    <li>✓ Kassavirran ennuste ja laskujen täsmäytys AI:lla</li>
+                                    <li>✓ Täydellinen dokumentaatio toimivilla esimerkeillä</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">kuukausi
+                                        (50k API Calls)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["sdk"]'
+                                       >
+                                        <span>⚡ Käyttövalmis</span>
+                                    </button>
+                                    <a href="../downloads/SR-Financial-AI-SDK.html" download="SR-Financial-AI-SDK.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. S&R SecureVault B2B -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--purple">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🛡️</span>
+                                    <span class="status-badge software-card-badge--purple">Sotilaallinen salaus • AES-256
+                                        GDPR</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R SecureVault B2B</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.0 • Win Server / Linux / Cloud Docker
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Tietokantojen varmuuskopioiden ja arkaluontoisten asiakirjojen salaus ja suojaus AES-256:n mukaisesti
+                                    eristetyillä palvelimilla Amsterdamissa, 100 % GDPR-yhteensopiva.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Paikallinen salaus ja salauksen purku yhdellä napsautuksella</li>
+                                    <li>✓ SQL-tietokantojen ja asiakirjojen edistynyt suojaus</li>
+                                    <li>✓ CLI-työkalu automaatioon ja ajastettuihin varmuuskopioihin</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price--purple">€ 49</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">kuukausi
+                                        (1TB Encrypted)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["vault"]'
+                                       >
+                                        <span>⚡ Käyttövalmis</span>
+                                    </button>
+                                    <a href="../downloads/SR-SecureVault-App.html" download="SR-SecureVault-App.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. S&R Cloud Terminal Agent -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div
+                            class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--featured">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">⚙️</span>
+                                    <span class="status-badge software-card-badge">Palvelinten hallinta • DevOps Agent</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Cloud Terminal Agent</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.0 DevOps • Windows / Linux CLI
+                                </div>
+                                <p class="text-white-64 software-card-desc">
+                                    Edistynyt pilviagentti mikropalvelinten, CPU:n ja muistin käytön seurantaan
+                                    ja palveluiden automaattiseen uudelleenkäynnistykseen välittömillä hälytyksillä.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Reaaliaikainen seuranta Heartbeat- ja SLA-mittareilla</li>
+                                    <li>✓ Erittäin pieni muistinkäyttö (alle 15 MB)</li>
+                                    <li>✓ Suora yhteys Amsterdamin klusteriin AMS-01</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 39</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">kuukausi /
+                                        Cluster</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download"
+                                        data-sr-call="openSoftwareLiveApp" data-sr-args='["sdk"]'
+                                       >
+                                        <span>⚡ Käyttövalmis</span>
+                                    </button>
+                                    <a href="../downloads/SR-Financial-AI-SDK.html" download="SR-Financial-AI-SDK.html"
+                                        class="tf-btn software-btn-sim">
+                                        <span>Offline 📥</span>
+                                    </a>
+                                    <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- ===== منصات S&R العامة القابلة للLisenssi (Universal White-Label Platforms) ===== --></div></div>
             </section>
 <section class="section-testimonial flat-spacing tf-btn-swiper-main" id="testimonials" data-section>
             <h6 class="mini-title text-caption text-white-64 text-center">
