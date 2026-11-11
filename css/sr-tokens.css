@@ -91,3 +91,11 @@ html.sr-cmd-open{overflow:hidden}
 .sr-intent a:hover,.sr-intent a:focus-visible{border-color:rgba(216,178,94,.62);color:#f0d79a;outline:none}
 @media (max-width:520px){.sr-promise{font-size:.9rem}.sr-intent a{font-size:.74rem;padding:.38rem .7rem}}
 @media (prefers-reduced-motion:reduce){.sr-intent a{transition:none}}
+
+/* Interface sound toggle: icon only, sits with the intent chips. */
+.sr-sound-toggle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border-radius:999px;border:1px solid rgba(216,178,94,.28);background:rgba(9,11,14,.45);
+  color:rgba(233,226,207,.62);cursor:pointer;padding:0;transition:color .2s,border-color .2s}
+.sr-sound-toggle:hover,.sr-sound-toggle:focus-visible{color:#f0d79a;border-color:rgba(216,178,94,.62);outline:none}
+.sr-sound-toggle.is-on{color:#f0d79a;border-color:rgba(216,178,94,.72);background:rgba(212,175,55,.12)}
+@media (prefers-reduced-motion:reduce){.sr-sound-toggle{transition:none}}
