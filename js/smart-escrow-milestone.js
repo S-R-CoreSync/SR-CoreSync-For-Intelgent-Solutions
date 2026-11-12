@@ -75,6 +75,95 @@
 
     var listEl = document.getElementById("escrow-list");
     var terminalEl = document.getElementById("escrow-terminal");
+    var bridge = window.SRCaseBridge;
+    var bannerEl = document.getElementById("escrow-bridge-banner");
+
+    function isFrozen(vault) {
+        return vault.status === "DISPUTED_FROZEN" || vault.status === "FROZEN_BY_AWARD";
+    }
+
+    function statusTag(vault) {
+        if (vault.status === "DISPUTED_FROZEN") { return "⛔ مجمد بنزاع"; }
+        if (vault.status === "FROZEN_BY_AWARD") { return "⚖️ مجمد بحكم"; }
+        if (vault.status === "RELEASED_BY_AWARD") { return "✅ مُفرج بحكم"; }
+        if (vault.status === "PARTIALLY_RELEASED_BY_AWARD") { return "⚖️ إفراج جزئي بحكم"; }
+        return "نشط";
+    }
+
+    function directiveLabel(directive) {
+        return bridge ? bridge.directiveLabel(directive.action) : directive.action;
+    }
+
+    function renderBridgeBanner(vault, directive) {
+        if (!bannerEl) { return; }
+        if (!directive) {
+            bannerEl.hidden = true;
+            bannerEl.textContent = "";
+            return;
+        }
+        bannerEl.hidden = false;
+        bannerEl.className = "case-bridge-banner " + (directive.action === "FREEZE" ? "is-frozen" : "is-released");
+        bannerEl.textContent = "⚖️ أمر تنفيذ وارد من مركز التحكيم (" + vault.linkedArbitration + "): " +
+            directiveLabel(directive) + " • " + core.money(directive.amountEUR, "EUR") +
+            " • بصمة الأمر " + String(directive.seal).slice(0, 20) + "…";
+    }
+
+    /**
+     * Applies the sealed award directive of this vault's case exactly once.
+     * A repeated load re-reads the balances recorded by the bridge instead of
+     * releasing a second tranche, so refresh can never duplicate a payout.
+     */
+    function applyAwardDirective(vault) {
+        if (!bridge) { return null; }
+        var state = bridge.read(vault.linkedArbitration);
+        var directive = state && state.directive ? state.directive : null;
+        if (!directive) { return null; }
+
+        if (vault.bridgeDirectiveSeal === directive.seal) {
+            if (state.escrow && typeof state.escrow.releasedEUR === "number") {
+                vault.releasedAmount = Math.min(vault.totalAmount, state.escrow.releasedEUR);
+            }
+            return directive;
+        }
+
+        var remaining = vault.totalAmount - vault.releasedAmount;
+        var applied = 0;
+
+        if (directive.action === "FREEZE") {
+            vault.status = "FROZEN_BY_AWARD";
+        } else if (directive.action === "RELEASE_ALL") {
+            applied = remaining;
+            vault.releasedAmount = vault.totalAmount;
+            vault.status = "RELEASED_BY_AWARD";
+        } else if (directive.action === "PARTIAL_RELEASE") {
+            applied = Math.min(remaining, directive.amountEUR);
+            vault.releasedAmount += applied;
+            vault.status = (remaining - applied > 0) ? "PARTIALLY_RELEASED_BY_AWARD" : "RELEASED_BY_AWARD";
+        }
+
+        vault.bridgeDirectiveSeal = directive.seal;
+        vault.bridgeDirectiveAction = directive.action;
+        vault.bridgeAppliedAmount = applied;
+
+        bridge.markDirectiveApplied(vault.linkedArbitration, directive.seal,
+            directive.action + " • " + applied + " EUR released • " + vault.id);
+        return directive;
+    }
+
+    function reportVaultState(vault, transaction) {
+        if (!bridge) { return; }
+        bridge.reportEscrow(vault.linkedArbitration, {
+            escrowId: vault.id,
+            buyer: vault.buyer,
+            seller: vault.seller,
+            status: vault.status,
+            totalEUR: vault.totalAmount,
+            releasedEUR: vault.releasedAmount,
+            frozenEUR: isFrozen(vault) ? vault.totalAmount - vault.releasedAmount : 0,
+            directiveSeal: vault.bridgeDirectiveSeal || "",
+            lastTransaction: transaction || ""
+        });
+    }
 
     function renderVaults() {
         listEl.textContent = "";
@@ -83,7 +172,7 @@
 
         escrowVaults.forEach(function (vault) {
             totalAssets += vault.totalAmount;
-            if (vault.status === "DISPUTED_FROZEN") {
+            if (isFrozen(vault)) {
                 disputedAssets += (vault.totalAmount - vault.releasedAmount);
             }
 
@@ -101,8 +190,8 @@
             nameSpan.textContent = vault.buyer + " ➔ " + vault.seller;
 
             var tagSpan = document.createElement("span");
-            tagSpan.className = "item-tag mono " + (vault.status === "DISPUTED_FROZEN" ? "tag-red" : "");
-            tagSpan.textContent = vault.id + " (" + (vault.status === "DISPUTED_FROZEN" ? "⛔ مجمد بنزاع" : "نشط") + ")";
+            tagSpan.className = "item-tag mono " + (isFrozen(vault) ? "tag-red" : "");
+            tagSpan.textContent = vault.id + " (" + statusTag(vault) + ")";
 
             head.appendChild(nameSpan);
             head.appendChild(tagSpan);
@@ -118,6 +207,7 @@
             btn.addEventListener("click", function () {
                 selectedVault = vault;
                 renderVaults();
+                renderBridgeBanner(selectedVault, bridge ? bridge.directiveFor(selectedVault.linkedArbitration) : null);
                 renderTerminalWelcome();
             });
 
@@ -134,28 +224,54 @@
         var ct = contractTypes[selectedVault.type];
         var remaining = selectedVault.totalAmount - selectedVault.releasedAmount;
         var pctReleased = Math.round((selectedVault.releasedAmount / selectedVault.totalAmount) * 100);
+        var directive = bridge ? bridge.directiveFor(selectedVault.linkedArbitration) : null;
 
-        var statusLine = selectedVault.status === "DISPUTED_FROZEN"
-            ? ["log-red", "[STATUS] ⛔ FROZEN BY EMERGENCY DISPUTE LOCK • Case: " + selectedVault.linkedArbitration]
-            : ["log-green", "[STATUS] 🟢 ACTIVE & READY • Multisig vault: " + ct.multiSig];
+        var statusLine;
+        if (selectedVault.status === "DISPUTED_FROZEN") {
+            statusLine = ["log-red", "[STATUS] ⛔ FROZEN BY EMERGENCY DISPUTE LOCK • Case: " + selectedVault.linkedArbitration];
+        } else if (isFrozen(selectedVault)) {
+            statusLine = ["log-red", "[STATUS] ⚖️ FROZEN BY SEALED ARBITRAL AWARD • Directive seal: " + String(selectedVault.bridgeDirectiveSeal).slice(0, 20) + "…"];
+        } else if (selectedVault.status === "PARTIALLY_RELEASED_BY_AWARD") {
+            statusLine = ["log-gold", "[STATUS] ⚖️ PARTIALLY RELEASED BY SEALED ARBITRAL AWARD • remaining " + core.money(remaining, "EUR")];
+        } else if (selectedVault.bridgeDirectiveSeal) {
+            statusLine = ["log-green", "[STATUS] ✅ RELEASED BY SEALED ARBITRAL AWARD • Directive seal: " + String(selectedVault.bridgeDirectiveSeal).slice(0, 20) + "…"];
+        } else {
+            statusLine = ["log-green", "[STATUS] 🟢 ACTIVE & READY • Multisig vault: " + ct.multiSig];
+        }
 
-        core.renderLog(terminalEl, [
+        var lines = [
             ["log-gold", "[ESCROW VAULT] Account " + selectedVault.id + " loaded."],
             ["log-blue", "[PARTIES] Buyer: " + selectedVault.buyer + " | Seller: " + selectedVault.seller],
             ["log-blue", "[CONTRACT] " + ct.label + " (" + ct.std + ")"],
             ["log-violet", "[FINANCIALS] Total: " + core.money(selectedVault.totalAmount, "EUR") + " | Released: " + core.money(selectedVault.releasedAmount, "EUR") + " (" + pctReleased + "%) | In Escrow: " + core.money(remaining, "EUR")],
-            ["", "[CURRENT MILESTONE] " + selectedVault.stageName],
-            statusLine,
-            ["", "------------------------------------------------------------------"],
-            ["", "Choose an action: 'اعتماد الإنجاز والإفراج عن الدفعة' or 'تجميد طارئ للأصول (نزاع تحكيمي)'"]
-        ]);
+            ["", "[CURRENT MILESTONE] " + selectedVault.stageName]
+        ];
+
+        if (directive) {
+            lines.push(["log-gold", "[AWARD DIRECTIVE] " + directiveLabel(directive) + " • " + core.money(directive.amountEUR, "EUR") +
+                " • seal " + String(directive.seal).slice(0, 20) + "… • applied " + (directive.appliedAt || "pending")]);
+        }
+
+        lines.push(statusLine);
+        lines.push(["", "------------------------------------------------------------------"]);
+        lines.push(["", "Choose an action: 'اعتماد الإنجاز والإفراج عن الدفعة' or 'تجميد طارئ للأصول (نزاع تحكيمي)'"]);
+
+        core.renderLog(terminalEl, lines);
     }
 
     document.getElementById("btn-release-stage").addEventListener("click", function () {
-        if (selectedVault.status === "DISPUTED_FROZEN") {
+        if (isFrozen(selectedVault)) {
             core.renderLog(terminalEl, [
-                ["log-red", "[REJECTION] This escrow is LOCKED due to active international arbitration (" + selectedVault.linkedArbitration + ")."],
-                ["log-red", "Funds cannot be released until an Arbitral Award is uploaded and verified."]
+                ["log-red", "[REJECTION] This escrow is LOCKED by a dispute freeze or a sealed arbitral award (" + selectedVault.linkedArbitration + ")."],
+                ["log-red", "Funds cannot be released manually once an award directive is registered for the case."]
+            ]);
+            return;
+        }
+
+        if (bridge && bridge.directiveFor(selectedVault.linkedArbitration)) {
+            core.renderLog(terminalEl, [
+                ["log-red", "[REJECTION] A sealed award directive governs " + selectedVault.id + " (case " + selectedVault.linkedArbitration + ")."],
+                ["log-red", "Manual milestone releases are disabled once the tribunal award is registered; the directive decides the payout."]
             ]);
             return;
         }
@@ -193,6 +309,7 @@
             core.setText("kpi-release-count", String(releaseCount));
             core.setText("stat-last-tx", txHash.slice(0, 16) + "…");
             renderVaults();
+            reportVaultState(selectedVault, "MILESTONE_PAYOUT_RELEASE • " + txHash.slice(0, 16));
 
             core.renderLog(terminalEl, [
                 ["log-gold", "[PAYOUT EXECUTION] 3-of-5 multi-sig threshold verified for " + selectedVault.id],
@@ -226,6 +343,7 @@
 
             core.setText("stat-last-tx", "FREEZE:" + freezeHash.slice(0, 12) + "…");
             renderVaults();
+            reportVaultState(selectedVault, "EMERGENCY_DISPUTE_FREEZE • " + freezeHash.slice(0, 16));
 
             core.renderLog(terminalEl, [
                 ["log-red", "[EMERGENCY DISPUTE FREEZE] ⛔ ASSETS FROZEN IMMEDIATELY"],
@@ -281,14 +399,37 @@
         escrowVaults.push(newVault);
         selectedVault = newVault;
         renderVaults();
+        renderBridgeBanner(selectedVault, bridge ? bridge.directiveFor(selectedVault.linkedArbitration) : null);
         renderTerminalWelcome();
+        reportVaultState(newVault, "ESCROW_OPENED");
 
         msgEl.textContent = "  ✅ تم فتح محفظة الضمان " + newVault.id + " بنجاح";
         msgEl.style.color = "#6ee7b7";
         ev.target.reset();
     });
 
+    /* Pull the sealed award directives of every vault before the first paint, so
+       a case decided in the arbitration hub arrives already frozen or released. */
+    (function syncFromBridge() {
+        if (!bridge) { return; }
+
+        var requested = bridge.caseIdFromQuery();
+        if (requested) {
+            escrowVaults.forEach(function (vault) {
+                if (vault.linkedArbitration === requested) { selectedVault = vault; }
+            });
+        }
+
+        escrowVaults.forEach(function (vault) {
+            var directive = applyAwardDirective(vault);
+            if (directive || vault === selectedVault) {
+                reportVaultState(vault, "BRIDGE_SYNC");
+            }
+        });
+    })();
+
     renderVaults();
+    renderBridgeBanner(selectedVault, bridge ? bridge.directiveFor(selectedVault.linkedArbitration) : null);
     renderTerminalWelcome();
 })();
 

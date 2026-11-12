@@ -196,3 +196,71 @@ footer { border-top: 1px solid var(--border-dim); padding: 1.35rem 2rem; text-al
     .status-row { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
 }
 
+
+/* ---------------------------------------------------------------------------
+ * Mission 107 - cross-portal case bridge
+ * The arbitration hub shows these cells, the escrow and forensics portals show
+ * the banner. Both read the same sealed directive, so the three pages never
+ * disagree about the state of a case.
+ * ------------------------------------------------------------------------- */
+.case-bridge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.bridge-cell {
+    background: var(--bg-card-alt);
+    border: 1px solid var(--border-dim);
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bridge-cell strong {
+    color: var(--gold-bright);
+    font-size: 13px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.case-bridge-banner {
+    margin: 0 auto 18px;
+    width: min(1440px, calc(100% - 40px));
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid var(--border-gold);
+    background: rgba(212, 175, 55, 0.09);
+    color: var(--gold-bright);
+    font-size: 13.5px;
+    line-height: 1.8;
+    font-family: 'JetBrains Mono', 'Tajawal', monospace;
+    direction: rtl;
+    text-align: right;
+}
+
+.case-bridge-banner.is-frozen {
+    border-color: rgba(244, 63, 94, 0.55);
+    background: rgba(244, 63, 94, 0.12);
+    color: #fecdd3;
+}
+
+.case-bridge-banner.is-released {
+    border-color: rgba(16, 185, 129, 0.5);
+    background: rgba(16, 185, 129, 0.12);
+    color: #a7f3d0;
+}
+
+.case-bridge-banner[hidden] { display: none; }
+
+@media (max-width: 900px) {
+    .case-bridge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+    .case-bridge-grid { grid-template-columns: 1fr; }
+    .case-bridge-banner { width: calc(100% - 24px); font-size: 12.5px; }
+}

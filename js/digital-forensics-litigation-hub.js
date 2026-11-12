@@ -67,6 +67,37 @@
 
     var listEl = document.getElementById("evidence-list");
     var terminalEl = document.getElementById("forensic-terminal");
+    var bridge = window.SRCaseBridge;
+    var bannerEl = document.getElementById("forensic-bridge-banner");
+
+    function caseSummary(caseId) {
+        return bridge ? bridge.summary(caseId) : null;
+    }
+
+    function renderBridgeBanner() {
+        if (!bannerEl) { return; }
+        var summary = caseSummary(selectedEvidence.caseRef);
+        if (!summary) { return; }
+
+        if (!summary.directive && summary.evidenceCount === 0) {
+            bannerEl.hidden = true;
+            bannerEl.textContent = "";
+            return;
+        }
+
+        bannerEl.hidden = false;
+        var frozen = summary.directive && summary.directive.action === "FREEZE";
+        bannerEl.className = "case-bridge-banner " + (frozen ? "is-frozen" : "is-released");
+
+        var parts = ["🔍 القضية " + selectedEvidence.caseRef];
+        parts.push(summary.evidenceSealed + " / " + summary.evidenceCount + " دليل مختوم في السجل المشترك");
+        if (summary.directive) {
+            parts.push("⚖️ أمر تنفيذ صادر: " + (bridge ? bridge.directiveLabel(summary.directive.action) : summary.directive.action));
+            parts.push(String(summary.directive.seal).slice(0, 20) + "…");
+        }
+        parts.push("الضمان: " + summary.escrowStatusLabel);
+        bannerEl.textContent = parts.join(" • ");
+    }
 
     function renderDocket() {
         listEl.textContent = "";
@@ -105,6 +136,7 @@
             btn.addEventListener("click", function () {
                 selectedEvidence = ev;
                 renderDocket();
+                renderBridgeBanner();
                 renderTerminalWelcome();
             });
 
@@ -153,6 +185,20 @@
             payloadForHash.custodyChainValidation = "VALID_CHAIN_OF_CUSTODY_100%";
             payloadForHash.courtAdmissibility = "Admissible under UNCITRAL & Federal Evidence Rules";
             lastExportPayload = payloadForHash;
+
+            if (bridge) {
+                bridge.attachEvidence(selectedEvidence.caseRef, {
+                    id: selectedEvidence.id,
+                    title: selectedEvidence.title,
+                    custodian: selectedEvidence.custodian,
+                    type: selectedEvidence.type,
+                    sizeGB: selectedEvidence.sizeGB,
+                    capturedAt: selectedEvidence.capturedAt,
+                    seal: computedHash,
+                    standard: m.standard
+                });
+                renderBridgeBanner();
+            }
 
             core.renderLog(terminalEl, [
                 ["log-gold", "[FORENSIC AUDIT] Executing bit-stream cryptographic verification for " + selectedEvidence.id + " ..."],
@@ -216,5 +262,20 @@
 
     renderDocket();
     renderTerminalWelcome();
+
+    if (bridge) {
+        var requestedCase = bridge.caseIdFromQuery();
+        if (requestedCase) {
+            evidenceDocket.forEach(function (item) {
+                if (item.caseRef === requestedCase) { selectedEvidence = item; }
+            });
+            renderDocket();
+            renderTerminalWelcome();
+        }
+        renderBridgeBanner();
+        bridge.subscribe(function (caseId) {
+            if (caseId === selectedEvidence.caseRef) { renderBridgeBanner(); }
+        });
+    }
 })();
 

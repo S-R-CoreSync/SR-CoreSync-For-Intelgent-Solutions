@@ -158,6 +158,37 @@
                 </div>
             </div>
         </section>
+        <section class="panel-card section-spaced" aria-labelledby="exec-path-title">
+            <div class="panel-header">
+                <h2 class="panel-title" id="exec-path-title">🔗 مسار التنفيذ العابر للبوابات — الحكم ← الأدلة ← الضمان (المهمة 107)</h2>
+                <span class="pill-badge gold mono" id="exec-case-badge">ARB-2026-0418</span>
+            </div>
+            <div class="case-bridge-grid">
+                <div class="bridge-cell">
+                    <span class="kpi-label">حالة الضمان المرتبط</span>
+                    <strong class="mono" id="bridge-escrow-status">—</strong>
+                </div>
+                <div class="bridge-cell">
+                    <span class="kpi-label">أدلة مختومة في بوابة الأدلة</span>
+                    <strong class="mono" id="bridge-evidence-count">0</strong>
+                </div>
+                <div class="bridge-cell">
+                    <span class="kpi-label">أمر التنفيذ الصادر</span>
+                    <strong class="mono" id="bridge-directive">لم يصدر بعد</strong>
+                </div>
+                <div class="bridge-cell">
+                    <span class="kpi-label">بصمة أمر التنفيذ (SHA-256)</span>
+                    <strong class="mono" id="bridge-directive-seal">—</strong>
+                </div>
+            </div>
+            <div class="btn-row">
+                <button type="button" id="btn-issue-directive" class="btn-action">🔗 إعادة إصدار أمر تنفيذ الحكم</button>
+                <a class="btn-secondary" id="link-open-escrow" href="smart-escrow-milestone.html">🤝 فتح الضمان المرتبط</a>
+                <a class="btn-secondary" id="link-open-forensics" href="digital-forensics-litigation-hub.html">🔍 فتح ملف الأدلة</a>
+            </div>
+            <div class="terminal-box mono" id="bridge-terminal" aria-live="polite"></div>
+        </section>
+
     </main>
 
     <footer>
@@ -166,6 +197,7 @@
     </footer>
 
     <script src="js/sovereign-mission-core.js"></script>
+    <script src="js/sovereign-case-bridge.js"></script>
     <script src="js/sovereign-arbitration-hub.js"></script>
     <!-- Sovereign Master Shell Engine (MSE) -->
     <script src="./js/sr-master-shell.js"></script>
