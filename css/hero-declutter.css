@@ -17,3 +17,19 @@
    on top of the emblem. Both keep their function elsewhere: the marquee lives on
    its own row, the voice planner opens from the AI input. */
 .hero-emblem-voice-badge-wrap { display: none !important; }
+
+/* ---- one-screen hero: height follows the viewport, not the content ---- */
+:root { --vh: 1vh; }
+#hero .hero-reference__grid {
+  min-height: min(calc(var(--vh) * 84), 720px);
+  align-items: center;
+}
+#hero { padding-block: clamp(14px, 2.4vh, 40px) !important; }
+.hero-emblem-interactive-stage,
+.hero-reference__emblem-col > * {
+  width: clamp(190px, 25vh, 340px) !important;
+  height: auto !important;
+}
+.hero-reference__title { font-size: clamp(26px, 4.2vh, 50px) !important; line-height: 1.18 !important; }
+.hero-reference__bottom { margin-top: clamp(8px, 1.4vh, 20px) !important; }
+.hero-ai-idea-bar, .hero-reference__actions { margin-top: clamp(8px, 1.2vh, 18px) !important; }
