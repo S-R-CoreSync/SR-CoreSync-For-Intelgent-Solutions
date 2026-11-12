@@ -2139,6 +2139,135 @@
 @media (max-width:560px){.sr-steps,.sr-pledges{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="css/hero-declutter.css?v=20261112">
+<style id="hv2-css">
+/* ═══ Hero v2 preview ═══════════════════════════════════════════════════════
+   Scoped to this file only: the old hero markup stays in the DOM (hidden) so
+   every existing script keeps its elements, and the constellation canvas stays
+   where the engine expects it. */
+#hero .content-wrap{display:none !important}
+.hero-reference{min-height:clamp(560px, 92vh, 900px); display:block}
+.hv2{position:relative; z-index:3; width:min(1500px, calc(100% - 48px)); margin:0 auto; padding-inline-start:96px;
+     display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+     gap:min(4vw,64px); align-items:center; padding:clamp(24px,6vh,64px) 0}
+.hv2__copy{max-width:none}
+.hv2__badge{display:inline-flex; align-items:center; gap:9px; padding:7px 15px; border-radius:999px;
+  border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.34); background:rgba(var(--sr-gold-rgb,212,175,55),.08);
+  color:#f3dfba; font-size:.76rem; font-weight:700}
+.hv2__badge i{width:7px; height:7px; border-radius:50%; background:#10b981; box-shadow:0 0 12px #10b981}
+.hv2 h1.hv2__h1{margin:18px 0 0; font-size:clamp(2rem,3.4vw,3.4rem); line-height:1.24; font-weight:900; letter-spacing:-.01em}
+.hv2__rot{display:block; min-height:1.24em}
+.hv2__rot span{display:block; background:linear-gradient(120deg,#fff,#fff 40%,#f3dfba 64%,#d4af37);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  opacity:0; transform:translateY(10px); transition:opacity .55s ease, transform .55s ease; position:absolute}
+.hv2__rot span.is-on{opacity:1; transform:none; position:relative}
+.hv2__lead{margin:14px 0 0; color:#b9c6d6; font-size:clamp(.95rem,1.1vw,1.05rem); line-height:1.95; max-width:52ch}
+.hv2__bars{margin-top:26px; display:grid; gap:11px; max-width:660px}
+.hv2__bar{display:flex; align-items:center; gap:14px; padding:15px 18px; border-radius:16px; cursor:pointer;
+  border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.34); text-decoration:none; font:inherit; text-align:start;
+  background:linear-gradient(100deg,rgba(var(--sr-gold-rgb,212,175,55),.16),rgba(var(--sr-gold-rgb,212,175,55),.04));
+  color:#f3dfba; font-weight:800; font-size:.98rem; transition:.22s}
+.hv2__bar:hover{transform:translateY(-2px); border-color:rgba(var(--sr-gold-rgb,212,175,55),.7); box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.hv2__bar .ico{display:grid; place-items:center; width:34px; height:34px; border-radius:11px;
+  background:rgba(4,7,13,.55); border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.4); font-size:15px}
+.hv2__bar .tail{margin-inline-start:auto; font-size:.72rem; color:#cfe0ee; opacity:.75; font-weight:600}
+.hv2__bar.ghost{background:rgba(255,255,255,.03); border-color:rgba(255,255,255,.12); color:#dbe6f2}
+.hv2__chips{margin-top:20px; max-width:660px}
+.hv2__chips .lbl{font-size:.74rem; color:#8fa0b5; margin-bottom:9px; display:block}
+.hv2__chiprow{display:flex; flex-wrap:wrap; gap:8px}
+.hv2__chip{border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.03); color:#cfdbeb;
+  padding:8px 13px; border-radius:999px; font:inherit; font-size:.79rem; cursor:pointer; transition:.18s}
+.hv2__chip:hover{border-color:rgba(var(--sr-gold-rgb,212,175,55),.5); color:#f3dfba;
+  background:rgba(var(--sr-gold-rgb,212,175,55),.1)}
+.hv2__emblem{justify-self:center; width:100%; max-width:470px; aspect-ratio:1; display:grid; place-items:center; position:relative}
+.hv2__emblem::before{content:""; position:absolute; inset:6%; border-radius:50%;
+  background:radial-gradient(circle at 50% 45%, rgba(var(--sr-gold-rgb,212,175,55),.22), rgba(var(--sr-gold-rgb,212,175,55),.03) 58%, transparent 72%)}
+.hv2__emblem img{width:64%; border-radius:50%; filter:drop-shadow(0 30px 70px rgba(0,0,0,.75)); position:relative}
+.hv2__floor{margin:26px auto 0; width:min(1500px, calc(100% - 48px)); display:grid;
+  grid-template-columns:auto 1fr auto; align-items:center; gap:16px; padding:11px 16px;
+  border:1px solid rgba(255,255,255,.08); border-radius:18px;
+  background:linear-gradient(180deg,rgba(10,16,13,.82),rgba(5,10,8,.66)); backdrop-filter:blur(16px)}
+.hv2__langs{display:flex; align-items:center; gap:6px}
+.hv2__langs .cap{font-size:.7rem; color:#8fa0b5; margin-inline-end:2px}
+.hv2__flag{width:34px; height:25px; border-radius:7px; cursor:pointer; font-size:15px; line-height:1;
+  display:grid; place-items:center; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04);
+  padding:0; transition:.16s; text-decoration:none}
+.hv2__flag:hover{border-color:rgba(var(--sr-gold-rgb,212,175,55),.55); transform:translateY(-2px);
+  background:rgba(var(--sr-gold-rgb,212,175,55),.12)}
+.hv2__flag.more{width:auto; padding:0 9px; font-family:'JetBrains Mono',monospace; font-size:.68rem; color:#f3dfba;
+  border-color:rgba(var(--sr-gold-rgb,212,175,55),.4); background:rgba(var(--sr-gold-rgb,212,175,55),.1)}
+.hv2__cue{display:flex; align-items:center; justify-content:center; gap:9px; font-size:.68rem; color:#7f8fa3}
+.hv2__cue i{height:1px; width:min(90px,12vw); background:linear-gradient(90deg,transparent,rgba(var(--sr-gold-rgb,212,175,55),.35),transparent)}
+.hv2__stats{display:flex; align-items:center; gap:18px}
+.hv2__stats div{display:grid; line-height:1.25}
+.hv2__stats strong{font-size:.82rem; color:#f3dfba; font-weight:700}
+.hv2__stats span{font-size:.64rem; color:#8fa0b5}
+@media (max-width:1180px){
+  .hv2{grid-template-columns:1fr; gap:20px}
+  .hv2__emblem{max-width:300px; order:2}
+  .hv2__floor{grid-template-columns:1fr; justify-items:center; gap:10px}
+  .hv2__cue{display:none}
+  .hv2__stats{flex-wrap:wrap; justify-content:center; gap:14px}
+}
+@media (max-width:560px){ .hv2__h1{font-size:1.75rem} }
+@media (prefers-reduced-motion:reduce){ .hv2__rot span{transition:none} }
+</style>
+<style id="hv2-fixes">
+/* ═══ Conflict fixes: the page's own chrome vs the new hero ═════════════════
+   1. #hero is display:flex (row) in the master sheet, so the new block and the
+      floor became two squeezed flex items. Stack them instead.
+   2. .floating-follow is the fixed social rail on the left edge; below 1180px
+      it sits on top of the copy, so it retires there exactly as on mobile.
+   3. The consent bar overlays the bottom of the hero: reserve its height. */
+.hero-reference{display:flex !important; flex-direction:column !important;
+  align-items:stretch !important; justify-content:center; padding-bottom:76px}
+.hv2, .hv2__floor{width:min(1500px, calc(100% - 48px)) !important; margin-inline:auto !important}
+.hv2{margin-top:0 !important}
+@media (max-width:1180px){
+  .floating-follow{display:none !important}
+  .hv2{padding-inline-start:0 !important}
+  .hero-reference{padding-bottom:96px}
+}
+</style>
+<style id="hv2-order">
+/* ═══ الترتيب المتفق عليه ═══════════════════════════════════════════════════
+   1. الهيدر مقلوب: الشعار يساراً، القوائم يميناً، الأدوات وسطاً.
+   2. رصيف التواصل ينتقل إلى الحافة اليمنى، والهيرو يحجز له شريطاً فارغاً.
+   3. شريط اللغات العائم (dock الماك) يُخفى: الأرضية تحمل اللغات.
+   4. حزام سفلي متغيّر يُقاس من العناصر العائمة الفعلية، لا رقم ثابت. */
+
+/* 1 ─ الهيدر */
+.tf-header .header-inner .header-row-layout{
+  direction: ltr !important;              /* يثبّت الاتجاه الفيزيائي للأعمدة */
+  display: grid !important;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+.header-col-brand  { direction: rtl; grid-column: 1; justify-self: start; }
+.header-col-actions{ direction: rtl; grid-column: 2; justify-self: center; }
+.header-col-nav    { direction: rtl; grid-column: 3; justify-self: end; }
+.header-col-nav .nav-menu-main{ display: flex; align-items: center; gap: 18px; margin: 0; padding: 0; list-style: none; }
+
+/* 2 ─ الرصيف إلى اليمين + شريط فارغ في الهيرو */
+.floating-follow{ left: auto !important; right: 14px !important; }
+.hv2{ padding-inline-start: 0 !important; padding-right: 96px !important; }
+
+/* 3 ─ شريط اللغات العائم: الأرضية تغنيه */
+#appleMacosDockWrapper{ display: none !important; }
+
+/* 4 ─ الحزام السفلي: يُقاس، ويستخدم dvh عند توفّره */
+.hero-reference{
+  min-height: 92vh;
+  min-height: 92dvh;
+  padding-bottom: var(--chrome-h, 132px) !important;
+}
+
+@media (max-width:1180px){
+  .hv2{ padding-right: 0 !important; }
+  .floating-follow{ display: none !important; }
+  .hero-reference{ padding-bottom: calc(var(--chrome-h, 132px) + 12px) !important; }
+}
+</style>
 </head>
 
 <body class="counter-scroll preloader-complete">
@@ -2429,7 +2558,61 @@
                 <!-- كانفاس الحركة الضوئية التفاعلية لخلفية الهيرو -->
                 <canvas id="heroMotionCanvas" class="hero-motion-canvas" aria-hidden="true"></canvas>
                 <div class="overlay"></div>
-                <div class="content-wrap">
+                
+<div class="hv2" id="hv2-hero">
+              <div class="hv2__copy">
+                <span class="hv2__badge"><i></i> S&amp;R CoreSync For Intelligent Solutions</span>
+                <h1 class="hv2__h1">
+                  <span class="hv2__rot" id="hv2-rot">
+                    <span class="is-on">أنظمة برمجية متقدمة</span>
+                    <span>تطبيقات ومنصات رقمية</span>
+                    <span>هويات بصرية تُبنى لتدوم</span>
+                  </span>
+                </h1>
+                <p class="hv2__lead">نبني المنظومة كاملة: الهوية، والواجهة، والكود، والاستضافة — بمعيار أوروبي ووثائق تُسلَّم مع المشروع، لا وعوداً شفهية.</p>
+
+                <div class="hv2__bars">
+                  <button type="button" class="hv2__bar" id="hv2-ai">
+                    <span class="ico">✦</span> حلّل فكرتك بالـ AI
+                    <span class="tail">تحليل فوري · بدون تسجيل</span>
+                  </button>
+                  <a class="hv2__bar ghost" href="#services">
+                    <span class="ico">▶</span> تجربة النظام السحابي الحي
+                    <span class="tail">نسخة تجريبية حيّة</span>
+                  </a>
+                </div>
+
+                <div class="hv2__chips">
+                  <span class="lbl">أو ابدأ من الأقرب إلى مشروعك:</span>
+                  <div class="hv2__chiprow">
+                    <button type="button" class="hv2__chip">متجر إلكتروني فاخر</button>
+                    <button type="button" class="hv2__chip">نظام ERP متكامل</button>
+                    <button type="button" class="hv2__chip">هوية بصرية كاملة</button>
+                    <button type="button" class="hv2__chip">موقع تعريفي عالي التحويل</button>
+                    <button type="button" class="hv2__chip">أتمتة وربط الأنظمة</button>
+                    <button type="button" class="hv2__chip">استشارة تقنية</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hv2__emblem" aria-hidden="true">
+                <img src="./assets/sr-core-emblem-official.webp" alt="" width="384" height="384" loading="eager" decoding="async">
+              </div>
+            
+
+            <div class="hv2__floor" id="hv2-floor">
+              <div class="hv2__langs">
+                <span class="cap">اللغة</span>
+                <a class="hv2__flag" href="nl/index.html" title="Nederlands">🇳🇱</a>
+                <a class="hv2__flag" href="de/index.html" title="Deutsch">🇩🇪</a>
+                <a class="hv2__flag" href="fr/index.html" title="Français">🇫🇷</a>
+                <a class="hv2__flag" href="es/index.html" title="Español">🇪🇸</a>
+                <a class="hv2__flag" href="it/index.html" title="Italiano">🇮🇹</a>
+                <a class="hv2__flag" href="en/index.html" title="English">🇬🇧</a>
+                <a class="hv2__flag more" href="#languages" title="كل اللغات">+29</a>
+              </div>
+
+<div class="content-wrap">
                     <div class="container container-hero-luxury">
                         <div class="hero-reference__grid">
                             <div class="hero-reference__copy">
@@ -11357,6 +11540,145 @@
         <div class="sr-legal-links"><a href="#" class="sr-consent-open" data-sr-call="openConsent">إعدادات التحليلات</a></div>
 </footer>
 <script src="js/sr-hero-fit.js?v=20261112" defer></script>
+<script>
+(function(){
+  'use strict';
+  var rot = document.getElementById('hv2-rot');
+  if (rot){
+    var items = Array.prototype.slice.call(rot.children), idx = 0;
+    setInterval(function(){
+      items[idx].classList.remove('is-on');
+      idx = (idx + 1) % items.length;
+      items[idx].classList.add('is-on');
+    }, 3200);
+  }
+  var ai = document.getElementById('hv2-ai');
+  if (ai){
+    ai.addEventListener('click', function(){
+      if (typeof window.openAiEstimatorModal === 'function'){ window.openAiEstimatorModal(''); }
+      else { var t = document.getElementById('services'); if (t){ t.scrollIntoView({behavior:'smooth'}); } }
+    });
+  }
+})();
+</script>
+<script id="hv2-dom-order">
+(function(){
+  'use strict';
+  function apply(){
+    /* 1) الشعار إلى اليسار: نقله ليكون آخر عمود في صف الهيدر (RTL: الأخير = يسار) */
+    var row = document.querySelector('.header-row-layout');
+    var brand = row && row.querySelector('.header-col-brand');
+    if (row && brand && row.lastElementChild !== brand) {
+      row.appendChild(brand);
+      /* الصفحة تفرض order في ورقتها، فنفرض ترتيبنا مضمّناً بـ!important */
+      var navCol = row.querySelector('.header-col-nav');
+      var actCol = row.querySelector('.header-col-actions');
+      brand.style.setProperty('order', '3', 'important');
+      if (navCol) { navCol.style.setProperty('order', '1', 'important'); }
+      if (actCol) { actCol.style.setProperty('order', '2', 'important'); }
+      var heroEl = document.getElementById('hero');
+      if (heroEl) { heroEl.style.setProperty('padding-bottom', 'var(--chrome-h, 132px)', 'important'); }
+    }
+    /* 2) رصيف التواصل إلى الحافة اليمنى — نمط مضمّن بـ!important يتفوّق على أي ورقة */
+    var rail = document.querySelector('.floating-follow');
+    if (rail) {
+      rail.style.setProperty('left', 'auto', 'important');
+      rail.style.setProperty('right', '14px', 'important');
+    }
+    /* 3) زر تثبيت التطبيق: من أسفل يسار إلى الحافة اليمنى (نفس حافة الدوك) */
+    var pwa = document.getElementById('srPwaFloatingWidget');
+    if (pwa) {
+      pwa.style.setProperty('left', 'auto', 'important');
+      pwa.style.setProperty('right', '24px', 'important');
+      pwa.style.setProperty('bottom', '24px', 'important');
+    }
+    /* 4) قياس الحزام السفلي بعد ظهور شريط الموافقة */
+    measureBelt();
+  }
+
+  function measureBelt(){
+    var h = 0;
+    ['srPrivacyBannerWrap', 'srQuickDockContainer'].forEach(function(id){
+      var el = document.getElementById(id);
+      if (!el) { return; }
+      var s = getComputedStyle(el);
+      if (s.display === 'none' || s.visibility === 'hidden' || s.opacity === '0') { return; }
+      h = Math.max(h, el.getBoundingClientRect().height || 0);
+    });
+    if (!h || h < 40) { h = 120; }
+    document.documentElement.style.setProperty('--chrome-h', Math.round(h + 16) + 'px');
+  }
+
+  window.__hv2Belt = measureBelt;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+  window.addEventListener('load', apply);
+  setTimeout(apply, 600);
+  setTimeout(apply, 1800);
+  window.addEventListener('resize', measureBelt, { passive: true });
+})();
+</script>
+<script id="hv2-nav-order">
+(function(){
+  'use strict';
+  /* الترتيب المتفق عليه، بمراسي الصفحة الفعلية فقط:
+     ماذا تقدّمون → بكم → احسب → منتجات جاهزة → من أنتم → المؤسسون
+     قاعدة صارمة: لا نلمس سوى <li> يحمل رابطاً مباشراً في هذه القائمة،
+     حتى لا يُسحب عنصر من قائمة «المزيد» المنسدلة. */
+  var ORDER = ['#service', '#pricing', '#roi-calculator', '#software-hub', '#about', '#founders-showcase'];
+
+  function directLink(li){
+    for (var i = 0; i < li.children.length; i++){
+      if (li.children[i].tagName === 'A') { return li.children[i]; }
+    }
+    return null;
+  }
+
+  function reorder(){
+    var ul = document.querySelector('.nav-menu-main');
+    if (!ul || ul.getAttribute('data-hv2') === 'done') { return; }
+
+    var byHref = {};
+    Array.prototype.forEach.call(ul.children, function (li) {
+      if (li.querySelector('ul')) { return; }            /* قائمة منسدلة: تُترك كما هي */
+      var a = directLink(li);
+      if (a) { byHref[a.getAttribute('href')] = li; }
+    });
+
+    var moved = 0;
+    ORDER.forEach(function (href) {
+      if (byHref[href]) { ul.appendChild(byHref[href]); moved++; }
+    });
+    if (!moved) { return; }
+
+    /* «المزيد» آخر عنصر دائماً، وإلا تصدّر القائمة بعد النقل */
+    Array.prototype.forEach.call(ul.children, function (li) {
+      if (li.querySelector('ul')) { ul.appendChild(li); }
+    });
+
+    Array.prototype.forEach.call(ul.children, function (li, i) {
+      if (li.querySelector('ul')) { return; }
+      var a = directLink(li);
+      if (!a) { return; }
+      var span = a.querySelector('span');
+      if (span) { span.textContent = ('0' + (i + 1)).slice(-2) + ' /'; }
+      a.classList.toggle('gold-accent', i === 0);
+    });
+    ul.setAttribute('data-hv2', 'done');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', reorder);
+  } else {
+    reorder();
+  }
+  window.addEventListener('load', reorder);
+  setTimeout(reorder, 700);
+})();
+</script>
 </body>
 
 </html>

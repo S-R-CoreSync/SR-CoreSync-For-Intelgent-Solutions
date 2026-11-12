@@ -77,6 +77,7 @@ EXCLUDED_ROOT_SUFFIXES = ('.md', '.bat', '.url', '.ps1', '.pdf')
 # them exposed 13 stale duplicates of the real portals to search engines.
 # ---------------------------------------------------------------------------
 EXCLUDED_DEV_PAGES = {
+    'preview-hero-v2.html',
     'debug_header.html',
     'preview_emblem_tuning.html',
     'preview_new_official_embel.html',
