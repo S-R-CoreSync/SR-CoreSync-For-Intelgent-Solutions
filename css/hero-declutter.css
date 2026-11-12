@@ -8,3 +8,7 @@
 
 /* the hero ends where its message ends */
 .section-hero-v1 { min-height: auto !important; padding-block: clamp(26px, 4vh, 58px) !important; }
+
+/* The prompt-sample chips duplicated the input's purpose and collided with the
+   emblem on LTR pages. The input stands alone; the marquee speaks for sectors. */
+.hero-ai-chips-wrap { display: none !important; }
