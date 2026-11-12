@@ -478,3 +478,41 @@ html[dir="ltr"] .sr-privacy-modal-card {
         width: 100%;
     }
 }
+
+
+/* ---------------------------------------------------------------------------
+   Slim bar (owner file). The card sat over the hero and hid it on a 768px
+   screen. Same consent, same two answers, one line at the foot of the page.
+   Declared last in this file so it wins over the card rules above.
+   --------------------------------------------------------------------------- */
+.sr-privacy-banner-wrap {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    max-width: 100%;
+    transform: translateY(20px);
+}
+.sr-privacy-banner-wrap.sr-visible { transform: translateY(0); }
+
+.sr-privacy-banner {
+    border-radius: 0;
+    border-inline: 0;
+    border-bottom: 0;
+    padding: 10px 20px;
+    gap: 14px;
+    box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.55);
+}
+.sr-privacy-icon-box,
+.sr-privacy-desc { display: none; }
+.sr-privacy-texts { gap: 0; }
+.sr-privacy-title { font-size: 0.86rem; }
+.sr-privacy-actions { margin-inline-start: auto; flex-shrink: 0; }
+.sr-privacy-btn { padding: 7px 16px; font-size: 0.8rem; white-space: nowrap; }
+
+@media (max-width: 640px) {
+    .sr-privacy-banner { flex-wrap: wrap; padding: 9px 12px; gap: 8px; }
+    .sr-privacy-title { font-size: 0.78rem; line-height: 1.35; }
+    .sr-privacy-actions { width: 100%; justify-content: flex-end; }
+}
