@@ -33,3 +33,20 @@
 .hero-reference__title { font-size: clamp(26px, 4.2vh, 50px) !important; line-height: 1.18 !important; }
 .hero-reference__bottom { margin-top: clamp(8px, 1.4vh, 20px) !important; }
 .hero-ai-idea-bar, .hero-reference__actions { margin-top: clamp(8px, 1.2vh, 18px) !important; }
+
+/* ---- consent as a thin bar, not a card in the middle of the hero ---- */
+.sr-privacy-banner-wrap{
+  position:fixed !important; inset:auto 0 0 0 !important;
+  display:flex !important; align-items:flex-end; justify-content:center;
+  padding:0 !important; background:transparent !important; z-index:9998;
+}
+.sr-privacy-banner{
+  width:100% !important; max-width:100% !important; margin:0 !important;
+  border-radius:0 !important; padding:10px 18px !important;
+  display:flex !important; align-items:center !important; gap:14px !important;
+}
+.sr-privacy-icon-box, .sr-privacy-desc{ display:none !important; }
+.sr-privacy-texts{ flex:1 1 auto !important; min-width:0 !important; }
+.sr-privacy-title{ font-size:13px !important; margin:0 !important; line-height:1.5 !important; }
+.sr-privacy-actions{ margin-inline-start:auto !important; display:flex !important; gap:8px !important; flex:0 0 auto !important; }
+.sr-privacy-btn{ padding:6px 14px !important; font-size:12px !important; white-space:nowrap !important; }
