@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&R CoreSync — تركيب الهيرو المقترح (v3)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d4af37; --gold-2:#f3dfba; --gold-rgb:212,175,55;
+  --ink:#04070d; --panel:#0a1010; --line:rgba(255,255,255,.09);
+  --text:#b9c6d6; --muted:#8fa0b5;
+  --hdr:76px;
+  --col-brand:480px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Alexandria','Cairo',system-ui,sans-serif;
+  background:var(--ink); color:#e9eef5; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(900px 620px at 78% 22%, rgba(212,175,55,.14), transparent 62%),
+    radial-gradient(700px 500px at 18% 82%, rgba(38,90,120,.18), transparent 66%),
+    linear-gradient(180deg,#04070d 0%,#060b12 55%,#04070d 100%);
+}
+.stars{position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.55;
+  background-image:radial-gradient(1.4px 1.4px at 20% 30%, rgba(212,175,55,.8), transparent 60%),
+                   radial-gradient(1.2px 1.2px at 72% 18%, rgba(255,255,255,.55), transparent 60%),
+                   radial-gradient(1.2px 1.2px at 84% 64%, rgba(212,175,55,.55), transparent 60%),
+                   radial-gradient(1px 1px at 42% 76%, rgba(255,255,255,.4), transparent 60%),
+                   radial-gradient(1.6px 1.6px at 12% 58%, rgba(212,175,55,.5), transparent 60%);
+}
+
+/* ═════ الهيدر ═════ */
+.hdr{
+  position:sticky; top:0; z-index:40; height:var(--hdr);
+  display:flex; align-items:center; gap:clamp(12px,1.4vw,22px);
+  padding-inline:24px;
+  background:linear-gradient(180deg, rgba(4,7,13,.94), rgba(4,7,13,.72));
+  border-bottom:1px solid var(--line); backdrop-filter:blur(14px);
+}
+.brand{display:flex; align-items:center; gap:10px; margin-inline-start:auto; text-decoration:none; direction:ltr}
+.brand img{width:40px;height:40px;border-radius:50%;filter:drop-shadow(0 0 14px rgba(212,175,55,.45))}
+.brand b{font-size:15px;font-weight:800;letter-spacing:.2px;color:#fff}
+.brand span{display:block;font-size:9.5px;color:var(--muted);letter-spacing:1.6px}
+.nav{display:flex; align-items:center; gap:18px}
+.nav a{
+  position:relative; color:#cfdbeb; text-decoration:none; font-size:13.5px; font-weight:600;
+  padding-block:6px; white-space:nowrap; transition:.18s;
+}
+.nav a i{font-style:normal; font-size:10px; color:rgba(212,175,55,.75); margin-inline-end:5px; font-family:ui-monospace,monospace}
+.nav a:hover{color:var(--gold-2)}
+.nav a.is-active{color:var(--gold-2)}
+.nav a.is-active::after{content:"";position:absolute; inset-inline:0; bottom:-2px; height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.actions{display:flex; align-items:center; gap:9px}
+.btn{
+  font:inherit; font-size:13px; font-weight:700; cursor:pointer; text-decoration:none;
+  display:inline-flex; align-items:center; gap:7px; padding:9px 15px; border-radius:12px;
+  border:1px solid rgba(var(--gold-rgb),.42); color:var(--gold-2);
+  background:linear-gradient(100deg, rgba(var(--gold-rgb),.18), rgba(var(--gold-rgb),.05));
+  transition:.2s; white-space:nowrap;
+}
+.btn:hover{transform:translateY(-1px); border-color:rgba(var(--gold-rgb),.75)}
+.btn--ghost{border-color:rgba(255,255,255,.14); color:#dbe6f2; background:rgba(255,255,255,.04)}
+.btn svg{width:15px;height:15px;fill:currentColor;opacity:.9}
+
+/* ═════ الهيرو ═════ */
+.hero{
+  position:relative; z-index:2;
+  min-height:calc(100vh - var(--hdr));
+  display:grid; grid-template-columns:var(--col-brand) minmax(0,1fr);
+  align-items:center; gap:clamp(24px,4vw,72px);
+  width:min(1560px, calc(100% - 96px)); margin-inline:auto;
+  padding-block:clamp(28px,5vh,64px) 120px;
+}
+.hero__brand{grid-column:1; display:flex; flex-direction:column; align-items:center; gap:26px}
+.hero__text{grid-column:2; min-width:0}
+
+.badge{
+  display:inline-flex; align-items:center; gap:9px; padding:7px 15px; border-radius:999px;
+  border:1px solid rgba(var(--gold-rgb),.34); background:rgba(var(--gold-rgb),.08);
+  color:var(--gold-2); font-size:12.5px; font-weight:700;
+}
+.badge i{width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 12px #10b981}
+
+h1{
+  margin:20px 0 0; font-size:clamp(2.1rem,3.7vw,3.55rem); line-height:1.26; font-weight:900;
+  letter-spacing:-.01em;
+}
+.rot{display:block; position:relative; min-height:1.26em}
+.rot span{
+  position:absolute; inset-inline-start:0; top:0;
+  background:linear-gradient(120deg,#fff,#fff 38%,var(--gold-2) 64%,var(--gold));
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  opacity:0; transform:translateY(10px); transition:opacity .55s ease, transform .55s ease;
+}
+.rot span.is-on{opacity:1; transform:none; position:relative}
+.lead{display:none}
+
+.chips{margin-top:26px}
+.chips .lbl{display:block; font-size:12px; color:var(--muted); margin-bottom:10px}
+.chips__row{display:flex; flex-wrap:wrap; gap:8px}
+.chip{
+  font:inherit; font-size:12.5px; color:#cfdbeb; cursor:pointer;
+  padding:8px 13px; border-radius:999px; border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.03); transition:.18s;
+}
+.chip:hover{border-color:rgba(var(--gold-rgb),.55); color:var(--gold-2); background:rgba(var(--gold-rgb),.1)}
+
+/* الشعار */
+.emblem{position:relative; width:420px; height:420px; display:grid; place-items:center}
+.emblem::before{
+  content:""; position:absolute; inset:-6%; border-radius:50%;
+  background:radial-gradient(circle at 50% 46%, rgba(var(--gold-rgb),.24), rgba(var(--gold-rgb),.05) 56%, transparent 72%);
+}
+.emblem::after{
+  content:""; position:absolute; inset:6%; border-radius:50%;
+  border:1px solid rgba(var(--gold-rgb),.18);
+}
+.emblem img{width:74%; border-radius:50%; position:relative;
+  filter:drop-shadow(0 30px 70px rgba(0,0,0,.75)) drop-shadow(0 0 22px rgba(var(--gold-rgb),.28))}
+
+/* الشريطان تحت الشعار */
+.bars{width:100%; max-width:var(--col-brand); display:grid; gap:11px}
+.bar-ai{
+  display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:16px;
+  border:1px solid rgba(var(--gold-rgb),.38);
+  background:linear-gradient(100deg, rgba(var(--gold-rgb),.16), rgba(var(--gold-rgb),.04));
+  box-shadow:0 18px 44px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.06);
+}
+.bar-ai input{
+  flex:1 1 auto; min-width:0; font:inherit; font-size:13.5px; color:#eef4fb;
+  background:transparent; border:0; outline:none; padding:6px 4px;
+}
+.bar-ai input::placeholder{color:#9db0c6; font-size:12.5px}
+.icon-btn{
+  flex:0 0 auto; display:grid; place-items:center; width:34px; height:34px; border-radius:11px;
+  border:1px solid rgba(var(--gold-rgb),.4); background:rgba(4,7,13,.55); color:var(--gold-2);
+  cursor:pointer; font-size:15px;
+}
+.submit{
+  flex:0 0 auto; font:inherit; font-size:12.5px; font-weight:800; cursor:pointer;
+  display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:11px; border:0;
+  background:linear-gradient(120deg,#f6e6c4,var(--gold)); color:#1a1405;
+  box-shadow:0 10px 24px rgba(var(--gold-rgb),.28); white-space:nowrap;
+}
+.bar-live{
+  display:flex; align-items:center; gap:12px; padding:13px 16px; border-radius:16px;
+  border:1px solid rgba(255,255,255,.13); background:rgba(255,255,255,.035);
+  color:#dbe6f2; text-decoration:none; font-size:13.5px; font-weight:700; transition:.2s;
+}
+.bar-live:hover{transform:translateY(-2px); border-color:rgba(var(--gold-rgb),.45); background:rgba(var(--gold-rgb),.06)}
+.bar-live .ico{display:grid; place-items:center; width:32px;height:32px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.14); background:rgba(4,7,13,.6); font-size:12px}
+.bar-live .tail{margin-inline-start:auto; font-size:11px; color:var(--muted); font-weight:600}
+.bar-note{font-size:11px; color:var(--muted); text-align:center; margin-top:2px}
+
+/* أرضية الأرقام */
+.floor{
+  position:relative; z-index:2; width:min(1560px, calc(100% - 96px)); margin:0 auto 40px;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:10px;
+  padding:14px 18px; border-radius:16px; border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(10,16,13,.82), rgba(5,10,8,.66)); backdrop-filter:blur(14px);
+}
+.floor div{display:grid; gap:2px; text-align:center}
+.floor strong{font-size:13px; color:var(--gold-2); font-weight:700}
+.floor span{font-size:10.5px; color:var(--muted)}
+
+/* دوك اللغات — يسار */
+.dock{
+  position:fixed; left:22px; right:auto; bottom:22px; z-index:60;
+  display:flex; align-items:center; gap:6px; padding:8px 10px; border-radius:16px;
+  border:1px solid rgba(var(--gold-rgb),.26);
+  background:linear-gradient(180deg, rgba(12,18,26,.92), rgba(6,10,16,.88));
+  backdrop-filter:blur(16px); box-shadow:0 18px 50px rgba(0,0,0,.55);
+}
+.dock .cap{font-size:10.5px; color:var(--muted); margin-inline-end:3px}
+.dock a{width:32px;height:24px;border-radius:7px;display:grid;place-items:center;font-size:14px;white-space:nowrap;
+  border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05); text-decoration:none}
+.dock a:hover{border-color:rgba(var(--gold-rgb),.55); background:rgba(var(--gold-rgb),.12)}
+.dock .globe{width:auto; padding:0 9px; color:var(--gold-2); font-size:11px; gap:5px; white-space:nowrap;
+  display:inline-flex; align-items:center; justify-content:center;
+  border-color:rgba(var(--gold-rgb),.4); background:rgba(var(--gold-rgb),.1)}
+.dock .globe b{font-weight:700}
+
+/* لوحة القرار */
+.switch{
+  position:fixed; right:22px; left:auto; bottom:22px; z-index:60;
+  display:flex; gap:6px; padding:6px; border-radius:14px;
+  border:1px solid var(--line); background:rgba(8,12,18,.92); backdrop-filter:blur(12px);
+}
+.switch button{
+  font:inherit; font-size:11.5px; font-weight:700; color:#cfdbeb; cursor:pointer;
+  padding:7px 11px; border-radius:9px; border:1px solid transparent; background:transparent;
+}
+.switch button.on{color:#1a1405; background:linear-gradient(120deg,#f6e6c4,var(--gold)); border-color:transparent}
+
+/* النسخة ب — شريط مدمج بعرض الشعار الصغير */
+body.vb{--col-brand:300px}
+body.vb .emblem{width:300px;height:300px}
+body.vb .bars{max-width:300px}
+body.vb .submit{padding:9px 10px; font-size:0}
+body.vb .submit b{font-size:13px}
+body.vb .bar-ai{padding:8px 9px; gap:7px}
+body.vb .bar-ai input::placeholder{font-size:11px}
+body.vb .bar-live{padding:11px 12px; font-size:12px}
+body.vb .bar-live .tail{display:none}
+
+@media (max-width:1180px){
+  .hero{grid-template-columns:1fr; gap:34px; padding-bottom:140px; text-align:center}
+  .hero__brand{grid-column:1; order:-1}
+  .hero__text{grid-column:1}
+  .emblem{width:260px;height:260px}
+  .chips__row{justify-content:center}
+  .brand b{font-size:13px}
+  .nav{display:none}
+  .floor{grid-template-columns:repeat(2,1fr)}
+  .switch{display:none}
+}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<header class="hdr">
+  <nav class="nav">
+    <a href="#services"><i>01</i>الخدمات</a>
+    <a href="#pricing"><i>02</i>الأسعار</a>
+    <a href="#store"><i>03</i>المتجر الرقمي</a>
+    <a href="#about"><i>04</i>نبذة</a>
+    <a href="#founders"><i>05</i>القيادة</a>
+    <a href="#more"><i>06</i>المزيد</a>
+  </nav>
+  <div class="actions">
+    <button class="btn" type="button">
+      <svg viewBox="0 0 24 24"><path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4L12 13.6V3h0zM5 19h14v2H5z"/></svg>
+      تثبيت التطبيق
+    </button>
+    <button class="btn btn--ghost" type="button">أدوات الدعم ▾</button>
+  </div>
+  <a class="brand" href="#top">
+    <img src="../assets/sr-core-emblem-official.webp" alt="">
+    <span><b>S&amp;R CoreSync</b><span>FOR INTELLIGENT SOLUTIONS</span></span>
+  </a>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero__brand">
+    <div class="emblem">
+      <img src="../assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Emblem">
+    </div>
+
+    <div class="bars">
+      <form class="bar-ai" onsubmit="return false">
+        <span class="icon-btn" aria-hidden="true">✨</span>
+        <input type="text" placeholder="اكتب فكرة مشروعك هنا…" aria-label="فكرة المشروع">
+        <button class="icon-btn" type="button" aria-label="تحدث بالصوت">🎙️</button>
+        <button class="submit" type="submit"><b>حلّل</b> ✦</button>
+      </form>
+
+      <a class="bar-live" href="#services">
+        <span class="ico">▶</span>
+        تجربة النظام السحابي الحي
+        <span class="tail">نسخة تجريبية حيّة</span>
+      </a>
+      <div class="bar-note">الشريطان بعرض عمود الشعار — لا يتجاوزانه</div>
+    </div>
+  </div>
+
+  <div class="hero__text">
+    <span class="badge"><i></i> S&amp;R CoreSync For Intelligent Solutions</span>
+    <h1>
+      <span class="rot" id="rot">
+        <span class="is-on">أنظمة برمجية متقدمة</span>
+        <span>تطبيقات ومنصات رقمية</span>
+        <span>هويات بصرية تُبنى لتدوم</span>
+      </span>
+    </h1>
+
+    <div class="chips">
+      <span class="lbl">أو ابدأ من الأقرب إلى مشروعك:</span>
+      <div class="chips__row">
+        <button class="chip">متجر إلكتروني فاخر</button>
+        <button class="chip">نظام ERP متكامل</button>
+        <button class="chip">هوية بصرية كاملة</button>
+        <button class="chip">موقع تعريفي عالي التحويل</button>
+        <button class="chip">أتمتة وربط الأنظمة</button>
+        <button class="chip">استشارة تقنية</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="floor">
+  <div><strong>99.9%</strong><span>جاهزية سحابية</span></div>
+  <div><strong>EU &amp; BTW</strong><span>امتثال ضريبي أوروبي</span></div>
+  <div><strong>&lt; 30s</strong><span>بدء فوري</span></div>
+  <div><strong>Amsterdam HQ</strong><span>مقر أمستردام</span></div>
+</div>
+
+<div class="dock" aria-label="اللغات">
+  <span class="cap">اللغة</span>
+  <a href="../nl/" title="Nederlands">🇳🇱</a>
+  <a href="../de/" title="Deutsch">🇩🇪</a>
+  <a href="../fr/" title="Français">🇫🇷</a>
+  <a href="../es/" title="Español">🇪🇸</a>
+  <a href="../it/" title="Italiano">🇮🇹</a>
+  <a href="../en/" title="English">🇬🇧</a>
+  <a class="globe" href="#languages" title="خريطة 34 سوقاً">🌐 <b>+29</b></a>
+</div>
+
+<div class="switch">
+  <button id="va" class="on" type="button">أ · 520px</button>
+  <button id="vb" type="button">ب · مدمج 300px</button>
+</div>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('#rot span'), i = 0;
+  setInterval(function(){
+    items[i].classList.remove('is-on');
+    i = (i + 1) % items.length;
+    items[i].classList.add('is-on');
+  }, 3600);
+
+  document.getElementById('va').onclick = function(){
+    document.body.classList.remove('vb');
+    this.classList.add('on'); document.getElementById('vb').classList.remove('on');
+  };
+  document.getElementById('vb').onclick = function(){
+    document.body.classList.add('vb');
+    this.classList.add('on'); document.getElementById('va').classList.remove('on');
+  };
+})();
+</script>
+</body>
+</html>

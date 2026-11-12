@@ -2244,7 +2244,7 @@
   gap: 16px;
 }
 .header-col-brand  { direction: rtl; grid-column: 1; justify-self: start; }
-.header-col-actions{ direction: rtl; grid-column: 2; justify-self: center; }
+.header-col-actions{ direction: rtl; grid-column: 2; justify-self: end; margin-inline-end:10px; }
 .header-col-nav    { direction: rtl; grid-column: 3; justify-self: end; }
 .header-col-nav .nav-menu-main{ display: flex; align-items: center; gap: 18px; margin: 0; padding: 0; list-style: none; }
 
@@ -2266,6 +2266,65 @@
   .hv2{ padding-right: 0 !important; }
   .floating-follow{ display: none !important; }
   .hero-reference{ padding-bottom: calc(var(--chrome-h, 132px) + 12px) !important; }
+}
+
+/* ═══ v3 — الشعار يميناً، الشريطان تحته، الدوك يساراً ═══════════════ */
+.btn-pwa-header{display:inline-flex; align-items:center; gap:7px; padding:8px 13px; border-radius:11px;
+  cursor:pointer; font:inherit; font-size:.8rem; font-weight:800; white-space:nowrap; color:#f3dfba;
+  border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.5);
+  background:linear-gradient(100deg,rgba(var(--sr-gold-rgb,212,175,55),.2),rgba(var(--sr-gold-rgb,212,175,55),.06));
+  transition:.2s}
+.btn-pwa-header:hover{border-color:rgba(var(--sr-gold-rgb,212,175,55),.85); transform:translateY(-1px)}
+
+.services-lede{max-width:900px; margin:0 auto 18px; text-align:center; color:#b9c6d6;
+  font-size:clamp(.95rem,1.05vw,1.05rem); line-height:1.95}
+
+.hv2{grid-template-columns:minmax(0,1fr) 480px !important; align-items:center !important;
+  gap:clamp(24px,4vw,64px) !important; padding-inline-start:24px !important}
+.hv2__copy{grid-column:1 !important; display:flex !important; flex-direction:column !important;
+  align-items:flex-end !important; text-align:right !important}
+.hv2__copy > .hv2__chips{width:100% !important; max-width:660px !important}
+.hv2__copy > .hv2__h1{align-self:stretch !important; max-width:100% !important}
+.hv2__chips .hv2__chiprow{direction:rtl; justify-content:flex-start !important}
+.hv2__brand{grid-column:2 !important; justify-self:center !important; display:flex;
+  flex-direction:column; align-items:center; gap:22px}
+.hv2__emblem{width:420px !important; max-width:420px !important; order:0 !important}
+.hv2__bars{width:100% !important; max-width:480px !important; margin-top:0 !important}
+
+.apple-macos-dock-wrapper{left:24px !important; right:auto !important;
+  transform:none !important; justify-content:flex-start !important;
+  bottom:calc(var(--chrome-h, 132px) + 4px) !important}
+
+@media (min-width:993px){ #srPwaFloatingWidget{ display:none !important; } }
+
+@media (max-width:1180px){
+  .hv2{grid-template-columns:1fr !important; padding-inline-start:12px !important; padding-right:12px !important}
+  .hv2__copy, .hv2__brand{grid-column:1 !important}
+  .hv2__brand{order:-1}
+  .hv2__emblem{width:260px !important; max-width:260px !important}
+  .hv2__bars{max-width:min(480px,92vw) !important}
+}
+
+@media (max-width:600px){
+  .hv2{width:calc(100% - 24px) !important; padding:16px 0 !important; gap:18px !important}
+  .hv2__brand{width:100% !important; max-width:100% !important; gap:14px !important}
+  .hv2__emblem{width:200px !important; max-width:200px !important}
+  .hv2__bars{max-width:100% !important}
+  .hv2__copy{align-items:center !important; text-align:center !important}
+  .hv2 h1.hv2__h1{font-size:1.55rem !important; line-height:1.35 !important}
+  .hv2__rot span{max-width:100% !important}
+  #hero{padding-bottom:calc(var(--chrome-h, 120px) + 96px) !important}
+  .hero-reference{justify-content:flex-start !important; padding-top:10px !important}
+  .hero-ai-idea-form{flex-wrap:wrap !important}
+  .hero-ai-idea-submit-btn{max-width:100%}
+  .hv2__copy > .hv2__chips{max-width:100% !important}
+  .hv2__chips .hv2__chiprow{justify-content:center !important}
+  .btn-pwa-header span{display:none}
+  .btn-pwa-header{padding:9px 11px}
+  .apple-macos-dock-wrapper{left:10px !important; right:auto !important;
+    max-width:calc(100vw - 20px) !important; overflow-x:auto !important;
+    padding:4px !important; border-radius:14px !important}
+  .apple-macos-dock a.apple-dock-item{display:none !important}
 }
 </style>
 </head>
@@ -2471,6 +2530,7 @@
 
                             <!-- 3. أدوات الاتصال السريع وتغيير اللغة وقائمة الهاتف (مرتبة LTR بأناقة مطلقة) -->
                             <div class="header-col-actions">
+                                <button type="button" class="btn-pwa-header" data-sr-pwa-install onclick="srPromptPwaInstall()" title="تثبيت S&amp;R CoreSync كتطبيق مستقل على جهازك"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>تثبيت التطبيق</span></button>
                                 <!-- أدوات الدعم المؤسسي والتقييم (Header Support Tools Dropdown) -->
                                 <div class="header-support-dropdown-wrap" id="headerSupportDropdownWrap">
                                     <button type="button" class="btn-support-tools-header" id="headerSupportBtn"
@@ -2569,47 +2629,8 @@
                     <span>هويات بصرية تُبنى لتدوم</span>
                   </span>
                 </h1>
-                <p class="hv2__lead">نبني المنظومة كاملة: الهوية، والواجهة، والكود، والاستضافة — بمعيار أوروبي ووثائق تُسلَّم مع المشروع، لا وعوداً شفهية.</p>
 
-                <div class="hv2__bars">
-                                    <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
-
-                  <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
-
-                  <span class="hero-ai-idea-sparkle">✨</span>
-
-                  </div>
-
-                  <div class="hero-ai-idea-input-wrap">
-
-                  <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="اكتب فكرة مشروعك هنا (مثال: متجر إلكتروني بهولندا، نظام ERP، تطبيق ذكاء اصطناعي...)" autocomplete="off" aria-label="Project Idea AI Input">
-
-                  </div>
-
-                  <div class="hero-ai-idea-btns">
-
-                  <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="تحدث بفكرة مشروعك بالصوت التفاعلي" aria-label="تحدث بفكرة مشروعك بالصوت التفاعلي">
-
-                  <span class="hero-ai-mic-icon">🎙️</span>
-
-                  </button>
-
-                  <button type="submit" class="hero-ai-idea-submit-btn" title="حلل فكرتي بالـ AI ⚡" aria-label="حلل فكرتي بالـ AI ⚡">
-
-                  <span class="hero-ai-submit-text">حلل فكرتي بالـ AI ⚡</span>
-
-                  <span class="hero-ai-submit-arrow">←</span>
-
-                  </button>
-
-                  </div>
-
-                  </form>
-                  <a class="hv2__bar ghost" href="#services">
-                    <span class="ico">▶</span> تجربة النظام السحابي الحي
-                    <span class="tail">نسخة تجريبية حيّة</span>
-                  </a>
-                </div>
+                
 
                 <div class="hv2__chips">
                   <span class="lbl">أو ابدأ من الأقرب إلى مشروعك:</span>
@@ -2624,22 +2645,54 @@
                 </div>
               </div>
 
-              <div class="hv2__emblem" aria-hidden="true">
+              <div class="hv2__brand">
+<div class="hv2__emblem" aria-hidden="true">
                 <img src="./assets/sr-core-emblem-official.webp" alt="" width="384" height="384" loading="eager" decoding="async">
               </div>
+<div class="hv2__bars">
+                                    <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
+
+                  <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
+
+                  <span class="hero-ai-idea-sparkle">✨</span>
+
+                  </div>
+
+                  <div class="hero-ai-idea-input-wrap">
+
+                  <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="اكتب فكرة مشروعك هنا…" autocomplete="off" aria-label="Project Idea AI Input">
+
+                  </div>
+
+                  <div class="hero-ai-idea-btns">
+
+                  <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="تحدث بفكرة مشروعك بالصوت التفاعلي" aria-label="تحدث بفكرة مشروعك بالصوت التفاعلي">
+
+                  <span class="hero-ai-mic-icon">🎙️</span>
+
+                  </button>
+
+                  <button type="submit" class="hero-ai-idea-submit-btn" title="حلل فكرتي بالـ AI ⚡" aria-label="حلل فكرتي بالـ AI ⚡">
+
+                  <span class="hero-ai-submit-text">حلّل فكرتي ✦</span>
+
+                  <span class="hero-ai-submit-arrow">←</span>
+
+                  </button>
+
+                  </div>
+
+                  </form>
+                  <a class="hv2__bar ghost" href="#services">
+                    <span class="ico">▶</span> تجربة النظام السحابي الحي
+                    <span class="tail">نسخة تجريبية حيّة</span>
+                  </a>
+                </div>
+</div>
             
 
-            <div class="hv2__floor" id="hv2-floor">
-              <div class="hv2__langs">
-                <span class="cap">اللغة</span>
-                <a class="hv2__flag" href="nl/index.html" title="Nederlands">🇳🇱</a>
-                <a class="hv2__flag" href="de/index.html" title="Deutsch">🇩🇪</a>
-                <a class="hv2__flag" href="fr/index.html" title="Français">🇫🇷</a>
-                <a class="hv2__flag" href="es/index.html" title="Español">🇪🇸</a>
-                <a class="hv2__flag" href="it/index.html" title="Italiano">🇮🇹</a>
-                <a class="hv2__flag" href="en/index.html" title="English">🇬🇧</a>
-                <a class="hv2__flag more" href="#languages" title="كل اللغات">+29</a>
-              </div>
+            
+            </div>
 
 <div class="content-wrap">
                     <div class="container container-hero-luxury">
@@ -3577,7 +3630,8 @@
         <div id="service" data-section class="section-scroll-anchor" aria-hidden="true"></div>
         <div id="services-section" data-section class="section-scroll-anchor" aria-hidden="true"></div>
         <section class="section-tech-stack-v2 service-orbit-section" id="services" data-section>
-            <div class="container"><div class="s-header d-block">
+            <div class="container">
+                <p class="services-lede">نبني المنظومة كاملة: الهوية، والواجهة، والكود، والاستضافة — بمعيار أوروبي ووثائق تُسلَّم مع المشروع، لا وعوداً شفهية.</p><div class="s-header d-block">
                     <h2 class="text-display-2 letter-space--3 text-center effectFade fadeUp">
                         <span class="s-kashida" data-text="خدماتنا" aria-hidden="true"></span>
                         <span class="s-plain">خدماتنا</span>
