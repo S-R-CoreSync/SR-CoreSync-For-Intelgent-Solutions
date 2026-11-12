@@ -56,7 +56,7 @@
   var REGION = { lonMin: -30, lonMax: 65, latMin: 2, latMax: 62 };
 
   var host = null, root = null;
-  var overlay = null, canvas = null, ctx = null, cardEl = null, listEl = null, searchEl = null;
+  var overlay = null, cardEl = null, listEl = null, searchEl = null;
   var current = 1, view = 'emea', edges = [];
 
   function esc(s) {
@@ -105,22 +105,20 @@
           '<button type="button" class="sr-lm__close" aria-label="إغلاق">✕</button>' +
         '</div>' +
         '<div class="sr-lm__body">' +
-          '<div class="sr-lm__map">' +
-            '<canvas class="sr-lm__fx" aria-hidden="true"></canvas>' +
+          '<aside class="sr-lm__side"><div class="sr-lm__card"></div><div class="sr-lm__list"></div></aside>' +
+'<div class="sr-lm__map">' +
+            
             '<svg viewBox="' + VIEWS.emea + '" preserveAspectRatio="xMidYMid meet">' +
               '<path class="sr-lm__land" d="' + WORLD_PATH + '"></path>' +
-              '<g class="sr-lm__pins"></g>' +
+              '<g class="sr-lm__arcs"></g>' + '<g class="sr-lm__pins"></g>' +
             '</svg>' +
           '</div>' +
-          '<aside class="sr-lm__side"><div class="sr-lm__card"></div><div class="sr-lm__list"></div></aside>' +
-        '</div>' +
+                  '</div>' +
       '</div>';
 
     root.appendChild(wrap);
 
     overlay = wrap;
-    canvas = wrap.querySelector('.sr-lm__fx');
-    ctx = canvas.getContext('2d');
     cardEl = wrap.querySelector('.sr-lm__card');
     listEl = wrap.querySelector('.sr-lm__list');
     searchEl = wrap.querySelector('.sr-lm__search input');
@@ -141,14 +139,6 @@
       var t = e.target;
       if (t && t.classList && t.classList.contains('sr-lm__pin')) { select(Number(t.getAttribute('data-i'))); }
     });
-    wrap.querySelector('.sr-lm__map').addEventListener('mousemove', function (e) {
-      var r = canvas.getBoundingClientRect();
-      cursor.x = e.clientX - r.left; cursor.y = e.clientY - r.top;
-      drawArcs();
-    }, { passive: true });
-    wrap.querySelector('.sr-lm__map').addEventListener('mouseleave', function () {
-      cursor.x = -9999; cursor.y = -9999; drawArcs();
-    }, { passive: true });
     window.addEventListener('resize', function () { if (isOpen()) { setView(view); } }, { passive: true });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(); } });
 
@@ -157,8 +147,6 @@
     select(1);
     return overlay;
   }
-
-  var cursor = { x: -9999, y: -9999 };
 
   var FLAGS = { ar:'\uD83C\uDDF8\uD83C\uDDE6', nl:'\uD83C\uDDF3\uD83C\uDDF1', de:'\uD83C\uDDE9\uD83C\uDDEA',
     fr:'\uD83C\uDDEB\uD83C\uDDF7', es:'\uD83C\uDDEA\uD83C\uDDF8', it:'\uD83C\uDDEE\uD83C\uDDF9', pt:'\uD83C\uDDF5\uD83C\uDDF9',
@@ -193,77 +181,54 @@
     svg.setAttribute('viewBox', VIEWS[name] || VIEWS.emea);
     buildPins();
     buildEdges();
-    drawArcs();
   }
 
+  /* المسارات: ثلاثة أسواق متوسطة البعد + أقصى سوق ظاهر، لا كل الشبكة */
   function buildEdges() {
-    edges = [];
-    var pts = MARKETS.map(function (m) { var p = proj(m.lat, m.lon); return p; });
-    var add = function (i, j) {
-      var a = Math.min(i, j), b = Math.max(i, j);
-      for (var x = 0; x < edges.length; x++) { if (edges[x].a === a && edges[x].b === b) { return; } }
-      edges.push({ a: a, b: b });
-    };
-    for (var i = 0; i < pts.length; i++) {
-      var near = [];
-      for (var j = 0; j < pts.length; j++) {
-        if (i === j) { continue; }
-        var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
-        near.push({ j: j, d: Math.sqrt(dx * dx + dy * dy) });
-      }
-      near.sort(function (a, b) { return a.d - b.d; });
-      for (var k = 0; k < 3 && k < near.length; k++) { add(i, near[k].j); }
-      if (near.length) { add(i, near[near.length - 1].j); }
-    }
+    renderArcs();
   }
 
-  function mapBox() {
+  function renderArcs() {
+    var g = overlay && overlay.querySelector('.sr-lm__arcs');
+    if (!g) { return; }
     var svg = overlay.querySelector('svg');
-    var host = svg.parentElement;
-    var r = host.getBoundingClientRect();
-    if (!r.width || !r.height) { r = svg.getBoundingClientRect(); }
     var box = (svg.getAttribute('viewBox') || VIEWS.emea).split(/[\s,]+/).map(Number);
-    return { rect: r, box: box };
-  }
+    var inView = function (p) {
+      return p.x > box[0] + 4 && p.x < box[0] + box[2] - 4 &&
+             p.y > box[1] + 4 && p.y < box[1] + box[3] - 4;
+    };
 
-  function toPx(pt, geo) {
-    var s = Math.min(geo.rect.width / geo.box[2], geo.rect.height / geo.box[3]);
-    var ox = (geo.rect.width - geo.box[2] * s) / 2;
-    var oy = (geo.rect.height - geo.box[3] * s) / 2;
-    return { x: (pt.x - geo.box[0]) * s + ox, y: (pt.y - geo.box[1]) * s + oy };
-  }
+    var here = proj(MARKETS[current].lat, MARKETS[current].lon);
+    var ranked = MARKETS.map(function (m, i) {
+      var p = proj(m.lat, m.lon);
+      var dx = p.x - here.x, dy = p.y - here.y;
+      return { i: i, p: p, d: Math.sqrt(dx * dx + dy * dy) };
+    }).filter(function (o) {
+      return o.i !== current && inView(o.p);
+    }).sort(function (a, b) { return a.d - b.d; });
 
-  function drawArcs() {
-    if (!canvas) { return; }
-    var geo = mapBox();
-    if (geo.rect.width < 20 || geo.rect.height < 20) { return; }
-    canvas.width = Math.max(1, Math.round(geo.rect.width));
-    canvas.height = Math.max(1, Math.round(geo.rect.height));
-    canvas.style.width = geo.rect.width + 'px';
-    canvas.style.height = geo.rect.height + 'px';
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var pts = MARKETS.map(function (m) { return toPx(proj(m.lat, m.lon), geo); });
-    edges.forEach(function (e) {
-      var p1 = pts[e.a], p2 = pts[e.b];
-      var mx = (p1.x + p2.x) / 2, my = (p1.y + p2.y) / 2;
-      var dx = p2.x - p1.x, dy = p2.y - p1.y;
+    var picks = [];
+    var mid = ranked.slice(2, 5);
+    mid.forEach(function (o) { picks.push(o); });
+    if (ranked.length) { picks.push(ranked[ranked.length - 1]); }
+
+    var seen = {};
+    var out = '';
+    picks.forEach(function (o) {
+      if (seen[o.i]) { return; }
+      seen[o.i] = 1;
+      var p2 = o.p;
+      var mx = (here.x + p2.x) / 2, my = (here.y + p2.y) / 2;
+      var dx = p2.x - here.x, dy = p2.y - here.y;
       var len = Math.sqrt(dx * dx + dy * dy) || 1;
-      var bend = Math.min(42, len * 0.2) * ((e.a + e.b) % 2 ? 1 : -1);
-      var cx = mx + (-dy / len) * bend, cy = my + (dx / len) * bend;
-      var dm = Math.sqrt((mx - cursor.x) * (mx - cursor.x) + (my - cursor.y) * (my - cursor.y));
-      var tear = dm < 150 ? dm / 150 : 1;
-      if (dm < 150) {
-        cx += ((mx - cursor.x) / (dm || 1)) * (1 - tear) * 34;
-        cy += ((my - cursor.y) / (dm || 1)) * (1 - tear) * 34;
-      }
-      var hot = (current === e.a || current === e.b);
-      ctx.beginPath();
-      ctx.moveTo(p1.x, p1.y);
-      ctx.quadraticCurveTo(cx, cy, p2.x, p2.y);
-      ctx.strokeStyle = hot ? 'rgba(247,223,148,' + (0.55 * tear) + ')' : 'rgba(212,175,55,' + (0.18 * tear) + ')';
-      ctx.lineWidth = hot ? 1.5 : 0.85;
-      ctx.stroke();
+      var lift = Math.min(90, len * 0.28) * (o.i > current ? 1 : -1);
+      var cx = mx + (-dy / len) * lift, cy = my + (dx / len) * lift;
+      var cls = len > 190 ? ' class="sr-lm__far"' : '';
+      out += '<path d="M' + here.x.toFixed(1) + ' ' + here.y.toFixed(1) +
+             ' Q' + cx.toFixed(1) + ' ' + cy.toFixed(1) +
+             ' ' + p2.x.toFixed(1) + ' ' + p2.y.toFixed(1) + '"' + cls + '></path>';
     });
+    g.innerHTML = out;
   }
 
   function buildList(filter) {
@@ -298,16 +263,18 @@
     cardEl.innerHTML =
       '<div class="sr-lm__flag">' + esc(flagOf(m)) + '</div>' +
       '<h3>' + esc(m.country) + ' — ' + esc(m.city) + '</h3>' +
-      '<dl><dt>اللغة</dt><dd>' + esc(m.lang) + ' <span class="sr-lm__mono">(' + esc(m.code) + ')</span></dd>' +
-      '<dt>ضريبة القيمة المضافة</dt><dd>' + esc(m.vat) + '</dd>' +
-      '<dt>العملة</dt><dd class="sr-lm__mono">' + esc(m.cur) + '</dd>' +
-      '<dt>المنطقة الزمنية</dt><dd class="sr-lm__mono">UTC' + (tz >= 0 ? '+' : '') + tz + '</dd></dl>' +
+      '<div class="sr-lm__rows">' +
+        '<div class="sr-lm__row"><span>اللغة</span><b>' + esc(m.lang) + ' <i>(' + esc(m.code) + ')</i></b></div>' +
+        '<div class="sr-lm__row"><span>ضريبة القيمة المضافة</span><b>' + esc(m.vat) + '</b></div>' +
+        '<div class="sr-lm__row"><span>العملة</span><b>' + esc(m.cur) + '</b></div>' +
+        '<div class="sr-lm__row"><span>المنطقة الزمنية</span><b>UTC' + (tz >= 0 ? '+' : '') + tz + '</b></div>' +
+      '</div>' +
       '<p class="sr-lm__note">البيانات للعرض التوضيحي — تُثبَّت نهائياً من مصدر ضريبي رسمي قبل النشر.</p>';
     buildList(searchEl ? searchEl.value : '');
     Array.prototype.forEach.call(overlay.querySelectorAll('.sr-lm__pin'), function (p) {
       p.classList.toggle('is-on', Number(p.getAttribute('data-i')) === i);
     });
-    if (overlay.querySelector('.sr-lm__land')) { drawArcs(); }
+    if (overlay.querySelector('.sr-lm__arcs')) { renderArcs(); }
   }
 
   function open() {
@@ -342,7 +309,7 @@
     }, true);
   }
 
-  var STYLES = ".sr-lm{position:fixed;inset:0;z-index:100070;display:none;background:rgba(2,7,5,.96);.sr-lm.is-on{display:block}.sr-lm__panel{position:absolute;inset:14px;border:1px solid rgba(212,175,55,.28);border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.09),transparent 60%),#04100c;display:grid;grid-template-rows:auto 1fr}.sr-lm__bar{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap}.sr-lm__bar h2{font-size:1rem;color:#f3dfba;margin:0}.sr-lm__bar p{font-size:.74rem;color:#8fa0b5;margin:4px 0 0}.sr-lm__views{display:flex;gap:3px;padding:3px;border:1px solid rgba(255,255,255,.1);border-radius:999px}.sr-lm__views button{border:0;background:none;color:#9fb0c4;font:inherit;font-size:.72rem;font-weight:700;padding:6px 11px;border-radius:999px;cursor:pointer}.sr-lm__views button.is-on{background:rgba(212,175,55,.2);color:#f3dfba}.sr-lm__search{margin-inline-start:auto}.sr-lm__search input{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 14px;color:#e8eef6;font:inherit;font-size:.8rem;min-width:220px}.sr-lm__close{width:38px;height:38px;border-radius:11px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#cbd7e5;cursor:pointer;font-size:15px}.sr-lm__body{position:relative;display:block;min-height:0}.sr-lm__map{position:absolute;inset:10px}.sr-lm__map svg{width:100%;height:100%;display:block;position:relative;z-index:1}.sr-lm__fx{position:absolute;inset:0;z-index:0;pointer-events:none}.sr-lm__land{fill:rgba(212,175,55,.06);stroke:rgba(212,175,55,.3);stroke-width:.42;stroke-linejoin:round;vector-effect:non-scaling-stroke}.sr-lm__pin{fill:#d4af37;cursor:pointer;transition:fill .15s}.sr-lm__pin:hover,.sr-lm__pin.is-on{fill:#f7df94}.sr-lm__halo{fill:rgba(212,175,55,.18);pointer-events:none}.sr-lm__side{position:absolute;left:14px;top:14px;bottom:14px;width:320px;z-index:3;border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(6,12,9,.92);backdrop-filter:blur(14px);overflow:auto;padding:12px}.sr-lm__card{border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:13px;background:rgba(212,175,55,.06);margin-bottom:12px}.sr-lm__flag{font-size:1.4rem}.sr-lm__card h3{font-size:.95rem;color:#f3dfba;margin:6px 0 0}.sr-lm__card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;margin:10px 0 0;font-size:.77rem}.sr-lm__card dt{color:#8fa0b5}.sr-lm__card dd{color:#dfe9f4;font-weight:700;margin:0}.sr-lm__note{margin:10px 0 0;font-size:.68rem;color:#8fa0b5;line-height:1.7}.sr-lm__mono{font-family:\"JetBrains Mono\",monospace;direction:ltr;display:inline-block}.sr-lm__list{display:grid;gap:4px}.sr-lm__item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;cursor:pointer;border:1px solid transparent;background:none;color:#cfdbeb;font:inherit;font-size:.79rem;text-align:start;width:100%}.sr-lm__item:hover,.sr-lm__item.is-on{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.3);color:#f3dfba}.sr-lm__code{margin-inline-start:auto;font-family:\"JetBrains Mono\",monospace;font-size:.64rem;color:#8fa0b5}@media (max-width:760px){.sr-lm__side{position:static;width:auto;max-height:44vh;margin:6px 4px 0;order:2}.sr-lm__map{position:relative;inset:auto;height:46vh}.sr-lm__body{display:flex;flex-direction:column}.sr-lm__bunch{display:none}}";
+  var STYLES = '.sr-lm{position:fixed;inset:0;z-index:100070;direction:rtl;text-align:start;background:rgba(2,7,5,.96)}.sr-lm__panel{position:absolute;inset:14px;border:1px solid rgba(212,175,55,.28);border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.09),transparent 60%),#04100c;display:grid;grid-template-rows:auto 1fr}.sr-lm__bar{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap}.sr-lm__bar h2{font-size:1rem;color:#f3dfba;margin:0}.sr-lm__bar p{font-size:.74rem;color:#8fa0b5;margin:4px 0 0}.sr-lm__views{display:flex;gap:3px;padding:3px;border:1px solid rgba(255,255,255,.1);border-radius:999px}.sr-lm__views button{border:0;background:none;color:#9fb0c4;font:inherit;font-size:.72rem;font-weight:700;padding:6px 11px;border-radius:999px;cursor:pointer}.sr-lm__views button.is-on{background:rgba(212,175,55,.2);color:#f3dfba}.sr-lm__search{margin-inline-start:auto}.sr-lm__search input{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 14px;color:#e8eef6;font:inherit;font-size:.8rem;min-width:200px}.sr-lm__close{width:38px;height:38px;border-radius:11px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#cbd7e5;cursor:pointer;font-size:15px}.sr-lm__body{position:relative;display:grid;grid-template-columns:318px minmax(0,1fr);min-height:0}.sr-lm__map{position:relative;min-width:0;min-height:220px;margin:10px}.sr-lm__map svg{width:100%;height:100%;display:block;position:relative;z-index:1}.sr-lm__land{fill:rgba(212,175,55,.06);stroke:rgba(212,175,55,.3);stroke-width:.42;stroke-linejoin:round;vector-effect:non-scaling-stroke}.sr-lm__arcs path{fill:none;stroke:rgba(247,223,148,.5);stroke-width:1.3;vector-effect:non-scaling-stroke}.sr-lm__arcs path.sr-lm__far{stroke:rgba(212,175,55,.4);stroke-width:1;stroke-dasharray:5 5}.sr-lm__pin{fill:#d4af37;cursor:pointer}.sr-lm__pin:hover,.sr-lm__pin.is-on{fill:#f7df94}.sr-lm__halo{fill:rgba(212,175,55,.18);pointer-events:none}.sr-lm__side{position:relative;min-height:0;border-inline-end:1px solid rgba(255,255,255,.07);background:rgba(6,12,9,.55);overflow:auto;padding:12px;scrollbar-width:thin;scrollbar-color:rgba(212,175,55,.45) transparent}.sr-lm__card{border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:13px;background:rgba(212,175,55,.06);margin-bottom:12px}.sr-lm__flag{font-size:1.4rem}.sr-lm__card h3{font-size:.95rem;color:#f3dfba;margin:6px 0 0}.sr-lm__rows{display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px 12px;margin:10px 0 0;font-size:.77rem}.sr-lm__row{display:contents}.sr-lm__row span{color:#8fa0b5}.sr-lm__row b{color:#dfe9f4;font-weight:700;justify-self:start;text-align:start}.sr-lm__row i{font-style:normal;font-family:\"JetBrains Mono\",monospace;font-size:.7rem;opacity:.75}.sr-lm__note{margin:10px 0 0;font-size:.68rem;color:#8fa0b5;line-height:1.7}.sr-lm__mono{font-family:"JetBrains Mono",monospace;direction:ltr;display:inline-block}.sr-lm__side::-webkit-scrollbar{width:7px}.sr-lm__side::-webkit-scrollbar-track{background:transparent}.sr-lm__side::-webkit-scrollbar-thumb{background:rgba(212,175,55,.38);border-radius:99px}.sr-lm__list{display:grid;gap:4px;align-content:start}.sr-lm__item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;cursor:pointer;border:1px solid transparent;background:none;color:#cfdbeb;font:inherit;font-size:.79rem;text-align:start;width:100%}.sr-lm__item:hover,.sr-lm__item.is-on{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.3);color:#f3dfba}.sr-lm__code{margin-inline-start:auto;font-family:"JetBrains Mono",monospace;font-size:.64rem;color:#8fa0b5}@media (max-width:760px){.sr-lm__body{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}.sr-lm__map{order:-1}.sr-lm__side{max-height:42vh;border-inline-end:0;border-top:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:12px}.sr-lm__card{margin-bottom:0}.sr-lm__list{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}';
 
   global.SRLangMap = { open: open, close: close, isOpen: isOpen };
 
