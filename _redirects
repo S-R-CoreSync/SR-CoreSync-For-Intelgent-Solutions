@@ -1,3 +1,7 @@
+# Canonical host: one name for the site. www answers, then redirects to the
+# apex so search engines, analytics and link previews all see a single URL.
+https://www.sr-coresync.com/*  https://sr-coresync.com/:splat  301
+
 # Cloudflare Pages redirects — 301 for every product page that was renamed.
 # GitHub Pages cannot issue a 301, which is why the old paths currently answer
 # with a canonical + meta-refresh stub. On Pages these become real redirects.
