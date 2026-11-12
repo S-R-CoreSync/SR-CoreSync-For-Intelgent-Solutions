@@ -76,6 +76,16 @@ jobs:
       - name: Audit Dock Handler Sync (markup requires definition)
         run: python scripts/check_dock_handler.py
 
+      # Generalises the dock-handler invariant to EVERY handler a page calls
+      # from an inline event attribute. The localized homepages once shipped
+      # twelve sector chips each calling showStudioPeek while neither the
+      # function nor its overlay travelled with the translation batch: nothing
+      # threw, the buttons were simply dead, and only the browser audit saw it
+      # after publishing. This gate reads the page plus every local script it
+      # loads, so a handler defined anywhere reachable counts as defined.
+      - name: Audit Inline Handler Definitions
+        run: python scripts/check_command_handlers.py
+
       - name: Audit Cross-language API Parity
         run: python scripts/audit_language_api_parity.py
 
