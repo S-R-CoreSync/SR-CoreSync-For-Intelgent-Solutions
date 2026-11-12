@@ -5,8 +5,11 @@
   --sr-space-1:.25rem; --sr-space-2:.5rem; --sr-space-3:.75rem; --sr-space-4:1rem;
   --sr-space-5:1.5rem; --sr-space-6:2rem; --sr-space-7:3rem;
   --sr-gold:#d4af37; --sr-gold-soft:#f0d79a; --sr-gold-text:#ecd9a0;
+  /* channel triple of the secondary gold, so any alpha can be composed
+     without a new hex; every legacy rgba(216,178,94,a) now reads this */
+  --sr-gold-rgb:216,178,94;
   --sr-ink:#090b0e; --sr-paper:#f4f1e6; --sr-muted:rgba(233,226,207,.72);
-  --sr-line:rgba(216,178,94,.28); --sr-line-strong:rgba(216,178,94,.6);
+  --sr-line:rgba(var(--sr-gold-rgb, 216, 178, 94),.28); --sr-line-strong:rgba(var(--sr-gold-rgb, 216, 178, 94),.6);
   --sr-radius-sm:10px; --sr-radius-md:18px; --sr-radius-pill:999px;
   --sr-blur:blur(10px);
 }
@@ -66,20 +69,20 @@
 /* Command palette (Ctrl/Cmd+K). Same tokens as the rest of the chrome. */
 .sr-cmd{position:fixed;inset:0;z-index:100090;display:flex;align-items:flex-start;justify-content:center;padding:12vh 1rem 1rem;background:rgba(4,6,8,.72);backdrop-filter:blur(3px)}
 .sr-cmd[hidden]{display:none}
-.sr-cmd__panel{width:min(620px,100%);background:#0b0f14;border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -30px #000}
-.sr-cmd__input{width:100%;border:0;border-bottom:1px solid var(--sr-line, rgba(216,178,94,.22));background:transparent;color:#f4f1e6;font-size:1rem;padding:1rem 1.1rem;outline:none}
+.sr-cmd__panel{width:min(620px,100%);background:#0b0f14;border:1px solid var(--sr-line, rgba(var(--sr-gold-rgb, 216, 178, 94),.28));border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -30px #000}
+.sr-cmd__input{width:100%;border:0;border-bottom:1px solid var(--sr-line, rgba(var(--sr-gold-rgb, 216, 178, 94),.22));background:transparent;color:#f4f1e6;font-size:1rem;padding:1rem 1.1rem;outline:none}
 .sr-cmd__list{list-style:none;margin:0;padding:.4rem;max-height:52vh;overflow:auto}
 .sr-cmd__list li a{display:block;padding:.6rem .8rem;border-radius:10px;color:rgba(233,226,207,.86);text-decoration:none;font-size:.92rem}
 .sr-cmd__list li.is-active a,.sr-cmd__list li a:hover{background:rgba(212,175,55,.12);color:#f0d79a}
 .sr-cmd__empty{padding:.9rem;color:rgba(233,226,207,.5);text-align:center}
-.sr-cmd__foot{margin:0;padding:.5rem .9rem .7rem;font-size:.72rem;color:rgba(233,226,207,.45);border-top:1px solid rgba(216,178,94,.16)}
+.sr-cmd__foot{margin:0;padding:.5rem .9rem .7rem;font-size:.72rem;color:rgba(233,226,207,.45);border-top:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.16)}
 html.sr-cmd-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sr-cmd{backdrop-filter:none}}
 
 /* Language hint: reuses the switcher labels, so no copy of its own. Sits above
    the dock and never covers content on small screens. */
 .sr-lang-hint{position:fixed;inset-inline-start:12px;bottom:96px;z-index:99998;display:inline-flex;align-items:center;gap:.25rem;
-  background:rgba(9,11,14,.94);border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:999px;padding:.3rem .45rem;
+  background:rgba(9,11,14,.94);border:1px solid var(--sr-line, rgba(var(--sr-gold-rgb, 216, 178, 94),.28));border-radius:999px;padding:.3rem .45rem;
   box-shadow:0 12px 30px -16px #000;backdrop-filter:blur(8px)}
 .sr-lang-hint__link{display:inline-flex;align-items:center;gap:.4rem;color:var(--sr-gold-text, #ecd9a0);text-decoration:none;font-size:.8rem;padding:.15rem .35rem}
 .sr-lang-hint__link svg{opacity:.85}
@@ -93,33 +96,33 @@ html.sr-cmd-open{overflow:hidden}
   color:var(--sr-gold-text,#ecd9a0);letter-spacing:.01em}
 .sr-intent{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:.9rem 0 0}
 .sr-intent a{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .85rem;border-radius:999px;
-  border:1px solid rgba(216,178,94,.28);background:rgba(9,11,14,.45);color:rgba(233,226,207,.78);
+  border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.28);background:rgba(9,11,14,.45);color:rgba(233,226,207,.78);
   font-size:.8rem;line-height:1.2;text-decoration:none;white-space:nowrap;transition:border-color .2s,color .2s}
-.sr-intent a:hover,.sr-intent a:focus-visible{border-color:rgba(216,178,94,.62);color:#f0d79a;outline:none}
+.sr-intent a:hover,.sr-intent a:focus-visible{border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.62);color:#f0d79a;outline:none}
 @media (max-width:520px){.sr-promise{font-size:.9rem}.sr-intent a{font-size:.74rem;padding:.38rem .7rem}}
 @media (prefers-reduced-motion:reduce){.sr-intent a{transition:none}}
 
 /* Interface sound toggle: icon only, sits with the intent chips. */
 .sr-sound-toggle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
-  border-radius:999px;border:1px solid rgba(216,178,94,.28);background:rgba(9,11,14,.45);
+  border-radius:999px;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.28);background:rgba(9,11,14,.45);
   color:rgba(233,226,207,.62);cursor:pointer;padding:0;transition:color .2s,border-color .2s}
-.sr-sound-toggle:hover,.sr-sound-toggle:focus-visible{color:#f0d79a;border-color:rgba(216,178,94,.62);outline:none}
-.sr-sound-toggle.is-on{color:#f0d79a;border-color:rgba(216,178,94,.72);background:rgba(212,175,55,.12)}
+.sr-sound-toggle:hover,.sr-sound-toggle:focus-visible{color:#f0d79a;border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.62);outline:none}
+.sr-sound-toggle.is-on{color:#f0d79a;border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.72);background:rgba(212,175,55,.12)}
 @media (prefers-reduced-motion:reduce){.sr-sound-toggle{transition:none}}
 
 /* Analytics consent banner: bottom-left card, never full width, above the dock. */
 .sr-consent{position:fixed;inset-inline-start:16px;inset-block-end:16px;z-index:2147483000;
   max-width:min(360px,calc(100vw - 32px));padding:14px 16px;border-radius:14px;
-  border:1px solid rgba(216,178,94,.34);background:rgba(9,11,14,.94);
+  border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.34);background:rgba(9,11,14,.94);
   backdrop-filter:blur(10px);box-shadow:0 12px 40px rgba(0,0,0,.55);color:#e9e2cf}
 .sr-consent__title{margin:0 0 4px;font-size:.9rem;font-weight:700;letter-spacing:.01em;color:#f0d79a}
 .sr-consent__body{margin:0 0 12px;font-size:.8rem;line-height:1.55;color:rgba(233,226,207,.76)}
 .sr-consent__row{display:flex;gap:8px;flex-wrap:wrap}
 .sr-consent__btn{flex:1 1 auto;min-width:88px;padding:8px 14px;border-radius:9px;cursor:pointer;
-  border:1px solid rgba(216,178,94,.30);background:transparent;color:rgba(233,226,207,.86);
+  border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.30);background:transparent;color:rgba(233,226,207,.86);
   font-size:.82rem;font-weight:600;line-height:1.2;transition:background .18s,border-color .18s,color .18s}
-.sr-consent__btn:hover,.sr-consent__btn:focus-visible{border-color:rgba(216,178,94,.66);color:#f0d79a;outline:none}
-.sr-consent__btn--yes{background:rgba(212,175,55,.16);border-color:rgba(216,178,94,.55);color:#f4e3b0}
+.sr-consent__btn:hover,.sr-consent__btn:focus-visible{border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.66);color:#f0d79a;outline:none}
+.sr-consent__btn--yes{background:rgba(212,175,55,.16);border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.55);color:#f4e3b0}
 @media (max-width:520px){.sr-consent{inset-inline-start:10px;inset-block-end:10px;max-width:calc(100vw - 20px);padding:12px 13px}}
 @media (prefers-reduced-motion:reduce){.sr-consent__btn{transition:none}}
 
@@ -135,6 +138,6 @@ html.sr-cmd-open{overflow:hidden}
 /* Cross-link from the value block to the full founder profile. */
 .founders-link{margin:1.5rem 0 0;text-align:center}
 .founders-link a{display:inline-flex;align-items:center;gap:.45rem;font-size:.87rem;
-  color:var(--sr-gold-text,#ecd9a0);text-decoration:none;border-bottom:1px solid rgba(216,178,94,.35);
+  color:var(--sr-gold-text,#ecd9a0);text-decoration:none;border-bottom:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.35);
   padding-bottom:2px}
-.founders-link a:hover,.founders-link a:focus-visible{color:#f6e6b6;border-bottom-color:rgba(216,178,94,.72);outline:none}
+.founders-link a:hover,.founders-link a:focus-visible{color:#f6e6b6;border-bottom-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.72);outline:none}

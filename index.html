@@ -359,7 +359,7 @@
             z-index: 2147483647;
             background: #0d1512;
             color: #f3dfba;
-            border: 1px solid rgba(216,178,94,0.30);
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);
             border-top: 0;
             border-radius: 0 0 12px 12px;
             padding: 10px 24px;
@@ -508,18 +508,18 @@
             color: #f5e5c9 !important;
             position: relative !important;
             overflow: hidden !important;
-            box-shadow: 0 0 20px rgba(216,178,94,0.14) !important;
+            box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 216, 178, 94),0.14) !important;
             animation: voiceBtnPulse 3s infinite alternate ease-in-out !important;
         }
 
         @keyframes voiceBtnPulse {
             0% {
-                box-shadow: 0 0 12px rgba(216,178,94,0.14);
-                border-color: rgba(216,178,94,0.30);
+                box-shadow: 0 0 12px rgba(var(--sr-gold-rgb, 216, 178, 94),0.14);
+                border-color: rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);
             }
 
             100% {
-                box-shadow: 0 0 26px rgba(216,178,94,0.18);
+                box-shadow: 0 0 26px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18);
                 border-color: #f3dfba;
             }
         }
@@ -528,9 +528,9 @@
             max-width: 900px !important;
             width: 95% !important;
             background: radial-gradient(circle at 50% 0%, rgba(32, 25, 17, 0.98) 0%, rgba(2, 7, 5, 0.99) 100%) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             border-radius: 22px !important;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 45px rgba(216,178,94,0.11) !important;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 45px rgba(var(--sr-gold-rgb, 216, 178, 94),0.11) !important;
             padding: 32px !important;
             max-height: 90vh !important;
             overflow-y: auto !important;
@@ -543,7 +543,7 @@
             margin: 22px 0 16px !important;
             padding: 24px 20px !important;
             background: rgba(255, 255, 255, 0.02) !important;
-            border: 1px solid rgba(216,178,94,0.20) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20) !important;
             border-radius: 16px !important;
             position: relative !important;
         }
@@ -559,13 +559,13 @@
             align-items: center !important;
             justify-content: center !important;
             cursor: pointer !important;
-            box-shadow: 0 0 35px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 35px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
             transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
         }
 
         .sr-voice-mic-btn:hover {
             transform: scale(1.08) !important;
-            box-shadow: 0 0 50px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 50px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .sr-voice-mic-btn.is-recording {
@@ -663,7 +663,7 @@
             width: 100% !important;
             min-height: 85px !important;
             background: rgba(0, 0, 0, 0.45) !important;
-            border: 1px solid rgba(216,178,94,0.28) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.28) !important;
             border-radius: 12px !important;
             padding: 14px 18px !important;
             color: #ffffff !important;
@@ -677,7 +677,7 @@
 
         .sr-voice-transcript-box:focus {
             border-color: #ecd9a0 !important;
-            box-shadow: 0 0 18px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 18px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .sr-voice-chips-row {
@@ -690,7 +690,7 @@
 
         .sr-voice-chip {
             background: rgba(212,175,55, 0.08) !important;
-            border: 1px solid rgba(216,178,94,0.22) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.22) !important;
             border-radius: 999px !important;
             padding: 6px 14px !important;
             color: #e0d0b8 !important;
@@ -731,12 +731,12 @@
 
         .sr-voice-btn-primary:hover {
             transform: translateY(-2px) !important;
-            box-shadow: 0 8px 25px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 8px 25px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .sr-voice-btn-glass {
             background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             color: #f3dfba !important;
             border-radius: 10px !important;
             padding: 12px 20px !important;
@@ -756,7 +756,7 @@
         /* Blueprint Result Card */
         .sr-blueprint-card {
             background: rgba(8, 12, 10, 0.95) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             border-radius: 18px !important;
             padding: 26px !important;
             margin-top: 24px !important;
@@ -777,7 +777,7 @@
         }
 
         .sr-blueprint-header {
-            border-bottom: 1px solid rgba(216,178,94,0.22) !important;
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.22) !important;
             padding-bottom: 16px !important;
             margin-bottom: 20px !important;
         }
@@ -795,7 +795,7 @@
             gap: 6px !important;
             padding: 4px 14px !important;
             background: rgba(212,175,55, 0.16) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             border-radius: 999px !important;
             color: #ecd9a0 !important;
             font-size: 12.5px !important;
@@ -875,7 +875,7 @@
             flex-wrap: wrap !important;
             margin-top: 20px !important;
             padding-top: 18px !important;
-            border-top: 1px solid rgba(216,178,94,0.22) !important;
+            border-top: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.22) !important;
         }
 
         /* ── AI Executive Voice Audio Synthesis Player ── */
@@ -888,15 +888,15 @@
             padding: 16px 20px !important;
             margin: 18px 0 20px !important;
             background: linear-gradient(135deg, rgba(212,175,55, 0.12) 0%, rgba(8, 14, 10, 0.95) 100%) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             border-radius: 14px !important;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(216,178,94,0.08) !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(var(--sr-gold-rgb, 216, 178, 94),0.08) !important;
             transition: all 0.3s ease !important;
         }
 
         .sr-blueprint-audio-player.is-playing {
             border-color: #f3dfba !important;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .sr-blueprint-audio-info {
@@ -913,7 +913,7 @@
             position: relative !important;
             flex-shrink: 0 !important;
             background: #020705 !important;
-            box-shadow: 0 0 15px rgba(216,178,94,0.17) !important;
+            box-shadow: 0 0 15px rgba(var(--sr-gold-rgb, 216, 178, 94),0.17) !important;
         }
 
         .sr-blueprint-audio-img {
@@ -976,12 +976,12 @@
             font-weight: 800 !important;
             cursor: pointer !important;
             transition: all 0.25s ease !important;
-            box-shadow: 0 4px 15px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 4px 15px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .sr-blueprint-audio-btn:hover {
             transform: translateY(-2px) !important;
-            box-shadow: 0 6px 20px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 6px 20px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .sr-blueprint-audio-waves {
@@ -1156,7 +1156,7 @@
             gap: 6px !important;
             padding: 12px 8px !important;
             background: rgba(255, 255, 255, 0.04) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             border-radius: 12px !important;
             color: #e2e8f0 !important;
             font-size: 12px !important;
@@ -1170,12 +1170,12 @@
             background: rgba(212,175,55, 0.16) !important;
             border-color: #f3dfba !important;
             color: #ffffff !important;
-            box-shadow: 0 0 15px rgba(216,178,94,0.14) !important;
+            box-shadow: 0 0 15px rgba(var(--sr-gold-rgb, 216, 178, 94),0.14) !important;
         }
 
         .sr-checkout-card-preview {
             background: rgba(0, 0, 0, 0.4) !important;
-            border: 1px solid rgba(216,178,94,0.25) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25) !important;
             border-radius: 12px !important;
             padding: 16px !important;
             margin-bottom: 18px !important;
@@ -1184,7 +1184,7 @@
         .sr-checkout-input {
             width: 100% !important;
             background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             border-radius: 8px !important;
             padding: 10px 14px !important;
             color: #ffffff !important;
@@ -1196,7 +1196,7 @@
         .sr-checkout-input:focus {
             outline: none !important;
             border-color: #ecd9a0 !important;
-            box-shadow: 0 0 10px rgba(216,178,94,0.17) !important;
+            box-shadow: 0 0 10px rgba(var(--sr-gold-rgb, 216, 178, 94),0.17) !important;
         }
 
 
@@ -1209,7 +1209,7 @@
             gap: 6px !important;
             padding: 5px 12px !important;
             background: linear-gradient(135deg, rgba(212,175,55, 0.28) 0%, rgba(2, 7, 5, 0.95) 100%) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             color: #fff4da !important;
             border-radius: 999px !important;
             font-size: 0.76rem !important;
@@ -1217,7 +1217,7 @@
             text-decoration: none !important;
             cursor: pointer !important;
             transition: all 0.25s ease !important;
-            box-shadow: 0 0 14px rgba(216,178,94,0.14) !important;
+            box-shadow: 0 0 14px rgba(var(--sr-gold-rgb, 216, 178, 94),0.14) !important;
             white-space: nowrap !important;
             line-height: 1.2 !important;
             animation: voiceHeaderGlow 3s infinite alternate ease-in-out !important;
@@ -1225,19 +1225,19 @@
 
         .btn-header-voice-ai:hover {
             background: linear-gradient(135deg, rgba(212,175,55, 0.5) 0%, rgba(20, 15, 10, 0.98) 100%) !important;
-            box-shadow: 0 0 24px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 24px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
             transform: translateY(-1px) !important;
             color: #ffffff !important;
         }
 
         @keyframes voiceHeaderGlow {
             0% {
-                box-shadow: 0 0 10px rgba(216,178,94,0.11);
-                border-color: rgba(216,178,94,0.30);
+                box-shadow: 0 0 10px rgba(var(--sr-gold-rgb, 216, 178, 94),0.11);
+                border-color: rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);
             }
 
             100% {
-                box-shadow: 0 0 20px rgba(216,178,94,0.18);
+                box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18);
                 border-color: #f3dfba;
             }
         }
@@ -1276,7 +1276,7 @@
             font-weight: 700 !important;
             cursor: pointer !important;
             transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
-            box-shadow: 0 0 22px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 22px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
             white-space: nowrap !important;
             position: relative !important;
             overflow: hidden !important;
@@ -1285,7 +1285,7 @@
 
         .hero-btn-voice-ai:hover {
             background: linear-gradient(135deg, rgba(212,175,55, 0.48) 0%, rgba(35, 26, 18, 0.98) 100%) !important;
-            box-shadow: 0 0 35px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 35px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
             transform: translateY(-2px) scale(1.02) !important;
             color: #ffffff !important;
             border-color: #f3dfba !important;
@@ -1293,12 +1293,12 @@
 
         @keyframes heroVoicePulse {
             0% {
-                box-shadow: 0 0 16px rgba(216,178,94,0.14);
-                border-color: rgba(216,178,94,0.30);
+                box-shadow: 0 0 16px rgba(var(--sr-gold-rgb, 216, 178, 94),0.14);
+                border-color: rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);
             }
 
             100% {
-                box-shadow: 0 0 32px rgba(216,178,94,0.18);
+                box-shadow: 0 0 32px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18);
                 border-color: #f3dfba;
             }
         }
@@ -1369,13 +1369,13 @@
             gap: 10px !important;
             padding: 10px 22px !important;
             background: rgba(8, 12, 10, 0.92) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             border-radius: 999px !important;
             color: #f3dfba !important;
             font-size: 0.86rem !important;
             font-weight: 700 !important;
             cursor: pointer !important;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(216,178,94,0.14) !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(var(--sr-gold-rgb, 216, 178, 94),0.14) !important;
             transition: all 0.25s ease !important;
             -webkit-backdrop-filter: blur(12px) !important;
             backdrop-filter: blur(12px) !important;
@@ -1386,7 +1386,7 @@
         .hero-emblem-voice-badge:hover {
             background: rgba(25, 20, 14, 0.98) !important;
             border-color: #f3dfba !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
             transform: translateY(-2px) !important;
             color: #ffffff !important;
         }
@@ -1441,7 +1441,7 @@
 
         .sr-checkout-card-preview {
             background: rgba(14, 24, 20, 0.7);
-            border: 1px solid rgba(216,178,94,0.30);
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);
             border-radius: 12px;
             padding: 16px;
             margin-bottom: 16px;
@@ -1475,7 +1475,7 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            border-top: 1px solid rgba(216,178,94,0.20);
+            border-top: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);
             padding-top: 8px;
         }
 
@@ -1512,7 +1512,7 @@
 
         .sr-checkout-method-btn {
             background: rgba(8, 16, 12, 0.7);
-            border: 1px solid rgba(216,178,94,0.25);
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25);
             border-radius: 10px;
             padding: 10px 6px;
             color: #cbd5e1;
@@ -1531,7 +1531,7 @@
             border-color: #f3dfba;
             background: rgba(212,175,55, 0.15);
             color: #ffffff;
-            box-shadow: 0 0 12px rgba(216,178,94,0.17);
+            box-shadow: 0 0 12px rgba(var(--sr-gold-rgb, 216, 178, 94),0.17);
         }
 
         .sr-checkout-method-icon {
@@ -1548,7 +1548,7 @@
             width: 100%;
             padding: 10px 14px;
             background: rgba(6, 12, 9, 0.85);
-            border: 1px solid rgba(216,178,94,0.30);
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);
             border-radius: 8px;
             color: #ffffff;
             font-size: 13px;
@@ -1610,7 +1610,7 @@
 
         .btn-partner-portal-header {
             background: rgba(212,175,55, 0.15) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             color: #f3dfba !important;
             font-weight: 700 !important;
             text-decoration: none !important;
@@ -1627,12 +1627,12 @@
             background: rgba(212,175,55, 0.3) !important;
             border-color: #f3dfba !important;
             color: #ffffff !important;
-            box-shadow: 0 0 14px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 14px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .hero-btn-dev-portal {
             background: rgba(14, 28, 22, 0.85) !important;
-            border: 1px solid rgba(216,178,94,0.30) !important;
+            border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30) !important;
             color: #f3dfba !important;
             font-weight: 700 !important;
             text-decoration: none !important;
@@ -1642,7 +1642,7 @@
             background: rgba(212,175,55, 0.2) !important;
             border-color: #f3dfba !important;
             color: #ffffff !important;
-            box-shadow: 0 0 16px rgba(216,178,94,0.18) !important;
+            box-shadow: 0 0 16px rgba(var(--sr-gold-rgb, 216, 178, 94),0.18) !important;
         }
 
         .hero-emblem-avatar-badge {
@@ -2080,7 +2080,7 @@
 @media (prefers-reduced-motion:reduce){.hero-sectors-track,.section-founders-showcase video.video,.ai-guide-pulse{animation:none!important}}
 
 /* ACT2: slim trust band (client names + compliance badges, seamless marquee) */
-.trust-band{border-top:1px solid rgba(216,178,94,.14);border-bottom:1px solid rgba(216,178,94,.14);background:rgba(9,11,14,.5);padding:.9rem 0}
+.trust-band{border-top:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.14);border-bottom:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.14);background:rgba(9,11,14,.5);padding:.9rem 0}
 .trust-band-inner{max-width:1200px;margin:0 auto;padding:0 1.25rem}
 .trust-band-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .trust-band-track{display:inline-flex;width:max-content;animation:srMarquee 46s linear infinite}
@@ -2088,14 +2088,14 @@
 .trust-band-half{display:inline-flex;align-items:center;gap:1.6rem;padding-inline-end:1.6rem}
 .trust-band:hover .trust-band-track{animation-play-state:paused}
 .trust-band-chip{font-size:.86rem;color:#cfd3da;white-space:nowrap;letter-spacing:.01em}
-.trust-band-badge{font-size:.74rem;font-weight:700;color:#f0d79a;border:1px solid rgba(216,178,94,.32);border-radius:999px;padding:.22rem .7rem;white-space:nowrap;letter-spacing:.04em}
+.trust-band-badge{font-size:.74rem;font-weight:700;color:#f0d79a;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.32);border-radius:999px;padding:.22rem .7rem;white-space:nowrap;letter-spacing:.04em}
 @media (prefers-reduced-motion:reduce){.trust-band-track{animation:none!important}}
 </style>
 <style id="sr-act4-css">
 /* ACT4: sovereign platform tabs */
 .sp-tabs{display:flex;gap:.65rem;justify-content:center;flex-wrap:wrap;margin:0 0 2.2rem}
-.sp-tab{background:rgba(9,11,14,.55);border:1px solid rgba(216,178,94,.32);color:#e9e2cf;border-radius:999px;padding:.6rem 1.5rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:background .25s ease,border-color .25s ease,color .25s ease}
-.sp-tab:hover{border-color:rgba(216,178,94,.7);color:#f0d79a}
+.sp-tab{background:rgba(9,11,14,.55);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.32);color:#e9e2cf;border-radius:999px;padding:.6rem 1.5rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:background .25s ease,border-color .25s ease,color .25s ease}
+.sp-tab:hover{border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.7);color:#f0d79a}
 .sp-tab.is-active{background:linear-gradient(135deg,#f0d79a,#d4af37);border-color:#d4af37;color:#171204;font-weight:800;box-shadow:0 10px 26px -12px rgba(212,175,55,.55)}
 .sp-tab:focus-visible{outline:2px solid #f0d79a;outline-offset:2px}
 .sp-panel{animation:spFade .45s ease}
@@ -2111,12 +2111,12 @@
    Kept in the same glass/gold language as the trust band and the pricing
    badges; one column under 900px so the founders block keeps its width. */
 .about-value{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.05rem;margin:0 0 2.3rem}
-.about-value__card{background:rgba(9,11,14,.55);border:1px solid rgba(216,178,94,.28);border-radius:18px;padding:1.3rem 1.2rem;backdrop-filter:blur(6px);display:flex;flex-direction:column;gap:.55rem;transition:border-color .25s ease}
-.about-value__card:hover{border-color:rgba(216,178,94,.6)}
-.about-value__icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(216,178,94,.35);color:#f0d79a}
+.about-value__card{background:rgba(9,11,14,.55);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.28);border-radius:18px;padding:1.3rem 1.2rem;backdrop-filter:blur(6px);display:flex;flex-direction:column;gap:.55rem;transition:border-color .25s ease}
+.about-value__card:hover{border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.6)}
+.about-value__icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.35);color:#f0d79a}
 .about-value__title{font-size:1.02rem;font-weight:700;color:#f4f1e6;margin:0;line-height:1.4}
 .about-value__body{font-size:.9rem;line-height:1.7;color:rgba(233,226,207,.72);margin:0}
-.about-value__badge{align-self:flex-start;margin-top:.15rem;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:#f0d79a;border:1px solid rgba(216,178,94,.32);border-radius:999px;padding:.2rem .65rem;white-space:nowrap}
+.about-value__badge{align-self:flex-start;margin-top:.15rem;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:#f0d79a;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.32);border-radius:999px;padding:.2rem .65rem;white-space:nowrap}
 @media (max-width:900px){.about-value{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.about-value__card{transition:none}}
 </style>
@@ -2126,12 +2126,12 @@
    Reuses the tokens file so spacing and gold stay in one place. */
 .sr-block{max-width:1200px;margin:0 auto;padding:0 1.25rem}
 .sr-block__head{max-width:820px;margin:0 auto 2rem;text-align:center}
-.sr-block__eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sr-gold-text, #ecd9a0);border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:999px;padding:.25rem .8rem;margin-bottom:.9rem}
+.sr-block__eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sr-gold-text, #ecd9a0);border:1px solid var(--sr-line, rgba(var(--sr-gold-rgb, 216, 178, 94),.28));border-radius:999px;padding:.25rem .8rem;margin-bottom:.9rem}
 .sr-block__title{font-size:clamp(1.5rem,2.4vw,2.1rem);font-weight:800;color:var(--sr-paper, #f4f1e6);margin:0 0 .6rem}
 .sr-block__sub{font-size:.95rem;line-height:1.7;color:var(--sr-muted, rgba(233,226,207,.72));margin:0}
 .sr-steps,.sr-pledges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;list-style:none;margin:0;padding:0}
-.sr-steps li,.sr-pledges li{background:rgba(9,11,14,.55);border:1px solid var(--sr-line, rgba(216,178,94,.28));border-radius:18px;padding:1.1rem 1.05rem}
-.sr-steps__num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid rgba(216,178,94,.45);color:#f0d79a;font-size:.8rem;font-weight:800;margin-bottom:.55rem}
+.sr-steps li,.sr-pledges li{background:rgba(9,11,14,.55);border:1px solid var(--sr-line, rgba(var(--sr-gold-rgb, 216, 178, 94),.28));border-radius:18px;padding:1.1rem 1.05rem}
+.sr-steps__num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),.45);color:#f0d79a;font-size:.8rem;font-weight:800;margin-bottom:.55rem}
 .sr-steps__title,.sr-pledges__title{font-size:.98rem;font-weight:700;color:#f4f1e6;margin:0 0 .35rem;line-height:1.4}
 .sr-steps__meta{display:block;font-size:.72rem;letter-spacing:.04em;color:#f0d79a;margin-bottom:.4rem}
 .sr-steps__body,.sr-pledges__body{font-size:.86rem;line-height:1.65;color:rgba(233,226,207,.72);margin:0}
@@ -3409,7 +3409,7 @@
                     <p class="text-caption text-white-64 mb-0">حلول بصرية ورقمية استراتيجية مصممة للوضوح والثقة وتحويل
                         زوارك إلى عملاء دائمين بأسعار تنافسية مدروسة</p>
                     <div class="dana-bundle-banner"
-                        style="margin-top:1.1rem;padding:1rem 1.25rem;background:linear-gradient(135deg,rgba(212,175,55,0.18),rgba(16,185,129,0.12));border:1px solid rgba(216,178,94,0.30);border-radius:12px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.75rem;">
+                        style="margin-top:1.1rem;padding:1rem 1.25rem;background:linear-gradient(135deg,rgba(212,175,55,0.18),rgba(16,185,129,0.12));border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);border-radius:12px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.75rem;">
                         <div>
                             <strong style="color:#f3dfba;">📦 باقة الانطلاقة الشاملة</strong>
                             <span style="color:#cbd5e1;margin-right:0.5rem;">هوية بصرية + موقع/متجر + ربط محاسبي —
@@ -4113,7 +4113,7 @@
             <div class="container">
                 <div class="text-center" style="max-width: 820px; margin: 0 auto 3rem;">
                     <div
-                        style="display: inline-flex; align-items: center; gap: 8px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(216,178,94,0.30); color: #f3dfba; padding: 6px 18px; border-radius: 999px; font-size: 0.82rem; font-weight: 800; margin-bottom: 14px;">
+                        style="display: inline-flex; align-items: center; gap: 8px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30); color: #f3dfba; padding: 6px 18px; border-radius: 999px; font-size: 0.82rem; font-weight: 800; margin-bottom: 14px;">
                         <span>🏛️ الركائز التكنولوجية السيادية • S&amp;R Sovereign Tech Ecosystem</span>
                     </div>
                     <h2 class="text-display-2 letter-space--3"
@@ -4130,12 +4130,12 @@
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-bottom: 30px;">
                     <!-- 1. AI Agents -->
                     <div class="pillar-showcase-card"
-                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(216,178,94,0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
                         <div>
                             <div
                                 style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
                                 <div
-                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(216,178,94,0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
                                     🤖</div>
                                 <span
                                     style="font-size: 0.74rem; color: #34d399; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 3px 10px; border-radius: 999px; font-weight: 700;">🟢
@@ -4176,12 +4176,12 @@
 
                     <!-- 2. Sovereign Cloud -->
                     <div class="pillar-showcase-card"
-                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(216,178,94,0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
                         <div>
                             <div
                                 style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
                                 <div
-                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(216,178,94,0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
                                     ☁️</div>
                                 <span
                                     style="font-size: 0.74rem; color: #34d399; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 3px 10px; border-radius: 999px; font-weight: 700;">🟢
@@ -4221,12 +4221,12 @@
 
                     <!-- 3. ERP & Core -->
                     <div class="pillar-showcase-card"
-                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(216,178,94,0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
                         <div>
                             <div
                                 style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
                                 <div
-                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(216,178,94,0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
                                     📦</div>
                                 <span
                                     style="font-size: 0.74rem; color: #34d399; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 3px 10px; border-radius: 999px; font-weight: 700;">🟢
@@ -4266,12 +4266,12 @@
 
                     <!-- 4. FinTech & PEPPOL -->
                     <div class="pillar-showcase-card"
-                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(216,178,94,0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
                         <div>
                             <div
                                 style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
                                 <div
-                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(216,178,94,0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
                                     💳</div>
                                 <span
                                     style="font-size: 0.74rem; color: #34d399; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 3px 10px; border-radius: 999px; font-weight: 700;">🟢
@@ -4311,12 +4311,12 @@
 
                     <!-- 5. Cybersecurity & eIDAS -->
                     <div class="pillar-showcase-card"
-                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(216,178,94,0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
                         <div>
                             <div
                                 style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
                                 <div
-                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(216,178,94,0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
                                     🛡️</div>
                                 <span
                                     style="font-size: 0.74rem; color: #34d399; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 3px 10px; border-radius: 999px; font-weight: 700;">🟢
@@ -4357,12 +4357,12 @@
 
                     <!-- 6. Next-Gen Web -->
                     <div class="pillar-showcase-card"
-                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(216,178,94,0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+                        style="background: rgba(10, 24, 18, 0.85); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.25); border-radius: 20px; padding: 26px 22px; backdrop-filter: blur(16px); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
                         <div>
                             <div
                                 style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
                                 <div
-                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(216,178,94,0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+                                    style="width: 50px; height: 50px; border-radius: 12px; background: rgba(212,175,55, 0.12); border: 1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
                                     ⚡</div>
                                 <span
                                     style="font-size: 0.74rem; color: #34d399; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 3px 10px; border-radius: 999px; font-weight: 700;">🟢
@@ -6831,7 +6831,7 @@
 
                     <!-- Lead capture (low friction) -->
                     <div
-                        style="text-align:center;background:linear-gradient(135deg,rgba(212,175,55,0.12),rgba(30,120,90,0.08));border:1px solid rgba(216,178,94,0.30);border-radius:18px;padding:2.4rem 2rem;">
+                        style="text-align:center;background:linear-gradient(135deg,rgba(212,175,55,0.12),rgba(30,120,90,0.08));border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);border-radius:18px;padding:2.4rem 2rem;">
                         <h3 style="color:#fff;font-size:1.5rem;margin:0 0 0.6rem;font-weight:800;">غير متأكد أي باقة
                             تناسبك؟</h3>
                         <p style="color:#d3dbd7;margin:0 auto 1.4rem;max-width:min(620px,100%);line-height:1.8;">احجز
@@ -6851,21 +6851,21 @@
                             ماذا يقول عملاؤنا</h3>
                         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem;">
                             <blockquote
-                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(216,178,94,0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
                                 <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
                                     "Core Starter أطلق منصتنا في 3 أسابيع. الدعم (30 يومًا) كان كافياً لفريقنا."</p>
                                 <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— مدير
                                     عمليات، شركة لوجستية (NL)</footer>
                             </blockquote>
                             <blockquote
-                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(216,178,94,0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
                                 <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
                                     "Full ERP Sync وحّد شجرة الحسابات + SEPA + BTW. وفر 15 ساعة/أسبوع."</p>
                                 <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CFO،
                                     شركة تجارة (EU)</footer>
                             </blockquote>
                             <blockquote
-                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(216,178,94,0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
                                 <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
                                     "Custom ERP Ecosystem: 100% White-Label + BYOK. أمان على مستوى بنكي."</p>
                                 <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CTO،
@@ -6881,7 +6881,7 @@
                             إضافات (Add-ons)</h3>
                         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
                             <div
-                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(216,178,94,0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
                                 <div style="font-size:1.6rem;margin-bottom:0.4rem;">📦</div>
                                 <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">وحدات إضافية
                                 </h4>
@@ -6889,7 +6889,7 @@
                                 <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€190</p>
                             </div>
                             <div
-                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(216,178,94,0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
                                 <div style="font-size:1.6rem;margin-bottom:0.4rem;">🎓</div>
                                 <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">ساعات تدريب
                                 </h4>
@@ -6897,14 +6897,14 @@
                                 <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€250</p>
                             </div>
                             <div
-                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(216,178,94,0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
                                 <div style="font-size:1.6rem;margin-bottom:0.4rem;">🛠️</div>
                                 <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">تمديد دعم</h4>
                                 <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+30 يوم (SLA)</p>
                                 <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€290</p>
                             </div>
                             <div
-                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(216,178,94,0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
                                 <div style="font-size:1.6rem;margin-bottom:0.4rem;">🌍</div>
                                 <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">لغة إضافية</h4>
                                 <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+1 لغة (i18n)</p>
@@ -6915,7 +6915,7 @@
 
                     <!-- Post-purchase steps -->
                     <div
-                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(216,178,94,0.20);border-radius:14px;padding:2rem;">
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
                         <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">ما بعد الحجز — 4
                             خطوات واضحة</h3>
                         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
@@ -6955,10 +6955,10 @@
 
                     <!-- Pricing FAQ -->
                     <div
-                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(216,178,94,0.20);border-radius:14px;padding:2rem;">
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
                         <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">أسئلة شائعة حول
                             الأسعار</h3>
-                        <details style="border-bottom:1px solid rgba(216,178,94,0.15);padding:0.9rem 0;">
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
                             <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">هل السعر يشمل
                                 BTW (ضريبة القيمة المضافة)؟</summary>
                             <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">الأسعار
@@ -6966,20 +6966,20 @@
                                 متوافقة مع Belastingdienst — مؤهلة للخصم كنفقات تشغيلية.
                             </p>
                         </details>
-                        <details style="border-bottom:1px solid rgba(216,178,94,0.15);padding:0.9rem 0;">
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
                             <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">ما مدة الدعم
                                 (Support) لكل باقة؟</summary>
                             <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Core Starter:
                                 30 يومًا · Enterprise Growth: 60 يومًا · Core MAX: 180 يومًا · ERP Setup: 30 يومًا ·
                                 Full ERP Sync: 60 يومًا · Custom: 180 يومًا. يمكن تمديد الدعم (Add-on).</p>
                         </details>
-                        <details style="border-bottom:1px solid rgba(216,178,94,0.15);padding:0.9rem 0;">
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
                             <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">هل يمكن
                                 الترقية (Upgrade) لاحقاً؟</summary>
                             <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">نعم — يمكنك
                                 الترقية في أي وقت. نحتسب الفرق (pro-rata) بناءً على ما دفعته.</p>
                         </details>
-                        <details style="border-bottom:1px solid rgba(216,178,94,0.15);padding:0.9rem 0;">
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
                             <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">ما طرق الدفع
                                 المقبولة؟</summary>
                             <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">iDEAL, Stripe,
@@ -6998,7 +6998,7 @@
                     <!-- Guarantee badge -->
                     <div style="text-align:center;">
                         <span
-                            style="display:inline-block;background:rgba(212,175,55,0.12);border:1px solid rgba(216,178,94,0.30);border-radius:999px;padding:0.7rem 1.6rem;color:#e4cfa9;font-weight:700;font-size:0.9rem;">
+                            style="display:inline-block;background:rgba(212,175,55,0.12);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);border-radius:999px;padding:0.7rem 1.6rem;color:#e4cfa9;font-weight:700;font-size:0.9rem;">
                             🛡️ ضمان الرضا 14 يومًا · استشارة مجانية 30 دقيقة · فاتورة BTW رسمية
                         </span>
                     </div>
@@ -7877,7 +7877,7 @@
                     style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem;">
                     <div>
                         <span
-                            style="display:inline-block;font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:#ecd9a0;border:1px solid rgba(216,178,94,0.30);border-radius:999px;padding:0.3rem 0.85rem;margin-bottom:0.8rem;">Insights
+                            style="display:inline-block;font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:#ecd9a0;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);border-radius:999px;padding:0.3rem 0.85rem;margin-bottom:0.8rem;">Insights
                             · رؤى تنفيذية</span>
                         <h2 class="text-display-2 letter-space--3" id="insightsTitle" style="margin:0;">أحدث المقالات
                         </h2>
@@ -7888,7 +7888,7 @@
                 </div>
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;">
                     <article
-                        style="padding:1.35rem;border:1px solid rgba(216,178,94,0.28);border-radius:16px;background:linear-gradient(165deg,rgba(14,28,24,0.92),rgba(11,21,18,0.92));display:flex;flex-direction:column;gap:0.7rem;">
+                        style="padding:1.35rem;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.28);border-radius:16px;background:linear-gradient(165deg,rgba(14,28,24,0.92),rgba(11,21,18,0.92));display:flex;flex-direction:column;gap:0.7rem;">
                         <span
                             style="align-self:flex-start;font-size:0.68rem;font-weight:800;color:#9fe6c6;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);border-radius:999px;padding:0.15rem 0.6rem;">أنظمة
                             ERP</span>
@@ -7902,7 +7902,7 @@
                             ←</a>
                     </article>
                     <article
-                        style="padding:1.35rem;border:1px solid rgba(216,178,94,0.28);border-radius:16px;background:linear-gradient(165deg,rgba(14,28,24,0.92),rgba(11,21,18,0.92));display:flex;flex-direction:column;gap:0.7rem;">
+                        style="padding:1.35rem;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.28);border-radius:16px;background:linear-gradient(165deg,rgba(14,28,24,0.92),rgba(11,21,18,0.92));display:flex;flex-direction:column;gap:0.7rem;">
                         <span
                             style="align-self:flex-start;font-size:0.68rem;font-weight:800;color:#9fe6c6;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);border-radius:999px;padding:0.15rem 0.6rem;">السحابة</span>
                         <h3 style="margin:0;font-size:1.02rem;line-height:1.6;"><a href="./insights/cloud-cost-30.html"
@@ -7915,7 +7915,7 @@
                             ←</a>
                     </article>
                     <article
-                        style="padding:1.35rem;border:1px solid rgba(216,178,94,0.28);border-radius:16px;background:linear-gradient(165deg,rgba(14,28,24,0.92),rgba(11,21,18,0.92));display:flex;flex-direction:column;gap:0.7rem;">
+                        style="padding:1.35rem;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.28);border-radius:16px;background:linear-gradient(165deg,rgba(14,28,24,0.92),rgba(11,21,18,0.92));display:flex;flex-direction:column;gap:0.7rem;">
                         <span
                             style="align-self:flex-start;font-size:0.68rem;font-weight:800;color:#9fe6c6;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);border-radius:999px;padding:0.15rem 0.6rem;">الذكاء
                             الاصطناعي</span>
@@ -10162,7 +10162,7 @@
                     <span style="font-size:0.82rem;color:var(--text-muted,#94a3b8);font-weight:600;">🌍 لغة التحدث
                         واللهجة:</span>
                     <select id="voicePlannerLangSelect"
-                        style="background:rgba(14,28,22,0.95);border:1px solid rgba(216,178,94,0.30);color:#f0dfbd;padding:6px 14px;border-radius:10px;font-size:0.84rem;font-family:inherit;cursor:pointer;outline:none;">
+                        style="background:rgba(14,28,22,0.95);border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);color:#f0dfbd;padding:6px 14px;border-radius:10px;font-size:0.84rem;font-family:inherit;cursor:pointer;outline:none;">
                         <option value="ar-SA" selected>🇸🇦 العربية (الخليج والفصحى)</option>
                         <option value="ar-SY">🇸🇾 العربية (بلاد الشام وسوريا)</option>
                         <option value="ar-EG">🇪🇬 العربية (مصر)</option>
@@ -11055,7 +11055,7 @@
                         <form id="newsletterFormFooter" style="margin-top:0.9rem;display:flex;gap:0.5rem;flex-wrap:wrap;"
                             novalidate>
                             <input type="email" name="email" placeholder="بريدك الإلكتروني" required
-                                style="flex:1;min-width:180px;padding:0.55rem 0.8rem;border-radius:8px;border:1px solid rgba(216,178,94,0.30);background:#050b16;color:#fff;">
+                                style="flex:1;min-width:180px;padding:0.55rem 0.8rem;border-radius:8px;border:1px solid rgba(var(--sr-gold-rgb, 216, 178, 94),0.30);background:#050b16;color:#fff;">
                             <button type="submit" class="dana-btn-booking"
                                 style="padding:0.55rem 1.1rem;">اشتراك</button>
                         </form>
