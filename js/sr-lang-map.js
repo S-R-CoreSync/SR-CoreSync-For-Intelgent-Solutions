@@ -296,16 +296,22 @@
 
   function isOpen() { return !!(host && host.style.display !== 'none'); }
 
-  /* every language entry point opens the map instead of the flat menu */
+  /* كل مدخل لغوي يفتح الخريطة: زر الكرة الأرضية في الدوك، ورابط +29، وقائمة الهيدر */
   function wire() {
+    var SEL = '[aria-label*="Languages"], [aria-label*="اللغات"], #srLangMenuBtn, ' +
+              '#appleDockLaunchpadBtn, .sr-lang-menu-trigger, .hv2__flag.more, ' +
+              '.header-language summary, [href="#languages"]';
+
     document.addEventListener('click', function (e) {
-      var t = e.target;
-      if (!t || !t.closest) { return; }
-      if (t.closest('[aria-label*="Languages"]') || t.closest('[aria-label*="اللغات"]') ||
-          t.closest('#srLangMenuBtn') || t.closest('.sr-lang-menu-trigger')) {
-        e.preventDefault();
-        open();
+      var el = e.target && e.target.closest ? e.target.closest(SEL) : null;
+      if (!el) { return; }
+      /* لا نترك launchpad القديم يفتح في اللحظة نفسها */
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof window.toggleAppleDockLaunchpad === 'function' && window.__srLaunchpadOpen) {
+        try { window.toggleAppleDockLaunchpad(e); } catch (err) {}
       }
+      open();
     }, true);
   }
 
