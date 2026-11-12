@@ -1,0 +1,10 @@
+/* sr-hero-declutter — one decision per screen.
+   The hero carried nine competing groups; three of them were noise, not offers.
+   Keep this file small and reversible: deleting the <link> restores the old hero. */
+.hero-title-dots,
+.hero-service-pillars-pills,
+.hero-brand-presenter__tag,
+.hero-availability { display: none !important; }
+
+/* the hero ends where its message ends */
+.section-hero-v1 { min-height: auto !important; padding-block: clamp(26px, 4vh, 58px) !important; }

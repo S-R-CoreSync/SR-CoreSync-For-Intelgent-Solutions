@@ -26,3 +26,14 @@ html:not([lang="ar"]) .hero-emblem-voice-badge-wrap {
     margin-top: 1.5rem !important;
     width: 100% !important;
 }
+
+
+/* sr-hero-declutter — one decision per screen.
+   The hero carried nine competing groups; these three were noise, not offers.
+   Reversible: delete this block to restore the previous hero. */
+.hero-availability,
+.hero-title-dots,
+.hero-service-pillars-pills { display: none !important; }
+
+/* let the hero end where its message ends, not at a fixed tall height */
+.section-hero-v1 { min-height: auto !important; padding-block: clamp(28px, 4.5vh, 64px); }
