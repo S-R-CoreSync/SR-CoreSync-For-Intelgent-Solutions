@@ -12,3 +12,8 @@
 /* The prompt-sample chips duplicated the input's purpose and collided with the
    emblem on LTR pages. The input stands alone; the marquee speaks for sectors. */
 .hero-ai-chips-wrap { display: none !important; }
+
+/* The sector marquee duplicated the sector list, and the floating voice badge sat
+   on top of the emblem. Both keep their function elsewhere: the marquee lives on
+   its own row, the voice planner opens from the AI input. */
+.hero-emblem-voice-badge-wrap { display: none !important; }
