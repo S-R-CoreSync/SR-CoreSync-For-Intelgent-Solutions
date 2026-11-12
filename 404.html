@@ -15,15 +15,15 @@
     --gold-soft:#f0d79a;
     --text:#e9e6df;
     --muted:#9aa0aa;
-    --line:rgba(var(--sr-gold-rgb, 216, 178, 94),.22);
+    --line:rgba(var(--sr-gold-line-rgb, 216, 178, 94),.22);
   }
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
     margin:0;
     background:
-      radial-gradient(1100px 520px at 50% -10%, rgba(var(--sr-gold-rgb, 216, 178, 94),.10), transparent 70%),
-      radial-gradient(700px 380px at 85% 110%, rgba(var(--sr-gold-rgb, 216, 178, 94),.06), transparent 70%),
+      radial-gradient(1100px 520px at 50% -10%, rgba(var(--sr-gold-line-rgb, 216, 178, 94),.10), transparent 70%),
+      radial-gradient(700px 380px at 85% 110%, rgba(var(--sr-gold-line-rgb, 216, 178, 94),.06), transparent 70%),
       var(--obsidian);
     color:var(--text);
     font-family:"Alexandria","Plus Jakarta Sans","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
@@ -36,7 +36,7 @@
   .wrap{width:100%;max-width:660px;text-align:center}
   .emblem{
     width:86px;height:86px;display:block;margin:0 auto 22px;
-    filter:drop-shadow(0 0 26px rgba(var(--sr-gold-rgb, 216, 178, 94),.35));
+    filter:drop-shadow(0 0 26px rgba(var(--sr-gold-line-rgb, 216, 178, 94),.35));
   }
   .brand{
     font-size:13px;letter-spacing:.34em;text-transform:uppercase;
@@ -65,11 +65,11 @@
   .btn-primary{
     background:linear-gradient(135deg,var(--gold-soft),var(--gold));
     color:#1a1408;border-color:transparent;
-    box-shadow:0 12px 30px -12px rgba(var(--sr-gold-rgb, 216, 178, 94),.6);
+    box-shadow:0 12px 30px -12px rgba(var(--sr-gold-line-rgb, 216, 178, 94),.6);
   }
   .btn-ghost{background:rgba(255,255,255,.035);color:var(--text)}
   .btn:hover{transform:translateY(-2px)}
-  .btn-ghost:hover{border-color:rgba(var(--sr-gold-rgb, 216, 178, 94),.5);background:rgba(var(--sr-gold-rgb, 216, 178, 94),.09)}
+  .btn-ghost:hover{border-color:rgba(var(--sr-gold-line-rgb, 216, 178, 94),.5);background:rgba(var(--sr-gold-line-rgb, 216, 178, 94),.09)}
   .langs{
     border-top:1px solid rgba(255,255,255,.07);padding-top:20px;margin-top:6px;
   }
@@ -78,7 +78,7 @@
     display:inline-block;color:var(--muted);text-decoration:none;font-size:13px;
     padding:6px 10px;border-radius:8px;
   }
-  .langs a:hover{color:var(--gold-soft);background:rgba(var(--sr-gold-rgb, 216, 178, 94),.08)}
+  .langs a:hover{color:var(--gold-soft);background:rgba(var(--sr-gold-line-rgb, 216, 178, 94),.08)}
   footer{margin-top:30px;color:#4d525b;font-size:11.5px;line-height:1.9}
   footer a{color:#6f7682;text-decoration:none}
   footer a:hover{color:var(--gold)}

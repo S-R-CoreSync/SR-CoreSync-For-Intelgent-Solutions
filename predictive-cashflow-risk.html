@@ -52,7 +52,7 @@
             color: #e2e8f0;
             min-height: 100vh;
             background-image: 
-                radial-gradient(circle at 12% 15%, rgba(212,175,55, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 12% 15%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.05) 0%, transparent 45%),
                 radial-gradient(circle at 88% 85%, rgba(16, 185, 129, 0.05) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
@@ -99,7 +99,7 @@
             height: 44px;
             border-radius: 10px;
             border: 1px solid var(--gold-primary);
-            box-shadow: 0 0 15px rgba(212,175,55, 0.2);
+            box-shadow: 0 0 15px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
         }
 
         .brand-title {
@@ -112,10 +112,10 @@
         .brand-badge {
             font-size: 0.7rem;
             color: var(--gold-light);
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
-            border: 1px solid rgba(212,175,55, 0.3);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
             margin-right: 0.5rem;
         }
 
@@ -139,8 +139,8 @@
 
         .nav-link:hover, .nav-link.active {
             color: var(--gold-light);
-            background: rgba(212,175,55, 0.1);
-            border-color: rgba(212,175,55, 0.3);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.1);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
         }
 
         .btn-portal-back {
@@ -237,7 +237,7 @@
         }
 
         .stat-card:hover {
-            border-color: rgba(212,175,55, 0.4);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
             transform: translateY(-2px);
         }
 
@@ -321,12 +321,12 @@
         }
 
         .panel-badge {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             color: var(--gold-light);
             font-size: 0.75rem;
             padding: 0.2rem 0.6rem;
             border-radius: 6px;
-            border: 1px solid rgba(212,175,55, 0.3);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
         }
 
         /* Stress Test Scenario Buttons */
@@ -350,7 +350,7 @@
         }
 
         .scenario-btn:hover, .scenario-btn.active {
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border-color: var(--gold-primary);
         }
 
@@ -439,7 +439,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(212,175,55, 0.2);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             padding-bottom: 0.5rem;
         }
 
@@ -491,7 +491,7 @@
         }
 
         .btn-export-forecast {
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--gold-primary);
             color: var(--gold-light);
             padding: 0.65rem 1rem;

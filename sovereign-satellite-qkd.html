@@ -39,7 +39,7 @@
             min-height: 100vh;
             background-image:
                 radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(212,175,55, 0.06) 0%, transparent 45%);
+                radial-gradient(circle at 85% 85%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.06) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
         }
@@ -84,7 +84,7 @@
             height: 44px;
             border-radius: 10px;
             border: 1px solid var(--gold-primary);
-            box-shadow: 0 0 15px rgba(212,175,55, 0.2);
+            box-shadow: 0 0 15px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
         }
 
         .brand-title {
@@ -129,8 +129,8 @@
 
         .nav-link.gold {
             color: var(--gold-light);
-            border-color: rgba(212,175,55, 0.35);
-            background: rgba(212,175,55, 0.08);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08);
         }
 
         .hero {
@@ -357,7 +357,7 @@
 
         .station-btn:hover, .station-btn.selected {
             border-color: var(--gold-primary);
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
         }
 
         .station-head {

@@ -34,8 +34,8 @@
             --sr-bg: #040806;
             --sr-card: rgba(10, 19, 14, 0.92);
             --sr-card-hover: rgba(15, 28, 20, 0.95);
-            --sr-border: rgba(212,175,55, 0.22);
-            --sr-border-active: rgba(212,175,55, 0.6);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
+            --sr-border-active: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.6);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
             --sr-emerald-light: #6ee7b7;
@@ -53,7 +53,7 @@
         body {
             background: var(--sr-bg);
             background-image: 
-                radial-gradient(ellipse 60% 40% at 20% 10%, rgba(212,175,55,0.04) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 20% 10%, rgba(var(--sr-gold-rgb, 212, 175, 55),0.04) 0%, transparent 60%),
                 radial-gradient(ellipse 50% 50% at 80% 90%, rgba(16,185,129,0.03) 0%, transparent 50%);
             color: #ffffff;
             font-family: var(--sr-font-ar);
@@ -91,7 +91,7 @@
             height: 42px;
             border-radius: 50%;
             border: 1.5px solid var(--sr-gold);
-            box-shadow: 0 0 18px rgba(212,175,55,0.3);
+            box-shadow: 0 0 18px rgba(var(--sr-gold-rgb, 212, 175, 55),0.3);
         }
 
         .wl-brand-text h1 {
@@ -128,7 +128,7 @@
         }
 
         .wl-btn-nav:hover {
-            background: rgba(212,175,55,0.18);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.18);
             border-color: var(--sr-gold);
             color: var(--sr-gold-light);
         }
@@ -145,8 +145,8 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(212,175,55,0.12);
-            border: 1px solid rgba(212,175,55,0.35);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.12);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.35);
             color: var(--sr-gold-light);
             padding: 5px 14px;
             border-radius: 999px;
@@ -254,7 +254,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, var(--accent-glow, rgba(212,175,55,0.08)) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, var(--accent-glow, rgba(var(--sr-gold-rgb, 212, 175, 55),0.08)) 0%, transparent 70%);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -272,7 +272,7 @@
         .wl-platform-card.selected {
             border-color: var(--accent-color, var(--sr-gold));
             background: rgba(255,255,255,0.04);
-            box-shadow: 0 0 30px var(--accent-glow, rgba(212,175,55,0.15));
+            box-shadow: 0 0 30px var(--accent-glow, rgba(var(--sr-gold-rgb, 212, 175, 55),0.15));
         }
 
         .wl-platform-card .wl-check-badge {
@@ -378,13 +378,13 @@
 
         .wl-tier-card:hover {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55,0.06);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.06);
         }
 
         .wl-tier-card.active {
             border-color: var(--sr-gold);
-            background: linear-gradient(145deg, rgba(212,175,55,0.18), rgba(212,175,55,0.05));
-            box-shadow: 0 4px 20px rgba(212,175,55,0.15);
+            background: linear-gradient(145deg, rgba(var(--sr-gold-rgb, 212, 175, 55),0.18), rgba(var(--sr-gold-rgb, 212, 175, 55),0.05));
+            box-shadow: 0 4px 20px rgba(var(--sr-gold-rgb, 212, 175, 55),0.15);
         }
 
         .wl-tier-popular {
@@ -461,13 +461,13 @@
             border-radius: 50%;
             background: var(--sr-gold);
             cursor: pointer;
-            box-shadow: 0 2px 12px rgba(212,175,55,0.4);
+            box-shadow: 0 2px 12px rgba(var(--sr-gold-rgb, 212, 175, 55),0.4);
         }
 
         .wl-seats-val {
             min-width: 60px;
-            background: rgba(212,175,55,0.15);
-            border: 1px solid rgba(212,175,55,0.4);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.15);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.4);
             border-radius: 10px;
             padding: 6px 10px;
             text-align: center;
@@ -501,8 +501,8 @@
         }
 
         .wl-deploy-card:hover {
-            background: rgba(212,175,55,0.06);
-            border-color: rgba(212,175,55,0.4);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.06);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55),0.4);
         }
 
         .wl-deploy-card.active {
@@ -536,12 +536,12 @@
         }
 
         .wl-module-box:hover {
-            background: rgba(212,175,55,0.06);
-            border-color: rgba(212,175,55,0.35);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.06);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55),0.35);
         }
 
         .wl-module-box.checked {
-            background: rgba(212,175,55,0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.12);
             border-color: var(--sr-gold);
         }
 
@@ -617,14 +617,14 @@
         }
 
         .wl-sum-header {
-            border-bottom: 1px solid rgba(212,175,55,0.25);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.25);
             padding-bottom: 16px;
         }
 
         .wl-sum-ref {
             display: inline-block;
-            background: rgba(212,175,55,0.15);
-            border: 1px solid rgba(212,175,55,0.4);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.15);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.4);
             color: var(--sr-gold-light);
             font-family: monospace;
             font-size: 0.74rem;
@@ -717,8 +717,8 @@
             display: inline-flex;
             align-items: center;
             gap: 4px;
-            background: rgba(212,175,55,0.12);
-            border: 1px solid rgba(212,175,55,0.35);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55),0.12);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.35);
             border-radius: 999px;
             padding: 3px 10px;
             font-size: 0.7rem;
@@ -764,7 +764,7 @@
         .wl-input {
             width: 100%;
             background: rgba(0,0,0,0.5);
-            border: 1px solid rgba(212,175,55,0.3);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.3);
             border-radius: 10px;
             padding: 9px 14px;
             color: #fff;
@@ -798,14 +798,14 @@
             justify-content: center;
             gap: 8px;
             transition: all 0.25s cubic-bezier(0.16,1,0.3,1);
-            box-shadow: 0 6px 20px rgba(212,175,55,0.35);
+            box-shadow: 0 6px 20px rgba(var(--sr-gold-rgb, 212, 175, 55),0.35);
             font-family: inherit;
         }
 
         .wl-btn-pdf:hover {
             background: var(--sr-gold-light);
             transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(212,175,55,0.5);
+            box-shadow: 0 10px 28px rgba(var(--sr-gold-rgb, 212, 175, 55),0.5);
         }
 
         .wl-btn-book {

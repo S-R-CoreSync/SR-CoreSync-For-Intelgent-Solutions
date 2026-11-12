@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/sr-unified-design-system.css">
     <link rel="stylesheet" href="./css/sr-3d-interactions.css">
     <style>
-        :root { --gold:#d4af37; --gold-l:#f3dfba; --gold-d:#8c734b; --bg:#040608; --card:rgba(8,12,22,.9); --border:rgba(212,175,55,.22); --cyan:#38bdf8; --emerald:#10b981; }
+        :root { --gold:#d4af37; --gold-l:#f3dfba; --gold-d:#8c734b; --bg:#040608; --card:rgba(8,12,22,.9); --border:rgba(var(--sr-gold-rgb, 212, 175, 55),.22); --cyan:#38bdf8; --emerald:#10b981; }
         * { box-sizing:border-box; margin:0; padding:0; }
         body { background:radial-gradient(ellipse at 60% 0%,#060814 0%,#040608 70%); color:#f8fafc; font-family:'Alexandria','IBM Plex Sans Arabic',system-ui,sans-serif; min-height:100vh; overflow-x:hidden; }
 
@@ -39,7 +39,7 @@
 
         /* Hero */
         .hero { text-align:center; padding:50px 20px 36px; max-width:800px; margin:0 auto; position:relative; z-index:2; }
-        .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(212,175,55,.12); border:1px solid var(--border); color:var(--gold-l); padding:6px 18px; border-radius:999px; font-size:.85rem; font-weight:700; margin-bottom:16px; }
+        .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(var(--sr-gold-rgb, 212, 175, 55),.12); border:1px solid var(--border); color:var(--gold-l); padding:6px 18px; border-radius:999px; font-size:.85rem; font-weight:700; margin-bottom:16px; }
         .hero h1 { font-size:2.4rem; font-weight:900; background:linear-gradient(135deg,#fff 40%,var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; line-height:1.3; margin-bottom:14px; }
         .hero p { color:#cbd5e1; font-size:1.05rem; margin-bottom:28px; }
 
@@ -56,7 +56,7 @@
         .pay-method-btn { background:rgba(10,15,30,.7); border:1.5px solid var(--border); border-radius:14px; padding:14px; display:flex; flex-direction:column; align-items:center; gap:8px; cursor:pointer; transition:all .25s; font-family:inherit; }
         .pay-method-btn .pm-icon { font-size:1.6rem; }
         .pay-method-btn .pm-label { font-size:.8rem; font-weight:700; color:#94a3b8; }
-        .pay-method-btn.active, .pay-method-btn:hover { border-color:var(--gold); background:rgba(212,175,55,.12); }
+        .pay-method-btn.active, .pay-method-btn:hover { border-color:var(--gold); background:rgba(var(--sr-gold-rgb, 212, 175, 55),.12); }
         .pay-method-btn.active .pm-label { color:#fff; }
         .pay-method-btn.instant { border-color:rgba(56,189,248,.35); }
         .pay-method-btn.instant:hover, .pay-method-btn.instant.active { border-color:var(--cyan); background:rgba(56,189,248,.1); }
@@ -64,7 +64,7 @@
         /* نموذج البطاقة */
         .card-form { display:flex; flex-direction:column; gap:14px; }
         .form-label { font-size:.82rem; font-weight:700; color:var(--gold); display:block; margin-bottom:6px; }
-        .form-input { width:100%; background:rgba(5,8,18,.8); border:1.5px solid rgba(212,175,55,.18); color:#f8fafc; padding:12px 16px; border-radius:12px; font-family:'Space Grotesk',monospace; font-size:.92rem; outline:none; letter-spacing:.5px; transition:border-color .2s; }
+        .form-input { width:100%; background:rgba(5,8,18,.8); border:1.5px solid rgba(var(--sr-gold-rgb, 212, 175, 55),.18); color:#f8fafc; padding:12px 16px; border-radius:12px; font-family:'Space Grotesk',monospace; font-size:.92rem; outline:none; letter-spacing:.5px; transition:border-color .2s; }
         .form-input:focus { border-color:var(--gold); }
         .form-row-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
         .security-badges { display:flex; align-items:center; gap:10px; margin-top:4px; flex-wrap:wrap; }
@@ -83,7 +83,7 @@
 
         /* زر الدفع */
         .btn-pay { width:100%; padding:16px; background:linear-gradient(135deg,var(--gold),var(--gold-d)); color:#040806; border:none; border-radius:14px; font-weight:900; font-size:1.05rem; cursor:pointer; font-family:inherit; transition:all .25s; display:flex; align-items:center; justify-content:center; gap:10px; margin-top:16px; }
-        .btn-pay:hover { box-shadow:0 12px 30px rgba(212,175,55,.4); transform:translateY(-2px); }
+        .btn-pay:hover { box-shadow:0 12px 30px rgba(var(--sr-gold-rgb, 212, 175, 55),.4); transform:translateY(-2px); }
 
         /* شاشة النجاح */
         .success-screen { display:none; text-align:center; padding:40px 24px; }
@@ -241,7 +241,7 @@
                 </div>
 
                 <!-- نموذج التحويل البنكي -->
-                <div id="wireFormContent" style="display:none; background:rgba(212,175,55,.06); border:1px solid var(--border); border-radius:12px; padding:16px;">
+                <div id="wireFormContent" style="display:none; background:rgba(var(--sr-gold-rgb, 212, 175, 55),.06); border:1px solid var(--border); border-radius:12px; padding:16px;">
                     <div style="font-size:.88rem; font-weight:700; color:var(--gold-l); margin-bottom:12px;">بيانات التحويل البنكي لـ S&R CoreSync:</div>
                     <div style="display:flex; flex-direction:column; gap:8px; font-size:.85rem; direction:ltr;">
                         <div style="display:flex; justify-content:space-between;"><span style="color:#94a3b8;">Bank:</span><span style="color:#fff; font-weight:700;">ABN AMRO Bank N.V.</span></div>
@@ -310,7 +310,7 @@
                     <span id="sumTotal" style="color:var(--gold-l); font-family:'Space Grotesk',sans-serif;">€ 16,093</span>
                 </div>
 
-                <div style="margin-top:16px; padding:12px; background:rgba(212,175,55,.06); border-radius:12px; font-size:.8rem; color:#94a3b8; border:1px solid rgba(212,175,55,.12);">
+                <div style="margin-top:16px; padding:12px; background:rgba(var(--sr-gold-rgb, 212, 175, 55),.06); border-radius:12px; font-size:.8rem; color:#94a3b8; border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),.12);">
                     <strong style="color:var(--gold-l); display:block; margin-bottom:4px;">🛡️ ضمان استرداد الأموال</strong>
                     استرداد كامل خلال 14 يوماً إذا لم تُبدأ الخدمة. الدفع مشفر بـ SSL 256-Bit ومحمي بـ 3D Secure.
                 </div>

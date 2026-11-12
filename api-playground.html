@@ -35,7 +35,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg-root: #030806;
             --sr-bg-card: rgba(8, 18, 13, 0.88);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -187,7 +187,7 @@
 
         .endpoint-btn.active, .endpoint-btn:hover {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
         }
 
         .method-badge {
@@ -245,7 +245,7 @@
         }
 
         .btn-send-request:hover {
-            box-shadow: 0 8px 20px rgba(212,175,55, 0.35);
+            box-shadow: 0 8px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
             transform: translateY(-1px);
         }
 
@@ -273,7 +273,7 @@
         .tab-btn.active, .tab-btn:hover {
             color: #ffffff;
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
 
         .code-display {

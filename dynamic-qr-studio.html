@@ -33,7 +33,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg: #030806;
             --sr-card: rgba(8, 18, 13, 0.9);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -101,7 +101,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -154,9 +154,9 @@
 
         .mode-tab:hover, .mode-tab.active {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.16);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.16);
             color: #fff;
-            box-shadow: 0 0 16px rgba(212,175,55, 0.25);
+            box-shadow: 0 0 16px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
         }
 
         /* Layout Grid */
@@ -212,7 +212,7 @@
         .form-input {
             width: 100%;
             background: rgba(4, 10, 7, 0.85);
-            border: 1px solid rgba(212,175,55, 0.2);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             color: #f8fafc;
             padding: 10px 14px;
             border-radius: 10px;
@@ -253,7 +253,7 @@
 
         .palette-btn:hover, .palette-btn.active {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.2);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             color: #fff;
         }
 
@@ -314,7 +314,7 @@
         }
 
         .btn-png:hover {
-            box-shadow: 0 0 16px rgba(212,175,55, 0.4);
+            box-shadow: 0 0 16px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
             transform: translateY(-1px);
         }
 

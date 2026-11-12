@@ -23,7 +23,7 @@
     <style>
         :root {
             --bg-deep: #020705;
-            --border-gold: rgba(212,175,55, 0.3);
+            --border-gold: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
             --gold-bright: #dfc299;
             --emerald: #10b981;
         }
@@ -46,7 +46,7 @@
             border: 1px solid var(--border-gold);
             border-radius: 24px;
             padding: 48px 32px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(212,175,55, 0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.1);
             -webkit-backdrop-filter: blur(16px);
             backdrop-filter: blur(16px);
         }
@@ -93,7 +93,7 @@
         }
         .card {
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212,175,55, 0.2);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             border-radius: 14px;
             padding: 20px;
         }
@@ -130,7 +130,7 @@
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212,175,55, 0.35);
+            box-shadow: 0 8px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
         .btn-secondary {
             background: rgba(255, 255, 255, 0.05);
@@ -138,7 +138,7 @@
             color: var(--gold-bright);
         }
         .btn-secondary:hover {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
     </style>
 </head>

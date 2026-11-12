@@ -35,7 +35,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg-root: #030806;
             --sr-bg-card: rgba(8, 18, 13, 0.88);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -211,7 +211,7 @@
 
         .type-btn.active, .type-btn:hover {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
 
         /* المؤشرات الإحصائية السريعة */
@@ -304,7 +304,7 @@
 
         .btn-action-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212,175,55, 0.4);
+            box-shadow: 0 10px 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
         }
     </style>
 </head>
@@ -463,7 +463,7 @@
 
             // تحديد الألوان
             let mainColor = '#d4af37';
-            let gradStart = 'rgba(212,175,55, 0.45)';
+            let gradStart = 'rgba(var(--sr-gold-rgb, 212, 175, 55), 0.45)';
             if (currentTheme === 'emerald') {
                 mainColor = '#10b981';
                 gradStart = 'rgba(16, 185, 129, 0.45)';

@@ -33,7 +33,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg: #030806;
             --sr-card: rgba(8, 18, 13, 0.9);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -101,7 +101,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -228,7 +228,7 @@
 
         .stage-ctrl-btn:hover, .stage-ctrl-btn.active {
             color: #fff;
-            background: rgba(212,175,55, 0.25);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
         }
 
         .drag-hint {
@@ -310,8 +310,8 @@
 
         .swatch-btn:hover, .swatch-btn.active {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.15);
-            box-shadow: 0 0 14px rgba(212,175,55, 0.25);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
+            box-shadow: 0 0 14px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
             transform: translateY(-2px);
         }
 
@@ -333,7 +333,7 @@
         .engrave-input {
             width: 100%;
             background: rgba(4, 10, 7, 0.85);
-            border: 1px solid rgba(212,175,55, 0.2);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             color: #f8fafc;
             padding: 10px 14px;
             border-radius: 10px;
@@ -403,7 +403,7 @@
         }
 
         .btn-order:hover {
-            box-shadow: 0 0 20px rgba(212,175,55, 0.45);
+            box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.45);
             transform: translateY(-2px);
         }
 
@@ -822,7 +822,7 @@
 
             // نص النقش المخصص بالليزر
             if (engravingText.trim().length > 0) {
-                ctx.fillStyle = 'rgba(212,175,55, 0.75)';
+                ctx.fillStyle = 'rgba(var(--sr-gold-rgb, 212, 175, 55), 0.75)';
                 ctx.font = `600 ${Math.round(scale * 0.07)}px 'Space Grotesk', sans-serif`;
                 ctx.fillText(engravingText.toUpperCase(), 0, scale * 0.36);
             }

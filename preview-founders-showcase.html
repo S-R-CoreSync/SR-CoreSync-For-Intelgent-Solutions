@@ -15,8 +15,8 @@
             --primary-gold-dark: #8c734b;
             --bg-deep: #010907;
             --bg-card: rgba(8, 18, 14, 0.75);
-            --border-gold: rgba(212,175,55, 0.28);
-            --border-gold-glow: rgba(212,175,55, 0.65);
+            --border-gold: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.28);
+            --border-gold-glow: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.65);
             --text-muted: rgba(255, 255, 255, 0.72);
         }
 
@@ -54,7 +54,7 @@
             gap: 8px;
             padding: 6px 16px;
             border-radius: 999px;
-            background: rgba(212,175,55, 0.1);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.1);
             border: 1px solid var(--border-gold);
             color: var(--primary-gold-bright);
             font-size: 0.85rem;
@@ -106,7 +106,7 @@
 
         .showcase-tab-btn {
             background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(212,175,55, 0.25);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
             color: rgba(255, 255, 255, 0.82);
             padding: 10px 22px;
             border-radius: 999px;
@@ -123,15 +123,15 @@
         .showcase-tab-btn:hover {
             border-color: var(--border-gold-glow);
             color: #ffffff;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             transform: translateY(-2px);
         }
 
         .showcase-tab-btn.active {
-            background: linear-gradient(135deg, rgba(212,175,55, 0.32) 0%, rgba(212,175,55, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.32) 0%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15) 100%);
             border-color: var(--primary-gold-bright);
             color: var(--primary-gold-bright);
-            box-shadow: 0 0 20px rgba(212,175,55, 0.28);
+            box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.28);
         }
 
         .showcase-tab-dot {
@@ -155,14 +155,14 @@
             border-radius: 20px;
             border: 1px solid var(--border-gold);
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212,175,55, 0.12);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             transition: all 0.4s ease;
             position: relative;
         }
 
         .showcase-banner-card:hover {
             border-color: var(--border-gold-glow);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 45px rgba(212,175,55, 0.22);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 45px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
         }
 
         .showcase-img-wrap {
@@ -197,7 +197,7 @@
         .showcase-banner-footer {
             padding: 18px 26px;
             background: rgba(4, 12, 9, 0.96);
-            border-top: 1px solid rgba(212,175,55, 0.2);
+            border-top: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -219,7 +219,7 @@
 
         .showcase-tab-btn-pdf {
             border-color: rgba(243, 223, 186, 0.6) !important;
-            background: rgba(212,175,55, 0.15) !important;
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15) !important;
             text-decoration: none !important;
         }
 
@@ -258,7 +258,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.1rem;
-            box-shadow: 0 0 12px rgba(212,175,55, 0.4);
+            box-shadow: 0 0 12px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
         }
 
         .showcase-footer-title {
@@ -279,7 +279,7 @@
         }
 
         .showcase-action-btn {
-            background: rgba(212,175,55, 0.1);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.1);
             border: 1px solid var(--border-gold);
             color: var(--primary-gold-bright);
             padding: 8px 18px;
@@ -299,7 +299,7 @@
             background: var(--primary-gold);
             color: #010907;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(212,175,55, 0.35);
+            box-shadow: 0 4px 15px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
 
         /* -----------------------------------------------------======= */
@@ -373,7 +373,7 @@
             color: #010907;
             border-color: var(--primary-gold-bright);
             transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 0 25px rgba(212,175,55, 0.5);
+            box-shadow: 0 0 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.5);
         }
 
         .showcase-nav-prev {
@@ -393,7 +393,7 @@
             margin-top: 1.25rem;
             padding: 12px 20px;
             background: rgba(8, 18, 14, 0.6);
-            border: 1px solid rgba(212,175,55, 0.18);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.18);
             border-radius: 999px;
             flex-wrap: wrap;
         }
@@ -408,7 +408,7 @@
             padding: 6px 14px;
             border-radius: 999px;
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(212,175,55, 0.2);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.8rem;
             font-weight: 600;
@@ -421,7 +421,7 @@
         }
 
         .showcase-dot-item.active {
-            background: rgba(212,175,55, 0.2);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             border-color: var(--primary-gold);
             color: var(--primary-gold-bright);
         }
@@ -468,7 +468,7 @@
         }
 
         .showcase-slider-playback-btn:hover {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
 
         /* نمط العرض الفردي (Single View) */
@@ -580,7 +580,7 @@
 
         /* زر التحميل الفائق 4K */
         .showcase-action-btn.showcase-action-4k {
-            background: linear-gradient(135deg, rgba(212,175,55, 0.22) 0%, rgba(243, 223, 186, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22) 0%, rgba(243, 223, 186, 0.08) 100%);
             border-color: rgba(243, 223, 186, 0.6);
             color: #ffffff;
             font-weight: 700;
@@ -594,7 +594,7 @@
         }
 
         .showcase-action-btn.showcase-action-qr {
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border-color: var(--primary-gold-bright);
             color: var(--primary-gold-bright);
         }
@@ -602,7 +602,7 @@
         .showcase-action-btn.showcase-action-qr:hover {
             background: var(--primary-gold-bright);
             color: #010907;
-            box-shadow: 0 0 16px rgba(212,175,55, 0.4);
+            box-shadow: 0 0 16px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
         }
 
         /* تولبار نافذة التكبير الكبيرة Lightbox Toolbar */
@@ -642,7 +642,7 @@
         }
 
         .sr-lightbox-tool-btn.sr-btn-gold {
-            background: linear-gradient(135deg, rgba(212,175,55, 0.35) 0%, rgba(243, 223, 186, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35) 0%, rgba(243, 223, 186, 0.15) 100%);
             border-color: var(--primary-gold-bright);
             color: var(--primary-gold-bright);
         }
@@ -650,7 +650,7 @@
         .sr-lightbox-tool-btn.sr-btn-gold:hover {
             background: linear-gradient(135deg, #d4af37 0%, #f3dfba 100%);
             color: #040807;
-            box-shadow: 0 0 20px rgba(212,175,55, 0.5);
+            box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.5);
         }
 
         /* نافذة البطاقة الرقمية الذكية (Digital vCard QR Modal) */
@@ -680,7 +680,7 @@
             border-radius: 24px;
             padding: 32px 26px;
             text-align: center;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 45px rgba(212,175,55, 0.22);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 45px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             animation: qrModalPop 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -716,7 +716,7 @@
         .sr-qr-badge {
             display: inline-block;
             padding: 6px 16px;
-            background: rgba(212,175,55, 0.14);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.14);
             border: 1px solid var(--border-gold);
             border-radius: 999px;
             color: var(--primary-gold-bright);
@@ -751,7 +751,7 @@
             height: 230px;
             border-radius: 18px;
             border: 2px solid var(--border-gold-glow);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85), 0 0 30px rgba(212,175,55, 0.25);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85), 0 0 30px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
             background: #040807;
             object-fit: contain;
         }
@@ -787,12 +787,12 @@
         .sr-qr-btn-primary {
             background: linear-gradient(135deg, #d4af37 0%, #f3dfba 100%);
             color: #040807;
-            box-shadow: 0 4px 18px rgba(212,175,55, 0.35);
+            box-shadow: 0 4px 18px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
 
         .sr-qr-btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(212,175,55, 0.6);
+            box-shadow: 0 6px 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.6);
         }
 
         .sr-qr-btn-outline {
@@ -802,7 +802,7 @@
         }
 
         .sr-qr-btn-outline:hover {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             border-color: var(--primary-gold-bright);
             color: var(--primary-gold-bright);
             transform: translateY(-2px);

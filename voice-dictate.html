@@ -23,10 +23,10 @@
             --bg-base: #010907;
             --bg-card: rgba(14, 28, 22, 0.75);
             --gold: #d4af37;
-            --gold-glow: rgba(212,175,55, 0.35);
+            --gold-glow: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --border-glass: rgba(212,175,55, 0.2);
+            --border-glass: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             --emerald: #10b981;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -57,7 +57,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--border-glass);
             color: var(--gold);
             padding: 6px 16px;
@@ -126,7 +126,7 @@
         }
         .mic-btn:hover {
             transform: scale(1.08);
-            box-shadow: 0 0 45px rgba(212,175,55, 0.6);
+            box-shadow: 0 0 45px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.6);
         }
         .mic-btn.recording {
             background: linear-gradient(135deg, #ef4444, #b91c1c);

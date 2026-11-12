@@ -39,7 +39,7 @@
             --emerald: #10b981;
             --emerald-glow: rgba(16, 185, 129, 0.25);
             --cyan: #38bdf8;
-            --border-glass: rgba(212,175,55, 0.25);
+            --border-glass: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --font-ar: 'Alexandria', sans-serif;
@@ -56,7 +56,7 @@
         body {
             background-color: var(--bg-deep);
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(212,175,55, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 50% 0%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12) 0%, transparent 60%),
                 radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 0% 100%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
             color: var(--text-main);
@@ -97,7 +97,7 @@
         .brand-emblem {
             width: 46px;
             height: 46px;
-            filter: drop-shadow(0 0 12px rgba(212,175,55, 0.35));
+            filter: drop-shadow(0 0 12px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35));
         }
 
         .brand-titles h1 {
@@ -128,7 +128,7 @@
             align-items: center;
             gap: 8px;
             padding: 8px 16px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--border-glass);
             color: var(--gold-light);
             border-radius: 999px;
@@ -232,7 +232,7 @@
 
         .lookup-input:focus {
             border-color: var(--gold);
-            box-shadow: 0 0 16px rgba(212,175,55, 0.2);
+            box-shadow: 0 0 16px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
         }
 
         .lookup-icon {
@@ -260,7 +260,7 @@
 
         .btn-lookup:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212,175,55, 0.35);
+            box-shadow: 0 6px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
 
         .quick-presets-row {
@@ -365,7 +365,7 @@
         /* Hash Row */
         .hash-card {
             background: rgba(2, 6, 23, 0.7);
-            border: 1px solid rgba(212,175,55, 0.2);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             border-radius: 14px;
             padding: 16px 20px;
             margin-bottom: 28px;
@@ -544,7 +544,7 @@
 
         .sig-card {
             background: rgba(15, 23, 42, 0.5);
-            border: 1px dashed rgba(212,175,55, 0.3);
+            border: 1px dashed rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
             border-radius: 14px;
             padding: 18px;
             text-align: center;
@@ -633,7 +633,7 @@
         }
 
         .btn-act-portal {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             border-color: var(--border-glass);
             color: var(--gold-light);
         }

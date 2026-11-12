@@ -75,7 +75,7 @@
       border-radius: 9999px;
     }
     .card-3d-custom-wrap {
-      background: radial-gradient(circle at 80% 20%, rgba(212,175,55, 0.25) 0%, #0d0d12 70%);
+      background: radial-gradient(circle at 80% 20%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25) 0%, #0d0d12 70%);
       transform-style: preserve-3d;
       perspective: 1000px;
     }
@@ -1572,7 +1572,7 @@
   --sr-obsidian-black: #010907;
   --sr-font-brand: 'Plus Jakarta Sans', -apple-system, sans-serif;
   --sr-font-arabic: 'Alexandria', 'IBM Plex Sans Arabic', sans-serif;
-  --sr-border-glow: 0 0 25px rgba(212,175,55, 0.25);
+  --sr-border-glow: 0 0 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
 }
 `;
         zip.file("06-Brand-Design-Tokens.css", cssVariables);

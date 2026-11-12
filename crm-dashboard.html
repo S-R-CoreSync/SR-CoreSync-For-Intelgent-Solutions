@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/sr-unified-design-system.css">
     <link rel="stylesheet" href="./css/sr-3d-interactions.css">
     <style>
-        :root { --gold:#d4af37; --gold-l:#f3dfba; --gold-d:#8c734b; --bg:#030704; --card:rgba(8,20,13,.88); --border:rgba(212,175,55,.22); --cyan:#38bdf8; --emerald:#10b981; }
+        :root { --gold:#d4af37; --gold-l:#f3dfba; --gold-d:#8c734b; --bg:#030704; --card:rgba(8,20,13,.88); --border:rgba(var(--sr-gold-rgb, 212, 175, 55),.22); --cyan:#38bdf8; --emerald:#10b981; }
         * { box-sizing:border-box; margin:0; padding:0; }
         body { background:radial-gradient(ellipse at 30% 0%,#061208 0%,#030704 70%); color:#f8fafc; font-family:'Alexandria','IBM Plex Sans Arabic',system-ui,sans-serif; min-height:100vh; overflow-x:hidden; }
 
@@ -47,7 +47,7 @@
         .dash-title { font-size:1.7rem; font-weight:900; }
         .dash-subtitle { font-size:.9rem; color:#94a3b8; margin-top:2px; }
         .btn-primary { display:inline-flex; align-items:center; gap:7px; background:linear-gradient(135deg,var(--gold),var(--gold-d)); color:#040806; padding:10px 20px; border-radius:12px; font-weight:800; font-size:.88rem; border:none; cursor:pointer; font-family:inherit; transition:all .2s; text-decoration:none; }
-        .btn-primary:hover { box-shadow:0 8px 20px rgba(212,175,55,.3); transform:translateY(-1px); }
+        .btn-primary:hover { box-shadow:0 8px 20px rgba(var(--sr-gold-rgb, 212, 175, 55),.3); transform:translateY(-1px); }
 
         /* شبكة KPI */
         .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; padding:0 28px 24px; max-width:1400px; margin:0 auto; }
@@ -131,7 +131,7 @@
         </div>
         <div style="display:flex; gap:10px;">
             <a href="smart-proposal-portal.html" class="btn-primary sr-magnetic-btn">+ عرض سعر جديد</a>
-            <a href="invoice-engine.html" class="btn-primary sr-magnetic-btn" style="background:rgba(212,175,55,.15); color:var(--gold-l); border:1px solid var(--border);">+ فاتورة جديدة</a>
+            <a href="invoice-engine.html" class="btn-primary sr-magnetic-btn" style="background:rgba(var(--sr-gold-rgb, 212, 175, 55),.15); color:var(--gold-l); border:1px solid var(--border);">+ فاتورة جديدة</a>
         </div>
     </div>
 
@@ -221,19 +221,19 @@
 
                 <!-- مصفوفة مؤشرات الاستوديوهات -->
                 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin-bottom:18px;">
-                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(212,175,55,0.18); border-radius:12px; padding:12px; text-align:center;">
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.18); border-radius:12px; padding:12px; text-align:center;">
                         <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">🤖 استشارات AI للباقات</div>
                         <div style="font-size:1.3rem; font-weight:900; color:var(--gold-l); font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statAiAdvisor">14</div>
                     </div>
-                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(212,175,55,0.18); border-radius:12px; padding:12px; text-align:center;">
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.18); border-radius:12px; padding:12px; text-align:center;">
                         <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">⚡ فحوصات السرعة</div>
                         <div style="font-size:1.3rem; font-weight:900; color:var(--cyan); font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statPerfAudits">28</div>
                     </div>
-                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(212,175,55,0.18); border-radius:12px; padding:12px; text-align:center;">
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.18); border-radius:12px; padding:12px; text-align:center;">
                         <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">🎨 تصدير التفاعلات</div>
                         <div style="font-size:1.3rem; font-weight:900; color:var(--emerald); font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statDesignExports">19</div>
                     </div>
-                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(212,175,55,0.18); border-radius:12px; padding:12px; text-align:center;">
+                    <div style="background:rgba(8,20,15,0.7); border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.18); border-radius:12px; padding:12px; text-align:center;">
                         <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">📢 مشاركات اجتماعية</div>
                         <div style="font-size:1.3rem; font-weight:900; color:#f59e0b; font-family:'Space Grotesk',sans-serif; margin-top:4px;" id="statSocialCards">32</div>
                     </div>
@@ -281,9 +281,9 @@
                 <div class="section-title">⚡ وصول سريع</div>
                 <div style="display:flex; flex-direction:column; gap:10px;">
                     <a href="smart-proposal-portal.html" class="btn-primary sr-magnetic-btn" style="justify-content:center;">🤝 بوابة عروض الأسعار</a>
-                    <a href="invoice-engine.html" class="btn-primary sr-magnetic-btn" style="background:rgba(212,175,55,.15); color:var(--gold-l); border:1px solid var(--border); justify-content:center;">📄 محرك الفواتير ZATCA</a>
+                    <a href="invoice-engine.html" class="btn-primary sr-magnetic-btn" style="background:rgba(var(--sr-gold-rgb, 212, 175, 55),.15); color:var(--gold-l); border:1px solid var(--border); justify-content:center;">📄 محرك الفواتير ZATCA</a>
                     <a href="payment-gateway.html" class="btn-primary sr-magnetic-btn" style="background:rgba(56,189,248,.12); color:var(--cyan); border:1px solid rgba(56,189,248,.3); justify-content:center;">💳 بوابة الدفع الدولي</a>
-                    <a href="device-simulator-studio.html" class="btn-primary sr-magnetic-btn" style="background:rgba(212,175,55,.1); color:var(--gold-l); border:1px solid var(--border); justify-content:center;">📱 محاكي الأجهزة 3D</a>
+                    <a href="device-simulator-studio.html" class="btn-primary sr-magnetic-btn" style="background:rgba(var(--sr-gold-rgb, 212, 175, 55),.1); color:var(--gold-l); border:1px solid var(--border); justify-content:center;">📱 محاكي الأجهزة 3D</a>
                 </div>
             </div>
 
@@ -395,8 +395,8 @@
 
                 // تدرج لوني
                 const grad = ctx.createLinearGradient(0, y, 0, H - pad.b);
-                grad.addColorStop(0, 'rgba(212,175,55,0.9)');
-                grad.addColorStop(1, 'rgba(212,175,55,0.15)');
+                grad.addColorStop(0, 'rgba(var(--sr-gold-rgb, 212, 175, 55),0.9)');
+                grad.addColorStop(1, 'rgba(var(--sr-gold-rgb, 212, 175, 55),0.15)');
                 ctx.fillStyle = grad;
                 ctx.beginPath();
                 ctx.roundRect(x, y, bw, h, [6, 6, 0, 0]);
@@ -453,7 +453,7 @@
                             <td style="font-family:'Space Grotesk',sans-serif; font-weight:800; color:var(--gold-l);">${lead.estimatedValue}</td>
                             <td><span class="status-pill active">${lead.statusLabel}</span></td>
                             <td>
-                                <a href="smart-proposal-portal.html?lead=${encodeURIComponent(lead.id)}&val=${encodeURIComponent(lead.estimatedValue)}" class="button sm-btn gold-btn" style="display:inline-flex; align-items:center; gap:4px; padding:4px 10px; font-size:0.76rem; border-radius:6px; background:rgba(212,175,55,0.18); border:1px solid rgba(212,175,55,0.35); color:var(--gold-l); text-decoration:none; font-weight:700;">📜 إنشاء عرض</a>
+                                <a href="smart-proposal-portal.html?lead=${encodeURIComponent(lead.id)}&val=${encodeURIComponent(lead.estimatedValue)}" class="button sm-btn gold-btn" style="display:inline-flex; align-items:center; gap:4px; padding:4px 10px; font-size:0.76rem; border-radius:6px; background:rgba(var(--sr-gold-rgb, 212, 175, 55),0.18); border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.35); color:var(--gold-l); text-decoration:none; font-weight:700;">📜 إنشاء عرض</a>
                             </td>
                         </tr>
                     `;

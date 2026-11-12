@@ -33,7 +33,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg: #030806;
             --sr-card: rgba(8, 20, 15, 0.88);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
             --lottie-color: #d4af37;
@@ -93,7 +93,7 @@
 
         .studio-nav-link:hover, .studio-nav-link.active {
             color: var(--sr-gold-light);
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
         }
 
         .studio-container {
@@ -107,7 +107,7 @@
             align-items: center;
             gap: 8px;
             padding: 6px 16px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             border-radius: 999px;
             font-size: 0.82rem;
@@ -173,7 +173,7 @@
         }
 
         .btn-ctrl {
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             color: #f8fafc;
             padding: 8px 16px;
@@ -252,7 +252,7 @@
 
         .btn-export-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212,175,55, 0.35);
+            box-shadow: 0 6px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
 
         .btn-export-secondary {

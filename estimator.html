@@ -20,7 +20,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg: #040806;
             --sr-card: rgba(10, 19, 14, 0.92);
-            --sr-border: rgba(212,175,55, 0.28);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.28);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -67,7 +67,7 @@
             height: 42px;
             border-radius: 50%;
             border: 1.5px solid var(--sr-gold);
-            box-shadow: 0 0 15px rgba(212,175,55, 0.35);
+            box-shadow: 0 0 15px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
 
         .est-brand-text h1 {
@@ -104,7 +104,7 @@
         }
 
         .est-btn-nav:hover {
-            background: rgba(212,175,55, 0.2);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             border-color: var(--sr-gold);
             color: var(--sr-gold-light);
         }
@@ -176,15 +176,15 @@
         }
 
         .est-cat-btn:hover {
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border-color: var(--sr-gold);
             transform: translateY(-2px);
         }
 
         .est-cat-btn.active {
-            background: linear-gradient(135deg, rgba(212,175,55, 0.25), rgba(212,175,55, 0.08));
+            background: linear-gradient(135deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25), rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08));
             border-color: var(--sr-gold);
-            box-shadow: 0 4px 20px rgba(212,175,55, 0.25);
+            box-shadow: 0 4px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
         }
 
         .est-cat-icon {
@@ -238,7 +238,7 @@
 
         .est-scope-card.active {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
 
         .est-scope-title {
@@ -283,12 +283,12 @@
         }
 
         .est-addon-box:hover {
-            background: rgba(212,175,55, 0.08);
-            border-color: rgba(212,175,55, 0.4);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
         }
 
         .est-addon-box.checked {
-            background: rgba(212,175,55, 0.14);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.14);
             border-color: var(--sr-gold);
         }
 
@@ -375,14 +375,14 @@
         }
 
         .est-summary-header {
-            border-bottom: 1px solid rgba(212,175,55, 0.25);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
             padding-bottom: 16px;
         }
 
         .est-summary-ref {
             display: inline-block;
-            background: rgba(212,175,55, 0.15);
-            border: 1px solid rgba(212,175,55, 0.4);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
             color: var(--sr-gold-light);
             font-family: monospace;
             font-size: 0.76rem;
@@ -493,7 +493,7 @@
         .est-input {
             width: 100%;
             background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(212,175,55, 0.3);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
             border-radius: 10px;
             padding: 10px 14px;
             color: #ffffff;
@@ -529,14 +529,14 @@
             justify-content: center;
             gap: 8px;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 6px 20px rgba(212,175,55, 0.35);
+            box-shadow: 0 6px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
             font-family: inherit;
         }
 
         .est-btn-pdf:hover {
             background: var(--sr-gold-light);
             transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(212,175,55, 0.5);
+            box-shadow: 0 10px 28px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.5);
         }
 
         .est-btn-book {
@@ -731,14 +731,14 @@
         .est-sheet-amount { text-align: left; font-weight: 800; }
     
         .est-nav-calc-btn {
-            background: rgba(212,175,55, 0.2);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             border-color: var(--sr-gold);
             color: var(--sr-gold-light);
         }
         .est-whitelabel-banner {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, rgba(212,175,55, 0.14), rgba(16, 185, 129, 0.12));
-            border: 1.5px solid rgba(212,175,55, 0.38);
+            background: linear-gradient(135deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.14), rgba(16, 185, 129, 0.12));
+            border: 1.5px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.38);
             border-radius: 16px;
             padding: 18px 24px;
             display: flex;
@@ -756,7 +756,7 @@
         }
         .est-whitelabel-banner-icon {
             font-size: 2.2rem;
-            filter: drop-shadow(0 0 10px rgba(212,175,55, 0.4));
+            filter: drop-shadow(0 0 10px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4));
         }
         .est-whitelabel-banner-title {
             color: var(--sr-gold-light);
@@ -776,7 +776,7 @@
             font-weight: 900;
             padding: 12px 22px;
             font-size: 0.88rem;
-            box-shadow: 0 6px 20px rgba(212,175,55, 0.35);
+            box-shadow: 0 6px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
             text-decoration: none;
             white-space: nowrap;
         }

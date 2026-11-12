@@ -20,7 +20,7 @@
             --emerald: #10b981;
             --cyan: #38bdf8;
             --amber: #f59e0b;
-            --border-dim: rgba(212, 175, 55, 0.22);
+            --border-dim: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --border-bright: rgba(249, 226, 156, 0.48);
         }
 
@@ -37,7 +37,7 @@
             color: #e2e8f0;
             min-height: 100vh;
             background-image:
-                radial-gradient(circle at 18% 12%, rgba(212, 175, 55, 0.12) 0%, transparent 42%),
+                radial-gradient(circle at 18% 12%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12) 0%, transparent 42%),
                 radial-gradient(circle at 84% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
@@ -83,7 +83,7 @@
             height: 44px;
             border-radius: 10px;
             border: 1px solid var(--gold-primary);
-            box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 0 18px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
         }
 
         .brand-title {
@@ -157,7 +157,7 @@
             padding: 0.28rem 0.75rem;
             border-radius: 999px;
             border: 1px solid var(--border-dim);
-            background: rgba(212, 175, 55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             color: var(--gold-bright);
         }
 
@@ -195,7 +195,7 @@
             justify-content: space-between;
             align-items: center;
             padding-bottom: 0.6rem;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
         }
 
         .spot-row:last-child {
@@ -270,7 +270,7 @@
             gap: 1rem;
             margin-bottom: 1.2rem;
             padding-bottom: 0.8rem;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.14);
         }
 
         .panel-title {
@@ -286,7 +286,7 @@
 
         .vault-item {
             background: var(--bg-card-alt);
-            border: 1px solid rgba(212, 175, 55, 0.18);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.18);
             border-radius: 12px;
             padding: 1rem 1.15rem;
             display: grid;
@@ -300,7 +300,7 @@
         .vault-item:hover,
         .vault-item.active {
             border-color: var(--gold-bright);
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.1);
         }
 
         .vault-name {
@@ -407,7 +407,7 @@
         .hash-box {
             margin-top: 0.55rem;
             padding: 0.55rem 0.75rem;
-            background: rgba(212, 175, 55, 0.08);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08);
             border: 1px solid var(--border-dim);
             border-radius: 8px;
             font-size: 0.73rem;

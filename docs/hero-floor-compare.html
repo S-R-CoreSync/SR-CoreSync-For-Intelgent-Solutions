@@ -11,11 +11,11 @@
   :root{
     --bg:#04070d; --bg2:#070d16; --card:#0a1220;
     --gold:#d4af37; --gold-hi:#f7df94; --emerald:#10b981;
-    --text:#e8eef6; --muted:#8fa0b5; --line:rgba(212,175,55,.22); --soft:rgba(255,255,255,.07);
+    --text:#e8eef6; --muted:#8fa0b5; --line:rgba(var(--sr-gold-rgb, 212, 175, 55),.22); --soft:rgba(255,255,255,.07);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:
-      radial-gradient(ellipse at 80% -10%, rgba(212,175,55,.12), transparent 40rem),
+      radial-gradient(ellipse at 80% -10%, rgba(var(--sr-gold-rgb, 212, 175, 55),.12), transparent 40rem),
       radial-gradient(ellipse at 10% 10%, rgba(16,185,129,.08), transparent 34rem),
       var(--bg);
     color:var(--text);font-family:'Tajawal',system-ui,sans-serif;min-height:100vh;padding:18px}
@@ -32,29 +32,29 @@
     display:grid;grid-template-rows:auto 1fr;min-height:0}
   .panel > header{display:flex;align-items:center;gap:10px;padding:12px 15px;border-bottom:1px solid var(--soft)}
   .tag{font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:4px 9px;border-radius:999px;
-    border:1px solid var(--line);color:var(--gold-hi);background:rgba(212,175,55,.1)}
+    border:1px solid var(--line);color:var(--gold-hi);background:rgba(var(--sr-gold-rgb, 212, 175, 55),.1)}
   .panel h2{font-size:.92rem;font-weight:800}
   .panel header small{color:var(--muted);font-size:.7rem;margin-inline-start:auto}
 
   .frame{position:relative;min-height:0}
   .scroller{height:min(62vh,460px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
   .scroller::-webkit-scrollbar{width:8px}
-  .scroller::-webkit-scrollbar-thumb{background:rgba(212,175,55,.25);border-radius:8px}
+  .scroller::-webkit-scrollbar-thumb{background:rgba(var(--sr-gold-rgb, 212, 175, 55),.25);border-radius:8px}
 
   /* compact hero inside each pane */
   .hero{padding:22px 20px 0;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
     min-height:330px}
   .hero .copy{max-width:340px}
   .badge{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;
-    border:1px solid var(--line);color:var(--gold-hi);font-size:.66rem;background:rgba(212,175,55,.07)}
+    border:1px solid var(--line);color:var(--gold-hi);font-size:.66rem;background:rgba(var(--sr-gold-rgb, 212, 175, 55),.07)}
   .hero h3{margin:12px 0 0;font-size:1.42rem;line-height:1.3;font-weight:900;
     background:linear-gradient(120deg,#fff,#f7df94 70%,#d4af37);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .hero p{margin-top:9px;color:#b9c6d6;font-size:.8rem;line-height:1.8}
   .bar{margin-top:14px;display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:13px;
-    border:1px solid var(--line);background:linear-gradient(100deg,rgba(212,175,55,.16),rgba(212,175,55,.04));
+    border:1px solid var(--line);background:linear-gradient(100deg,rgba(var(--sr-gold-rgb, 212, 175, 55),.16),rgba(var(--sr-gold-rgb, 212, 175, 55),.04));
     color:var(--gold-hi);font-weight:800;font-size:.82rem}
   .emblem{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;
-    border:1px solid var(--line);background:radial-gradient(circle,rgba(212,175,55,.2),transparent 68%)}
+    border:1px solid var(--line);background:radial-gradient(circle,rgba(var(--sr-gold-rgb, 212, 175, 55),.2),transparent 68%)}
   .emblem img{width:74%;border-radius:50%}
 
   /* the floor — identical in both panes */
@@ -67,7 +67,7 @@
     border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);cursor:pointer}
   .flag.more{width:auto;padding:0 8px;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--gold-hi);border-color:var(--line)}
   .cue{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.62rem;color:#7f8fa3}
-  .cue i{height:1px;width:60px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.4),transparent)}
+  .cue i{height:1px;width:60px;background:linear-gradient(90deg,transparent,rgba(var(--sr-gold-rgb, 212, 175, 55),.4),transparent)}
   .stats{display:flex;gap:14px}
   .stats div{display:grid;line-height:1.2}
   .stats strong{font-size:.76rem;color:var(--gold-hi)}

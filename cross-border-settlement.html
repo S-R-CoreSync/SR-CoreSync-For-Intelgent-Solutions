@@ -51,7 +51,7 @@
             color: #e2e8f0;
             min-height: 100vh;
             background-image: 
-                radial-gradient(circle at 10% 15%, rgba(212,175,55, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 10% 15%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.05) 0%, transparent 45%),
                 radial-gradient(circle at 90% 85%, rgba(16, 185, 129, 0.05) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
@@ -109,7 +109,7 @@
         }
 
         .badge-status {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             color: var(--gold-light);
             border: 1px solid var(--gold-primary);
             padding: 0.35rem 0.85rem;
@@ -156,7 +156,7 @@
             right: 0;
             width: 320px;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212,175,55, 0.08));
+            background: linear-gradient(90deg, transparent, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08));
             pointer-events: none;
         }
 
@@ -353,7 +353,7 @@
 
         .tax-badge {
             display: inline-block;
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             color: var(--gold-primary);
             border: 1px solid var(--gold-primary);
             padding: 0.25rem 0.65rem;

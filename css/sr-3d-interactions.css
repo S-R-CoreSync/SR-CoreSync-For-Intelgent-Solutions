@@ -42,13 +42,13 @@
 .sr-holographic-card {
     position: relative;
     background: linear-gradient(135deg, rgba(16, 32, 24, 0.85) 0%, rgba(6, 14, 10, 0.95) 100%);
-    border: 1px solid rgba(212,175,55, 0.28);
+    border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.28);
     box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
 }
 
 .sr-holographic-card:hover {
-    border-color: rgba(212,175,55, 0.7);
-    box-shadow: 0 20px 45px -8px rgba(212,175,55, 0.25);
+    border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.7);
+    box-shadow: 0 20px 45px -8px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
 }
 
 /* الأزرار المغناطيسية الفاخرة */

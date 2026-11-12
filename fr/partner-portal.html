@@ -32,10 +32,10 @@
             --bg-elevated: rgba(14, 28, 22, 0.9);
             --gold-primary: #d4af37;
             --gold-bright: #f3dfba;
-            --gold-glow: rgba(212,175,55, 0.4);
+            --gold-glow: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
             --emerald-accent: #10b981;
             --emerald-glow: rgba(16, 185, 129, 0.35);
-            --border-gold: rgba(212,175,55, 0.28);
+            --border-gold: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.28);
             --border-hover: rgba(243, 223, 186, 0.65);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
@@ -53,7 +53,7 @@
         body {
             background-color: var(--bg-dark);
             background-image: 
-                radial-gradient(circle at 10% 15%, rgba(212,175,55, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 10% 15%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08) 0%, transparent 45%),
                 radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.07) 0%, transparent 50%),
                 linear-gradient(rgba(2, 7, 5, 0.94), rgba(2, 7, 5, 0.98)),
                 url('./assets/grid.png');
@@ -141,7 +141,7 @@
 
         .nav-btn:hover {
             border-color: var(--gold-bright);
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             box-shadow: 0 0 14px var(--gold-glow);
             color: #ffffff;
         }
@@ -165,7 +165,7 @@
             align-items: center;
             gap: 8px;
             padding: 6px 18px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--border-gold);
             border-radius: 999px;
             color: var(--gold-bright);
@@ -260,7 +260,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid rgba(212,175,55, 0.15);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             padding-bottom: 14px;
         }
 
@@ -301,7 +301,7 @@
         /* Live White-Label Preview Box */
         .wl-live-preview {
             background: linear-gradient(135deg, rgba(3, 10, 7, 0.95), rgba(6, 18, 14, 0.95));
-            border: 2px dashed rgba(212,175,55, 0.4);
+            border: 2px dashed rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
             border-radius: 12px;
             padding: 20px;
             display: flex;
@@ -313,7 +313,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid rgba(212,175,55, 0.2);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             padding-bottom: 10px;
         }
 
@@ -355,7 +355,7 @@
         .tenants-table th, .tenants-table td {
             padding: 12px 16px;
             text-align: right;
-            border-bottom: 1px solid rgba(212,175,55, 0.15);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
 
         .tenants-table th {
@@ -377,7 +377,7 @@
         .status-pending { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
 
         .btn-action-sm {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             border: 1px solid var(--border-gold);
             color: var(--gold-bright);
             padding: 5px 12px;
@@ -411,7 +411,7 @@
         .input-ltr { direction: ltr; text-align: left; }
         .preview-env-badge { font-size: 0.75rem; color: #4ade80; font-weight: 700; }
         .preview-tenant-row { display: flex; align-items: center; gap: 12px; }
-        .preview-logo-box { width: 36px; height: 36px; border-radius: 8px; background: rgba(212,175,55, 0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .preview-logo-box { width: 36px; height: 36px; border-radius: 8px; background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
         .preview-powered-by { font-size: 0.75rem; color: var(--text-muted); }
         .wl-preview-box-dark { background: rgba(2, 8, 5, 0.9); }
         .wa-preview-header { font-size: 0.8rem; color: #4ade80; font-weight: 700; margin-bottom: 6px; }

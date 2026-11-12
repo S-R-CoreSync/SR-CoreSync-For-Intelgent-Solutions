@@ -50,7 +50,7 @@
             color: #e2e8f0;
             min-height: 100vh;
             background-image:
-                radial-gradient(circle at 15% 15%, rgba(212,175,55, 0.06) 0%, transparent 45%),
+                radial-gradient(circle at 15% 15%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.06) 0%, transparent 45%),
                 radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
@@ -96,7 +96,7 @@
             height: 44px;
             border-radius: 10px;
             border: 1px solid var(--gold-primary);
-            box-shadow: 0 0 15px rgba(212,175,55, 0.2);
+            box-shadow: 0 0 15px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
         }
 
         .brand-title {
@@ -108,10 +108,10 @@
         .brand-badge {
             font-size: 0.7rem;
             color: var(--gold-light);
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
-            border: 1px solid rgba(212,175,55, 0.3);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
             margin-right: 0.5rem;
         }
 
@@ -141,8 +141,8 @@
 
         .nav-link.gold {
             color: var(--gold-light);
-            border-color: rgba(212,175,55, 0.35);
-            background: rgba(212,175,55, 0.08);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08);
         }
 
         .hero {
@@ -156,8 +156,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(212,175,55, 0.12);
-            border: 1px solid rgba(212,175,55, 0.35);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
             color: var(--gold-light);
             padding: 0.35rem 0.9rem;
             border-radius: 999px;
@@ -283,12 +283,12 @@
         }
 
         .panel-badge {
-            background: rgba(212,175,55, 0.14);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.14);
             color: var(--gold-light);
             font-size: 0.74rem;
             padding: 0.22rem 0.65rem;
             border-radius: 6px;
-            border: 1px solid rgba(212,175,55, 0.3);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
         }
 
         .offices-grid {

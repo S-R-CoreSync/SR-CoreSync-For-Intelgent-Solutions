@@ -2,15 +2,15 @@
    Extracted from the Arabic/Sorani sheets so every language can load the
    same widget instead of inheriting a different one. */
 .cost-estimator-wrapper{margin-top:clamp(2.5rem,5vw,4rem)}
-.cost-estimator-card{background:radial-gradient(120% 120% at 50% 0,rgba(212,175,55,.12) 0,rgba(10,20,16,.92) 100%);border:1px solid rgba(212,175,55,.35);border-radius:24px;padding:clamp(1.5rem,3.5vw,2.8rem);box-shadow:0 24px 60px rgba(0,0,0,.7);position:relative;overflow:hidden}
-.cost-estimator-card::before{content:'';position:absolute;top:-100px;right:20%;width:300px;height:300px;background:radial-gradient(circle,rgba(212,175,55,.15) 0,transparent 70%);pointer-events:none}
+.cost-estimator-card{background:radial-gradient(120% 120% at 50% 0,rgba(var(--sr-gold-rgb, 212, 175, 55),.12) 0,rgba(10,20,16,.92) 100%);border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),.35);border-radius:24px;padding:clamp(1.5rem,3.5vw,2.8rem);box-shadow:0 24px 60px rgba(0,0,0,.7);position:relative;overflow:hidden}
+.cost-estimator-card::before{content:'';position:absolute;top:-100px;right:20%;width:300px;height:300px;background:radial-gradient(circle,rgba(var(--sr-gold-rgb, 212, 175, 55),.15) 0,transparent 70%);pointer-events:none}
 .cost-estimator-header{margin-bottom:2rem;text-align:center}
 .cost-estimator-header h3{font-size:clamp(1.4rem, 2.5vw, 2rem);font-weight:800}
 .cost-estimator-grid{display:grid;grid-template-columns:1fr;gap:2rem}
 .cost-estimator-grid{grid-template-columns:1.65fr 1fr;gap:2.5rem;align-items:start}
 .cost-estimator-wrapper{margin-top:clamp(2.5rem,5vw,4rem)}
-.cost-estimator-card{background:radial-gradient(120% 120% at 50% 0,rgba(212,175,55,.12) 0,rgba(10,20,16,.92) 100%);border:1px solid rgba(212,175,55,.35);border-radius:24px;padding:clamp(1.5rem,3.5vw,2.8rem);box-shadow:0 24px 60px rgba(0,0,0,.7);position:relative;overflow:hidden}
-.cost-estimator-card::before{content:'';position:absolute;top:-100px;right:20%;width:300px;height:300px;background:radial-gradient(circle,rgba(212,175,55,.15) 0,transparent 70%);pointer-events:none}
+.cost-estimator-card{background:radial-gradient(120% 120% at 50% 0,rgba(var(--sr-gold-rgb, 212, 175, 55),.12) 0,rgba(10,20,16,.92) 100%);border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),.35);border-radius:24px;padding:clamp(1.5rem,3.5vw,2.8rem);box-shadow:0 24px 60px rgba(0,0,0,.7);position:relative;overflow:hidden}
+.cost-estimator-card::before{content:'';position:absolute;top:-100px;right:20%;width:300px;height:300px;background:radial-gradient(circle,rgba(var(--sr-gold-rgb, 212, 175, 55),.15) 0,transparent 70%);pointer-events:none}
 .cost-estimator-header{margin-bottom:2rem;text-align:center}
 .cost-estimator-header h3{font-size:clamp(1.4rem, 2.5vw, 2rem);font-weight:800}
 .cost-estimator-grid{display:grid;grid-template-columns:1fr;gap:2rem}

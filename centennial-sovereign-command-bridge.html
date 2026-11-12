@@ -50,7 +50,7 @@
             color: #e2e8f0;
             min-height: 100vh;
             background-image:
-                radial-gradient(circle at 20% 10%, rgba(212,175,55, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 20% 10%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12) 0%, transparent 45%),
                 radial-gradient(circle at 80% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
@@ -66,7 +66,7 @@
             background: rgba(4, 19, 13, 0.96);
             -webkit-backdrop-filter: blur(16px);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(212,175,55, 0.35);
+            border-bottom: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
             padding: 1rem 2rem;
             position: sticky;
             top: 0;
@@ -96,7 +96,7 @@
             height: 46px;
             border-radius: 10px;
             border: 1.5px solid var(--gold-light);
-            box-shadow: 0 0 20px rgba(212,175,55, 0.35);
+            box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
 
         .brand-title {
@@ -141,8 +141,8 @@
 
         .nav-link.gold {
             color: var(--gold-light);
-            border-color: rgba(212,175,55, 0.45);
-            background: rgba(212,175,55, 0.12);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.45);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
         }
 
         .hero {
@@ -156,7 +156,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.55rem;
-            background: linear-gradient(90deg, rgba(212,175,55, 0.2), rgba(16, 185, 129, 0.15));
+            background: linear-gradient(90deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2), rgba(16, 185, 129, 0.15));
             border: 1px solid var(--gold-primary);
             color: var(--gold-light);
             padding: 0.4rem 1rem;
@@ -196,7 +196,7 @@
 
         .stat-card {
             background: var(--bg-card);
-            border: 1px solid rgba(212,175,55, 0.35);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
             border-radius: 12px;
             padding: 1.2rem;
             position: relative;
@@ -283,12 +283,12 @@
         }
 
         .panel-badge {
-            background: rgba(212,175,55, 0.16);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.16);
             color: var(--gold-light);
             font-size: 0.75rem;
             padding: 0.25rem 0.7rem;
             border-radius: 6px;
-            border: 1px solid rgba(212,175,55, 0.4);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
         }
 
         .decades-grid {
@@ -359,7 +359,7 @@
         }
 
         .founders-command-box {
-            background: linear-gradient(145deg, rgba(212,175,55, 0.12) 0%, rgba(3, 8, 6, 0.9) 100%);
+            background: linear-gradient(145deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12) 0%, rgba(3, 8, 6, 0.9) 100%);
             border: 1px solid var(--gold-primary);
             border-radius: 12px;
             padding: 1.35rem;
@@ -372,7 +372,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px dashed rgba(212,175,55, 0.3);
+            border-bottom: 1px dashed rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
             padding-bottom: 0.6rem;
             font-size: 0.85rem;
         }

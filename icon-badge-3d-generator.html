@@ -35,7 +35,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg-root: #030806;
             --sr-bg-card: rgba(8, 18, 13, 0.88);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -101,7 +101,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -208,7 +208,7 @@
 
         .shape-btn.active, .shape-btn:hover {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
 
         .shape-icon { font-size: 1.6rem; display: block; margin-bottom: 4px; }
@@ -236,7 +236,7 @@
 
         .mat-btn.active, .mat-btn:hover {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
         }
 
         .mat-dot { width: 14px; height: 14px; border-radius: 50%; }
@@ -262,7 +262,7 @@
 
         .btn-action-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212,175,55, 0.4);
+            box-shadow: 0 10px 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
         }
 
         /* مسرح العرض ثلاثي الأبعاد */
@@ -291,7 +291,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: radial-gradient(circle at 50% 50%, rgba(212,175,55, 0.15) 0%, #030806 80%);
+            background: radial-gradient(circle at 50% 50%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15) 0%, #030806 80%);
             perspective: 1200px;
             overflow: hidden;
         }
@@ -318,7 +318,7 @@
         .mat-gold {
             background: linear-gradient(145deg, #e3c498 0%, #8c734b 60%, #4a3c26 100%);
             border-color: #ffd9a0;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212,175,55, 0.35);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
 
         .mat-platinum {
@@ -336,7 +336,7 @@
         .mat-obsidian {
             background: linear-gradient(145deg, #1e293b 0%, #0f172a 60%, #020617 100%);
             border-color: var(--sr-gold);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212,175,55, 0.2);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
         }
 
         .badge-3d-icon-main {
@@ -489,7 +489,7 @@
                     <button type="button" class="shape-btn" style="padding:8px 16px; margin:0;" onclick="copyBadgeEmbedCode()">
                         <span>📋 نسخ كود HTML/CSS</span>
                     </button>
-                    <button type="button" class="shape-btn" style="padding:8px 16px; margin:0; border-color:var(--sr-gold); background:rgba(212,175,55, 0.2);" onclick="exportBadgeSVG()">
+                    <button type="button" class="shape-btn" style="padding:8px 16px; margin:0; border-color:var(--sr-gold); background:rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);" onclick="exportBadgeSVG()">
                         <span>تحميل الأيقونة 8K ⚡</span>
                     </button>
                 </div>

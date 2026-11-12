@@ -33,7 +33,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg: #030806;
             --sr-card: rgba(8, 18, 13, 0.88);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -101,7 +101,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -180,7 +180,7 @@
         .form-input {
             width: 100%;
             background: rgba(4, 10, 7, 0.85);
-            border: 1px solid rgba(212,175,55, 0.2);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
             color: #f8fafc;
             padding: 10px 14px;
             border-radius: 10px;
@@ -192,7 +192,7 @@
 
         .form-input:focus {
             border-color: var(--sr-gold);
-            box-shadow: 0 0 10px rgba(212,175,55, 0.2);
+            box-shadow: 0 0 10px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
         }
 
         .form-row {
@@ -226,7 +226,7 @@
 
         .mat-btn.active, .mat-btn:hover {
             border-color: var(--sr-gold);
-            background: rgba(212,175,55, 0.18);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.18);
             color: #fff;
         }
 
@@ -266,13 +266,13 @@
         }
 
         .btn-flip {
-            background: rgba(212,175,55, 0.15);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
             border: 1px solid var(--sr-gold);
             color: var(--sr-gold-light);
         }
 
         .btn-flip:hover {
-            background: rgba(212,175,55, 0.3);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
         }
 
         .btn-vcard {
@@ -291,7 +291,7 @@
         }
 
         .btn-dl:hover {
-            box-shadow: 0 0 16px rgba(212,175,55, 0.4);
+            box-shadow: 0 0 16px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
             transform: translateY(-1px);
         }
 
@@ -338,7 +338,7 @@
         /* Materials on Card */
         .theme-gold {
             background: linear-gradient(135deg, #18140c 0%, #2b2214 50%, #110e08 100%);
-            border-color: rgba(212,175,55, 0.45);
+            border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.45);
         }
 
         .theme-obsidian {
@@ -384,7 +384,7 @@
         .cf-logo-box img {
             width: 44px;
             height: 44px;
-            filter: drop-shadow(0 2px 8px rgba(212,175,55, 0.4));
+            filter: drop-shadow(0 2px 8px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4));
         }
 
         .cf-comp-name {

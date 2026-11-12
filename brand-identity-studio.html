@@ -35,7 +35,7 @@
             --sr-gold-dark: #8c734b;
             --sr-bg-root: #040806;
             --sr-bg-card: rgba(10, 20, 15, 0.82);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -107,7 +107,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -156,10 +156,10 @@
         }
 
         .studio-tab-btn.active, .studio-tab-btn:hover {
-            background: linear-gradient(135deg, rgba(212,175,55, 0.25) 0%, rgba(212,175,55, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25) 0%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.1) 100%);
             border-color: var(--sr-gold);
             color: #ffffff;
-            box-shadow: 0 0 20px rgba(212,175,55, 0.2);
+            box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.2);
         }
 
         .studio-container {
@@ -251,7 +251,7 @@
             height: 220px;
             border-radius: 18px;
             background: linear-gradient(135deg, #182820 0%, #060e0a 100%);
-            border: 1px solid rgba(212,175,55, 0.4);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4);
             padding: 24px;
             display: flex;
             flex-direction: column;
@@ -289,7 +289,7 @@
 
         .btn-action-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212,175,55, 0.35);
+            box-shadow: 0 10px 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
         }
     </style>
 </head>
@@ -459,7 +459,7 @@
                 </div>
 
                 <div style="text-align:center; padding:20px; background:rgba(0,0,0,0.5); border-radius:14px; border:1px solid rgba(255,255,255,0.08); margin-bottom:16px;">
-                    <img src="./assets/sr-core-emblem.svg" alt="Vector Emblem" width="100" height="100" style="filter: drop-shadow(0 0 20px rgba(212,175,55, 0.4));">
+                    <img src="./assets/sr-core-emblem.svg" alt="Vector Emblem" width="100" height="100" style="filter: drop-shadow(0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4));">
                     <div style="margin-top:12px; font-weight:800; font-size:1rem; color:#ffffff;">شعار S&R CoreSync السيادي المتجه</div>
                     <div style="font-size:0.8rem; color:#94a3b8;">متوافق مع 8K Vector SVG / WebP Lossless</div>
                 </div>
@@ -537,7 +537,7 @@
   --sr-gold-dark:     #8c734b;   /* الذهب الداكن للتدرجات */
   --sr-bg-root:       #040806;   /* خلفية الزمرد الليلي */
   --sr-bg-card:       rgba(10, 20, 15, 0.82);
-  --sr-border:        rgba(212,175,55, 0.22);
+  --sr-border:        rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
   --sr-cyan:          #38bdf8;   /* السيان السيبراني */
   --sr-emerald:       #10b981;   /* الأخضر المؤسسي */
   --sr-text-main:     #f8fafc;

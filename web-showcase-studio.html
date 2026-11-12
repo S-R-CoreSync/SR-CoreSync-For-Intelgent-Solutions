@@ -34,7 +34,7 @@
             --sr-gold-light: #f3dfba;
             --sr-bg-root: #020705;
             --sr-bg-card: rgba(8, 18, 13, 0.85);
-            --sr-border: rgba(212,175,55, 0.22);
+            --sr-border: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
             --sr-cyan: #38bdf8;
             --sr-emerald: #10b981;
         }
@@ -88,7 +88,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--sr-border);
             color: var(--sr-gold-light);
             padding: 6px 18px;
@@ -264,7 +264,7 @@
         }
 
         .btn-template-action:hover {
-            box-shadow: 0 10px 20px rgba(212,175,55, 0.3);
+            box-shadow: 0 10px 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3);
             transform: translateY(-2px);
         }
 
@@ -365,7 +365,7 @@
             <div class="template-card sr-tilt-card sr-holographic-card">
                 <div class="template-preview-frame">
                     <div style="text-align:center;">
-                        <img src="./assets/sr-core-emblem.svg" width="60" height="60" style="filter: drop-shadow(0 0 15px rgba(212,175,55, 0.4));">
+                        <img src="./assets/sr-core-emblem.svg" width="60" height="60" style="filter: drop-shadow(0 0 15px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.4));">
                         <div style="margin-top:10px; font-weight:800; font-size:1.05rem; color:#ffffff;">Sovereign Corporate Platform</div>
                         <div style="font-size:0.75rem; color:var(--sr-gold-light);">هيكل مؤسسي فائق السرعة</div>
                     </div>

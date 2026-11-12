@@ -52,7 +52,7 @@
             color: #e2e8f0;
             min-height: 100vh;
             background-image: 
-                radial-gradient(circle at 15% 15%, rgba(212,175,55, 0.04) 0%, transparent 45%),
+                radial-gradient(circle at 15% 15%, rgba(var(--sr-gold-rgb, 212, 175, 55), 0.04) 0%, transparent 45%),
                 radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.04) 0%, transparent 45%);
             display: flex;
             flex-direction: column;
@@ -121,7 +121,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--border-gold);
             padding: 0.45rem 1rem;
             border-radius: 9999px;
@@ -146,7 +146,7 @@
 
         .btn-header {
             padding: 7px 16px;
-            background: rgba(212,175,55, 0.12);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
             border: 1px solid var(--border-gold);
             border-radius: 8px;
             color: var(--gold-light);
@@ -160,7 +160,7 @@
         }
 
         .btn-header:hover {
-            background: rgba(212,175,55, 0.25);
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
             transform: translateY(-1px);
         }
 
@@ -295,7 +295,7 @@
 
         .tier-card.featured {
             border-color: var(--gold-primary);
-            box-shadow: 0 4px 25px rgba(212,175,55, 0.12);
+            box-shadow: 0 4px 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
         }
 
         .tier-badge-top {
