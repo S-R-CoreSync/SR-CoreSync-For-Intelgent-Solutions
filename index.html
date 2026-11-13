@@ -2441,6 +2441,10 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
   /* مؤشران فقط على الهاتف: 99.9% و BTW — يكفيان ويبقيان فوق الدوك */
   .hero-trust-metrics-strip > *:nth-child(n+4){display:none !important}
 }
+
+/* the first menu item keeps the gold accent without the retired script */
+.nav-menu-main > li:first-child > a{color:#f3dfba !important}
+.nav-menu-main > li:first-child > a span{color:rgba(212,175,55,.9) !important}
 </style>
 </head>
 
@@ -11813,64 +11817,6 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
     new MutationObserver(function(){ measureBelt(); })
       .observe(document.body, { childList: true, attributes: true, attributeFilter: ['class','style'] });
   }
-})();
-</script>
-<script id="hv2-nav-order">
-(function(){
-  'use strict';
-  /* الترتيب المتفق عليه، بمراسي الصفحة الفعلية فقط:
-     ماذا تقدّمون → بكم → احسب → منتجات جاهزة → من أنتم → المؤسسون
-     قاعدة صارمة: لا نلمس سوى <li> يحمل رابطاً مباشراً في هذه القائمة،
-     حتى لا يُسحب عنصر من قائمة «المزيد» المنسدلة. */
-  var ORDER = ['#service', '#pricing', '#software-hub', '#about', '#founders-showcase'];
-
-  function directLink(li){
-    for (var i = 0; i < li.children.length; i++){
-      if (li.children[i].tagName === 'A') { return li.children[i]; }
-    }
-    return null;
-  }
-
-  function reorder(){
-    var ul = document.querySelector('.nav-menu-main');
-    if (!ul || ul.getAttribute('data-hv2') === 'done') { return; }
-
-    var byHref = {};
-    Array.prototype.forEach.call(ul.children, function (li) {
-      if (li.querySelector('ul')) { return; }            /* قائمة منسدلة: تُترك كما هي */
-      var a = directLink(li);
-      if (a) { byHref[a.getAttribute('href')] = li; }
-    });
-
-    var moved = 0;
-    ORDER.forEach(function (href) {
-      if (byHref[href]) { ul.appendChild(byHref[href]); moved++; }
-    });
-    if (!moved) { return; }
-
-    /* «المزيد» آخر عنصر دائماً، وإلا تصدّر القائمة بعد النقل */
-    Array.prototype.forEach.call(ul.children, function (li) {
-      if (li.querySelector('ul')) { ul.appendChild(li); }
-    });
-
-    Array.prototype.forEach.call(ul.children, function (li, i) {
-      if (li.querySelector('ul')) { return; }
-      var a = directLink(li);
-      if (!a) { return; }
-      var span = a.querySelector('span');
-      if (span) { span.textContent = ('0' + (i + 1)).slice(-2) + ' /'; }
-      a.classList.toggle('gold-accent', i === 0);
-    });
-    ul.setAttribute('data-hv2', 'done');
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', reorder);
-  } else {
-    reorder();
-  }
-  window.addEventListener('load', reorder);
-  setTimeout(reorder, 700);
 })();
 </script>
 <script src="js/sr-lang-map.js?v=20261112-v17" defer></script>
