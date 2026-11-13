@@ -439,6 +439,300 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
 @media (max-width:560px){.sr-steps,.sr-pledges{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="../css/hero-declutter.css?v=20261112">
+<style id="hv2-port">
+#hero .content-wrap{display:none !important}
+.hero-reference{min-height:clamp(560px, 92vh, 900px); display:block}
+.hv2{position:relative; z-index:3; width:min(1500px, calc(100% - 48px)); margin:0 auto; padding-inline-start:96px;
+     display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+     gap:min(4vw,64px); align-items:center; padding:clamp(24px,6vh,64px) 0}
+.hv2__copy{max-width:none}
+.hv2__badge{display:inline-flex; align-items:center; gap:9px; padding:7px 15px; border-radius:999px;
+  border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.34); background:rgba(var(--sr-gold-rgb,212,175,55),.08);
+  color:#f3dfba; font-size:.76rem; font-weight:700}
+.hv2__badge i{width:7px; height:7px; border-radius:50%; background:#10b981; box-shadow:0 0 12px #10b981}
+.hv2 h1.hv2__h1{margin:18px 0 0; font-size:clamp(2rem,3.4vw,3.4rem); line-height:1.24; font-weight:900; letter-spacing:-.01em}
+.hv2__rot{display:block; min-height:1.24em}
+.hv2__rot span{display:block; background:linear-gradient(120deg,#fff,#fff 40%,#f3dfba 64%,#d4af37);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  opacity:0; transform:translateY(10px); transition:opacity .55s ease, transform .55s ease; position:absolute}
+.hv2__rot span.is-on{opacity:1; transform:none; position:relative}
+.hv2__lead{margin:14px 0 0; color:#b9c6d6; font-size:clamp(.95rem,1.1vw,1.05rem); line-height:1.95; max-width:52ch}
+.hv2__bars{margin-top:26px; display:grid; gap:11px; max-width:660px}
+.hv2__bar{display:flex; align-items:center; gap:14px; padding:15px 18px; border-radius:16px; cursor:pointer;
+  border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.34); text-decoration:none; font:inherit; text-align:start;
+  background:linear-gradient(100deg,rgba(var(--sr-gold-rgb,212,175,55),.16),rgba(var(--sr-gold-rgb,212,175,55),.04));
+  color:#f3dfba; font-weight:800; font-size:.98rem; transition:.22s}
+.hv2__bar:hover{transform:translateY(-2px); border-color:rgba(var(--sr-gold-rgb,212,175,55),.7); box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.hv2__bar .ico{display:grid; place-items:center; width:34px; height:34px; border-radius:11px;
+  background:rgba(4,7,13,.55); border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.4); font-size:15px}
+.hv2__bar .tail{margin-inline-start:auto; font-size:.72rem; color:#cfe0ee; opacity:.75; font-weight:600}
+.hv2__bar.ghost{background:rgba(255,255,255,.03); border-color:rgba(255,255,255,.12); color:#dbe6f2}
+.hv2__chips{margin-top:20px; max-width:660px}
+.hv2__chips .lbl{font-size:.74rem; color:#8fa0b5; margin-bottom:9px; display:block}
+.hv2__chiprow{display:flex; flex-wrap:wrap; gap:8px}
+.hv2__chip{border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.03); color:#cfdbeb;
+  padding:8px 13px; border-radius:999px; font:inherit; font-size:.79rem; cursor:pointer; transition:.18s}
+.hv2__chip:hover{border-color:rgba(var(--sr-gold-rgb,212,175,55),.5); color:#f3dfba;
+  background:rgba(var(--sr-gold-rgb,212,175,55),.1)}
+.hv2__emblem{justify-self:center; width:100%; max-width:470px; aspect-ratio:1; display:grid; place-items:center; position:relative}
+.hv2__emblem::before{content:""; position:absolute; inset:6%; border-radius:50%;
+  background:radial-gradient(circle at 50% 45%, rgba(var(--sr-gold-rgb,212,175,55),.22), rgba(var(--sr-gold-rgb,212,175,55),.03) 58%, transparent 72%)}
+.hv2__emblem img{width:64%; border-radius:50%; filter:drop-shadow(0 30px 70px rgba(0,0,0,.75)); position:relative}
+.hv2__floor{margin:26px auto 0; width:min(1500px, calc(100% - 48px)); display:grid;
+  grid-template-columns:auto 1fr auto; align-items:center; gap:16px; padding:11px 16px;
+  border:1px solid rgba(255,255,255,.08); border-radius:18px;
+  background:linear-gradient(180deg,rgba(10,16,13,.82),rgba(5,10,8,.66)); backdrop-filter:blur(16px)}
+.hv2__langs{display:flex; align-items:center; gap:6px}
+.hv2__langs .cap{font-size:.7rem; color:#8fa0b5; margin-inline-end:2px}
+.hv2__flag{width:34px; height:25px; border-radius:7px; cursor:pointer; font-size:15px; line-height:1;
+  display:grid; place-items:center; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04);
+  padding:0; transition:.16s; text-decoration:none}
+.hv2__flag:hover{border-color:rgba(var(--sr-gold-rgb,212,175,55),.55); transform:translateY(-2px);
+  background:rgba(var(--sr-gold-rgb,212,175,55),.12)}
+.hv2__flag.more{width:auto; padding:0 9px; font-family:'JetBrains Mono',monospace; font-size:.68rem; color:#f3dfba;
+  border-color:rgba(var(--sr-gold-rgb,212,175,55),.4); background:rgba(var(--sr-gold-rgb,212,175,55),.1)}
+.hv2__cue{display:flex; align-items:center; justify-content:center; gap:9px; font-size:.68rem; color:#7f8fa3}
+.hv2__cue i{height:1px; width:min(90px,12vw); background:linear-gradient(90deg,transparent,rgba(var(--sr-gold-rgb,212,175,55),.35),transparent)}
+.hv2__stats{display:flex; align-items:center; gap:18px}
+.hv2__stats div{display:grid; line-height:1.25}
+.hv2__stats strong{font-size:.82rem; color:#f3dfba; font-weight:700}
+.hv2__stats span{font-size:.64rem; color:#8fa0b5}
+@media (max-width:1180px){
+  .hv2{grid-template-columns:1fr; gap:20px}
+  .hv2__emblem{max-width:300px; order:2}
+  .hv2__floor{grid-template-columns:1fr; justify-items:center; gap:10px}
+  .hv2__cue{display:none}
+  .hv2__stats{flex-wrap:wrap; justify-content:center; gap:14px}
+}
+@media (max-width:560px){ .hv2__h1{font-size:1.75rem} }
+@media (prefers-reduced-motion:reduce){ .hv2__rot span{transition:none} }
+.hero-reference{display:flex !important; flex-direction:column !important;
+  align-items:stretch !important; justify-content:center; padding-bottom:76px}
+.hv2, .hv2__floor{width:min(1500px, calc(100% - 48px)) !important; margin-inline:auto !important}
+.hv2{margin-top:0 !important}
+@media (max-width:1180px){
+  .floating-follow{display:none !important}
+  .hv2{padding-inline-start:0 !important}
+  .hero-reference{padding-bottom:96px}
+}
+.tf-header .header-inner .header-row-layout{
+  direction: ltr !important;              
+  display: grid !important;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+.header-col-brand  { direction: rtl; grid-column: 1; justify-self: start; }
+.header-col-actions{ direction: rtl; grid-column: 2; justify-self: end; margin-inline-end:10px; }
+.header-col-nav    { direction: rtl; grid-column: 3; justify-self: end; }
+.header-col-nav .nav-menu-main{ display: flex; align-items: center; gap: 18px; margin: 0; padding: 0; list-style: none; }
+
+
+.floating-follow{ left: auto !important; right: 14px !important; }
+.hv2{ padding-inline-start: 0 !important; padding-right: 96px !important; }
+
+
+
+
+
+.hero-reference{
+  min-height: 92vh;
+  min-height: 92dvh;
+  padding-bottom: var(--chrome-h, 132px) !important;
+}
+
+@media (max-width:1180px){
+  .hv2{ padding-right: 0 !important; }
+  .floating-follow{ display: none !important; }
+  .hero-reference{ padding-bottom: calc(var(--chrome-h, 132px) + 12px) !important; }
+}
+
+
+.btn-pwa-header{display:inline-flex; align-items:center; gap:7px; padding:8px 13px; border-radius:11px;
+  cursor:pointer; font:inherit; font-size:.8rem; font-weight:800; white-space:nowrap; color:#f3dfba;
+  border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.5);
+  background:linear-gradient(100deg,rgba(var(--sr-gold-rgb,212,175,55),.2),rgba(var(--sr-gold-rgb,212,175,55),.06));
+  transition:.2s}
+.btn-pwa-header:hover{border-color:rgba(var(--sr-gold-rgb,212,175,55),.85); transform:translateY(-1px)}
+
+.services-lede{max-width:900px; margin:0 auto 18px; text-align:center; color:#b9c6d6;
+  font-size:clamp(.95rem,1.05vw,1.05rem); line-height:1.95}
+
+.hv2{grid-template-columns:minmax(0,1fr) 480px !important; align-items:center !important;
+  gap:clamp(24px,4vw,64px) !important; padding-inline-start:24px !important}
+.hv2__copy{grid-column:1 !important; display:flex !important; flex-direction:column !important;
+  align-items:flex-end !important; text-align:right !important}
+.hv2__copy > .hv2__chips{width:100% !important; max-width:660px !important}
+.hv2__copy > .hv2__h1{align-self:stretch !important; max-width:100% !important}
+.hv2__chips .hv2__chiprow{direction:rtl; justify-content:flex-start !important}
+.hv2__brand{grid-column:2 !important; justify-self:center !important; display:flex;
+  flex-direction:column; align-items:center; gap:22px}
+.hv2__emblem{width:420px !important; max-width:420px !important; order:0 !important}
+.hv2__bars{width:100% !important; max-width:480px !important; margin-top:0 !important}
+
+.apple-macos-dock-wrapper{left:24px !important; right:auto !important;
+  transform:none !important; justify-content:flex-start !important;
+  bottom:calc(var(--chrome-h, 132px) + 4px) !important}
+
+@media (min-width:993px){ #srPwaFloatingWidget{ display:none !important; } }
+
+@media (max-width:1180px){
+  .hv2{grid-template-columns:1fr !important; padding-inline-start:12px !important; padding-right:12px !important}
+  .hv2__copy, .hv2__brand{grid-column:1 !important}
+  .hv2__brand{order:-1}
+  .hv2__emblem{width:260px !important; max-width:260px !important}
+  .hv2__bars{max-width:min(480px,92vw) !important}
+}
+
+@media (max-width:600px){
+  .hv2{width:calc(100% - 24px) !important; padding:10px 0 !important; gap:12px !important}
+  .hv2__brand{width:100% !important; max-width:100% !important; gap:10px !important}
+  .hv2__emblem{width:122px !important; max-width:122px !important}
+  .hv2__badge{display:none !important}
+  .hv2__bars{gap:8px !important}
+  .hv2__bar.ghost .tail{display:none !important}
+  .hv2__chips{margin-top:12px !important}
+  .hv2__chips .lbl{display:none !important}
+  .hv2__chips .hv2__chiprow{flex-wrap:nowrap !important; overflow-x:auto !important;
+    justify-content:flex-start !important; padding-bottom:3px !important}
+  .hv2__chip{flex:0 0 auto !important; font-size:11px !important; padding:6px 10px !important}
+  .hv2__bars{max-width:100% !important}
+  .hv2__copy{align-items:center !important; text-align:center !important}
+  .hv2 h1.hv2__h1{font-size:1.38rem !important; line-height:1.32 !important}
+  .hv2__rot span{max-width:100% !important}
+  #hero{padding-bottom:calc(var(--chrome-h, 120px) + 96px) !important}
+  .hero-reference{justify-content:flex-start !important; padding-top:10px !important}
+  .hero-ai-idea-form{flex-wrap:wrap !important}
+  .hero-ai-idea-submit-btn{max-width:100%}
+  .hv2__copy > .hv2__chips{max-width:100% !important}
+  .hv2__chips .hv2__chiprow{justify-content:center !important}
+  .btn-pwa-header span{display:none}
+  .btn-pwa-header{padding:9px 11px}
+  .apple-macos-dock-wrapper{left:10px !important; right:auto !important;
+    max-width:calc(100vw - 20px) !important; overflow-x:auto !important;
+    padding:4px !important; border-radius:14px !important}
+  .apple-macos-dock a.apple-dock-item{display:none !important}
+}
+
+
+
+
+.sr-privacy-banner-wrap{bottom:0 !important; padding-bottom:0 !important; margin-bottom:20px !important}
+.sr-privacy-banner{padding-bottom:9px !important; padding-top:9px !important}
+
+
+.sr-consent{
+  inset-inline-start:auto !important; inset-inline-end:12px !important;
+  inset-block-end:calc(var(--privacy-h, 0px) + 10px) !important;
+  max-width:min(720px, calc(100vw - 24px)) !important;
+  display:flex !important; align-items:center !important; gap:12px !important;
+  padding:9px 14px !important; border-radius:12px !important;
+}
+.sr-consent p{margin:0 !important; font-size:12px !important; line-height:1.55 !important;
+  flex:1 1 auto !important; min-width:0 !important}
+.sr-consent__actions{display:flex !important; gap:8px !important; flex:0 0 auto !important}
+.sr-consent__actions button{padding:6px 14px !important; font-size:12px !important;
+  border-radius:9px !important; cursor:pointer !important; font-family:inherit !important}
+.sr-consent__accept{background:linear-gradient(135deg,#fce0ad,#d4af37) !important;
+  color:#06150f !important; border:0 !important; font-weight:800 !important}
+.sr-consent__deny{background:rgba(255,255,255,.06) !important; color:#dbe6f2 !important;
+  border:1px solid rgba(255,255,255,.18) !important}
+
+
+.apple-macos-dock-wrapper{
+  left:22px !important; right:auto !important; transform:none !important;
+  justify-content:flex-start !important;
+  bottom:calc(var(--privacy-h, 0px) + 22px) !important;
+  padding:5px 7px !important; border-radius:14px !important;
+}
+.apple-macos-dock-wrapper .apple-dock-item{width:32px !important; height:23px !important;
+  border-radius:6px !important; font-size:13px !important}
+
+
+.hero-reference{
+  box-sizing:border-box !important;
+  padding-bottom:18px !important;
+}
+@media (max-height:700px){ .hero-reference{min-height:auto !important} }
+
+
+@media (max-height:820px){
+  .hv2{padding-block:16px !important}
+  .hv2__brand{gap:13px !important}
+  .hv2__emblem{width:330px !important; max-width:330px !important}
+  .hv2 h1.hv2__h1{font-size:clamp(1.7rem, 2.7vw, 2.5rem) !important}
+  .hv2__rot span{transition-duration:.3s !important}
+}
+
+
+.sr-quick-dock .sr-lang-seg{display:flex !important; align-items:center; gap:3px !important;
+  margin-inline-end:2px !important}
+.sr-quick-dock .sr-lang-seg .apple-macos-dock{
+  display:flex !important; align-items:center !important; gap:3px !important;
+  background:none !important; border:0 !important; box-shadow:none !important;
+  padding:0 !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important;
+}
+.sr-quick-dock .sr-lang-seg .apple-dock-item{width:28px !important; height:20px !important;
+  border-radius:5px !important; font-size:12px !important}
+.sr-quick-dock .sr-dock-sep{width:1px !important; height:18px !important;
+  background:rgba(255,255,255,.16) !important; margin:0 4px !important; flex:0 0 auto !important}
+body.sr-dock-merged .apple-macos-dock-wrapper{display:none !important}
+body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 12px) !important}
+
+
+.hv2__bar.ghost{
+  background:transparent !important; border:0 !important; padding:4px 0 !important;
+  color:#c7d4e4 !important; font-weight:700 !important; font-size:.9rem !important;
+  justify-content:flex-start !important; gap:9px !important;
+}
+.hv2__bar.ghost .ico{width:26px !important; height:26px !important;
+  border-radius:8px !important; font-size:10px !important}
+.hv2__bar.ghost:hover{transform:none !important; box-shadow:none !important;
+  color:var(--gold-2, #f3dfba) !important}
+.hv2__bar.ghost .tail{margin-inline-start:auto !important; font-size:.7rem !important; opacity:.55 !important}
+
+@media (max-width:600px){
+  
+  body:has(.sr-privacy-banner-wrap.sr-visible) .sr-consent{display:none !important}
+  body:has(.sr-privacy-banner-wrap.sr-visible) #srPwaFloatingWidget{display:none !important}
+  body:has(.sr-privacy-banner-wrap.sr-visible) #appleMacosDockWrapper{display:none !important}
+  .sr-consent{inset-inline:8px !important; inset-block-end:8px !important;
+    max-width:none !important; flex-wrap:nowrap !important; gap:8px !important;
+    padding:8px 10px !important}
+  .sr-consent p{font-size:10.5px !important; line-height:1.45 !important}
+  .sr-consent__actions{gap:6px !important}
+  .sr-consent__actions button{padding:5px 9px !important; font-size:10.5px !important}
+  .sr-privacy-banner{flex-wrap:nowrap !important; align-items:center !important; gap:6px !important; padding:7px 8px !important}
+  .sr-privacy-content{flex:1 1 auto !important; min-width:0 !important; overflow:hidden !important}
+  .sr-privacy-title{font-size:9.5px !important; white-space:nowrap !important; overflow:hidden !important;
+    text-overflow:ellipsis !important; display:block !important; margin:0 !important}
+  .sr-privacy-actions{flex:0 0 auto !important; flex-direction:row !important; gap:4px !important}
+  .sr-privacy-btn{padding:5px 7px !important; font-size:9.5px !important}
+  .sr-privacy-title{font-size:10.5px !important; line-height:1.4 !important}
+  .sr-privacy-btn{padding:5px 9px !important; font-size:10.5px !important}
+
+  
+  .section-trust-metrics{padding:6px 8px !important}
+  .hero-trust-metrics-strip{display:flex !important; justify-content:center !important;
+    gap:20px !important; padding:8px 10px !important; border-radius:12px !important}
+  .trust-metric-separator{display:none !important}
+  .trust-metric-item{height:auto !important; justify-content:center !important; text-align:center !important}
+  
+  .hero-trust-metrics-strip > *:nth-child(n+4){display:none !important}
+}
+/* LTR corrections for localized pages */
+html[dir="ltr"] .hv2__copy{align-items:flex-start !important; text-align:left !important}
+html[dir="ltr"] .hv2__chips .hv2__chiprow{direction:ltr !important; justify-content:flex-start !important}
+html[dir="ltr"] .hv2__badge, html[dir="ltr"] .hv2__h1{text-align:left !important}
+html[dir="ltr"] .hv2__rot span{inset-inline-start:0}
+html[dir="ltr"] .nav-menu-main{direction:ltr !important}
+html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
+
+/* legacy hero remnants must not survive beside the new hero */
+#hero > *:not(.hv2):not(.hero-motion-canvas):not(.overlay){display:none !important}
+#hero .hero-sectors-marquee, #hero .hero-compact-sectors-row{display:none !important}
+
+</style>
 </head>
 
 <body class="counter-scroll preloader-complete">
@@ -535,11 +829,11 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
                             <div class="header-col-nav">
                                 <div class="box-navigation">
                                     <ul class="nav-menu-main">
-                                        <li class="menu-item"><a href="#founders-showcase" class="item-link link text-caption gold-accent"><span>01 /</span>LEADERSHIP</a></li>
-                                        <li class="menu-item"><a href="#about" class="item-link link text-caption"><span>02 /</span>About Us</a></li>
-                                        <li class="menu-item"><a href="#service" class="item-link link text-caption"><span>03 /</span>SERVICES</a></li>
-                                        <li class="menu-item"><a href="#software-hub" class="item-link link text-caption"><span>04 /</span>Obchod</a></li>
-                                        <li class="menu-item"><a href="#pricing" class="item-link link text-caption"><span>05 /</span>Pricing</a></li>
+                                        <li class="menu-item"><a href="#service" class="item-link link text-caption"><span>01 /</span>SERVICES</a></li>
+                                        <li class="menu-item"><a href="#pricing" class="item-link link text-caption"><span>02 /</span>Pricing</a></li>
+                                        <li class="menu-item"><a href="#software-hub" class="item-link link text-caption"><span>03 /</span>Obchod</a></li>
+                                        <li class="menu-item"><a href="#about" class="item-link link text-caption"><span>04 /</span>About Us</a></li>
+                                        <li class="menu-item"><a href="#founders-showcase" class="item-link link text-caption gold-accent"><span>05 /</span>LEADERSHIP</a></li>
                                         <li class="menu-item"><a href="#roi-calculator" class="item-link link text-caption gold-accent" title="Interactive Enterprise ROI Calculator"><span>06 /</span>ROI</a></li>
                                     
                                 </div>
@@ -564,6 +858,83 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
 
             <!-- Hero Banner Content -->
             <section id="hero" class="section-hero-v1 hero-reference">
+<!-- SR:BEGIN hero -->
+<div class="hv2" id="hv2-hero">
+              <div class="hv2__copy">
+                <span class="hv2__badge"><i></i> S&amp;R CoreSync For Intelligent Solutions</span>
+                <h1 class="hv2__h1">
+                  <span class="hv2__rot" id="hv2-rot">
+                    <span class="is-on">Pokročilé softwarové systémy</span>
+                    <span>Digitální aplikace a platformy</span>
+                    <span>Identita značky, která vydrží</span>
+                  </span>
+                </h1>
+
+                
+
+                <div class="hv2__chips">
+                  <span class="lbl">Nebo začněte tím, co sedí:</span>
+                  <div class="hv2__chiprow">
+                    <button type="button" class="hv2__chip">Luxusní e-shop</button>
+                    <button type="button" class="hv2__chip">Kompletní ERP systém</button>
+                    <button type="button" class="hv2__chip">Kompletní identita značky</button>
+                    <button type="button" class="hv2__chip">Web s vysokou konverzí</button>
+                    <button type="button" class="hv2__chip">Automatizace a integrace</button>
+                    <button type="button" class="hv2__chip">Technické poradenství</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hv2__brand">
+<div class="hv2__emblem" aria-hidden="true">
+                <img src="../assets/sr-core-emblem-official.webp" alt="" width="384" height="384" loading="eager" decoding="async">
+              </div>
+<div class="hv2__bars">
+                                    <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
+
+                  <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
+
+                  <span class="hero-ai-idea-sparkle">✨</span>
+
+                  </div>
+
+                  <div class="hero-ai-idea-input-wrap">
+
+                  <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Popište nápad na projekt…" autocomplete="off" aria-label="Project Idea AI Input">
+
+                  </div>
+
+                  <div class="hero-ai-idea-btns">
+
+                  <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Popište nápad hlasem" aria-label="Popište nápad hlasem">
+
+                  <span class="hero-ai-mic-icon">🎙️</span>
+
+                  </button>
+
+                  <button type="submit" class="hero-ai-idea-submit-btn" title="Analyzovat můj nápad ⚡" aria-label="Analyzovat můj nápad ⚡">
+
+                  <span class="hero-ai-submit-text">Analyzovat můj nápad ✦</span>
+
+                  <span class="hero-ai-submit-arrow">←</span>
+
+                  </button>
+
+                  </div>
+
+                  </form>
+                  <a class="hv2__bar ghost" href="#services">
+                    <span class="ico">▶</span> Vyzkoušet živý cloudový systém
+                    <span class="tail">Živé demo</span>
+                  </a>
+                </div>
+</div>
+            
+
+            
+            </div>
+<!-- SR:END hero -->
+
                 <!-- Interactive Dynamic Motion Canvas -->
                 <canvas id="heroMotionCanvas" class="hero-motion-canvas" aria-hidden="true"></canvas>
                 <div class="overlay"></div>
@@ -9162,5 +9533,31 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
 <script src="../js/sr-hero-fit.js?v=20261112" defer></script>
 
 <script src="../js/sr-studio-peek.js"></script>
+<script id="hv2-belt">
+(function(){
+  'use strict';
+  function q(id){ return document.getElementById(id); }
+  function h(el){ if(!el) return 0; var s=getComputedStyle(el);
+    if(s.display==='none'||s.visibility==='hidden') return 0;
+    var r=el.getBoundingClientRect(); return r.height>4?r.height:0; }
+  function measure(){
+    var pb=q('srPrivacyBannerWrap'), ph=0;
+    if(pb){ var r=pb.getBoundingClientRect(); if(r.height>4){ ph=Math.max(r.height, window.innerHeight-r.top); } }
+    var c=document.querySelector('.sr-consent'), ch=0;
+    if(c){ var cs=getComputedStyle(c); if(cs.display!=='none'&&cs.visibility!=='hidden'){ ch=c.getBoundingClientRect().height||0; } }
+    document.documentElement.style.setProperty('--privacy-h', Math.round(ph)+'px');
+    document.documentElement.style.setProperty('--consent-h', Math.round(ch)+'px');
+    document.documentElement.style.setProperty('--chrome-h', Math.round(Math.max(h(q('srPrivacyBannerWrap')), h(q('srQuickDockContainer')), 0))+16+'px');
+    var hero=q('hero');
+    if(hero){ hero.style.setProperty('min-height', Math.max(460, Math.round(window.innerHeight-142-ch-ph))+'px', 'important'); }
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', measure, {once:true}); } else { measure(); }
+  window.addEventListener('load', measure, {once:true});
+  setTimeout(measure, 900); setTimeout(measure, 2200);
+  window.addEventListener('resize', measure, {passive:true});
+  if(window.MutationObserver){ new MutationObserver(measure).observe(document.body, {childList:true, attributes:true, attributeFilter:['class','style']}); }
+})();
+</script>
+<script src="../js/sr-dock-merge.js?v=20261113b" defer></script>
 </body>
 </html>
