@@ -31,7 +31,13 @@
      "sk": "Cloudový softvér",
      "sl": "Oblačna programska oprema",
      "hr": "Cloud softver",
-     "lt": "Debesų programinė įranga"
+     "lt": "Debesų programinė įranga",
+     "lv": "Mākoņprogrammatūra",
+     "et": "Pilvtarkvara",
+     "mt": "Software cloud",
+     "ga": "Bogearraí scamall",
+     "ku": "Nermalava cloud",
+     "bg": "Облачен софтуер"
     },
     {
      "href": "./work.html#platforms",
@@ -56,7 +62,13 @@
      "sk": "Hotové platformy",
      "sl": "Pripravljene platforme",
      "hr": "Gotove platforme",
-     "lt": "Paruoštos platformos"
+     "lt": "Paruoštos platformos",
+     "lv": "Gatavas platformas",
+     "et": "Valmis platvormid",
+     "mt": "Pjattaformi lesti",
+     "ga": "Ardáin réidh",
+     "ku": "Platformên amade",
+     "bg": "Готови платформи"
     },
     {
      "href": "./whitelabel-calculator.html",
@@ -81,7 +93,13 @@
      "sk": "Kalkulačka licencií",
      "sl": "Kalkulator licenc",
      "hr": "Kalkulator licenci",
-     "lt": "Licencijų skaičiuoklė"
+     "lt": "Licencijų skaičiuoklė",
+     "lv": "Licenču kalkulators",
+     "et": "Litsentsikalkulaator",
+     "mt": "Kalkulatur tal-liċenzji",
+     "ga": "Áireamhán ceadúnas",
+     "ku": "Hesabkera lîsansan",
+     "bg": "Калкулатор за лицензи"
     },
     {
      "href": "./estimator.html",
@@ -106,7 +124,13 @@
      "sk": "Kalkulačka projektov",
      "sl": "Kalkulator projektov",
      "hr": "Kalkulator projekata",
-     "lt": "Projektų skaičiuoklė"
+     "lt": "Projektų skaičiuoklė",
+     "lv": "Projektu kalkulators",
+     "et": "Projektikalkulaator",
+     "mt": "Kalkulatur tal-proġetti",
+     "ga": "Áireamhán tionscadail",
+     "ku": "Hesabkera projeyan",
+     "bg": "Калкулатор за проекти"
     }
    ],
    "title_de": "Leistungen",
@@ -128,7 +152,13 @@
    "title_sk": "Služby",
    "title_sl": "Storitve",
    "title_hr": "Usluge",
-   "title_lt": "Paslaugos"
+   "title_lt": "Paslaugos",
+   "title_lv": "Pakalpojumi",
+   "title_et": "Teenused",
+   "title_mt": "Servizzi",
+   "title_ga": "Seirbhísí",
+   "title_ku": "Xizmet",
+   "title_bg": "Услуги"
   },
   {
    "key": "company",
@@ -158,7 +188,13 @@
      "sk": "O spoločnosti",
      "sl": "O podjetju",
      "hr": "O tvrtki",
-     "lt": "Apie įmonę"
+     "lt": "Apie įmonę",
+     "lv": "Par uzņēmumu",
+     "et": "Ettevõttest",
+     "mt": "Dwar il-kumpanija",
+     "ga": "Faoin gcuideachta",
+     "ku": "Derbarê pargîdanê",
+     "bg": "За компанията"
     },
     {
      "href": "./index.html#founders-showcase",
@@ -183,7 +219,13 @@
      "sk": "Vedenie",
      "sl": "Vodstvo",
      "hr": "Uprava",
-     "lt": "Vadovybė"
+     "lt": "Vadovybė",
+     "lv": "Vadība",
+     "et": "Juhtkond",
+     "mt": "Tmexxija",
+     "ga": "Ceannaireacht",
+     "ku": "Rêveberî",
+     "bg": "Ръководство"
     },
     {
      "href": "./work.html",
@@ -208,7 +250,13 @@
      "sk": "Portfólio",
      "sl": "Portfelj",
      "hr": "Portfolio",
-     "lt": "Portfelis"
+     "lt": "Portfelis",
+     "lv": "Portfelis",
+     "et": "Portfell",
+     "mt": "Portfolio",
+     "ga": "Punann",
+     "ku": "Portfolîo",
+     "bg": "Портфолио"
     },
     {
      "href": "./blog.html",
@@ -233,7 +281,13 @@
      "sk": "Denník",
      "sl": "Dnevnik",
      "hr": "Dnevnik",
-     "lt": "Žurnalas"
+     "lt": "Žurnalas",
+     "lv": "Žurnāls",
+     "et": "Ajakiri",
+     "mt": "Ġurnal",
+     "ga": "Dialann",
+     "ku": "Kovar",
+     "bg": "Дневник"
     }
    ],
    "title_de": "Unternehmen",
@@ -255,7 +309,13 @@
    "title_sk": "Spoločnosť",
    "title_sl": "Podjetje",
    "title_hr": "Tvrtka",
-   "title_lt": "Įmonė"
+   "title_lt": "Įmonė",
+   "title_lv": "Uzņēmums",
+   "title_et": "Ettevõte",
+   "title_mt": "Kumpanija",
+   "title_ga": "Cuideachta",
+   "title_ku": "Pargîdan",
+   "title_bg": "Компания"
   },
   {
    "key": "legal",
@@ -285,7 +345,13 @@
      "sk": "Súkromie a cookies",
      "sl": "Zasebnost in piškotki",
      "hr": "Privatnost i kolačići",
-     "lt": "Privatumas ir slapukai"
+     "lt": "Privatumas ir slapukai",
+     "lv": "Privātums un sīkfaili",
+     "et": "Privaatsus ja küpsised",
+     "mt": "Privatezza u cookies",
+     "ga": "Príobháideachas agus fianáin",
+     "ku": "Nepenî û cookies",
+     "bg": "Поверителност и бисквитки"
     },
     {
      "href": "./terms.html",
@@ -310,7 +376,13 @@
      "sk": "Podmienky",
      "sl": "Pogoji",
      "hr": "Uvjeti",
-     "lt": "Sąlygos"
+     "lt": "Sąlygos",
+     "lv": "Noteikumi",
+     "et": "Tingimused",
+     "mt": "Termini",
+     "ga": "Téarmaí",
+     "ku": "Merc",
+     "bg": "Условия"
     },
     {
      "href": "./verify.html",
@@ -335,7 +407,13 @@
      "sk": "Overiť dokument",
      "sl": "Preveri dokument",
      "hr": "Provjeri dokument",
-     "lt": "Patvirtinti dokumentą"
+     "lt": "Patvirtinti dokumentą",
+     "lv": "Pārbaudīt dokumentu",
+     "et": "Kontrolli dokumenti",
+     "mt": "Ivverifika dokument",
+     "ga": "Fíoraigh doiciméad",
+     "ku": "Belgeyê piştrast bike",
+     "bg": "Провери документ"
     },
     {
      "href": "./security-trust-center.html",
@@ -360,7 +438,13 @@
      "sk": "Centrum dôvery",
      "sl": "Center zaupanja",
      "hr": "Centar povjerenja",
-     "lt": "Pasitikėjimo centras"
+     "lt": "Pasitikėjimo centras",
+     "lv": "Uzticības centrs",
+     "et": "Usalduskeskus",
+     "mt": "Ċentru tal-fiduċja",
+     "ga": "Lár iontaoibhe",
+     "ku": "Navenda baweriyê",
+     "bg": "Център за доверие"
     },
     {
      "href": "#",
@@ -386,7 +470,13 @@
      "sk": "Nastavenia analytiky",
      "sl": "Nastavitve analitike",
      "hr": "Postavke analitike",
-     "lt": "Analitikos nustatymai"
+     "lt": "Analitikos nustatymai",
+     "lv": "Analītikas iestatījumi",
+     "et": "Analüütika seaded",
+     "mt": "Settings tal-analitika",
+     "ga": "Socruithe anailíse",
+     "ku": "Sazkariyên analîzê",
+     "bg": "Настройки за анализ"
     }
    ],
    "title_de": "Recht & Compliance",
@@ -408,7 +498,13 @@
    "title_sk": "Právo a zhoda",
    "title_sl": "Pravno in skladnost",
    "title_hr": "Pravno i usklađenost",
-   "title_lt": "Teisė ir atitiktis"
+   "title_lt": "Teisė ir atitiktis",
+   "title_lv": "Juridiskie jautājumi un atbilstība",
+   "title_et": "Õigus ja vastavus",
+   "title_mt": "Legali u konformità",
+   "title_ga": "Dlí agus comhlíonadh",
+   "title_ku": "Hiqûq û lihevhatin",
+   "title_bg": "Правно и съответствие"
   },
   {
    "key": "contact",
@@ -438,7 +534,13 @@
      "sk": "info@sr-coresync.com",
      "sl": "info@sr-coresync.com",
      "hr": "info@sr-coresync.com",
-     "lt": "info@sr-coresync.com"
+     "lt": "info@sr-coresync.com",
+     "lv": "info@sr-coresync.com",
+     "et": "info@sr-coresync.com",
+     "mt": "info@sr-coresync.com",
+     "ga": "info@sr-coresync.com",
+     "ku": "info@sr-coresync.com",
+     "bg": "info@sr-coresync.com"
     },
     {
      "href": "tel:+31618111116",
@@ -463,7 +565,13 @@
      "sk": "+31 6 1811 1116",
      "sl": "+31 6 1811 1116",
      "hr": "+31 6 1811 1116",
-     "lt": "+31 6 1811 1116"
+     "lt": "+31 6 1811 1116",
+     "lv": "+31 6 1811 1116",
+     "et": "+31 6 1811 1116",
+     "mt": "+31 6 1811 1116",
+     "ga": "+31 6 1811 1116",
+     "ku": "+31 6 1811 1116",
+     "bg": "+31 6 1811 1116"
     },
     {
      "href": "https://wa.me/31618111116",
@@ -488,7 +596,13 @@
      "sk": "WhatsApp",
      "sl": "WhatsApp",
      "hr": "WhatsApp",
-     "lt": "WhatsApp"
+     "lt": "WhatsApp",
+     "lv": "WhatsApp",
+     "et": "WhatsApp",
+     "mt": "WhatsApp",
+     "ga": "WhatsApp",
+     "ku": "WhatsApp",
+     "bg": "WhatsApp"
     },
     {
      "href": "./index.html#contact",
@@ -513,7 +627,13 @@
      "sk": "Rezervovať konzultáciu",
      "sl": "Rezervirajte posvet",
      "hr": "Rezervirajte konzultacije",
-     "lt": "Rezervuoti konsultaciją"
+     "lt": "Rezervuoti konsultaciją",
+     "lv": "Rezervēt konsultāciju",
+     "et": "Broneeri konsultatsioon",
+     "mt": "Ibbukkja konsultazzjoni",
+     "ga": "Cuir coinne le comhairle",
+     "ku": "Şêwirmendiyê tomar bike",
+     "bg": "Запази консултация"
     }
    ],
    "title_de": "Kontakt",
@@ -535,7 +655,13 @@
    "title_sk": "Kontakt",
    "title_sl": "Kontakt",
    "title_hr": "Kontakt",
-   "title_lt": "Kontaktai"
+   "title_lt": "Kontaktai",
+   "title_lv": "Kontakti",
+   "title_et": "Kontakt",
+   "title_mt": "Kuntatt",
+   "title_ga": "Teagmháil",
+   "title_ku": "Têkilî",
+   "title_bg": "Контакт"
   }
  ],
  "legal_line": {
@@ -560,7 +686,13 @@
   "sk": "© 2026 S&R CoreSync For Intelligent Solutions — Všetky práva vyhradené.",
   "sl": "© 2026 S&R CoreSync For Intelligent Solutions — Vse pravice pridržane.",
   "hr": "© 2026 S&R CoreSync For Intelligent Solutions — Sva prava pridržana.",
-  "lt": "© 2026 S&R CoreSync For Intelligent Solutions — Visos teisės saugomos."
+  "lt": "© 2026 S&R CoreSync For Intelligent Solutions — Visos teisės saugomos.",
+  "lv": "© 2026 S&R CoreSync For Intelligent Solutions — Visas tiesības aizsargātas.",
+  "et": "© 2026 S&R CoreSync For Intelligent Solutions — Kõik õigused kaitstud.",
+  "mt": "© 2026 S&R CoreSync For Intelligent Solutions — Id-drittijiet kollha riservati.",
+  "ga": "© 2026 S&R CoreSync For Intelligent Solutions — Gach ceart ar cosaint.",
+  "ku": "© 2026 S&R CoreSync For Intelligent Solutions — Hemû maf parastî ne.",
+  "bg": "© 2026 S&R CoreSync For Intelligent Solutions — Всички права запазени."
  },
  "tagline": {
   "ar": "هندسة المنظومات السيادية من أمستردام",
@@ -584,6 +716,12 @@
   "sk": "Suverénne systémové inžinierstvo z Amsterdamu",
   "sl": "Suvereno sistemsko inženirstvo iz Amsterdama",
   "hr": "Suvereno sistemsko inženjerstvo iz Amsterdama",
-  "lt": "Suvereni sistemų inžinerija iš Amsterdamo"
+  "lt": "Suvereni sistemų inžinerija iš Amsterdamo",
+  "lv": "Suverēna sistēmu inženierija no Amsterdamas",
+  "et": "Suveräänne süsteemiinseneeria Amsterdamist",
+  "mt": "Inġinerija tas-sistemi sovrani minn Amsterdam",
+  "ga": "Innealtóireacht córas ceannasach ó Amstardam",
+  "ku": "Endezyariya pergalên serwer ji Amsterdamê",
+  "bg": "Суверенно системно инженерство от Амстердам"
  }
 }
