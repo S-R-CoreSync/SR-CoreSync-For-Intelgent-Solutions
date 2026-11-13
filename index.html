@@ -2306,12 +2306,20 @@
 }
 
 @media (max-width:600px){
-  .hv2{width:calc(100% - 24px) !important; padding:16px 0 !important; gap:18px !important}
-  .hv2__brand{width:100% !important; max-width:100% !important; gap:14px !important}
-  .hv2__emblem{width:200px !important; max-width:200px !important}
+  .hv2{width:calc(100% - 24px) !important; padding:10px 0 !important; gap:12px !important}
+  .hv2__brand{width:100% !important; max-width:100% !important; gap:10px !important}
+  .hv2__emblem{width:122px !important; max-width:122px !important}
+  .hv2__badge{display:none !important}
+  .hv2__bars{gap:8px !important}
+  .hv2__bar.ghost .tail{display:none !important}
+  .hv2__chips{margin-top:12px !important}
+  .hv2__chips .lbl{display:none !important}
+  .hv2__chips .hv2__chiprow{flex-wrap:nowrap !important; overflow-x:auto !important;
+    justify-content:flex-start !important; padding-bottom:3px !important}
+  .hv2__chip{flex:0 0 auto !important; font-size:11px !important; padding:6px 10px !important}
   .hv2__bars{max-width:100% !important}
   .hv2__copy{align-items:center !important; text-align:center !important}
-  .hv2 h1.hv2__h1{font-size:1.55rem !important; line-height:1.35 !important}
+  .hv2 h1.hv2__h1{font-size:1.38rem !important; line-height:1.32 !important}
   .hv2__rot span{max-width:100% !important}
   #hero{padding-bottom:calc(var(--chrome-h, 120px) + 96px) !important}
   .hero-reference{justify-content:flex-start !important; padding-top:10px !important}
@@ -2408,15 +2416,30 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
   /* سطح واحد للموافقة في كل مرة: لا شريطان فوق بعضهما على الجوال */
   body:has(.sr-privacy-banner-wrap.sr-visible) .sr-consent{display:none !important}
   body:has(.sr-privacy-banner-wrap.sr-visible) #srPwaFloatingWidget{display:none !important}
+  body:has(.sr-privacy-banner-wrap.sr-visible) #appleMacosDockWrapper{display:none !important}
   .sr-consent{inset-inline:8px !important; inset-block-end:8px !important;
     max-width:none !important; flex-wrap:nowrap !important; gap:8px !important;
     padding:8px 10px !important}
   .sr-consent p{font-size:10.5px !important; line-height:1.45 !important}
   .sr-consent__actions{gap:6px !important}
   .sr-consent__actions button{padding:5px 9px !important; font-size:10.5px !important}
-  .sr-privacy-banner{gap:8px !important; padding:7px 10px !important}
+  .sr-privacy-banner{flex-wrap:nowrap !important; align-items:center !important; gap:6px !important; padding:7px 8px !important}
+  .sr-privacy-content{flex:1 1 auto !important; min-width:0 !important; overflow:hidden !important}
+  .sr-privacy-title{font-size:9.5px !important; white-space:nowrap !important; overflow:hidden !important;
+    text-overflow:ellipsis !important; display:block !important; margin:0 !important}
+  .sr-privacy-actions{flex:0 0 auto !important; flex-direction:row !important; gap:4px !important}
+  .sr-privacy-btn{padding:5px 7px !important; font-size:9.5px !important}
   .sr-privacy-title{font-size:10.5px !important; line-height:1.4 !important}
   .sr-privacy-btn{padding:5px 9px !important; font-size:10.5px !important}
+
+  /* شريط الأدلة: شبكة 2×2 مضغوطة بدل صفّ ينكسر */
+  .section-trust-metrics{padding:6px 8px !important}
+  .hero-trust-metrics-strip{display:flex !important; justify-content:center !important;
+    gap:20px !important; padding:8px 10px !important; border-radius:12px !important}
+  .trust-metric-separator{display:none !important}
+  .trust-metric-item{height:auto !important; justify-content:center !important; text-align:center !important}
+  /* مؤشران فقط على الهاتف: 99.9% و BTW — يكفيان ويبقيان فوق الدوك */
+  .hero-trust-metrics-strip > *:nth-child(n+4){display:none !important}
 }
 </style>
 </head>
