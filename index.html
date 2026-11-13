@@ -2455,6 +2455,23 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
     bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 14px) !important;
   }
 }
+
+/* ═══ v6 · كبسولة الأدوات أسفل اليسار، فوق دوك اللغة ═════════════ */
+@media (min-width:601px){
+  .sr-tools-capsule{
+    position:fixed; left:22px; right:auto;
+    bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 76px);
+    z-index:9997; display:flex; align-items:center; gap:6px;
+    padding:6px; border-radius:14px;
+    border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.28);
+    background:linear-gradient(180deg,rgba(14,20,28,.96),rgba(8,12,18,.96));
+    box-shadow:0 12px 30px rgba(0,0,0,.55);
+    backdrop-filter:blur(14px);
+  }
+  .sr-tools-capsule .header-col-actions{margin:0 !important; gap:6px !important}
+  .sr-tools-capsule .header-support-menu{bottom:100% !important; top:auto !important;
+    margin-bottom:8px !important}
+}
 </style>
 <style id="srf-css">
 
@@ -11534,7 +11551,7 @@ html[dir="ltr"] .srf{direction:ltr}
 })();
 </script>
 <script src="js/sr-lang-map.js?v=20261112-v17" defer></script>
-<script src="js/sr-dock-merge.js?v=20261113b" defer></script>
+<script src="js/sr-dock-merge.js?v=20261113c" defer></script>
 </body>
 
 </html>

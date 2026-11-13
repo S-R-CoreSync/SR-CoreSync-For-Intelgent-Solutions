@@ -28,7 +28,20 @@
   function start() {
     if (timer) { return; }
     apply();
+    seatTools();
     timer = setInterval(apply, 250);
+  }
+
+  /* the header tools live in a bottom-left capsule on desktop */
+  function seatTools() {
+    if (window.matchMedia && !window.matchMedia('(min-width:601px)').matches) { return; }
+    var actions = document.querySelector('.header-col-actions');
+    if (!actions || document.querySelector('.sr-tools-capsule')) { return; }
+    var box = document.createElement('div');
+    box.className = 'sr-tools-capsule';
+    box.setAttribute('aria-label', 'Install and support');
+    box.appendChild(actions);
+    document.body.appendChild(box);
   }
 
   window.__srDock = { apply: apply, state: function () { return { past: past }; } };
