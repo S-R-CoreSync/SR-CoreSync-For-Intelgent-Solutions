@@ -1,0 +1,55 @@
+{
+ "version": 1,
+ "scope": "calibrated",
+ "note": "The canonical footer: four blocks, sixteen links. The master and every locale render from this file.",
+ "blocks": [
+  {
+   "key": "services",
+   "title": "الخدمات",
+   "links": [
+    {"href": "./software.html", "ar": "البرمجيات السحابية", "en": "Cloud software"},
+    {"href": "./work.html#platforms", "ar": "المنصات الجاهزة", "en": "Ready platforms"},
+    {"href": "./whitelabel-calculator.html", "ar": "حاسبة التراخيص", "en": "Licence calculator"},
+    {"href": "./estimator.html", "ar": "حاسبة المشاريع", "en": "Project estimator"}
+   ]
+  },
+  {
+   "key": "company",
+   "title": "الشركة",
+   "links": [
+    {"href": "./index.html#about", "ar": "نبذة عن الشركة", "en": "About the company"},
+    {"href": "./index.html#founders-showcase", "ar": "القيادة التنفيذية", "en": "Leadership"},
+    {"href": "./work.html", "ar": "معرض الأعمال", "en": "Portfolio"},
+    {"href": "./blog.html", "ar": "المدونة", "en": "Journal"}
+   ]
+  },
+  {
+   "key": "legal",
+   "title": "القانون والامتثال",
+   "links": [
+    {"href": "./privacy.html", "ar": "الخصوصية والكوكيز", "en": "Privacy & cookies"},
+    {"href": "./terms.html", "ar": "الشروط والأحكام", "en": "Terms"},
+    {"href": "./verify.html", "ar": "التحقق من المستندات", "en": "Verify a document"},
+    {"href": "./security-trust-center.html", "ar": "مركز الثقة", "en": "Trust centre"}
+   ]
+  },
+  {
+   "key": "contact",
+   "title": "التواصل",
+   "links": [
+    {"href": "mailto:info@sr-coresync.com", "ar": "info@sr-coresync.com", "en": "info@sr-coresync.com"},
+    {"href": "tel:+31618111116", "ar": "‎+31 6 1811 1116", "en": "+31 6 1811 1116"},
+    {"href": "https://wa.me/31618111116", "ar": "واتساب مباشر", "en": "WhatsApp"},
+    {"href": "./index.html#contact", "ar": "حجز استشارة", "en": "Book a consultation"}
+   ]
+  }
+ ],
+ "legal_line": {
+  "ar": "© 2026 S&R CoreSync For Intelligent Solutions — جميع الحقوق محفوظة.",
+  "en": "© 2026 S&R CoreSync For Intelligent Solutions — All rights reserved."
+ },
+ "tagline": {
+  "ar": "هندسة المنظومات السيادية من أمستردام",
+  "en": "Sovereign systems engineering from Amsterdam"
+ }
+}
