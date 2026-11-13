@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>اتجاه الرأس — مقارنة قبل القرار</title>
+<style>
+  :root{--gold:#d4af37;--gold-l:#f3dfba;--bg:#05080e;--card:#0b1119;--line:rgba(212,175,55,.24);--txt:#e9e6dc;--dim:#93a1b1}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:'Segoe UI',Tahoma,Arial,sans-serif;padding:28px 22px 40px}
+  h1{font-size:22px;margin:0 0 6px;color:var(--gold-l);font-weight:700}
+  .sub{color:var(--dim);font-size:13px;margin:0 0 26px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1180px}
+  @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .cap{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:13.5px}
+  .tag{font-size:11px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--gold)}
+  .tag.bad{border-color:rgba(220,90,90,.45);color:#e08a8a}
+  .tag.good{border-color:rgba(70,190,140,.45);color:#7fd7ae}
+  /* simulated site header */
+  .hdr[dir="ltr"] .brand{order:0}
+  .hdr{display:flex;align-items:center;gap:14px;padding:14px 16px;background:linear-gradient(180deg,#080d14,#05080e);border-bottom:1px solid rgba(212,175,55,.16)}
+  .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .mark{width:34px;height:34px;border-radius:50%;border:1px solid rgba(212,175,55,.5);display:grid;place-items:center;font-size:11px;color:var(--gold);background:radial-gradient(circle at 30% 25%,#1b2430,#080d14)}
+  .bname{font-size:14px;letter-spacing:.3px;color:#f4f1e6}
+  .nav{display:flex;gap:11px;font-size:11.5px;color:#c9d3de;white-space:nowrap}
+  .nav b{color:var(--gold);font-weight:600;font-size:10.5px;margin-inline-end:4px}
+  .spacer{flex:1}
+  .cta{font-size:11.5px;padding:8px 13px;flex:0 0 auto;border-radius:10px;border:1px solid rgba(212,175,55,.45);color:#12100a;background:linear-gradient(180deg,#f3dfba,#d4af37);white-space:nowrap}
+  .note{padding:12px 16px 16px;font-size:12.5px;color:var(--dim);line-height:1.75}
+  .note b{color:#dfe6ee;font-weight:600}
+  table{width:100%;border-collapse:collapse;margin-top:26px;font-size:12.5px;max-width:1180px}
+  th,td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:right}
+  th{color:var(--gold);font-weight:600;font-size:12px}
+  td:first-child{color:#cfd8e3}
+  .ok{color:#7fd7ae}
+  .no{color:#e08a8a}
+  h2{font-size:15px;color:var(--gold-l);margin:30px 0 10px;max-width:1180px}
+  ul{margin:0;padding-inline-start:20px;font-size:12.5px;color:#c9d3de;line-height:1.9;max-width:1180px}
+</style>
+</head>
+<body>
+
+<h1>أي رأس يبدو احترافياً أكثر لموقع عربي؟</h1>
+<p class="sub">مقارنة مباشرة بين ما هو منشور الآن، وما تفعله المواقع العربية الكبرى.</p>
+
+<div class="grid">
+  <div class="panel">
+    <div class="cap"><span class="tag bad">الحالي</span> الشعار يساراً · القائمة يميناً</div>
+    <div class="hdr" dir="ltr">
+      <div class="brand"><div class="mark">S&amp;R</div><div class="bname">S&amp;R CoreSync</div></div>
+      <div class="spacer"></div>
+      <div class="nav"><span><b>01</b>الخدمات</span><span><b>02</b>الأسعار</span><span><b>03</b>المتجر</span><span><b>04</b>نبذة</span><span><b>05</b>القيادة</span></div>
+      <div class="cta">تثبيت التطبيق</div>
+    </div>
+    <div class="note">
+      أول ما تقع عليه العين في صفحة عربية هو <b>أقصى اليمين</b> — وهنا يجد القارئ رقم «01» قبل اسم الشركة.
+      الرأس بترتيب إنجليزي غير معكوس.
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="cap"><span class="tag good">المقترح</span> الشعار يميناً · القائمة تمتد يساراً</div>
+    <div class="hdr">
+      <div class="brand"><div class="mark">S&amp;R</div><div class="bname">S&amp;R CoreSync</div></div>
+      <div class="nav"><span><b>01</b>الخدمات</span><span><b>02</b>الأسعار</span><span><b>03</b>المتجر</span><span><b>04</b>نبذة</span><span><b>05</b>القيادة</span></div>
+      <div class="spacer"></div>
+      <div class="cta">تثبيت التطبيق</div>
+    </div>
+    <div class="note">
+      القارئ يبدأ بالاسم، ثم يمشي مع الأرقام نحو اليسار، وينتهي عند الإجراء.
+      هذا هو <b>الانعكاس الصحيح</b> لما يفعله الموقع الإنجليزي.
+    </div>
+  </div>
+</div>
+
+<h2>ما تفعله المواقع العربية الكبرى</h2>
+<table>
+  <tr><th>الموقع</th><th>موضع الشعار</th><th>اتجاه القائمة</th></tr>
+  <tr><td>Apple العربية</td><td class="ok">يمين</td><td>تمتد يساراً</td></tr>
+  <tr><td>Google العربية</td><td class="ok">يمين</td><td>تمتد يساراً</td></tr>
+  <tr><td>Microsoft العربية</td><td class="ok">يمين</td><td>تمتد يساراً</td></tr>
+  <tr><td>الجزيرة نت</td><td class="ok">يمين</td><td>تمتد يساراً</td></tr>
+  <tr><td>أرامكو العربية</td><td class="ok">يمين</td><td>تمتد يساراً</td></tr>
+  <tr><td>موقعك الآن</td><td class="no">يسار</td><td>يمين</td></tr>
+</table>
+
+<h2>لماذا يهمّ هذا عملياً — لا جمالياً فقط</h2>
+<ul>
+  <li><b>توقّع القارئ:</b> من تعوّد العربية يبحث عن هوية الموقع في الزاوية اليمنى، كما يبحث الإنجليزي في اليسرى.</li>
+  <li><b>الهاتف:</b> في الواجهات العربية يُوضع زر القائمة أعلى اليسار — وهذا يحدث تلقائياً إذا كان الشعار يميناً.</li>
+  <li><b>الاتساق:</b> موقعك يقود بمنطق «المصدر الواحد»، والاتجاه جزء من هذا المصدر لا استثناء عنه.</li>
+  <li><b>الانطباع:</b> الرأس هو أول 60 بكسل يراه الزبون؛ ترتيبه المعكوس يُقرأ كقالب مترجم لا كموقع عربي أصلي.</li>
+</ul>
+
+<h2>الاستثناء الوحيد المشروع</h2>
+<ul>
+  <li>العلامات العالمية التي تُبقي الشعار في مكان واحد في كل لغاتها — وهذا ليس حالك، فموقعك عربي الأصل.</li>
+</ul>
+
+</body>
+</html>
