@@ -43,21 +43,30 @@ html[dir="ltr"] .srf{direction:ltr}
 """
 
 
-def label(link, lang):
+def key_of(href):
+    h = href.split('#')[0]
+    return h.split('/')[-1]
+
+
+def label(link, lang, labels=None):
+    if labels:
+        k = key_of(link['href'])
+        if k in labels:
+            return labels[k]
     v = link.get(lang)
     return v if v else link.get('en') or link.get('ar') or link['href']
 
 
-def render(model, lang, base=''):
+def render(model, lang, base='', labels=None):
     rtl = lang == 'ar'
     tag = model['tagline'].get(lang) or model['tagline']['en']
     legal = model['legal_line'].get(lang) or model['legal_line']['en']
     cols = []
     for b in model['blocks']:
         items = ''.join(
-            ('<li><a href="#" data-sr-call="%s">%s</a></li>' % (l['srCall'], label(l, lang)))
+            ('<li><a href="#" data-sr-call="%s">%s</a></li>' % (l['srCall'], label(l, lang, labels)))
             if l.get('srCall') else
-            ('<li><a href="%s">%s</a></li>' % ((base + l['href'][2:]) if base and l['href'].startswith('./') else l['href'], label(l, lang)))
+            ('<li><a href="%s">%s</a></li>' % ((base + l['href'][2:]) if base and l['href'].startswith('./') else l['href'], label(l, lang, labels)))
             for l in b['links']
         )
         cols.append('<div class="srf__col"><h3>%s</h3><ul>%s</ul></div>' % (
