@@ -177,6 +177,7 @@ jobs:
           python scripts/verify_hero_build.py en de fr
           python scripts/verify_footer_build.py en de fr
           python scripts/verify_nav_build.py en de fr
+          python scripts/check_hreflang.py
           python scripts/check_sr_args.py
 
       - name: Build publish set

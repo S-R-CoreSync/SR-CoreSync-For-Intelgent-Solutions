@@ -33,6 +33,7 @@ CHECK = [
     ('index.html rebuilds', ['scripts/build_site.py', '--check']),
     ('en rebuilds', ['scripts/build_lang.py', '--check', 'en']),
     ('locales match master', ['scripts/sync_locales.py', '--check']),
+    ('hreflang agreement', ['scripts/check_hreflang.py']),
     ('event payloads', ['scripts/check_sr_args.py']),
     ('local links', ['scripts/check_site_links.py']),
 ]
