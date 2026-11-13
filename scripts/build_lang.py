@@ -14,7 +14,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 REGIONS = [
     ('10-header', r'<header\b[^>]*class="[^"]*tf-header', 'header'),
-    ('30-footer', r'<footer\b[^>]*\bclass="[^"]*srf', 'footer'),
+    ('20-hero',   r'<section\b[^>]*\bid="hero"',          'section'),
+    ('21-services',   r'<section\b[^>]*\bid="services"',         'section'),
+    ('22-pricing',    r'<section\b[^>]*\bid="pricing"',          'section'),
+    ('23-store',      r'<section\b[^>]*\bid="software-hub"',     'section'),
+    ('24-about',      r'<section\b[^>]*\bid="about"',            'section'),
+    ('25-leadership', r'<section\b[^>]*\bid="founders-showcase"','section'),
+    ('30-footer', r'<footer\b[^>]*\bclass="[^"]*srf',     'footer'),
 ]
 
 
