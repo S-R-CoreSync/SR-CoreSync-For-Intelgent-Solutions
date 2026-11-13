@@ -1,0 +1,319 @@
+{
+ "source": "index.html",
+ "footer_class": "tf-footer tf-footer--original",
+ "link_total": 57,
+ "block_count": 3,
+ "blocks": [
+  {
+   "index": 0,
+   "tag": "div",
+   "class": "footer-stars",
+   "heading": "",
+   "link_count": 0,
+   "links": []
+  },
+  {
+   "index": 1,
+   "tag": "div",
+   "class": "container",
+   "heading": "S&R CoreSync Solutions",
+   "link_count": 56,
+   "links": [
+    {
+     "href": "./work.html#platforms",
+     "label": "S&R CivicSync™ الجاليات",
+     "class": ""
+    },
+    {
+     "href": "./work.html#platforms",
+     "label": "S&R HealthBridge™ الطبية",
+     "class": ""
+    },
+    {
+     "href": "./work.html#platforms",
+     "label": "S&R OmniBakery™ المخابز ERP",
+     "class": ""
+    },
+    {
+     "href": "./whitelabel-calculator.html",
+     "label": "حاسبة التراخيص الفورية جديد 🧮",
+     "class": ""
+    },
+    {
+     "href": "./estimator.html",
+     "label": "حاسبة التوفير المالي (ROI) 📊",
+     "class": ""
+    },
+    {
+     "href": "./brand-identity-studio.html",
+     "label": "استوديو الهوية البصرية 8K تصميم 🎨",
+     "class": ""
+    },
+    {
+     "href": "./web-showcase-studio.html",
+     "label": "استوديو المواقع والمتاجر الذكية ويب 🌐",
+     "class": ""
+    },
+    {
+     "href": "./device-simulator-studio.html",
+     "label": "محاكي الأجهزة ثلاثي الأبعاد 3D 📱",
+     "class": ""
+    },
+    {
+     "href": "./invoice-engine.html",
+     "label": "محرك الفوترة الرقمية ZATCA / Peppol فواتير ⚡",
+     "class": ""
+    },
+    {
+     "href": "./smart-proposal-portal.html",
+     "label": "بوابة العروض والتعاقد الذكي عقود 🤝",
+     "class": ""
+    },
+    {
+     "href": "./crm-dashboard.html",
+     "label": "لوحة CRM والبيانات الحية CRM 📊",
+     "class": ""
+    },
+    {
+     "href": "./payment-gateway.html",
+     "label": "بوابة المدفوعات الدولية الموحدة دفع 💳",
+     "class": ""
+    },
+    {
+     "href": "./ecommerce-launchpad.html",
+     "label": "استوديو توليد المتاجر الفورية متاجر 🛍️",
+     "class": ""
+    },
+    {
+     "href": "./landing-page-builder.html",
+     "label": "مولّد صفحات الهبوط فائقة التحويل تحويل 🚀",
+     "class": ""
+    },
+    {
+     "href": "./webhook-integration-hub.html",
+     "label": "مركز أتمتة الـ Webhooks والربط السحابي سحابي ⚡",
+     "class": ""
+    },
+    {
+     "href": "./security-trust-center.html",
+     "label": "مركز الأمان وشارات التوثيق أمان 🛡️",
+     "class": ""
+    },
+    {
+     "href": "./social-ads-studio.html",
+     "label": "استوديو أصول التواصل 8K إعلانات 🎨",
+     "class": ""
+    },
+    {
+     "href": "./icon-badge-3d-generator.html",
+     "label": "محرك الشارات والأيقونات 3D شارات 3D ✨",
+     "class": ""
+    },
+    {
+     "href": "./software.html",
+     "label": "سوق البرمجيات والأنظمة 💻",
+     "class": ""
+    },
+    {
+     "href": "./demo.html",
+     "label": "النظام التجريبي السحابي ⚡",
+     "class": ""
+    },
+    {
+     "href": "./api-playground.html",
+     "label": "بيئة اختبار واجهات البرمجة (Playground) API 🌐",
+     "class": ""
+    },
+    {
+     "href": "./financial-charts-studio.html",
+     "label": "استوديو الرسوم البيانية المالية مخططات 📈",
+     "class": ""
+    },
+    {
+     "href": "./ip-nda-smart-contract.html",
+     "label": "محرك عقود الملكية الفكرية وNDA عقود 📜",
+     "class": ""
+    },
+    {
+     "href": "./executive-digital-id.html",
+     "label": "استوديو الهويات الرقمية التنفيذية 3D هويات 🪪",
+     "class": ""
+    },
+    {
+     "href": "./3d-product-configurator.html",
+     "label": "محرك تخصيص المنتجات 3D منتجات 3D 💎",
+     "class": ""
+    },
+    {
+     "href": "./dynamic-qr-studio.html",
+     "label": "استوديو أكواد QR الديناميكية QR ذكي 📲",
+     "class": ""
+    },
+    {
+     "href": "./tech-matrix.html",
+     "label": "مصفوفة المقارنات الفنية والتقنية مقارنات ⚖️",
+     "class": ""
+    },
+    {
+     "href": "./lottie-studio.html",
+     "label": "استوديو الرسوم المتحركة والتفاعلات أنيميشن ✨",
+     "class": ""
+    },
+    {
+     "href": "./perf-audit.html",
+     "label": "استوديو فحص الأداء والسرعة أداء ⚡",
+     "class": ""
+    },
+    {
+     "href": "./api-docs.html",
+     "label": "توثيق الـ API السيادي (OpenAPI 3.1) مطورين ⚡",
+     "class": ""
+    },
+    {
+     "href": "#about",
+     "label": "القيادة التنفيذية والمؤسسون",
+     "class": ""
+    },
+    {
+     "href": "#work",
+     "label": "سابقة الأعمال والمشاريع",
+     "class": ""
+    },
+    {
+     "href": "#service",
+     "label": "الحلول والخدمات المؤسسية",
+     "class": ""
+    },
+    {
+     "href": "#pricing",
+     "label": "باقات التراخيص والأسعار",
+     "class": ""
+    },
+    {
+     "href": "#faq",
+     "label": "الأسئلة الشائعة والمعايير",
+     "class": ""
+    },
+    {
+     "href": "./blog.html",
+     "label": "المدونة والرؤى التنفيذية 📝",
+     "class": ""
+    },
+    {
+     "href": "./logo-studio.html",
+     "label": "استوديو الشعار والهوية 🎨",
+     "class": ""
+    },
+    {
+     "href": "./status.html",
+     "label": "حالة المنصة والخدمات — فحص مباشر 🟢",
+     "class": ""
+    },
+    {
+     "href": "#brandLogoLightboxModal",
+     "label": "فحص الشعار الرسمي 4K 🔍",
+     "class": ""
+    },
+    {
+     "href": "https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20S%26R%20CoreSync%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%86%D9%81%D9%8A%D8%B0%D9%8A%D8%A9%20VIP",
+     "label": "المحادثة التنفيذية المباشرة عبر واتساب +31 6 1811 1116",
+     "class": "sr-footer-contact-card"
+    },
+    {
+     "href": "mailto:info@sr-coresync.com",
+     "label": "البريد المؤسسي الرسمي info@sr-coresync.com",
+     "class": "sr-footer-contact-card"
+    },
+    {
+     "href": "https://www.linkedin.com/company/146883282/",
+     "label": "LinkedIn",
+     "class": "sr-social-chip sr-social-chip--linkedin"
+    },
+    {
+     "href": "https://facebook.com/SRCoreSync",
+     "label": "Facebook",
+     "class": "sr-social-chip sr-social-chip--facebook"
+    },
+    {
+     "href": "https://instagram.com/SRCoreSync",
+     "label": "Instagram",
+     "class": "sr-social-chip sr-social-chip--instagram"
+    },
+    {
+     "href": "https://x.com/SRCoreSync",
+     "label": "X (Twitter)",
+     "class": "sr-social-chip sr-social-chip--x"
+    },
+    {
+     "href": "https://youtube.com/@SRCoreSync",
+     "label": "YouTube",
+     "class": "sr-social-chip sr-social-chip--youtube"
+    },
+    {
+     "href": "https://tiktok.com/@SRCoreSync",
+     "label": "TikTok",
+     "class": "sr-social-chip sr-social-chip--tiktok"
+    },
+    {
+     "href": "https://snapchat.com/add/SRCoreSync",
+     "label": "Snapchat",
+     "class": "sr-social-chip sr-social-chip--snapchat"
+    },
+    {
+     "href": "https://t.me/SRCoreSync",
+     "label": "Telegram",
+     "class": "sr-social-chip sr-social-chip--telegram"
+    },
+    {
+     "href": "https://wa.me/31618111116",
+     "label": "WhatsApp",
+     "class": "sr-social-chip sr-social-chip--whatsapp"
+    },
+    {
+     "href": "./verify.html",
+     "label": "التحقق من التراخيص",
+     "class": ""
+    },
+    {
+     "href": "./privacy.html#cookies",
+     "label": "سياسة الخصوصية (GDPR)",
+     "class": ""
+    },
+    {
+     "href": "privacy.html#cookies",
+     "label": "إعدادات الخصوصية والكوكيز 🛡️",
+     "class": ""
+    },
+    {
+     "href": "terms.html",
+     "label": "شروط الاستخدام",
+     "class": ""
+    },
+    {
+     "href": "./contract-of2026-pdf.html",
+     "label": "العقد الرسمي الموحد PDF",
+     "class": ""
+    },
+    {
+     "href": "#home",
+     "label": "العودة للأعلى",
+     "class": "sr-footer-back-to-top"
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "tag": "div",
+   "class": "sr-legal-links",
+   "heading": "",
+   "link_count": 1,
+   "links": [
+    {
+     "href": "#",
+     "label": "إعدادات التحليلات",
+     "class": "sr-consent-open"
+    }
+   ]
+  }
+ ]
+}
