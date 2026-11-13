@@ -105,7 +105,7 @@ def check():
 
 def build():
     os.makedirs(BUILD, exist_ok=True)
-    p = os.path.join(BUILD, 'index.html')
+    p = MASTER
     with open(p, 'w', encoding='utf-8', newline='') as f:
         f.write(assemble())
     print('built:', p)

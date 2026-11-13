@@ -49,7 +49,7 @@ BUDGET = {
     # issues ~48 more requests than a warm local profile for the same
     # payload. Weight stays tightly bounded by total_kb below; self-hosting
     # the fonts is the follow-up that lets this ceiling come back down.
-    'requests': 164,         # cold-cache ceiling (95 was warm-cache only)
+    'requests': 160,         # cold-cache ceiling (95 was warm-cache only)
     'single_asset_kb': 450,  # biggest non-video asset
 }
 VIDEO = ('.mp4', '.webm', '.m4v')
