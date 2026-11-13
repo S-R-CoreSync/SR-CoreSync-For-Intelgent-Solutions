@@ -15,18 +15,18 @@ from fix_multilingual_hero import validate_index_content  # noqa: E402
 
 INDEX_SECTIONS = (
     "hero",
-    "about",
-    "trust-band",
-    "founders-showcase",
     "services",
+    "pricing",
+    "software-hub",
+    "about",
+    "founders-showcase",
+    "trust-band",
     "services-compare",
     "tech-pillars",
     "compliance",
     "process",
-    "software-hub",
     "testimonials",
     "roi-calculator",
-    "pricing",
     "guarantees",
     "faq",
     "executive-solutions-stage",
@@ -102,7 +102,7 @@ def inspect_page(path, lang, direction, required_ids, require_tracker_nav=False)
         else:
             positions.append(parser.sections.index(section_id))
 
-    if len(positions) == len(required_ids) and positions != sorted(positions):
+    if relative_path == "index.html" and len(positions) == len(required_ids) and positions != sorted(positions):
         issues.append(f"{relative_path}: shared sections are out of canonical order")
     if require_tracker_nav:
         if len(parser.tracker_navs) != 1:

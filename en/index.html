@@ -676,6 +676,7 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
 .sr-quick-dock .sr-dock-sep{width:1px !important; height:18px !important;
   background:rgba(255,255,255,.16) !important; margin:0 4px !important; flex:0 0 auto !important}
 body.sr-dock-merged .apple-macos-dock-wrapper{display:none !important}
+body.sr-past-hero .apple-macos-dock-wrapper{display:none !important}
 body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 12px) !important}
 
 
@@ -723,6 +724,32 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
 
 .nav-menu-main > li:first-child > a{color:#f3dfba !important}
 .nav-menu-main > li:first-child > a span{color:rgba(212,175,55,.9) !important}
+
+
+@media (min-width:601px){
+  .apple-macos-dock-wrapper{
+    left:50% !important; right:auto !important;
+    transform:translateX(-50%) !important; justify-content:center !important;
+    bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 14px) !important;
+  }
+}
+
+
+@media (min-width:601px){
+  .sr-tools-capsule{
+    position:fixed; left:22px; right:auto;
+    bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 76px);
+    z-index:9997; display:flex; align-items:center; gap:6px;
+    padding:6px; border-radius:14px;
+    border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.28);
+    background:linear-gradient(180deg,rgba(14,20,28,.96),rgba(8,12,18,.96));
+    box-shadow:0 12px 30px rgba(0,0,0,.55);
+    backdrop-filter:blur(14px);
+  }
+  .sr-tools-capsule .header-col-actions{margin:0 !important; gap:6px !important}
+  .sr-tools-capsule .header-support-menu{bottom:100% !important; top:auto !important;
+    margin-bottom:8px !important}
+}
 /* LTR corrections for localized pages */
 html[dir="ltr"] .hv2__copy{align-items:flex-start !important; text-align:left !important}
 html[dir="ltr"] .hv2__chips .hv2__chiprow{direction:ltr !important; justify-content:flex-start !important}
