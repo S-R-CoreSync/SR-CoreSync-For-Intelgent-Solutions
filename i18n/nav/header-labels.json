@@ -1,0 +1,42 @@
+{
+ "./index.html": {
+  "ar": "S&amp;R CoreSync",
+  "en": "S&amp;R CoreSync"
+ },
+ "#service": {
+  "ar": "الخدمات",
+  "en": "SERVICES"
+ },
+ "#pricing": {
+  "ar": "الأسعار",
+  "en": "Pricing"
+ },
+ "#software-hub": {
+  "ar": "المتجر الرقمي",
+  "en": "Store"
+ },
+ "#about": {
+  "ar": "نبذة",
+  "en": "About Us"
+ },
+ "#founders-showcase": {
+  "ar": "القيادة",
+  "en": "LEADERSHIP"
+ },
+ "#roi-calculator": {
+  "ar": "06 ROI",
+  "en": "ROI"
+ },
+ "#faq": {
+  "ar": "07 الأسئلة الشائعة",
+  "en": "FAQ"
+ },
+ "./blog.html": {
+  "ar": "08 المدونة",
+  "en": "Journal"
+ },
+ "./api-docs.html": {
+  "ar": "09 توثيق API",
+  "en": "API docs"
+ }
+}
