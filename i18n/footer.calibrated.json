@@ -16,7 +16,12 @@
      "nl": "Cloudsoftware",
      "fr": "Logiciel cloud",
      "es": "Software cloud",
-     "it": "Software cloud"
+     "it": "Software cloud",
+     "pl": "Oprogramowanie chmurowe",
+     "pt": "Software cloud",
+     "ro": "Software cloud",
+     "sv": "Molnprogramvara",
+     "cs": "Cloudový software"
     },
     {
      "href": "./work.html#platforms",
@@ -26,7 +31,12 @@
      "nl": "Kant-en-klare platforms",
      "fr": "Plateformes prêtes",
      "es": "Plataformas listas",
-     "it": "Piattaforme pronte"
+     "it": "Piattaforme pronte",
+     "pl": "Gotowe platformy",
+     "pt": "Plataformas prontas",
+     "ro": "Platforme gata",
+     "sv": "Färdiga plattformar",
+     "cs": "Hotové platformy"
     },
     {
      "href": "./whitelabel-calculator.html",
@@ -36,7 +46,12 @@
      "nl": "Licentiecalculator",
      "fr": "Calculateur de licences",
      "es": "Calculadora de licencias",
-     "it": "Calcolatore licenze"
+     "it": "Calcolatore licenze",
+     "pl": "Kalkulator licencji",
+     "pt": "Calculadora de licenças",
+     "ro": "Calculator de licențe",
+     "sv": "Licenskalkylator",
+     "cs": "Kalkulačka licencí"
     },
     {
      "href": "./estimator.html",
@@ -46,14 +61,24 @@
      "nl": "Projectcalculator",
      "fr": "Estimateur de projet",
      "es": "Estimador de proyectos",
-     "it": "Stima progetto"
+     "it": "Stima progetto",
+     "pl": "Kalkulator projektów",
+     "pt": "Estimador de projetos",
+     "ro": "Estimator de proiecte",
+     "sv": "Projektkalkylator",
+     "cs": "Kalkulačka projektů"
     }
    ],
    "title_de": "Leistungen",
    "title_nl": "Diensten",
    "title_fr": "Services",
    "title_es": "Servicios",
-   "title_it": "Servizi"
+   "title_it": "Servizi",
+   "title_pl": "Usługi",
+   "title_pt": "Serviços",
+   "title_ro": "Servicii",
+   "title_sv": "Tjänster",
+   "title_cs": "Služby"
   },
   {
    "key": "company",
@@ -68,7 +93,12 @@
      "nl": "Over het bedrijf",
      "fr": "À propos",
      "es": "Sobre la empresa",
-     "it": "Chi siamo"
+     "it": "Chi siamo",
+     "pl": "O firmie",
+     "pt": "Sobre a empresa",
+     "ro": "Despre companie",
+     "sv": "Om företaget",
+     "cs": "O společnosti"
     },
     {
      "href": "./index.html#founders-showcase",
@@ -78,7 +108,12 @@
      "nl": "Directie",
      "fr": "Direction",
      "es": "Dirección",
-     "it": "Direzione"
+     "it": "Direzione",
+     "pl": "Kierownictwo",
+     "pt": "Direção",
+     "ro": "Conducere",
+     "sv": "Ledning",
+     "cs": "Vedení"
     },
     {
      "href": "./work.html",
@@ -88,7 +123,12 @@
      "nl": "Portfolio",
      "fr": "Réalisations",
      "es": "Portafolio",
-     "it": "Portfolio"
+     "it": "Portfolio",
+     "pl": "Portfolio",
+     "pt": "Portfólio",
+     "ro": "Portofoliu",
+     "sv": "Portfolio",
+     "cs": "Portfolio"
     },
     {
      "href": "./blog.html",
@@ -98,14 +138,24 @@
      "nl": "Journaal",
      "fr": "Journal",
      "es": "Revista",
-     "it": "Journal"
+     "it": "Journal",
+     "pl": "Dziennik",
+     "pt": "Jornal",
+     "ro": "Jurnal",
+     "sv": "Journal",
+     "cs": "Journal"
     }
    ],
    "title_de": "Unternehmen",
    "title_nl": "Bedrijf",
    "title_fr": "Entreprise",
    "title_es": "Empresa",
-   "title_it": "Azienda"
+   "title_it": "Azienda",
+   "title_pl": "Firma",
+   "title_pt": "Empresa",
+   "title_ro": "Companie",
+   "title_sv": "Företag",
+   "title_cs": "Společnost"
   },
   {
    "key": "legal",
@@ -120,7 +170,12 @@
      "nl": "Privacy & cookies",
      "fr": "Confidentialité & cookies",
      "es": "Privacidad y cookies",
-     "it": "Privacy e cookie"
+     "it": "Privacy e cookie",
+     "pl": "Prywatność i pliki cookie",
+     "pt": "Privacidade e cookies",
+     "ro": "Confidențialitate și cookie-uri",
+     "sv": "Integritet och cookies",
+     "cs": "Soukromí a cookies"
     },
     {
      "href": "./terms.html",
@@ -130,7 +185,12 @@
      "nl": "Voorwaarden",
      "fr": "Conditions",
      "es": "Términos",
-     "it": "Termini"
+     "it": "Termini",
+     "pl": "Regulamin",
+     "pt": "Termos",
+     "ro": "Termeni",
+     "sv": "Villkor",
+     "cs": "Podmínky"
     },
     {
      "href": "./verify.html",
@@ -140,7 +200,12 @@
      "nl": "Document verifiëren",
      "fr": "Vérifier un document",
      "es": "Verificar un documento",
-     "it": "Verifica un documento"
+     "it": "Verifica un documento",
+     "pl": "Zweryfikuj dokument",
+     "pt": "Verificar um documento",
+     "ro": "Verifică un document",
+     "sv": "Verifiera ett dokument",
+     "cs": "Ověřit dokument"
     },
     {
      "href": "./security-trust-center.html",
@@ -150,7 +215,12 @@
      "nl": "Trustcentrum",
      "fr": "Centre de confiance",
      "es": "Centro de confianza",
-     "it": "Centro fiducia"
+     "it": "Centro fiducia",
+     "pl": "Centrum zaufania",
+     "pt": "Centro de confiança",
+     "ro": "Centru de încredere",
+     "sv": "Trustcenter",
+     "cs": "Centrum důvěry"
     },
     {
      "href": "#",
@@ -161,14 +231,24 @@
      "nl": "Analyse-instellingen",
      "fr": "Paramètres d'analyse",
      "es": "Ajustes de analítica",
-     "it": "Impostazioni analisi"
+     "it": "Impostazioni analisi",
+     "pl": "Ustawienia analityki",
+     "pt": "Definições de análise",
+     "ro": "Setări analitice",
+     "sv": "Analysinställningar",
+     "cs": "Nastavení analytiky"
     }
    ],
    "title_de": "Recht & Compliance",
    "title_nl": "Juridisch & compliance",
    "title_fr": "Juridique & conformité",
    "title_es": "Legal y cumplimiento",
-   "title_it": "Legale e conformità"
+   "title_it": "Legale e conformità",
+   "title_pl": "Prawo i zgodność",
+   "title_pt": "Jurídico e conformidade",
+   "title_ro": "Juridic și conformitate",
+   "title_sv": "Juridik och efterlevnad",
+   "title_cs": "Právo a shoda"
   },
   {
    "key": "contact",
@@ -183,7 +263,12 @@
      "nl": "info@sr-coresync.com",
      "fr": "info@sr-coresync.com",
      "es": "info@sr-coresync.com",
-     "it": "info@sr-coresync.com"
+     "it": "info@sr-coresync.com",
+     "pl": "info@sr-coresync.com",
+     "pt": "info@sr-coresync.com",
+     "ro": "info@sr-coresync.com",
+     "sv": "info@sr-coresync.com",
+     "cs": "info@sr-coresync.com"
     },
     {
      "href": "tel:+31618111116",
@@ -193,7 +278,12 @@
      "nl": "+31 6 1811 1116",
      "fr": "+31 6 1811 1116",
      "es": "+31 6 1811 1116",
-     "it": "+31 6 1811 1116"
+     "it": "+31 6 1811 1116",
+     "pl": "+31 6 1811 1116",
+     "pt": "+31 6 1811 1116",
+     "ro": "+31 6 1811 1116",
+     "sv": "+31 6 1811 1116",
+     "cs": "+31 6 1811 1116"
     },
     {
      "href": "https://wa.me/31618111116",
@@ -203,7 +293,12 @@
      "nl": "WhatsApp",
      "fr": "WhatsApp",
      "es": "WhatsApp",
-     "it": "WhatsApp"
+     "it": "WhatsApp",
+     "pl": "WhatsApp",
+     "pt": "WhatsApp",
+     "ro": "WhatsApp",
+     "sv": "WhatsApp",
+     "cs": "WhatsApp"
     },
     {
      "href": "./index.html#contact",
@@ -213,14 +308,24 @@
      "nl": "Adviesgesprek boeken",
      "fr": "Réserver une consultation",
      "es": "Reservar una consulta",
-     "it": "Prenota una consulenza"
+     "it": "Prenota una consulenza",
+     "pl": "Zarezerwuj konsultację",
+     "pt": "Marcar uma consulta",
+     "ro": "Rezervă o consultație",
+     "sv": "Boka en konsultation",
+     "cs": "Rezervovat konzultaci"
     }
    ],
    "title_de": "Kontakt",
    "title_nl": "Contact",
    "title_fr": "Contact",
    "title_es": "Contacto",
-   "title_it": "Contatti"
+   "title_it": "Contatti",
+   "title_pl": "Kontakt",
+   "title_pt": "Contacto",
+   "title_ro": "Contact",
+   "title_sv": "Kontakt",
+   "title_cs": "Kontakt"
   }
  ],
  "legal_line": {
@@ -230,7 +335,12 @@
   "nl": "© 2026 S&R CoreSync For Intelligent Solutions — Alle rechten voorbehouden.",
   "fr": "© 2026 S&R CoreSync For Intelligent Solutions — Tous droits réservés.",
   "es": "© 2026 S&R CoreSync For Intelligent Solutions — Todos los derechos reservados.",
-  "it": "© 2026 S&R CoreSync For Intelligent Solutions — Tutti i diritti riservati."
+  "it": "© 2026 S&R CoreSync For Intelligent Solutions — Tutti i diritti riservati.",
+  "pl": "© 2026 S&R CoreSync For Intelligent Solutions — Wszelkie prawa zastrzeżone.",
+  "pt": "© 2026 S&R CoreSync For Intelligent Solutions — Todos os direitos reservados.",
+  "ro": "© 2026 S&R CoreSync For Intelligent Solutions — Toate drepturile rezervate.",
+  "sv": "© 2026 S&R CoreSync For Intelligent Solutions — Alla rättigheter förbehållna.",
+  "cs": "© 2026 S&R CoreSync For Intelligent Solutions — Všechna práva vyhrazena."
  },
  "tagline": {
   "ar": "هندسة المنظومات السيادية من أمستردام",
@@ -239,6 +349,11 @@
   "nl": "Soevereine systeemtechniek uit Amsterdam",
   "fr": "Ingénierie de systèmes souverains depuis Amsterdam",
   "es": "Ingeniería de sistemas soberanos desde Ámsterdam",
-  "it": "Ingegneria di sistemi sovrani da Amsterdam"
+  "it": "Ingegneria di sistemi sovrani da Amsterdam",
+  "pl": "Suwerenna inżynieria systemów z Amsterdamu",
+  "pt": "Engenharia de sistemas soberanos de Amesterdão",
+  "ro": "Inginerie de sisteme suverane din Amsterdam",
+  "sv": "Suverän systemteknik från Amsterdam",
+  "cs": "Suverénní systémové inženýrství z Amsterdamu"
  }
 }
