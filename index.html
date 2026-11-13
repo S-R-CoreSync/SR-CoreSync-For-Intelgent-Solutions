@@ -2446,6 +2446,15 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
 /* the first menu item keeps the gold accent without the retired script */
 .nav-menu-main > li:first-child > a{color:#f3dfba !important}
 .nav-menu-main > li:first-child > a span{color:rgba(212,175,55,.9) !important}
+
+/* ═══ v5 · دوك اللغة في المنتصف، فوق شريطَي الموافقة ═══════════ */
+@media (min-width:601px){
+  .apple-macos-dock-wrapper{
+    left:50% !important; right:auto !important;
+    transform:translateX(-50%) !important; justify-content:center !important;
+    bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 14px) !important;
+  }
+}
 </style>
 <style id="srf-css">
 
@@ -11496,7 +11505,7 @@ html[dir="ltr"] .srf{direction:ltr}
     if (c) {
       var cs = getComputedStyle(c);
       if (cs.display !== 'none' && cs.visibility !== 'hidden') {
-        ch = c.getBoundingClientRect().height || 0;
+        var cr = c.getBoundingClientRect(); ch = Math.max(cr.height || 0, window.innerHeight - cr.top);
       }
     }
     document.documentElement.style.setProperty('--consent-h', Math.round(ch) + 'px');
