@@ -1,0 +1,1402 @@
+<section class="section-pricing flat-spacing flat-animate-tab" id="pricing" data-section>
+            <div class="bg-img">
+                <img loading="lazy" decoding="async" width="1440" height="1081" src="./assets/bg-4.png"
+                    alt="خلفية الأسعار">
+            </div>
+            <div class="container">
+                <div class="s-header justify-content-center">
+                    <h2 class="text-display-2 letter-space--3 effectFade fadeUp">
+                        باقات واضحة وشفافة
+                    </h2>
+                </div>
+
+                <!-- Live Currency & VAT Switcher Bar -->
+                <div class="es-currency-bar-pricing">
+                    <div class="es-currency-bar-pricing-left">
+                        <span class="es-currency-bar-title">اختر العملة واحتساب الضريبة:</span>
+                        <div class="es-currency-bar">
+                            <button class="es-currency-btn active" data-currency="EUR" data-sr-call="switchCurrency"
+                                data-sr-args='["EUR"]'>🇪🇺 EUR (€)</button>
+                            <button class="es-currency-btn" data-currency="USD" data-sr-call="switchCurrency"
+                                data-sr-args='["USD"]'>🇺🇸 USD ($)</button>
+                            <button class="es-currency-btn" data-currency="SAR" data-sr-call="switchCurrency"
+                                data-sr-args='["SAR"]'>🇸🇦 SAR (﷼)</button>
+                            <button class="es-currency-btn" data-currency="AED" data-sr-call="switchCurrency"
+                                data-sr-args='["AED"]'>🇦🇪 AED (د.إ)</button>
+                            <button class="es-currency-btn" data-currency="GBP" data-sr-call="switchCurrency"
+                                data-sr-args='["GBP"]'>🇬🇧 GBP (£)</button>
+                        </div>
+                    </div>
+                    <div class="es-pricing-vat-notice">
+                        <span class="es-vat-live-badge">🇳🇱 BTW 21% (NL/EU Tax Compliant)</span>
+                    </div>
+                </div>
+
+                <!-- شريط الحافز الضريبي الأوروبي لباقات الأسعار -->
+                <div class="pricing-tax-advantage-banner">
+                    <span class="dutch-flag">🇳🇱</span>
+                    <span><strong>ميزة ضريبية للشركات في هولندا وأوروبا:</strong> جميع فواتير التطوير السحابي وأنظمة الـ
+                        ERP تصدر بفاتورة ضريبية رسمية متوافقة مع معايير Belastingdienst ومؤهلة لخصم 21% ضريبة القيمة
+                        المضافة (BTW) واعتمادها كنفقات تشغيلية.</span>
+                </div>
+
+                <!-- تبويبات الفئات -->
+                <ul class="pricing-tab_btn" role="tablist" aria-label="اختر فئة الباقات">
+                    <li class="nav-tab-item" role="presentation">
+                        <button type="button" role="tab" aria-selected="true"
+                            class="tf-btn-tab fw-medium letter-space--1 active" data-sr-call="switchPricingTab"
+                            data-sr-args='["dev"]' data-sr-this="last">
+                            <span class="dot-active" aria-hidden="true"></span>
+                            <svg class="pricing-tab__icon" viewBox="0 0 24 24" aria-hidden="true" width="18"
+                                height="18">
+                                <rect width="20" height="14" x="2" y="3" rx="2" />
+                                <line x1="8" x2="16" y1="21" y2="21" />
+                                <line x1="12" x2="12" y1="17" y2="21" />
+                            </svg>
+                            تطوير الأنظمة والتطبيقات
+                        </button>
+                    </li>
+                    <li class="nav-tab-item" role="presentation">
+                        <button type="button" id="tab-btn-pricing-creative" role="tab" aria-selected="false"
+                            class="tf-btn-tab fw-medium letter-space--1" data-sr-call="switchPricingTab"
+                            data-sr-args='["creative"]' data-sr-this="last">
+                            <span class="dot-active" aria-hidden="true"></span>
+                            <svg class="pricing-tab__icon" viewBox="0 0 24 24" aria-hidden="true" width="18"
+                                height="18">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                                <path d="M2 2l7.586 7.586" />
+                                <circle cx="11" cy="11" r="2" />
+                            </svg>
+                            الهوية والمتاجر الرقمية
+                        </button>
+                    </li>
+                    <li class="nav-tab-item" role="presentation">
+                        <button type="button" role="tab" aria-selected="false"
+                            class="tf-btn-tab fw-medium letter-space--1" data-sr-call="switchPricingTab"
+                            data-sr-args='["erp"]' data-sr-this="last">
+                            <span class="dot-active" aria-hidden="true"></span>
+                            <svg class="pricing-tab__icon" viewBox="0 0 24 24" aria-hidden="true" width="18"
+                                height="18">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            أنظمة ERP والربط المالي
+                        </button>
+                    </li>
+                    <li class="nav-tab-item" role="presentation">
+                        <button type="button" role="tab" aria-selected="false"
+                            class="tf-btn-tab fw-medium letter-space--1" data-sr-call="switchPricingTab"
+                            data-sr-args='["care"]' data-sr-this="last">
+                            <span class="dot-active" aria-hidden="true"></span>
+                            <svg class="pricing-tab__icon" viewBox="0 0 24 24" aria-hidden="true" width="18"
+                                height="18">
+                                <path d="m13.5 2-8 12h6l-1 8 8-12h-6z" />
+                            </svg>
+                            التحسين والدعم المستمر
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- التاب 1: تطوير الأنظمة والتطبيقات -->
+                    <div class="tab-pane fade active show" id="pricing-pane-dev">
+                        <div class="tf-grid-layout md-col-2 lg-col-3">
+                            <!-- الباقة 1: Starter -->
+                            <div class="wg-plan">
+                                <div class="bg-img bg-img_1"></div>
+                                <div class="br-line"></div>
+                                <p class="plan-name letter-space--1 fw-medium">Core Starter</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="1490">1,490</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    مثالية لإطلاق منصة سحابية أو تطبيق خدمة أولى لشركتك
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20مهندس%20سليم%20وأستاذ%20رائد،%20أود%20حجز%20باقة%20(Core%20Starter%20-%20€1,490)%20لشركتنا"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa">
+                                        <span>حجز الباقة عبر واتساب 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["starter"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span>//</span> نظام سحابي حتى 5 وحدات عمل</li>
+                                    <li><span>//</span> تصميم واجهة احترافي ومتجاوب 100%</li>
+                                    <li><span>//</span> لوحة تحكم إدارية مركزية للبيانات</li>
+                                    <li><span>//</span> ربط بوابات الدفع الإلكتروني (Stripe / Mollie)</li>
+                                    <li><span>//</span> حماية مشددة وشهادة تشفير SSL</li>
+                                    <li><span>//</span> تهيئة سحابية واستضافة مُدارة أولية</li>
+                                    <li><span>//</span> دعم تقني لمدة 30 يومًا بعد الإطلاق</li>
+                                </ul>
+                            </div>
+
+                            <!-- الباقة 2: Business (الأكثر طلباً باللون الذهبي المطابق تماماً لدانا نجمة) -->
+                            <div class="wg-plan style-2">
+                                <div class="plan-badge">
+                                    <span class="plan-badge__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false" width="14" height="14"
+                                            fill="currentColor">
+                                            <path
+                                                d="M12 3.6l2.5 5.2 5.7.8-4.1 4 1 5.6L12 16.5l-5.1 2.7 1-5.6-4.1-4 5.7-.8z" />
+                                        </svg>
+                                    </span>
+                                    الأكـثـر طـلـبًا
+                                </div>
+                                <div class="bg-img bg-img_1 d-xl-block"></div>
+                                <div class="bg-img bg-img_2">
+                                    <img loading="lazy" decoding="async" width="416" height="625"
+                                        src="./assets/bg-2-gold.png" alt="زخرفة ذهبية">
+                                </div>
+                                <div class="br-line bg-primary br-line-gold"></div>
+                                <p class="plan-name letter-space--1 fw-medium">Enterprise Growth</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="2890">2,890</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    الحل الشامل للشركات المتوسعة التي تبحث عن أتمتة شاملة
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20مهندس%20سليم%20وأستاذ%20رائد،%20أود%20حجز%20باقة%20(Enterprise%20Growth%20-%20€2,890)%20لشركتنا"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-gold">
+                                        <span>حجز الباقة الأكثر طلباً ⚡</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["growth"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span class="text-primary gold-accent">//</span> كل ما تتضمنه باقة Starter</li>
+                                    <li><span class="text-primary gold-accent">//</span> تطبيقات جوال أصلية (iOS &
+                                        Android)</li>
+                                    <li><span class="text-primary gold-accent">//</span> تكامل ذكي لأتمتة سير العمل بالـ
+                                        AI</li>
+                                    <li><span class="text-primary gold-accent">//</span> لوحات مؤشرات مالية وتقارير أداء
+                                        حية</li>
+                                    <li><span class="text-primary gold-accent">//</span> بنية سحابية هجينة على AWS مع
+                                        تكرار آلي</li>
+                                    <li><span class="text-primary gold-accent">//</span> تدريب كامل لفريق عملك وورشة
+                                        تشغيل</li>
+                                    <li><span class="text-primary gold-accent">//</span> دعم فني وضمان استقرار لمدة 60
+                                        يومًا</li>
+                                </ul>
+                            </div>
+
+                            <!-- الباقة 3: MAX -->
+                            <div class="wg-plan style-2">
+                                <div class="bg-img bg-img_1"></div>
+                                <div class="br-line bg-white"></div>
+                                <p class="plan-name letter-space--1 fw-medium">Core MAX Synergy</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="4990">4,990</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    منظومة رقمية ومالية متكاملة مخصصة بالكامل للمؤسسات الكبرى
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20مهندس%20سليم%20وأستاذ%20رائد،%20أود%20حجز%20باقة%20المؤسسات%20الكبرى%20(Core%20MAX%20Synergy%20-%20€4,990)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa">
+                                        <span>حجز باقة المؤسسات الكبرى 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["max"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span>//</span> كل ميزات باقة Enterprise</li>
+                                    <li><span>//</span> منصة متعددة اللغات والفروع والعملات</li>
+                                    <li><span>//</span> تكامل كامل مع أنظمة المحاسبة والـ ERP المتقدمة</li>
+                                    <li><span>//</span> أتمتة الروبوتات البرمجية RPA للعمليات اليومية</li>
+                                    <li><span>//</span> تدقيق أمني وحماية ضد الهجمات المتقدمة</li>
+                                    <li><span>//</span> فريق هندسي مخصص ومدير حساب مالي مباشر</li>
+                                    <li><span>//</span> دعم تقني وأولوية مطلقة لمدة 180 يومًا</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- التاب 2: أنظمة ERP والربط المالي -->
+                    <div class="tab-pane fade pane-hidden" id="pricing-pane-erp">
+                        <div class="tf-grid-layout md-col-2 lg-col-3">
+                            <div class="wg-plan">
+                                <div class="bg-img bg-img_1"></div>
+                                <div class="br-line"></div>
+                                <p class="plan-name letter-space--1 fw-medium">ERP Setup</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="1890">1,890</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                    <p class="plan-timeline" style="margin:0.4rem 0 0;font-size:0.82rem;color:#ecd9a0;">
+                                        ⏱ التسليم: 2-4 أسابيع</p>
+                                </h4>
+                                <p class="plan-desc text-white-64">تهيئة وربط نظام الـ ERP الأساسي وتوحيد شجرة الحسابات
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20أستاذ%20رائد%20ومهندس%20سليم،%20أود%20حجز%20باقة%20ERP%20Setup%20(€1,890)%20لشركتنا"
+                                        data-track="plan-cta" data-plan="erp-setup" data-action="whatsapp"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa">
+                                        <span>حجز الباقة عبر واتساب 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["erp_setup"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span>//</span> إعداد قيود اليومية ودليل الحسابات</li>
+                                    <li><span>//</span> ربط الفواتير والضرائب الأوروبية/الخليجية</li>
+                                    <li><span>//</span> إدارة المخزون والمشتريات الأساسية</li>
+                                </ul>
+                            </div>
+
+                            <div class="wg-plan style-2">
+                                <div class="plan-badge">الأكـثـر طـلـبًا</div>
+                                <div class="bg-img bg-img_2"><img loading="lazy" width="416" height="625"
+                                        src="./assets/bg-2-gold.png" alt=""></div>
+                                <div class="br-line bg-primary br-line-gold"></div>
+                                <p class="plan-name letter-space--1 fw-medium">Full ERP Sync</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="3490">3,490</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                    <p class="plan-timeline" style="margin:0.4rem 0 0;font-size:0.82rem;color:#ecd9a0;">
+                                        ⏱ التسليم: 4-8 أسابيع</p>
+                                </h4>
+                                <p class="plan-desc text-white-64">تكامل ERP شامل يشمل سلاسل الإمداد، الرواتب، والبنوك
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20أستاذ%20رائد%20ومهندس%20سليم،%20أود%20حجز%20باقة%20Full%20ERP%20Sync%20(€3,490)%20لشركتنا"
+                                        data-track="plan-cta" data-plan="full-erp-sync" data-action="whatsapp"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-gold">
+                                        <span>حجز الباقة الأكثر طلباً ⚡</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["erp_sync"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span>//</span> أتمتة كاملة للتدفقات النقدية والمبيعات</li>
+                                    <li><span>//</span> ربط آلي مع نقاط البيع والمتاجر الإلكترونية</li>
+                                    <li><span>//</span> لوحات قيادة تنفيذية حية للإدارة العليا</li>
+                                </ul>
+                            </div>
+
+                            <div class="wg-plan style-2">
+                                <div class="br-line bg-white"></div>
+                                <p class="plan-name letter-space--1 fw-medium">Custom ERP Ecosystem</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="5990">5,990</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                    <p class="plan-timeline" style="margin:0.4rem 0 0;font-size:0.82rem;color:#ecd9a0;">
+                                        ⏱ التسليم: 8-12 أسابيع</p>
+                                </h4>
+                                <p class="plan-desc text-white-64">بناء نظام ERP مخصص من الصفر وفق دورة عمل شركتك بدقة
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20أستاذ%20رائد%20ومهندس%20سليم،%20أود%20حجز%20باقة%20Custom%20ERP%20Ecosystem%20(€5,990)%20لشركتنا"
+                                        data-track="plan-cta" data-plan="custom-erp" data-action="whatsapp"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa">
+                                        <span>حجز الباقة المخصصة 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["erp_custom"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span>//</span> هيكلة برمجية مستقلة 100% بدون اشتراكات دورية</li>
+                                    <li><span>//</span> ربط مع كافة فروعك الإقليمية والمحلية</li>
+                                    <li><span>//</span> أقصى معايير الحوكمة والسرية المالية</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- التاب 3: التحسين والدعم المستمر -->
+                    <div class="tab-pane fade pane-hidden" id="pricing-pane-care">
+                        <div class="tf-grid-layout md-col-2 optimization-cards-grid">
+                            <div class="wg-plan">
+                                <div class="br-line"></div>
+                                <p class="plan-name letter-space--1 fw-medium">Security & Audit</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="490">490</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ فحص شامل</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">فحص أمني وبرمجي ومالي شامل لكشف الثغرات وتحسين سرعة
+                                    النظام</p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20م.%20سليم،%20أود%20طلب%20فحص%20أمني%20وبرمجي%20Security%20%26%20Audit%20(€490)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa">
+                                        <span>طلب الفحص عبر واتساب 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["security_audit"]'>
+                                        <span>طلب تقرير فحص رسمي 📄</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="wg-plan style-2">
+                                <div class="br-line bg-primary br-line-gold"></div>
+                                <p class="plan-name letter-space--1 fw-medium">CoreCare Monthly</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="149">149</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ شهريًا</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">إدارة سحابية، نسخ احتياطي يومي، ومراقبة أداء 24/7 مع
+                                    دعم فوري</p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20م.%20سليم،%20أود%20الاشتراك%20في%20الدعم%20الشهري%20CoreCare%20Monthly%20(€149/شهرياً)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-gold">
+                                        <span>الاشتراك الشهري عبر واتساب ⚡</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["core_care"]'>
+                                        <span>اتفاقية مستوى الخدمة SLA 📄</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- التاب 4: الهوية والمتاجر الرقمية (Creative & E-Commerce Suite) -->
+                    <div class="tab-pane fade pane-hidden" id="pricing-pane-creative">
+                        <div class="tf-grid-layout md-col-2 lg-col-3">
+                            <!-- الباقة 4: باقة التأسيس السيادي للسوشيال ميديا وهوية الـ 8K (خدمة مأجورة) -->
+                            <div class="wg-plan style-2">
+                                <div class="plan-badge">
+                                    <span class="plan-badge__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                            <path
+                                                d="M12 3.6l2.5 5.2 5.7.8-4.1 4 1 5.6L12 16.5l-5.1 2.7 1-5.6-4.1-4 5.7-.8z" />
+                                        </svg>
+                                    </span>
+                                    حزمة 8K السيادية 2026
+                                </div>
+                                <div class="bg-img bg-img_1 d-xl-block"></div>
+                                <div class="bg-img bg-img_2">
+                                    <img loading="lazy" decoding="async" width="416" height="625"
+                                        src="./assets/bg-2-gold.png" alt="زخرفة ذهبية">
+                                </div>
+                                <div class="br-line bg-primary br-line-gold"></div>
+                                <p class="plan-name letter-space--1 fw-medium">تأسيس قنوات السوشيال ميديا وهوية 8K</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="890">890</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    تأسيس وتوثيق 9 منصات تواصل موحدة وتوليد 23 أصلاً فائق الدقة 8K مع قوالب ريلز
+                                    واستوديو تسليم خاص
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20فريق%20CoreSync،%20أود%20طلب%20باقة%20تأسيس%20قنوات%20السوشيال%20ميديا%20وهوية%20الـ%208K%20(€890)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-gold">
+                                        <span>طلب حجز الباقة عبر واتساب 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["social_8k"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span class="text-primary gold-accent">//</span> تأسيس وتوثيق رسمي موحد لـ 9
+                                        منصات تواصل اجتماعي</li>
+                                    <li><span class="text-primary gold-accent">//</span> تصميم وتصدير 23 أصلاً فائق
+                                        الدقة 8K & 4K لجميع المنصات</li>
+                                    <li><span class="text-primary gold-accent">//</span> قوالب مونتاج شورتس وريلز 9:16
+                                        شفافة مع شريط سفلي فاخر</li>
+                                    <li><span class="text-primary gold-accent">//</span> دليل مناطق الأمان المعتمد
+                                        للتصاميم الرقمية</li>
+                                    <li><span class="text-primary gold-accent">//</span> بوابة استوديو رقمي خاص بالعميل
+                                        للتحميل المباشر بضغطة زر</li>
+                                    <li><span class="text-primary gold-accent">//</span> صياغة البايو الاحترافي وربط
+                                        كتالوج واتساب للأعمال</li>
+                                    <li><span class="text-primary gold-accent">//</span> تسليم سريع متكامل خلال 48 إلى
+                                        72 ساعة عمل</li>
+                                </ul>
+                            </div>
+                            <!-- الباقة 1: باقة الهوية البصرية المتكاملة -->
+                            <div class="wg-plan">
+                                <div class="bg-img bg-img_1"></div>
+                                <div class="br-line"></div>
+                                <p class="plan-name letter-space--1 fw-medium">الهوية البصرية المتكاملة</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="590">590</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    هوية بصرية مميزة تُبنى باستراتيجية ووضوح واتساق لترسيخ الثقة
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20فريق%20CoreSync،%20أود%20طلب%20باقة%20الهوية%20البصرية%20المتكاملة%20(€590)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa">
+                                        <span>طلب باقة الهوية عبر واتساب 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["branding"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span>//</span> تصميم 3 مفاهيم شعار مبتكرة وفريدة</li>
+                                    <li><span>//</span> دليل الهوية المؤسسية البصرية الكامل</li>
+                                    <li><span>//</span> لوحة الألوان الرسمية والخطوط المعتمدة</li>
+                                    <li><span>//</span> تصاميم القرطاسية وبطاقات العمل والفواتير</li>
+                                    <li><span>//</span> قوالب احترافية معتمدة للتواصل المؤسسي</li>
+                                    <li><span>//</span> ملفات المصدر الأصلية متجهة وفائقة الدقة بالكامل</li>
+                                    <li><span>//</span> تسليم متكامل خلال 7 إلى 10 أيام عمل</li>
+                                </ul>
+                            </div>
+
+                            <!-- الباقة 2: باقة المواقع الفاخرة عالية الأداء (الأكثر طلباً) -->
+                            <div class="wg-plan style-2">
+                                <div class="plan-badge">
+                                    <span class="plan-badge__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false" width="14" height="14"
+                                            fill="currentColor">
+                                            <path
+                                                d="M12 3.6l2.5 5.2 5.7.8-4.1 4 1 5.6L12 16.5l-5.1 2.7 1-5.6-4.1-4 5.7-.8z" />
+                                        </svg>
+                                    </span>
+                                    الأكـثـر طـلـبًا
+                                </div>
+                                <div class="bg-img bg-img_1 d-xl-block"></div>
+                                <div class="bg-img bg-img_2">
+                                    <img loading="lazy" decoding="async" width="416" height="625"
+                                        src="./assets/bg-2-gold.png" alt="زخرفة ذهبية">
+                                </div>
+                                <div class="br-line bg-primary br-line-gold"></div>
+                                <p class="plan-name letter-space--1 fw-medium">المواقع الفاخرة عالية الأداء</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="980">980</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    مواقع عصرية عالية الأداء مصممة للوضوح والثقة ومضاعفة معدلات التحويل
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20فريق%20CoreSync،%20أود%20طلب%20باقة%20المواقع%20الفاخرة%20(€980)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-gold">
+                                        <span>حجز باقة المواقع الأكثر طلباً ⚡</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["website"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span class="text-primary gold-accent">//</span> تصميم عصري تفاعلي متجاوب
+                                        بالكامل مع الحواسب والهواتف</li>
+                                    <li><span class="text-primary gold-accent">//</span> سرعة فائقة تتجاوز 98% في
+                                        اختبارات الأداء العالمية</li>
+                                    <li><span class="text-primary gold-accent">//</span> تهيئة متقدمة لمحركات البحث
+                                        المحلية والعالمية</li>
+                                    <li><span class="text-primary gold-accent">//</span> دعم كامل للغات المتعددة بكافة
+                                        الاتجاهات</li>
+                                    <li><span class="text-primary gold-accent">//</span> ربط نماذج التواصل والواتساب
+                                        التلقائي</li>
+                                    <li><span class="text-primary gold-accent">//</span> استضافة سحابية فائقة السرعة
+                                        ونطاق مجاني لسنة</li>
+                                    <li><span class="text-primary gold-accent">//</span> ضمان استقرار ودعم فني متواصل
+                                        لمدة 60 يوماً</li>
+                                </ul>
+                            </div>
+
+                            <!-- الباقة 3: باقة المتجر الإلكتروني المتكامل -->
+                            <div class="wg-plan style-2">
+                                <div class="bg-img bg-img_1"></div>
+                                <div class="br-line bg-white"></div>
+                                <p class="plan-name letter-space--1 fw-medium">المتجر الإلكتروني المتكامل</p>
+                                <h4 class="plan-price font-latin">
+                                    <span><span class="text-primary gold-accent">€</span><span
+                                            class="plan-price__amount" data-eur-price="1450">1,450</span></span>
+                                    <span class="text-body-2 fw-normal text-white-64 letter-space--1">/ للمشروع</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    متاجر إلكترونية واضحة وسهلة الاستخدام تجعل الشراء أكثر سلاسة وسرعة
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20فريق%20CoreSync،%20أود%20طلب%20باقة%20المتجر%20الإلكتروني%20المتكامل%20(€1,450)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa">
+                                        <span>طلب باقة المتجر عبر واتساب 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["ecommerce"]'>
+                                        <span>طلب عرض سعر رسمي معتمد 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن</li>
+                                    <li><span>//</span> متجر رقمي متكامل وتجربة شراء سلسة بخطوة واحدة</li>
+                                    <li><span>//</span> ربط كافة بوابات الدفع (iDEAL, Mollie, Stripe, Apple Pay)</li>
+                                    <li><span>//</span> نظام إدارة المنتجات والمخزون مع تنبيهات النفاذ</li>
+                                    <li><span>//</span> كوبونات ترويجية وقسائم خصم وحساب تلقائي للشحن</li>
+                                    <li><span>//</span> فوترة إلكترونية متوافقة مع الضرائب الأوروبية</li>
+                                    <li><span>//</span> تكامل شامل مع البرامج المحاسبية وأنظمة إدارة المؤسسات</li>
+                                    <li><span>//</span> تدريب كامل لفريقك ودعم تقني لمدة 90 يوماً</li>
+                                </ul>
+                            </div>
+
+                            <!-- بانر العرض المجمع الشامل: باقة الانطلاقة الشاملة All-in-One Bundle -->
+                            <div class="creative-bundle-banner">
+                                <div class="creative-bundle-info">
+                                    <span class="dana-price-badge-saving mb-2 d-inline-block">عرض التوفير الاستراتيجي •
+                                        خصم أكثر من 35%</span>
+                                    <h4>باقة الانطلاقة الشاملة للنمو الرقمي المتكامل</h4>
+                                    <p>احصل على المنظومة الكاملة لشركتك: <strong>(الهوية البصرية المتكاملة + الموقع
+                                            الفاخر أو المتجر + الربط المحاسبي المالي)</strong> بسعر استثنائي موحد.</p>
+                                </div>
+                                <div class="d-flex flex-column align-items-end gap-2 flex-shrink-0">
+                                    <div class="dana-price-value text-white dana-price-value--bundle">
+                                        <span class="text-white-64 text-decoration-line-through fs-6 me-2"
+                                            data-eur-price="3020">€3,020</span>
+                                        <span data-eur-price="1990">€1,990</span>
+                                    </div>
+                                    <a data-wa-key="identity"
+                                        href="https://wa.me/31618111116?text=مرحباً%20مهندس%20سليم%20وأستاذ%20رائد،%20أود%20حجز%20عرض%20الانطلاقة%20الشاملة%20All-in-One%20(€1,990)%20لشركتنا"
+                                        target="_blank" rel="noopener noreferrer" class="dana-whatsapp-cta">
+                                        <span>احجز عرض الانطلاقة الشاملة (€1,990)</span>
+                                        <svg viewBox="0 0 32 32" width="16" height="16" fill="currentColor">
+                                            <path
+                                                d="M16.02 3.2a12.7 12.7 0 0 0-10.95 19.14L3.2 28.8l6.62-1.74A12.8 12.8 0 1 0 16.02 3.2Zm0 23.24a10.48 10.48 0 0 1-5.35-1.46l-.38-.23-3.93 1.03 1.05-3.83-.25-.4a10.5 10.5 0 1 1 8.86 4.89Zm5.76-7.85c-.32-.16-1.9-.94-2.19-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08a8.65 8.65 0 0 1-2.55-1.57 9.57 9.57 0 0 1-1.77-2.2c-.18-.32 0-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.39-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69s1.16 3.13 1.32 3.35c.16.21 2.27 3.46 5.5 4.85.77.33 1.37.53 1.84.68.77.24 1.47.2 2.03.12.62-.09 1.9-.78 2.17-1.54.27-.75.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37Z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- حاسبة ميزانية وتكلفة المشروع التفاعلية الفورية (Interactive Cost & Scope Estimator) -->
+
+                <!-- 8.5 مركز مقارنة الباقات المؤسسية السحابية المتقدم وحاسبة الخصم المؤسسي (Enterprise Tier Matrix) -->
+                <div class="sr-tier-matrix-section" id="tier-matrix"
+                    aria-label="Enterprise Tier Matrix & Institutional Comparison">
+                    <div class="sr-tier-header">
+                        <div class="sr-tier-pill">
+                            <span class="sr-tier-pill-dot"></span>
+                            <span>مركز المقارنة المعمارية الشاملة 2026 // جدول الميزات والقدرات</span>
+                        </div>
+                        <h3 class="sr-tier-title">
+                            قارن بين <span>الباقات المؤسسية السحابية</span> بدقة وشفافية
+                        </h3>
+                        <p class="sr-tier-subtitle">
+                            اختر البنية التقنية المثالية لمؤسستك في هولندا والاتحاد الأوروبي. استمتع بخصم 20% عند
+                            الفوترة السنوية بالإضافة إلى خصم مخصص متعدد الكيانات للمجموعات والشركات الشقيقة.
+                        </p>
+                    </div>
+
+                    <!-- لوحة التحكم التفاعلية: دورة الفوترة + حاسبة الكيانات المؤسسية -->
+                    <div class="sr-tier-controls-hub">
+                        <!-- مفتاح دورة الفوترة -->
+                        <div class="sr-tier-billing-toggle">
+                            <button type="button" class="sr-tier-toggle-btn active" data-billing="annual">
+                                <span>فوترة سنوية</span>
+                                <span class="sr-tier-save-badge">وفّر 20%</span>
+                            </button>
+                            <button type="button" class="sr-tier-toggle-btn" data-billing="monthly">
+                                <span>فوترة شهرية</span>
+                            </button>
+                        </div>
+
+                        <!-- مضاعف الكيانات المؤسسية -->
+                        <div class="sr-tier-entities-picker">
+                            <span class="sr-tier-entities-label">عدد الشركات / الفروع:</span>
+                            <div class="sr-tier-entities-btns">
+                                <button type="button" class="sr-tier-entity-btn active" data-entities="1">كيان
+                                    واحد</button>
+                                <button type="button" class="sr-tier-entity-btn" data-entities="2">2 - 3 كيانات
+                                    (-10%)</button>
+                                <button type="button" class="sr-tier-entity-btn" data-entities="4">مجموعة 4+
+                                    (-20%)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- جدول المقارنة المعماري الشامل -->
+                    <div class="sr-tier-table-wrapper">
+                        <table class="sr-tier-table">
+                            <thead>
+                                <tr>
+                                    <th class="sr-tier-th-features">
+                                        <div class="sr-tier-features-heading">المواصفات والمعايير المعمارية</div>
+                                        <div class="sr-tier-features-sub">مقارنة تفصيلية بين الخصائص السحابية والأمنية
+                                            والتشغيلية</div>
+                                    </th>
+
+                                    <!-- Tier 1: Starter -->
+                                    <th class="sr-tier-th-col">
+                                        <div class="sr-tier-card-head">
+                                            <h4 class="sr-tier-name">Core Starter</h4>
+                                            <p class="sr-tier-desc">للشركات الناشئة والمشاريع ذات النطاق الفردي</p>
+                                            <div class="sr-tier-price-box">
+                                                <div class="sr-tier-price-main">
+                                                    <span class="sr-tier-currency">€</span>
+                                                    <span id="tier-price-starter">1,192</span>
+                                                    <span class="sr-tier-period" id="tier-period-starter">/
+                                                        شهرياً</span>
+                                                </div>
+                                                <span class="sr-tier-original-price"
+                                                    id="tier-orig-starter">€1,490</span>
+                                                <div class="sr-tier-billed-note" id="tier-note-starter">تُدفع سنوياً
+                                                    (وفّر 20%)</div>
+                                            </div>
+                                            <a href="https://wa.me/31618111116" id="tier-cta-starter" target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="sr-tier-action-btn sr-tier-action-btn--glass">
+                                                <span>حجز الباقة عبر واتساب VIP</span>
+                                            </a>
+                                        </div>
+                                    </th>
+
+                                    <!-- Tier 2: Pro (Featured) -->
+                                    <th class="sr-tier-th-col featured">
+                                        <div class="sr-tier-ribbon-badge">الأكثر طلباً // الباقة النموذجية الرائدة</div>
+                                        <div class="sr-tier-card-head">
+                                            <h4 class="sr-tier-name">Business Pro</h4>
+                                            <p class="sr-tier-desc">للشركات المتوسطة والمؤسسات التجارية المتنامية</p>
+                                            <div class="sr-tier-price-box">
+                                                <div class="sr-tier-price-main">
+                                                    <span class="sr-tier-currency">€</span>
+                                                    <span id="tier-price-pro">2,312</span>
+                                                    <span class="sr-tier-period" id="tier-period-pro">/ شهرياً</span>
+                                                </div>
+                                                <span class="sr-tier-original-price" id="tier-orig-pro">€2,890</span>
+                                                <div class="sr-tier-billed-note" id="tier-note-pro">تُدفع سنوياً (وفّر
+                                                    20%)</div>
+                                            </div>
+                                            <a href="https://wa.me/31618111116" id="tier-cta-pro" target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="sr-tier-action-btn sr-tier-action-btn--primary">
+                                                <span>بدء النشر السحابي الفوري ★</span>
+                                            </a>
+                                        </div>
+                                    </th>
+
+                                    <!-- Tier 3: Enterprise -->
+                                    <th class="sr-tier-th-col">
+                                        <div class="sr-tier-card-head">
+                                            <h4 class="sr-tier-name">Sovereign Enterprise</h4>
+                                            <p class="sr-tier-desc">للهيئات والشركات الكبرى ذات المتطلبات السيادية</p>
+                                            <div class="sr-tier-price-box">
+                                                <div class="sr-tier-price-main">
+                                                    <span class="sr-tier-currency">€</span>
+                                                    <span id="tier-price-enterprise">4,320</span>
+                                                    <span class="sr-tier-period" id="tier-period-enterprise">/
+                                                        شهرياً</span>
+                                                </div>
+                                                <span class="sr-tier-original-price"
+                                                    id="tier-orig-enterprise">€5,400</span>
+                                                <div class="sr-tier-billed-note" id="tier-note-enterprise">تُدفع سنوياً
+                                                    (وفّر 20%)</div>
+                                            </div>
+                                            <a href="https://wa.me/31618111116" id="tier-cta-enterprise" target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="sr-tier-action-btn sr-tier-action-btn--glass">
+                                                <span>استشارة معمارية سيادية 🛡️</span>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- Category 1: البنية السحابية والاستضافة -->
+                                <tr class="sr-tier-category-row">
+                                    <td colspan="4">
+                                        <span class="sr-tier-cat-icon">🌐</span> 1. البنية السحابية واستضافة أمستردام
+                                        (Cloud Infrastructure & AMS-IX)
+                                    </td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">مركز البيانات وموقع الخوادم</span>
+                                        <span class="sr-tier-feature-tooltip">موقع استضافة الخوادم وقواعد البيانات
+                                            السيادية</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">أمستردام Tier 3+ (مشترك)</td>
+                                    <td class="sr-tier-val-col featured">خادم سحابي مخصص VPS في أمستردام</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">Sovereign Cloud
+                                            Cluster معزول فيزيائياً</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">التخزين السحابي عالي السرعة (NVMe)</span>
+                                        <span class="sr-tier-feature-tooltip">سعة التخزين الفائقة للملفات والوسائط
+                                            وقواعد البيانات</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">50 GB NVMe</td>
+                                    <td class="sr-tier-val-col featured">250 GB NVMe فائقة السرعة</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">غير محدود
+                                            (Scale-on-Demand)</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">حركة البيانات الشهرية والـ CDN</span>
+                                        <span class="sr-tier-feature-tooltip">نطاق الباندويث المتاح وتسريع المحتوى حول
+                                            العالم</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">100,000 زيارة شهرياً</td>
+                                    <td class="sr-tier-val-col featured">500,000 زيارة + شبكة CDN أوروبية</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">غير محدود + Global
+                                            Anycast CDN</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">عزل المستأجرين (Tenancy Architecture)</span>
+                                        <span class="sr-tier-feature-tooltip">مستوى استقلالية قاعدة البيانات وحمايتها من
+                                            التداخل</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">عزل برمجي منطقي</td>
+                                    <td class="sr-tier-val-col featured">قاعدة بيانات مستقلة تماماً</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">Dedicated
+                                            Single-Tenant 100%</span></td>
+                                </tr>
+
+                                <!-- Category 2: الأمان والامتثال الأوروبي -->
+                                <tr class="sr-tier-category-row">
+                                    <td colspan="4">
+                                        <span class="sr-tier-cat-icon">🛡️</span> 2. الأمان السيادي والامتثال الأوروبي
+                                        (Security & Regulatory Compliance)
+                                    </td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">الامتثال للائحة حماية البيانات (GDPR
+                                            EU)</span>
+                                        <span class="sr-tier-feature-tooltip">Regulation EU 2016/679 وعقود معالجة
+                                            البيانات DPA</span>
+                                    </td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-check">✓</span> قياسي معتمد</td>
+                                    <td class="sr-tier-val-col featured"><span class="sr-tier-check">✓</span> متقدم +
+                                        اتفاقية DPA مخصصة</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight"><span
+                                                class="sr-tier-check">✓</span> Zero-Knowledge السيادية</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">الامتثال الضريبي الهولندي
+                                            (Belastingdienst)</span>
+                                        <span class="sr-tier-feature-tooltip">حساب شرائح BTW والفاتورة الإلكترونية
+                                            المعتمدة</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">فواتير رقمية أساسية</td>
+                                    <td class="sr-tier-val-col featured">حساب BTW آلي + معيار PEPPOL BIS</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">تكامل كامل مع البنوك
+                                            والأنظمة المحاسبية</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">إدارة مفاتيح التشفير (Encryption
+                                            Keys)</span>
+                                        <span class="sr-tier-feature-tooltip">ملكية مفاتيح تشفير البيانات أثناء النقل
+                                            والتخزين</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">AES-256 بنية S&R المشتركة</td>
+                                    <td class="sr-tier-val-col featured">TLS 1.3 + شهادة SSL بنكية معززة</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">مفاتيح تشفير خاصة
+                                            بالعميل (BYOK / KMS)</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">النسخ الاحتياطي والتعافي من الكوارث</span>
+                                        <span class="sr-tier-feature-tooltip">تكرار البيانات الجغرافي وسرعة استعادة
+                                            العمليات</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">أسبوعي سحابي</td>
+                                    <td class="sr-tier-val-col featured">يومي عبر مركزين جغرافيين</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">لحظي مستمر (RPO < 5
+                                                دقائق / Hot-Standby)</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Category 3: الذكاء الاصطناعي والتكاملات -->
+                                <tr class="sr-tier-category-row">
+                                    <td colspan="4">
+                                        <span class="sr-tier-cat-icon">⚡</span> 3. الذكاء الاصطناعي والتكاملات الرقمية
+                                        (AI Engines & Integrations)
+                                    </td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">المساعد الذكي المؤسسي (AI Copilot
+                                            RAG)</span>
+                                        <span class="sr-tier-feature-tooltip">محرك ذكاء اصطناعي مدرب على وثائق وأنظمة
+                                            الشركة</span>
+                                    </td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-dash">—</span></td>
+                                    <td class="sr-tier-val-col featured"><span class="sr-tier-check">✓</span> نموذج RAG
+                                        قياسي لخدمة العملاء</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight"><span
+                                                class="sr-tier-check">✓</span> نموذج سيادي معزول مدرب على أنظمتك
+                                            بالكامل</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">بوابات الدفع الإلكتروني الأوروبية</span>
+                                        <span class="sr-tier-feature-tooltip">دعم آليات الدفع المعتمدة في هولندا
+                                            وأوروبا</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">Stripe + بطاقات الائتمان</td>
+                                    <td class="sr-tier-val-col featured">Stripe + Mollie + iDEAL + Bancontact</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">جميع البوابات + SEPA
+                                            Direct Debit المؤسسي</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">واجهات الربط البرمجي (APIs &
+                                            Webhooks)</span>
+                                        <span class="sr-tier-feature-tooltip">ربط النظام بتطبيقات الطرف الثالث والأنظمة
+                                            الحالية</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">Webhooks أساسية</td>
+                                    <td class="sr-tier-val-col featured">واجهات REST APIs كاملة وموثقة</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">وصول كامل لـ Core
+                                            APIs + Custom Endpoints</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">حقوق العلامة البيضاء (White-Label
+                                            Branding)</span>
+                                        <span class="sr-tier-feature-tooltip">إمكانية استخدام علامتك التجارية الخالصة
+                                            دون شعارنا</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">شعار "Powered by CoreSync"</td>
+                                    <td class="sr-tier-val-col featured">تخصيص الهوية والشعار والألوان</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">100% White-Label مع
+                                            حجب أي إشارة تقنية</span></td>
+                                </tr>
+
+                                <!-- Category 4: الدعم واتفاقية مستوى الخدمة SLA -->
+                                <tr class="sr-tier-category-row">
+                                    <td colspan="4">
+                                        <span class="sr-tier-cat-icon">🤝</span> 4. الدعم التنفيذي واتفاقية مستوى الخدمة
+                                        (SLA & Concierge)
+                                    </td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">الجاهزية السحابية المضمونة تعاقدياً
+                                            (SLA)</span>
+                                        <span class="sr-tier-feature-tooltip">نسبة التشغيل المستمر دون انقطاع</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">99.9% استمرارية تشغيل</td>
+                                    <td class="sr-tier-val-col featured">99.9% جاهزية عالية High Availability</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">99.9%
+                                            Mission-Critical SLA</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">زمن الاستجابة للدعم الفني (Response
+                                            Time)</span>
+                                        <span class="sr-tier-feature-tooltip">الحد الأقصى للرد وحل الحالات
+                                            الطارئة</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">خلال 24 ساعة (تذاكر دعم)</td>
+                                    <td class="sr-tier-val-col featured">خلال 4 ساعات (بريد + واتساب)</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">خلال 15 دقيقة (خط
+                                            ساخن مخصص 24/7/365)</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">التدريب ونقل المعرفة للكوادر</span>
+                                        <span class="sr-tier-feature-tooltip">ورش العمل والتأهيل العملي لفريق
+                                            العمل</span>
+                                    </td>
+                                    <td class="sr-tier-val-col">دليل تدريبي رقمي شامل</td>
+                                    <td class="sr-tier-val-col featured">جلستان تدريبيتان حيتان عبر Zoom</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">تدريب حضوري في
+                                            أمستردام أو أونلاين غير محدود</span></td>
+                                </tr>
+                                <tr class="sr-tier-row">
+                                    <td>
+                                        <span class="sr-tier-feature-label">الاستشاري المخصص والمراجعة التقنية</span>
+                                        <span class="sr-tier-feature-tooltip">خبير مخصص يراجع الأداء ويوجه التطور
+                                            الرقمي</span>
+                                    </td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-dash">—</span></td>
+                                    <td class="sr-tier-val-col featured">مراجعة نصف سنوية لأداء النظام</td>
+                                    <td class="sr-tier-val-col"><span class="sr-tier-val-highlight">Senior Enterprise
+                                            Solutions Architect مخصص</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- شريط الضمانات والتخصيص السفلي -->
+                    <div class="sr-tier-bottom-bar">
+                        <div class="sr-tier-guarantee-items">
+                            <div class="sr-tier-guarantee-item">
+                                <span class="sr-tier-guarantee-icon"><svg viewBox="0 0 24 24" width="16" height="16"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg></span>
+                                <span>ضمان استرداد كامل خلال 14 يوماً في حال عدم الرضا</span>
+                            </div>
+                            <div class="sr-tier-guarantee-item">
+                                <span class="sr-tier-guarantee-icon"><svg viewBox="0 0 24 24" width="16" height="16"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg></span>
+                                <span>عقد قانوني هولندي رسمي يحمي كامل حقوق الملكية الفكرية</span>
+                            </div>
+                            <div class="sr-tier-guarantee-item">
+                                <span class="sr-tier-guarantee-icon"><svg viewBox="0 0 24 24" width="16" height="16"
+                                        fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg></span>
+                                <span>إمكانية الترقية أو تعديل مواصفات الخوادم في أي لحظة دون انقطاع</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20S%26R%20CoreSync%D8%8C%20%D9%86%D8%AD%D9%86%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%83%D8%A8%D8%B1%D9%89%20%D9%88%D9%86%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%B9%D9%82%D8%AF%20%D8%AC%D9%84%D8%B3%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%86%D9%81%D9%8A%D8%B0%D9%8A%D8%A9%20%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%A7%D9%82%D8%A9%20Enterprise%20%D8%B3%D9%8A%D8%A7%D8%AF%D9%8A%D8%A9%20%D9%85%D8%AE%D8%B5%D8%B5%D8%A9."
+                            target="_blank" rel="noopener noreferrer" class="sr-tier-custom-quote-btn">
+                            <span>طلب تسعير مؤسسي خاص (Custom B2B Quotation) ←</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ===== Service extras: lead capture, testimonials, add-ons, FAQ, timeline, guarantee ===== -->
+                <div class="sr-pricing-extras" style="margin-top:3.5rem;display:flex;flex-direction:column;gap:2rem;">
+
+                    <!-- Lead capture (low friction) -->
+                    <div
+                        style="text-align:center;background:linear-gradient(135deg,rgba(var(--sr-gold-rgb, 212, 175, 55),0.12),rgba(30,120,90,0.08));border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:18px;padding:2.4rem 2rem;">
+                        <h3 style="color:#fff;font-size:1.5rem;margin:0 0 0.6rem;font-weight:800;">غير متأكد أي باقة
+                            تناسبك؟</h3>
+                        <p style="color:#d3dbd7;margin:0 auto 1.4rem;max-width:min(620px,100%);line-height:1.8;">احجز
+                            استشارة مجانية 30 دقيقة — سنراجع حالتك ونوصي بالباقة الأنسب، بدون التزام.</p>
+                        <a href="https://wa.me/31618111116?text=مرحباً%20S%26R%20CoreSync،%20أود%20حجز%20استشارة%20مجانية%2030%20دقيقة%20لتحديد%20الباقة%20الأنسب"
+                            target="_blank" rel="noopener noreferrer" data-track="plan-cta"
+                            data-plan="free-consultation" data-action="whatsapp"
+                            style="display:inline-block;background:#d4af37;color:#04100b;font-weight:800;padding:0.9rem 2.2rem;border-radius:999px;text-decoration:none;font-size:1rem;">
+                            📅 احجز استشارة مجانية 30 دقيقة
+                        </a>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            ماذا يقول عملاؤنا</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem;">
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Core Starter أطلق منصتنا في 3 أسابيع. الدعم (30 يومًا) كان كافياً لفريقنا."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— مدير
+                                    عمليات، شركة لوجستية (NL)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Full ERP Sync وحّد شجرة الحسابات + SEPA + BTW. وفر 15 ساعة/أسبوع."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CFO،
+                                    شركة تجارة (EU)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Custom ERP Ecosystem: 100% White-Label + BYOK. أمان على مستوى بنكي."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CTO،
+                                    FinTech (UAE)</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Add-ons -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            إضافات (Add-ons)</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">📦</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">وحدات إضافية
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+1 وحدة عمل (module)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€190</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🎓</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">ساعات تدريب
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+5 ساعات (Zoom)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€250</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🛠️</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">تمديد دعم</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+30 يوم (SLA)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€290</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🌍</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">لغة إضافية</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+1 لغة (i18n)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€180</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post-purchase steps -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">ما بعد الحجز — 4
+                            خطوات واضحة</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    1</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">تأكيد (24
+                                    ساعة)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">بريد تأكيد + فاتورة BTW</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    2</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Kickoff (3
+                                    أيام)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">جلسة 60 دقيقة — تحديد النطاق</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    3</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">التنفيذ</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">تهيئة ERP + ربط الحسابات + اختبار
+                                </p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    4</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">التسليم</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">نظام جاهز + وثائق + دعم</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing FAQ -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">أسئلة شائعة حول
+                            الأسعار</h3>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">هل السعر يشمل
+                                BTW (ضريبة القيمة المضافة)؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">الأسعار
+                                <strong>hors taxe</strong> (بدون BTW). جميع الفواتير تصدر بفاتورة ضريبية رسمية (BTW 21%)
+                                متوافقة مع Belastingdienst — مؤهلة للخصم كنفقات تشغيلية.
+                            </p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">ما مدة الدعم
+                                (Support) لكل باقة؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Core Starter:
+                                30 يومًا · Enterprise Growth: 60 يومًا · Core MAX: 180 يومًا · ERP Setup: 30 يومًا ·
+                                Full ERP Sync: 60 يومًا · Custom: 180 يومًا. يمكن تمديد الدعم (Add-on).</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">هل يمكن
+                                الترقية (Upgrade) لاحقاً؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">نعم — يمكنك
+                                الترقية في أي وقت. نحتسب الفرق (pro-rata) بناءً على ما دفعته.</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">ما طرق الدفع
+                                المقبولة؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">iDEAL, Stripe,
+                                Mollie, Bancontact, Apple Pay, SEPA Direct Debit, تحويل بنكي. فاتورة رسمية (PDF) مع BTW.
+                            </p>
+                        </details>
+                        <details style="padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">هل يوجد ضمان
+                                (Guarantee)؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">ضمان رضا 14
+                                يومًا: إن لم تكن راضياً خلال 14 يوماً من kickoff، نُعيد المبلغ كاملاً. استشارة مجانية 30
+                                دقيقة قبل الالتزام.</p>
+                        </details>
+                    </div>
+
+                    <!-- Guarantee badge -->
+                    <div style="text-align:center;">
+                        <span
+                            style="display:inline-block;background:rgba(var(--sr-gold-rgb, 212, 175, 55),0.12);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:999px;padding:0.7rem 1.6rem;color:#e4cfa9;font-weight:700;font-size:0.9rem;">
+                            🛡️ ضمان الرضا 14 يومًا · استشارة مجانية 30 دقيقة · فاتورة BTW رسمية
+                        </span>
+                    </div>
+                </div>
+
+                <div class="cost-estimator-wrapper" id="cost-estimator">
+                    <div class="cost-estimator-card">
+                        <div class="cost-estimator-header">
+                            <span class="sr-logo-badge-pill mb-2 d-inline-flex">
+                                <span class="gold-dot"></span>
+                                حاسبة الميزانية الفورية التفاعلية // تقدير التكلفة ونطاق العمل
+                            </span>
+                            <h3 class="text-white mb-2">صمّم باقتك الخاصة واحسب تكلفتك ومدة التنفيذ فوراً</h3>
+                            <p class="text-white-64 mb-0">اختر نوع مشروعك والمواصفات المطلوبة لتحصل على تسعير فوري دقيق
+                                وشفاف، مع إمكانية التثبيت الفوري والحجز المباشر.</p>
+                        </div>
+
+                        <div class="cost-estimator-grid">
+                            <!-- عمود خيارات التخصيص التفاعلية -->
+                            <div class="cost-estimator-controls">
+                                <!-- 01. نوع المشروع الأساسي -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">01</span>
+                                        نوع المشروع الأساسي:
+                                    </label>
+                                    <div class="estimator-options grid-2" id="estimatorGroupType">
+                                        <button type="button" class="estimator-option active" data-group="type"
+                                            data-val="identity" data-price="590" data-days="5 - 7 أيام عمل"
+                                            data-title="هوية بصرية متكاملة" data-sr-call="updateEstimatorOption"
+                                            data-sr-this="1">
+                                            <span class="option-title">هوية بصرية متكاملة</span>
+                                            <span class="option-badge">تبدأ من €590</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="type"
+                                            data-val="website" data-price="980" data-days="7 - 12 يوم عمل"
+                                            data-title="موقع ويب فاخر عالي الأداء" data-sr-call="updateEstimatorOption"
+                                            data-sr-this="1">
+                                            <span class="option-title">موقع ويب فاخر عالي الأداء</span>
+                                            <span class="option-badge">تبدأ من €980</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="type"
+                                            data-val="ecommerce" data-price="1450" data-days="10 - 15 يوم عمل"
+                                            data-title="متجر إلكتروني ذكي متكامل" data-sr-call="updateEstimatorOption"
+                                            data-sr-this="1">
+                                            <span class="option-title">متجر إلكتروني ذكي متكامل</span>
+                                            <span class="option-badge">تبدأ من €1,450</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="type"
+                                            data-val="bundle" data-price="1990" data-days="14 - 20 يوم عمل"
+                                            data-title="باقة الانطلاقة الشاملة المتكاملة"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">باقة الانطلاقة الشاملة المتكاملة</span>
+                                            <span class="option-badge">عرض التوفير €1,990</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 02. نطاق الصفحات / الكتالوج -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">02</span>
+                                        نطاق الصفحات والمنتجات:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupPages">
+                                        <button type="button" class="estimator-option active" data-group="pages"
+                                            data-val="basic" data-price="0" data-title="أساسي (1 - 5 صفحات / 20 منتج)"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">أساسي (1 - 5 صفحات)</span>
+                                            <span class="option-price-diff">+€0 (متضمن)</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pages"
+                                            data-val="medium" data-price="290"
+                                            data-title="متوسط (حتى 15 صفحة / 100 منتج)"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">متوسط (حتى 15 صفحة)</span>
+                                            <span class="option-price-diff">+€290</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pages"
+                                            data-val="enterprise" data-price="690"
+                                            data-title="مؤسسي واسع النطاق (كتالوج غير محدود)"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">مؤسسي (غير محدود)</span>
+                                            <span class="option-price-diff">+€690</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 03. اللغات وتعدد العملات -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">03</span>
+                                        اللغات وتعدد العملات:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupLang">
+                                        <button type="button" class="estimator-option active" data-group="lang"
+                                            data-val="single" data-price="0" data-title="لغة واحدة أساسية"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">لغة واحدة أساسية</span>
+                                            <span class="option-price-diff">+€0 (متضمن)</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="lang" data-val="dual"
+                                            data-price="180" data-title="ثنائي اللغة (عربي + إنجليزي أو هولندي)"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">ثنائي اللغة (+ لغة إضافية)</span>
+                                            <span class="option-price-diff">+€180</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="lang"
+                                            data-val="multi" data-price="350"
+                                            data-title="متعدد اللغات (3 لغات فأكثر مع تعدد العملات)"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">متعدد اللغات (3 لغات فأكثر)</span>
+                                            <span class="option-price-diff">+€350</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 04. بوابات الدفع والربط المالي -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">04</span>
+                                        بوابات الدفع والتكامل المحاسبي:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupPay">
+                                        <button type="button" class="estimator-option active" data-group="pay"
+                                            data-val="none" data-price="0" data-title="بدون بوابات دفع"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">بدون دفع إلكتروني</span>
+                                            <span class="option-price-diff">+€0</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pay"
+                                            data-val="standard" data-price="240"
+                                            data-title="بوابات دفع أوروبية (iDEAL + Stripe + Apple Pay)"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">بوابات دفع معتمدة (iDEAL & Stripe)</span>
+                                            <span class="option-price-diff">+€240</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="pay" data-val="erp"
+                                            data-price="480" data-title="بوابات دفع + ربط محاسبي آلي ونظام ERP"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">دفع إلكتروني + ربط ERP تلقائي</span>
+                                            <span class="option-price-diff">+€480</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 05. سرعة التسليم -->
+                                <div class="estimator-group">
+                                    <label class="estimator-label">
+                                        <span class="label-step">05</span>
+                                        أولوية وسرعة التسليم:
+                                    </label>
+                                    <div class="estimator-options grid-3" id="estimatorGroupSpeed">
+                                        <button type="button" class="estimator-option active" data-group="speed"
+                                            data-val="standard" data-price="0" data-title="جدول زمني قياسي"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">تسليم قياسي</span>
+                                            <span class="option-price-diff">+€0</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="speed"
+                                            data-val="fast" data-price="200"
+                                            data-title="تسليم سريع ومكثف (-30% من الوقت)"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">تسليم سريع مكثف</span>
+                                            <span class="option-price-diff">+€200</span>
+                                        </button>
+                                        <button type="button" class="estimator-option" data-group="speed"
+                                            data-val="rush" data-price="450"
+                                            data-title="أولوية VIP فائقة ومسار سريع جداً"
+                                            data-sr-call="updateEstimatorOption" data-sr-this="1">
+                                            <span class="option-title">أولوية VIP فائقة</span>
+                                            <span class="option-price-diff">+€450</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- عمود الملخص الحي وأزرار التثبيت -->
+                            <div class="cost-estimator-summary">
+                                <div class="estimator-summary-card">
+                                    <div class="summary-badge">
+                                        <span class="gold-dot"></span>
+                                        <span>تقدير استثماري فوري معتمد</span>
+                                    </div>
+
+                                    <div class="summary-price-display">
+                                        <span class="summary-currency">€</span>
+                                        <span class="summary-amount" id="estimatorTotalAmount">590</span>
+                                    </div>
+                                    <p class="summary-price-sub">تقدير دقيق وشفاف • ضمان 30 يوماً • دعم فني مباشر</p>
+
+                                    <div class="summary-timeline-box">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        <span>مدة الإنجاز المتوقعة: <strong id="estimatorTimelineText">5 - 7 أيام
+                                                عمل</strong></span>
+                                    </div>
+
+                                    <!-- مواصفات الباقة المختارة -->
+                                    <div class="summary-spec-list">
+                                        <div class="spec-item"><span class="spec-icon">✓</span> <span
+                                                id="summarySpecType">هوية بصرية متكاملة</span></div>
+                                        <div class="spec-item"><span class="spec-icon">✓</span> <span
+                                                id="summarySpecPages">أساسي (1 - 5 صفحات)</span></div>
+                                        <div class="spec-item"><span class="spec-icon">✓</span> <span
+                                                id="summarySpecLang">لغة واحدة أساسية</span></div>
+                                        <div class="spec-item"><span class="spec-icon">✓</span> <span
+                                                id="summarySpecPay">بدون دفع إلكتروني</span></div>
+                                        <div class="spec-item"><span class="spec-icon">✓</span> <span
+                                                id="summarySpecSpeed">تسليم قياسي</span></div>
+                                    </div>
+
+                                    <!-- أزرار الإجراء الفوري -->
+                                    <div class="summary-actions">
+                                        <a href="https://wa.me/31618111116" target="_blank" rel="noopener noreferrer"
+                                            id="estimatorWhatsAppBtn" data-sr-call="bookEstimatorViaWhatsApp"
+                                            class="estimator-btn-whatsapp"
+                                            title="إرسال التقدير وحجزه مباشرة عبر واتساب">
+                                            <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor">
+                                                <path
+                                                    d="M16.02 3.2a12.7 12.7 0 0 0-10.95 19.14L3.2 28.8l6.62-1.74A12.8 12.8 0 1 0 16.02 3.2Zm0 23.24a10.48 10.48 0 0 1-5.35-1.46l-.38-.23-3.93 1.03 1.05-3.83-.25-.4a10.5 10.5 0 1 1 8.86 4.89Zm5.76-7.85c-.32-.16-1.9-.94-2.19-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08a8.65 8.65 0 0 1-2.55-1.57 9.57 9.57 0 0 1-1.77-2.2c-.18-.32 0-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.39-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69s1.16 3.13 1.32 3.35c.16.21 2.27 3.46 5.5 4.85.77.33 1.37.53 1.84.68.77.24 1.47.2 2.03.12.62-.09 1.9-.78 2.17-1.54.27-.75.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37Z" />
+                                            </svg>
+                                            <span>احجز بهذا التقدير عبر WhatsApp</span>
+                                        </a>
+
+                                        <button type="button" data-sr-call="transferEstimatorToVipBooking"
+                                            class="estimator-btn-vip" title="فتح نافذة حجز VIP مع تفاصيل هذا التقدير">
+                                            <span>تثبيت التقدير في حجز VIP</span>
+                                        </button>
+
+                                        <a href="./whitelabel-calculator.html" class="estimator-btn-calc-vip"
+                                            title="حاسبة تراخيص المنصات السيادية الجاهزة">
+                                            <span>🧮 حاسبة تراخيص White-Label الفورية (PDF)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

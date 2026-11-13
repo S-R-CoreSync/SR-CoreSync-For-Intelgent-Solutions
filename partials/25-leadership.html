@@ -1,0 +1,538 @@
+<section class="section-founders-showcase flat-spacing" id="founders-showcase" data-section>
+            <div class="showcase-container">
+
+                <!-- رأس القسم -->
+                <div class="showcase-header">
+                    <div class="showcase-badge">
+                        <span class="showcase-badge-dot"></span>
+                        <span>القيادة التنفيذية ورؤية المؤسسين • S&R CoreSync For Intelligent Solutions</span>
+                    </div>
+                    <h2 class="showcase-title">
+                        رؤية مؤسسية تقود <span class="gold-accent">التحول الرقمي وهندسة نظم المؤسسات</span>
+                    </h2>
+                    <p class="showcase-subtitle">
+                        نجمع بين هندسة السحابة المتقدمة والذكاء الاصطناعي مع الخبرة المالية والاستشارات المحاسبية ونظم
+                        ERP، لتقديم حلول أعمال استثنائية للشركات في أوروبا والشرق الأوسط.
+                    </p>
+
+                    <!-- كونسول التبديل بين أنماط العرض -->
+                    <div class="showcase-controls">
+                        <button type="button" class="showcase-tab-btn active" id="tabSlider"
+                            data-sr-call="setShowcaseView" data-sr-args='["slider"]'>
+                            <span class="showcase-tab-dot"></span>
+                            <span>استعراض تفاعلي متحرك 🔄</span>
+                        </button>
+                        <button type="button" class="showcase-tab-btn" id="tabEmblem" data-sr-call="setShowcaseView"
+                            data-sr-args='["emblem"]'>
+                            <span class="showcase-tab-dot"></span>
+                            <span>شعار الهوية الفاخر (S&amp;R Emblem) 👑</span>
+                        </button>
+                        <button type="button" class="showcase-tab-btn" id="tabSalim" data-sr-call="setShowcaseView"
+                            data-sr-args='["salim"]'>
+                            <span class="showcase-tab-dot"></span>
+                            <span>م. محمد سليم عزيزة (CTO)</span>
+                        </button>
+                        <button type="button" class="showcase-tab-btn" id="tabRaed" data-sr-call="setShowcaseView"
+                            data-sr-args='["raed"]'>
+                            <span class="showcase-tab-dot"></span>
+                            <span>أ. رائد كعكة (CFO)</span>
+                        </button>
+                        <button type="button" class="showcase-tab-btn" id="tabDual" data-sr-call="setShowcaseView"
+                            data-sr-args='["dual"]'>
+                            <span class="showcase-tab-dot"></span>
+                            <span>استعراض المنظومة بالكامل</span>
+                        </button>
+                        <a href="assets/SR-CoreSync-Corporate-Profile-2026.pdf"
+                            download="SR-CoreSync-Corporate-Profile-2026.pdf"
+                            class="showcase-tab-btn showcase-tab-btn-pdf"
+                            title="تحميل الملف التعريفي المؤسسي المعتمد PDF">
+                            <span class="showcase-tab-dot"></span>
+                            <span>الملف التعريفي المؤسسي المعتمد 📄</span>
+                        </a>
+                        <a href="card.html" target="_blank" class="showcase-tab-btn showcase-tab-btn-nfc"
+                            title="عرض وتجربة بطاقة الهوية الرقمية وتقنية NFC">
+                            <span class="showcase-tab-dot"></span>
+                            <span>بطاقة الهوية الرقمية الذكية 📲</span>
+                        </a>
+                        <a href="social-8k-studio.html" target="_blank"
+                            class="showcase-tab-btn showcase-tab-btn-social8k" title="8K Social Branding Suite">
+                            <span class="showcase-tab-dot"></span>
+                            <span>استوديو الهوية الرقمية المعتمدة 🎬</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 1. وضع السلايدر التفاعلي (Interactive Slider Mode - الافتراضي) -->
+                <div id="viewSlider" class="showcase-slider-wrapper">
+                    <!-- أزرار التنقل السريعة -->
+                    <button type="button" class="showcase-nav-btn showcase-nav-prev" data-sr-call="prevSlide"
+                        aria-label="السابق">›</button>
+                    <button type="button" class="showcase-nav-btn showcase-nav-next" data-sr-call="nextSlide"
+                        aria-label="التالي">‹</button>
+
+                    <!-- مسار الشرائح المتلاشية -->
+                    <div class="showcase-slider-viewport" id="sliderViewport" data-sr-call="pauseSliderAutoPlay"
+                        data-sr-on="mouseenter" data-sr-call="resumeSliderAutoPlay" data-sr-on="mouseleave">
+                        <div class="showcase-slides-track" id="slidesTrack">
+                            <!-- الشريحة 0: شعار وهوية النخبة المؤسسية الفاخرة (S&R CoreSync Emblem) -->
+                            <div class="showcase-slide-item active">
+                                <div class="showcase-banner-card">
+                                    <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                                        data-sr-args='["assets/sr-emblem-gold-luxury.jpg", "S&amp;R CoreSync For Intelligent Solutions - Official Luxury Sovereign Emblem"]'>
+                                        <picture>
+                                            <source srcset="./assets/sr-emblem-gold-luxury.webp" type="image/webp">
+                                            <img src="./assets/sr-emblem-gold-luxury.jpg"
+                                                alt="S&amp;R CoreSync Official Sovereign Emblem" class="showcase-img"
+                                                width="1024" height="576" loading="eager">
+                                        </picture>
+                                    </div>
+                                    <div class="showcase-banner-footer">
+                                        <div class="showcase-footer-meta">
+                                            <div class="showcase-footer-avatar avatar-crown">👑</div>
+                                            <div>
+                                                <div class="showcase-footer-title">S&amp;R CoreSync For Intelligent
+                                                    Solutions • Official Sovereign Emblem</div>
+                                                <div class="showcase-footer-role">For Intelligent Solutions • المنظومة
+                                                    السحابية والذكاء الاصطناعي وهندسة ERP</div>
+                                                <div class="showcase-credentials-badges">
+                                                    <span class="cred-badge"><i class="badge-dot"></i> الهوية المؤسسية
+                                                        الرسمية المعتمدة</span>
+                                                    <span class="cred-badge"><i class="badge-dot"></i> رمز الابتكار
+                                                        والريادة السحابية</span>
+                                                    <span class="cred-badge"><i class="badge-dot"></i> أمستردام •
+                                                        هولندا</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-footer-actions">
+                                            <button type="button" class="showcase-action-btn"
+                                                data-sr-call="openFoundersLightbox"
+                                                data-sr-args='["assets/sr-emblem-gold-luxury.jpg", "S&R CoreSync Official Sovereign Emblem", "emblem"]'>
+                                                <span>تكبير 🔍</span>
+                                            </button>
+                                            <a href="assets/sr-emblem-gold-luxury-4k.jpg"
+                                                download="SR-CoreSync-Luxury-Emblem-4K.jpg"
+                                                class="showcase-action-btn showcase-action-4k"
+                                                title="تحميل الشعار الرسمي بدقة 4K فائقة">
+                                                <span>تحميل 4K 🌟</span>
+                                            </a>
+                                            <button type="button" class="showcase-action-btn showcase-action-qr"
+                                                data-sr-call="openFoundersQrModal" data-sr-args='["emblem"]'
+                                                title="عرض رمز QR المؤسسي المعتمد">
+                                                <span>بطاقة QR 📲</span>
+                                            </button>
+                                            <a href="#services" class="showcase-action-btn">
+                                                <span>المنظومة 🚀</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- الشريحة 1: م. محمد سليم عزيزة -->
+                            <div class="showcase-slide-item">
+                                <div class="showcase-banner-card">
+                                    <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                                        data-sr-args='["assets/founder-banner-salim.jpg"]'["salim"]' role="button" tabindex="0" aria-label="cinema"><img src="assets/founder-banner-salim-2560.webp" alt="م. محمد سليم عزيزة" loading="eager" decoding="async" style="width:100%;height:auto;display:block">
+                                    </div>
+                                    <div class="showcase-banner-footer">
+                                        <div class="showcase-footer-meta">
+                                            <div class="showcase-footer-avatar">S</div>
+                                            <div>
+                                                <div class="showcase-footer-title">م. محمد سليم عزيزة</div>
+                                                <div class="showcase-footer-role">المسؤول التقني // CTO</div>
+                                                <div class="showcase-credentials-badges">
+                                                    <span class="cred-badge"><i class="badge-dot"></i> (CTO)ظمة الموزعة</span>
+                                                    <span class="cred-badge"><i class="badge-dot"></i> أتمتة الذكاء
+                                                        الاصطناعي والنماذج اللغوية المتقدمة</span>
+                                                    <span class="cred-badge"><i class="badge-dot"></i> خبرة +12 عاماً في
+                                                        هندسة البرمجيات</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-footer-actions">
+                                            <button type="button" class="showcase-action-btn"
+                                                data-sr-call="openFoundersLightbox"
+                                                data-sr-args='["assets/founder-banner-salim.jpg", "م. محمد سليم عزيزة", "salim"]'>
+                                                <span>تكبير 🔍</span>
+                                            </button>
+                                            <a href="assets/founder-banner-salim.jpg"
+                                                download="SR-CoreSync-Founder-Salim-Aziza-4K.jpg"
+                                                class="showcase-action-btn showcase-action-4k"
+                                                title="تحميل البانر بدقة 4K فائقة">
+                                                <span>تحميل 4K 🌟</span>
+                                            </a>
+                                            <button type="button" class="showcase-action-btn showcase-action-qr"
+                                                data-sr-call="openFoundersQrModal" data-sr-args='["salim"]'
+                                                title="عرض بطاقة الاتصال الرقمية الذكية">
+                                                <span>بطاقة QR 📲</span>
+                                            </button>
+                                            <button type="button" class="showcase-action-btn"
+                                                data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
+                                                <span>استشارة 👔</span>
+                                            </button>
+                                            <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85.%D8%B3%D9%84%D9%8A%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%87%D9%86%D8%AF%D8%B3%D8%A9%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="محادثة واتساب مباشرة مع م. محمد سليم عزيزة">
+                                                <span>واتساب م. سليم 💬</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- الشريحة 2: أ. رائد كعكة -->
+                            <div class="showcase-slide-item">
+                                <div class="showcase-banner-card">
+                                    <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                                        data-sr-args='["assets/founder-banner-raed.jpg", "أ. رائد كعكة - المستشار المالي ومطور نظم ERP"]'>
+                                        <img src="assets/founder-banner-raed-1280.jpg"
+                                                alt="أ. رائد كعكة Executive Banner" class="showcase-img"
+                                                width="2560" height="1440" loading="eager" data-sr-call="openFounderCinema" data-sr-args='["raed"]' role="button" tabindex="0" aria-label="cinema">
+                                    </div>
+                                    <div class="showcase-banner-footer">
+                                        <div class="showcase-footer-meta">
+                                            <div class="showcase-footer-avatar">R</div>
+                                            <div>
+                                                <div class="showcase-footer-title">أ. رائد كعكة</div>
+                                                <div class="showcase-footer-role">المدير المالي // CFO
+                                                </div>
+                                                <div class="showcase-credentials-badges">
+                                                    <span class="cred-badge"><i class="badge-dot"></i> مستشار مالي
+                                                        ومحاسبي معتمد</span>
+                                                    <span class="cred-badge"><i class="badge-dot"></i> استشارات وتكامل
+                                                        نظم تخطيط الموارد وإدارة المؤسسات</span>
+                                                    <span class="cred-badge"><i class="badge-dot"></i> الامتثال المالي
+                                                        والمعايير الأوروبية</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-footer-actions">
+                                            <button type="button" class="showcase-action-btn"
+                                                data-sr-call="openFoundersLightbox"
+                                                data-sr-args='["assets/founder-banner-raed.jpg", "أ. رائد كعكة", "raed"]'>
+                                                <span>تكبير 🔍</span>
+                                            </button>
+                                            <a href="assets/founder-banner-raed.jpg"
+                                                download="SR-CoreSync-Founder-Raed-Kaaka-4K.jpg"
+                                                class="showcase-action-btn showcase-action-4k"
+                                                title="تحميل البانر بدقة 4K فائقة">
+                                                <span>تحميل 4K 🌟</span>
+                                            </a>
+                                            <button type="button" class="showcase-action-btn showcase-action-qr"
+                                                data-sr-call="openFoundersQrModal" data-sr-args='["raed"]'
+                                                title="عرض بطاقة الاتصال الرقمية الذكية">
+                                                <span>بطاقة QR 📲</span>
+                                            </button>
+                                            <button type="button" class="showcase-action-btn"
+                                                data-sr-call="openExecutiveBookingModal" data-sr-args='["erp"]'>
+                                                <span>استشارة 👔</span>
+                                            </button>
+                                            <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3.%D8%B1%D8%A7%D8%A6%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%86%D8%B8%D9%85%20ERP%20%D9%88%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AB%D8%A7%D9%84%20%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="محادثة واتساب مباشرة مع أ. رائد كعكة">
+                                                <span>واتساب أ. رائد 💬</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- شريط التقدم الزمني والأزرار التفاعلية للسلايدر -->
+                    <div class="showcase-slider-timeline">
+                        <div class="showcase-dots-group">
+                            <button type="button" class="showcase-dot-item active" id="slideDot0"
+                                data-sr-call="goToSlide" data-sr-args='[0]'>
+                                <span class="showcase-dot-indicator"></span>
+                                <span>شعار الهوية الفاخر (S&amp;R Emblem) 👑</span>
+                            </button>
+                            <button type="button" class="showcase-dot-item" id="slideDot1" data-sr-call="goToSlide"
+                                data-sr-args='[1]'>
+                                <span class="showcase-dot-indicator"></span>
+                                <span>م. محمد سليم عزيزة (CTO)</span>
+                            </button>
+                            <button type="button" class="showcase-dot-item" id="slideDot2" data-sr-call="goToSlide"
+                                data-sr-args='[2]'>
+                                <span class="showcase-dot-indicator"></span>
+                                <span>أ. رائد كعكة (CFO)</span>
+                            </button>
+                        </div>
+
+                        <div class="showcase-progress-bar-container" title="شريط التبديل التلقائي">
+                            <div class="showcase-progress-bar-fill" id="sliderProgressBar"></div>
+                        </div>
+
+                        <button type="button" class="showcase-slider-playback-btn" id="playbackToggleBtn"
+                            data-sr-call="togglePlayback">
+                            <span id="playbackIcon">⏸</span>
+                            <span id="playbackText">إيقاف مؤقت</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- مسرح العرض الفردي: شعار الهوية المؤسسية الفاخرة -->
+                <div id="viewEmblem" class="showcase-single-view showcase-is-hidden">
+                    <div class="showcase-banner-card">
+                        <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                            data-sr-args='["assets/sr-emblem-gold-luxury.jpg", "S&amp;R CoreSync For Intelligent Solutions - Official Luxury Sovereign Emblem"]'>
+                            <picture>
+                                <source srcset="./assets/sr-emblem-gold-luxury.webp" type="image/webp">
+                                <img src="./assets/sr-emblem-gold-luxury.jpg"
+                                    alt="S&amp;R CoreSync Official Sovereign Emblem" class="showcase-img" width="1024"
+                                    height="576" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="showcase-banner-footer">
+                            <div class="showcase-footer-meta">
+                                <div class="showcase-footer-avatar avatar-crown">👑</div>
+                                <div>
+                                    <div class="showcase-footer-title">S&amp;R CoreSync For Intelligent Solutions •
+                                        Official Sovereign Emblem</div>
+                                    <div class="showcase-footer-role">For Intelligent Solutions • المنظومة السحابية
+                                        والذكاء الاصطناعي وهندسة ERP</div>
+                                    <div class="showcase-credentials-badges">
+                                        <span class="cred-badge"><i class="badge-dot"></i> الهوية المؤسسية الرسمية
+                                            المعتمدة</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> رمز الابتكار والريادة
+                                            السحابية</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> أمستردام • هولندا</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showcase-footer-actions">
+                                <button type="button" class="showcase-action-btn" data-sr-call="openFoundersLightbox"
+                                    data-sr-args='["assets/sr-emblem-gold-luxury.jpg", "S&R CoreSync Official Sovereign Emblem", "emblem"]'>
+                                    <span>تكبير 🔍</span>
+                                </button>
+                                <a href="assets/sr-emblem-gold-luxury-4k.jpg"
+                                    download="SR-CoreSync-Luxury-Emblem-4K.jpg"
+                                    class="showcase-action-btn showcase-action-4k"
+                                    title="تحميل الشعار الرسمي بدقة 4K فائقة">
+                                    <span>تحميل 4K 🌟</span>
+                                </a>
+                                <button type="button" class="showcase-action-btn showcase-action-qr"
+                                    data-sr-call="openFoundersQrModal" data-sr-args='["emblem"]'
+                                    title="عرض رمز QR المؤسسي المعتمد">
+                                    <span>بطاقة QR 📲</span>
+                                </button>
+                                <a href="#services" class="showcase-action-btn">
+                                    <span>المنظومة 🚀</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. مسرح العرض الفردي: م. محمد سليم عزيزة -->
+                <div id="viewSalim" class="showcase-single-view showcase-is-hidden">
+                    <div class="showcase-banner-card">
+                        <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                            data-sr-args='["assets/founder-banner-salim.jpg"]'["salim"]' role="button" tabindex="0" aria-label="cinema">
+                        </div>
+                        <div class="showcase-banner-footer">
+                            <div class="showcase-footer-meta">
+                                <div class="showcase-footer-avatar">S</div>
+                                <div>
+                                    <div class="showcase-footer-title">م. محمد سليم عزيزة</div>
+                                    <div class="showcase-footer-role">المسؤول التقني // CTO</div>
+                                    <div class="showcase-credentials-badges">
+                                        <span class="cred-badge"><i class="badge-dot"></i> (CTO)</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> أتمتة الذكاء الاصطناعي
+                                            والنماذج اللغوية المتقدمة</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> خبرة +12 عاماً في هندسة
+                                            البرمجيات</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showcase-footer-actions">
+                                <button type="button" class="showcase-action-btn" data-sr-call="openFoundersLightbox"
+                                    data-sr-args='["assets/founder-banner-salim.jpg", "م. محمد سليم عزيزة", "salim"]'>
+                                    <span>تكبير 🔍</span>
+                                </button>
+                                <a href="assets/founder-banner-salim.jpg"
+                                    download="SR-CoreSync-Founder-Salim-Aziza-4K.jpg"
+                                    class="showcase-action-btn showcase-action-4k" title="تحميل البانر بدقة 4K فائقة">
+                                    <span>تحميل 4K 🌟</span>
+                                </a>
+                                <button type="button" class="showcase-action-btn showcase-action-qr"
+                                    data-sr-call="openFoundersQrModal" data-sr-args='["salim"]'
+                                    title="عرض بطاقة الاتصال الرقمية الذكية">
+                                    <span>بطاقة QR 📲</span>
+                                </button>
+                                <button type="button" class="showcase-action-btn"
+                                    data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
+                                    <span>استشارة 👔</span>
+                                </button>
+                                <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85.%D8%B3%D9%84%D9%8A%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%87%D9%86%D8%AF%D8%B3%D8%A9%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="showcase-action-btn showcase-action-wa"
+                                    title="محادثة واتساب مباشرة مع م. محمد سليم عزيزة">
+                                    <span>واتساب م. سليم 💬</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. مسرح العرض الفردي: أ. رائد كعكة -->
+                <div id="viewRaed" class="showcase-single-view showcase-is-hidden">
+                    <div class="showcase-banner-card">
+                        <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                            data-sr-args='["assets/founder-banner-raed.jpg", "أ. رائد كعكة - المستشار المالي ومطور نظم ERP"]'>
+                            <img src="./assets/founder-banner-raed-1280.jpg"
+                                    alt="أ. رائد كعكة Executive Banner" class="showcase-img" width="1024"
+                                    height="576" loading="eager" data-sr-call="openFounderCinema" data-sr-args='["raed"]' role="button" tabindex="0" aria-label="cinema">
+                        </div>
+                        <div class="showcase-banner-footer">
+                            <div class="showcase-footer-meta">
+                                <div class="showcase-footer-avatar">R</div>
+                                <div>
+                                    <div class="showcase-footer-title">أ. رائد كعكة</div>
+                                    <div class="showcase-footer-role">المدير المالي // CFO</div>
+                                    <div class="showcase-credentials-badges">
+                                        <span class="cred-badge"><i class="badge-dot"></i> مستشار مالي ومحاسبي
+                                            معتمد</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> استشارات وتكامل نظم تخطيط
+                                            الموارد وإدارة المؤسسات</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> الامتثال المالي والمعايير
+                                            الأوروبية</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showcase-footer-actions">
+                                <button type="button" class="showcase-action-btn" data-sr-call="openFoundersLightbox"
+                                    data-sr-args='["assets/founder-banner-raed.jpg", "أ. رائد كعكة", "raed"]'>
+                                    <span>تكبير 🔍</span>
+                                </button>
+                                <a href="assets/founder-banner-raed.jpg"
+                                    download="SR-CoreSync-Founder-Raed-Kaaka-4K.jpg"
+                                    class="showcase-action-btn showcase-action-4k" title="تحميل البانر بدقة 4K فائقة">
+                                    <span>تحميل 4K 🌟</span>
+                                </a>
+                                <button type="button" class="showcase-action-btn showcase-action-qr"
+                                    data-sr-call="openFoundersQrModal" data-sr-args='["raed"]'
+                                    title="عرض بطاقة الاتصال الرقمية الذكية">
+                                    <span>بطاقة QR 📲</span>
+                                </button>
+                                <button type="button" class="showcase-action-btn"
+                                    data-sr-call="openExecutiveBookingModal" data-sr-args='["erp"]'>
+                                    <span>استشارة 👔</span>
+                                </button>
+                                <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3.%D8%B1%D8%A7%D8%A6%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%86%D8%B8%D9%85%20ERP%20%D9%88%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AB%D8%A7%D9%84%20%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="showcase-action-btn showcase-action-wa"
+                                    title="محادثة واتساب مباشرة مع أ. رائد كعكة">
+                                    <span>واتساب أ. رائد 💬</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. مسرح العرض المتكامل: الشعار الرسمي والبانران معاً -->
+                <div id="viewDual" class="showcase-dual-grid showcase-is-hidden">
+                    <!-- بانر الشعار الفاخر -->
+                    <div class="showcase-banner-card">
+                        <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                            data-sr-args='["assets/sr-emblem-gold-luxury.jpg", "S&R CoreSync Official Sovereign Emblem"]'>
+                            <picture>
+                                <source srcset="./assets/sr-emblem-gold-luxury.webp" type="image/webp">
+                                <img src="./assets/sr-emblem-gold-luxury.jpg"
+                                    alt="S&amp;R CoreSync Official Sovereign Emblem" class="showcase-img" width="1024"
+                                    height="576" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="showcase-banner-footer">
+                            <div class="showcase-footer-meta">
+                                <div class="showcase-footer-avatar avatar-crown">👑</div>
+                                <div>
+                                    <div class="showcase-footer-title">S&amp;R CoreSync For Intelligent Solutions</div>
+                                    <div class="showcase-footer-role">Official Sovereign Emblem • For Intelligent
+                                        Solutions</div>
+                                    <div class="showcase-credentials-badges">
+                                        <span class="cred-badge"><i class="badge-dot"></i> الهوية المؤسسية
+                                            الرسمية</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showcase-footer-actions">
+                                <button type="button" class="showcase-action-btn" data-sr-call="openFoundersLightbox"
+                                    data-sr-args='["assets/sr-emblem-gold-luxury.jpg", "S&R CoreSync Official Sovereign Emblem"]'>
+                                    <span>تكبير 🔍</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- بانر سليم -->
+                    <div class="showcase-banner-card">
+                        <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                            data-sr-args='["assets/founder-banner-salim.jpg", "م. محمد سليم عزيزة"]'>
+                            <img src="./assets/founder-banner-salim-2560.webp"
+                                    alt="م. محمد سليم عزيزة Executive Banner" class="showcase-img" width="1024"
+                                    height="576" loading="eager" data-sr-call="openFounderCinema" data-sr-args='["salim"]' role="button" tabindex="0" aria-label="cinema">
+                        </div>
+                        <div class="showcase-banner-footer">
+                            <div class="showcase-footer-meta">
+                                <div class="showcase-footer-avatar">S</div>
+                                <div>
+                                    <div class="showcase-footer-title">م. محمد سليم عزيزة (CTO)</div>
+                                    <div class="showcase-footer-role">أنظمة برمجية متكاملة وحلول ذكاء اصطناعي</div>
+                                    <div class="showcase-credentials-badges">
+                                        <span class="cred-badge"><i class="badge-dot"></i> (CTO)</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> أتمتة الذكاء الاصطناعي
+                                            والنماذج اللغوية المتقدمة</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> خبرة +12 عاماً في هندسة
+                                            البرمجيات</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showcase-footer-actions">
+                                <button type="button" class="showcase-action-btn" data-sr-call="openFoundersLightbox"
+                                    data-sr-args='["assets/founder-banner-salim.jpg", "م. محمد سليم عزيزة"]'>
+                                    <span>تكبير 🔍</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- بانر رائد -->
+                    <div class="showcase-banner-card">
+                        <div class="showcase-img-wrap" data-sr-call="openFoundersLightbox"
+                            data-sr-args='["assets/founder-banner-raed.jpg", "أ. رائد كعكة"]'>
+                            <img src="./assets/founder-banner-raed-1280.jpg"
+                                    alt="أ. رائد كعكة Executive Banner" class="showcase-img" width="1024"
+                                    height="576" loading="eager" data-sr-call="openFounderCinema" data-sr-args='["raed"]' role="button" tabindex="0" aria-label="cinema">
+                        </div>
+                        <div class="showcase-banner-footer">
+                            <div class="showcase-footer-meta">
+                                <div class="showcase-footer-avatar">R</div>
+                                <div>
+                                    <div class="showcase-footer-title">أ. رائد كعكة (CFO)</div>
+                                    <div class="showcase-footer-role">أنظمة برمجية متقدمة وحلول ERP</div>
+                                    <div class="showcase-credentials-badges">
+                                        <span class="cred-badge"><i class="badge-dot"></i> مستشار مالي ومحاسبي
+                                            معتمد</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> استشارات وتكامل نظم تخطيط
+                                            الموارد وإدارة المؤسسات</span>
+                                        <span class="cred-badge"><i class="badge-dot"></i> الامتثال المالي والمعايير
+                                            الأوروبية</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showcase-footer-actions">
+                                <button type="button" class="showcase-action-btn" data-sr-call="openFoundersLightbox"
+                                    data-sr-args='["assets/founder-banner-raed.jpg", "أ. رائد كعكة"]'>
+                                    <span>تكبير 🔍</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
