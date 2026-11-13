@@ -103,6 +103,19 @@ node scripts/browser_console_audit.mjs
 python scripts/sync_locales.py --check</pre>
 <p class="muted">قاعدة: لا نشر حتى تُرجع كلها PASSED — ومنها <code>console audit 30/30</code>.</p>
 
+<h2>5ب · الحراس الآليون</h2>
+<p>ستة فحوص تحمي الموقع من الأخطاء الصامتة. تُشغَّل قبل كل نشر، ويفشل البناء إن أخفق أحدها:</p>
+<table>
+<tr><th>الحارس</th><th>يمنع</th><th>الأمر</th></tr>
+<tr><td>حمولات الأحداث</td><td>سطر جديد أو اقتباس داخل JSON يعطّل زراً بلا رسالة</td><td><code>check_sr_args.py</code></td></tr>
+<tr><td>الأجزاء ↔ الجذر</td><td>تعديل صفحة دون تحديث أجزائها</td><td><code>build_site.py --check</code></td></tr>
+<tr><td>الأجزاء ↔ الإنجليزية</td><td>انحراف الصفحة اللغوية عن أجزائها</td><td><code>build_lang.py --check en</code></td></tr>
+<tr><td>توليد الهيرو</td><td>قاموس لغة لا يطابق صفحته</td><td><code>verify_hero_build.py</code></td></tr>
+<tr><td>توليد الفوتر</td><td>نموذج الفوتر لا يطابق الصفحة</td><td><code>verify_footer_build.py</code></td></tr>
+<tr><td>ترتيب القائمة</td><td>قائمة خارج الترتيب المتفق عليه</td><td><code>verify_nav_build.py</code></td></tr>
+</table>
+<div class="rule"><strong>قاعدة الحارس:</strong> إن أخفق فحص، لا يُستثنى — يُصلَح. الاستثناء يحوّل الحارس إلى زينة.</div>
+
 <h2>6 · سجل ما جرى + الدروس</h2>
 <table>
 <tr><th>ما جرى</th><th>الدرس المانع للتكرار</th></tr>
@@ -139,6 +152,10 @@ python scripts/sync_locales.py --check</pre>
   <li><strong>Publicatie</strong> — push naar <code>main</code>, daarna controle op de live site.</li>
   <li><strong>Documentatie</strong> — dit bestand bijwerken.</li>
 </ol>
+<p><strong>Twee bewakers, één regel:</strong> de publicatie bouwt de pagina's uit hun delen en verifieert daarna.
+<code>check_sr_args.py</code> weigert een gebroken <code>data-sr-args</code>-lading — de fout die een knop
+stilzwijgend doodt. Faalt een controle, dan wordt ze hersteld, nooit uitgezonderd.</p>
+
 <p><strong>Drie bronnen van waarheid:</strong> de hero-regio in <code>index.html</code>, <code>i18n/locales/*.json</code>
 en <code>i18n/footer.calibrated.json</code>. Het menu staat in de opmaak zelf, niet in JavaScript.</p>
 <p><strong>Wat nooit gebeurt:</strong> een element herbouwen dat al bestaat; bestanden buiten de publicatieset aanwijzen;
@@ -158,6 +175,10 @@ browser, and nothing is published before the gates pass and the result is measur
   <li><strong>Publish</strong> — push to <code>main</code>, then verify on the live site, not locally.</li>
   <li><strong>Document</strong> — update this file.</li>
 </ol>
+<p><strong>Two guards, one rule:</strong> the deploy builds the pages from their parts, then verifies them.
+<code>check_sr_args.py</code> rejects a broken <code>data-sr-args</code> payload — the failure that kills a
+button without a word. A failing check is fixed, never excused.</p>
+
 <p><strong>Three sources of truth:</strong> the hero region of <code>index.html</code>, the per-language
 <code>i18n/locales/*.json</code>, and <code>i18n/footer.calibrated.json</code>. The menu order lives in the markup.</p>
 <p><strong>Never:</strong> rebuild an existing element instead of moving it; point at a file the publish set excludes;
