@@ -740,7 +740,7 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
   .sr-tools-capsule{
     position:fixed; left:22px; right:auto;
     bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 76px);
-    z-index:9997; display:flex; align-items:center; gap:6px;
+    z-index:9997; display:flex; align-items:center; gap:6px; box-sizing:border-box;
     padding:6px; border-radius:14px;
     border:1px solid rgba(var(--sr-gold-rgb,212,175,55),.28);
     background:linear-gradient(180deg,rgba(14,20,28,.96),rgba(8,12,18,.96));
@@ -748,27 +748,24 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
     backdrop-filter:blur(14px);
   }
   .sr-tools-capsule .header-col-actions{margin:0 !important; gap:6px !important}
+  
+  .sr-tools-capsule{padding:5px !important}
+  .sr-tools-capsule .header-col-actions{height:34px !important}
+  .sr-tools-capsule .header-col-actions > .btn-pwa-header,
+  .sr-tools-capsule .header-col-actions > .btn-support-tools-header{
+    height:34px !important; line-height:18px !important; padding-top:0 !important;
+    padding-bottom:0 !important;
+    align-items:center !important; justify-content:center !important;
+  }
   .sr-tools-capsule .header-support-menu{bottom:100% !important; top:auto !important;
     margin-bottom:8px !important}
 }
-/* LTR corrections for localized pages */
-html[dir="ltr"] .hv2__copy{align-items:flex-start !important; text-align:left !important}
-html[dir="ltr"] .hv2__chips .hv2__chiprow{direction:ltr !important; justify-content:flex-start !important}
-html[dir="ltr"] .hv2__badge, html[dir="ltr"] .hv2__h1{text-align:left !important}
-html[dir="ltr"] .hv2__rot span{inset-inline-start:0}
-html[dir="ltr"] .nav-menu-main{direction:ltr !important}
-html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
-
-/* legacy hero remnants must not survive beside the new hero */
-#hero > *:not(.hv2):not(.hero-motion-canvas):not(.overlay){display:none !important}
-#hero .hero-sectors-marquee, #hero .hero-compact-sectors-row{display:none !important}
 
 
-/* === v9 - bottom row: tools left, languages centre, counters right ===
-   One height (46px), one baseline, one typeface for the three blocks.
-   The hero carries "contain: layout", which traps fixed children, so it
-   keeps style containment only; nothing inside the hero moves for that. */
+
 #home{contain:style !important}
+
+
 @media (min-width:601px){
   .section-trust-metrics{
     position:fixed !important; right:22px !important; left:auto !important;
@@ -798,19 +795,24 @@ html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
     font-size:10px !important; line-height:1.2 !important;
   }
   .section-trust-metrics .trust-metric-separator{height:26px !important}
-  .sr-tools-capsule{box-sizing:border-box !important; padding:5px !important}
-  .sr-tools-capsule .header-col-actions{height:34px !important; margin:0 !important; gap:6px !important}
-  .sr-tools-capsule .header-col-actions > .btn-pwa-header,
-  .sr-tools-capsule .header-col-actions > .btn-support-tools-header{
-    height:34px !important; line-height:18px !important; padding-top:0 !important;
-    padding-bottom:0 !important;
-  }
 }
 @media (min-width:1320px){
   .section-trust-metrics{
     bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 14px) !important;
   }
 }
+/* LTR corrections for localized pages */
+html[dir="ltr"] .hv2__copy{align-items:flex-start !important; text-align:left !important}
+html[dir="ltr"] .hv2__chips .hv2__chiprow{direction:ltr !important; justify-content:flex-start !important}
+html[dir="ltr"] .hv2__badge, html[dir="ltr"] .hv2__h1{text-align:left !important}
+html[dir="ltr"] .hv2__rot span{inset-inline-start:0}
+html[dir="ltr"] .nav-menu-main{direction:ltr !important}
+html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
+
+/* legacy hero remnants must not survive beside the new hero */
+#hero > *:not(.hv2):not(.hero-motion-canvas):not(.overlay){display:none !important}
+#hero .hero-sectors-marquee, #hero .hero-compact-sectors-row{display:none !important}
+
 </style>
 <style id="srf-css">
 
