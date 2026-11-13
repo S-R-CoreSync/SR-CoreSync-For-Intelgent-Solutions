@@ -2473,17 +2473,6 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
     margin-bottom:8px !important}
 }
 
-/* ═══ v7 · التطبيق المثبّت: لا شيء تحت أزرار النافذة ═══════════════
-   window-controls-overlay يرسم أزرار الإغلاق/التكبير فوق الصفحة.
-   env(titlebar-area-height) هو الارتفاع الذي يحجزه النظام لها. */
-@media (display-mode: window-controls-overlay){
-  .tf-header{top:env(titlebar-area-height, 0px) !important}
-  .sr-tools-capsule{bottom:calc(env(titlebar-area-bottom, 0px) + 22px) !important}
-}
-/* احتياط: بعض المتصفحات تعلن standalone مع شريط عنوان مرسوم فوق الصفحة */
-@media (display-mode: standalone){
-  .tf-header{padding-top:env(safe-area-inset-top, 0px) !important}
-}
 </style>
 <style id="srf-css">
 
