@@ -55,7 +55,9 @@
     if (!cap || !dock) { return; }
     var r = dock.getBoundingClientRect();
     if (r.height < 10) { return; }
-    cap.style.setProperty('bottom', (window.innerHeight - r.top + 8) + 'px', 'important');
+    var cw = cap.getBoundingClientRect().width || 260;
+    cap.style.setProperty('bottom', (window.innerHeight - r.bottom) + 'px', 'important');
+    cap.style.setProperty('left', Math.max(14, Math.round(r.left - cw - 12)) + 'px', 'important');
   }
 
   window.__srDock = { apply: apply, state: function () { return { past: past }; } };
