@@ -6,6 +6,7 @@
   {
    "key": "services",
    "title": "الخدمات",
+   "title_en": "Services",
    "links": [
     {"href": "./software.html", "ar": "البرمجيات السحابية", "en": "Cloud software"},
     {"href": "./work.html#platforms", "ar": "المنصات الجاهزة", "en": "Ready platforms"},
@@ -16,6 +17,7 @@
   {
    "key": "company",
    "title": "الشركة",
+   "title_en": "Company",
    "links": [
     {"href": "./index.html#about", "ar": "نبذة عن الشركة", "en": "About the company"},
     {"href": "./index.html#founders-showcase", "ar": "القيادة التنفيذية", "en": "Leadership"},
@@ -26,6 +28,7 @@
   {
    "key": "legal",
    "title": "القانون والامتثال",
+   "title_en": "Legal & compliance",
    "links": [
     {"href": "./privacy.html", "ar": "الخصوصية والكوكيز", "en": "Privacy & cookies"},
     {"href": "./terms.html", "ar": "الشروط والأحكام", "en": "Terms"},
@@ -37,6 +40,7 @@
   {
    "key": "contact",
    "title": "التواصل",
+   "title_en": "Contact",
    "links": [
     {"href": "mailto:info@sr-coresync.com", "ar": "info@sr-coresync.com", "en": "info@sr-coresync.com"},
     {"href": "tel:+31618111116", "ar": "‎+31 6 1811 1116", "en": "+31 6 1811 1116"},
