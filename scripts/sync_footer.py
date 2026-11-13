@@ -48,7 +48,7 @@ def label(link, lang):
     return v if v else link.get('en') or link.get('ar') or link['href']
 
 
-def render(model, lang):
+def render(model, lang, base=''):
     rtl = lang == 'ar'
     tag = model['tagline'].get(lang) or model['tagline']['en']
     legal = model['legal_line'].get(lang) or model['legal_line']['en']
@@ -57,7 +57,7 @@ def render(model, lang):
         items = ''.join(
             ('<li><a href="#" data-sr-call="%s">%s</a></li>' % (l['srCall'], label(l, lang)))
             if l.get('srCall') else
-            ('<li><a href="%s">%s</a></li>' % (l['href'], label(l, lang)))
+            ('<li><a href="%s">%s</a></li>' % ((base + l['href'][2:]) if base and l['href'].startswith('./') else l['href'], label(l, lang)))
             for l in b['links']
         )
         cols.append('<div class="srf__col"><h3>%s</h3><ul>%s</ul></div>' % (

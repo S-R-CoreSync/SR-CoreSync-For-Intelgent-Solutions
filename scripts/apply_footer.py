@@ -28,15 +28,20 @@ def footer_span(src):
 def apply(path, lang):
     s = open(path, encoding='utf-8', newline='').read()
     nl = '\r\n' if '\r\n' in s else '\n'
+    base = '' if os.path.basename(os.path.dirname(path)) == os.path.basename(ROOT) else '../'
     if 'id="srf-footer"' in s:
-        print(path, 'already calibrated')
+        m2 = re.search(r'<footer class="srf".*?</footer>', s, re.S)
+        if m2:
+            s = s[:m2.start()] + SF.render(model, lang, base) + s[m2.end():]
+            open(path, 'w', encoding='utf-8', newline='').write(s)
+            print(path, 'refreshed')
         return
     span = footer_span(s)
     if not span:
         print(path, 'no footer')
         return
     model = json.load(open(SF.MODEL, encoding='utf-8'))
-    block = SF.render(model, lang)
+    block = SF.render(model, lang, base)
 
     s = s[:span[0]] + block + s[span[1]:]
 
