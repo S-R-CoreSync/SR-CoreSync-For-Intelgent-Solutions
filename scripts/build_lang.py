@@ -97,8 +97,15 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--extract')
     ap.add_argument('--check')
+    ap.add_argument('--build')
     a = ap.parse_args()
     if a.extract:
         extract(a.extract)
+    elif a.build:
+        out_dir = os.path.join(ROOT, 'build', a.build)
+        os.makedirs(out_dir, exist_ok=True)
+        out = os.path.join(out_dir, 'index.html')
+        open(out, 'w', encoding='utf-8', newline='').write(assemble(a.build))
+        print('built:', out)
     elif a.check:
         sys.exit(check(a.check))
