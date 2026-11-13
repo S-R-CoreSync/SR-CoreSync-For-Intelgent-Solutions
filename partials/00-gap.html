@@ -2531,6 +2531,10 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
     bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 14px) !important;
   }
 }
+
+/* Arabic header: the menu starts beside the brand, at the right,
+   and the brand takes its natural first position (logo right). */
+html[lang="ar"] .header-col-nav .box-navigation{justify-content:flex-start !important}
 </style>
 <style id="srf-css">
 
