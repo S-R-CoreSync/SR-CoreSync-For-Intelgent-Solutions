@@ -29,6 +29,9 @@
     if (timer) { return; }
     apply();
     seatTools();
+    stickTools();
+    setInterval(stickTools, 250);
+    window.addEventListener("resize", stickTools, { passive: true });
     timer = setInterval(apply, 250);
   }
 
@@ -42,6 +45,17 @@
     box.setAttribute('aria-label', 'Install and support');
     box.appendChild(actions);
     document.body.appendChild(box);
+    stickTools();
+  }
+
+  /* the capsule rides on top of the dock, measured - never a fixed guess */
+  function stickTools() {
+    var cap = document.querySelector('.sr-tools-capsule');
+    var dock = document.getElementById('appleMacosDockWrapper');
+    if (!cap || !dock) { return; }
+    var r = dock.getBoundingClientRect();
+    if (r.height < 10) { return; }
+    cap.style.setProperty('bottom', (window.innerHeight - r.top + 8) + 'px', 'important');
   }
 
   window.__srDock = { apply: apply, state: function () { return { past: past }; } };
