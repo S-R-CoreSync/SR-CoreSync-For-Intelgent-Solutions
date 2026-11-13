@@ -764,7 +764,17 @@ html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
 #hero .hero-sectors-marquee, #hero .hero-compact-sectors-row{display:none !important}
 
 </style>
-</head><style id="srf-css">
+</head><style id="flags-sprite">
+.apple-dock-flag{display:inline-block;width:28px;height:19px;background-image:url(../assets/flags-sprite.webp);background-repeat:no-repeat;background-size:28px 133px}
+.apple-dock-flag--de{background-position:0 -0px}
+.apple-dock-flag--fr{background-position:0 -19px}
+.apple-dock-flag--nl{background-position:0 -38px}
+.apple-dock-flag--gb{background-position:0 -57px}
+.apple-dock-flag--es{background-position:0 -76px}
+.apple-dock-flag--sa{background-position:0 -95px}
+.apple-dock-flag--tr{background-position:0 -114px}
+</style>
+<style id="srf-css">
 
 .srf{direction:rtl;background:#05080e;border-top:1px solid rgba(212,175,55,.22);
   padding:34px 24px 20px;font-family:'Alexandria',system-ui,sans-serif;color:#b9c6d6}
@@ -9123,31 +9133,31 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
 <aside class="apple-macos-dock-wrapper" id="appleMacosDockWrapper" aria-label="Sovereign Language Quick Dock">
     <div class="apple-macos-dock" id="appleMacosDock">
         <a href="../de/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','de');}catch(e){}" data-tooltip="Deutsch (German)" aria-label="Deutsch (German)">
-            <img src="../assets/flags/de.png" alt="DE" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-flag apple-dock-flag--de" role="img" aria-label="DE"></span>
             <span class="apple-dock-dot"></span>
         </a>
         <a href="../fr/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','fr');}catch(e){}" data-tooltip="Français (French)" aria-label="Français (French)">
-            <img src="../assets/flags/fr.png" alt="FR" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-flag apple-dock-flag--fr" role="img" aria-label="FR"></span>
             <span class="apple-dock-dot"></span>
         </a>
         <a href="../nl/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','nl');}catch(e){}" data-tooltip="Nederlands (Dutch)" aria-label="Nederlands (Dutch)">
-            <img src="../assets/flags/nl.png" alt="NL" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-flag apple-dock-flag--nl" role="img" aria-label="NL"></span>
             <span class="apple-dock-dot"></span>
         </a>
         <a href="../en/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','en');}catch(e){}" data-tooltip="English (English)" aria-label="English (English)">
-            <img src="../assets/flags/gb.png" alt="EN" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-flag apple-dock-flag--gb" role="img" aria-label="GB"></span>
             <span class="apple-dock-dot"></span>
         </a>
         <a href="../es/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','es');}catch(e){}" data-tooltip="Español (Spanish)" aria-label="Español (Spanish)">
-            <img src="../assets/flags/es.png" alt="ES" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-flag apple-dock-flag--es" role="img" aria-label="ES"></span>
             <span class="apple-dock-dot"></span>
         </a>
         <a href="../index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','ar');}catch(e){}" data-tooltip="العربية (Arabic (HQ Master))" aria-label="العربية (Arabic (HQ Master))">
-            <img src="../assets/flags/sa.png" alt="AR" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-flag apple-dock-flag--sa" role="img" aria-label="SA"></span>
             <span class="apple-dock-dot"></span>
         </a>
         <a href="../tr/index.html" class="apple-dock-item" onclick="try{localStorage.setItem('sr_lang_pref','tr');}catch(e){}" data-tooltip="Türkçe (Turkish)" aria-label="Türkçe (Turkish)">
-            <img src="../assets/flags/tr.png" alt="TR" class="apple-dock-flag" width="28" height="19">
+            <span class="apple-dock-flag apple-dock-flag--tr" role="img" aria-label="TR"></span>
             <span class="apple-dock-dot"></span>
         </a>
         <a href="../ku/index.html" class="apple-dock-item active" onclick="try{localStorage.setItem('sr_lang_pref','ku');}catch(e){}" data-tooltip="Kurdî (Kurmancî) (Kurdish (Kurmanji))" aria-label="Kurdî (Kurmancî) (Kurdish (Kurmanji))">
