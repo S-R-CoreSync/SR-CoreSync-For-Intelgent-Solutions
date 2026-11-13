@@ -17,4 +17,19 @@ if [ $EXIT_CODE -ne 0 ]; then
 fi
 
 echo "✅ [S&R CoreSync] Pre-commit audit passed: Zero secrets detected."
+
+# ------------------------------------------------------------------------------
+# Second gate: the generated layers must rebuild from their sources.
+# The deploy measures the same thing and fails much later, after the work is
+# finished, which has already cost two red builds. Verify only - never rewrite
+# files inside a hook.
+# ------------------------------------------------------------------------------
+python scripts/preflight.py --check
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "❌ [S&R CoreSync] Commit rejected: the tree does not rebuild itself."
+    echo "   run:  python scripts/preflight.py    (regenerates, then verifies)"
+    exit 1
+fi
+
 exit 0
