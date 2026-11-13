@@ -21,7 +21,12 @@
      "pt": "Software cloud",
      "ro": "Software cloud",
      "sv": "Molnprogramvara",
-     "cs": "Cloudový software"
+     "cs": "Cloudový software",
+     "tr": "Bulut yazılımı",
+     "el": "Λογισμικό cloud",
+     "da": "Cloudsoftware",
+     "no": "Skybasert programvare",
+     "fi": "Pilviohjelmisto"
     },
     {
      "href": "./work.html#platforms",
@@ -36,7 +41,12 @@
      "pt": "Plataformas prontas",
      "ro": "Platforme gata",
      "sv": "Färdiga plattformar",
-     "cs": "Hotové platformy"
+     "cs": "Hotové platformy",
+     "tr": "Hazır platformlar",
+     "el": "Έτοιμες πλατφόρμες",
+     "da": "Klar-til-brug platforme",
+     "no": "Ferdige plattformer",
+     "fi": "Valmiit alustat"
     },
     {
      "href": "./whitelabel-calculator.html",
@@ -51,7 +61,12 @@
      "pt": "Calculadora de licenças",
      "ro": "Calculator de licențe",
      "sv": "Licenskalkylator",
-     "cs": "Kalkulačka licencí"
+     "cs": "Kalkulačka licencí",
+     "tr": "Lisans hesaplayıcı",
+     "el": "Υπολογιστής αδειών",
+     "da": "Licensberegner",
+     "no": "Lisenskalkulator",
+     "fi": "Lisenssilaskuri"
     },
     {
      "href": "./estimator.html",
@@ -66,7 +81,12 @@
      "pt": "Estimador de projetos",
      "ro": "Estimator de proiecte",
      "sv": "Projektkalkylator",
-     "cs": "Kalkulačka projektů"
+     "cs": "Kalkulačka projektů",
+     "tr": "Proje hesaplayıcı",
+     "el": "Υπολογιστής έργων",
+     "da": "Projektberegner",
+     "no": "Prosjektkalkulator",
+     "fi": "Projektlaskuri"
     }
    ],
    "title_de": "Leistungen",
@@ -78,7 +98,12 @@
    "title_pt": "Serviços",
    "title_ro": "Servicii",
    "title_sv": "Tjänster",
-   "title_cs": "Služby"
+   "title_cs": "Služby",
+   "title_tr": "Hizmetler",
+   "title_el": "Υπηρεσίες",
+   "title_da": "Ydelser",
+   "title_no": "Tjenester",
+   "title_fi": "Palvelut"
   },
   {
    "key": "company",
@@ -98,7 +123,12 @@
      "pt": "Sobre a empresa",
      "ro": "Despre companie",
      "sv": "Om företaget",
-     "cs": "O společnosti"
+     "cs": "O společnosti",
+     "tr": "Şirket hakkında",
+     "el": "Σχετικά με την εταιρεία",
+     "da": "Om virksomheden",
+     "no": "Om selskapet",
+     "fi": "Tietoa yrityksestä"
     },
     {
      "href": "./index.html#founders-showcase",
@@ -113,7 +143,12 @@
      "pt": "Direção",
      "ro": "Conducere",
      "sv": "Ledning",
-     "cs": "Vedení"
+     "cs": "Vedení",
+     "tr": "Yönetim",
+     "el": "Διοίκηση",
+     "da": "Ledelse",
+     "no": "Ledelse",
+     "fi": "Johto"
     },
     {
      "href": "./work.html",
@@ -128,7 +163,12 @@
      "pt": "Portfólio",
      "ro": "Portofoliu",
      "sv": "Portfolio",
-     "cs": "Portfolio"
+     "cs": "Portfolio",
+     "tr": "Portföy",
+     "el": "Χαρτοφυλάκιο",
+     "da": "Portfolio",
+     "no": "Portefølje",
+     "fi": "Portfolio"
     },
     {
      "href": "./blog.html",
@@ -143,7 +183,12 @@
      "pt": "Jornal",
      "ro": "Jurnal",
      "sv": "Journal",
-     "cs": "Journal"
+     "cs": "Journal",
+     "tr": "Günlük",
+     "el": "Ημερολόγιο",
+     "da": "Journal",
+     "no": "Journal",
+     "fi": "Journal"
     }
    ],
    "title_de": "Unternehmen",
@@ -155,7 +200,12 @@
    "title_pt": "Empresa",
    "title_ro": "Companie",
    "title_sv": "Företag",
-   "title_cs": "Společnost"
+   "title_cs": "Společnost",
+   "title_tr": "Şirket",
+   "title_el": "Εταιρεία",
+   "title_da": "Virksomhed",
+   "title_no": "Selskap",
+   "title_fi": "Yritys"
   },
   {
    "key": "legal",
@@ -175,7 +225,12 @@
      "pt": "Privacidade e cookies",
      "ro": "Confidențialitate și cookie-uri",
      "sv": "Integritet och cookies",
-     "cs": "Soukromí a cookies"
+     "cs": "Soukromí a cookies",
+     "tr": "Gizlilik ve çerezler",
+     "el": "Απόρρητο & cookies",
+     "da": "Privatliv og cookies",
+     "no": "Personvern og informasjonskapsler",
+     "fi": "Tietosuoja ja evästeet"
     },
     {
      "href": "./terms.html",
@@ -190,7 +245,12 @@
      "pt": "Termos",
      "ro": "Termeni",
      "sv": "Villkor",
-     "cs": "Podmínky"
+     "cs": "Podmínky",
+     "tr": "Koşullar",
+     "el": "Όροι",
+     "da": "Vilkår",
+     "no": "Vilkår",
+     "fi": "Ehdot"
     },
     {
      "href": "./verify.html",
@@ -205,7 +265,12 @@
      "pt": "Verificar um documento",
      "ro": "Verifică un document",
      "sv": "Verifiera ett dokument",
-     "cs": "Ověřit dokument"
+     "cs": "Ověřit dokument",
+     "tr": "Belge doğrula",
+     "el": "Επαλήθευση εγγράφου",
+     "da": "Verificér et dokument",
+     "no": "Verifiser et dokument",
+     "fi": "Vahvista asiakirja"
     },
     {
      "href": "./security-trust-center.html",
@@ -220,7 +285,12 @@
      "pt": "Centro de confiança",
      "ro": "Centru de încredere",
      "sv": "Trustcenter",
-     "cs": "Centrum důvěry"
+     "cs": "Centrum důvěry",
+     "tr": "Güven merkezi",
+     "el": "Κέντρο εμπιστοσύνης",
+     "da": "Trustcenter",
+     "no": "Trustsenter",
+     "fi": "Luottamuskeskus"
     },
     {
      "href": "#",
@@ -236,7 +306,12 @@
      "pt": "Definições de análise",
      "ro": "Setări analitice",
      "sv": "Analysinställningar",
-     "cs": "Nastavení analytiky"
+     "cs": "Nastavení analytiky",
+     "tr": "Analiz ayarları",
+     "el": "Ρυθμίσεις ανάλυσης",
+     "da": "Analyseindstillinger",
+     "no": "Analyseinnstillinger",
+     "fi": "Analytiikka-asetukset"
     }
    ],
    "title_de": "Recht & Compliance",
@@ -248,7 +323,12 @@
    "title_pt": "Jurídico e conformidade",
    "title_ro": "Juridic și conformitate",
    "title_sv": "Juridik och efterlevnad",
-   "title_cs": "Právo a shoda"
+   "title_cs": "Právo a shoda",
+   "title_tr": "Hukuk ve uyum",
+   "title_el": "Νομικά & συμμόρφωση",
+   "title_da": "Jura og overholdelse",
+   "title_no": "Jus og etterlevelse",
+   "title_fi": "Juridiikka ja vaatimustenmukaisuus"
   },
   {
    "key": "contact",
@@ -268,7 +348,12 @@
      "pt": "info@sr-coresync.com",
      "ro": "info@sr-coresync.com",
      "sv": "info@sr-coresync.com",
-     "cs": "info@sr-coresync.com"
+     "cs": "info@sr-coresync.com",
+     "tr": "info@sr-coresync.com",
+     "el": "info@sr-coresync.com",
+     "da": "info@sr-coresync.com",
+     "no": "info@sr-coresync.com",
+     "fi": "info@sr-coresync.com"
     },
     {
      "href": "tel:+31618111116",
@@ -283,7 +368,12 @@
      "pt": "+31 6 1811 1116",
      "ro": "+31 6 1811 1116",
      "sv": "+31 6 1811 1116",
-     "cs": "+31 6 1811 1116"
+     "cs": "+31 6 1811 1116",
+     "tr": "+31 6 1811 1116",
+     "el": "+31 6 1811 1116",
+     "da": "+31 6 1811 1116",
+     "no": "+31 6 1811 1116",
+     "fi": "+31 6 1811 1116"
     },
     {
      "href": "https://wa.me/31618111116",
@@ -298,7 +388,12 @@
      "pt": "WhatsApp",
      "ro": "WhatsApp",
      "sv": "WhatsApp",
-     "cs": "WhatsApp"
+     "cs": "WhatsApp",
+     "tr": "WhatsApp",
+     "el": "WhatsApp",
+     "da": "WhatsApp",
+     "no": "WhatsApp",
+     "fi": "WhatsApp"
     },
     {
      "href": "./index.html#contact",
@@ -313,7 +408,12 @@
      "pt": "Marcar uma consulta",
      "ro": "Rezervă o consultație",
      "sv": "Boka en konsultation",
-     "cs": "Rezervovat konzultaci"
+     "cs": "Rezervovat konzultaci",
+     "tr": "Danışmanlık randevusu",
+     "el": "Κλείστε μια συμβουλευτική",
+     "da": "Book en konsultation",
+     "no": "Book en konsultasjon",
+     "fi": "Varaa konsultaatio"
     }
    ],
    "title_de": "Kontakt",
@@ -325,7 +425,12 @@
    "title_pt": "Contacto",
    "title_ro": "Contact",
    "title_sv": "Kontakt",
-   "title_cs": "Kontakt"
+   "title_cs": "Kontakt",
+   "title_tr": "İletişim",
+   "title_el": "Επικοινωνία",
+   "title_da": "Kontakt",
+   "title_no": "Kontakt",
+   "title_fi": "Yhteystiedot"
   }
  ],
  "legal_line": {
@@ -340,7 +445,12 @@
   "pt": "© 2026 S&R CoreSync For Intelligent Solutions — Todos os direitos reservados.",
   "ro": "© 2026 S&R CoreSync For Intelligent Solutions — Toate drepturile rezervate.",
   "sv": "© 2026 S&R CoreSync For Intelligent Solutions — Alla rättigheter förbehållna.",
-  "cs": "© 2026 S&R CoreSync For Intelligent Solutions — Všechna práva vyhrazena."
+  "cs": "© 2026 S&R CoreSync For Intelligent Solutions — Všechna práva vyhrazena.",
+  "tr": "© 2026 S&R CoreSync For Intelligent Solutions — Tüm hakları saklıdır.",
+  "el": "© 2026 S&R CoreSync For Intelligent Solutions — Όλα τα δικαιώματα διατηρούνται.",
+  "da": "© 2026 S&R CoreSync For Intelligent Solutions — Alle rettigheder forbeholdes.",
+  "no": "© 2026 S&R CoreSync For Intelligent Solutions — Alle rettigheter forbeholdt.",
+  "fi": "© 2026 S&R CoreSync For Intelligent Solutions — Kaikki oikeudet pidätetään."
  },
  "tagline": {
   "ar": "هندسة المنظومات السيادية من أمستردام",
@@ -354,6 +464,11 @@
   "pt": "Engenharia de sistemas soberanos de Amesterdão",
   "ro": "Inginerie de sisteme suverane din Amsterdam",
   "sv": "Suverän systemteknik från Amsterdam",
-  "cs": "Suverénní systémové inženýrství z Amsterdamu"
+  "cs": "Suverénní systémové inženýrství z Amsterdamu",
+  "tr": "Amsterdam'dan egemen sistem mühendisliği",
+  "el": "Κυρίαρχη μηχανική συστημάτων από το Άμστερνταμ",
+  "da": "Suveræn systemteknik fra Amsterdam",
+  "no": "Suveren systemteknikk fra Amsterdam",
+  "fi": "Suvereenia järjestelmäsuunnittelua Amsterdamista"
  }
 }
