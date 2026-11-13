@@ -2477,9 +2477,7 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
    window-controls-overlay يرسم أزرار الإغلاق/التكبير فوق الصفحة.
    env(titlebar-area-height) هو الارتفاع الذي يحجزه النظام لها. */
 @media (display-mode: window-controls-overlay){
-  body{padding-top:env(titlebar-area-height, 0px) !important}
   .tf-header{top:env(titlebar-area-height, 0px) !important}
-  .floating-follow{top:calc(env(titlebar-area-height, 0px) + 12px) !important}
   .sr-tools-capsule{bottom:calc(env(titlebar-area-bottom, 0px) + 22px) !important}
 }
 /* احتياط: بعض المتصفحات تعلن standalone مع شريط عنوان مرسوم فوق الصفحة */
