@@ -30,7 +30,8 @@
     {"href": "./privacy.html", "ar": "الخصوصية والكوكيز", "en": "Privacy & cookies"},
     {"href": "./terms.html", "ar": "الشروط والأحكام", "en": "Terms"},
     {"href": "./verify.html", "ar": "التحقق من المستندات", "en": "Verify a document"},
-    {"href": "./security-trust-center.html", "ar": "مركز الثقة", "en": "Trust centre"}
+    {"href": "./security-trust-center.html", "ar": "مركز الثقة", "en": "Trust centre"},
+    {"href": "#", "srCall": "openConsent", "ar": "إعدادات التحليلات", "en": "Analytics settings"}
    ]
   },
   {

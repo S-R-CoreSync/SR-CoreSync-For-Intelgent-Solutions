@@ -55,7 +55,9 @@ def render(model, lang):
     cols = []
     for b in model['blocks']:
         items = ''.join(
-            '<li><a href="%s">%s</a></li>' % (l['href'], label(l, lang))
+            ('<li><a href="#" data-sr-call="%s">%s</a></li>' % (l['srCall'], label(l, lang)))
+            if l.get('srCall') else
+            ('<li><a href="%s">%s</a></li>' % (l['href'], label(l, lang)))
             for l in b['links']
         )
         cols.append('<div class="srf__col"><h3>%s</h3><ul>%s</ul></div>' % (
