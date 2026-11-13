@@ -725,6 +725,10 @@ html[dir="ltr"] .hv2__chips .hv2__chiprow{direction:ltr !important; justify-cont
 html[dir="ltr"] .hv2__badge, html[dir="ltr"] .hv2__h1{text-align:left !important}
 html[dir="ltr"] .hv2__rot span{inset-inline-start:0}
 
+
+/* legacy hero remnants must not survive beside the new hero */
+#hero > *:not(.hv2):not(.hero-motion-canvas):not(.overlay){display:none !important}
+#hero .hero-sectors-marquee, #hero .hero-compact-sectors-row{display:none !important}
 </style>
 </head>
 
