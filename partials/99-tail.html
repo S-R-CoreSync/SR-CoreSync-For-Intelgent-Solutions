@@ -1,0 +1,116 @@
+
+<script src="js/sr-hero-fit.js?v=20261112" defer></script>
+<script>
+(function(){
+  'use strict';
+  var rot = document.getElementById('hv2-rot');
+  if (rot){
+    var items = Array.prototype.slice.call(rot.children), idx = 0;
+    setInterval(function(){
+      items[idx].classList.remove('is-on');
+      idx = (idx + 1) % items.length;
+      items[idx].classList.add('is-on');
+    }, 3200);
+  }
+  var ai = document.getElementById('hv2-ai');
+  if (ai){
+    ai.addEventListener('click', function(){
+      if (typeof window.openAiEstimatorModal === 'function'){ window.openAiEstimatorModal(''); }
+      else { var t = document.getElementById('services'); if (t){ t.scrollIntoView({behavior:'smooth'}); } }
+    });
+  }
+})();
+</script>
+<script id="hv2-dom-order">
+(function(){
+  'use strict';
+  function apply(){
+    /* 1) الشعار إلى اليسار: نقله ليكون آخر عمود في صف الهيدر (RTL: الأخير = يسار) */
+    var row = document.querySelector('.header-row-layout');
+    var brand = row && row.querySelector('.header-col-brand');
+    if (row && brand && row.lastElementChild !== brand) {
+      row.appendChild(brand);
+      /* الصفحة تفرض order في ورقتها، فنفرض ترتيبنا مضمّناً بـ!important */
+      var navCol = row.querySelector('.header-col-nav');
+      var actCol = row.querySelector('.header-col-actions');
+      brand.style.setProperty('order', '3', 'important');
+      if (navCol) { navCol.style.setProperty('order', '1', 'important'); }
+      if (actCol) { actCol.style.setProperty('order', '2', 'important'); }
+      var heroEl = document.getElementById('hero');
+      if (heroEl) { heroEl.style.removeProperty('padding-bottom'); }
+    }
+    /* 2) رصيف التواصل إلى الحافة اليمنى — نمط مضمّن بـ!important يتفوّق على أي ورقة */
+    var rail = document.querySelector('.floating-follow');
+    if (rail) {
+      rail.style.setProperty('left', 'auto', 'important');
+      rail.style.setProperty('right', '14px', 'important');
+    }
+    /* 3) زر تثبيت التطبيق: من أسفل يسار إلى الحافة اليمنى (نفس حافة الدوك) */
+    var pwa = document.getElementById('srPwaFloatingWidget');
+    if (pwa) {
+      pwa.style.setProperty('left', 'auto', 'important');
+      pwa.style.setProperty('right', '24px', 'important');
+      pwa.style.setProperty('bottom', '24px', 'important');
+    }
+    /* 4) قياس الحزام السفلي بعد ظهور شريط الموافقة */
+    measureBelt();
+  }
+
+  function measureBelt(){
+    var h = 0;
+    ['srPrivacyBannerWrap', 'srQuickDockContainer'].forEach(function(id){
+      var el = document.getElementById(id);
+      if (!el) { return; }
+      var s = getComputedStyle(el);
+      if (s.display === 'none' || s.visibility === 'hidden' || s.opacity === '0') { return; }
+      h = Math.max(h, el.getBoundingClientRect().height || 0);
+    });
+    if (!h || h < 40) { h = 120; }
+    document.documentElement.style.setProperty('--chrome-h', Math.round(h + 16) + 'px');
+    /* شريطا الموافقة يُقاسان منفصلين: هما ما يحجز لهما الهيرو والدوك مكاناً */
+    var pb = document.getElementById('srPrivacyBannerWrap'), ph = 0;
+    if (pb) {
+      var ps = getComputedStyle(pb);
+      if (ps.display !== 'none' && ps.visibility !== 'hidden') {
+        var pr = pb.getBoundingClientRect();
+        if (pr.height > 4) { ph = Math.max(pr.height, window.innerHeight - pr.top); }
+      }
+    }
+    document.documentElement.style.setProperty('--privacy-h', Math.round(ph) + 'px');
+    var c = document.querySelector('.sr-consent'), ch = 0;
+    if (c) {
+      var cs = getComputedStyle(c);
+      if (cs.display !== 'none' && cs.visibility !== 'hidden') {
+        var cr = c.getBoundingClientRect(); ch = Math.max(cr.height || 0, window.innerHeight - cr.top);
+      }
+    }
+    document.documentElement.style.setProperty('--consent-h', Math.round(ch) + 'px');
+    var heroEl2 = document.getElementById('hero');
+    if (heroEl2) {
+      var budget = Math.round(window.innerHeight - 142 - ch - ph);
+      heroEl2.style.setProperty('min-height', Math.max(460, budget) + 'px', 'important');
+    }
+  }
+
+  window.__hv2Belt = measureBelt;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+  window.addEventListener('load', apply);
+  setTimeout(apply, 600);
+  setTimeout(apply, 1800);
+  window.addEventListener('resize', measureBelt, { passive: true });
+  /* شريط الموافقة يُحقن لاحقاً (1.4s) — نعيد القياس عند ظهوره أو اختفائه */
+  if (window.MutationObserver) {
+    new MutationObserver(function(){ measureBelt(); })
+      .observe(document.body, { childList: true, attributes: true, attributeFilter: ['class','style'] });
+  }
+})();
+</script>
+<script src="js/sr-lang-map.js?v=20261112-v17" defer></script>
+<script src="js/sr-dock-merge.js?v=20261113f" defer></script>
+</body>
+
+</html>
