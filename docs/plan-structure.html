@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>خطة البنية — من 28 نسخة إلى مصدر واحد</title>
+<style>
+@page{size:A4;margin:15mm 13mm}
+body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;color:#16202b;font-size:10.5pt;line-height:1.7;margin:0;background:#fff}
+h1{font-size:21pt;margin:0 0 6px}
+h2{font-size:13.5pt;margin:20px 0 6px;color:#8a6d1f;border-bottom:1.5px solid #d4af37;padding-bottom:4px}
+h3{font-size:11pt;margin:12px 0 3px}
+p{margin:4px 0 8px}
+ul,ol{margin:4px 0 10px;padding-inline-start:20px}
+li{margin:3px 0}
+.cover{border:1px solid #d4af37;border-radius:12px;padding:16px 18px;margin-bottom:16px;background:linear-gradient(135deg,#fbf7ea,#fff)}
+.badge{display:inline-block;background:#0d1b26;color:#f3dfba;border-radius:999px;padding:3px 10px;font-size:8.5pt}
+.sub{color:#6b7785;font-size:9.5pt}
+table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:9.5pt}
+th,td{border:1px solid #dfe3e8;padding:6px 8px;text-align:start;vertical-align:top}
+th{background:#f4f6f8}
+code{font-family:Consolas,monospace;direction:ltr;unicode-bidi:embed;font-size:9pt}
+.box{border:1px solid #e3e7ec;border-radius:10px;padding:10px 14px;margin:8px 0;background:#fafbfc}
+.warn{border-inline-start:4px solid #c0392b;background:#fdf3f2}
+.ok{border-inline-start:4px solid #1e8449;background:#f2fbf5}
+.risk{border-inline-start:4px solid #b9770e;background:#fffaf0}
+.kpi{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kpi div{border:1px solid #e3e7ec;border-radius:10px;padding:8px 12px;min-width:130px}
+.kpi b{display:block;font-size:14pt;color:#0d1b26}
+.kpi span{font-size:8.5pt;color:#6b7785}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <span class="badge">خطة مرئية · تُقرأ قبل التنفيذ</span>
+  <h1>من 28 نسخة إلى مصدر واحد</h1>
+  <p class="sub">مشروع البنية · نسخة 1 · 13 نوفمبر 2026 · لا يُنفَّذ سطر واحد قبل موافقتك</p>
+</div>
+
+<h2>1 · الهدف</h2>
+<p>أن يصبح لكل ما يظهر في الموقع <strong>مصدر واحد</strong>: نعدّله مرة، فيظهر في 28 صفحة بلا نسخ يدوي ولا أدوات مزامنة جديدة لكل ميزة.</p>
+
+<h2>2 · الحالة اليوم — بالأرقام</h2>
+<div class="kpi">
+  <div><b>28</b><span>صفحة HTML مستقلة</span></div>
+  <div><b>≈640KB</b><span>حجم الصفحة الواحدة</span></div>
+  <div><b>187MB</b><span>طقم النشر</span></div>
+  <div><b>4</b><span>أدوات مزامنة</span></div>
+</div>
+<ul>
+  <li><code>index.html</code> هو «الأم» بالاسم فقط — لا يربطه بالنسخ أي آلية.</li>
+  <li>الهيرو: منطقة مُعلَّمة + <code>sync_locales.py</code>.</li>
+  <li>القائمة: مكتوبة في الوسم + <code>sync_nav.py</code>.</li>
+  <li>الفوتر: نموذج + <code>apply_footer_all.py</code>.</li>
+  <li>الأقسام: <strong>غير موحّدة</strong> — الجذر رُتِّب، والـ27 على ترتيبها القديم.</li>
+</ul>
+
+<h2>3 · لماذا هذا لا يكفي</h2>
+<ol>
+  <li><strong>كل ميزة جديدة تحتاج أداة جديدة.</strong> أضفنا ثلاث أدوات في أسبوع؛ الرابعة ستأتي مع أول قسم جديد.</li>
+  <li><strong>الانحراف صامت.</strong> صفحة واحدة لم تُزامَن = عطل يظهر للزبون فقط.</li>
+  <li><strong>التكلفة تُدفع في كل مرة.</strong> تعديل بسيط = 28 ملفاً في المستودع، ومراجعة صعبة، ومساحة أخطاء أكبر.</li>
+  <li><strong>الترتيب مختلف بين اللغات</strong> — وهو ما لاحظته بنفسك.</li>
+</ol>
+
+<h2>4 · الخيارات الثلاثة</h2>
+<table>
+<tr><th>الخيار</th><th>كيف يعمل</th><th>الميزة</th><th>الثمن</th></tr>
+<tr>
+  <td><strong>A · قوالب + بناء</strong><br><span class="sub">التوصية</span></td>
+  <td>هيدر/هيرو/فوتر/أقسام تصبح قوالب، وبيانات كل لغة في JSON، وسكربت بناء يولّد 28 صفحة.</td>
+  <td>مصدر واحد حقيقي · ترتيب موحّد · إضافة لغة = ملف بيانات</td>
+  <td>ترحيل أولي كبير (3–5 جلسات) · مخاطرة عالية في البداية</td>
+</tr>
+<tr>
+  <td>B · تجميع أقسام</td>
+  <td>تبقى الصفحات، لكن كل قسم يُسحب من ملف واحد عند البناء.</td>
+  <td>خطوة وسطى أسرع</td>
+  <td>لا تحلّ تعدد الصفحات، فقط تعدد الأقسام</td>
+</tr>
+<tr>
+  <td>C · الوضع الحالي</td>
+  <td>مزامنة بأدوات مختلفة لكل منطقة.</td>
+  <td>لا مخاطرة اليوم</td>
+  <td>الدين يتراكم · كل ميزة = أداة</td>
+</tr>
+</table>
+
+<h2>5 · التوصية</h2>
+<div class="box ok"><strong>A على أربع مراحل، وC جسراً حتى تكتمل.</strong> لا نُلغي الأدوات الحالية؛ نُبقيها تعمل حتى يتولّى البناء مكانها، ثم نحذفها.</div>
+
+<h2>6 · المراحل ومعايير القبول</h2>
+<table>
+<tr><th>المرحلة</th><th>العمل</th><th>معيار القبول</th><th>التراجع</th></tr>
+<tr>
+  <td><strong>P1</strong><br>الهيكل</td>
+  <td>استخراج الهيدر والهيرو والفوتر والقائمة إلى <code>partials/</code> + قالب واحد + سكربت بناء.</td>
+  <td><strong>اختبار ذهاب وعودة:</strong> الناتج من القالب = <code>index.html</code> الحالي حرفاً بحرف (بعد تطبيع المسافات).</td>
+  <td>حذف مجلد <code>partials/</code> — الملف الأصلي لم يُمسّ.</td>
+</tr>
+<tr>
+  <td><strong>P2</strong><br>اللغات</td>
+  <td>القالب نفسه يُنتج 27 صفحة من <code>i18n/locales/*.json</code> + نصوص الصفحة.</td>
+  <td>صفحة واحدة (en) تُطابق الحالية بصرياً · <code>parity</code> و<code>containment</code> خضراوان.</td>
+  <td>البناء لا يُشغَّل؛ الصفحات القديمة تبقى.</td>
+</tr>
+<tr>
+  <td><strong>P3</strong><br>الأقسام</td>
+  <td>ترتيب الأقسام يُعرَّف في ملف واحد ويُولَّد في كل صفحة.</td>
+  <td>ترتيب واحد في 28 صفحة: خدمات → أسعار → متجر → نبذة → قيادة.</td>
+  <td>إعادة تشغيل البناء بالترتيب القديم.</td>
+</tr>
+<tr>
+  <td><strong>P4</strong><br>التحويل</td>
+  <td>البناء يصبح المصدر، والأدوات القديمة تُحذف.</td>
+  <td>البوابات الإحدى عشرة + حارسا الانحراف أخضران، والحجم لا يزيد.</td>
+  <td>العودة إلى الالتزام السابق خلال دقيقة.</td>
+</tr>
+</table>
+
+<h2>7 · ما لا يُلمس في هذا المشروع</h2>
+<ul>
+  <li><code>sw.js</code> (عامل الخدمة) و<code>manifest.json</code>.</li>
+  <li>ملفات الأصول الثقيلة (4K) وقواعد استبعاد طقم النشر.</li>
+  <li>بصمات CSP: أي سكربت جديد يُضاف كملف خارجي لا مضمّن.</li>
+  <li>الترتيب الحالي للجذر ونصوصه — لا تغيير محتوى في P1.</li>
+</ul>
+
+<h2>8 · المخاطر</h2>
+<table>
+<tr><th>الخطر</th><th>الاحتمال</th><th>الوقاية</th></tr>
+<tr><td>البناء ينتج فرقاً حرفياً في P1</td><td>مرتفع</td><td>اختبار ذهاب وعودة يفشل البناء إن اختلف حرف</td></tr>
+<tr><td>كسر صفحة لغوية</td><td>متوسط</td><td>مرحلة P2 على صفحة واحدة أولاً (en) ثم الأربع</td></tr>
+<tr><td>فقدان تحسينات SEO (hreflang، JSON-LD)</td><td>متوسط</td><td>فحص <code>audit_seo</code> بعد كل مرحلة</td></tr>
+<tr><td>تضخّم الوقت</td><td>مؤكد</td><td>كل مرحلة تُسلَّم وحدها، وقابلة للتوقف</td></tr>
+</table>
+
+<h2>9 · الجدول التقديري</h2>
+<p>P1: جلستان · P2: جلسة إلى جلستين · P3: جلسة · P4: جلسة. <strong>المجموع 5–6 جلسات</strong>، كل واحدة تُنشر وحدها.</p>
+
+<h2>10 · القرار المطلوب منك</h2>
+<ol>
+  <li>هل نبدأ <strong>P1</strong> الآن (استخراج الهيكل + اختبار الذهاب والعودة)؟ <span class="sub">لا تغيير ظاهر في هذه المرحلة إطلاقاً.</span></li>
+  <li>أم تريد تأجيل المشروع كله والاكتفاء بالأدوات الحالية؟</li>
+</ol>
+<div class="box warn"><strong>ما لن أفعله:</strong> لن ألمس <code>index.html</code> في P1. العمل كله في مجلد جديد، والدليل الوحيد على النجاح أن يُعيد البناء إنتاج الملف الحالي حرفاً بحرف.</div>
+
+</body>
+</html>
