@@ -8,53 +8,237 @@
    "title": "الخدمات",
    "title_en": "Services",
    "links": [
-    {"href": "./software.html", "ar": "البرمجيات السحابية", "en": "Cloud software"},
-    {"href": "./work.html#platforms", "ar": "المنصات الجاهزة", "en": "Ready platforms"},
-    {"href": "./whitelabel-calculator.html", "ar": "حاسبة التراخيص", "en": "Licence calculator"},
-    {"href": "./estimator.html", "ar": "حاسبة المشاريع", "en": "Project estimator"}
-   ]
+    {
+     "href": "./software.html",
+     "ar": "البرمجيات السحابية",
+     "en": "Cloud software",
+     "de": "Cloud-Software",
+     "nl": "Cloudsoftware",
+     "fr": "Logiciel cloud",
+     "es": "Software cloud",
+     "it": "Software cloud"
+    },
+    {
+     "href": "./work.html#platforms",
+     "ar": "المنصات الجاهزة",
+     "en": "Ready platforms",
+     "de": "Fertige Plattformen",
+     "nl": "Kant-en-klare platforms",
+     "fr": "Plateformes prêtes",
+     "es": "Plataformas listas",
+     "it": "Piattaforme pronte"
+    },
+    {
+     "href": "./whitelabel-calculator.html",
+     "ar": "حاسبة التراخيص",
+     "en": "Licence calculator",
+     "de": "Lizenzrechner",
+     "nl": "Licentiecalculator",
+     "fr": "Calculateur de licences",
+     "es": "Calculadora de licencias",
+     "it": "Calcolatore licenze"
+    },
+    {
+     "href": "./estimator.html",
+     "ar": "حاسبة المشاريع",
+     "en": "Project estimator",
+     "de": "Projekt-Kalkulator",
+     "nl": "Projectcalculator",
+     "fr": "Estimateur de projet",
+     "es": "Estimador de proyectos",
+     "it": "Stima progetto"
+    }
+   ],
+   "title_de": "Leistungen",
+   "title_nl": "Diensten",
+   "title_fr": "Services",
+   "title_es": "Servicios",
+   "title_it": "Servizi"
   },
   {
    "key": "company",
    "title": "الشركة",
    "title_en": "Company",
    "links": [
-    {"href": "./index.html#about", "ar": "نبذة عن الشركة", "en": "About the company"},
-    {"href": "./index.html#founders-showcase", "ar": "القيادة التنفيذية", "en": "Leadership"},
-    {"href": "./work.html", "ar": "معرض الأعمال", "en": "Portfolio"},
-    {"href": "./blog.html", "ar": "المدونة", "en": "Journal"}
-   ]
+    {
+     "href": "./index.html#about",
+     "ar": "نبذة عن الشركة",
+     "en": "About the company",
+     "de": "Über das Unternehmen",
+     "nl": "Over het bedrijf",
+     "fr": "À propos",
+     "es": "Sobre la empresa",
+     "it": "Chi siamo"
+    },
+    {
+     "href": "./index.html#founders-showcase",
+     "ar": "القيادة التنفيذية",
+     "en": "Leadership",
+     "de": "Geschäftsführung",
+     "nl": "Directie",
+     "fr": "Direction",
+     "es": "Dirección",
+     "it": "Direzione"
+    },
+    {
+     "href": "./work.html",
+     "ar": "معرض الأعمال",
+     "en": "Portfolio",
+     "de": "Referenzen",
+     "nl": "Portfolio",
+     "fr": "Réalisations",
+     "es": "Portafolio",
+     "it": "Portfolio"
+    },
+    {
+     "href": "./blog.html",
+     "ar": "المدونة",
+     "en": "Journal",
+     "de": "Journal",
+     "nl": "Journaal",
+     "fr": "Journal",
+     "es": "Revista",
+     "it": "Journal"
+    }
+   ],
+   "title_de": "Unternehmen",
+   "title_nl": "Bedrijf",
+   "title_fr": "Entreprise",
+   "title_es": "Empresa",
+   "title_it": "Azienda"
   },
   {
    "key": "legal",
    "title": "القانون والامتثال",
    "title_en": "Legal & compliance",
    "links": [
-    {"href": "./privacy.html", "ar": "الخصوصية والكوكيز", "en": "Privacy & cookies"},
-    {"href": "./terms.html", "ar": "الشروط والأحكام", "en": "Terms"},
-    {"href": "./verify.html", "ar": "التحقق من المستندات", "en": "Verify a document"},
-    {"href": "./security-trust-center.html", "ar": "مركز الثقة", "en": "Trust centre"},
-    {"href": "#", "srCall": "openConsent", "ar": "إعدادات التحليلات", "en": "Analytics settings"}
-   ]
+    {
+     "href": "./privacy.html",
+     "ar": "الخصوصية والكوكيز",
+     "en": "Privacy & cookies",
+     "de": "Datenschutz & Cookies",
+     "nl": "Privacy & cookies",
+     "fr": "Confidentialité & cookies",
+     "es": "Privacidad y cookies",
+     "it": "Privacy e cookie"
+    },
+    {
+     "href": "./terms.html",
+     "ar": "الشروط والأحكام",
+     "en": "Terms",
+     "de": "AGB",
+     "nl": "Voorwaarden",
+     "fr": "Conditions",
+     "es": "Términos",
+     "it": "Termini"
+    },
+    {
+     "href": "./verify.html",
+     "ar": "التحقق من المستندات",
+     "en": "Verify a document",
+     "de": "Dokument prüfen",
+     "nl": "Document verifiëren",
+     "fr": "Vérifier un document",
+     "es": "Verificar un documento",
+     "it": "Verifica un documento"
+    },
+    {
+     "href": "./security-trust-center.html",
+     "ar": "مركز الثقة",
+     "en": "Trust centre",
+     "de": "Trust Center",
+     "nl": "Trustcentrum",
+     "fr": "Centre de confiance",
+     "es": "Centro de confianza",
+     "it": "Centro fiducia"
+    },
+    {
+     "href": "#",
+     "srCall": "openConsent",
+     "ar": "إعدادات التحليلات",
+     "en": "Analytics settings",
+     "de": "Analyse-Einstellungen",
+     "nl": "Analyse-instellingen",
+     "fr": "Paramètres d'analyse",
+     "es": "Ajustes de analítica",
+     "it": "Impostazioni analisi"
+    }
+   ],
+   "title_de": "Recht & Compliance",
+   "title_nl": "Juridisch & compliance",
+   "title_fr": "Juridique & conformité",
+   "title_es": "Legal y cumplimiento",
+   "title_it": "Legale e conformità"
   },
   {
    "key": "contact",
    "title": "التواصل",
    "title_en": "Contact",
    "links": [
-    {"href": "mailto:info@sr-coresync.com", "ar": "info@sr-coresync.com", "en": "info@sr-coresync.com"},
-    {"href": "tel:+31618111116", "ar": "‎+31 6 1811 1116", "en": "+31 6 1811 1116"},
-    {"href": "https://wa.me/31618111116", "ar": "واتساب مباشر", "en": "WhatsApp"},
-    {"href": "./index.html#contact", "ar": "حجز استشارة", "en": "Book a consultation"}
-   ]
+    {
+     "href": "mailto:info@sr-coresync.com",
+     "ar": "info@sr-coresync.com",
+     "en": "info@sr-coresync.com",
+     "de": "info@sr-coresync.com",
+     "nl": "info@sr-coresync.com",
+     "fr": "info@sr-coresync.com",
+     "es": "info@sr-coresync.com",
+     "it": "info@sr-coresync.com"
+    },
+    {
+     "href": "tel:+31618111116",
+     "ar": "‎+31 6 1811 1116",
+     "en": "+31 6 1811 1116",
+     "de": "+31 6 1811 1116",
+     "nl": "+31 6 1811 1116",
+     "fr": "+31 6 1811 1116",
+     "es": "+31 6 1811 1116",
+     "it": "+31 6 1811 1116"
+    },
+    {
+     "href": "https://wa.me/31618111116",
+     "ar": "واتساب مباشر",
+     "en": "WhatsApp",
+     "de": "WhatsApp",
+     "nl": "WhatsApp",
+     "fr": "WhatsApp",
+     "es": "WhatsApp",
+     "it": "WhatsApp"
+    },
+    {
+     "href": "./index.html#contact",
+     "ar": "حجز استشارة",
+     "en": "Book a consultation",
+     "de": "Beratung buchen",
+     "nl": "Adviesgesprek boeken",
+     "fr": "Réserver une consultation",
+     "es": "Reservar una consulta",
+     "it": "Prenota una consulenza"
+    }
+   ],
+   "title_de": "Kontakt",
+   "title_nl": "Contact",
+   "title_fr": "Contact",
+   "title_es": "Contacto",
+   "title_it": "Contatti"
   }
  ],
  "legal_line": {
   "ar": "© 2026 S&R CoreSync For Intelligent Solutions — جميع الحقوق محفوظة.",
-  "en": "© 2026 S&R CoreSync For Intelligent Solutions — All rights reserved."
+  "en": "© 2026 S&R CoreSync For Intelligent Solutions — All rights reserved.",
+  "de": "© 2026 S&R CoreSync For Intelligent Solutions — Alle Rechte vorbehalten.",
+  "nl": "© 2026 S&R CoreSync For Intelligent Solutions — Alle rechten voorbehouden.",
+  "fr": "© 2026 S&R CoreSync For Intelligent Solutions — Tous droits réservés.",
+  "es": "© 2026 S&R CoreSync For Intelligent Solutions — Todos los derechos reservados.",
+  "it": "© 2026 S&R CoreSync For Intelligent Solutions — Tutti i diritti riservati."
  },
  "tagline": {
   "ar": "هندسة المنظومات السيادية من أمستردام",
-  "en": "Sovereign systems engineering from Amsterdam"
+  "en": "Sovereign systems engineering from Amsterdam",
+  "de": "Souveräne Systemtechnik aus Amsterdam",
+  "nl": "Soevereine systeemtechniek uit Amsterdam",
+  "fr": "Ingénierie de systèmes souverains depuis Amsterdam",
+  "es": "Ingeniería de sistemas soberanos desde Ámsterdam",
+  "it": "Ingegneria di sistemi sovrani da Amsterdam"
  }
 }

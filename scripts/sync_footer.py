@@ -70,7 +70,7 @@ def render(model, lang, base='', labels=None):
             for l in b['links']
         )
         cols.append('<div class="srf__col"><h3>%s</h3><ul>%s</ul></div>' % (
-            b['title'] if rtl else b['title_en'] if 'title_en' in b else b['title'], items))
+            b.get('title_' + lang) or (b['title'] if rtl else b.get('title_en') or b['title']), items))
     return ('<footer class="srf" id="srf-footer" role="contentinfo" dir="%s">'
             '<div class="srf__inner">'
             '<div class="srf__brand"><div class="srf__mark">'
