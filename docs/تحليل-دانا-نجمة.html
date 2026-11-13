@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>تحليل تقني لموقع دانا نجمة — dananajmah.com</title>
+<style>
+  @page { size: A4; margin: 16mm 14mm 18mm; }
+  * { box-sizing: border-box; }
+  body{
+    font-family:'Segoe UI', Tahoma, Arial, sans-serif;
+    color:#14181f; background:#fff; margin:0;
+    font-size:10.6pt; line-height:1.75; direction:rtl;
+  }
+  h1{font-size:23pt;line-height:1.35;margin:0 0 6px;color:#0d1b2a}
+  h2{font-size:14.5pt;margin:26px 0 8px;color:#8a6a12;border-bottom:2px solid #e3d3a3;padding-bottom:5px;page-break-after:avoid}
+  h3{font-size:11.6pt;margin:16px 0 4px;color:#1b2a3a;page-break-after:avoid}
+  p{margin:0 0 8px;text-align:justify}
+  ul,ol{margin:0 0 9px;padding-inline-start:20px}
+  li{margin-bottom:4px}
+  small{color:#5b6572}
+  code{
+    font-family:'Cascadia Mono', Consolas, monospace; font-size:8.9pt;
+    background:#f4f1e8; padding:1px 4px; border-radius:3px; direction:ltr; unicode-bidi:embed;
+  }
+  pre{
+    font-family:'Cascadia Mono', Consolas, monospace; font-size:8.4pt; line-height:1.55;
+    background:#f7f6f2; border:1px solid #e6e2d6; border-inline-start:3px solid #d4af37;
+    padding:8px 10px; border-radius:4px; direction:ltr; text-align:left; overflow:visible;
+    white-space:pre-wrap; page-break-inside:avoid;
+  }
+  table{width:100%;border-collapse:collapse;margin:8px 0 12px;font-size:9.3pt;page-break-inside:avoid}
+  th{background:#f6f2e6;color:#5f4a0d;font-weight:600;text-align:right;padding:5px 7px;border:1px solid #e2dcc9}
+  td{padding:4px 7px;border:1px solid #e8e4d8;vertical-align:top}
+  tr:nth-child(even) td{background:#fbfaf6}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .cover{height:246mm;display:flex;flex-direction:column;justify-content:flex-start;padding-top:58mm;page-break-after:always}
+  .kicker{font-size:9.5pt;letter-spacing:2px;color:#8a6a12;margin-bottom:10px}
+  .rule{height:3px;width:88px;background:linear-gradient(90deg,#d4af37,#8a6a12);margin:14px 0 18px}
+  .lede{font-size:12pt;color:#33404f;max-width:150mm}
+  .meta{margin-top:26px;font-size:9.2pt;color:#5b6572}
+  .meta b{color:#14181f;font-weight:600}
+  .box{border:1px solid #e6e0cc;background:#fbf9f2;border-radius:6px;padding:10px 13px;margin:10px 0 12px;page-break-inside:avoid}
+  .box h3{margin-top:0}
+  .warn{border-color:#e8cfc2;background:#fdf6f2}
+  .good{border-color:#cfe3d2;background:#f4faf5}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .kv{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed #e8e4d8;padding:3px 0}
+  .kv:last-child{border-bottom:0}
+  .kv span:first-child{color:#5b6572}
+  .kv span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+  .tag{display:inline-block;font-size:8pt;padding:1px 7px;border-radius:10px;border:1px solid #d8d2c0;color:#6a5a2a;background:#faf7ee;margin-inline-start:4px}
+  .p0{color:#a12a1e;font-weight:700}
+  .p1{color:#a1761e;font-weight:700}
+  .p2{color:#2f6b46;font-weight:700}
+  footer{margin-top:22px;padding-top:8px;border-top:1px solid #e8e4d8;font-size:8.4pt;color:#6b7480}
+  .pbreak{page-break-before:always}
+  .toc ol{font-size:10pt}
+  .toc li{margin-bottom:2px}
+</style>
+</head>
+<body>
+
+<!-- ═════════ الغلاف ═════════ -->
+<div class="cover">
+  <div class="kicker">تقرير تحليل تقني · سري</div>
+  <h1>دانا نجمة<br><span style="font-size:16pt;color:#4a5563;font-weight:400">كيف بُني موقع dananajmah.com — وتقنيات اللغة فيه</span></h1>
+  <div class="rule"></div>
+  <p class="lede">تحليل مقيس بالبايت لأربع لغات، لطبقة الواجهة، وللبنية التحتية — ثم خطة عمل قابلة للتنفيذ على موقعك <b>S&amp;R CoreSync</b>.</p>
+  <div class="meta">
+    <div><b>تاريخ الفحص:</b> 14 نوفمبر 2026</div>
+    <div><b>النطاق:</b> <code>/</code> · <code>/en/</code> · <code>/nl/</code> · <code>/de/</code> + المدونة + الصفحات القانونية</div>
+    <div><b>الطريقة:</b> جلب HTTP خام + رؤوس الاستجابة + تنزيل الأصول وقياسها</div>
+    <div><b>إعداد:</b> AutoClaw — لمشروع S&amp;R CoreSync</div>
+  </div>
+</div>
+
+<!-- ═════════ المحتويات ═════════ -->
+<nav class="toc">
+<h2 style="margin-top:0">المحتويات</h2>
+<ol>
+  <li>الملخّص التنفيذي — سبع نتائج</li>
+  <li>المنهجية: ما قيس وكيف</li>
+  <li>البنية التحتية: من يخدّم الموقع فعلاً</li>
+  <li>طبقة الواجهة: HTML ثابت، حزمة واحدة، 26 سكربتاً</li>
+  <li><b>تقنيات اللغة</b> — الفصل الأهم
+    <ol>
+      <li>الإستراتيجية: أربع لغات بمسارات فرعية</li>
+      <li>أربع صفحات HTML مستقلة — لا ترجمة في المتصفح</li>
+      <li>إدارة الاتجاه: التخطيط LTR والنص RTL</li>
+      <li>مبدّل اللغة: قواعد اللعب الصحيحة</li>
+      <li>hreflang وcanonical وsitemap</li>
+      <li>الخطوط: تحميل مشروط بنطاق يونيكود</li>
+      <li>ثمن الاتجاه في CSS</li>
+      <li>ما لم يُفعله: لا تذكّر للغة، ولا تحويل تلقائي</li>
+    </ol>
+  </li>
+  <li>الأداء بالأرقام وثغراته الخمس</li>
+  <li>SEO والإتاحة</li>
+  <li>موقعك مقابل دانا نجمة — الفجوات المقيسة</li>
+  <li>خطة العمل: 12 خطوة مرتّبة بالأثر</li>
+  <li>الملاحق: جداول القياس</li>
+</ol>
+</nav>
+
+<!-- ═════════ 1 ═════════ -->
+<h2 class="pbreak">1 · الملخّص التنفيذي</h2>
+<p>هذا ليس موقع قوالب جاهزة. هو <b>موقع ثابت مبني بسكربت بناء خاص</b>، تُخدَم صفحاته الأربع كملفات HTML جاهزة، وتُجمَّع أنماطه في ملف واحد ببصمة، وتُخدَم كل أصوله من نطاقه. وخلف Cloudflare يقف Hostinger/LiteSpeed.</p>
+
+<div class="box">
+<h3>سبع نتائج تُختصر التقرير كله</h3>
+<div class="kv"><span>الترجمة</span><span>4 ملفات HTML مستقلة — لا JavaScript يترجم شيئاً</span></div>
+<div class="kv"><span>الاتجاه</span><span><code>dir</code> صحيح على <code>&lt;html&gt;</code> في كل نسخة</span></div>
+<div class="kv"><span>الربط بين اللغات</span><span>hreflang متبادل كامل يشمل المقالات المترجمة</span></div>
+<div class="kv"><span>المبدّل</span><span><code>&lt;details&gt;</code> + روابط <code>&lt;a&gt;</code> حقيقية — يعمل بلا JS</span></div>
+<div class="kv"><span>الخطوط</span><span>Alexandria محلي + <code>unicode-range</code> يُنزّله عند الحاجة فقط</span></div>
+<div class="kv"><span>الوزن الأول</span><span class="num">269 كB · 35 طلباً</span></div>
+<div class="kv"><span>أكبر ثغرة</span><span>خلفيتان PNG = 447 كB كانتا تكفيان 80 كB</span></div>
+</div>
+
+<p><b>الحكم على طبقة اللغة: 8.5/10.</b> تنفيذ يتجاوز أغلب مواقع المستقلين والوكالات الصغيرة. ينقصه التذكّر، ونظافة CSS، وتوحيد مفتاح الاتجاه.</p>
+<p><b>والخبر الأهم لك:</b> موقعك <b>S&amp;R CoreSync</b> يتقدّم على دانا نجمة في عدد اللغات (29 مقابل 4) وفي hreflang، لكنه يتأخر في ثلاثة أمور قابلة للإصلاح هذا الأسبوع: حجم HTML (782 كB مقابل 172 كB)، و17 ملف أنماط مقابل ملف واحد، وخطوط من Google مقابل خطوط محلية.</p>
+
+<!-- ═════════ 2 ═════════ -->
+<h2>2 · المنهجية</h2>
+<p>كل رقم في هذا التقرير مقيس، لا مقدَّر. لم أستخدم PageSpeed ولا أي أداة تُخمّن: نزّلت كل ملف ووزنته، وقرأت رؤوس الخادم كما أرسلها.</p>
+<table>
+<tr><th>ما قيس</th><th>كيف</th><th>حدّ الدقة</th></tr>
+<tr><td>حجم الصفحات الأربع</td><td>GET خام + فكّ ضغط + SHA-256</td><td>بايت دقيق</td></tr>
+<tr><td>الأصول (CSS/JS/صور/خطوط)</td><td>GET لكل مسار + <code>Content-Length</code></td><td>بايت دقيق</td></tr>
+<tr><td>البنية التحتية</td><td>رؤوس <code>server</code>, <code>alt-svc</code>, CSP, HSTS</td><td>كما تعلن</td></tr>
+<tr><td>الترجمة</td><td>عدّ كلمات وظيفية مميزة لكل لغة في مصدر HTML</td><td>يُثبت وجود النص لا جودته</td></tr>
+<tr><td>hreflang</td><td>اختبار كل هدف بإعادة توجيه وحالة 200</td><td>مؤكد</td></tr>
+<tr><td>السلوك (تحويل، تذكّر)</td><td>طلبات بـ<code>Accept-Language</code> مختلفة + قراءة JS</td><td>مؤكد</td></tr>
+</table>
+<p><small>ما لم يُقَس: بيانات الميدان (CrUX) وتغطية JS الفعلية وتباين الألوان — تحتاج متصفحاً حقيقياً وبيانات مستخدمين.</small></p>
+
+<!-- ═════════ 3 ═════════ -->
+<h2>3 · البنية التحتية: من يخدّم الموقع فعلاً</h2>
+<table>
+<tr><th>الطبقة</th><th>ما وجد</th><th>الأثر</th></tr>
+<tr><td>الحافة (Edge)</td><td>Cloudflare — <code>CF-Ray: AMS</code></td><td>قرب من أمستردام + حماية</td></tr>
+<tr><td>الاستضافة</td><td>Hostinger — <code>platform: hostinger</code>, <code>panel: hpanel</code></td><td>استضافة مشتركة</td></tr>
+<tr><td>الخادم</td><td>LiteSpeed — <code>x-turbo-charged-by</code></td><td>ضغط brotli + كاش</td></tr>
+<tr><td>البروتوكول</td><td>HTTP/2 مؤكد، TLS 1.3، و<code>alt-svc: h3</code></td><td>تعدد إرسال بدون تأخير رأس السطر</td></tr>
+<tr><td>الضغط</td><td>brotli على HTML/CSS/JS</td><td>172 كB → 26 كB</td></tr>
+<tr><td>السياسات</td><td>CSP <code>default-src 'self'</code>، HSTS سنة، nosniff، <code>frame-ancestors 'self'</code></td><td>سطح هجوم ضيق</td></tr>
+</table>
+<p>لافتة واحدة: <b>صفر أصل خارجي</b>. لا Google Fonts، ولا CDN لـJS، ولا صورة من نطاق آخر. كل شيء أول-الطرف. هذا يفسّر TTFB ~119 مللي وقوة الـCSP معاً — ولا يمكن لواحد منهما أن ينجح دون الآخر.</p>
+
+<!-- ═════════ 4 ═════════ -->
+<h2>4 · طبقة الواجهة</h2>
+<h3>حزمة واحدة ببصمة، لا 17 ملفاً</h3>
+<p>في رأس الصفحة رابط واحد فقط:</p>
+<pre>&lt;link rel="stylesheet" href="assets/css/bundle/0d31407797.css?v=5c9d4e3f"
+      data-bundle="fonts.css, icomoon, bootstrap, swiper, odometer,
+                   slick, styles, arabic-font, cookie-consent, home, footer"&gt;</pre>
+<p>الاسم نفسه بصمة محتوى (10 أحرف hex)، و<code>data-bundle</code> يحفظ قائمة المصادر — أي أن أداة بناء تدمجها وتربط نسخة الكاش بالبصمة. النتيجة: <b>طلب واحد</b> لـ 284 كB مفكوكة / 45.8 كB على السلك، وكاش أبدي لا يفسد عند التحديث.</p>
+
+<h3>26 سكربتاً — كلها مؤجّلة</h3>
+<table>
+<tr><th>المكتبة</th><th>على السلك</th><th>مفكوكة</th><th>لماذا</th></tr>
+<tr><td>jQuery</td><td class="num">29.3 كB</td><td class="num">85.8 كB</td><td>تبعية لكل ما بعده</td></tr>
+<tr><td>GSAP + ScrollTrigger + SplitText</td><td class="num">47.3 كB</td><td class="num">122.3 كB</td><td>الهوية الحركية</td></tr>
+<tr><td>Bootstrap JS</td><td class="num">5.8 كB</td><td class="num">16.6 كB</td><td>11 موضع <code>data-bs-toggle</code></td></tr>
+<tr><td>Slick</td><td class="num">9.7 كB</td><td class="num">41.7 كB</td><td>الكاروسيل</td></tr>
+<tr><td>الباقي (21 ملفاً)</td><td class="num">52.3 كB</td><td class="num">201 كB</td><td>نوافذ، كوكيز، عدّادات…</td></tr>
+</table>
+<p>كل الوسوم <code>defer</code> — لا سكربت يحجب الرسم. لكن 26 طلباً قبل أن تصبح الصفحة تفاعلية ثمنه 26 رحلة ذهاب وعودة على شبكة بطيئة.</p>
+
+<!-- ═════════ 5 ═════════ -->
+<h2 class="pbreak">5 · تقنيات اللغة — الفصل الأهم</h2>
+
+<h3>5.1 الإستراتيجية: مسارات فرعية لا نطاقات فرعية</h3>
+<table>
+<tr><th>النسخة</th><th>المسار</th><th><code>lang</code></th><th><code>dir</code></th><th><code>og:locale</code></th><th>HTML خام</th></tr>
+<tr><td>العربية (الأصل)</td><td><code>/</code></td><td>ar</td><td>rtl</td><td>ar_AR</td><td class="num">189,459</td></tr>
+<tr><td>الإنجليزية</td><td><code>/en/</code></td><td>en</td><td>ltr</td><td>en_US</td><td class="num">175,128</td></tr>
+<tr><td>الهولندية</td><td><code>/nl/</code></td><td>nl</td><td>ltr</td><td>nl_NL</td><td class="num">176,726</td></tr>
+<tr><td>الألمانية</td><td><code>/de/</code></td><td>de</td><td>ltr</td><td>de_DE</td><td class="num">180,047</td></tr>
+</table>
+<p>العربية على الجذر، والباقي في مجلدات. قرار صحيح لموقع صغير: يحفظ سلطة النطاق في الصفحة العربية، ويعطي كل لغة مساراً نظيفاً قابلاً للفهرسة. و<code>x-default</code> يشير إلى العربية — أي أن الجمهور العربي هو الافتراضي، وهو قرار تجاري مشروع لا خطأ تقني.</p>
+
+<h3>5.2 أربع صفحات مستقلة — لا ترجمة في المتصفح</h3>
+<p>هذا أهم فرق بين موقع محترف وموقع «مترجَم». الأدلة الأربعة:</p>
+<ul>
+<li><b>أربع استجابات مختلفة فعلياً:</b> أحجام مختلفة وبصمات SHA-256 مختلفة؛ ليست صفحة واحدة بمحتوى يُستبدل.</li>
+<li><b>نص كل لغة موجود في المصدر</b> — عدّ الكلمات الوظيفية المميزة:</li>
+</ul>
+<table>
+<tr><th>الصفحة</th><th>the/and/with/your</th><th>het/een/van/voor</th><th>und/der/für/mit</th><th>في/من/على/التي</th></tr>
+<tr><td><code>/</code></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">120</td></tr>
+<tr><td><code>/en/</code></td><td class="num">214</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><code>/nl/</code></td><td class="num">0</td><td class="num">211</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><code>/de/</code></td><td class="num">0</td><td class="num">0</td><td class="num">262</td><td class="num">0</td></tr>
+</table>
+<ul>
+<li><b>لا بنية ترجمة في الواجهة:</b> لا سمة <code>data-i18n</code> ولا <code>data-translate</code>، ولا طلب <code>fetch()</code> لملف لغة، ولا استخدام لـ<code>navigator.language</code>.</li>
+<li><b>الأخطر:</b> الروابط تستخدم مسارات مترجمة لا حرفية — <code>/blog/what-is-cdn</code> مقابل <code>/nl/blog/wat-is-een-cdn</code> و<code>/de/blog/was-ist-ein-cdn</code>. هذا عمل يدوي واعٍ.</li>
+</ul>
+<div class="box good">
+<h3>لماذا هذا مهم</h3>
+<p>الصفحة المترجمة في المتصفح تُفهرس بلغة واحدة، وتومض عند التحميل، وتفشل عند إيقاف JS. أما الملف المستقل فيُفهرس كصفحة أصلية، ويُخدَم كاملاً في أول بايت.</p>
+</div>
+
+<h3>5.3 إدارة الاتجاه: التخطيط LTR والنص RTL</h3>
+<p>التنفيذ غير البديهي — وهو الأذكى في الموقع:</p>
+<pre>html[lang="ar"] body { direction: ltr; }
+:is(h1,h2,h3,h5,h6,p,blockquote,label,…) {
+  direction: rtl; unicode-bidi: plaintext;
+}</pre>
+<p>أي أن <b>شبكات CSS تبقى بحساب LTR</b> (فتعمل <code>grid-column</code> و<code>flex</code> كما صُمّمت)، ويُفرض الاتجاه على <b>النص وحده</b>. النتيجة: لا تنقلب الشبكات، ولا تنكسر الهوامش، ويبقى كل سطر عربياً من اليمين. و<code>unicode-bidi: plaintext</code> يجعل المتصفح يستنتج اتجاه السطر من أول حرف قوي فيه.</p>
+<p>وفوق ذلك خمس «جزر LTR» مقصودة داخل الصفحة العربية: شريط الأعمال، سلايدر الشهادات، شارة الخصم، العداد التنازلي، وحقل الهاتف. الأرقام والمعرّفات تبقى LTR — وهذا تفصيل يرتكبه كثيرون.</p>
+
+<h3>5.4 مبدّل اللغة: قواعد اللعب الصحيحة</h3>
+<pre>&lt;details class="language-switcher notranslate" translate="no"&gt;
+  &lt;summary aria-label="اختيار اللغة"&gt;…&lt;/summary&gt;
+  &lt;a href="/" hreflang="ar" lang="ar"&gt;العربية&lt;/a&gt;
+  &lt;a href="/en/" hreflang="en" lang="en" aria-current="page"&gt;English&lt;/a&gt;
+  &lt;a href="/nl/" hreflang="nl" lang="nl"&gt;Nederlands&lt;/a&gt;
+  &lt;a href="/de/" hreflang="de" lang="de"&gt;Deutsch&lt;/a&gt;
+&lt;/details&gt;</pre>
+<table>
+<tr><th>القرار</th><th>لماذا هو صحيح</th></tr>
+<tr><td><code>&lt;details&gt;</code> بدل زر JS</td><td>يفتح ويُغلق بلا JavaScript — ولو تعطّل السكربت لا تُحتجز اللغة</td></tr>
+<tr><td>روابط <code>&lt;a href&gt;</code> حقيقية</td><td>تعمل بالنقر الأوسط، وتُنسخ، ويقرأها محرك البحث</td></tr>
+<tr><td><code>aria-current="page"</code></td><td>قارئ الشاشة يعرف اللغة الحالية</td></tr>
+<tr><td><code>notranslate</code></td><td>يمنع ترجمة جوجل من إفساد أسماء اللغات</td></tr>
+<tr><td><code>hreflang</code> على كل رابط</td><td>يخبر المتصفح بلغة الهدف قبل النقر</td></tr>
+<tr><td>حفظ موضع القسم</td><td>من يبدّل اللغة في «الأسعار» يهبط على «الأسعار» — عبر <code>#hash</code> + <code>sessionStorage</code></td></tr>
+</table>
+
+<h3>5.5 hreflang وcanonical وsitemap: ثلاثتها متطابقة</h3>
+<pre>&lt;link rel="alternate" hreflang="ar" href="https://dananajmah.com/"&gt;
+&lt;link rel="alternate" hreflang="en" href="https://dananajmah.com/en/"&gt;
+&lt;link rel="alternate" hreflang="nl" href="https://dananajmah.com/nl/"&gt;
+&lt;link rel="alternate" hreflang="de" href="https://dananajmah.com/de/"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://dananajmah.com/"&gt;</pre>
+<p>المجموعة نفسها في الصفحات الأربع — كل صفحة تشير إلى نفسها وإلى الثلاث الأخرى. <b>والأهم:</b> الموقع يكرّر هذا على المقالات بمسارات مترجمة، وعلى الصفحات القانونية. والـsitemap (24 عنواناً، 120 رابط hreflang) يطابق الوسم حرفياً. هذا التطابق الثلاثي (head + sitemap + canonical) هو ما يجعل جوجل يفهم المجموعة بدل أن يعتبرها محتوى مكرراً.</p>
+
+<h3>5.6 الخطوط: تحميل مشروط بنطاق يونيكود</h3>
+<table>
+<tr><th>القرار</th><th>التفصيل</th></tr>
+<tr><td>الخطّان</td><td>Alexandria للعربية (22 تعريف <code>@font-face</code>) · Figtree متغيّر للاتينية</td></tr>
+<tr><td>الاستضافة</td><td>محلية 100% — 24 ملفاً، 349.8 كB، كاش سنة</td></tr>
+<tr><td>التحميل الشرطي</td><td><code>unicode-range: U+0600-06FF, U+0750-077F…</code> — لا يُنزَّل Alexandria في الصفحة الإنجليزية إلا لظهور حرف عربي (كلمة «العربية» في المبدّل)</td></tr>
+<tr><td>preload مختلف</td><td>العربية: 3 أوزان عربية · اللاتينية: Figtree فقط</td></tr>
+<tr><td>ضبط دقيق</td><td>الأوزان الثابتة قُصّت من الخط المتغيّر بعد دمج الكونتورات — لأن التداخل ظهر «نقاطاً لامعة» في النص الشفاف</td></tr>
+</table>
+<p>هذا المستوى من ضبط الخطوط العربية نادر. معظم المواقع العربية تُحمّل 900 كB من Google Fonts بلا سبب.</p>
+
+<h3>5.7 ثمن الاتجاه في CSS</h3>
+<p>الملف واحد، لكن للاتجاه ثمن مقيس:</p>
+<table>
+<tr><th>المقياس</th><th>العربية</th><th>اللاتينية</th></tr>
+<tr><td>حجم الحزمة مفكوكة</td><td class="num">291.3 كB</td><td class="num">275.8 كB</td></tr>
+<tr><td>عدد القواعد</td><td class="num">2,310</td><td class="num">2,255</td></tr>
+<tr><td>قواعد اتجاه ميتة</td><td>—</td><td class="num">266 قاعدة · 27.3 كB</td></tr>
+<tr><td><code>[dir="rtl"]</code></td><td class="num">25</td><td class="num">25</td></tr>
+<tr><td><code>html[lang="ar"]</code></td><td class="num">299</td><td class="num">264</td></tr>
+<tr><td>خصائص منطقية (<code>margin-inline</code>…)</td><td colspan="2" class="num">≈70 مقابل ≈300 خاصية فيزيائية</td></tr>
+</table>
+<p>النتيجة: <b>9.9% من حزمة الزائر اللاتيني لا تخصّه</b>، ومفتاحان للاتجاه (<code>dir</code> و<code>lang</code>) يعنيان أن أي تعديل مستقبلي يحتاج مراجعة مزدوجة.</p>
+
+<h3>5.8 ما لم يفعله — والمقايضة</h3>
+<div class="box warn">
+<h3>لا تذكّر للغة</h3>
+<p>لا <code>cookie</code> ولا <code>localStorage</code> للغة. الزائر الهولندي العائد يبدأ عربياً كل مرة. المقايضة: إعادة التوجيه القسرية تهدم الفهرسة، لكن <b>تذكّر الخيار</b> لا يهدمها — كان يمكن حفظ التفضيل وعرض شريط «هل تفضّل الهولندية؟» بدل التحويل القسري. هذا أكبر نقص في طبقة اللغة.</p>
+</div>
+<div class="box warn">
+<h3>لا تحويل تلقائي — مقصود</h3>
+<p>جرّبت أربع طلبات إلى <code>/</code> بترويسات <code>Accept-Language</code> مختلفة (de، en، nl، ar): <b>الأربعة أعادت المحتوى العربي نفسه</b> بحجم متطابق، وبلا رأس <code>Vary: Accept-Language</code>. القرار سليم للفهرسة، لكنه بلا أي بديل للمستخدم.</p>
+</div>
+
+<!-- ═════════ 6 ═════════ -->
+<h2 class="pbreak">6 · الأداء بالأرقام</h2>
+<table>
+<tr><th>المرحلة</th><th>الطلبات</th><th>الوزن على السلك</th></tr>
+<tr><td>حتى أول رسم</td><td class="num">6</td><td class="num">124.9 كB</td></tr>
+<tr><td>حتى التفاعل</td><td class="num">35</td><td class="num">269.2 كB</td></tr>
+<tr><td>الصفحة كاملة بعد التمرير</td><td class="num">≈59</td><td class="num">1,192 كB</td></tr>
+</table>
+
+<h3>الثغرات الخمس، مرتّبة بالأثر</h3>
+<table>
+<tr><th>#</th><th>الثغرة</th><th>القياس</th><th>التوفير المتوقع</th></tr>
+<tr><td>1</td><td>خلفيتان PNG</td><td>bg-3 = 227.9 كB · bg-4 = 219.7 كB</td><td class="num">≈350 كB</td></tr>
+<tr><td>2</td><td>فيديو البطل على Safari</td><td>MP4 = 3,528 كB مقابل WebM/AV1 = 572 كB</td><td class="num">≈2.9 MB</td></tr>
+<tr><td>3</td><td>CSS واحد يحجب الرسم</td><td>45.8 كB على السلك بلا CSS حرج</td><td>رسم أسرع ~200–400 مللي</td></tr>
+<tr><td>4</td><td>26 طلب JS</td><td>144.4 كB / 467.4 كB مفكوكة</td><td>‎25 → 3 طلبات</td></tr>
+<tr><td>5</td><td>صور بأكبر نسخة</td><td>project-oasis = 188 كB وبديله 900w = 71.6 كB</td><td class="num">≈220 كB</td></tr>
+</table>
+<p>المنطق في الفيديو ذكي فعلاً — يختار AV1 فقط إن أبلغ الجهاز عن مفكّك عتادي سلس. لكن النتيجة أن Safari ينزل 6.2 أضعاف الحجم. الحل: نسخة H.264 بدقة 720p (~1.2 MB) أو صورة أولى ثابتة للأجهزة الضعيفة.</p>
+
+<!-- ═════════ 7 ═════════ -->
+<h2>7 · SEO والإتاحة</h2>
+<div class="grid2">
+<div>
+<h3>قوي</h3>
+<ul>
+<li>h1 واحد، ولا قفزات في التسلسل</li>
+<li>JSON-LD بـ4 كيانات: WebSite · Person · ProfessionalService/LocalBusiness · FAQPage</li>
+<li>FAQPage مطابق 1:1 للأسئلة المرئية (شرط جوجل)</li>
+<li><code>og:image</code> مختلفة لكل لغة</li>
+<li>sitemap 24 عنواناً · 120 hreflang</li>
+<li>48 من 49 صورة بأبعاد معلنة (منع CLS)</li>
+<li>فخ تركيز بـ<code>inert</code> في النوافذ</li>
+<li>28 كتلة <code>prefers-reduced-motion</code></li>
+</ul>
+</div>
+<div>
+<h3>ينقص</h3>
+<ul>
+<li><span class="p0">عيب خطير:</span> <code>user-scalable=no</code> يمنع التكبير — مخالف لـWCAG 1.4.4</li>
+<li>لا عنصر <code>&lt;nav&gt;</code> إطلاقاً، ولا رابط «تخطَّ إلى المحتوى»</li>
+<li>زر إغلاق قائمة الجوال <code>&lt;div&gt;</code> — لا يُركَّز، ولا <code>aria-expanded</code>، وEscape لا يغلقه</li>
+<li>شعارات العملاء <code>alt=""</code> ومكرّرة بلا <code>aria-hidden</code></li>
+<li><code>twitter:*</code> ناقصة (تعتمد على fallback)</li>
+</ul>
+</div>
+</div>
+
+<!-- ═════════ 8 ═════════ -->
+<h2 class="pbreak">8 · موقعك مقابل دانا نجمة</h2>
+<p>قِستُ موقعك <code>sr-coresync.com</code> بالطريقة نفسها. النتيجة مفيدة لأنها تُظهر أين تتقدّم وأين تتأخر:</p>
+<table>
+<tr><th>المقياس</th><th>دانا نجمة</th><th>S&amp;R CoreSync</th><th>الحكم</th></tr>
+<tr><td>عدد اللغات</td><td class="num">4</td><td class="num">29</td><td class="p2">أنت متقدّم بفارق كبير</td></tr>
+<tr><td>وسوم hreflang</td><td class="num">5</td><td class="num">30</td><td class="p2">أنت متقدّم</td></tr>
+<tr><td>حجم HTML</td><td class="num">172 كB</td><td class="num">782 كB</td><td class="p0">أنت أثقل 4.5×</td></tr>
+<tr><td>ملفات الأنماط</td><td class="num">1</td><td class="num">17</td><td class="p0">17 طلباً مقابل 1</td></tr>
+<tr><td>الخطوط</td><td>محلية 100%</td><td>3 إشارات Google Fonts</td><td class="p0">تبعية خارجية</td></tr>
+<tr><td>وسوم script</td><td class="num">29</td><td class="num">45</td><td class="p1">ضجيج أعلى</td></tr>
+<tr><td>JSON-LD</td><td class="num">1 كتلة / 4 كيانات</td><td class="num">4 كتل</td><td class="p2">أنت متقدّم</td></tr>
+<tr><td>عنصر <code>&lt;nav&gt;</code></td><td class="num">0</td><td class="num">2</td><td class="p2">أنت متقدّم</td></tr>
+<tr><td>رابط التخطي</td><td class="num">1</td><td class="num">7</td><td class="p2">أنت متقدّم</td></tr>
+<tr><td>CSP</td><td>موجود</td><td>لا</td><td class="p1">ميزة لهم</td></tr>
+<tr><td>Service Worker</td><td class="num">0</td><td class="num">2</td><td class="p2">أنت متقدّم</td></tr>
+</table>
+
+<div class="box">
+<h3>الخلاصة الحقيقية</h3>
+<p>أنت تتفوّق في <b>الهندسة</b> (29 لغة، بناء من أجزاء، عامل خدمة، hreflang شامل). وهم يتفوّقون في <b>الانضباط</b>: ملف أنماط واحد، خطوط محلية، HTML صغير، وترجمة بشرية موطّنة لا آلية.</p>
+<p>أي أن الفجوة ليست في الطموح بل في <b>التغليف</b>: أنت تُرسل 782 كB حيث يكفيهم 172، و17 طلباً حيث يكفيهم 1.</p>
+</div>
+
+<!-- ═════════ 9 ═════════ -->
+<h2>9 · خطة العمل — 12 خطوة بالأثر</h2>
+<table>
+<tr><th>#</th><th>الخطوة</th><th>الأثر</th><th>الجهد</th><th>الأولوية</th></tr>
+<tr><td>1</td><td>دمج 17 ملف CSS في حزمة واحدة ببصمة</td><td class="num">‎–16 طلباً</td><td>متوسط</td><td class="p0">P0</td></tr>
+<tr><td>2</td><td>استضافة الخطوط محلياً وإزالة Google Fonts</td><td>خصوصية + طلب أقل</td><td>صغير</td><td class="p0">P0</td></tr>
+<tr><td>3</td><td>تقسيم <code>index.html</code> إلى أصول خارجية (CSS/JS)</td><td>HTML 782 → ≈120 كB</td><td>متوسط</td><td class="p0">P0</td></tr>
+<tr><td>4</td><td>تحويل صور PNG إلى WebP/AVIF</td><td class="num">‎–200 كB</td><td>صغير</td><td class="p0">P0</td></tr>
+<tr><td>5</td><td>إضافة CSP + HSTS</td><td>أمان</td><td>صغير</td><td class="p1">P1</td></tr>
+<tr><td>6</td><td>تذكّر اللغة (cookie + شريط اقتراح)</td><td>تجربة الزائر العائد</td><td>صغير</td><td class="p1">P1</td></tr>
+<tr><td>7</td><td>توحيد مفتاح الاتجاه (<code>dir</code> فقط)</td><td>صيانة أسهل</td><td>متوسط</td><td class="p1">P1</td></tr>
+<tr><td>8</td><td>التحوّل إلى الخصائص المنطقية تدريجياً</td><td>إضافة لغة RTL لاحقاً بلا ألم</td><td>كبير</td><td class="p2">P2</td></tr>
+<tr><td>9</td><td>حذف كتل CSS العربية من نسخ LTR</td><td class="num">‎–27 كB</td><td>متوسط</td><td class="p2">P2</td></tr>
+<tr><td>10</td><td>خط عربي بـ<code>unicode-range</code> بدل تحميل كامل</td><td>خطوط أخف للاتينية</td><td>صغير</td><td class="p2">P2</td></tr>
+<tr><td>11</td><td>فحص hreflang آلياً في CI</td><td>منع انحراف 29 لغة</td><td>صغير</td><td class="p1">P1</td></tr>
+<tr><td>12</td><td>مراجعة بشرية للترجمات الآلية</td><td>جودة النص</td><td>كبير</td><td class="p1">P1</td></tr>
+</table>
+
+<h3>أول ثلاثة أيام</h3>
+<ol>
+<li><b>اليوم الأول:</b> الخطوط محلياً + تحويل الصور. لا يمسّان التصميم، وأثرهما فوري.</li>
+<li><b>اليوم الثاني:</b> حزمة CSS واحدة ببصمة + أصول خارجية للـHTML.</li>
+<li><b>اليوم الثالث:</b> قياس قبل/بعد بـ<code>check_perf_budget.py</code> وتوثيق الأرقام في الدليل.</li>
+</ol>
+
+<div class="box good">
+<h3>ما لا يجب تقليده</h3>
+<ul>
+<li><code>user-scalable=no</code> — يمنع التكبير، وهو عيب لا ميزة.</li>
+<li>غياب <code>&lt;nav&gt;</code> ورابط التخطي.</li>
+<li>غياب تذكّر اللغة.</li>
+<li>خدمة 26 سكربتاً منفصلاً في موقع ثابت.</li>
+</ul>
+</div>
+
+<!-- ═════════ 10 ═════════ -->
+<h2 class="pbreak">10 · الملاحق</h2>
+
+<h3>أ. أكبر عشرة أصول</h3>
+<table>
+<tr><th>الأصل</th><th>الحجم</th><th>ملاحظة</th></tr>
+<tr><td>hero-dana-v7.mp4</td><td class="num">3,528.3 كB</td><td>يُختار على Safari فقط</td></tr>
+<tr><td>hero-dana-mobile-v7.mp4</td><td class="num">2,258.9 كB</td><td>الجوال</td></tr>
+<tr><td>about-video-5.mp4</td><td class="num">1,369.7 كB</td><td>عند التمرير</td></tr>
+<tr><td>about-video-portrait-3.mp4</td><td class="num">869.3 كB</td><td>عمودي</td></tr>
+<tr><td>hero-dana-v7-av1.webm</td><td class="num">572.0 كB</td><td>المسار الرشيد</td></tr>
+<tr><td>bg-3.png</td><td class="num">227.9 كB</td><td>مرشح للتحويل</td></tr>
+<tr><td>bg-4.png</td><td class="num">219.7 كB</td><td>مرشح للتحويل</td></tr>
+<tr><td>project-oasis-branding.webp</td><td class="num">188.1 كB</td><td>بديله 71.6 كB</td></tr>
+<tr><td>agency.webp</td><td class="num">176.0 كB</td><td>بديل 12.5 كB</td></tr>
+<tr><td>Alexandria (كل الأوزان)</td><td class="num">349.8 كB</td><td>24 ملفاً · كاش سنة</td></tr>
+</table>
+
+<h3>ب. سلوك الخادم الذي اختُبر</h3>
+<table>
+<tr><th>الطلب</th><th>النتيجة</th></tr>
+<tr><td><code>/en</code> بدون شرطة</td><td>301 → <code>/en/</code></td></tr>
+<tr><td><code>http://</code></td><td>301 → https + HSTS سنة</td></tr>
+<tr><td><code>www.</code></td><td>301 → بدون www</td></tr>
+<tr><td><code>/index.html</code></td><td>301 → <code>/</code></td></tr>
+<tr><td><code>/</code> بـAccept-Language مختلف</td><td>200 بالمحتوى العربي نفسه (لا تحويل)</td></tr>
+<tr><td><code>/blog/</code> و<code>/en/blog/</code></td><td>200</td></tr>
+</table>
+
+<h3>ج. ما ينقص هذا التقرير</h3>
+<ul>
+<li>بيانات الميدان (CrUX): LCP/CLS/INP الفعلية.</li>
+<li>تغطية JavaScript (أي مكتبة تُحمَّل ولا تُستخدم).</li>
+<li>حساب نسب تباين الألوان.</li>
+<li>جودة الترجمة البشرية نفسها — قيس وجودها لا صحّتها.</li>
+</ul>
+
+<footer>
+تقرير تحليل تقني · dananajmah.com · 14 نوفمبر 2026 · أُعدّ لمشروع S&amp;R CoreSync.<br>
+كل الأرقام مقيسة من الاستجابات الحيّة في تاريخ الفحص، ولم يُعدَّل أي ملف على الخادم.
+</footer>
+
+</body>
+</html>
