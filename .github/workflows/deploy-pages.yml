@@ -165,6 +165,15 @@ jobs:
       # The rules live in scripts/publish_set.py, which is also used by the
       # CI validation job - so the verified artifact is the published one.
       # ---------------------------------------------------------------------
+      - name: Verify every page matches its parts
+        run: |
+          python scripts/build_site.py --check
+          python scripts/build_lang.py --check en
+          python scripts/verify_hero_build.py en de fr
+          python scripts/verify_footer_build.py en de fr
+          python scripts/verify_nav_build.py en de fr
+          python scripts/check_sr_args.py
+
       - name: Build publish set
         run: python scripts/prepare_publish_set.py
 
