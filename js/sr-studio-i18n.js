@@ -646,13 +646,15 @@
         modal.setAttribute('role', 'dialog');
         modal.setAttribute('aria-modal', 'true');
         modal.setAttribute('aria-label', 'Sovereign Language Selector');
+        modal.setAttribute('translate', 'no');
 
         var curLang = getCurrentLanguage();
 
         var cardsHtml = LANGUAGES.map(function(l) {
             var activeClass = l.code === curLang ? ' active' : '';
+            var current = l.code === curLang ? ' aria-current="true"' : '';
             return `
-                <div class="sr-i18n-launchpad-card${activeClass}" data-code="${l.code}" data-search="${l.name.toLowerCase()} ${l.nameEn.toLowerCase()} ${l.code}" onclick="SRStudioI18n.selectLanguage('${l.code}')">
+                <div class="sr-i18n-launchpad-card${activeClass}" lang="${l.code}"${current} data-code="${l.code}" data-search="${l.name.toLowerCase()} ${l.nameEn.toLowerCase()} ${l.code}" onclick="SRStudioI18n.selectLanguage('${l.code}')">
                     <div class="sr-i18n-card-meta">
                         <span class="sr-i18n-flag">${l.emoji}</span>
                         <div>
