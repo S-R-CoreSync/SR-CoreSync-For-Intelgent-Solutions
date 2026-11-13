@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>S&R CoreSync — دليل سير العمل / Werkwijze / How work flows</title>
+<style>
+@page { size: A4; margin: 16mm 14mm; }
+* { box-sizing: border-box; }
+body { font-family: 'Alexandria','Segoe UI',system-ui,sans-serif; color:#16202b; font-size:10.5pt; line-height:1.65; margin:0; }
+h1 { font-size:22pt; margin:0 0 4px; color:#0d1b26; }
+h2 { font-size:14pt; margin:22px 0 6px; color:#8a6d1f; border-bottom:1.5px solid #d4af37; padding-bottom:4px; }
+h3 { font-size:11.5pt; margin:14px 0 4px; color:#16202b; }
+p { margin:4px 0 8px; }
+ul, ol { margin:4px 0 10px; padding-inline-start:20px; }
+li { margin:3px 0; }
+.cover { border:1px solid #d4af37; border-radius:12px; padding:18px 20px; margin-bottom:18px;
+         background:linear-gradient(135deg,#fbf7ea,#fff); }
+.cover .sub { color:#6b7785; font-size:10pt; }
+.badge { display:inline-block; background:#0d1b26; color:#f3dfba; border-radius:999px;
+         padding:3px 10px; font-size:8.5pt; letter-spacing:.4px; }
+table { width:100%; border-collapse:collapse; margin:8px 0 14px; font-size:9.5pt; }
+th, td { border:1px solid #dfe3e8; padding:6px 8px; text-align:start; vertical-align:top; }
+th { background:#f4f6f8; font-weight:700; }
+code, pre { font-family:Consolas,monospace; direction:ltr; unicode-bidi:embed; }
+pre { background:#f6f8fa; border:1px solid #e3e7ec; border-radius:8px; padding:10px; font-size:8.8pt;
+      overflow-wrap:anywhere; white-space:pre-wrap; }
+.ltr { direction:ltr; text-align:left; }
+.page-break { page-break-before: always; }
+.rule { background:#fff8e6; border-inline-start:4px solid #d4af37; padding:10px 14px; border-radius:8px; }
+.muted { color:#6b7785; font-size:9pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <span class="badge">S&amp;R CoreSync · For Intelligent Solutions</span>
+  <h1>دليل سير العمل · Werkwijze · How work flows</h1>
+  <p class="sub">نسخة 1 · 13 نوفمبر 2026 · تُحدَّث مع كل مرحلة · ثلاث لغات: العربية · Nederlands · English</p>
+</div>
+
+<h2>0 · الفهرس / Inhoud / Contents</h2>
+<ol>
+  <li>القاعدة الذهبية — لا نشر بلا خطة مرئية</li>
+  <li>سير العمل في سبع مراحل</li>
+  <li>لماذا كل مرحلة (السبب لا الطقس)</li>
+  <li>مصادر الحقيقة الثلاثة</li>
+  <li>الأوامر والبوابات</li>
+  <li>سجل ما جرى + الدروس</li>
+  <li>بروتوكول «قبل أي تعديل»</li>
+  <li>خريطة الملفات</li>
+  <li>الاقتراحات القادمة</li>
+</ol>
+
+<h2>1 · القاعدة الذهبية</h2>
+<div class="rule">
+  <strong>الموقع حيّ ومفتوح لعيون الزبائن.</strong> لذلك: لا يُنفَّذ أي تعديل قبل أن ترى <em>خطة مرئية</em> في المتصفح،
+  ولا يُنشَر أي تعديل قبل أن يجتاز البوابات ويُقاس على الشاشة. أي عمل بلا هذين الشرطين مرفوض — ولو كان سطراً واحداً.
+</div>
+
+<h2>2 · سير العمل في سبع مراحل</h2>
+<table>
+<tr><th>المرحلة</th><th>ما يحدث</th><th>الناتج الذي تراه</th></tr>
+<tr><td>1 · الطلب</td><td>رسالة صوتية أو كتابية منك — تُحوَّل إلى «بطاقة طلب»: ماذا، وأين، ومعيار القبول.</td><td>سطر واحد يلخّص المطلوب قبل أي كود.</td></tr>
+<tr><td>2 · التشخيص</td><td>قياس فعلي (DOM، أحجام، طلبات الشبكة) لا تخمين.</td><td>أرقام: مثل «الدوك bottom:140، الصورة naturalWidth=0».</td></tr>
+<tr><td>3 · الخطة المرئية</td><td>صفحة HTML تُفتح في المتصفح: الشكل المقصود + الملفات + المخاطر.</td><td>صفحة خطة — <strong>قبل</strong> التنفيذ.</td></tr>
+<tr><td>4 · التنفيذ</td><td>تعديل محدود النطاق + تشغيل البوابات الإحدى عشرة.</td><td>سجل بوابات: كلها PASSED أو لا نشر.</td></tr>
+<tr><td>5 · المعاينة</td><td>لقطة على المقاسات (390 · 1366 · 1600) + قياس ما بعد التغيير.</td><td>صورة قبل/بعد.</td></tr>
+<tr><td>6 · النشر</td><td>دفع إلى <code>main</code> ثم التحقق من الحيّ نصياً.</td><td>تأكيد من الموقع المنشور لا من الجهاز.</td></tr>
+<tr><td>7 · التوثيق</td><td>تحديث هذا الملف + سجل التغييرات.</td><td>PDF مُحدَّث.</td></tr>
+</table>
+
+<h2>3 · لماذا كل مرحلة</h2>
+<ul>
+  <li><strong>بطاقة الطلب:</strong> لأن أغلب الأخطاء كانت في فهم الطلب لا في تنفيذه — مثل «ادمج» التي فُهمت دمج دوكين.</li>
+  <li><strong>القياس أولاً:</strong> لأن التخمين كلّفنا خمس محاولات على صورة واحدة؛ القياس وجد السبب في دقيقة.</li>
+  <li><strong>الخطة المرئية:</strong> لأن الموقع حيّ؛ رؤية الشكل قبل التنفيذ أرخص من التراجع بعد النشر.</li>
+  <li><strong>البوابات:</strong> لأن كل عطل وصل إليك كان بوابةً أُهملت أو لم تُقرأ نتيجتها.</li>
+  <li><strong>المعاينة:</strong> لأن «يعمل عندي» ليست حجة؛ الشاشة هي الحكم.</li>
+  <li><strong>التحقق الحيّ:</strong> لأن النشر قد يتأخر أو يفشل — والفرق بين «التزام مدفوع» و«تغيير ظاهر» كبير.</li>
+</ul>
+
+<h2>4 · مصادر الحقيقة الثلاثة</h2>
+<table>
+<tr><th>المصدر</th><th>يحكم</th><th>الأمر</th></tr>
+<tr><td><code>index.html</code> (منطقة الهيرو + طبقات الأنماط)</td><td>الهيرو في 28 صفحة</td><td><code>python scripts/sync_locales.py --write</code></td></tr>
+<tr><td><code>i18n/locales/*.json</code></td><td>نصوص كل لغة</td><td>يُقرأ تلقائياً عند المزامنة</td></tr>
+<tr><td><code>i18n/footer.calibrated.json</code></td><td>الفوتر في 28 صفحة</td><td><code>python scripts/apply_footer_all.py</code></td></tr>
+<tr><td>القائمة</td><td>الترتيب 01–05 في الوسم نفسه</td><td><code>python scripts/sync_nav.py</code></td></tr>
+</table>
+
+<h2>5 · الأوامر والبوابات</h2>
+<pre>node scripts/validate.js
+python scripts/prepare_publish_set.py
+python scripts/validate_publish_set.py
+python scripts/build_csp.py &amp;&amp; python scripts/build_csp.py --check
+python scripts/check_command_handlers.py
+python scripts/check_site_links.py
+python scripts/audit_language_purity.py
+python scripts/audit_arabic_containment.py
+python scripts/check_multilingual_page_parity.py
+python scripts/check_perf_budget.py
+node scripts/browser_console_audit.mjs
+python scripts/sync_locales.py --check</pre>
+<p class="muted">قاعدة: لا نشر حتى تُرجع كلها PASSED — ومنها <code>console audit 30/30</code>.</p>
+
+<h2>6 · سجل ما جرى + الدروس</h2>
+<table>
+<tr><th>ما جرى</th><th>الدرس المانع للتكرار</th></tr>
+<tr><td>دوك اللغة دُمج خطأً داخل دوك التنقل</td><td>«ادمج» تعني دمجاً بصرياً في موضع واحد — تُسأل قبل التنفيذ.</td></tr>
+<tr><td>قائمة «المزيد» سقطت عند إعادة بناء القائمة</td><td>لا يُعاد بناء عنصر قائم؛ يُبدَّل موضعه فقط.</td></tr>
+<tr><td>الكبسولة قفزت أعلى الشاشة</td><td>لا تُفرَض `top` على عنصر مُتمركز رأسياً.</td></tr>
+<tr><td>صورة المهندس اختفت (٥ محاولات)</td><td>الصورة لم تكن تُطلَب: سببها JSON مكسور في `data-sr-args` + شريحة بلا صورة.</td></tr>
+<tr><td>4K خارج طقم النشر أوقف النشر</td><td>كل ملف يُشار إليه يجب أن يكون داخل الطقم، أو لا يُشار إليه.</td></tr>
+<tr><td>بصمات CSP قديمة أوقفت الفحص</td><td>أي تعديل على سكربت/نمط مضمّن ⇒ `build_csp.py` قبل الالتزام.</td></tr>
+</table>
+
+<h2>7 · بروتوكول «قبل أي تعديل»</h2>
+<ol>
+  <li>بطاقة الطلب مكتوبة ومقروءة منك.</li>
+  <li>قياس يوضح الحالة الحالية برقم.</li>
+  <li>صفحة خطة مرئية تُفتح في المتصفح — ولا كود قبل موافقتك.</li>
+  <li>تعديل واحد محدود + بوابة واحدة على الأقل تخصّه.</li>
+  <li>لقطة قبل/بعد على المقاس المذكور في البطاقة.</li>
+  <li>نشر + تحقق من الحيّ، لا من الجهاز.</li>
+</ol>
+
+<div class="page-break"></div>
+
+<h2 class="ltr">2 · Werkwijze (Nederlands)</h2>
+<div class="ltr">
+<p><strong>De gouden regel:</strong> de site is live en zichtbaar voor klanten. Geen enkele wijziging zonder een
+<em>zichtbaar plan</em> in de browser, en geen publicatie zonder de poorten en een meting.</p>
+<ol>
+  <li><strong>Verzoek</strong> — spraak of tekst wordt één kaart: wat, waar, acceptatiecriterium.</li>
+  <li><strong>Diagnose</strong> — meten, niet gissen (DOM, afmetingen, netwerkverzoeken).</li>
+  <li><strong>Zichtbaar plan</strong> — een HTML-pagina die je in de browser opent, vóór er code verandert.</li>
+  <li><strong>Uitvoering</strong> — kleine wijziging + de elf poorten.</li>
+  <li><strong>Voorbeeld</strong> — schermafbeelding op 390 / 1366 / 1600 px.</li>
+  <li><strong>Publicatie</strong> — push naar <code>main</code>, daarna controle op de live site.</li>
+  <li><strong>Documentatie</strong> — dit bestand bijwerken.</li>
+</ol>
+<p><strong>Drie bronnen van waarheid:</strong> de hero-regio in <code>index.html</code>, <code>i18n/locales/*.json</code>
+en <code>i18n/footer.calibrated.json</code>. Het menu staat in de opmaak zelf, niet in JavaScript.</p>
+<p><strong>Wat nooit gebeurt:</strong> een element herbouwen dat al bestaat; bestanden buiten de publicatieset aanwijzen;
+publiceren zonder <code>build_csp.py</code> na een inline script.</p>
+</div>
+
+<h2 class="ltr">3 · How work flows (English)</h2>
+<div class="ltr">
+<p><strong>The golden rule:</strong> the site is live and public. Nothing is built before you can see a plan in the
+browser, and nothing is published before the gates pass and the result is measured.</p>
+<ol>
+  <li><strong>Request</strong> — voice or text becomes one card: what, where, acceptance test.</li>
+  <li><strong>Diagnosis</strong> — measure, never guess: DOM, sizes, failed requests.</li>
+  <li><strong>Visible plan</strong> — an HTML page opened in the browser, before any code changes.</li>
+  <li><strong>Build</strong> — one bounded change plus the eleven gates.</li>
+  <li><strong>Preview</strong> — screenshots at 390 / 1366 / 1600 px.</li>
+  <li><strong>Publish</strong> — push to <code>main</code>, then verify on the live site, not locally.</li>
+  <li><strong>Document</strong> — update this file.</li>
+</ol>
+<p><strong>Three sources of truth:</strong> the hero region of <code>index.html</code>, the per-language
+<code>i18n/locales/*.json</code>, and <code>i18n/footer.calibrated.json</code>. The menu order lives in the markup.</p>
+<p><strong>Never:</strong> rebuild an existing element instead of moving it; point at a file the publish set excludes;
+ship after editing an inline script without rebuilding the CSP manifest.</p>
+</div>
+
+<h2>8 · خريطة الملفات / Bestanden / Files</h2>
+<pre>index.html                     ← master: hero region, style layers, sections
+i18n/locales/*.json            ← 27 language dictionaries
+i18n/footer.calibrated.json    ← the footer model (4 blocks, 17 links)
+scripts/sync_locales.py        ← hero + styles → 27 pages (--write / --check)
+scripts/sync_nav.py            ← menu order into the markup
+scripts/apply_footer_all.py    ← footer structure into 27 pages
+scripts/check_perf_budget.py   ← request / weight ceilings
+scripts/sync_footer.py         ← footer renderer (preview mode)</pre>
+
+<h2>9 · الاقتراحات القادمة</h2>
+<ol>
+  <li><strong>ترحيل ترتيب الأقسام إلى الـ27 لغة</strong> — الجذر وحده مطابق اليوم.</li>
+  <li><strong>حارس <code>data-sr-args</code></strong> — فحص يفشل إن لم تُحلَّل أي حمولة JSON.</li>
+  <li><strong>صفحة خطة قياسية</strong> لكل طلب: قالب واحد يُملأ ويُفتح في المتصفح.</li>
+  <li><strong>تقليل طلبات الصفحة</strong> (sprite للأيقونات) ليعود سقف الطلبات إلى 160.</li>
+  <li><strong>توحيد صفحة الهبوط مع اللغات</strong> في بنية واحدة، بدل 28 نسخة.</li>
+</ol>
+
+<p class="muted ltr">S&amp;R CoreSync — internal working document · v1 · 13 Nov 2026</p>
+</body>
+</html>
