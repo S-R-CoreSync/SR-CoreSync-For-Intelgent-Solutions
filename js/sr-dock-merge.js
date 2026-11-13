@@ -48,16 +48,23 @@
     stickTools();
   }
 
-  /* the capsule rides on top of the dock, measured - never a fixed guess */
+  /* desktop: the capsule sits at the far left edge, the mirror of the counters
+     at the far right, with the dock holding the centre. When the space left of
+     the dock is too tight, it steps one level up instead of crowding it. */
   function stickTools() {
     var cap = document.querySelector('.sr-tools-capsule');
     var dock = document.getElementById('appleMacosDockWrapper');
     if (!cap || !dock) { return; }
     var r = dock.getBoundingClientRect();
     if (r.height < 10) { return; }
-    var cw = cap.getBoundingClientRect().width || 260;
-    cap.style.setProperty('bottom', (window.innerHeight - r.bottom) + 'px', 'important');
-    cap.style.setProperty('left', Math.max(14, Math.round(r.left - cw - 20)) + 'px', 'important');
+    var box = cap.getBoundingClientRect();
+    var cw = box.width || 260;
+    var ch = box.height || 46;
+    var edge = 22;
+    var bottom = window.innerHeight - r.bottom;
+    if (edge + cw + 12 > r.left) { bottom += ch + 18; }
+    cap.style.setProperty('bottom', bottom + 'px', 'important');
+    cap.style.setProperty('left', edge + 'px', 'important');
   }
 
   window.__srDock = { apply: apply, state: function () { return { past: past }; } };
