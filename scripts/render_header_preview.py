@@ -59,6 +59,11 @@ def main():
         else:
             parts.append(open(os.path.join(ROOT, 'partials', 'en', n + '.html'), encoding='utf-8', newline='').read())
     page = ''.join(parts).replace('src="assets/', 'src="./assets/').replace('href="assets/', 'href="./assets/')
+    extra = ('<link rel="stylesheet" href="./css/sr-header-support.css">\n'
+             '<link rel="stylesheet" href="./css/sr-unified-design-system.css">\n')
+    if 'sr-header-support.css' not in page:
+        i = page.lower().index('</head>')
+        page = page[:i] + extra + page[i:]
     open(os.path.join(ROOT, '_preview-en.html'), 'w', encoding='utf-8', newline='').write(page)
 
     print('generated header bytes:', len(gen))
