@@ -1,0 +1,20 @@
+name: locale-drift
+
+# Guards the one-source rule: if a locale page stops matching what the master
+# would render, this job fails loudly. It never blocks the deploy workflow —
+# it only reports the drift.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Hero and style layers must match the master
+        run: python scripts/sync_locales.py --check
