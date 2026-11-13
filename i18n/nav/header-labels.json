@@ -5,38 +5,83 @@
  },
  "#service": {
   "ar": "الخدمات",
-  "en": "SERVICES"
+  "en": "SERVICES",
+  "de": "Leistungen",
+  "nl": "Diensten",
+  "fr": "Services",
+  "es": "Servicios",
+  "it": "Servizi"
  },
  "#pricing": {
   "ar": "الأسعار",
-  "en": "Pricing"
+  "en": "Pricing",
+  "de": "Preise",
+  "nl": "Prijzen",
+  "fr": "Tarifs",
+  "es": "Precios",
+  "it": "Prezzi"
  },
  "#software-hub": {
   "ar": "المتجر الرقمي",
-  "en": "Store"
+  "en": "Store",
+  "de": "Shop",
+  "nl": "Winkel",
+  "fr": "Boutique",
+  "es": "Tienda",
+  "it": "Negozio"
  },
  "#about": {
   "ar": "نبذة",
-  "en": "About Us"
+  "en": "About Us",
+  "de": "Über uns",
+  "nl": "Over ons",
+  "fr": "À propos",
+  "es": "Sobre nosotros",
+  "it": "Chi siamo"
  },
  "#founders-showcase": {
   "ar": "القيادة",
-  "en": "LEADERSHIP"
+  "en": "LEADERSHIP",
+  "de": "Führung",
+  "nl": "Leiderschap",
+  "fr": "Direction",
+  "es": "Liderazgo",
+  "it": "Direzione"
  },
  "#roi-calculator": {
   "ar": "06 ROI",
-  "en": "ROI"
+  "en": "ROI",
+  "de": "ROI",
+  "nl": "ROI",
+  "fr": "ROI",
+  "es": "ROI",
+  "it": "ROI"
  },
  "#faq": {
   "ar": "07 الأسئلة الشائعة",
-  "en": "FAQ"
+  "en": "FAQ",
+  "de": "FAQ",
+  "nl": "FAQ",
+  "fr": "FAQ",
+  "es": "FAQ",
+  "it": "FAQ"
  },
  "./blog.html": {
   "ar": "08 المدونة",
-  "en": "Journal"
+  "en": "Journal",
+  "de": "Journal",
+  "nl": "Journal",
+  "fr": "Journal",
+  "es": "Revista",
+  "it": "Journal"
  },
  "./api-docs.html": {
   "ar": "09 توثيق API",
-  "en": "API docs"
+  "en": "API docs",
+  "de": "API-Dokumentation",
+  "nl": "API-docs",
+  "fr": "Documentation API",
+  "es": "Documentación API",
+  "it": "Documentazione API"
  }
 }
