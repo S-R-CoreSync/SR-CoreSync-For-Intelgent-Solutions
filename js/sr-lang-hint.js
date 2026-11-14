@@ -1,14 +1,19 @@
-/* S&R CoreSync - language hint.
-   If the visitor's browser language differs from the page, offer the matching
-   language once. Labels come from the existing switcher (its data-tooltip is
-   already the endonym), so this needs no translation and adds no copy. */
+/* S&R CoreSync - language hint, inside the dock.
+
+   If the visitor's browser language differs from the page, the matching flag in
+   the language dock gets a gold ring for six seconds. No new element, no second
+   language control on screen: the hint lives where the visitor would look.
+
+   Remembered for 30 days once shown, so it cannot become furniture. */
 (function () {
   'use strict';
   if (window.__srLangHint) return;
   window.__srLangHint = true;
 
   var KEY = 'sr_lang_hint_v1';
+  var SHOW_MS = 6000;
   var current = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().slice(0, 2);
+  var markers = [];
 
   function seen(code) {
     try {
@@ -28,51 +33,46 @@
     } catch (e) { /* private mode */ }
   }
 
-  function switcher() {
+  function available() {
     var map = {};
-    var links = document.querySelectorAll('.apple-macos-dock a[href], a[hreflang]');
-    Array.prototype.forEach.call(links, function (a) {
-      var href = a.getAttribute('href') || '';
-      var m = href.match(/\/?([a-z]{2})\/(?:index\.html)?$/);
-      var code = (a.getAttribute('hreflang') || (m && m[1]) || '').toLowerCase();
-      if (!code || code.length !== 2 || map[code]) return;
-      var label = (a.getAttribute('data-tooltip') || a.getAttribute('aria-label') ||
-                   a.textContent || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
-      if (!label || label.length > 30) return;
-      map[code] = { href: href, label: label };
+    Array.prototype.forEach.call(document.querySelectorAll('a[hreflang]'), function (a) {
+      var code = (a.getAttribute('hreflang') || '').toLowerCase();
+      if (code.length === 2 && !map[code]) map[code] = a;
     });
     return map;
   }
 
-  function build(target) {
-    var wrap = document.createElement('div');
-    wrap.className = 'sr-lang-hint';
-    wrap.innerHTML =
-      '<a class="sr-lang-hint__link" href="' + target.href + '">' +
-      '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" ' +
-      'stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>' +
-      '<path d="M12 3a15 15 0 010 18a15 15 0 010-18"/></svg>' +
-      '<span></span></a>' +
-      '<button type="button" class="sr-lang-hint__close" aria-label="×">×</button>';
-    wrap.querySelector('span').textContent = target.label;
-    wrap.querySelector('.sr-lang-hint__close').addEventListener('click', function () {
-      remember(target.code);
-      wrap.remove();
-    });
-    document.body.appendChild(wrap);
-  }
-
   function start() {
-    var map = switcher();
+    var map = available();
     if (!map[current]) return;
-    var wanted = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']);
+
+    var wanted = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    var target = null;
     for (var i = 0; i < wanted.length; i++) {
       var code = String(wanted[i] || '').toLowerCase().slice(0, 2);
       if (!code || code === current || !map[code] || seen(code)) continue;
-      map[code].code = code;
-      build(map[code]);
-      return;
+      target = code;
+      break;
     }
+    if (!target) return;
+
+    // the flag in the dock, if that language has one there
+    var flag = document.querySelector('.apple-macos-dock a[hreflang="' + target + '"]') ||
+               document.querySelector('.apple-macos-dock a[href*="/' + target + '/"]');
+
+    // otherwise point at the control that opens all 29
+    var marker = flag || document.querySelector('.apple-dock-launchpad-btn');
+    if (!marker) return;
+
+    marker.classList.add('sr-lang-hint-pulse');
+    marker.setAttribute('title', map[target].getAttribute('data-tooltip') ||
+                               map[target].getAttribute('aria-label') || target);
+    markers.push(marker);
+    remember(target);
+
+    window.setTimeout(function () {
+      marker.classList.remove('sr-lang-hint-pulse');
+    }, SHOW_MS);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);

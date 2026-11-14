@@ -142,3 +142,17 @@ html.sr-cmd-open{overflow:hidden}
   color:var(--sr-gold-text,#ecd9a0);text-decoration:none;border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),.35);
   padding-bottom:2px}
 .founders-link a:hover,.founders-link a:focus-visible{color:#f6e6b6;border-bottom-color:rgba(var(--sr-gold-line-rgb, 216, 178, 94),.72);outline:none}
+
+/* ── Language hint, inside the dock ────────────────────────────────────────
+   The visitor's own language gets a gold ring for six seconds, on the flag
+   that already exists. No second language control on screen. */
+.apple-dock-item.sr-lang-hint-pulse{position:relative}
+.apple-dock-item.sr-lang-hint-pulse::after{
+  content:'';position:absolute;inset:-4px;border-radius:12px;pointer-events:none;
+  border:2px solid rgba(var(--sr-gold-rgb,212,175,55),.9);
+  box-shadow:0 0 0 4px rgba(var(--sr-gold-rgb,212,175,55),.14),0 0 14px rgba(var(--sr-gold-rgb,212,175,55),.35);
+  animation:srLangPulse 1.5s ease-in-out infinite}
+@keyframes srLangPulse{0%,100%{opacity:.45}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){
+  .apple-dock-item.sr-lang-hint-pulse::after{animation:none;opacity:.95}
+}
