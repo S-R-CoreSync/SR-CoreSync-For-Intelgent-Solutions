@@ -78,12 +78,14 @@ def translate(text, table):
     return text
 
 
-def render(hero, css, table):
+def render(hero, css, table, lang=None):
     h = translate(hero, table).replace('./assets/', '../assets/')
     c = translate(css, table)
-    left = AR.findall(h + c)
-    if left:
-        raise SystemExit('Arabic left after translation: %r' % ''.join(left[:20]))
+    # ckb (Central Kurdish / Sorani) naturally uses Arabic script; exempt it from Arabic character ban
+    if lang != 'ckb':
+        left = AR.findall(h + c)
+        if left:
+            raise SystemExit('Arabic left after translation for %s: %r' % (lang, ''.join(left[:20])))
     return h, c
 
 
@@ -93,7 +95,7 @@ def sync_page(lang, hero_tpl, css_tpl, table, dry):
         return lang, 'missing'
     s = read(p)
     nl = '\r\n' if '\r\n' in s else '\n'
-    head, css = render(hero_tpl, css_tpl, table)
+    head, css = render(hero_tpl, css_tpl, table, lang=lang)
 
     # 1 · hero region
     if BEGIN in s and END in s:
