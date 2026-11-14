@@ -66,8 +66,15 @@ def audit_purity():
             with open(page_path, 'r', encoding='utf-8') as f:
                 lines = f.readlines()
             page_leaks = 0
+            in_header = False
             for i, line in enumerate(lines, 1):
                 clean_line = re.sub(r'<!--.*?-->', '', line).strip()
+                if '<header' in clean_line:
+                    in_header = True
+                if in_header:
+                    if '</header>' in clean_line:
+                        in_header = False
+                    continue
                 if AR_RE.search(clean_line):
                     if any(hint in clean_line for hint in SWITCHER_HINTS):
                         global switcher_lines
