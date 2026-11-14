@@ -14,9 +14,11 @@ import os
 import re
 import sys
 
-ROOT = r'D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project'
+# resolved from this file, so the same guard runs on the runner and on Windows
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://sr-coresync.com'
-# Kurmanji (ku) is written in Latin letters, so it is LTR; Sorani (ckb) is not.
+# Kurmanji (ku) is written in Latin letters, so it is LTR; Sorani (ckb) is not.
+
 RTL = {'ar', 'ckb'}
 
 PAGES = ['ar']
