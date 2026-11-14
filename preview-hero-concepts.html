@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معاينة خيارات الهيرو والترويسة العالمية — S&R CoreSync</title>
+    
+    <!-- خطوط وأنماط المنظومة الرسمية -->
+    <link rel="stylesheet" href="./assets/fonts/gf/fonts.css?v=20261114">
+    <link rel="stylesheet" href="./css/sr-unified-design-system.css?v=20261114">
+    <link rel="stylesheet" href="./css/dananajmah-bundle.min.css?v=20261114">
+    <link rel="stylesheet" href="./css/enterprise-suite.css?v=20261114">
+    <link rel="stylesheet" href="./css/sr-tokens.css?v=20261114">
+    <link rel="stylesheet" href="./css/hero-declutter.css?v=20261114">
+    <link rel="stylesheet" href="./css/sr-quick-dock.css?v=20261114">
+
+    <style>
+        :root {
+            --sr-gold: #d4af37;
+            --sr-gold-light: #f3dfba;
+            --sr-gold-glow: rgba(212, 175, 55, 0.35);
+            --sr-dark-bg: #06090e;
+            --sr-card-bg: rgba(13, 19, 30, 0.75);
+            --sr-border-gold: rgba(212, 175, 55, 0.25);
+            --font-family-base: 'Figtree', 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--sr-dark-bg);
+            color: #f0f4fc;
+            font-family: var(--font-family-base);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+        /* ═══ شريط التحكم والمعاينة العلوي الثابت ═══ */
+        .preview-control-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99999;
+            background: rgba(6, 10, 18, 0.94);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .preview-bar-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--sr-gold-light);
+        }
+
+        .preview-badge-live {
+            background: linear-gradient(135deg, #d4af37, #aa820a);
+            color: #06090e;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+
+        .preview-tabs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 4px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .preview-tab-btn {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .preview-tab-btn:hover {
+            color: #f8fafc;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .preview-tab-btn.active {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.1));
+            color: var(--sr-gold-light);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .preview-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .preview-btn-cta {
+            background: linear-gradient(135deg, #d4af37, #997508);
+            color: #06090e;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 0.82rem;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .preview-btn-cta:hover {
+            transform: scale(1.03);
+        }
+
+        /* مسافة تعويض لشريط التحكم */
+        .stage-wrapper {
+            margin-top: 60px;
+            position: relative;
+            min-height: calc(100vh - 60px);
+        }
+
+        /* إخفاء وإظهار المفاهيم */
+        .concept-view {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .concept-view.is-active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* ═══ الترويسة الجديدة المطورة (Global Header v2026) ═══ */
+        .modern-nav-header {
+            position: sticky;
+            top: 60px;
+            z-index: 1000;
+            background: rgba(6, 9, 14, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modern-brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .modern-brand-logo img {
+            width: 44px;
+            height: 44px;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+        }
+
+        .modern-brand-title {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .modern-brand-name {
+            font-size: 1.25rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #fff 40%, var(--sr-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .modern-brand-sub {
+            font-size: 0.68rem;
+            color: #94a3b8;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .modern-menu-list {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .modern-menu-item a {
+            text-decoration: none;
+            color: #cbd5e1;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .modern-menu-item a:hover {
+            color: var(--sr-gold-light);
+        }
+
+        .modern-menu-badge {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--sr-gold-light);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        .modern-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-modern-ghost {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .btn-modern-ghost:hover {
+            border-color: var(--sr-gold);
+            color: var(--sr-gold-light);
+        }
+
+        .btn-modern-gold {
+            background: linear-gradient(135deg, #d4af37, #9c7809);
+            border: none;
+            color: #06090e;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+            transition: all 0.2s;
+        }
+
+        .btn-modern-gold:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+        }
+
+        /* ═══ الخلفية الشبكية السينمائية المشتركة ═══ */
+        .hero-auroral-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .aurora-glow-1 {
+            position: absolute;
+            top: -20%;
+            right: 10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0) 70%);
+            filter: blur(80px);
+            animation: pulseAura 8s infinite alternate ease-in-out;
+        }
+
+        .aurora-glow-2 {
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(14, 116, 144, 0.15) 0%, rgba(14, 116, 144, 0) 70%);
+            filter: blur(90px);
+            animation: pulseAura 12s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes pulseAura {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.8; }
+            100% { transform: scale(1.15) translate(-30px, 30px); opacity: 1; }
+        }
+
+        /* ═══ شريط "حلل فكرتي" المطور الفاخر ═══ */
+        .lux-ai-search-bar {
+            width: 100%;
+            max-width: 640px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 999px;
+            padding: 6px 8px 6px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.15);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(16px);
+        }
+
+        .lux-ai-search-bar:focus-within {
+            border-color: var(--sr-gold);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .lux-ai-sparkle {
+            font-size: 1.25rem;
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+            animation: spinGlint 4s infinite linear;
+        }
+
+        @keyframes spinGlint {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.15); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .lux-ai-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #f8fafc;
+            font-size: 0.98rem;
+            font-family: inherit;
+        }
+
+        .lux-ai-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .lux-ai-mic-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #cbd5e1;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lux-ai-mic-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--sr-gold);
+            color: var(--sr-gold-light);
+            transform: scale(1.08);
+        }
+
+        .lux-ai-submit-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+            border: none;
+            color: #06090e;
+            padding: 9px 20px;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+            transition: all 0.2s;
+        }
+
+        .lux-ai-submit-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ═══ دك السوشيال ميديا الأيمن (محفوظ بالكامل) ═══ */
+        .floating-social-rail {
+            position: fixed;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            background: rgba(13, 19, 30, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 16px 8px;
+            border-radius: 999px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-rail-link {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.2s;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .social-rail-link:hover {
+            color: var(--sr-gold-light);
+            background: rgba(212, 175, 55, 0.2);
+            transform: scale(1.15);
+        }
+
+        .social-rail-divider {
+            width: 14px;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.3);
+        }
+
+        .social-rail-tag {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--sr-gold-light);
+            opacity: 0.8;
+            margin: 4px 0;
+        }
+
+        /* ═══ شريط المؤشرات السفلي (KPI Bar) ═══ */
+        .bottom-kpi-bar {
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            background: rgba(6, 9, 14, 0.65);
+            backdrop-filter: blur(10px);
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .kpi-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .kpi-val {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: var(--sr-gold-light);
+            letter-spacing: 0.5px;
+        }
+
+        .kpi-lbl {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            line-height: 1.2;
+        }
+
+        /* ═════════════════════════════════════════════════════════
+           الخيار 1: الواجهة السحابية التفاعلية الحية (Linear / Vercel)
+        ═════════════════════════════════════════════════════════ */
+        .concept-1-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 60px 40px 80px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .c1-copy-col {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .c1-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--sr-gold-light);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            width: fit-content;
+        }
+
+        .c1-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 10px #10b981;
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0% { transform: scale(0.9); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.9); opacity: 0.8; }
+        }
+
+        .c1-title {
+            font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 70%, var(--sr-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .c1-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #94a3b8;
+            max-width: 580px;
+            margin: 0;
+        }
+
+        .c1-chips-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .c1-chip {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .c1-chip:hover {
+            border-color: var(--sr-gold);
+            color: var(--sr-gold-light);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* لوحة التحكم السحابية الزجاجية المجسمة بدلاً من الشعار المكرر */
+        .c1-preview-col {
+            position: relative;
+        }
+
+        .c1-os-card {
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.85), rgba(9, 14, 23, 0.95));
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 24px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(212, 175, 55, 0.15);
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            transform: perspective(1000px) rotateY(-4deg) rotateX(3deg);
+            transition: transform 0.4s ease-out;
+        }
+
+        .c1-os-card:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+        }
+
+        .c1-os-topbar {
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .c1-os-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .c1-os-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #10b981; }
+
+        .c1-os-title {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .c1-os-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .c1-os-stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .c1-os-stat-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .c1-os-stat-title {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
+
+        .c1-os-stat-num {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--sr-gold-light);
+        }
+
+        .c1-os-terminal-log {
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.75rem;
+            line-height: 1.7;
+            color: #a7f3d0;
+        }
+
+        .log-accent { color: var(--sr-gold-light); }
+        .log-cyan { color: #38bdf8; }
+
+        /* ═════════════════════════════════════════════════════════
+           الخيار 2: الهيرو السينمائي الفاخر (Stripe / Apple Style)
+        ═════════════════════════════════════════════════════════ */
+        .concept-2-center {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 40px 90px 100px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .c2-pill-announcement {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            padding: 7px 20px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--sr-gold-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .c2-hero-title {
+            font-size: clamp(2.8rem, 4.5vw, 4.4rem);
+            font-weight: 900;
+            line-height: 1.22;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff 30%, #f1f5f9 60%, var(--sr-gold-light) 95%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 950px;
+        }
+
+        .c2-hero-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #94a3b8;
+            max-width: 720px;
+            margin: 0;
+        }
+
+        .c2-showcase-trio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .c2-trio-card {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 20px;
+            padding: 24px;
+            text-align: right;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .c2-trio-card:hover {
+            border-color: var(--sr-gold);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+        }
+
+        .c2-card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .c2-card-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .c2-card-desc {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* ═════════════════════════════════════════════════════════
+           الخيار 3: قمرة القيادة والتوأم الرقمي (Interactive Space Cockpit)
+        ═════════════════════════════════════════════════════════ */
+        .concept-3-cockpit {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 50px 40px 80px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .c3-cockpit-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 280px;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .c3-sidebar-panel {
+            background: rgba(13, 19, 30, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .c3-center-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+        }
+
+        .c3-core-orb {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.05) 70%);
+            border: 2px dashed rgba(212, 175, 55, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: rotateOrb 25s infinite linear;
+        }
+
+        @keyframes rotateOrb {
+            100% { transform: rotate(360deg); }
+        }
+
+        .c3-core-orb img {
+            width: 100px;
+            height: 100px;
+            animation: unrotateOrb 25s infinite linear;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+        }
+
+        @keyframes unrotateOrb {
+            100% { transform: rotate(-360deg); }
+        }
+
+        /* ═══ استجابة الشاشات ═══ */
+        @media (max-width: 1024px) {
+            .concept-1-grid { grid-template-columns: 1fr; padding-right: 40px; }
+            .c2-showcase-trio { grid-template-columns: 1fr; }
+            .c3-cockpit-layout { grid-template-columns: 1fr; }
+            .floating-social-rail { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ 1. شريط التحكم التفاعلي بالمعاينة (Sticky Switcher) ═══ -->
+    <header class="preview-control-bar">
+        <div class="preview-bar-title">
+            <span class="preview-badge-live">معاينة تفاعلية حية 2026</span>
+            <span>قارن بين خيارات الهيرو والترويسة الثلاثة:</span>
+        </div>
+
+        <nav class="preview-tabs" aria-label="خيارات التصميم">
+            <button type="button" class="preview-tab-btn active" onclick="switchConcept(1)" id="btn-tab-1">
+                <span>🌟 الخيار 1: الواجهة السحابية الحية (Linear / Vercel)</span>
+            </button>
+            <button type="button" class="preview-tab-btn" onclick="switchConcept(2)" id="btn-tab-2">
+                <span>🎨 الخيار 2: السينمائي المركزي (Apple / Stripe)</span>
+            </button>
+            <button type="button" class="preview-tab-btn" onclick="switchConcept(3)" id="btn-tab-3">
+                <span>⚡ الخيار 3: قمرة القيادة والتوأم الرقمي (Cockpit)</span>
+            </button>
+        </nav>
+
+        <div class="preview-actions">
+            <button type="button" class="preview-btn-cta" onclick="confirmSelection()">
+                <span>اعتماد هذا الخيار للتطبيق ✦</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="stage-wrapper">
+
+        <!-- ═══ الترويسة العلوية العالمية الجديدة (Modern Luxury Navbar) ═══ -->
+        <nav class="modern-nav-header">
+            <!-- الشعار الرسمي -->
+            <a href="#" class="modern-brand-logo">
+                <img src="./assets/sr-core-emblem-official.webp" alt="S&R CoreSync Emblem">
+                <div class="modern-brand-title">
+                    <span class="modern-brand-name">S&amp;R CoreSync</span>
+                    <span class="modern-brand-sub">Intelligent Solutions</span>
+                </div>
+            </a>
+
+            <!-- القائمة الرئيسية النظيفة (بدون أرقام قديمة) -->
+            <ul class="modern-menu-list">
+                <li class="modern-menu-item">
+                    <a href="#solutions">
+                        <span>الحلول والأنظمة</span>
+                        <span class="modern-menu-badge">جديد 2026</span>
+                    </a>
+                </li>
+                <li class="modern-menu-item"><a href="#pricing">الأسعار والباقات</a></li>
+                <li class="modern-menu-item"><a href="#store">المتجر الرقمي</a></li>
+                <li class="modern-menu-item"><a href="#about">المنظومة والقيادة</a></li>
+                <li class="modern-menu-item"><a href="#resources">المصادر و ROI</a></li>
+            </ul>
+
+            <!-- أدوات الإجراء السريع -->
+            <div class="modern-header-actions">
+                <button type="button" class="btn-modern-ghost">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                    <span>أدوات الدعم</span>
+                </button>
+                <button type="button" class="btn-modern-gold" onclick="alert('فتح بوابة التجربة الحية')">
+                    <span>تجربة النظام الحي ⚡</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- الخلفية النيونية الشبكية المتوهجة -->
+        <div class="hero-auroral-bg">
+            <div class="aurora-glow-1"></div>
+            <div class="aurora-glow-2"></div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════════
+             الخيار 1: الواجهة السحابية التفاعلية الحية (Linear / Vercel)
+        ══════════════════════════════════════════════════════════ -->
+        <section class="concept-view is-active" id="concept-1">
+            <div class="concept-1-grid">
+                <!-- العمود الأيمن: النص + شريط الفكرة -->
+                <div class="c1-copy-col">
+                    <div class="c1-badge">
+                        <span class="c1-badge-dot"></span>
+                        <span>متاحون لهندسة المنظومات والتحول الرقمي 2026</span>
+                    </div>
+
+                    <h1 class="c1-title">
+                        نبني منظومات برمجية استثنائية، هويات بصرية، ومتاجر تسبق عصرها
+                    </h1>
+
+                    <p class="c1-desc">
+                        حلول سحابية متقدمة وأنظمة ذكاء اصطناعي سيادية مصممة خصيصاً للمؤسسات الطموحة ورواد الأعمال، بقيادة معمارية متكاملة لضمان النمو والتفوق التكنولوجي.
+                    </p>
+
+                    <!-- محرك "حلّل فكرتي" المطور في المركز القيادي -->
+                    <div class="lux-ai-search-bar">
+                        <span class="lux-ai-sparkle">✨</span>
+                        <input type="text" class="lux-ai-input" placeholder="اكتب فكرة مشروعك هنا وسيقوم الذكاء الاصطناعي بتحليلها فوراً…" aria-label="فكرة المشروع">
+                        <button type="button" class="lux-ai-mic-btn" title="تحدث صوتياً" onclick="alert('تشغيل الإملاء الصوتي التفاعلي 🎙️')">
+                            🎙️
+                        </button>
+                        <button type="button" class="lux-ai-submit-btn" onclick="alert('جاري تحليل الفكرة بالذكاء الاصطناعي ✦')">
+                            <span>حلّل فكرتي ✦</span>
+                            <span>←</span>
+                        </button>
+                    </div>
+
+                    <!-- شرائح التخصصات السريعة -->
+                    <div class="c1-chips-row">
+                        <button type="button" class="c1-chip">🏢 نظام ERP متكامل</button>
+                        <button type="button" class="c1-chip">🛒 متجر إلكتروني فاخر</button>
+                        <button type="button" class="c1-chip">👑 هوية بصرية كاملة</button>
+                        <button type="button" class="c1-chip">🤖 وكلاء الذكاء الاصطناعي</button>
+                        <button type="button" class="c1-chip">⚡ أتمتة وربط الأنظمة</button>
+                    </div>
+                </div>
+
+                <!-- العمود الأيسر: لوحة التحكم السحابية الحية (بدل تكرار الشعار) -->
+                <div class="c1-preview-col">
+                    <div class="c1-os-card">
+                        <div class="c1-os-topbar">
+                            <div class="c1-os-dots">
+                                <span class="c1-os-dot dot-red"></span>
+                                <span class="c1-os-dot dot-yellow"></span>
+                                <span class="c1-os-dot dot-green"></span>
+                            </div>
+                            <span class="c1-os-title">CoreSync Sovereign OS v2026.4 — Amsterdam Node</span>
+                            <span style="font-size:0.75rem; color:#10b981;">● متصل بنجاح</span>
+                        </div>
+
+                        <div class="c1-os-body">
+                            <!-- إحصاءات حية -->
+                            <div class="c1-os-stat-grid">
+                                <div class="c1-os-stat-box">
+                                    <div class="c1-os-stat-title">زمن المعالجة السحابية</div>
+                                    <div class="c1-os-stat-num">0.12 ms</div>
+                                </div>
+                                <div class="c1-os-stat-box">
+                                    <div class="c1-os-stat-title">كفاءة الأتمتة والـ AI</div>
+                                    <div class="c1-os-stat-num">99.98%</div>
+                                </div>
+                                <div class="c1-os-stat-box">
+                                    <div class="c1-os-stat-title">جاهزية الامتثال الأوروبي</div>
+                                    <div class="c1-os-stat-num">BTW Verified</div>
+                                </div>
+                            </div>
+
+                            <!-- سجل العمليات الحي -->
+                            <div class="c1-os-terminal-log">
+                                <div><span class="log-accent">[SYSTEM]</span> Initializing S&R Intelligent Engine... <span class="log-cyan">OK</span></div>
+                                <div><span class="log-accent">[AI AGENT]</span> Multi-agent workflow ready. Listening for project briefs.</div>
+                                <div><span class="log-accent">[STORE ENGINE]</span> 3D luxury viewer pipeline compiled at 60 FPS.</div>
+                                <div><span class="log-accent">[STATUS]</span> Live telemetry active. Zero bottleneck detected.</div>
+                            </div>
+
+                            <!-- زر تجربة حي داخل الكونسول -->
+                            <button type="button" class="btn-modern-ghost" style="width:100%; justify-content:center; border-color:rgba(212,175,55,0.4);" onclick="alert('فتح شاشة محاكاة النظام السحابي')">
+                                <span>▶ تفاعل مع محاكي الأنظمة المباشر</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════════
+             الخيار 2: الهيرو السينمائي الفاخر (Apple / Stripe Style)
+        ══════════════════════════════════════════════════════════ -->
+        <section class="concept-view" id="concept-2">
+            <div class="concept-2-center">
+                <div class="c2-pill-announcement">
+                    <span>👑 S&amp;R CoreSync Sovereign Ecosystem</span>
+                    <span style="opacity:0.5;">|</span>
+                    <span>الجيل الجديد من الحلول الرقمية الذكية</span>
+                </div>
+
+                <h1 class="c2-hero-title">
+                    نصنع الفارق البرمجي والبصري للعلامات التجارية الاستثنائية
+                </h1>
+
+                <p class="c2-hero-subtitle">
+                    منظومة متكاملة تجمع بين دقة الهندسة البرمجية الأوروبية وسحر الهويات البصرية الملكية، لنبني لشركتك أصولاً رقمية لا تفقد قيمتها أبداً.
+                </p>
+
+                <!-- شريط البحث والذكاء الاصطناعي في المركز الفاخر -->
+                <div class="lux-ai-search-bar" style="max-width:760px;">
+                    <span class="lux-ai-sparkle">✨</span>
+                    <input type="text" class="lux-ai-input" placeholder="صِف فكرة متجرك، نظامك البرمجي، أو هويتك وسيتولى الـ AI تفكيكها وتخطيطها…" aria-label="فكرة المشروع">
+                    <button type="button" class="lux-ai-mic-btn" title="تحدث صوتياً">🎙️</button>
+                    <button type="button" class="lux-ai-submit-btn">
+                        <span>حلّل فكرتي الآن ✦</span>
+                        <span>←</span>
+                    </button>
+                </div>
+
+                <!-- ثلاثية التخصصات العالمية -->
+                <div class="c2-showcase-trio">
+                    <div class="c2-trio-card">
+                        <div class="c2-card-icon">👑</div>
+                        <div class="c2-card-title">هويات بصرية ملكية</div>
+                        <div class="c2-card-desc">أدلة بصرية شاملة، تصاميم متفردة، وخطوط مخصصة تعكس هيبة وثقل علامتك التجارية.</div>
+                    </div>
+                    <div class="c2-trio-card">
+                        <div class="c2-card-icon">🛒</div>
+                        <div class="c2-card-title">متاجر إلكترونية فاخرة</div>
+                        <div class="c2-card-desc">واجهات شوبيفاي ونكست مخصصة فائقة السرعة مع بوابات دفع عالمية ومعدلات تحويل قياسية.</div>
+                    </div>
+                    <div class="c2-trio-card">
+                        <div class="c2-card-icon">🏢</div>
+                        <div class="c2-card-title">أنظمة ERP وأتمتة ذكية</div>
+                        <div class="c2-card-desc">إدارة الموارد، سلاسل الإمداد، الفوترة المتوافقة، وربط العمليات بوكلاء ذكاء اصطناعي متخصصين.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════════
+             الخيار 3: قمرة القيادة والتوأم الرقمي (Cockpit UI)
+        ══════════════════════════════════════════════════════════ -->
+        <section class="concept-view" id="concept-3">
+            <div class="concept-3-cockpit">
+                <div class="c3-cockpit-layout">
+                    <!-- اللوحة الجانبية اليمنى: مؤشرات القياس -->
+                    <div class="c3-sidebar-panel">
+                        <h4 style="margin:0; color:var(--sr-gold-light); font-size:0.9rem;">📊 القياس اللحظي</h4>
+                        <div style="font-size:0.8rem; color:#94a3b8; display:flex; justify-content:space-between;">
+                            <span>سرعة الاستجابة</span>
+                            <strong style="color:#10b981;">0.08s</strong>
+                        </div>
+                        <div style="font-size:0.8rem; color:#94a3b8; display:flex; justify-content:space-between;">
+                            <span>الأمان السيبراني</span>
+                            <strong style="color:var(--sr-gold-light);">SOC2 / ISO</strong>
+                        </div>
+                        <div style="font-size:0.8rem; color:#94a3b8; display:flex; justify-content:space-between;">
+                            <span>محرك الـ AI</span>
+                            <strong style="color:#38bdf8;">Autonomous v2</strong>
+                        </div>
+                        <hr style="border:none; border-top:1px solid rgba(255,255,255,0.08); margin:6px 0;">
+                        <button type="button" class="c1-chip" style="width:100%; text-align:center;">فحص الجاهزية الرقمية</button>
+                    </div>
+
+                    <!-- المركز: النواة التفاعلية والشعار كنواة طاقة + شريط الفكرة -->
+                    <div class="c3-center-stage">
+                        <div class="c3-core-orb">
+                            <img src="./assets/sr-core-emblem-official.webp" alt="نواة S&R">
+                        </div>
+
+                        <h2 style="font-size:2.2rem; font-weight:900; margin:0; color:#fff;">
+                            قمرة قيادة المنظومات الرقمية المتكاملة
+                        </h2>
+
+                        <p style="color:#94a3b8; max-width:550px; font-size:0.95rem; margin:0;">
+                            تفاعل مباشرة مع النواة الذكية لإطلاق منصتك السحابية وهويتك البصرية بدقة متناهية.
+                        </p>
+
+                        <!-- شريط الفكرة المدمج -->
+                        <div class="lux-ai-search-bar" style="width:100%;">
+                            <span class="lux-ai-sparkle">⚡</span>
+                            <input type="text" class="lux-ai-input" placeholder="أدخل أهداف مشروعك لبدء تهيئة المنظومة البرمجية…" aria-label="فكرة المشروع">
+                            <button type="button" class="lux-ai-mic-btn">🎙️</button>
+                            <button type="button" class="lux-ai-submit-btn">
+                                <span>تهيئة النظام ✦</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- اللوحة الجانبية اليسرى: التخصصات التفاعلية -->
+                    <div class="c3-sidebar-panel">
+                        <h4 style="margin:0; color:var(--sr-gold-light); font-size:0.9rem;">⚡ مسارات التنفيذ</h4>
+                        <button type="button" class="c1-chip">💳 أنظمة FinTech ودفوعات</button>
+                        <button type="button" class="c1-chip">🛒 منصات تجارة عالمية</button>
+                        <button type="button" class="c1-chip">📦 سلاسل التوريد الذكية</button>
+                        <button type="button" class="c1-chip">🏛️ مركز CLGID للابتكار</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ دك السوشيال ميديا الأيمن (محفوظ وثابت) ═══ -->
+        <aside class="floating-social-rail" aria-label="قنوات التواصل الرسمية">
+            <a href="https://wa.me/31618111116" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="واتساب VIP">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46z"/></svg>
+            </a>
+            <a href="https://x.com/SRCoreSync" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="منصة X">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/SRCoreSync" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="إنستغرام">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://linkedin.com/company/146883282/" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="لينكد إن">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <span class="social-rail-divider"></span>
+            <span class="social-rail-tag">S&amp;R CORESYNC</span>
+            <span class="social-rail-divider"></span>
+            <a href="mailto:info@sr-coresync.com" class="social-rail-link" title="البريد الرسمي">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+        </aside>
+
+        <!-- ═══ شريط الـ KPIs السفلي (مؤشرات الثقة) ═══ -->
+        <footer class="bottom-kpi-bar">
+            <div class="kpi-item">
+                <span class="kpi-val">99.9%</span>
+                <span class="kpi-lbl">جاهزية واستقرار<br>سحابي فائق</span>
+            </div>
+            <div class="kpi-item">
+                <span class="kpi-val">EU &amp; BTW</span>
+                <span class="kpi-lbl">امتثال ضريبي<br>وقانوني أوروبي</span>
+            </div>
+            <div class="kpi-item">
+                <span class="kpi-val">&lt; 30s</span>
+                <span class="kpi-lbl">استجابة وبدء<br>فوري للمشاريع</span>
+            </div>
+            <div class="kpi-item">
+                <span class="kpi-val">Amsterdam HQ</span>
+                <span class="kpi-lbl">مقر الإدارة والمعمارية<br>أمستردام، هولندا</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- سكربت التبديل التفاعلي الفوري بين المفاهيم -->
+    <script>
+        function switchConcept(index) {
+            // إزالة التنشيط من التابات
+            document.querySelectorAll('.preview-tab-btn').forEach((btn, idx) => {
+                if (idx + 1 === index) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // إخفاء كافة العروض وتنشيط المطلوب
+            document.querySelectorAll('.concept-view').forEach((view, idx) => {
+                if (idx + 1 === index) {
+                    view.classList.add('is-active');
+                } else {
+                    view.classList.remove('is-active');
+                }
+            });
+        }
+
+        function confirmSelection() {
+            let activeIndex = 1;
+            if (document.getElementById('concept-2').classList.contains('is-active')) activeIndex = 2;
+            if (document.getElementById('concept-3').classList.contains('is-active')) activeIndex = 3;
+            
+            alert('أحسنت الاختيار! تم اختيار الخيار رقم (' + activeIndex + '). أرسل رقم الخيار في المحادثة وسنقوم فوراً باعتماده وتطبيقه على الموقع الرئيسي وكافة اللغات الـ 28.');
+        }
+    </script>
+</body>
+</html>
