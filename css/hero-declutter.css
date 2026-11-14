@@ -790,3 +790,131 @@
         margin-left: 0 !important;
     }
 }
+
+
+/* ═══ User Specific Layout: Brand on Far Left, Numbered Nav on Far Right ═══ */
+
+.tf-header .header-inner .header-row-layout {
+    direction: rtl !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 1480px !important;
+    margin: 0 auto !important;
+    padding: 0 28px !important;
+}
+
+/* Nav on Far Right */
+.header-col-nav {
+    order: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 1 !important;
+}
+
+.header-col-nav .nav-menu-main {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.header-col-nav .nav-menu-main .item-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+    white-space: nowrap !important;
+}
+
+.header-col-nav .nav-menu-main .item-link span.gold-accent {
+    color: var(--sr-gold, #d4af37) !important;
+    font-family: monospace !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+}
+
+.header-col-nav .nav-menu-main .item-link:hover {
+    color: #f3dfba !important;
+}
+
+/* Actions in middle-left */
+.header-col-actions {
+    order: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-left: 20px !important;
+}
+
+/* Brand Logo on Far Left */
+.header-col-brand {
+    order: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.header-col-brand .brand-logo-site {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+    direction: ltr !important;
+}
+
+.header-col-brand .brand-emblem-img {
+    width: 44px !important;
+    height: 44px !important;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4)) !important;
+}
+
+/* ═══ Larger Central Space for Hero (تكبير المساحة في المنتصف أكبر بقليل) ═══ */
+.hv2 {
+    max-width: 980px !important;
+    padding-right: 48px !important;
+    padding-left: 0 !important;
+}
+
+.c3-core-orb {
+    width: 96px !important;
+    height: 96px !important;
+}
+
+.c3-orb-img {
+    width: 64px !important;
+    height: 64px !important;
+}
+
+.hv2 h1.hv2__h1, .hero-refined-title {
+    font-size: clamp(1.85rem, 2.6vw, 2.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.38 !important;
+    max-width: 780px !important;
+    margin: 0 auto 18px auto !important;
+}
+
+.hero-ai-idea-box {
+    max-width: 640px !important;
+    margin-bottom: 16px !important;
+}
+
+.hero-quick-chips-row {
+    max-width: 780px !important;
+    gap: 10px !important;
+}
+
+.hero-refined-chip {
+    font-size: 0.82rem !important;
+    padding: 7px 14px !important;
+}
