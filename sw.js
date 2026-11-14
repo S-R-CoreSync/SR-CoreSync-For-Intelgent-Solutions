@@ -1,6 +1,6 @@
 // S&R CoreSync For Intelligent Solutions - Enterprise Pre-render & Ultra-Low TTFB Service Worker
-// Version: coresync-prerender-v19-offline
-const CACHE_NAME = 'coresync-prerender-v19-offline';
+// Version: coresync-prerender-v20-cockpit-speed
+const CACHE_NAME = 'coresync-prerender-v20-cockpit-speed';
 
 // 1. Critical assets: everything the first screen needs to paint.
 // Anything that is only reachable after a scroll (founder banners, portraits,
