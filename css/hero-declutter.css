@@ -1033,3 +1033,102 @@
     padding: 7px 15px !important;
     font-size: 0.82rem !important;
 }
+
+
+/* ═══ Ultra-Perfect Flow: Logo Far Right, Menu Next To It Extending Left, Larger Orb ═══ */
+
+/* Header: Direction RTL -> Logo on Far Right, Menu flows immediately to the left, Actions on Far Left */
+.tf-header .header-inner .header-row-layout {
+    direction: rtl !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    max-width: 1540px !important;
+    margin: 0 auto !important;
+    padding: 0 28px !important;
+    gap: 32px !important;
+}
+
+.header-col-brand {
+    order: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+.header-col-nav {
+    order: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 !important;
+    justify-content: flex-start !important;
+}
+
+.header-col-actions {
+    order: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+.nav-menu-main {
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.nav-menu-main .item-link {
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    color: #cbd5e1 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+}
+
+.nav-menu-main .item-link span.gold-accent {
+    color: #d4af37 !important;
+    font-family: monospace !important;
+    font-size: 0.82rem !important;
+}
+
+/* Larger Prominent Center Emblem Orb */
+.c3-core-orb-wrapper {
+    margin-top: 5px !important;
+    margin-bottom: 16px !important;
+}
+
+.c3-core-orb {
+    width: 138px !important;
+    height: 138px !important;
+    border-radius: 50% !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.03) 70%) !important;
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.28) !important;
+}
+
+.c3-orb-img {
+    width: 96px !important;
+    height: 96px !important;
+    filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+}
+
+.c3-orb-ring-outer {
+    inset: -8px !important;
+    border-width: 2px !important;
+}
+
+.c3-orb-ring-inner {
+    inset: 4px !important;
+}
