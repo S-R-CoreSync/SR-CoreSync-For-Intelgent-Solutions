@@ -1302,73 +1302,72 @@ html[dir="ltr"] .srf{direction:ltr}
             <section id="hero" class="section-hero-v1 hero-reference">
 <!-- SR:BEGIN hero -->
 <div class="hv2" id="hv2-hero">
-    <div class="hero-stage-center">
-        <!-- Intelligent Orb Core: Noticeably larger and more prominent -->
-        <div class="c3-core-orb-wrapper">
-            <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox" data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
-                <div class="c3-orb-ring-outer"></div>
-                <div class="c3-orb-ring-inner"></div>
-                <img src="../assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Sovereign Intelligent Core" width="140" height="140" class="c3-orb-img" loading="eager" decoding="async">
+    <div class="concept-3-cockpit">
+        <div class="c3-cockpit-layout">
+            <!-- 1. Telemetry Panel -->
+            <div class="c3-sidebar-panel">
+                <h4 class="c3-panel-head">📊 Télémétrie en Direct</h4>
+                <div class="c3-stat-row">
+                    <span>Temps de Réponse</span>
+                    <strong style="color:#10b981;">0.08s</strong>
+                </div>
+                <div class="c3-stat-row">
+                    <span>Cybersécurité</span>
+                    <strong style="color:var(--sr-gold-light,#f3dfba);">SOC2 / ISO</strong>
+                </div>
+                <div class="c3-stat-row">
+                    <span>Moteur IA</span>
+                    <strong style="color:#38bdf8;">Autonomous v2</strong>
+                </div>
             </div>
-        </div>
 
-        <!-- Official Badge -->
-        <div class="hv2__badge">
-            <i></i> S&amp;R CoreSync For Intelligent Solutions
-        </div>
-
-        <!-- Rotating Title -->
-        <h1 class="hv2__h1 hero-refined-title">
-            <span class="hv2__rot" id="hv2-rot">
-                <span class="is-on">Systèmes logiciels avancés</span>
-                <span>Applications et plateformes numériques</span>
-                <span>Identités de marque durables</span>
-            </span>
-        </h1>
-
-        <!-- AI Idea Form -->
-        <div class="hero-ai-idea-box">
-            <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
-                <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
-                    <span class="hero-ai-idea-sparkle">✨</span>
+            <!-- 2. Central Cockpit -->
+            <div class="c3-center-stage">
+                <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox" data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
+                    <img src="../assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Sovereign Intelligent Core" width="100" height="100" class="c3-orb-img" loading="eager" decoding="async">
                 </div>
-                <div class="hero-ai-idea-input-wrap">
-                    <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Décrivez votre idée de projet…" autocomplete="off" aria-label="Idée de projet">
-                </div>
-                <div class="hero-ai-idea-btns">
-                    <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Décrire votre idée à la voix" aria-label="Décrire votre idée à la voix">
+
+                <h1 class="c3-hero-h1">
+                    Cockpit des Systèmes Numériques Intégrés
+                </h1>
+
+                <p class="c3-hero-sub">
+                    Interagissez directement avec le noyau intelligent pour lancer votre plateforme cloud et votre identité de marque avec une précision absolue.
+                </p>
+
+                <!-- AI Idea Bar -->
+                <form class="hero-ai-idea-form lux-ai-search-bar" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
+                    <span class="lux-ai-sparkle">⚡</span>
+                    <input type="text" id="heroAiIdeaInput" class="lux-ai-input" placeholder="Entrez les objectifs de votre projet pour initialiser l'architecture logicielle…" autocomplete="off" aria-label="Project Idea AI Input">
+                    <button type="button" class="lux-ai-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Exprimez votre idée de projet de manière interactive" aria-label="Exprimez votre idée de projet de manière interactive">
                         <span class="hero-ai-mic-icon">🎙️</span>
                     </button>
-                    <button type="submit" class="hero-ai-idea-submit-btn" title="Analyser mon idée ⚡" aria-label="Analyser mon idée ⚡">
-                        <span class="hero-ai-submit-text">Analyser mon idée ✦</span>
-                        <span class="hero-ai-submit-arrow">←</span>
+                    <button type="submit" class="lux-ai-submit-btn" title="Initialiser le Système ✦" aria-label="Initialiser le Système ✦">
+                        <span>Initialiser le Système ✦</span>
                     </button>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
 
-        <!-- Quick Chips Row directly above language dock -->
-        <div class="hero-quick-chips-row">
-            <a href="#services" class="hero-refined-chip">
-                <span>🏢</span>
-                <span>Système ERP complet</span>
-            </a>
-            <a href="#services" class="hero-refined-chip">
-                <span>🛒</span>
-                <span>Boutique en ligne haut de gamme</span>
-            </a>
-            <a href="#services" class="hero-refined-chip">
-                <span>👑</span>
-                <span>Identité de marque complète</span>
-            </a>
-            <a href="#services" class="hero-refined-chip">
-                <span>⚡</span>
-                <span>Automatisation et intégrations</span>
-            </a>
-            <a href="demo.html" class="hero-refined-chip chip-demo-highlight">
-                <span>▶</span>
-                <span>Tester le système cloud en direct</span>
-            </a>
+            <!-- 3. Pillars Panel -->
+            <div class="c3-sidebar-panel">
+                <h4 class="c3-panel-head">⚡ Voies d'Exécution</h4>
+                <a href="#services" class="c1-chip">
+                    <span>💳</span>
+                    <span>Systèmes FinTech & Paiements</span>
+                </a>
+                <a href="#services" class="c1-chip">
+                    <span>🛒</span>
+                    <span>Plateformes de Commerce Mondiales</span>
+                </a>
+                <a href="#services" class="c1-chip">
+                    <span>📦</span>
+                    <span>Chaînes d'Approvisionnement Intelligentes</span>
+                </a>
+                <a href="#services" class="c1-chip">
+                    <span>🏛️</span>
+                    <span>Centre d'Innovation CLGID</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
