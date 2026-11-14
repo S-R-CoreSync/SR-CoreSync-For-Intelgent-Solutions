@@ -194,9 +194,19 @@ jobs:
       # ---------------------------------------------------------------------
       - name: Verify publish set integrity (no broken local references)
         run: |
-          set -euo pipefail
-          python scripts/validate_publish_set.py
-          python scripts/check_site_links.py
+          set -uo pipefail
+          rc=0
+          for step in "scripts/validate_publish_set.py" "scripts/check_site_links.py"; do
+            out=$(python "$step" 2>&1) || rc=1
+            if [ $? -ne 0 ]; then :; fi
+            echo "$out"
+            if ! echo "$out" | grep -q "PASSED"; then
+              rc=1
+              echo "::error::FAILED $step"
+              echo "$out" | tail -n 25 | sed 's/^/::error::/'
+            fi
+          done
+          exit $rc
 
       # ---------------------------------------------------------------------
       # Guard: fail the deployment if anything sensitive slipped through.
