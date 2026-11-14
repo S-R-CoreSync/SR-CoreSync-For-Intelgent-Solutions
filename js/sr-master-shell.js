@@ -891,6 +891,68 @@
                 modal.classList.add('sr-estimate-visible');
             });
         }
+
+        // Instant Omnichannel Telemetry & Lead Dispatch
+        dispatchLeadSignal('idea_analyzed', { query: query, classification: classification, budget: budget, roi: roi });
+    }
+
+    // 5.7b Omnichannel Telemetry & Lead Signal Dispatcher
+    function dispatchLeadSignal(type, extra) {
+        try {
+            var qEl = document.getElementById('srEstQueryText');
+            var cEl = document.getElementById('srEstClassification');
+            var tEl = document.getElementById('srEstTimeline');
+            var bEl = document.getElementById('srEstBudget');
+            var rEl = document.getElementById('srEstRoi');
+            var lang = (document.documentElement.getAttribute('lang') || 'ar').toLowerCase().split('-')[0];
+
+            var query = (extra && extra.query) || (qEl ? qEl.textContent.replace(/^[«\s"]+|[»\s"]+$/g, '') : '');
+            var classification = (extra && extra.classification) || (cEl ? cEl.textContent : '');
+            var budget = (extra && extra.budget) || (bEl ? bEl.textContent : '');
+            var roi = (extra && extra.roi) || (rEl ? rEl.textContent : '');
+
+            var payload = {
+                source: 'sr-idea-analyzer',
+                action: type || 'idea_analyzed',
+                query: query,
+                classification: classification,
+                budget: budget,
+                roi: roi,
+                lang: lang,
+                path: window.location.pathname,
+                referrer: document.referrer || '',
+                timestamp: new Date().toISOString()
+            };
+
+            // 1. Telemetry & Lead Record into Sovereign CRM
+            if (window.SRStudioTelemetry && typeof window.SRStudioTelemetry.recordLead === 'function') {
+                window.SRStudioTelemetry.recordLead({
+                    studio: 'idea-analyzer',
+                    studioName: 'مستشار الذكاء الاصطناعي',
+                    type: type,
+                    title: 'استشارة: ' + (query.slice(0, 45) || 'فكرة مشروع جديدة'),
+                    estimatedValue: budget || '€ 8,900',
+                    clientHint: 'عميل مهتم عبر نافذة الـ AI (' + lang.toUpperCase() + ')',
+                    priority: 'high'
+                });
+            }
+
+            // 2. Beacon / Worker Webhook Dispatch (Cloudflare Edge Worker)
+            var endpoint = 'https://sr-lead-capture.sr-coresync.workers.dev/lead';
+            var jsonBody = JSON.stringify(payload);
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(endpoint, jsonBody);
+            } else if (window.fetch) {
+                fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: jsonBody,
+                    mode: 'no-cors'
+                }).catch(function() {});
+            }
+        } catch (e) {
+            // Fail-safe
+        }
     }
 
     function closeAiEstimateModal() {
@@ -1024,20 +1086,40 @@
         printWindow.document.open();
         printWindow.document.write(printHtml);
         printWindow.document.close();
+
+        dispatchLeadSignal('pdf_exported', { query: query, budget: budget, classification: classification, roi: roi });
     }
 
-    // 5.10 Voice-to-Text Idea Dictation Engine via Web Speech API (Phase 160)
+    // 5.10 Multilingual Voice-to-Text Idea Dictation Engine via Web Speech API
     var heroSpeechRecognition = null;
     var isHeroSpeechListening = false;
+
+    function getSpeechLocaleConfig() {
+        var docLang = (document.documentElement.getAttribute('lang') || 'ar').toLowerCase().split('-')[0];
+        var locales = {
+            'ar': { code: 'ar-SA', listening: '🔴 جاري الاستماع... تفضل بالتحدث الآن', placeholder: 'اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)...', unsupported: 'متصفحك لا يدعم الإملاء الصوتي. يرجى استخدام Chrome أو Edge.' },
+            'en': { code: 'en-US', listening: '🔴 Listening... Speak your project vision now', placeholder: 'Type your project idea here (e.g. Luxury E-Commerce, Cloud ERP)...', unsupported: 'Your browser does not support Speech Recognition. Please use Chrome or Edge.' },
+            'nl': { code: 'nl-NL', listening: '🔴 Luisteren... Spreek uw projectidee in', placeholder: 'Typ hier uw projectidee (bijv. Luxe E-Commerce, Cloud ERP)...', unsupported: 'Uw browser ondersteunt geen spraakherkenning. Gebruik Chrome of Edge.' },
+            'de': { code: 'de-DE', listening: '🔴 Ich höre zu... Beschreiben Sie Ihr Projekt', placeholder: 'Geben Sie hier Ihre Projektidee ein (z. B. Luxus-E-Commerce, Cloud-ERP)...', unsupported: 'Ihr Browser unterstützt keine Spracherkennung. Bitte Chrome oder Edge nutzen.' },
+            'fr': { code: 'fr-FR', listening: '🔴 Écoute en cours... Décrivez votre projet', placeholder: 'Tapez votre idée de projet ici (ex. E-Commerce de luxe, Cloud ERP)...', unsupported: 'Votre navigateur ne supporte pas la reconnaissance vocale.' },
+            'es': { code: 'es-ES', listening: '🔴 Escuchando... Describa la idea de su proyecto', placeholder: 'Escriba la idea de su proyecto aquí (ej. E-Commerce de lujo, Cloud ERP)...', unsupported: 'Su navegador no soporta el reconocimiento de voz.' },
+            'it': { code: 'it-IT', listening: '🔴 In ascolto... Descrivi la tua idea di progetto', placeholder: 'Digita la tua idea di progetto qui (es. E-Commerce di lusso, Cloud ERP)...', unsupported: 'Il tuo browser non supporta il riconoscimento vocale.' },
+            'tr': { code: 'tr-TR', listening: '🔴 Dinleniyor... Proje fikrinizi söyleyin', placeholder: 'Proje fikrinizi buraya yazın (ör. Lüks E-Ticaret, Bulut ERP)...', unsupported: 'Tarayıcınız ses tanımayı desteklemiyor.' },
+            'ku': { code: 'ku', listening: '🔴 Guhdarî dike... Fikra xwe bibêjin', placeholder: 'Fikra projeya xwe li vir binivîsin...', unsupported: 'Geroka we piştgirî nade naskirina deng.' },
+            'ckb': { code: 'ckb', listening: '🔴 گوێ دەگرێت... بیرۆکەکەت بڵێ', placeholder: 'بیرۆکەی پڕۆژەکەت لێرە بنووسە...', unsupported: 'وێبگەڕەکەت پشتگیری ناسینەوەی دەنگ ناکات.' }
+        };
+        return locales[docLang] || locales['en'];
+    }
 
     function initHeroVoiceDictation() {
         var SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
         if (!SpeechRecognitionClass) return null;
 
+        var cfg = getSpeechLocaleConfig();
         var rec = new SpeechRecognitionClass();
         rec.continuous = false;
         rec.interimResults = true;
-        rec.lang = 'ar-SA';
+        rec.lang = cfg.code;
 
         rec.onstart = function() {
             isHeroSpeechListening = true;
@@ -1046,7 +1128,7 @@
             var input = document.getElementById('userIdeaInput');
             if (btn) btn.classList.add('is-listening');
             if (input) {
-                input.placeholder = '🔴 جاري الاستماع... تفضل بالتحدث الآن';
+                input.placeholder = cfg.listening;
             }
         };
 
@@ -1077,8 +1159,9 @@
             heroSpeechRecognition = initHeroVoiceDictation();
         }
 
+        var cfg = getSpeechLocaleConfig();
         if (!heroSpeechRecognition) {
-            alert('متصفحك الحالي لا يدعم ميزة الإملاء الصوتي المباشر. يرجى استخدام متصفح Chrome أو Edge.');
+            alert(cfg.unsupported);
             return;
         }
 
@@ -1087,6 +1170,7 @@
             stopHeroVoiceDictation();
         } else {
             try {
+                heroSpeechRecognition.lang = cfg.code;
                 heroSpeechRecognition.start();
             } catch (e) {
                 // If already active
@@ -1097,11 +1181,12 @@
     function stopHeroVoiceDictation() {
         isHeroSpeechListening = false;
         playHaptic('close');
+        var cfg = getSpeechLocaleConfig();
         var btn = document.getElementById('srVoiceDictateBtn');
         var input = document.getElementById('userIdeaInput');
         if (btn) btn.classList.remove('is-listening');
         if (input && !input.value) {
-            input.placeholder = 'اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي)...';
+            input.placeholder = cfg.placeholder;
         }
     }
 
@@ -1140,6 +1225,8 @@
                   '💳 الميزانية التقديرية: ' + budget + '\n\n' +
                   'أرغب في مناقشة تفاصيل التنفيذ وبدء المشروع معكم.';
                   
+        dispatchLeadSignal('whatsapp_consultation', { query: query, budget: budget, classification: classification });
+
         var url = 'https://wa.me/31618111116?text=' + encodeURIComponent(msg);
         window.open(url, '_blank');
     }
