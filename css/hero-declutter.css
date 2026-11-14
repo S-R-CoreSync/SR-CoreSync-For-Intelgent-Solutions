@@ -322,3 +322,471 @@
         margin: 0 auto;
     }
 }
+
+
+/* ═══ Ultra-Refined Hero Centerpiece & Floating Header (2026 Edition) ═══ */
+
+/* 1 · Floating Modern Header */
+.tf-header {
+    height: 64px !important;
+    background: rgba(6, 9, 14, 0.90) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.22) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.tf-header .header-inner {
+    padding: 0 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.tf-header .header-inner .header-row-layout {
+    direction: rtl !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+}
+
+.header-col-brand {
+    order: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-col-nav {
+    order: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 !important;
+}
+
+.header-col-actions {
+    order: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.nav-menu-main {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.nav-menu-main .item-link {
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+    padding: 6px 8px !important;
+}
+
+.nav-menu-main .item-link:hover {
+    color: #f3dfba !important;
+}
+
+/* 2 · Centered Hero Stage directly above Language Dock */
+.hero-reference {
+    min-height: calc(100vh - 64px) !important;
+    min-height: calc(100dvh - 64px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 10px !important;
+    padding-bottom: 110px !important; /* reserve space for language dock & footer */
+    box-sizing: border-box !important;
+}
+
+.hv2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    /* Optical compensation: shift slightly to right in RTL to match language dock & balance right social rail */
+    padding-right: 50px !important;
+    padding-left: 10px !important;
+    box-sizing: border-box !important;
+}
+
+.hero-stage-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Central Emblem Orb: Perfect constrained size, guaranteed NO collision with header */
+.c3-core-orb-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.c3-core-orb {
+    width: 88px !important;
+    height: 88px !important;
+    border-radius: 50% !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2) !important;
+    cursor: pointer !important;
+    transition: transform 0.25s ease !important;
+}
+
+.c3-core-orb:hover {
+    transform: scale(1.05) !important;
+}
+
+.c3-orb-img {
+    width: 58px !important;
+    height: 58px !important;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)) !important;
+}
+
+/* Badge */
+.hv2__badge {
+    margin-bottom: 10px !important;
+    font-size: 0.78rem !important;
+    padding: 4px 14px !important;
+}
+
+/* Headline: Balanced, refined, NOT fat or overly wide */
+.hv2 h1.hv2__h1, .hero-refined-title {
+    font-size: clamp(1.65rem, 2.25vw, 2.2rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.35 !important;
+    max-width: 660px !important;
+    margin: 0 auto 16px auto !important;
+    letter-spacing: -0.2px !important;
+    color: #ffffff !important;
+}
+
+.hv2__rot {
+    display: inline-block !important;
+    min-height: 1.35em !important;
+}
+
+/* AI Idea Box & Form */
+.hero-ai-idea-box {
+    width: 100% !important;
+    max-width: 580px !important;
+    margin: 0 auto 14px auto !important;
+}
+
+.hero-ai-idea-form {
+    border-radius: 999px !important;
+    padding: 5px 6px 5px 14px !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.12) !important;
+}
+
+/* Refined Quick Chips directly under AI form */
+.hero-quick-chips-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+}
+
+.hero-refined-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #cbd5e1 !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.hero-refined-chip:hover {
+    background: rgba(212, 175, 55, 0.15) !important;
+    border-color: rgba(212, 175, 55, 0.5) !important;
+    color: #f3dfba !important;
+    transform: translateY(-2px) !important;
+}
+
+.chip-demo-highlight {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(212, 175, 55, 0.06)) !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
+    color: #f3dfba !important;
+}
+
+/* 3 · Language Dock position (The Anchor directly underneath the Hero Centerpiece) */
+.apple-macos-dock-wrapper {
+    bottom: 50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* Aligned with hero optical center */
+    margin-left: -20px !important;
+}
+
+@media (max-width: 992px) {
+    .hv2 {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+    .apple-macos-dock-wrapper {
+        margin-left: 0 !important;
+    }
+}
+
+
+/* ═══ Ultra-Refined Hero Centerpiece & Floating Header (2026 Edition) ═══ */
+
+/* 1 · Floating Modern Header */
+.tf-header {
+    height: 64px !important;
+    background: rgba(6, 9, 14, 0.90) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.22) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.tf-header .header-inner {
+    padding: 0 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.tf-header .header-inner .header-row-layout {
+    direction: rtl !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+}
+
+.header-col-brand {
+    order: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-col-nav {
+    order: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 !important;
+}
+
+.header-col-actions {
+    order: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.nav-menu-main {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.nav-menu-main .item-link {
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+    padding: 6px 8px !important;
+}
+
+.nav-menu-main .item-link:hover {
+    color: #f3dfba !important;
+}
+
+/* 2 · Centered Hero Stage directly above Language Dock */
+.hero-reference {
+    min-height: calc(100vh - 64px) !important;
+    min-height: calc(100dvh - 64px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 10px !important;
+    padding-bottom: 110px !important; /* reserve space for language dock & footer */
+    box-sizing: border-box !important;
+}
+
+.hv2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    /* Optical compensation: shift slightly to right in RTL to match language dock & balance right social rail */
+    padding-right: 50px !important;
+    padding-left: 10px !important;
+    box-sizing: border-box !important;
+}
+
+.hero-stage-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Central Emblem Orb: Perfect constrained size, guaranteed NO collision with header */
+.c3-core-orb-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.c3-core-orb {
+    width: 88px !important;
+    height: 88px !important;
+    border-radius: 50% !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2) !important;
+    cursor: pointer !important;
+    transition: transform 0.25s ease !important;
+}
+
+.c3-core-orb:hover {
+    transform: scale(1.05) !important;
+}
+
+.c3-orb-img {
+    width: 58px !important;
+    height: 58px !important;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)) !important;
+}
+
+/* Badge */
+.hv2__badge {
+    margin-bottom: 10px !important;
+    font-size: 0.78rem !important;
+    padding: 4px 14px !important;
+}
+
+/* Headline: Balanced, refined, NOT fat or overly wide */
+.hv2 h1.hv2__h1, .hero-refined-title {
+    font-size: clamp(1.65rem, 2.25vw, 2.2rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.35 !important;
+    max-width: 660px !important;
+    margin: 0 auto 16px auto !important;
+    letter-spacing: -0.2px !important;
+    color: #ffffff !important;
+}
+
+.hv2__rot {
+    display: inline-block !important;
+    min-height: 1.35em !important;
+}
+
+/* AI Idea Box & Form */
+.hero-ai-idea-box {
+    width: 100% !important;
+    max-width: 580px !important;
+    margin: 0 auto 14px auto !important;
+}
+
+.hero-ai-idea-form {
+    border-radius: 999px !important;
+    padding: 5px 6px 5px 14px !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.12) !important;
+}
+
+/* Refined Quick Chips directly under AI form */
+.hero-quick-chips-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+}
+
+.hero-refined-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #cbd5e1 !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.hero-refined-chip:hover {
+    background: rgba(212, 175, 55, 0.15) !important;
+    border-color: rgba(212, 175, 55, 0.5) !important;
+    color: #f3dfba !important;
+    transform: translateY(-2px) !important;
+}
+
+.chip-demo-highlight {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(212, 175, 55, 0.06)) !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
+    color: #f3dfba !important;
+}
+
+/* 3 · Language Dock position (The Anchor directly underneath the Hero Centerpiece) */
+.apple-macos-dock-wrapper {
+    bottom: 50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* Aligned with hero optical center */
+    margin-left: -20px !important;
+}
+
+@media (max-width: 992px) {
+    .hv2 {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+    .apple-macos-dock-wrapper {
+        margin-left: 0 !important;
+    }
+}

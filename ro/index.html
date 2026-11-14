@@ -1208,116 +1208,73 @@ html[dir="ltr"] .srf{direction:ltr}
             <section id="hero" class="section-hero-v1 hero-reference">
 <!-- SR:BEGIN hero -->
 <div class="hv2" id="hv2-hero">
-    <div class="hero-cockpit-container">
-        <div class="c3-cockpit-layout">
-                        <!-- 1. Telemetry Panel -->
-                        <div class="c3-sidebar-panel c3-panel-telemetry">
-                            <div class="c3-panel-header">
-                                <span class="c3-panel-icon">📊</span>
-                                <h3 class="c3-panel-title">TELEMETRY &amp; CLOUD</h3>
-                            </div>
-                            <div class="c3-stat-item">
-                                <span class="c3-stat-label">Cloud Response Time</span>
-                                <span class="c3-stat-value c3-val-green">0.08s</span>
-                            </div>
-                            <div class="c3-stat-item">
-                                <span class="c3-stat-label">European Compliance</span>
-                                <span class="c3-stat-value c3-val-gold">SOC2 / BTW / EU</span>
-                            </div>
-                            <div class="c3-stat-item">
-                                <span class="c3-stat-label">AI Engine</span>
-                                <span class="c3-stat-value c3-val-cyan">Autonomous v2</span>
-                            </div>
-                            <div class="c3-stat-divider"></div>
-                            <a href="demo.html" class="c3-readiness-btn">
-                                <span>Consultanță tehnică</span>
-                            </a>
-                        </div>
+    <div class="hero-stage-center">
+        <!-- Intelligent Orb Core -->
+        <div class="c3-core-orb-wrapper">
+            <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox" data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
+                <div class="c3-orb-ring-outer"></div>
+                <div class="c3-orb-ring-inner"></div>
+                <img src="../assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Sovereign Intelligent Core" width="88" height="88" class="c3-orb-img" loading="eager" decoding="async">
+            </div>
+        </div>
 
-                        <!-- 2. Central Cockpit -->
-                        <div class="c3-center-stage">
-                            <!-- Intelligent Core Orb -->
-                            <div class="c3-core-orb-wrapper">
-                                <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox" data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
-                                    <div class="c3-orb-ring-outer"></div>
-                                    <div class="c3-orb-ring-inner"></div>
-                                    <img src="../assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Sovereign Intelligent Core" width="120" height="120" class="c3-orb-img" loading="eager" decoding="async">
-                                </div>
-                            </div>
+        <!-- Official Badge -->
+        <div class="hv2__badge">
+            <i></i> S&amp;R CoreSync For Intelligent Solutions
+        </div>
 
-                            <div class="hv2__badge">
-                                <i></i> S&amp;R CoreSync For Intelligent Solutions
-                            </div>
+        <!-- Rotating Title -->
+        <h1 class="hv2__h1 hero-refined-title">
+            <span class="hv2__rot" id="hv2-rot">
+                <span class="is-on">Sisteme software avansate</span>
+                <span>Aplicații și platforme digitale</span>
+                <span>Identități de marcă durabile</span>
+            </span>
+        </h1>
 
-                            <h1 class="hv2__h1 hero-cockpit-title">
-                                <span class="hv2__rot" id="hv2-rot">
-                                    <span class="is-on">Sisteme software avansate</span>
-                                    <span>Aplicații și platforme digitale</span>
-                                    <span>Identități de marcă durabile</span>
-                                </span>
-                            </h1>
+        <!-- AI Idea Form -->
+        <div class="hero-ai-idea-box">
+            <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
+                <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
+                    <span class="hero-ai-idea-sparkle">✨</span>
+                </div>
+                <div class="hero-ai-idea-input-wrap">
+                    <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Descrieți ideea proiectului…" autocomplete="off" aria-label="Ideea proiectului">
+                </div>
+                <div class="hero-ai-idea-btns">
+                    <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Descrieți ideea prin voce" aria-label="Descrieți ideea prin voce">
+                        <span class="hero-ai-mic-icon">🎙️</span>
+                    </button>
+                    <button type="submit" class="hero-ai-idea-submit-btn" title="Analizează ideea mea ⚡" aria-label="Analizează ideea mea ⚡">
+                        <span class="hero-ai-submit-text">Analizează ideea mea ✦</span>
+                        <span class="hero-ai-submit-arrow">←</span>
+                    </button>
+                </div>
+            </form>
+        </div>
 
-                            <!-- AI Idea Form -->
-                            <div class="hero-ai-idea-box">
-                                <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
-                                    <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
-                                        <span class="hero-ai-idea-sparkle">✨</span>
-                                    </div>
-                                    <div class="hero-ai-idea-input-wrap">
-                                        <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Descrieți ideea proiectului…" autocomplete="off" aria-label="Ideea proiectului">
-                                    </div>
-                                    <div class="hero-ai-idea-btns">
-                                        <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Descrieți ideea prin voce" aria-label="Descrieți ideea prin voce">
-                                            <span class="hero-ai-mic-icon">🎙️</span>
-                                        </button>
-                                        <button type="submit" class="hero-ai-idea-submit-btn" title="Analizează ideea mea ⚡" aria-label="Analizează ideea mea ⚡">
-                                            <span class="hero-ai-submit-text">Analizează ideea mea ✦</span>
-                                            <span class="hero-ai-submit-arrow">←</span>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="hero-cockpit-actions">
-                                <a href="demo.html" class="c3-action-btn-demo" title="Testează sistemul cloud în direct">
-                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                                    </svg>
-                                    <span>Testează sistemul cloud în direct</span>
-                                    <span class="c3-btn-subtag">Demo în direct</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 3. Pillars Panel -->
-                        <div class="c3-sidebar-panel c3-panel-pillars">
-                            <div class="c3-panel-header">
-                                <span class="c3-panel-icon">⚡</span>
-                                <h3 class="c3-panel-title">CORE PILLARS</h3>
-                            </div>
-                            <div class="c3-pillars-list">
-                                <a href="#services" class="c3-pillar-btn">
-                                    <span class="c3-pillar-emoji">🏢</span>
-                                    <span>Sistem ERP complet</span>
-                                </a>
-                                <a href="#services" class="c3-pillar-btn">
-                                    <span class="c3-pillar-emoji">🛒</span>
-                                    <span>Magazin online de lux</span>
-                                </a>
-                                <a href="#services" class="c3-pillar-btn">
-                                    <span class="c3-pillar-emoji">👑</span>
-                                    <span>Identitate de marcă completă</span>
-                                </a>
-                                <a href="#services" class="c3-pillar-btn">
-                                    <span class="c3-pillar-emoji">⚡</span>
-                                    <span>Automatizare și integrări</span>
-                                </a>
-                                <a href="#services" class="c3-pillar-btn">
-                                    <span class="c3-pillar-emoji">🌐</span>
-                                    <span>Site cu conversie ridicată</span>
-                                </a>
-                            </div>
-                        </div>
+        <!-- Quick Chips Row directly above language dock -->
+        <div class="hero-quick-chips-row">
+            <a href="#services" class="hero-refined-chip">
+                <span>🏢</span>
+                <span>Sistem ERP complet</span>
+            </a>
+            <a href="#services" class="hero-refined-chip">
+                <span>🛒</span>
+                <span>Magazin online de lux</span>
+            </a>
+            <a href="#services" class="hero-refined-chip">
+                <span>👑</span>
+                <span>Identitate de marcă completă</span>
+            </a>
+            <a href="#services" class="hero-refined-chip">
+                <span>⚡</span>
+                <span>Automatizare și integrări</span>
+            </a>
+            <a href="demo.html" class="hero-refined-chip chip-demo-highlight">
+                <span>▶</span>
+                <span>Testează sistemul cloud în direct</span>
+            </a>
         </div>
     </div>
 </div>
