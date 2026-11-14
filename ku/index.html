@@ -1256,79 +1256,119 @@ html[dir="ltr"] .srf{direction:ltr}
             <section id="hero" class="section-hero-v1 hero-reference">
 <!-- SR:BEGIN hero -->
 <div class="hv2" id="hv2-hero">
-              <div class="hv2__copy">
-                <span class="hv2__badge"><i></i> S&amp;R CoreSync For Intelligent Solutions</span>
-                <h1 class="hv2__h1">
-                  <span class="hv2__rot" id="hv2-rot">
-                    <span class="is-on">Pergalên nermalava pêşkeftî</span>
-                    <span>Serlêdan û platformên dîjîtal</span>
-                    <span>Nasnameyên brandê yên mayînde</span>
-                  </span>
-                </h1>
+    <div class="hero-cockpit-container">
+        <div class="c3-cockpit-layout">
+                        <!-- 1. Telemetry Panel -->
+                        <div class="c3-sidebar-panel c3-panel-telemetry">
+                            <div class="c3-panel-header">
+                                <span class="c3-panel-icon">📊</span>
+                                <h3 class="c3-panel-title">TELEMETRY &amp; CLOUD</h3>
+                            </div>
+                            <div class="c3-stat-item">
+                                <span class="c3-stat-label">Cloud Response Time</span>
+                                <span class="c3-stat-value c3-val-green">0.08s</span>
+                            </div>
+                            <div class="c3-stat-item">
+                                <span class="c3-stat-label">European Compliance</span>
+                                <span class="c3-stat-value c3-val-gold">SOC2 / BTW / EU</span>
+                            </div>
+                            <div class="c3-stat-item">
+                                <span class="c3-stat-label">AI Engine</span>
+                                <span class="c3-stat-value c3-val-cyan">Autonomous v2</span>
+                            </div>
+                            <div class="c3-stat-divider"></div>
+                            <a href="demo.html" class="c3-readiness-btn">
+                                <span>Şêwirmendiya teknîkî</span>
+                            </a>
+                        </div>
 
-                
+                        <!-- 2. Central Cockpit -->
+                        <div class="c3-center-stage">
+                            <!-- Intelligent Core Orb -->
+                            <div class="c3-core-orb-wrapper">
+                                <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox" data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
+                                    <div class="c3-orb-ring-outer"></div>
+                                    <div class="c3-orb-ring-inner"></div>
+                                    <img src="../assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Sovereign Intelligent Core" width="120" height="120" class="c3-orb-img" loading="eager" decoding="async">
+                                </div>
+                            </div>
 
-                <div class="hv2__chips">
-                  <span class="lbl">An jî bi ya ku li hev tê dest pê bikin:</span>
-                  <div class="hv2__chiprow">
-                    <button type="button" class="hv2__chip">Firotgeha serhêl a luks</button>
-                    <button type="button" class="hv2__chip">Pergala ERP ya tevahî</button>
-                    <button type="button" class="hv2__chip">Nasnameya brandê ya tevahî</button>
-                    <button type="button" class="hv2__chip">Malpera bi veguherîna bilind</button>
-                    <button type="button" class="hv2__chip">Otomatîkî û entegrasyon</button>
-                    <button type="button" class="hv2__chip">Şêwirmendiya teknîkî</button>
-                  </div>
-                </div>
-              </div>
+                            <div class="hv2__badge">
+                                <i></i> S&amp;R CoreSync For Intelligent Solutions
+                            </div>
 
-              <div class="hv2__brand">
-<div class="hv2__emblem" aria-hidden="true">
-                <img src="../assets/sr-core-emblem-official.webp" alt="" width="384" height="384" loading="eager" decoding="async">
-              </div>
-<div class="hv2__bars">
-                                    <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
+                            <h1 class="hv2__h1 hero-cockpit-title">
+                                <span class="hv2__rot" id="hv2-rot">
+                                    <span class="is-on">Pergalên nermalava pêşkeftî</span>
+                                    <span>Serlêdan û platformên dîjîtal</span>
+                                    <span>Nasnameyên brandê yên mayînde</span>
+                                </span>
+                            </h1>
 
-                  <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
+                            <!-- AI Idea Form -->
+                            <div class="hero-ai-idea-box">
+                                <form class="hero-ai-idea-form" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
+                                    <div class="hero-ai-idea-icon-wrap" aria-hidden="true">
+                                        <span class="hero-ai-idea-sparkle">✨</span>
+                                    </div>
+                                    <div class="hero-ai-idea-input-wrap">
+                                        <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Fikra projeya xwe binivîse…" autocomplete="off" aria-label="Fikra projeyê">
+                                    </div>
+                                    <div class="hero-ai-idea-btns">
+                                        <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Fikra xwe bi deng vebêje" aria-label="Fikra xwe bi deng vebêje">
+                                            <span class="hero-ai-mic-icon">🎙️</span>
+                                        </button>
+                                        <button type="submit" class="hero-ai-idea-submit-btn" title="Fikra min analîz bike ⚡" aria-label="Fikra min analîz bike ⚡">
+                                            <span class="hero-ai-submit-text">Fikra min analîz bike ✦</span>
+                                            <span class="hero-ai-submit-arrow">←</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
 
-                  <span class="hero-ai-idea-sparkle">✨</span>
+                            <div class="hero-cockpit-actions">
+                                <a href="demo.html" class="c3-action-btn-demo" title="Pergala cloud ya zindî biceribîne">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg>
+                                    <span>Pergala cloud ya zindî biceribîne</span>
+                                    <span class="c3-btn-subtag">Demo ya zindî</span>
+                                </a>
+                            </div>
+                        </div>
 
-                  </div>
-
-                  <div class="hero-ai-idea-input-wrap">
-
-                  <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Fikra projeya xwe binivîse…" autocomplete="off" aria-label="Project Idea AI Input">
-
-                  </div>
-
-                  <div class="hero-ai-idea-btns">
-
-                  <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Fikra xwe bi deng vebêje" aria-label="Fikra xwe bi deng vebêje">
-
-                  <span class="hero-ai-mic-icon">🎙️</span>
-
-                  </button>
-
-                  <button type="submit" class="hero-ai-idea-submit-btn" title="Fikra min analîz bike ⚡" aria-label="Fikra min analîz bike ⚡">
-
-                  <span class="hero-ai-submit-text">Fikra min analîz bike ✦</span>
-
-                  <span class="hero-ai-submit-arrow">←</span>
-
-                  </button>
-
-                  </div>
-
-                  </form>
-                  <a class="hv2__bar ghost" href="#services">
-                    <span class="ico">▶</span> Pergala cloud ya zindî biceribîne
-                    <span class="tail">Demo ya zindî</span>
-                  </a>
-                </div>
+                        <!-- 3. Pillars Panel -->
+                        <div class="c3-sidebar-panel c3-panel-pillars">
+                            <div class="c3-panel-header">
+                                <span class="c3-panel-icon">⚡</span>
+                                <h3 class="c3-panel-title">CORE PILLARS</h3>
+                            </div>
+                            <div class="c3-pillars-list">
+                                <a href="#services" class="c3-pillar-btn">
+                                    <span class="c3-pillar-emoji">🏢</span>
+                                    <span>Pergala ERP ya tevahî</span>
+                                </a>
+                                <a href="#services" class="c3-pillar-btn">
+                                    <span class="c3-pillar-emoji">🛒</span>
+                                    <span>Firotgeha serhêl a luks</span>
+                                </a>
+                                <a href="#services" class="c3-pillar-btn">
+                                    <span class="c3-pillar-emoji">👑</span>
+                                    <span>Nasnameya brandê ya tevahî</span>
+                                </a>
+                                <a href="#services" class="c3-pillar-btn">
+                                    <span class="c3-pillar-emoji">⚡</span>
+                                    <span>Otomatîkî û entegrasyon</span>
+                                </a>
+                                <a href="#services" class="c3-pillar-btn">
+                                    <span class="c3-pillar-emoji">🌐</span>
+                                    <span>Malpera bi veguherîna bilind</span>
+                                </a>
+                            </div>
+                        </div>
+        </div>
+    </div>
 </div>
-            
-
-            
-            </div>
 <!-- SR:END hero -->
 
                 <!-- Interactive Dynamic Motion Canvas -->
