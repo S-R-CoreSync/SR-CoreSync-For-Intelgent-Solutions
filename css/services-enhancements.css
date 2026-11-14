@@ -69,24 +69,100 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.1) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* ═══ توحيد أزرار البطاقات الثلاث مع البطاقات الست — نفس التصميم ═══ */
+
+/* صف الأزرار — يطابق tech-card-footer-actions */
+.dana-card-actions-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+    padding-top: 12px !important;
+    border-top: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15) !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
 }
 
-.dana-btn-booking {
-    background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%) !important;
-    color: #06090e !important;
-    border: none !important;
-    padding: 11px 24px !important;
-    border-radius: 999px !important;
-    font-weight: 800 !important;
-    font-size: 0.92rem !important;
+/* زر التفاصيل داخل بطاقات dana — يطابق tech-btn-consult */
+.dana-card-actions-row .tech-btn-consult {
+    background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12) !important;
+    border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.32) !important;
+    color: #ffffff !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
     cursor: pointer !important;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35) !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    transition: all 0.25s ease !important;
+    font-family: inherit !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
+
+.dana-card-actions-row .tech-btn-consult:hover {
+    background: #d4af37 !important;
+    color: #04100c !important;
+    border-color: #d4af37 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3) !important;
+}
+
+/* زر حجز الاستشارة — يطابق tech-btn-consult أسلوب الذهب */
+.dana-btn-booking {
+    background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12) !important;
+    border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.32) !important;
+    color: var(--gold, #d4af37) !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    font-family: inherit !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    text-decoration: none !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    box-shadow: none !important;
 }
 
 .dana-btn-booking:hover {
-    transform: translateY(-2px) scale(1.02) !important;
-    box-shadow: 0 6px 22px rgba(212, 175, 55, 0.5) !important;
+    background: #d4af37 !important;
+    color: #04100c !important;
+    border-color: #d4af37 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 15px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.3) !important;
+}
+
+/* رابط واتساب في البطاقات الثلاث — يطابق tech-btn-whatsapp */
+.dana-whatsapp-cta {
+    background: rgba(37, 211, 102, 0.1) !important;
+    border: 1px solid rgba(37, 211, 102, 0.35) !important;
+    color: #25d366 !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    flex: 1 !important;
+    justify-content: center !important;
+}
+
+.dana-whatsapp-cta:hover {
+    background: #25d366 !important;
+    color: #04100c !important;
+    border-color: #25d366 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35) !important;
 }
 
 
