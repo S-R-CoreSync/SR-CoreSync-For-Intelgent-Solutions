@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>حزمة المراجعة الناطقة — أربع لغات</title>
+<style>
+  @page{size:A4;margin:14mm}
+  *{box-sizing:border-box}
+  body{margin:0;padding:32px 26px 60px;background:#fff;color:#14181f;
+       font-family:'Segoe UI',Tahoma,Arial,sans-serif;line-height:1.8;font-size:11pt}
+  .wrap{max-width:960px;margin:0 auto}
+  h1{font-size:22pt;margin:0 0 4px;color:#0d1b2a}
+  .sub{color:#5b6572;font-size:10.5pt;margin:0 0 22px}
+  h2{font-size:13.5pt;color:#8a6a12;border-bottom:2px solid #e3d3a3;padding-bottom:5px;margin:26px 0 10px}
+  h3{font-size:11pt;margin:16px 0 4px;color:#1b2a3a}
+  p{margin:0 0 8px}
+  table{width:100%;border-collapse:collapse;margin:8px 0 12px;font-size:9.6pt}
+  th{background:#f6f2e6;color:#5f4a0d;text-align:right;padding:6px 8px;border:1px solid #e2dcc9;font-weight:600}
+  td{padding:5px 8px;border:1px solid #e8e4d8;vertical-align:top}
+  tr:nth-child(even) td{background:#fbfaf6}
+  code{font-family:Consolas,monospace;font-size:9pt;background:#f4f1e8;padding:1px 4px;border-radius:3px}
+  .box{border:1px solid #e6e0cc;background:#fbf9f2;border-radius:6px;padding:10px 14px;margin:10px 0 14px}
+  .warn{border-color:#e8cfc2;background:#fdf6f2}
+  .good{border-color:#cfe3d2;background:#f4faf5}
+  ul,ol{margin:6px 0 10px;padding-inline-start:20px}
+  li{margin-bottom:4px}
+  .keep{color:#a12a1e;font-weight:600}
+  footer{margin-top:24px;border-top:1px solid #e8e4d8;padding-top:8px;font-size:8.6pt;color:#6b7480}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>حزمة المراجعة الناطقة</h1>
+<p class="sub">أربع لغات متبقية · 39 نصاً · 14 نوفمبر 2026 · S&amp;R CoreSync</p>
+
+<h2>1 · ما المطلوب بالضبط</h2>
+<p>بقيت أربع صفحات تحتوي نصوصاً إنجليزية في موضع كان يجب أن يكون بلغة الصفحة:</p>
+<table>
+<tr><th>اللغة</th><th>الملف</th><th>عدد النصوص</th><th>ملاحظة</th></tr>
+<tr><td>اليونانية</td><td><code>el/index.html</code></td><td>39</td><td>أبجدية مختلفة · مصطلحات قانونية دقيقة</td></tr>
+<tr><td>السورانية</td><td><code>ku/index.html</code></td><td>39</td><td>RTL · اصطلاحات كردية تختلف عن الكرمانجية</td></tr>
+<tr><td>الأيرلندية</td><td><code>ga/index.html</code></td><td>39</td><td>مفردات تقنية نادرة</td></tr>
+<tr><td>المالطية</td><td><code>mt/index.html</code></td><td>39</td><td>لغة مختلطة · دقة المصطلح المالي</td></tr>
+</table>
+
+<div class="box">
+<b>مهم:</b> القائمة موحّدة. النص الإنجليزي واحد في اللغات الأربع، لكن قد لا يظهر في كل الصفحات — لذلك فحصنا الأربع وأخذنا الاتحاد: <b>39 نصاً</b>.
+</div>
+
+<h2>2 · كيف تُسلَّم الترجمة</h2>
+<p>افتح الملف <code>حزمة-المراجعة-الناطقة.csv</code> في Excel أو Google Sheets. تجد فيه:</p>
+<table>
+<tr><th>العمود</th><th>المحتوى</th><th>ماذا تفعل</th></tr>
+<tr><td>#</td><td>رقم مرتّب</td><td>لا تمسّه</td></tr>
+<tr><td>section</td><td>المعرّف التقني للقسم</td><td>لا تمسّه</td></tr>
+<tr><td>السياق</td><td>وصف عربي لمكان النص</td><td>للاطلاع</td></tr>
+<tr><td>english_source</td><td><b>النص الأصلي</b></td><td>لا تمسّه</td></tr>
+<tr><td>chars</td><td>طول النص</td><td>للاطلاع — يساعد في ضبط الطول</td></tr>
+<tr><td colspan="3"><b>أربعة أعمدة فارغة</b>: <code>el_ελληνικά</code> · <code>ku_سۆرانی</code> · <code>ga_Gaeilge</code> · <code>mt_Malti</code></td></tr>
+</table>
+<p>املأ العمود الخاص بلغتك فقط، وأرسل الملف كما هو. لا تُغيّر أي عمود آخر.</p>
+
+<h2>3 · ما لا يُترجَم — إطلاقاً</h2>
+<div class="box warn">
+<p>هذه أسماء منتجات وبروتوكولات وجهات تنظيمية. ترجمتها تُفقد المعنى أو تُعدّ خطأً مهنياً:</p>
+<table>
+<tr><th>الفئة</th><th>يُترك كما هو</th></tr>
+<tr><td>العلامة</td><td><span class="keep">S&amp;R CoreSync For Intelligent Solutions</span> · <span class="keep">CoreSync</span></td></tr>
+<tr><td>المنتجات</td><td><span class="keep">CivicSync™</span> · <span class="keep">HealthBridge™</span> · <span class="keep">OmniBakery™</span> · <span class="keep">Core Starter</span> · <span class="keep">Enterprise Growth</span> · <span class="keep">Core MAX Synergy</span></td></tr>
+<tr><td>المدفوعات</td><td><span class="keep">SEPA</span> · <span class="keep">iDEAL</span> · <span class="keep">Apple Pay</span> · <span class="keep">Stripe</span> · <span class="keep">Mollie</span> · <span class="keep">PEPPOL</span></td></tr>
+<tr><td>الجهات</td><td><span class="keep">Belastingdienst</span> · <span class="keep">KvK</span> · <span class="keep">AMS-IX</span></td></tr>
+<tr><td>المعايير</td><td><span class="keep">GDPR</span> · <span class="keep">NIS2</span> · <span class="keep">eIDAS</span> · <span class="keep">ISO/IEC 27001</span> · <span class="keep">SOC 2 Type II</span> · <span class="keep">AES-256</span> · <span class="keep">SLA</span> · <span class="keep">ERP</span> · <span class="keep">API</span> · <span class="keep">SaaS</span> · <span class="keep">SDK</span></td></tr>
+<tr><td>الضرائب</td><td><span class="keep">BTW/VAT 21%</span> — تُترجم كلمة الضريبة محلياً، ويبقى الرقم والنسبة</td></tr>
+<tr><td>الأماكن</td><td><span class="keep">Amsterdam</span> · <span class="keep">Netherlands</span> — تُكتب بالشكل المحلي المعتمد (مثل Ολλανδία) لا بالحرف اللاتيني</td></tr>
+</table>
+</div>
+
+<h2>4 · النبرة</h2>
+<ul>
+<li><b>رسمية مهنية</b> — مخاطبة المؤسسات لا الأفراد. في اليونانية: πληθυντικός ευγενείας (صيغة الجمع للتوقير).</li>
+<li><b>بلا مبالغة تسويقية</b> — لا «الأفضل في العالم»؛ النص الأصلي يقول «high-performance» لا «أسرع في الكون».</li>
+<li><b>جملة قصيرة</b> — الأزرار والبطاقات مساحتها ضيقة. إن طال النص 30% عن الأصل، اختصره بالمعنى.</li>
+<li><b>الأرقام كما هي</b> — <code>99.9%</code> · <code>2 months</code> · <code>21%</code>. الفاصلة العشرية تتبع العُرف المحلي.</li>
+</ul>
+
+<h2>5 · كيف نتحقّق بعد التسليم</h2>
+<div class="box good">
+<ol>
+<li>أستلم الملف وأتحقق أن كل صف مملوء في عمود اللغة المطلوبة.</li>
+<li>أُطبّق الترجمة على الصفحة بأداة تعمل بالنص لا بالمسار — مطابقة تتجاوز اختلافات المسافات و<code>&amp;</code>.</li>
+<li>أُعيد تشغيل مقياس <code>remaining_english.py</code> الذي يقرأ النص وما يلي الوسوم (<code>tail</code>).</li>
+<li>لا تُنشر الصفحة حتى يصبح الناتج <b>صفراً</b> — نفس المعيار الذي طبّقناه على اللغات التسع.</li>
+</ol>
+</div>
+
+<h2>6 · لماذا هذه الأربع أوقفتُها</h2>
+<p>ترجمتُ تسع لغات (da · sv · no · fi · et · lt · lv · tr · sl) لأنني أستطيع ضمان المصطلح فيها. هذه الأربع تختلف:</p>
+<ul>
+<li><b>اليونانية</b>: المصطلح المالي (ΦΠΑ مقابل VAT) والحالة الإعرابية تُخطئ فيها الآلة كثيراً.</li>
+<li><b>السورانية</b>: كثير من المصطلحات التقنية لم تُستقرّ بعد، والاختيار بينها قرار ناطق.</li>
+<li><b>الأيرلندية</b>: لغة أقل انتشاراً رقمياً؛ المعجم التقني محدود والترجمة الحرفية تُنتج نصاً غريباً.</li>
+<li><b>المالطية</b>: تمزج العربية والإيطالية والإنجليزية؛ الترجمة الساذجة تُنتج خليطاً غير مهني.</li>
+</ul>
+
+<p>والقاعدة التي تحكم كل ذلك: <b>صفحة إنجليزية واضحة أفضل من صفحة يونانية مرتبكة</b> — لأنك تبيع للشركات، والكلمة الركيكة في صفحة أسعار تُفقدك أكثر مما تُكسِبك.</p>
+
+<footer>حزمة مراجعة · S&amp;R CoreSync · الأرقام من قياس مباشر للصفحات الأربع · 14 نوفمبر 2026</footer>
+</div>
+</body>
+</html>
