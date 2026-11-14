@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>خطة الأسعار — قبل التنفيذ</title>
+<style>
+  @page{size:A4;margin:14mm}
+  *{box-sizing:border-box}
+  body{margin:0;padding:34px 26px 60px;background:#0a0d12;color:#e8e6df;
+       font-family:'Segoe UI',Tahoma,Arial,sans-serif;line-height:1.8}
+  .wrap{max-width:1080px;margin:0 auto}
+  h1{font-size:26px;margin:0 0 6px;color:#f3dfba;font-weight:700}
+  .sub{color:#8fa0b3;font-size:13.5px;margin:0 0 26px}
+  h2{font-size:16px;color:#d4af37;margin:32px 0 10px;border-bottom:1px solid rgba(212,175,55,.22);padding-bottom:6px}
+  p{margin:0 0 10px;font-size:13.6px;color:#cfd6de}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+  @media(max-width:820px){.cards{grid-template-columns:1fr}}
+  .card{background:#0f141b;border:1px solid rgba(212,175,55,.18);border-radius:14px;padding:16px 18px}
+  .card h3{margin:0 0 8px;font-size:14.5px;color:#f0e7d2;display:flex;justify-content:space-between;align-items:center}
+  .tag{font-size:10.5px;padding:2px 9px;border-radius:20px;border:1px solid}
+  .tag.rec{color:#7fd7ae;border-color:rgba(70,190,140,.5);background:rgba(70,190,140,.08)}
+  .tag.alt{color:#e0b06a;border-color:rgba(224,176,106,.45);background:rgba(224,176,106,.07)}
+  table{width:100%;border-collapse:collapse;margin:12px 0 6px;font-size:12.8px}
+  th{text-align:right;color:#d4af37;font-weight:600;padding:7px 9px;border-bottom:1px solid rgba(212,175,55,.25)}
+  td{padding:6px 9px;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:top}
+  td.n{font-variant-numeric:tabular-nums;white-space:nowrap;color:#fff}
+  .bar{height:9px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden;display:flex}
+  .bar span{display:block;height:100%}
+  .b1{background:#d4af37}.b2{background:#4f7fbf}.b3{background:#5c6b7a}
+  .legend{display:flex;gap:18px;font-size:11.5px;color:#93a1b1;margin-top:8px;flex-wrap:wrap}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-inline-end:5px}
+  .note{background:#131a22;border-inline-start:3px solid #d4af37;padding:12px 16px;border-radius:8px;font-size:13px;margin:16px 0}
+  .warn{border-inline-start-color:#c0754f;background:#1a1411}
+  ul{margin:6px 0 10px;padding-inline-start:20px}
+  li{margin-bottom:5px;font-size:13.2px;color:#cfd6de}
+  code{font-family:Consolas,monospace;font-size:11.5px;background:#0b1017;padding:1px 5px;border-radius:4px;color:#f0d79a}
+  .flow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0;font-size:12.5px}
+  .step{background:#0f141b;border:1px solid rgba(212,175,55,.2);border-radius:10px;padding:8px 12px;color:#dfe6ee}
+  .arrow{color:#d4af37}
+  .q{background:linear-gradient(180deg,#141b24,#0d1219);border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:18px 20px;margin-top:22px}
+  .q b{color:#f3dfba}
+  footer{margin-top:26px;font-size:11px;color:#6b7686;border-top:1px solid rgba(255,255,255,.07);padding-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>قسم الأسعار: ما الذي ينتقل فعلاً؟</h1>
+<p class="sub">خطة قبل التنفيذ · 14 نوفمبر 2026 · كل الأرقام مقيسة من <code>index.html</code> الحالي</p>
+
+<h2>1 · لماذا هذا القسم هو الأثقل</h2>
+<p>الصفحة 782 كB. قسم الأسعار وحده <b>116.6 كB</b> — أي 14% من الصفحة في قسم واحد. لكن حين فكّكته وجدت أن <b>أكثره مخفي أصلاً</b>:</p>
+
+<table>
+<tr><th>الكتلة</th><th>الحجم</th><th>هل يراها الزائر؟</th></tr>
+<tr><td>تبويب «تطوير» (الظاهر)</td><td class="n">10.8 كB</td><td>نعم — الافتراضي</td></tr>
+<tr><td>تبويب «ERP»</td><td class="n">8.6 كB</td><td>لا — <code>pane-hidden</code></td></tr>
+<tr><td>تبويب «التحسين والدعم»</td><td class="n">3.8 كB</td><td>لا — <code>pane-hidden</code></td></tr>
+<tr><td>تبويب «الهوية والمتاجر»</td><td class="n">19.4 كB</td><td>لا — <code>pane-hidden</code></td></tr>
+<tr><td>مصفوفة الباقات المؤسسية</td><td class="n">30.7 كB</td><td>أسفل القسم</td></tr>
+</table>
+
+<div class="note">
+<b>62.6 كB من أصل 116.6 كB لا يراها الزائر عند التحميل.</b> تُنزَّل، تُحلَّل، تُبنى في الصفحة — ثم تُخفى.
+</div>
+
+<h2>2 · لماذا لا أنقلها إلى صفحة مستقلة</h2>
+<p>طلبتَ «قرار الصفحة المستقلة». قِستُ تكلفته، وأظنها أعلى من فائدته:</p>
+
+<table>
+<tr><th>البند</th><th>الواقع</th></tr>
+<tr><td>الصفحات المطلوبة</td><td class="n">29 صفحة (لغة واحدة لكل صفحة)</td></tr>
+<tr><td>الترجمة</td><td>29 نسخة من نص الأسعار والمصفوفة — عمل بشري لا آلي</td></tr>
+<tr><td>الروابط</td><td>29 وسم <code>#pricing</code> في القوائم + الفوتر + خرائط الموقع</td></tr>
+<tr><td>الربح في الرئيسية</td><td class="n">116 كB خام · ≈12 كB مضغوط</td></tr>
+<tr><td>الخسارة</td><td>الزائر يفقد رؤية الأسعار في الصفحة التي تبيع</td></tr>
+</table>
+
+<div class="note warn">
+الربح الحقيقي في الميزانية <b>12 كB مضغوطاً</b> مقابل 29 صفحة جديدة وترجماتها. هذا ليس صفقة جيدة.
+</div>
+
+<h2>3 · الطريقان، بالأرقام</h2>
+
+<div class="cards">
+  <div class="card">
+    <h3>أ · تحميل التبويبات عند الطلب <span class="tag rec">أرشّح</span></h3>
+    <p>تبقى الصفحة واحدة. التبويبات الثلاثة المخفية والمصفوفة تُنقل إلى ملفات تُجلب عند أول نقرة على التبويب — تماماً كما فعلنا بخريطة اللغات.</p>
+    <table>
+      <tr><td>الربح في HTML</td><td class="n">−62 كB</td></tr>
+      <tr><td>الربح المضغوط</td><td class="n">≈ −7 كB</td></tr>
+      <tr><td>صفحات جديدة</td><td class="n">0</td></tr>
+      <tr><td>ترجمات مطلوبة</td><td class="n">0</td></tr>
+      <tr><td>تغيير الروابط</td><td class="n">0</td></tr>
+      <tr><td>يعمل في 29 لغة</td><td class="n">تلقائياً</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>ب · صفحة أسعار مستقلة <span class="tag alt">الأثقل</span></h3>
+    <p>يُستخرج القسم كاملاً إلى <code>pricing.html</code> لكل لغة، ويبقى في الرئيسية ملخّص بثلاث بطاقات ورابط.</p>
+    <table>
+      <tr><td>الربح في HTML</td><td class="n">−116 كB</td></tr>
+      <tr><td>الربح المضغوط</td><td class="n">≈ −12 كB</td></tr>
+      <tr><td>صفحات جديدة</td><td class="n">29</td></tr>
+      <tr><td>ترجمات مطلوبة</td><td class="n">29</td></tr>
+      <tr><td>تغيير الروابط</td><td class="n">58 رابطاً</td></tr>
+      <tr><td>يعمل في 29 لغة</td><td class="n">بعد الترجمة</td></tr>
+    </table>
+  </div>
+</div>
+
+<h2>4 · كيف يبدو الخيار أ عملياً</h2>
+<div class="flow">
+  <span class="step">تحميل الصفحة: 710 كB</span><span class="arrow">←</span>
+  <span class="step">نقرة على «ERP»</span><span class="arrow">←</span>
+  <span class="step">جلب 8.6 كB + عرض فوري</span>
+</div>
+<ul>
+  <li>التبويب الظاهر يبقى في HTML — لا يتغيّر شيء في أول رسم.</li>
+  <li>التبويبات المخفية تصبح <code>&lt;template&gt;</code> أو ملفاً خارجياً.</li>
+  <li>المصفوفة (30.7 كB) تُجلب عند التمرير إليها، لا قبل ذلك.</li>
+  <li>إن تعطّل JS: يبقى التبويب الأول والملخص ظاهرين — لا شاشة فارغة.</li>
+</ul>
+
+<h2>5 · الفرق الحقيقي في التجربة</h2>
+<table>
+<tr><th>المقياس</th><th>اليوم</th><th>بعد أ</th></tr>
+<tr><td>حجم HTML</td><td class="n">782 كB</td><td class="n">720 كB</td></tr>
+<tr><td>مضغوط</td><td class="n">135 كB</td><td class="n">128 كB</td></tr>
+<tr><td>زمن تحليل الصفحة</td><td>مرتفع</td><td>أقل بنحو 60 كB من الوسم</td></tr>
+<tr><td>الأسعار في الصفحة</td><td>كاملة</td><td>كاملة كما هي</td></tr>
+</table>
+
+<div class="q">
+<b>القرار المطلوب منك:</b><br>
+«أ» — تحميل التبويبات عند الطلب (أنصح به): ربح 62 كB، بلا صفحات ولا ترجمات.<br>
+«ب» — صفحة أسعار مستقلة في 29 لغة: ربح 116 كB، مقابل 29 صفحة وترجمة كاملة.
+</div>
+
+<h2>6 · ما لن أفعله في الحالتين</h2>
+<ul>
+  <li>لن أحذف تبويباً أو محتوى — الأسعار كلها تبقى متاحة.</li>
+  <li>لن أغيّر ترتيب الأقسام المتفق عليه (خدمات → أسعار → متجر → نبذة → قيادة).</li>
+  <li>لن أنشر قبل مقارنة قبل/بعد تُثبت أن الشكل لم يتغيّر.</li>
+</ul>
+
+<footer>خطة · S&amp;R CoreSync · الأرقام من قياس مباشر لملف <code>index.html</code> بتاريخ 14 نوفمبر 2026</footer>
+</div>
+</body>
+</html>
