@@ -37,7 +37,7 @@
     transition: transform 0.48s cubic-bezier(0.16, 1, 0.3, 1),
                 opacity 0.35s ease;
     pointer-events: none;
-    font-family: 'Alexandria', 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-family: 'Alexandria', 'Figtree', system-ui, sans-serif;
 }
 
 [dir="rtl"] .sr-geolang-banner,
