@@ -80,16 +80,7 @@
 html.sr-cmd-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.sr-cmd{backdrop-filter:none}}
 
-/* Language hint: reuses the switcher labels, so no copy of its own. Sits above
-   the dock and never covers content on small screens. */
-.sr-lang-hint{position:fixed;inset-inline-start:12px;bottom:96px;z-index:99998;display:inline-flex;align-items:center;gap:.25rem;
-  background:rgba(9,11,14,.94);border:1px solid var(--sr-line, rgba(var(--sr-gold-line-rgb, 216, 178, 94),.28));border-radius:999px;padding:.3rem .45rem;
-  box-shadow:0 12px 30px -16px #000;backdrop-filter:blur(8px)}
-.sr-lang-hint__link{display:inline-flex;align-items:center;gap:.4rem;color:var(--sr-gold-text, #ecd9a0);text-decoration:none;font-size:.8rem;padding:.15rem .35rem}
-.sr-lang-hint__link svg{opacity:.85}
-.sr-lang-hint__close{border:0;background:transparent;color:rgba(233,226,207,.55);font-size:1rem;line-height:1;cursor:pointer;padding:.1rem .3rem}
-.sr-lang-hint__close:hover{color:#f0d79a}
-@media (max-width:520px){.sr-lang-hint{bottom:88px;font-size:.75rem}}
+
 
 /* Promise line under the value cards, and the three intent chips under the AI bar.
    Chips are plain anchors: no JS, no extra request, keyboard reachable. */
@@ -142,6 +133,20 @@ html.sr-cmd-open{overflow:hidden}
   color:var(--sr-gold-text,#ecd9a0);text-decoration:none;border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),.35);
   padding-bottom:2px}
 .founders-link a:hover,.founders-link a:focus-visible{color:#f6e6b6;border-bottom-color:rgba(var(--sr-gold-line-rgb, 216, 178, 94),.72);outline:none}
+
+/* ── Language hint, inside the dock ────────────────────────────────────────
+   The visitor's own language gets a gold ring for six seconds, on the flag
+   that already exists. No second language control on screen. */
+.apple-dock-item.sr-lang-hint-pulse{position:relative}
+.apple-dock-item.sr-lang-hint-pulse::after{
+  content:'';position:absolute;inset:-4px;border-radius:12px;pointer-events:none;
+  border:2px solid rgba(var(--sr-gold-rgb,212,175,55),.9);
+  box-shadow:0 0 0 4px rgba(var(--sr-gold-rgb,212,175,55),.14),0 0 14px rgba(var(--sr-gold-rgb,212,175,55),.35);
+  animation:srLangPulse 1.5s ease-in-out infinite}
+@keyframes srLangPulse{0%,100%{opacity:.45}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){
+  .apple-dock-item.sr-lang-hint-pulse::after{animation:none;opacity:.95}
+}
 
 /* ── Language hint, inside the dock ────────────────────────────────────────
    The visitor's own language gets a gold ring for six seconds, on the flag
