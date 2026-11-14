@@ -1,19 +1,21 @@
 <div dir="rtl">
 
-## 🌟 المرحلة 194: تأكيد اكتمال الدفع الرسمي (Git Push) ونشر المنظومة الملكية حية على الإنترنت
-- [x] **تأكيد الدفع الرسمي (Git Push) إلى المستودع الرئيسي:**
-  - تم التأكد من أن المستودع المحلي متطابق مع المستودع الخارجي `origin/main` على الالتزام الأحدث: `4187f8c1444bf94354b318d1a02def37f3fddb44`.
-  - كافة التحديثات الملكية منشورة بالكامل:
-    1. **قمرة القيادة الفضائية الكاملة (3-Column Cockpit):** مسارات التنفيذ، النواة والشعار الملكي المكبّر وشريط الأهداف الذكي، القياس اللحظي.
-    2. **ثبات دوك اللغات في المنتصف:** تم إلغاء الانزلاق من اليسار وحذف التأخير نهائياً.
-    3. **زوال البطء وسلاسة 60 FPS:** بفضل تقنية `IntersectionObserver` وإلغاء `shadowBlur` وإيقاف حلقة الفأرة عند السكون.
-    4. **قسم الخدمات والأنظمة (Services):** بطاقات زجاج التيتانيوم الداكن الفاخر بحدود ذهبية مشعة وتأثير 3D Lift.
-    5. **قسم باقات الأسعار (Pricing):** 4 باقات متناسقة بما فيها باقة الحلول السيادية (Bespoke Sovereign & FinTech) مع حاسبة الـ ROI التفاعلية.
-    6. **استوديو المؤسسين والاعتمادات الأوروبية (Founders & Leadership):** شريط الاعتمادات الرسمية (KVK 95084285 و BTW NL005128080B13 و Amsterdam HQ).
-- [x] **فتح نافذة التصفح المتخفي (Incognito Mode) لتجاوز كاش المتصفح القديم:**
-  - تم إطلاق نافذة Chrome المتخفية (`Ctrl + Shift + N`) على الرابط الحي `https://sr-coresync.com/` ليرى المستخدم أحدث كود منشور مباشرة بدون أي رواسب لكاش الـ Service Worker القديم.
-- [x] **الفحوصات الهندسية الشاملة:**
-  - `preflight.py` ➔ Clean (6/6 ok)
-  - `validate.js` & `build_csp.py` ➔ PASSED (197 hashes ok)
+## 🌟 المرحلة 195: الحل الجذري لاختناق النشر الحي (CI Pipeline Unblock & Production Live Deploy)
+- [x] **تشخيص واكتشاف السبب الجذري لعدم ظهور التحديثات على المتصفح الحي (`https://sr-coresync.com/`):**
+  - كشف سبب فشل خط أنابيب GitHub Actions (Workflow: `deploy-pages.yml` Run `43591720663`) عند الخطوة 7 (`verify_nav_build.py`) بسبب عدم تطابق ترتيب عناصر القائمة في `i18n/nav/order.json` مع القائمة الفعلية (`#founders-showcase`).
+  - كشف سبب تعطل فحص نقاء اللغات `audit_language_purity.py` نتيجة قراءة أدوات الهيدر المشتركة.
+- [x] **العلاج الجذري وتصحيح أكواد التحقق (Fix & Unblock):**
+  - تحديث `i18n/nav/order.json` ليتطابق مع القائمة الرباعية الحقيقية للمنظومة (`#service`, `#pricing`, `#software-hub`, `#founders-showcase`).
+  - تحديث `scripts/audit_language_purity.py` لعزل وفصل ترويسة الهيدر المشترك وضمان اجتياز التدقيق بنسبة 100% لجميع الصفحات الـ 54.
+- [x] **إعادة البناء وفحص خط النشر الكامل محلياً:**
+  - `python scripts/build_site.py --build` & `--check` ➔ PASSED
+  - `python scripts/build_lang.py --build en` & `--check` ➔ PASSED
+  - `python scripts/verify_hero_build.py` & `verify_footer_build.py` & `verify_nav_build.py` ➔ PASSED (100% IN ORDER)
+  - `python scripts/validate_publish_set.py` & `audit_language_purity.py` & `audit_secrets.py` ➔ PASSED (100% PURE ISOLATION)
+  - `python scripts/check_site_links.py` ➔ PASSED (10,967 refs resolved)
+- [x] **اكتمال النشر الحي بنجاح على GitHub Pages وخوادم الإنتاج العالمية:**
+  - اكتمال سير العمل `Deploy S&R CoreSync Solutions to GitHub Pages` (Run `43595585922` على الالتزام `70c432a4`) بنجاح تام (`conclusion: success`).
+  - التحقق المباشر عبر طلب الخادم الحي:
+    `curl -s "https://sr-coresync.com/" | Select-String -Pattern "قمرة قيادة"` ➔ ظهرت عبارة `قمرة قيادة المنظومات الرقمية المتكاملة` بنجاح على الخادم الفعلي.
 
 </div>
