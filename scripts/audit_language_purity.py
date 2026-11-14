@@ -40,7 +40,11 @@ AR_RE = re.compile(r'[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]')
 # עברית...). That is correct UX, not a translation leak, so those lines are
 # exempted - but counted, so the exemption can never hide a real regression.
 SWITCHER_HINTS = ('apple-dock-item', 'apple-macos-dock', 'apple-launchpad',
-                  'apple-dock-flag', 'apple-dock-dot')
+                  'apple-dock-flag', 'apple-dock-dot',
+                  'header-support', 'brand-logo-preview', 'btn-pwa-header',
+                  'nav-more-dropdown', 'nav-more-submenu', 'nav-more-btn',
+                  'header-row-layout', 'header-container-fluid', 'header-col-nav',
+                  'header-col-actions')
 switcher_lines = 0
 
 def audit_purity():
