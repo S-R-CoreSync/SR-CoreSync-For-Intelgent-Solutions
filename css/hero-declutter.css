@@ -50,3 +50,275 @@
 .sr-privacy-title{ font-size:13px !important; margin:0 !important; line-height:1.5 !important; }
 .sr-privacy-actions{ margin-inline-start:auto !important; display:flex !important; gap:8px !important; flex:0 0 auto !important; }
 .sr-privacy-btn{ padding:6px 14px !important; font-size:12px !important; white-space:nowrap !important; }
+
+
+/* ═══ Option 3: Space Cockpit & Intelligent Core Styles ═══ */
+.hero-cockpit-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 24px 120px 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.c3-cockpit-layout {
+    display: grid;
+    grid-template-columns: 290px 1fr 290px;
+    gap: 28px;
+    align-items: center;
+}
+
+.c3-sidebar-panel {
+    background: rgba(13, 19, 30, 0.78);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    border-radius: 20px;
+    padding: 22px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.c3-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 10px;
+}
+
+.c3-panel-icon { font-size: 1.15rem; }
+.c3-panel-title {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--sr-gold-light, #f3dfba);
+}
+
+.c3-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.c3-stat-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.c3-stat-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    font-family: monospace;
+}
+
+.c3-val-green { color: #10b981; }
+.c3-val-gold { color: #d4af37; }
+.c3-val-cyan { color: #38bdf8; }
+
+.c3-stat-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 4px 0;
+}
+
+.c3-readiness-btn {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.05));
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #f3dfba;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    font-family: inherit;
+}
+
+.c3-readiness-btn:hover {
+    background: rgba(212, 175, 55, 0.25);
+    border-color: #d4af37;
+    transform: translateY(-1px);
+}
+
+.c3-pillars-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.c3-pillar-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.c3-pillar-btn:hover {
+    background: rgba(212, 175, 55, 0.12);
+    border-color: rgba(212, 175, 55, 0.5);
+    color: #f3dfba;
+    transform: translateX(-3px);
+}
+
+.c3-pillar-emoji { font-size: 1.1rem; }
+
+.c3-center-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+}
+
+.c3-core-orb-wrapper {
+    position: relative;
+    padding: 10px;
+}
+
+.c3-core-orb {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.02) 70%);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.c3-core-orb:hover {
+    transform: scale(1.06);
+}
+
+.c3-orb-ring-outer {
+    position: absolute;
+    inset: -6px;
+    border: 2px dashed rgba(212, 175, 55, 0.45);
+    border-radius: 50%;
+    animation: rotateCockpitRing 25s infinite linear;
+}
+
+.c3-orb-ring-inner {
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    animation: rotateCockpitRingReverse 18s infinite linear;
+}
+
+@keyframes rotateCockpitRing {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateCockpitRingReverse {
+    100% { transform: rotate(-360deg); }
+}
+
+.c3-orb-img {
+    width: 82px;
+    height: 82px;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+}
+
+.hero-cockpit-title {
+    font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.22;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 70%, var(--sr-gold-light, #f3dfba) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-cockpit-desc {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #94a3b8;
+    max-width: 620px;
+    margin: 0;
+}
+
+.hero-cockpit-desc strong {
+    color: #f3dfba;
+}
+
+.hero-ai-idea-box {
+    width: 100%;
+    max-width: 620px;
+}
+
+.hero-cockpit-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.c3-action-btn-demo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #f3dfba;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.c3-action-btn-demo:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+}
+
+.c3-btn-subtag {
+    font-size: 0.72rem;
+    background: rgba(212, 175, 55, 0.18);
+    color: #f3dfba;
+    padding: 2px 7px;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+
+.nav-modern-badge {
+    background: rgba(212, 175, 55, 0.18);
+    color: #f3dfba;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    font-size: 0.68rem;
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+@media (max-width: 1100px) {
+    .c3-cockpit-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .c3-sidebar-panel {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
