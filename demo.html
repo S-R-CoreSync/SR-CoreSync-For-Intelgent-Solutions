@@ -71,46 +71,8 @@
                 return;
             }
 
-            // 4. Automatic Device, Mobile & Browser Language Detection (Only on root entry!)
-            var browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || navigator.browserLanguage || ''];
-            var targetLang = null;
-
-            for (var i = 0; i < browserLangs.length; i++) {
-                var raw = (browserLangs[i] || '').toLowerCase().trim();
-                var primary = raw.split('-')[0];
-                if (primary === 'ar' || raw.indexOf('ar') !== -1) {
-                    targetLang = 'ar';
-                    break;
-                }
-            }
-
-            if (!targetLang) {
-                for (var j = 0; j < browserLangs.length; j++) {
-                    var rawJ = (browserLangs[j] || '').toLowerCase().trim();
-                    var primaryJ = rawJ.split('-')[0];
-                    if (rawJ.indexOf('ckb') !== -1 || rawJ.indexOf('sorani') !== -1) {
-                        targetLang = 'ckb';
-                        break;
-                    }
-                    if (rawJ.indexOf('ku') !== -1 || rawJ.indexOf('kurmanji') !== -1) {
-                        targetLang = 'ku';
-                        break;
-                    }
-                    if (supported.indexOf(primaryJ) !== -1) {
-                        targetLang = primaryJ;
-                        break;
-                    }
-                }
-            }
-
-            if (!targetLang) {
-                targetLang = 'en';
-            }
-
-            if (targetLang && targetLang !== currentLang && supported.indexOf(targetLang) !== -1) {
-                var routePath = (targetLang === 'ar') ? targetFile : (targetLang + '/' + targetFile);
-                window.location.replace(prefix + routePath + window.location.search + window.location.hash);
-            }
+            // 4. Automatic Device, Mobile & Browser Language Detection
+            // Polite mode: No forced redirect on navigator.languages! Respect user's explicit visit.
         } catch(e) {
             // Fail-safe
         }
@@ -191,7 +153,235 @@
         .tracker-val-compliance { color: #38bdf8; }
         .sovereign-lang-menu { display: none !important; }
         .sovereign-lang-dropdown.open .sovereign-lang-menu { display: flex !important; }
-    </style>
+    
+        /* AI Idea Analyzer Royal Modal Styles */
+        #srIdeaPromptModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(3, 8, 6, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            z-index: 100000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.28s ease;
+        }
+        #srIdeaPromptModal.is-active {
+            display: flex;
+            opacity: 1;
+        }
+        .sr-idea-modal-card {
+            background: linear-gradient(145deg, rgba(14, 24, 20, 0.98), rgba(8, 14, 11, 0.98));
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.45);
+            border-radius: 20px;
+            max-width: 680px;
+            width: 100%;
+            padding: 32px 30px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
+            position: relative;
+            box-sizing: border-box;
+            transform: scale(0.96) translateY(10px);
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #srIdeaPromptModal.is-active .sr-idea-modal-card {
+            transform: scale(1) translateY(0);
+        }
+        .sr-idea-modal-close {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #f3dfba;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            z-index: 2;
+        }
+        .sr-idea-modal-close:hover {
+            background: rgba(239, 68, 68, 0.25);
+            border-color: #ef4444;
+            color: #ffffff;
+            transform: rotate(90deg);
+        }
+        .sr-idea-modal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
+            color: #d4af37;
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+        }
+        .sr-idea-modal-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0 0 8px 0;
+            line-height: 1.3;
+        }
+        .sr-idea-modal-subtitle {
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 0 24px 0;
+            line-height: 1.6;
+        }
+        .sr-idea-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .sr-idea-input-field {
+            width: 100%;
+            background: rgba(3, 8, 6, 0.85);
+            border: 1.5px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: #ffffff;
+            font-family: inherit;
+            box-sizing: border-box;
+            transition: all 0.22s ease;
+        }
+        .sr-idea-input-field:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.25);
+            background: rgba(3, 8, 6, 0.95);
+        }
+        .sr-idea-mic-btn {
+            position: absolute;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.25rem;
+            padding: 4px;
+            color: #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            z-index: 2;
+        }
+        .sr-idea-mic-btn:hover {
+            transform: scale(1.15);
+        }
+        .sr-idea-modal-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .sr-idea-submit-btn {
+            flex: 1 1 200px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #fce0ad 0%, #e8bf7a 50%, #d4af37 100%);
+            color: #070e0b;
+            border: 1px solid rgba(255, 243, 214, 0.85);
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 8px 22px rgba(232, 191, 122, 0.4);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+        .sr-idea-submit-btn:hover {
+            background: linear-gradient(135deg, #ffffff 0%, #fae6bd 50%, #dab471 100%);
+            box-shadow: 0 12px 28px rgba(232, 191, 122, 0.65);
+            transform: translateY(-2px);
+        }
+        .sr-idea-quick-prompts {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .sr-idea-quick-prompts-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 600;
+        }
+        .sr-idea-prompt-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22);
+            color: rgba(243, 223, 186, 0.9);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .sr-idea-prompt-chip:hover {
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
+            border-color: #d4af37;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* Royal Clean Nav More Dropdown Styles */
+        .tf-header-menu .nav-item-has-submenu {
+            position: relative;
+        }
+        .tf-header-menu .nav-submenu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 190px;
+            background: rgba(14, 24, 20, 0.96);
+            border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
+            border-radius: 12px;
+            padding: 8px 6px;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px);
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        .tf-header-menu .nav-submenu.open {
+            display: block;
+        }
+        .tf-header-menu .nav-submenu li {
+            margin: 2px 0;
+        }
+        .tf-header-menu .nav-submenu a {
+            display: block;
+            padding: 7px 12px;
+            font-size: 0.86rem;
+            color: rgba(243, 223, 186, 0.9);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .tf-header-menu .nav-submenu a:hover {
+            background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15);
+            color: #ffffff;
+        }
+</style>
 <style>@keyframes radarSweepAnim { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</style>
 </head>
 <body>
@@ -7038,5 +7228,190 @@ function calcCloudSizing() {
         </div>
     </div>
 </div>
+
+    <!-- AI Scope & Timeline Estimator Modal -->
+    <div id="srAiEstimateModal" role="dialog" aria-modal="true" aria-label="تحليل النطاق المعماري والجدول الزمني" onclick="if(event.target===this)closeAiEstimateModal()">
+        <div class="sr-ai-estimate-card" id="srAiEstimateCard" style="direction:rtl; text-align:right;">
+            <div class="sr-estimate-header">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="sr-estimate-icon">✨</span>
+                    <div>
+                        <span class="sr-estimate-badge">S&amp;R CoreSync AI Architecture Engine</span>
+                        <h2 class="sr-estimate-title" id="srEstTitle">تحليل النطاق المعماري والجدول الزمني</h2>
+                    </div>
+                </div>
+                <button type="button" class="sr-peek-close-corner" onclick="closeAiEstimateModal()" aria-label="Close">✕</button>
+            </div>
+
+            <div class="sr-estimate-user-query">
+                <span class="sr-query-label">الفكرة المحللة:</span>
+                <p class="sr-query-text" id="srEstQueryText">"..."</p>
+            </div>
+
+            <div class="sr-estimate-grid">
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">التصنيف المعماري</span>
+                    <strong class="sr-est-val" id="srEstClassification">منظومة سحابية متقدمة</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">الجدول الزمني للإطلاق</span>
+                    <strong class="sr-est-val sr-val-gold" id="srEstTimeline">3 - 5 أسابيع</strong>
+                </div>
+                <div class="sr-est-metric-card sr-est-metric-gold-box" style="border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.55); background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08); box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+                        <span class="sr-est-lbl" style="color: #fce0ad;">الميزانية التقديرية 💳</span>
+                        <div class="sr-est-currency-toggles" style="display:flex; gap:4px;" aria-label="Currency View Toggle">
+                            <button type="button" class="sr-curr-btn active" onclick="switchEstimateCurrency('all', this)" style="padding:2px 7px; font-size:0.68rem; border-radius:5px; border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.4); background:rgba(var(--sr-gold-rgb, 212, 175, 55),0.25); color:#fff; cursor:pointer; font-weight:700;">الكل</button>
+                            <button type="button" class="sr-curr-btn" onclick="switchEstimateCurrency('eur', this)" style="padding:2px 7px; font-size:0.68rem; border-radius:5px; border:1px solid rgba(255,255,255,0.15); background:transparent; color:#f3dfba; cursor:pointer; font-weight:700;">EUR €</button>
+                            <button type="button" class="sr-curr-btn" onclick="switchEstimateCurrency('sar', this)" style="padding:2px 7px; font-size:0.68rem; border-radius:5px; border:1px solid rgba(255,255,255,0.15); background:transparent; color:#f3dfba; cursor:pointer; font-weight:700;">SAR ر.س</button>
+                        </div>
+                    </div>
+                    <strong class="sr-est-val sr-val-gold font-num" id="srEstBudget">€4,500 - €8,900  |  18,000 - 35,600 SAR</strong>
+                </div>
+                <div class="sr-est-metric-card sr-est-metric-roi-box" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08);">
+                    <span class="sr-est-lbl" style="color: #a7f3d0;">العائد الاستثماري المتوقع (ROI) 📈</span>
+                    <strong class="sr-est-val sr-val-emerald font-num" id="srEstRoi">+240% كفاءة تشغيلية وتوفير سنوي</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">معايير الامتثال والأمان</span>
+                    <strong class="sr-est-val sr-val-emerald" id="srEstCompliance">GDPR + 21% BTW</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">المعمارية الموصى بها</span>
+                    <strong class="sr-est-val" id="srEstStack">Next.js + CoreSync Cloud</strong>
+                </div>
+            </div>
+
+            <div class="sr-estimate-phases">
+                <span class="sr-phases-label">مراحل التنفيذ السيادية:</span>
+                <div class="sr-phase-steps">
+                    <div class="sr-phase-step"><span class="step-num">1</span><span>هندسة النواة والبيانات</span></div>
+                    <div class="sr-phase-sep">→</div>
+                    <div class="sr-phase-step"><span class="step-num">2</span><span>تطوير الواجهة وبوابات الربط</span></div>
+                    <div class="sr-phase-sep">→</div>
+                    <div class="sr-phase-step"><span class="step-num">3</span><span>التدقيق والتشغيل الحي</span></div>
+                </div>
+            </div>
+
+            <div class="sr-estimate-actions">
+                <button type="button" class="sr-peek-btn-pdf" id="srBtnExportPdf" onclick="exportAiEstimatePdf()">📄 تصدير وثيقة المشروع (PDF)</button>
+                <button type="button" class="sr-peek-btn-wa" id="srBtnEstimateWhatsApp" onclick="sendEstimateViaWhatsApp()" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color:#ffffff; border:1px solid #34d399; font-weight:800; padding:11px 18px; border-radius:12px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 4px 15px rgba(16,185,129,0.35); font-size:0.86rem; transition:transform 0.2s ease;">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.45 0 .09 5.36.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 0 0 5.83 1.51h.01c6.6 0 11.96-5.36 11.96-11.97 0-3.2-1.25-6.21-3.51-8.43zm-8.46 18.42h-.01a9.92 9.92 0 0 1-5.06-1.39l-.36-.22-3.76.99 1-3.66-.24-.38a9.9 9.9 0 0 1-1.52-5.27c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.15 1.03 7.02 2.91 1.88 1.88 2.91 4.38 2.91 7.03 0 5.48-4.46 9.93-9.93 9.93zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.63-.93-2.24-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.58-.35z"/></svg>
+                    <span>مشاركة عبر WhatsApp 💬</span>
+                </button>
+                <button type="button" class="sr-peek-btn-go" onclick="closeAiEstimateModal(); window.location.href='#services';">👔 حجز جلسة استشارية خاصة</button>
+                <a href="demo.html" class="sr-peek-btn-secondary" onclick="closeAiEstimateModal()">⚡ تجربة النظام السحابي</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Idea Analyzer Royal Modal -->
+    <div id="srIdeaPromptModal" role="dialog" aria-modal="true" aria-labelledby="srIdeaModalTitle" onclick="if(event.target===this)closeIdeaModal()">
+        <div class="sr-idea-modal-card" style="direction:rtl; text-align:right;">
+            <button type="button" class="sr-idea-modal-close" style="left: 18px;" onclick="closeIdeaModal()" aria-label="Close">✕</button>
+            <div class="sr-idea-modal-badge">✨ S&R CoreSync Sovereign AI Architecture</div>
+            <h2 class="sr-idea-modal-title" id="srIdeaModalTitle">حوّل فكرتك إلى واقع تقني ذكي</h2>
+            <p class="sr-idea-modal-subtitle">اكتب فكرة مشروعك باختصار أو استخدم الإملاء الصوتي، وسيقوم محرك الذكاء الاصطناعي بتقدير النطاق المعماري، التقنيات المقترحة، والجدول الزمني للإطلاق فوراً.</p>
+
+            <div class="sr-idea-input-wrapper">
+                <input type="text" id="userIdeaInput" class="sr-idea-input-field" style="direction:rtl; text-align:right; padding: 16px 52px 16px 16px;" placeholder="اكتب فكرة مشروعك هنا (مثلاً: أريد بناء متجر إلكتروني ذكي أو منصة ERP)..." onkeydown="if(event.key==='Enter'){submitIdeaAnalysis();}" />
+                <button type="button" id="srVoiceDictateBtn" onclick="toggleHeroVoiceDictation()" class="sr-idea-mic-btn" style="right: 12px;" title="Voice Dictate" aria-label="Voice Dictate">🎙️</button>
+            </div>
+
+            <div class="sr-idea-modal-actions">
+                <button type="button" onclick="submitIdeaAnalysis()" class="sr-idea-submit-btn">
+                    <span>✨ حلل فكرتي بالذكاء الاصطناعي فوراً</span>
+                </button>
+            </div>
+
+            <div class="sr-idea-quick-prompts">
+                <span class="sr-idea-quick-prompts-label">أفكار وتجارب سريعة:</span>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('أريد بناء منصة تجارة إلكترونية فاخرة متكاملة مع دفع متعدد العملات')">🛒 متجر إلكتروني فاخر</button>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('تطوير منظومة ERP مالية وإدارية مؤسسية مؤتمتة متوافقة مع لوائح الاتحاد الأوروبي')">🏢 منظومة ERP مؤسسية</button>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('بناء شبكة وكلاء ذكاء اصطناعي وأتمتة لخدمة العملاء والعمليات')">🤖 وكلاء AI وأتمتة</button>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('هندسة تطبيق جوال ومنصة سحابية متقدمة وفائقة الأمان')">📱 تطبيق ومنصة سحابية</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Royal Modal & Navigation Controls Script -->
+    <script>
+    function toggleNavMore(e) {
+        if (e) e.stopPropagation();
+        var btn = document.getElementById('navMoreBtn');
+        var menu = document.getElementById('navMoreSubmenu');
+        if (!btn || !menu) return;
+        var isOpen = menu.classList.contains('open');
+        menu.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+    }
+
+    function openIdeaModal() {
+        var modal = document.getElementById('srIdeaPromptModal');
+        if (!modal) return;
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(function() {
+            var input = document.getElementById('userIdeaInput');
+            if (input) input.focus();
+        }, 150);
+    }
+
+    function closeIdeaModal() {
+        var modal = document.getElementById('srIdeaPromptModal');
+        if (!modal) return;
+        modal.classList.remove('is-active');
+        document.body.style.overflow = '';
+    }
+
+    function submitIdeaAnalysis() {
+        var input = document.getElementById('userIdeaInput');
+        var val = input ? input.value : '';
+        if (val && val.trim()) {
+            closeIdeaModal();
+            if (typeof analyzeIdea === 'function') {
+                analyzeIdea();
+            } else if (typeof openAiEstimatorModal === 'function') {
+                openAiEstimatorModal(val);
+            }
+        } else {
+            if (input) {
+                input.focus();
+                input.style.borderColor = '#ef4444';
+                setTimeout(function() { input.style.borderColor = ''; }, 1500);
+            }
+        }
+    }
+
+    function setAndSubmitPrompt(promptText) {
+        var input = document.getElementById('userIdeaInput');
+        if (input) input.value = promptText;
+        submitIdeaAnalysis();
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeIdeaModal();
+            var menu = document.getElementById('navMoreSubmenu');
+            if (menu && menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                var btn = document.getElementById('navMoreBtn');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        var menu = document.getElementById('navMoreSubmenu');
+        var btn = document.getElementById('navMoreBtn');
+        if (menu && menu.classList.contains('open')) {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+    </script>
+
 </body>
 </html>

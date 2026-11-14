@@ -4454,5 +4454,190 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+    <!-- AI Scope & Timeline Estimator Modal -->
+    <div id="srAiEstimateModal" role="dialog" aria-modal="true" aria-label="Architectural Scope & Timeline Estimate" onclick="if(event.target===this)closeAiEstimateModal()">
+        <div class="sr-ai-estimate-card" id="srAiEstimateCard" style="direction:ltr; text-align:left;">
+            <div class="sr-estimate-header">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="sr-estimate-icon">✨</span>
+                    <div>
+                        <span class="sr-estimate-badge">S&amp;R CoreSync AI Architecture Engine</span>
+                        <h2 class="sr-estimate-title" id="srEstTitle">Architectural Scope & Timeline Estimate</h2>
+                    </div>
+                </div>
+                <button type="button" class="sr-peek-close-corner" onclick="closeAiEstimateModal()" aria-label="Close">✕</button>
+            </div>
+
+            <div class="sr-estimate-user-query">
+                <span class="sr-query-label">Analyzed Concept:</span>
+                <p class="sr-query-text" id="srEstQueryText">"..."</p>
+            </div>
+
+            <div class="sr-estimate-grid">
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">Architectural Tier</span>
+                    <strong class="sr-est-val" id="srEstClassification">Next-Gen Cloud & Enterprise Architecture</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">Deployment Timeline</span>
+                    <strong class="sr-est-val sr-val-gold" id="srEstTimeline">3 - 5 Weeks</strong>
+                </div>
+                <div class="sr-est-metric-card sr-est-metric-gold-box" style="border-color: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.55); background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.08); box-shadow: 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+                        <span class="sr-est-lbl" style="color: #fce0ad;">Estimated Investment 💳</span>
+                        <div class="sr-est-currency-toggles" style="display:flex; gap:4px;" aria-label="Currency View Toggle">
+                            <button type="button" class="sr-curr-btn active" onclick="switchEstimateCurrency('all', this)" style="padding:2px 7px; font-size:0.68rem; border-radius:5px; border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55),0.4); background:rgba(var(--sr-gold-rgb, 212, 175, 55),0.25); color:#fff; cursor:pointer; font-weight:700;">All</button>
+                            <button type="button" class="sr-curr-btn" onclick="switchEstimateCurrency('eur', this)" style="padding:2px 7px; font-size:0.68rem; border-radius:5px; border:1px solid rgba(255,255,255,0.15); background:transparent; color:#f3dfba; cursor:pointer; font-weight:700;">EUR €</button>
+                            <button type="button" class="sr-curr-btn" onclick="switchEstimateCurrency('sar', this)" style="padding:2px 7px; font-size:0.68rem; border-radius:5px; border:1px solid rgba(255,255,255,0.15); background:transparent; color:#f3dfba; cursor:pointer; font-weight:700;">SAR</button>
+                        </div>
+                    </div>
+                    <strong class="sr-est-val sr-val-gold font-num" id="srEstBudget">€4,500 - €8,900  |  18,000 - 35,600 SAR</strong>
+                </div>
+                <div class="sr-est-metric-card sr-est-metric-roi-box" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08);">
+                    <span class="sr-est-lbl" style="color: #a7f3d0;">Projected Annual ROI 📈</span>
+                    <strong class="sr-est-val sr-val-emerald font-num" id="srEstRoi">+240% Operating Efficiency & Cost Savings</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">Compliance & Security</span>
+                    <strong class="sr-est-val sr-val-emerald" id="srEstCompliance">GDPR + 21% BTW Compliance</strong>
+                </div>
+                <div class="sr-est-metric-card">
+                    <span class="sr-est-lbl">Recommended Stack</span>
+                    <strong class="sr-est-val" id="srEstStack">Next.js + CoreSync Cloud</strong>
+                </div>
+            </div>
+
+            <div class="sr-estimate-phases">
+                <span class="sr-phases-label">Sovereign Deployment Phases:</span>
+                <div class="sr-phase-steps">
+                    <div class="sr-phase-step"><span class="step-num">1</span><span>Core Engine & Data Modeling</span></div>
+                    <div class="sr-phase-sep">→</div>
+                    <div class="sr-phase-step"><span class="step-num">2</span><span>Interfaces & API Gateways</span></div>
+                    <div class="sr-phase-sep">→</div>
+                    <div class="sr-phase-step"><span class="step-num">3</span><span>Hardening & Production Go-Live</span></div>
+                </div>
+            </div>
+
+            <div class="sr-estimate-actions">
+                <button type="button" class="sr-peek-btn-pdf" id="srBtnExportPdf" onclick="exportAiEstimatePdf()">📄 Export Architecture Blueprint (PDF)</button>
+                <button type="button" class="sr-peek-btn-wa" id="srBtnEstimateWhatsApp" onclick="sendEstimateViaWhatsApp()" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color:#ffffff; border:1px solid #34d399; font-weight:800; padding:11px 18px; border-radius:12px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 4px 15px rgba(16,185,129,0.35); font-size:0.86rem; transition:transform 0.2s ease;">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.45 0 .09 5.36.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 0 0 5.83 1.51h.01c6.6 0 11.96-5.36 11.96-11.97 0-3.2-1.25-6.21-3.51-8.43zm-8.46 18.42h-.01a9.92 9.92 0 0 1-5.06-1.39l-.36-.22-3.76.99 1-3.66-.24-.38a9.9 9.9 0 0 1-1.52-5.27c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.15 1.03 7.02 2.91 1.88 1.88 2.91 4.38 2.91 7.03 0 5.48-4.46 9.93-9.93 9.93zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.63-.93-2.24-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.58-.35z"/></svg>
+                    <span>Consult via WhatsApp 💬</span>
+                </button>
+                <button type="button" class="sr-peek-btn-go" onclick="closeAiEstimateModal(); window.location.href='#services';">👔 Book Executive Consultation</button>
+                <a href="demo.html" class="sr-peek-btn-secondary" onclick="closeAiEstimateModal()">⚡ Explore Cloud Sandbox</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Idea Analyzer Royal Modal -->
+    <div id="srIdeaPromptModal" role="dialog" aria-modal="true" aria-labelledby="srIdeaModalTitle" onclick="if(event.target===this)closeIdeaModal()">
+        <div class="sr-idea-modal-card" style="direction:ltr; text-align:left;">
+            <button type="button" class="sr-idea-modal-close" style="right: 18px;" onclick="closeIdeaModal()" aria-label="Close">✕</button>
+            <div class="sr-idea-modal-badge">✨ S&R CoreSync Sovereign AI Architecture</div>
+            <h2 class="sr-idea-modal-title" id="srIdeaModalTitle">Turn Your Vision into Sovereign Enterprise Reality</h2>
+            <p class="sr-idea-modal-subtitle">Describe your project or use voice dictation. Our AI architecture engine will immediately calculate technical scope, recommended stack, and launch roadmap.</p>
+
+            <div class="sr-idea-input-wrapper">
+                <input type="text" id="userIdeaInput" class="sr-idea-input-field" style="direction:ltr; text-align:left; padding: 16px 52px 16px 16px;" placeholder="Type your project idea here (e.g. Luxury E-Commerce, Cloud ERP, Sovereign AI Agents)..." onkeydown="if(event.key==='Enter'){submitIdeaAnalysis();}" />
+                <button type="button" id="srVoiceDictateBtn" onclick="toggleHeroVoiceDictation()" class="sr-idea-mic-btn" style="right: 12px;" title="Voice Dictate" aria-label="Voice Dictate">🎙️</button>
+            </div>
+
+            <div class="sr-idea-modal-actions">
+                <button type="button" onclick="submitIdeaAnalysis()" class="sr-idea-submit-btn">
+                    <span>✨ Analyze My Project with AI Now</span>
+                </button>
+            </div>
+
+            <div class="sr-idea-quick-prompts">
+                <span class="sr-idea-quick-prompts-label">Quick Concept Inspiration:</span>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('I want to build an enterprise luxury e-commerce platform with automated multi-currency checkout')">🛒 Luxury E-Commerce Platform</button>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('Deploying an automated financial and corporate ERP system compliant with EU regulations')">🏢 Enterprise Cloud ERP</button>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('Engineering an autonomous AI agents network and automated customer workflows')">🤖 Autonomous AI Agents</button>
+                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt('Architecting a high-performance cross-platform mobile app and secure cloud ecosystem')">📱 Mobile & Cloud Platform</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Royal Modal & Navigation Controls Script -->
+    <script>
+    function toggleNavMore(e) {
+        if (e) e.stopPropagation();
+        var btn = document.getElementById('navMoreBtn');
+        var menu = document.getElementById('navMoreSubmenu');
+        if (!btn || !menu) return;
+        var isOpen = menu.classList.contains('open');
+        menu.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+    }
+
+    function openIdeaModal() {
+        var modal = document.getElementById('srIdeaPromptModal');
+        if (!modal) return;
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(function() {
+            var input = document.getElementById('userIdeaInput');
+            if (input) input.focus();
+        }, 150);
+    }
+
+    function closeIdeaModal() {
+        var modal = document.getElementById('srIdeaPromptModal');
+        if (!modal) return;
+        modal.classList.remove('is-active');
+        document.body.style.overflow = '';
+    }
+
+    function submitIdeaAnalysis() {
+        var input = document.getElementById('userIdeaInput');
+        var val = input ? input.value : '';
+        if (val && val.trim()) {
+            closeIdeaModal();
+            if (typeof analyzeIdea === 'function') {
+                analyzeIdea();
+            } else if (typeof openAiEstimatorModal === 'function') {
+                openAiEstimatorModal(val);
+            }
+        } else {
+            if (input) {
+                input.focus();
+                input.style.borderColor = '#ef4444';
+                setTimeout(function() { input.style.borderColor = ''; }, 1500);
+            }
+        }
+    }
+
+    function setAndSubmitPrompt(promptText) {
+        var input = document.getElementById('userIdeaInput');
+        if (input) input.value = promptText;
+        submitIdeaAnalysis();
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeIdeaModal();
+            var menu = document.getElementById('navMoreSubmenu');
+            if (menu && menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                var btn = document.getElementById('navMoreBtn');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        var menu = document.getElementById('navMoreSubmenu');
+        var btn = document.getElementById('navMoreBtn');
+        if (menu && menu.classList.contains('open')) {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+    </script>
+
 </body>
 </html>
