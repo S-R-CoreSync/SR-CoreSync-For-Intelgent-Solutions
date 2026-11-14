@@ -2367,6 +2367,57 @@ html[dir="ltr"] .srf{direction:ltr}
                     </div>
                 </div>
 
+                <!-- كبسولة حاسبة العائد الاستثماري التفاعلية (Interactive ROI Estimator) -->
+                <div class="sr-roi-calculator-wrap" id="srRoiCalculator">
+                    <div class="sr-roi-calc-card">
+                        <div class="sr-roi-head">
+                            <div class="sr-roi-title-group">
+                                <span class="sr-roi-badge">📊 حاسبة النمو المالي</span>
+                                <h3 class="sr-roi-title">احسب العائد الاستثماري التقديري لمشروعك (ROI Calculator)</h3>
+                                <p class="sr-roi-sub">اكتشف حجم التوفير في التكاليف التشغيلية والأرباح السنوية المتوقعة مع منظومة S&amp;R CoreSync الذكية.</p>
+                            </div>
+                            <div class="sr-roi-highlight-box">
+                                <span class="sr-roi-hl-lbl">العائد الاستثماري المتوقع</span>
+                                <span class="sr-roi-hl-val" id="roiPercentOutput">+340%</span>
+                                <span class="sr-roi-hl-sub">خلال أول 6 أشهر تشغيل</span>
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-controls-grid">
+                            <div class="sr-roi-control-item">
+                                <label for="roiSalesRange" class="sr-roi-label">
+                                    <span>حجم المبيعات / الإيرادات الشهرية المتوقعة:</span>
+                                    <strong id="roiSalesVal" class="sr-roi-val-display">€25,000</strong>
+                                </label>
+                                <input type="range" id="roiSalesRange" min="5000" max="250000" step="5000" value="25000" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                            <div class="sr-roi-control-item">
+                                <label for="roiTeamRange" class="sr-roi-label">
+                                    <span>عدد الموظفين أو العمليات اليدوية شهرياً:</span>
+                                    <strong id="roiTeamVal" class="sr-roi-val-display">15 عملية/فرد</strong>
+                                </label>
+                                <input type="range" id="roiTeamRange" min="3" max="100" step="1" value="15" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-results-strip">
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">التوفير السنوي في تكاليف الأتمتة والسحابة:</span>
+                                <strong class="sr-roi-res-num" id="roiSavingsOutput">€18,400</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">النمو التقديري في صافي المبيعات:</span>
+                                <strong class="sr-roi-res-num" style="color:#10b981;" id="roiGrowthOutput">+€32,500</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">فترة استرداد تكلفة المنظومة (Payback):</span>
+                                <strong class="sr-roi-res-num" style="color:var(--sr-gold-light, #f3dfba);" id="roiPaybackOutput">2.1 شهر</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- شريط الحافز الضريبي الأوروبي لباقات الأسعار -->
                 <div class="pricing-tax-advantage-banner">
                     <span class="dutch-flag">🇳🇱</span>
@@ -2435,7 +2486,7 @@ html[dir="ltr"] .srf{direction:ltr}
                 <div class="tab-content">
                     <!-- التاب 1: تطوير الأنظمة والتطبيقات -->
                     <div class="tab-pane fade active show" id="pricing-pane-dev">
-                        <div class="tf-grid-layout md-col-2 lg-col-3">
+                        <div class="tf-grid-layout md-col-2 lg-col-4 sr-pricing-4col-grid">
                             <!-- الباقة 1: Starter -->
                             <div class="wg-plan">
                                 <div class="bg-img bg-img_1"></div>
@@ -2560,12 +2611,48 @@ html[dir="ltr"] .srf{direction:ltr}
                                     <li><span>//</span> دعم تقني وأولوية مطلقة لمدة 180 يومًا</li>
                                 </ul>
                             </div>
-                        </div>
+                        
+                            <!-- الباقة 4: الحلول السيادية واستشارات FinTech المخصصة (Bespoke Enterprise) -->
+                            <div class="wg-plan style-2 bespoke-sovereign-plan">
+                                <div class="plan-badge" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important; color:#ffffff !important;">
+                                    <span class="plan-badge__icon" aria-hidden="true">🏛️</span>
+                                    مشاريع سيادية ضخمة
+                                </div>
+                                <div class="bg-img bg-img_1 d-xl-block"></div>
+                                <div class="br-line bg-primary br-line-gold"></div>
+                                <p class="plan-name letter-space--1 fw-medium" style="color:var(--sr-gold-light, #f3dfba);">Bespoke Sovereign & FinTech</p>
+                                <h4 class="plan-price font-latin">
+                                    <span class="plan-price__amount" style="font-size:clamp(1.4rem,1.8vw,1.75rem); color:#ffffff;">عرض مخصص (Bespoke)</span>
+                                </h4>
+                                <p class="plan-desc text-white-64">
+                                    للبنوك والمؤسسات والجهات الكبرى التي تتطلب بنى سحابية مستقلة واستشارات معمارية مباشرة
+                                </p>
+                                <div class="pricing-card-actions">
+                                    <a href="https://wa.me/31618111116?text=مرحباً%20مهندس%20سليم%20وأستاذ%20رائد،%20نود%20طلب%20استشارة%20معمارية%20خاصة%20لباقة%20الحلول%20السيادية%20(Bespoke%20Sovereign%20&%20FinTech)"
+                                        target="_blank" rel="noopener noreferrer" class="pricing-card-btn-wa" style="background:linear-gradient(135deg,#10b981,#047857)!important;">
+                                        <span>استشارة هندسية خاصة 💬</span>
+                                    </a>
+                                    <button type="button" class="pricing-card-btn-pdf"
+                                        data-sr-call="openExecutiveBookingModal" data-sr-args='["bespoke"]'>
+                                        <span>طلب وثيقة الشروط (RFP/RFQ) 📄</span>
+                                    </button>
+                                </div>
+                                <ul class="benefit-list tf-list vertical">
+                                    <li class="benefit_title text-white-64">متضمن للمؤسسات</li>
+                                    <li><span class="text-primary gold-accent">//</span> استضافة سيادية خاصة (On-Prem / Sovereign Cloud)</li>
+                                    <li><span class="text-primary gold-accent">//</span> أنظمة FinTech ودفوعات معقدة وبلوكتشين</li>
+                                    <li><span class="text-primary gold-accent">//</span> حماية وامتثال كامل لمعايير DORA و GDPR و ISO 27001</li>
+                                    <li><span class="text-primary gold-accent">//</span> نماذج ذكاء اصطناعي سيادية خاصة بمشروعك</li>
+                                    <li><span class="text-primary gold-accent">//</span> جلسات تخطيط معماري أسبوعية مع CTO & CFO</li>
+                                    <li><span class="text-primary gold-accent">//</span> اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)</li>
+                                </ul>
+                            </div>
+</div>
                     </div>
 
                     <!-- التاب 2: أنظمة ERP والربط المالي -->
                     <div class="tab-pane fade pane-hidden" id="pricing-pane-erp">
-                        <div class="tf-grid-layout md-col-2 lg-col-3">
+                        <div class="tf-grid-layout md-col-2 lg-col-4 sr-pricing-4col-grid">
                             <div class="wg-plan">
                                 <div class="bg-img bg-img_1"></div>
                                 <div class="br-line"></div>
@@ -2716,7 +2803,7 @@ html[dir="ltr"] .srf{direction:ltr}
 
                     <!-- التاب 4: الهوية والمتاجر الرقمية (Creative & E-Commerce Suite) -->
                     <div class="tab-pane fade pane-hidden" id="pricing-pane-creative">
-                        <div class="tf-grid-layout md-col-2 lg-col-3">
+                        <div class="tf-grid-layout md-col-2 lg-col-4 sr-pricing-4col-grid">
                             <!-- الباقة 4: باقة التأسيس السيادي للسوشيال ميديا وهوية الـ 8K (خدمة مأجورة) -->
                             <div class="wg-plan style-2">
                                 <div class="plan-badge">
