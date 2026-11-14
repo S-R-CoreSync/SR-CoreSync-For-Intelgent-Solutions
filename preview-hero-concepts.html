@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معاينة خيارات الهيرو والترويسة العالمية — S&R CoreSync</title>
+    <title>معاينة خيارات الهيرو والترويسة الملكية — S&R CoreSync</title>
     
     <!-- خطوط وأنماط المنظومة الرسمية -->
     <link rel="stylesheet" href="./assets/fonts/gf/fonts.css?v=20261114">
@@ -35,7 +35,19 @@
             direction: rtl;
         }
 
-        /* ═══ شريط التحكم والمعاينة العلوي الثابت ═══ */
+        /* ═══ 1. كانفاس النقط والخيوط الذهبية التفاعلية (The Golden Constellation Canvas) ═══ */
+        .hero-motion-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.95;
+        }
+
+        /* ═══ 2. شريط التحكم والمعاينة العلوي الثابت ═══ */
         .preview-control-bar {
             position: fixed;
             top: 0;
@@ -45,8 +57,8 @@
             background: rgba(6, 10, 18, 0.94);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
             padding: 10px 24px;
             display: flex;
             align-items: center;
@@ -107,7 +119,7 @@
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.1));
             color: var(--sr-gold-light);
             border: 1px solid rgba(212, 175, 55, 0.5);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
         }
 
         .preview-actions {
@@ -133,35 +145,16 @@
             transform: scale(1.03);
         }
 
-        /* مسافة تعويض لشريط التحكم */
-        .stage-wrapper {
-            margin-top: 60px;
-            position: relative;
-            min-height: calc(100vh - 60px);
-        }
-
-        /* إخفاء وإظهار المفاهيم */
-        .concept-view {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
-        }
-
-        .concept-view.is-active {
-            display: block;
-            opacity: 1;
-        }
-
-        /* ═══ الترويسة الجديدة المطورة (Global Header v2026) ═══ */
+        /* ═══ 3. الترويسة العلوية العالمية الجديدة (Modern Luxury Navbar) ═══ */
         .modern-nav-header {
             position: sticky;
-            top: 60px;
+            top: 55px;
             z-index: 1000;
-            background: rgba(6, 9, 14, 0.82);
+            background: rgba(6, 9, 14, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-            padding: 14px 40px;
+            padding: 12px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -281,40 +274,23 @@
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
         }
 
-        /* ═══ الخلفية الشبكية السينمائية المشتركة ═══ */
-        .hero-auroral-bg {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 0;
+        /* ═══ 4. مسرح العرض الرئيسي ═══ */
+        .stage-wrapper {
+            position: relative;
+            z-index: 1;
+            min-height: calc(100vh - 120px);
+            padding-right: 70px; /* مسافة حجز لدك السوشيال ميديا الأيمن */
         }
 
-        .aurora-glow-1 {
-            position: absolute;
-            top: -20%;
-            right: 10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0) 70%);
-            filter: blur(80px);
-            animation: pulseAura 8s infinite alternate ease-in-out;
+        .concept-view {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
         }
 
-        .aurora-glow-2 {
-            position: absolute;
-            top: 20%;
-            left: -10%;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(14, 116, 144, 0.15) 0%, rgba(14, 116, 144, 0) 70%);
-            filter: blur(90px);
-            animation: pulseAura 12s infinite alternate-reverse ease-in-out;
-        }
-
-        @keyframes pulseAura {
-            0% { transform: scale(1) translate(0, 0); opacity: 0.8; }
-            100% { transform: scale(1.15) translate(-30px, 30px); opacity: 1; }
+        .concept-view.is-active {
+            display: block;
+            opacity: 1;
         }
 
         /* ═══ شريط "حلل فكرتي" المطور الفاخر ═══ */
@@ -407,89 +383,194 @@
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
         }
 
-        /* ═══ دك السوشيال ميديا الأيمن (محفوظ بالكامل) ═══ */
-        .floating-social-rail {
-            position: fixed;
-            right: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            background: rgba(13, 19, 30, 0.7);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            padding: 16px 8px;
-            border-radius: 999px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        /* ══════════════════════════════════════════════════════════
+           5. دك السوشيال ميديا الأيمن الأصلي (Floating Follow Rail)
+        ══════════════════════════════════════════════════════════ */
+        .floating-follow {
+            position: fixed !important;
+            right: 14px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            z-index: 9999 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 10px !important;
+            background: rgba(11, 16, 26, 0.88) !important;
+            border: 1px solid rgba(212, 175, 55, 0.35) !important;
+            border-radius: 999px !important;
+            padding: 16px 8px !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.15) !important;
+            backdrop-filter: blur(14px) !important;
         }
 
-        .social-rail-link {
-            width: 34px;
-            height: 34px;
+        .floating-follow__icons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .floating-follow__link {
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #94a3b8;
             text-decoration: none;
-            transition: all 0.2s;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.2s ease;
         }
 
-        .social-rail-link:hover {
+        .floating-follow__link:hover {
             color: var(--sr-gold-light);
             background: rgba(212, 175, 55, 0.2);
+            border-color: var(--sr-gold);
             transform: scale(1.15);
         }
 
-        .social-rail-divider {
+        .floating-follow__line {
             width: 14px;
             height: 1px;
-            background: rgba(212, 175, 55, 0.3);
+            background: rgba(212, 175, 55, 0.4);
+            margin: 4px 0;
         }
 
-        .social-rail-tag {
+        .floating-follow__label {
             writing-mode: vertical-rl;
             text-orientation: mixed;
             font-size: 0.65rem;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             color: var(--sr-gold-light);
-            opacity: 0.8;
-            margin: 4px 0;
+            padding: 4px 0;
         }
 
-        /* ═══ شريط المؤشرات السفلي (KPI Bar) ═══ */
-        .bottom-kpi-bar {
-            border-top: 1px solid rgba(212, 175, 55, 0.15);
-            background: rgba(6, 9, 14, 0.65);
-            backdrop-filter: blur(10px);
-            padding: 16px 40px;
+        .floating-follow__live-dot {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 7px;
+            height: 7px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #10b981;
+        }
+
+        /* ══════════════════════════════════════════════════════════
+           6. دوك اللغات الأصلي (Apple macOS Language Dock)
+        ══════════════════════════════════════════════════════════ */
+        .apple-macos-dock-wrapper {
+            position: fixed !important;
+            bottom: 60px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            z-index: 9990 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: rgba(11, 16, 26, 0.9) !important;
+            border: 1px solid rgba(212, 175, 55, 0.35) !important;
+            border-radius: 20px !important;
+            padding: 6px 14px !important;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15) !important;
+            backdrop-filter: blur(16px) !important;
+        }
+
+        .apple-macos-dock {
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+            gap: 8px;
+        }
+
+        .apple-dock-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .apple-dock-item:hover {
+            transform: translateY(-4px) scale(1.2);
+            filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.4));
+        }
+
+        .apple-dock-item.active {
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+        }
+
+        .apple-dock-dot {
+            width: 4px;
+            height: 4px;
+            background: var(--sr-gold-light);
+            border-radius: 50%;
+            margin-top: 2px;
+            display: none;
+        }
+
+        .apple-dock-item.active .apple-dock-dot {
+            display: block;
+        }
+
+        .apple-dock-separator {
+            width: 1px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 0 4px;
+        }
+
+        .apple-dock-more-badge {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--sr-gold-light);
+            background: rgba(212, 175, 55, 0.15);
+            padding: 3px 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* ══════════════════════════════════════════════════════════
+           7. شريط المؤشرات السفلي (KPI Bar)
+        ══════════════════════════════════════════════════════════ */
+        .bottom-kpi-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9980;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(6, 9, 14, 0.92);
+            backdrop-filter: blur(12px);
+            padding: 8px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.8rem;
         }
 
         .kpi-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .kpi-val {
-            font-size: 1.35rem;
+            font-size: 1.15rem;
             font-weight: 900;
             color: var(--sr-gold-light);
-            letter-spacing: 0.5px;
         }
 
         .kpi-lbl {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             color: #94a3b8;
             line-height: 1.2;
         }
@@ -499,20 +580,20 @@
         ═════════════════════════════════════════════════════════ */
         .concept-1-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             align-items: center;
-            gap: 50px;
-            max-width: 1440px;
+            gap: 40px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 60px 40px 80px 100px;
+            padding: 40px 30px 140px 50px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .c1-copy-col {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 20px;
         }
 
         .c1-badge {
@@ -545,7 +626,7 @@
         }
 
         .c1-title {
-            font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+            font-size: clamp(2.3rem, 3.6vw, 3.4rem);
             font-weight: 900;
             line-height: 1.25;
             margin: 0;
@@ -555,7 +636,7 @@
         }
 
         .c1-desc {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
             color: #94a3b8;
             max-width: 580px;
@@ -587,12 +668,8 @@
         }
 
         /* لوحة التحكم السحابية الزجاجية المجسمة بدلاً من الشعار المكرر */
-        .c1-preview-col {
-            position: relative;
-        }
-
         .c1-os-card {
-            background: linear-gradient(145deg, rgba(17, 24, 39, 0.85), rgba(9, 14, 23, 0.95));
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.88), rgba(9, 14, 23, 0.96));
             border: 1px solid rgba(212, 175, 55, 0.35);
             border-radius: 24px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(212, 175, 55, 0.15);
@@ -634,9 +711,6 @@
             font-size: 0.75rem;
             color: #94a3b8;
             font-family: monospace;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         .c1-os-body {
@@ -672,7 +746,7 @@
         }
 
         .c1-os-terminal-log {
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.55);
             border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 12px;
             padding: 14px 16px;
@@ -689,16 +763,16 @@
            الخيار 2: الهيرو السينمائي الفاخر (Stripe / Apple Style)
         ═════════════════════════════════════════════════════════ */
         .concept-2-center {
-            max-width: 1100px;
+            max-width: 1050px;
             margin: 0 auto;
-            padding: 70px 40px 90px 100px;
+            padding: 50px 30px 140px 30px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px;
+            gap: 28px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .c2-pill-announcement {
@@ -716,7 +790,7 @@
         }
 
         .c2-hero-title {
-            font-size: clamp(2.8rem, 4.5vw, 4.4rem);
+            font-size: clamp(2.6rem, 4.2vw, 4.2rem);
             font-weight: 900;
             line-height: 1.22;
             margin: 0;
@@ -727,7 +801,7 @@
         }
 
         .c2-hero-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             line-height: 1.8;
             color: #94a3b8;
             max-width: 720px;
@@ -739,25 +813,23 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .c2-trio-card {
-            background: rgba(15, 23, 42, 0.65);
+            background: rgba(15, 23, 42, 0.75);
             border: 1px solid rgba(212, 175, 55, 0.25);
             border-radius: 20px;
             padding: 24px;
             text-align: right;
             backdrop-filter: blur(12px);
             transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
         }
 
         .c2-trio-card:hover {
             border-color: var(--sr-gold);
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
         }
 
         .c2-card-icon {
@@ -779,14 +851,14 @@
         }
 
         /* ═════════════════════════════════════════════════════════
-           الخيار 3: قمرة القيادة والتوأم الرقمي (Interactive Space Cockpit)
+           الخيار 3: قمرة القيادة والتوأم الرقمي (Cockpit UI)
         ═════════════════════════════════════════════════════════ */
         .concept-3-cockpit {
-            max-width: 1440px;
+            max-width: 1350px;
             margin: 0 auto;
-            padding: 50px 40px 80px 100px;
+            padding: 40px 30px 140px 30px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .c3-cockpit-layout {
@@ -797,8 +869,8 @@
         }
 
         .c3-sidebar-panel {
-            background: rgba(13, 19, 30, 0.7);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(13, 19, 30, 0.75);
+            border: 1px solid rgba(212, 175, 55, 0.25);
             border-radius: 20px;
             padding: 20px;
             backdrop-filter: blur(12px);
@@ -816,15 +888,14 @@
         }
 
         .c3-core-orb {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.05) 70%);
             border: 2px dashed rgba(212, 175, 55, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
             animation: rotateOrb 25s infinite linear;
         }
 
@@ -833,8 +904,8 @@
         }
 
         .c3-core-orb img {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             animation: unrotateOrb 25s infinite linear;
             filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
         }
@@ -843,18 +914,20 @@
             100% { transform: rotate(-360deg); }
         }
 
-        /* ═══ استجابة الشاشات ═══ */
         @media (max-width: 1024px) {
-            .concept-1-grid { grid-template-columns: 1fr; padding-right: 40px; }
+            .concept-1-grid { grid-template-columns: 1fr; }
             .c2-showcase-trio { grid-template-columns: 1fr; }
             .c3-cockpit-layout { grid-template-columns: 1fr; }
-            .floating-social-rail { display: none; }
+            .stage-wrapper { padding-right: 0; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ═══ 1. شريط التحكم التفاعلي بالمعاينة (Sticky Switcher) ═══ -->
+    <!-- ═══ 1. كانفاس النقط والخيوط الذهبية التفاعلية التابع للمنظومة ═══ -->
+    <canvas id="heroMotionCanvas" class="hero-motion-canvas" aria-hidden="true"></canvas>
+
+    <!-- ═══ 2. شريط التحكم التفاعلي بالمعاينة (Sticky Switcher) ═══ -->
     <header class="preview-control-bar">
         <div class="preview-bar-title">
             <span class="preview-badge-live">معاينة تفاعلية حية 2026</span>
@@ -880,59 +953,49 @@
         </div>
     </header>
 
-    <div class="stage-wrapper">
-
-        <!-- ═══ الترويسة العلوية العالمية الجديدة (Modern Luxury Navbar) ═══ -->
-        <nav class="modern-nav-header">
-            <!-- الشعار الرسمي -->
-            <a href="#" class="modern-brand-logo">
-                <img src="./assets/sr-core-emblem-official.webp" alt="S&R CoreSync Emblem">
-                <div class="modern-brand-title">
-                    <span class="modern-brand-name">S&amp;R CoreSync</span>
-                    <span class="modern-brand-sub">Intelligent Solutions</span>
-                </div>
-            </a>
-
-            <!-- القائمة الرئيسية النظيفة (بدون أرقام قديمة) -->
-            <ul class="modern-menu-list">
-                <li class="modern-menu-item">
-                    <a href="#solutions">
-                        <span>الحلول والأنظمة</span>
-                        <span class="modern-menu-badge">جديد 2026</span>
-                    </a>
-                </li>
-                <li class="modern-menu-item"><a href="#pricing">الأسعار والباقات</a></li>
-                <li class="modern-menu-item"><a href="#store">المتجر الرقمي</a></li>
-                <li class="modern-menu-item"><a href="#about">المنظومة والقيادة</a></li>
-                <li class="modern-menu-item"><a href="#resources">المصادر و ROI</a></li>
-            </ul>
-
-            <!-- أدوات الإجراء السريع -->
-            <div class="modern-header-actions">
-                <button type="button" class="btn-modern-ghost">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                    </svg>
-                    <span>أدوات الدعم</span>
-                </button>
-                <button type="button" class="btn-modern-gold" onclick="alert('فتح بوابة التجربة الحية')">
-                    <span>تجربة النظام الحي ⚡</span>
-                </button>
+    <!-- ═══ 3. الترويسة العلوية العالمية الجديدة (Modern Luxury Navbar) ═══ -->
+    <nav class="modern-nav-header">
+        <a href="#" class="modern-brand-logo">
+            <img src="./assets/sr-core-emblem-official.webp" alt="S&R CoreSync Emblem">
+            <div class="modern-brand-title">
+                <span class="modern-brand-name">S&amp;R CoreSync</span>
+                <span class="modern-brand-sub">Intelligent Solutions</span>
             </div>
-        </nav>
+        </a>
 
-        <!-- الخلفية النيونية الشبكية المتوهجة -->
-        <div class="hero-auroral-bg">
-            <div class="aurora-glow-1"></div>
-            <div class="aurora-glow-2"></div>
+        <ul class="modern-menu-list">
+            <li class="modern-menu-item">
+                <a href="#solutions">
+                    <span>الحلول والأنظمة</span>
+                    <span class="modern-menu-badge">جديد 2026</span>
+                </a>
+            </li>
+            <li class="modern-menu-item"><a href="#pricing">الأسعار والباقات</a></li>
+            <li class="modern-menu-item"><a href="#store">المتجر الرقمي</a></li>
+            <li class="modern-menu-item"><a href="#about">المنظومة والقيادة</a></li>
+            <li class="modern-menu-item"><a href="#resources">المصادر و ROI</a></li>
+        </ul>
+
+        <div class="modern-header-actions">
+            <button type="button" class="btn-modern-ghost">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+                <span>أدوات الدعم</span>
+            </button>
+            <button type="button" class="btn-modern-gold">
+                <span>تجربة النظام الحي ⚡</span>
+            </button>
         </div>
+    </nav>
+
+    <div class="stage-wrapper">
 
         <!-- ══════════════════════════════════════════════════════════
              الخيار 1: الواجهة السحابية التفاعلية الحية (Linear / Vercel)
         ══════════════════════════════════════════════════════════ -->
         <section class="concept-view is-active" id="concept-1">
             <div class="concept-1-grid">
-                <!-- العمود الأيمن: النص + شريط الفكرة -->
                 <div class="c1-copy-col">
                     <div class="c1-badge">
                         <span class="c1-badge-dot"></span>
@@ -951,16 +1014,13 @@
                     <div class="lux-ai-search-bar">
                         <span class="lux-ai-sparkle">✨</span>
                         <input type="text" class="lux-ai-input" placeholder="اكتب فكرة مشروعك هنا وسيقوم الذكاء الاصطناعي بتحليلها فوراً…" aria-label="فكرة المشروع">
-                        <button type="button" class="lux-ai-mic-btn" title="تحدث صوتياً" onclick="alert('تشغيل الإملاء الصوتي التفاعلي 🎙️')">
-                            🎙️
-                        </button>
-                        <button type="button" class="lux-ai-submit-btn" onclick="alert('جاري تحليل الفكرة بالذكاء الاصطناعي ✦')">
+                        <button type="button" class="lux-ai-mic-btn" title="تحدث صوتياً">🎙️</button>
+                        <button type="button" class="lux-ai-submit-btn">
                             <span>حلّل فكرتي ✦</span>
                             <span>←</span>
                         </button>
                     </div>
 
-                    <!-- شرائح التخصصات السريعة -->
                     <div class="c1-chips-row">
                         <button type="button" class="c1-chip">🏢 نظام ERP متكامل</button>
                         <button type="button" class="c1-chip">🛒 متجر إلكتروني فاخر</button>
@@ -984,7 +1044,6 @@
                         </div>
 
                         <div class="c1-os-body">
-                            <!-- إحصاءات حية -->
                             <div class="c1-os-stat-grid">
                                 <div class="c1-os-stat-box">
                                     <div class="c1-os-stat-title">زمن المعالجة السحابية</div>
@@ -1000,7 +1059,6 @@
                                 </div>
                             </div>
 
-                            <!-- سجل العمليات الحي -->
                             <div class="c1-os-terminal-log">
                                 <div><span class="log-accent">[SYSTEM]</span> Initializing S&R Intelligent Engine... <span class="log-cyan">OK</span></div>
                                 <div><span class="log-accent">[AI AGENT]</span> Multi-agent workflow ready. Listening for project briefs.</div>
@@ -1008,8 +1066,7 @@
                                 <div><span class="log-accent">[STATUS]</span> Live telemetry active. Zero bottleneck detected.</div>
                             </div>
 
-                            <!-- زر تجربة حي داخل الكونسول -->
-                            <button type="button" class="btn-modern-ghost" style="width:100%; justify-content:center; border-color:rgba(212,175,55,0.4);" onclick="alert('فتح شاشة محاكاة النظام السحابي')">
+                            <button type="button" class="btn-modern-ghost" style="width:100%; justify-content:center; border-color:rgba(212,175,55,0.4);">
                                 <span>▶ تفاعل مع محاكي الأنظمة المباشر</span>
                             </button>
                         </div>
@@ -1037,7 +1094,6 @@
                     منظومة متكاملة تجمع بين دقة الهندسة البرمجية الأوروبية وسحر الهويات البصرية الملكية، لنبني لشركتك أصولاً رقمية لا تفقد قيمتها أبداً.
                 </p>
 
-                <!-- شريط البحث والذكاء الاصطناعي في المركز الفاخر -->
                 <div class="lux-ai-search-bar" style="max-width:760px;">
                     <span class="lux-ai-sparkle">✨</span>
                     <input type="text" class="lux-ai-input" placeholder="صِف فكرة متجرك، نظامك البرمجي، أو هويتك وسيتولى الـ AI تفكيكها وتخطيطها…" aria-label="فكرة المشروع">
@@ -1048,7 +1104,6 @@
                     </button>
                 </div>
 
-                <!-- ثلاثية التخصصات العالمية -->
                 <div class="c2-showcase-trio">
                     <div class="c2-trio-card">
                         <div class="c2-card-icon">👑</div>
@@ -1075,7 +1130,6 @@
         <section class="concept-view" id="concept-3">
             <div class="concept-3-cockpit">
                 <div class="c3-cockpit-layout">
-                    <!-- اللوحة الجانبية اليمنى: مؤشرات القياس -->
                     <div class="c3-sidebar-panel">
                         <h4 style="margin:0; color:var(--sr-gold-light); font-size:0.9rem;">📊 القياس اللحظي</h4>
                         <div style="font-size:0.8rem; color:#94a3b8; display:flex; justify-content:space-between;">
@@ -1090,11 +1144,8 @@
                             <span>محرك الـ AI</span>
                             <strong style="color:#38bdf8;">Autonomous v2</strong>
                         </div>
-                        <hr style="border:none; border-top:1px solid rgba(255,255,255,0.08); margin:6px 0;">
-                        <button type="button" class="c1-chip" style="width:100%; text-align:center;">فحص الجاهزية الرقمية</button>
                     </div>
 
-                    <!-- المركز: النواة التفاعلية والشعار كنواة طاقة + شريط الفكرة -->
                     <div class="c3-center-stage">
                         <div class="c3-core-orb">
                             <img src="./assets/sr-core-emblem-official.webp" alt="نواة S&R">
@@ -1108,7 +1159,6 @@
                             تفاعل مباشرة مع النواة الذكية لإطلاق منصتك السحابية وهويتك البصرية بدقة متناهية.
                         </p>
 
-                        <!-- شريط الفكرة المدمج -->
                         <div class="lux-ai-search-bar" style="width:100%;">
                             <span class="lux-ai-sparkle">⚡</span>
                             <input type="text" class="lux-ai-input" placeholder="أدخل أهداف مشروعك لبدء تهيئة المنظومة البرمجية…" aria-label="فكرة المشروع">
@@ -1119,7 +1169,6 @@
                         </div>
                     </div>
 
-                    <!-- اللوحة الجانبية اليسرى: التخصصات التفاعلية -->
                     <div class="c3-sidebar-panel">
                         <h4 style="margin:0; color:var(--sr-gold-light); font-size:0.9rem;">⚡ مسارات التنفيذ</h4>
                         <button type="button" class="c1-chip">💳 أنظمة FinTech ودفوعات</button>
@@ -1131,69 +1180,234 @@
             </div>
         </section>
 
-        <!-- ═══ دك السوشيال ميديا الأيمن (محفوظ وثابت) ═══ -->
-        <aside class="floating-social-rail" aria-label="قنوات التواصل الرسمية">
-            <a href="https://wa.me/31618111116" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="واتساب VIP">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46z"/></svg>
-            </a>
-            <a href="https://x.com/SRCoreSync" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="منصة X">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://instagram.com/SRCoreSync" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="إنستغرام">
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            </a>
-            <a href="https://linkedin.com/company/146883282/" target="_blank" rel="noopener noreferrer" class="social-rail-link" title="لينكد إن">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <span class="social-rail-divider"></span>
-            <span class="social-rail-tag">S&amp;R CORESYNC</span>
-            <span class="social-rail-divider"></span>
-            <a href="mailto:info@sr-coresync.com" class="social-rail-link" title="البريد الرسمي">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            </a>
-        </aside>
-
-        <!-- ═══ شريط الـ KPIs السفلي (مؤشرات الثقة) ═══ -->
-        <footer class="bottom-kpi-bar">
-            <div class="kpi-item">
-                <span class="kpi-val">99.9%</span>
-                <span class="kpi-lbl">جاهزية واستقرار<br>سحابي فائق</span>
-            </div>
-            <div class="kpi-item">
-                <span class="kpi-val">EU &amp; BTW</span>
-                <span class="kpi-lbl">امتثال ضريبي<br>وقانوني أوروبي</span>
-            </div>
-            <div class="kpi-item">
-                <span class="kpi-val">&lt; 30s</span>
-                <span class="kpi-lbl">استجابة وبدء<br>فوري للمشاريع</span>
-            </div>
-            <div class="kpi-item">
-                <span class="kpi-val">Amsterdam HQ</span>
-                <span class="kpi-lbl">مقر الإدارة والمعمارية<br>أمستردام، هولندا</span>
-            </div>
-        </footer>
-
     </div>
 
-    <!-- سكربت التبديل التفاعلي الفوري بين المفاهيم -->
+    <!-- ══════════════════════════════════════════════════════════
+         4. دك السوشيال ميديا الأيمن الأصلي (Floating Follow Rail)
+    ══════════════════════════════════════════════════════════ -->
+    <aside class="floating-follow" aria-label="Social & Direct Engagement Rail">
+        <div class="floating-follow__icons">
+            <a href="https://wa.me/31618111116" target="_blank" rel="noopener noreferrer"
+                class="floating-follow__link" aria-label="WhatsApp VIP" title="WhatsApp VIP: +31 6 18111116">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46zm-8.46 18.36h-.01a10.02 10.02 0 0 1-5.11-1.4l-.37-.22-3.8 1 1.01-3.7-.24-.38a9.98 9.98 0 0 1-1.53-5.28c0-5.52 4.49-10.01 10.02-10.01 2.68 0 5.19 1.04 7.08 2.94a9.96 9.96 0 0 1 2.94 7.07c0 5.53-4.49 10.02-10.02 10.02z" />
+                </svg>
+            </a>
+            <a href="https://x.com/SRCoreSync" target="_blank" rel="noopener noreferrer"
+                class="floating-follow__link" aria-label="X (Twitter)" title="X: @SRCoreSync">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+            </a>
+            <a href="https://instagram.com/SRCoreSync" target="_blank" rel="noopener noreferrer"
+                class="floating-follow__link" aria-label="Instagram" title="Instagram: @SRCoreSync">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+            </a>
+            <a href="https://linkedin.com/company/146883282/" target="_blank" rel="noopener noreferrer"
+                class="floating-follow__link" aria-label="LinkedIn" title="LinkedIn: S&R CoreSync">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+            </a>
+            <a href="https://t.me/SRCoreSync" target="_blank" rel="noopener noreferrer"
+                class="floating-follow__link" aria-label="Telegram" title="Telegram: @SRCoreSync">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                </svg>
+            </a>
+        </div>
+        <span class="floating-follow__line" aria-hidden="true"></span>
+        <span class="floating-follow__label">S&amp;R CORESYNC</span>
+        <span class="floating-follow__line" aria-hidden="true"></span>
+        <a href="mailto:info@sr-coresync.com" class="floating-follow__link" aria-label="البريد الرسمي" title="info@sr-coresync.com">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+            </svg>
+        </a>
+    </aside>
+
+    <!-- ══════════════════════════════════════════════════════════
+         5. دوك اللغات الأصلي (Apple macOS Language Dock)
+    ══════════════════════════════════════════════════════════ -->
+    <aside class="apple-macos-dock-wrapper" id="appleMacosDockWrapper" aria-label="Sovereign Language Quick Dock">
+        <div class="apple-macos-dock" id="appleMacosDock">
+            <a href="#" class="apple-dock-item" data-tooltip="Deutsch" title="Deutsch">
+                <span>🇩🇪</span>
+                <span class="apple-dock-dot"></span>
+            </a>
+            <a href="#" class="apple-dock-item" data-tooltip="Français" title="Français">
+                <span>🇫🇷</span>
+                <span class="apple-dock-dot"></span>
+            </a>
+            <a href="#" class="apple-dock-item" data-tooltip="Nederlands" title="Nederlands">
+                <span>🇳🇱</span>
+                <span class="apple-dock-dot"></span>
+            </a>
+            <a href="#" class="apple-dock-item" data-tooltip="English" title="English">
+                <span>🇬🇧</span>
+                <span class="apple-dock-dot"></span>
+            </a>
+            <a href="#" class="apple-dock-item" data-tooltip="Español" title="Español">
+                <span>🇪🇸</span>
+                <span class="apple-dock-dot"></span>
+            </a>
+            <a href="#" class="apple-dock-item active" data-tooltip="العربية (الرئيسية)" title="العربية">
+                <span>🇸🇦</span>
+                <span class="apple-dock-dot"></span>
+            </a>
+            <a href="#" class="apple-dock-item" data-tooltip="Türkçe" title="Türkçe">
+                <span>🇹🇷</span>
+                <span class="apple-dock-dot"></span>
+            </a>
+            <div class="apple-dock-separator"></div>
+            <div class="apple-dock-more-badge">+28 لغة</div>
+        </div>
+    </aside>
+
+    <!-- ══════════════════════════════════════════════════════════
+         6. شريط المؤشرات السفلي (KPI Bar)
+    ══════════════════════════════════════════════════════════ -->
+    <footer class="bottom-kpi-bar">
+        <div class="kpi-item">
+            <span class="kpi-val">99.9%</span>
+            <span class="kpi-lbl">جاهزية واستقرار<br>سحابي فائق</span>
+        </div>
+        <div class="kpi-item">
+            <span class="kpi-val">EU &amp; BTW</span>
+            <span class="kpi-lbl">امتثال ضريبي<br>وقانوني أوروبي</span>
+        </div>
+        <div class="kpi-item">
+            <span class="kpi-val">&lt; 30s</span>
+            <span class="kpi-lbl">استجابة وبدء<br>فوري للمشاريع</span>
+        </div>
+        <div class="kpi-item">
+            <span class="kpi-val">Amsterdam HQ</span>
+            <span class="kpi-lbl">مقر الإدارة والمعمارية<br>أمستردام، هولندا</span>
+        </div>
+    </footer>
+
+    <!-- ═══ سكربت الكانفاس التفاعلي للنقط والخيوط الذهبية + التبديل ═══ -->
     <script>
-        function switchConcept(index) {
-            // إزالة التنشيط من التابات
-            document.querySelectorAll('.preview-tab-btn').forEach((btn, idx) => {
-                if (idx + 1 === index) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
+        // 1. محرك النقط والخيوط الذهبية التفاعلية مع الماوس (Golden Constellation Network)
+        (function() {
+            const canvas = document.getElementById("heroMotionCanvas");
+            if (!canvas) return;
+            const ctx = canvas.getContext("2d");
+            if (!ctx) return;
+
+            let width = 0, height = 0;
+            let particles = [];
+            let mouse = { x: null, y: null, radius: 150 };
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+                initParticles();
+            }
+
+            function initParticles() {
+                particles = [];
+                const count = Math.min(85, Math.floor(width * height / 14000));
+                for (let i = 0; i < count; i++) {
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: 0.45 * (Math.random() - 0.5),
+                        vy: 0.45 * (Math.random() - 0.5),
+                        radius: 2.5 * Math.random() + 1.2,
+                        color: Math.random() > 0.35 ? "rgba(212, 175, 55, " : "rgba(110, 231, 183, ",
+                        alpha: 0.58 * Math.random() + 0.3,
+                        pulse: Math.random() * Math.PI
+                    });
                 }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, width, height);
+
+                // رسم الخيوط الذهبية الواصلة بين النقط القريبة
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 125) {
+                            const opacity = 0.32 * (1 - dist / 125);
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(212, 175, 55, ${opacity})`;
+                            ctx.lineWidth = 1.15;
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                // رسم النقط وتفاعلها مع الماوس
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0) p.x = width;
+                    if (p.x > width) p.x = 0;
+                    if (p.y < 0) p.y = height;
+                    if (p.y > height) p.y = 0;
+
+                    // جذب النقط إلى حركة مؤشر الماوس
+                    if (mouse.x !== null && mouse.y !== null) {
+                        const dx = mouse.x - p.x;
+                        const dy = mouse.y - p.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < mouse.radius) {
+                            const force = 1.6 * (1 - dist / mouse.radius);
+                            p.x -= (dx / dist) * force;
+                            p.y -= (dy / dist) * force;
+                        }
+                    }
+
+                    p.pulse += 0.03;
+                    const dynamicAlpha = Math.max(0.1, p.alpha + 0.15 * Math.sin(p.pulse));
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color + dynamicAlpha + ")";
+                    ctx.shadowBlur = 12;
+                    ctx.shadowColor = "rgba(212, 175, 55, 0.6)";
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                }
+
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener("resize", resize);
+            window.addEventListener("mousemove", (e) => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+            window.addEventListener("mouseleave", () => {
+                mouse.x = null;
+                mouse.y = null;
             });
 
-            // إخفاء كافة العروض وتنشيط المطلوب
+            resize();
+            draw();
+        })();
+
+        // 2. التبديل الفوري بين خيارات الهيرو الثلاثة
+        function switchConcept(index) {
+            document.querySelectorAll('.preview-tab-btn').forEach((btn, idx) => {
+                btn.classList.toggle('active', idx + 1 === index);
+            });
             document.querySelectorAll('.concept-view').forEach((view, idx) => {
-                if (idx + 1 === index) {
-                    view.classList.add('is-active');
-                } else {
-                    view.classList.remove('is-active');
-                }
+                view.classList.toggle('is-active', idx + 1 === index);
             });
         }
 
@@ -1202,7 +1416,7 @@
             if (document.getElementById('concept-2').classList.contains('is-active')) activeIndex = 2;
             if (document.getElementById('concept-3').classList.contains('is-active')) activeIndex = 3;
             
-            alert('أحسنت الاختيار! تم اختيار الخيار رقم (' + activeIndex + '). أرسل رقم الخيار في المحادثة وسنقوم فوراً باعتماده وتطبيقه على الموقع الرئيسي وكافة اللغات الـ 28.');
+            alert('تم اختيار الخيار رقم (' + activeIndex + '). أرسل الرقم في المحادثة وسنقوم فوراً بتطبيقه على الموقع الحي وكافة اللغات الـ 28.');
         }
     </script>
 </body>
