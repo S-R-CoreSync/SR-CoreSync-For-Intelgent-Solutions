@@ -1905,3 +1905,57 @@ header.header,
         display: none !important;
     }
 }
+
+/* ---------------------------------------------------------------------------
+   European compliance identity strip (KVK · BTW · HQ · ISO/GDPR/SOC2 · SLA).
+   The five identifiers already ship in the Arabic master inside #about. They
+   were never published on the 28 language pages, so a German or French buyer
+   could not see the trade-register or VAT numbers the Arabic page advertises.
+   The rules below lived in css/services-enhancements.css, which only the master
+   loads; they are copied here so every page that loads the design system can
+   render the same component. Text is English on purpose: the values are legal
+   identifiers, and audit_language_purity forbids Arabic here, not English.
+   --------------------------------------------------------------------------- */
+.sr-european-compliance-ribbon {
+    margin: 36px auto 20px auto;
+    max-width: 1200px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.90) 0%, rgba(8, 12, 20, 0.95) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 20px;
+    padding: 18px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.sr-comp-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sr-comp-icon {
+    font-size: 1.3rem;
+}
+
+.sr-comp-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sr-comp-lbl {
+    font-size: 0.74rem;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.sr-comp-val {
+    font-size: 0.9rem;
+    color: var(--sr-gold-light, #f3dfba);
+    font-weight: 800;
+}
