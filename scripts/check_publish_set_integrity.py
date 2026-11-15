@@ -18,7 +18,7 @@ engine's output list and validates that list. A copy step that silently drops a
 file, or a rule that stops matching, passes there and fails here.
 
 Exit codes: 0 ok · 1 untracked files in the artefact · 2 artefact missing ·
-3 required file missing from the artefact.
+3 required file missing from the artefact · 4 artefact too large to publish.
 """
 import os
 import subprocess
@@ -30,6 +30,13 @@ from publish_set import REQUIRED_PUBLISHED  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STAGE = os.path.join(ROOT, '_site')
+
+# The deploy workflow gives the CDN sync 30 minutes because a ~350 MB artefact
+# regularly blew the 10 minute default and aborted on syncing_files. A ceiling
+# under that known-bad point turns a slow, half-finished deploy into an
+# immediate, readable failure. Today's set is ~189 MB, so this fires on
+# regressions rather than on normal growth.
+MAX_ARTEFACT_MB = float(os.environ.get('SR_MAX_SITE_MB', '300'))
 
 
 def head_paths():
@@ -91,12 +98,25 @@ def main():
                          'check scripts/publish_set.py and the build log.\n')
         return 3
 
-    print('PASSED: %d artefact file(s) - every one tracked at HEAD, and all %d required '
-          'files present.' % (len(staged), len(REQUIRED_PUBLISHED)))
+    total_bytes = 0
+    for rel in staged:
+        try:
+            total_bytes += os.path.getsize(os.path.join(STAGE, rel))
+        except OSError:
+            pass
+    total_mb = total_bytes / (1024.0 * 1024.0)
+    if total_mb > MAX_ARTEFACT_MB:
+        sys.stderr.write('FAILED: the artefact is %.1f MB, over the %.0f MB ceiling.\n'
+                         % (total_mb, MAX_ARTEFACT_MB))
+        sys.stderr.write('The deploy job would spend its 30 minute timeout syncing it; '
+                         'trim the publish set in scripts/publish_set.py first.\n')
+        return 4
+
+    print('PASSED: %d artefact file(s), %.1f MB - every one tracked at HEAD, and all %d '
+          'required files present.' % (len(staged), total_mb, len(REQUIRED_PUBLISHED)))
     print('        (HEAD carries %d tracked path(s); the publish set ships a subset by design.)'
           % len(tracked))
     return 0
-
 
 if __name__ == '__main__':
     sys.exit(main())
