@@ -39,6 +39,9 @@ EXCLUDED_DIRS = {
     '.git', '_site', '.github', '.githooks', '.secrets', '.agents', '.vscode',
     '.zwork', 'api', 'config', 'workers', 'scripts', 'dist', 'deploy',
     'scratch', 'node_modules', '__pycache__', 'docs', 'partials', 'build',
+    # User uploads are fed into the RAG engine; they are private input, not
+    # site content.
+    'uploads',
     # stray Chrome print scratch dirs from an old local run: 329 junk files that
     # no page references and that only bloat the Pages artefact.
     'temp_chrome_print_dir', 'temp_chrome_print_dir2'
@@ -61,7 +64,8 @@ EXCLUDED_DIR_PREFIXES = ('_',)
 # ---------------------------------------------------------------------------
 EXCLUDED_ROOT_FILES = {
     '.env', '.env.example', '.env.local', '.env.vault', '.gitignore',
-    '.dockerignore', '.htaccess', 'LICENSE', 'serve.py'
+    '.dockerignore', '.htaccess', 'LICENSE', 'serve.py',
+    'auth_keys.json', 'chat_history.txt'
 }
 
 # Root level file suffixes that are never published.
@@ -97,7 +101,15 @@ EXCLUDED_DEV_PAGES = {
 # ---------------------------------------------------------------------------
 # Global file suffixes that are never published.
 # ---------------------------------------------------------------------------
-EXCLUDED_SUFFIXES = ('.pyc',)
+EXCLUDED_SUFFIXES = (
+    '.pyc',
+    # Runtime artefacts the app writes into the working tree. None of them is
+    # site content, and .gitignore already keeps them out of git - the publish
+    # set must apply the same rule, or the Pages artefact ships the session
+    # database, the RAG knowledge base, chat transcripts, server logs and the
+    # API-key hash store as public downloads.
+    '.log', '.db', '.db-wal', '.db-shm', '.sqlite', '.sqlite3',
+)
 
 # ---------------------------------------------------------------------------
 # Browser "Save page as -> Webpage, Complete" artefacts. Chrome/Edge save a
@@ -133,7 +145,8 @@ def _is_saved_page(path):
 # ---------------------------------------------------------------------------
 FORBIDDEN_PUBLISHED = [
     'api', 'config', 'workers', 'scripts', 'dist', 'deploy',
-    '.htaccess', '.env', '.env.example', '.env.vault', '.github', '.githooks', '.secrets'
+    '.htaccess', '.env', '.env.example', '.env.vault', '.github', '.githooks', '.secrets',
+    'auth_keys.json', 'chat_history.txt', 'uploads',
 ]
 
 # ---------------------------------------------------------------------------
