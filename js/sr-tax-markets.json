@@ -200,7 +200,12 @@
       "langName": {
         "ar": "Nederlands",
         "de": "Niederländisch",
-        "en": "Dutch"
+        "en": "Dutch",
+        "fr": "Néerlandais",
+        "nl": "Nederlands",
+        "tr": "Hollandaca",
+        "es": "Neerlandés",
+        "it": "Olandese"
       }
     },
     "de": {
@@ -239,7 +244,12 @@
       "langName": {
         "ar": "Deutsch",
         "de": "Deutsch",
-        "en": "German"
+        "en": "German",
+        "fr": "Allemand",
+        "nl": "Duits",
+        "tr": "Almanca",
+        "es": "Alemán",
+        "it": "Tedesco"
       }
     },
     "fr": {
@@ -278,7 +288,12 @@
       "langName": {
         "ar": "Français",
         "de": "Französisch",
-        "en": "French"
+        "en": "French",
+        "fr": "Français",
+        "nl": "Frans",
+        "tr": "Fransızca",
+        "es": "Francés",
+        "it": "Francese"
       }
     },
     "gb": {
@@ -316,7 +331,12 @@
       "langName": {
         "ar": "English",
         "de": "Englisch",
-        "en": "English"
+        "en": "English",
+        "fr": "Anglais",
+        "nl": "Engels",
+        "tr": "İngilizce",
+        "es": "Inglés",
+        "it": "Inglese"
       }
     },
     "es": {
@@ -354,7 +374,12 @@
       "langName": {
         "ar": "Español",
         "de": "Spanisch",
-        "en": "Spanish"
+        "en": "Spanish",
+        "fr": "Espagnol",
+        "nl": "Spaans",
+        "tr": "İspanyolca",
+        "es": "Español",
+        "it": "Spagnolo"
       }
     },
     "it": {
@@ -392,7 +417,12 @@
       "langName": {
         "ar": "Italiano",
         "de": "Italienisch",
-        "en": "Italian"
+        "en": "Italian",
+        "fr": "Italien",
+        "nl": "Italiaans",
+        "tr": "İtalyanca",
+        "es": "Italiano",
+        "it": "Italiano"
       }
     },
     "pt": {
@@ -430,7 +460,12 @@
       "langName": {
         "ar": "Português",
         "de": "Portugiesisch",
-        "en": "Portuguese"
+        "en": "Portuguese",
+        "fr": "Portugais",
+        "nl": "Portugees",
+        "tr": "Portekizce",
+        "es": "Portugués",
+        "it": "Portoghese"
       }
     },
     "ga": {
@@ -468,7 +503,12 @@
       "langName": {
         "ar": "Gaeilge",
         "de": "Irisch",
-        "en": "Irish"
+        "en": "Irish",
+        "fr": "Irlandais",
+        "nl": "Iers",
+        "tr": "İrlandaca",
+        "es": "Irlandés",
+        "it": "Irlandese"
       }
     },
     "da": {
@@ -506,7 +546,12 @@
       "langName": {
         "ar": "Dansk",
         "de": "Dänisch",
-        "en": "Danish"
+        "en": "Danish",
+        "fr": "Danois",
+        "nl": "Deens",
+        "tr": "Danca",
+        "es": "Danés",
+        "it": "Danese"
       }
     },
     "no": {
@@ -544,7 +589,12 @@
       "langName": {
         "ar": "Norsk",
         "de": "Norwegisch",
-        "en": "Norwegian"
+        "en": "Norwegian",
+        "fr": "Norvégien",
+        "nl": "Noors",
+        "tr": "Norveççe",
+        "es": "Noruego",
+        "it": "Norvegese"
       }
     },
     "sv": {
@@ -582,7 +632,12 @@
       "langName": {
         "ar": "Svenska",
         "de": "Schwedisch",
-        "en": "Swedish"
+        "en": "Swedish",
+        "fr": "Suédois",
+        "nl": "Zweeds",
+        "tr": "İsveççe",
+        "es": "Sueco",
+        "it": "Svedese"
       }
     },
     "fi": {
@@ -620,7 +675,12 @@
       "langName": {
         "ar": "Suomi",
         "de": "Finnisch",
-        "en": "Finnish"
+        "en": "Finnish",
+        "fr": "Finnois",
+        "nl": "Fins",
+        "tr": "Fince",
+        "es": "Finés",
+        "it": "Finlandese"
       }
     },
     "et": {
@@ -658,7 +718,12 @@
       "langName": {
         "ar": "Eesti",
         "de": "Estnisch",
-        "en": "Estonian"
+        "en": "Estonian",
+        "fr": "Estonien",
+        "nl": "Estisch",
+        "tr": "Estonca",
+        "es": "Estonio",
+        "it": "Estone"
       }
     },
     "lv": {
@@ -696,7 +761,12 @@
       "langName": {
         "ar": "Latviešu",
         "de": "Lettisch",
-        "en": "Latvian"
+        "en": "Latvian",
+        "fr": "Letton",
+        "nl": "Lets",
+        "tr": "Letonca",
+        "es": "Letón",
+        "it": "Lettone"
       }
     },
     "lt": {
@@ -734,7 +804,12 @@
       "langName": {
         "ar": "Lietuvių",
         "de": "Litauisch",
-        "en": "Lithuanian"
+        "en": "Lithuanian",
+        "fr": "Lituanien",
+        "nl": "Litouws",
+        "tr": "Litvanca",
+        "es": "Lituano",
+        "it": "Lituano"
       }
     },
     "pl": {
@@ -772,7 +847,12 @@
       "langName": {
         "ar": "Polski",
         "de": "Polnisch",
-        "en": "Polish"
+        "en": "Polish",
+        "fr": "Polonais",
+        "nl": "Pools",
+        "tr": "Lehçe",
+        "es": "Polaco",
+        "it": "Polacco"
       }
     },
     "cs": {
@@ -809,7 +889,12 @@
       "langName": {
         "ar": "Čeština",
         "de": "Tschechisch",
-        "en": "Czech"
+        "en": "Czech",
+        "fr": "Tchèque",
+        "nl": "Tsjechisch",
+        "tr": "Çekçe",
+        "es": "Checo",
+        "it": "Ceco"
       }
     },
     "sk": {
@@ -847,7 +932,12 @@
       "langName": {
         "ar": "Slovenčina",
         "de": "Slowakisch",
-        "en": "Slovak"
+        "en": "Slovak",
+        "fr": "Slovaque",
+        "nl": "Slowaaks",
+        "tr": "Slovakça",
+        "es": "Eslovaco",
+        "it": "Slovacco"
       }
     },
     "hu": {
@@ -885,7 +975,12 @@
       "langName": {
         "ar": "Magyar",
         "de": "Ungarisch",
-        "en": "Hungarian"
+        "en": "Hungarian",
+        "fr": "Hongrois",
+        "nl": "Hongaars",
+        "tr": "Macarca",
+        "es": "Húngaro",
+        "it": "Ungherese"
       }
     },
     "ro": {
@@ -923,7 +1018,12 @@
       "langName": {
         "ar": "Română",
         "de": "Rumänisch",
-        "en": "Romanian"
+        "en": "Romanian",
+        "fr": "Roumain",
+        "nl": "Roemeens",
+        "tr": "Rumence",
+        "es": "Rumano",
+        "it": "Rumeno"
       }
     },
     "bg": {
@@ -961,7 +1061,12 @@
       "langName": {
         "ar": "Български",
         "de": "Bulgarisch",
-        "en": "Bulgarian"
+        "en": "Bulgarian",
+        "fr": "Bulgare",
+        "nl": "Bulgaars",
+        "tr": "Bulgarca",
+        "es": "Búlgaro",
+        "it": "Bulgaro"
       }
     },
     "hr": {
@@ -999,7 +1104,12 @@
       "langName": {
         "ar": "Hrvatski",
         "de": "Kroatisch",
-        "en": "Croatian"
+        "en": "Croatian",
+        "fr": "Croate",
+        "nl": "Kroatisch",
+        "tr": "Hırvatça",
+        "es": "Croata",
+        "it": "Croato"
       }
     },
     "sl": {
@@ -1037,7 +1147,12 @@
       "langName": {
         "ar": "Slovenščina",
         "de": "Slowenisch",
-        "en": "Slovenian"
+        "en": "Slovenian",
+        "fr": "Slovène",
+        "nl": "Sloveens",
+        "tr": "Slovence",
+        "es": "Esloveno",
+        "it": "Sloveno"
       }
     },
     "el": {
@@ -1075,7 +1190,12 @@
       "langName": {
         "ar": "Ελληνικά",
         "de": "Griechisch",
-        "en": "Greek"
+        "en": "Greek",
+        "fr": "Grec",
+        "nl": "Grieks",
+        "tr": "Yunanca",
+        "es": "Griego",
+        "it": "Greco"
       }
     },
     "mt": {
@@ -1113,7 +1233,12 @@
       "langName": {
         "ar": "Malti",
         "de": "Maltesisch",
-        "en": "Maltese"
+        "en": "Maltese",
+        "fr": "Maltais",
+        "nl": "Maltees",
+        "tr": "Maltaca",
+        "es": "Maltés",
+        "it": "Maltese"
       }
     },
     "tr": {
@@ -1150,7 +1275,12 @@
       "langName": {
         "ar": "Türkçe",
         "de": "Türkisch",
-        "en": "Turkish"
+        "en": "Turkish",
+        "fr": "Turc",
+        "nl": "Turks",
+        "tr": "Türkçe",
+        "es": "Turco",
+        "it": "Turco"
       }
     },
     "be": {
@@ -1188,7 +1318,12 @@
       "langName": {
         "ar": "Français / Nederlands",
         "de": "Französisch / Niederländisch",
-        "en": "French / Dutch"
+        "en": "French / Dutch",
+        "fr": "Français / Néerlandais",
+        "nl": "Frans / Nederlands",
+        "tr": "Fransızca / Hollandaca",
+        "es": "Francés / Neerlandés",
+        "it": "Francese / Olandese"
       }
     },
     "at": {
@@ -1226,7 +1361,12 @@
       "langName": {
         "ar": "Deutsch",
         "de": "Deutsch",
-        "en": "German"
+        "en": "German",
+        "fr": "Allemand",
+        "nl": "Duits",
+        "tr": "Almanca",
+        "es": "Alemán",
+        "it": "Tedesco"
       }
     },
     "ch": {
@@ -1264,7 +1404,12 @@
       "langName": {
         "ar": "Deutsch / FR",
         "de": "Deutsch / FR",
-        "en": "German / French"
+        "en": "German / French",
+        "fr": "Allemand / Français",
+        "nl": "Duits / Frans",
+        "tr": "Almanca / Fransızca",
+        "es": "Alemán / Francés",
+        "it": "Tedesco / Francese"
       }
     },
     "sa": {
@@ -1302,7 +1447,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "ae": {
@@ -1341,7 +1491,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "qa": {
@@ -1379,7 +1534,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "kw": {
@@ -1417,7 +1577,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "bh": {
@@ -1455,7 +1620,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "om": {
@@ -1493,7 +1663,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "jo": {
@@ -1531,7 +1706,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "lb": {
@@ -1569,7 +1749,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "sy": {
@@ -1608,7 +1793,12 @@
       "langName": {
         "ar": "العربية AR · SYP + KU",
         "de": "Arabisch + Kurdisch",
-        "en": "Arabic + Kurdish"
+        "en": "Arabic + Kurdish",
+        "fr": "Arabe + kurde",
+        "nl": "Arabisch + Koerdisch",
+        "tr": "Arapça + Kürtçe",
+        "es": "Árabe + kurdo",
+        "it": "Arabo + curdo"
       },
       "note": {
         "ar": "دعم لغوي: العربية AR · SYP + الكردية KU.",
@@ -1651,7 +1841,12 @@
       "langName": {
         "ar": "العربية AR · IQD",
         "de": "Arabisch AR · IQD",
-        "en": "Arabic AR · IQD"
+        "en": "Arabic AR · IQD",
+        "fr": "Arabe AR · IQD",
+        "nl": "Arabisch AR · IQD",
+        "tr": "Arapça AR · IQD",
+        "es": "Árabe AR · IQD",
+        "it": "Arabo AR · IQD"
       },
       "note": {
         "ar": "منفصلة عن إقليم كردستان (CKB · أربيل).",
@@ -1693,7 +1888,12 @@
       "langName": {
         "ar": "کوردیی ناوەندی (سۆرانی)",
         "de": "Sorani",
-        "en": "Sorani"
+        "en": "Sorani",
+        "fr": "Sorani",
+        "nl": "Sorani",
+        "tr": "Soranice",
+        "es": "Soraní",
+        "it": "Sorani"
       }
     },
     "eg": {
@@ -1731,7 +1931,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "ma": {
@@ -1769,7 +1974,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "dz": {
@@ -1807,7 +2017,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "tn": {
@@ -1845,7 +2060,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "ly": {
@@ -1883,7 +2103,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "sd": {
@@ -1920,7 +2145,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "mr": {
@@ -1957,7 +2187,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "so": {
@@ -1994,7 +2229,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "dj": {
@@ -2031,7 +2271,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "km": {
@@ -2068,7 +2313,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "ye": {
@@ -2105,7 +2355,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "ps": {
@@ -2142,7 +2397,12 @@
       "langName": {
         "ar": "العربية",
         "de": "Arabisch",
-        "en": "Arabic"
+        "en": "Arabic",
+        "fr": "Arabe",
+        "nl": "Arabisch",
+        "tr": "Arapça",
+        "es": "Árabe",
+        "it": "Arabo"
       }
     },
     "ku": {
@@ -2179,7 +2439,12 @@
       "langName": {
         "ar": "Kurmancî",
         "de": "Kurmandschi",
-        "en": "Kurmanji"
+        "en": "Kurmanji",
+        "fr": "Kurmandji",
+        "nl": "Koerdisch (Kurmanji)",
+        "tr": "Kurmanci",
+        "es": "Kurdo (Kurmanji)",
+        "it": "Curdo (Kurmanji)"
       }
     }
   },
