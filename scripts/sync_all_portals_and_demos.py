@@ -395,6 +395,16 @@ def get_locale_config(lang):
         'align': 'left'
     }
 
+MODAL_CSS = '''<style id="sr-estimator-modal-css">
+#srAiEstimateModal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:999999;opacity:0;visibility:hidden;transition:opacity .32s ease,visibility .32s ease}
+#srAiEstimateModal.sr-estimate-visible{opacity:1;visibility:visible}
+#srAiEstimateModal .sr-ai-estimate-card{max-width:600px;width:94%;max-height:88vh;overflow:auto;background:linear-gradient(145deg,rgba(15,24,38,.98),rgba(18,27,44,.96),rgba(10,16,28,.99));border:1px solid rgba(212,175,55,.45);border-radius:24px;padding:30px 32px 26px;box-shadow:0 30px 80px rgba(0,0,0,.8);position:relative}
+#srAiEstimateModal .sr-peek-close-corner{position:absolute;top:12px;right:14px;background:transparent;border:0;color:#fff;font-size:18px;cursor:pointer}
+@media(max-width:560px){#srAiEstimateModal .sr-ai-estimate-card{padding:18px;width:96%}}
+</style>
+'''
+
+
 def build_modals_html(cfg):
     chips_html = '\n'.join([
         f'                <button type="button" class="sr-idea-prompt-chip" onclick="setAndSubmitPrompt(\'{prompt}\')">{label}</button>'
@@ -405,7 +415,7 @@ def build_modals_html(cfg):
     close_pos = 'left: 18px;' if align_dir == 'rtl' else 'right: 18px;'
     mic_pos = 'right: 12px;' if align_dir == 'rtl' else 'right: 12px;'
 
-    return f'''    <!-- AI Scope & Timeline Estimator Modal -->
+    return f'''{MODAL_CSS}    <!-- AI Scope & Timeline Estimator Modal -->
     <div id="srAiEstimateModal" role="dialog" aria-modal="true" aria-label="{cfg['est_title']}" onclick="if(event.target===this)closeAiEstimateModal()">
         <div class="sr-ai-estimate-card" id="srAiEstimateCard" style="direction:{align_dir}; text-align:{align_text};">
             <div class="sr-estimate-header">
