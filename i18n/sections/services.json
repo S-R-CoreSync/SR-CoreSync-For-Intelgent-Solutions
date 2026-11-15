@@ -1,0 +1,234 @@
+{
+ "ar": {
+  "services.01.desc": "هويات بصرية مميزة تُبنى باستراتيجية ووضوح واتساق.",
+  "services.01.title": "الهوية البصرية",
+  "services.02.desc": "مواقع عصرية عالية الأداء مصممة للوضوح والثقة والنمو.",
+  "services.02.title": "تصميم المواقع وتحسينها",
+  "services.03.desc": "متاجر إلكترونية واضحة وسهلة الاستخدام تجعل الشراء أكثر سلاسة.",
+  "services.03.title": "متجر إلكتروني"
+ },
+ "bg": {
+  "services.01.desc": "Отличителни визуални идентичности, изградени със стратегия, яснота и последователност.",
+  "services.01.title": "Визуална идентичност",
+  "services.02.desc": "Модерни високопроизводителни уебсайтове, създадени за яснота, доверие и растеж.",
+  "services.02.title": "Дизайн и оптимизация на уебсайтове",
+  "services.03.desc": "Ясни и интуитивни онлайн магазини, които превръщат посетителите в купувачи без усилие.",
+  "services.03.title": "Онлайн магазин"
+ },
+ "ckb": {
+  "services.01.desc": "هويات بصرية مميزة تُبنى باستراتيجية ووضوح واتساق.",
+  "services.01.title": "ناسنامەی بینراو",
+  "services.02.desc": "مواقع عصرية عالية الأداء مصممة للوضوح والثقة والنمو.",
+  "services.02.title": "ئامادەکردن المواقع وتحسينها",
+  "services.03.desc": "متاجر إلكترونية واضحة وسهلة الاستخدام تجعل الشراء أكثر سلاسة.",
+  "services.03.title": "متجر إلكتروني"
+ },
+ "cs": {
+  "services.01.desc": "Výrazné vizuální identity postavené na strategii, jasnosti a konzistenci.",
+  "services.01.title": "Vizuální identita",
+  "services.02.desc": "Moderní vysoce výkonné weby navržené pro jasnost, důvěru a růst.",
+  "services.02.title": "Design a optimalizace webu",
+  "services.03.desc": "Přehledné a intuitivní e-shopy, které mění návštěvníky v plynulé nakupující.",
+  "services.03.title": "E-shop"
+ },
+ "da": {
+  "services.01.desc": "Særprægede visuelle identiteter bygget på strategi, klarhed og konsistens.",
+  "services.01.title": "Visuel identitet",
+  "services.02.desc": "Moderne, højtydende websites designet til klarhed, tillid og vækst.",
+  "services.02.title": "Webdesign og optimering",
+  "services.03.desc": "Klare, intuitive webshops, der gør besøgende til problemfrie købere.",
+  "services.03.title": "Webshop"
+ },
+ "de": {
+  "services.01.desc": "Eigenständige visuelle Identitäten, entwickelt mit Strategie, Klarheit und Konsequenz.",
+  "services.01.title": "Visuelle Identität",
+  "services.02.desc": "Moderne, leistungsstarke Websites, gestaltet für Klarheit, Vertrauen und Wachstum.",
+  "services.02.title": "Webdesign & Optimierung",
+  "services.03.desc": "Klare, intuitive Online-Shops, die Besucher zu reibungslosen Käufern machen.",
+  "services.03.title": "Online-Shop"
+ },
+ "el": {
+  "services.01.desc": "Ξεχωριστές οπτικές ταυτότητες, χτισμένες με στρατηγική, σαφήνεια και συνέπεια.",
+  "services.01.title": "Οπτική ταυτότητα",
+  "services.02.desc": "Σύγχρονοι, υψηλής απόδοσης ιστότοποι σχεδιασμένοι για σαφήνεια, εμπιστοσύνη και ανάπτυξη.",
+  "services.02.title": "Σχεδιασμός και βελτιστοποίηση ιστοτόπου",
+  "services.03.desc": "Καθαρά, διαισθητικά ηλεκτρονικά καταστήματα που μετατρέπουν τους επισκέπτες σε απρόσκοπτους αγοραστές.",
+  "services.03.title": "Ηλεκτρονικό κατάστημα"
+ },
+ "en": {
+  "services.01.desc": "Distinct visual identities built with strategy, clarity, and consistency.",
+  "services.01.title": "Visual Identity",
+  "services.02.desc": "Modern, high-performance websites designed for clarity, trust, and growth.",
+  "services.02.title": "Website Design & Optimization",
+  "services.03.desc": "Clear, intuitive online stores that turn visitors into seamless buyers.",
+  "services.03.title": "E-Commerce Store"
+ },
+ "es": {
+  "services.01.desc": "Identidades visuales propias, creadas con estrategia, claridad y coherencia.",
+  "services.01.title": "Identidad visual",
+  "services.02.desc": "Webs modernas de alto rendimiento, diseñadas para claridad, confianza y crecimiento.",
+  "services.02.title": "Diseño y optimización web",
+  "services.03.desc": "Tiendas online claras e intuitivas que convierten a los visitantes en compradores sin fricción.",
+  "services.03.title": "Tienda online"
+ },
+ "et": {
+  "services.01.desc": "Eristuvad visuaalsed identiteedid, loodud strateegia, selguse ja järjepidevusega.",
+  "services.01.title": "Visuaalne identiteet",
+  "services.02.desc": "Kaasaegsed suure jõudlusega veebilehed, kavandatud selgusele, usaldusele ja kasvule.",
+  "services.02.title": "Veebidisain ja optimeerimine",
+  "services.03.desc": "Selged ja intuitiivsed e-poed, mis muudavad külastajad sujuvateks ostjateks.",
+  "services.03.title": "E-pood"
+ },
+ "fi": {
+  "services.01.desc": "Omaperäiset visuaaliset identiteetit rakennettu strategialla, selkeydellä ja johdonmukaisuudella.",
+  "services.01.title": "Visuaalinen identiteetti",
+  "services.02.desc": "Nykyaikaiset, suorituskykyiset verkkosivustot suunniteltu selkeyteen, luottamukseen ja kasvuun.",
+  "services.02.title": "Verkkosivujen suunnittelu ja optimointi",
+  "services.03.desc": "Selkeät ja intuitiiviset verkkokaupat, jotka muuttavat kävijät sujuviksi ostajiksi.",
+  "services.03.title": "Verkkokauppa"
+ },
+ "fr": {
+  "services.01.desc": "Des identités visuelles distinctes, construites avec stratégie, clarté et cohérence.",
+  "services.01.title": "Identité visuelle",
+  "services.02.desc": "Des sites web modernes et performants, pensés pour la clarté, la confiance et la croissance.",
+  "services.02.title": "Conception et optimisation de sites web",
+  "services.03.desc": "Boutiques en ligne claires et intuitives qui transforment les visiteurs en acheteurs sans friction.",
+  "services.03.title": "Boutique en ligne"
+ },
+ "ga": {
+  "services.01.desc": "Féiniúlachtaí amhairc ar leith, tógtha le straitéis, soiléire agus comhsheasmhacht.",
+  "services.01.title": "Féiniúlacht amhairc",
+  "services.02.desc": "Suíomhanna gréasáin nua-aimseartha, ardfheidhmíochta deartha le haghaidh soiléire, muiníne agus fáis.",
+  "services.02.title": "Dearadh agus optamú suímh ghréasáin",
+  "services.03.desc": "Siopaí ar líne soiléire, iomasacha a dhéanann ceannaitheoirí réidhe de chuairteoirí.",
+  "services.03.title": "Siopa ar líne"
+ },
+ "hr": {
+  "services.01.desc": "Prepoznatljivi vizualni identiteti građeni strategijom, jasnoćom i konzistentnošću.",
+  "services.01.title": "Vizualni identitet",
+  "services.02.desc": "Moderne, visokoučinkovite web stranice dizajnirane za jasnoću, povjerenje i rast.",
+  "services.02.title": "Dizajn i optimizacija web stranica",
+  "services.03.desc": "Jasne i intuitivne web trgovine koje posjetitelje pretvaraju u kupce bez zapreka.",
+  "services.03.title": "Web trgovina"
+ },
+ "hu": {
+  "services.01.desc": "Határozott vizuális arculatok stratégia, letisztultság és konzisztencia mentén.",
+  "services.01.title": "Vizuális identitás",
+  "services.02.desc": "Modern, nagy teljesítményű weboldalak a letisztultság, a bizalom és a növekedés jegyében.",
+  "services.02.title": "Weboldaldesign és optimalizálás",
+  "services.03.desc": "Letisztult, intuitív webáruházak, amelyek a látogatókból gördülékeny vásárlókat csinálnak.",
+  "services.03.title": "Webáruház"
+ },
+ "it": {
+  "services.01.desc": "Identità visive distintive, costruite con strategia, chiarezza e coerenza.",
+  "services.01.title": "Identità visiva",
+  "services.02.desc": "Siti web moderni e ad alte prestazioni, progettati per chiarezza, fiducia e crescita.",
+  "services.02.title": "Design e ottimizzazione web",
+  "services.03.desc": "Negozi online chiari e intuitivi che trasformano i visitatori in acquirenti senza attrito.",
+  "services.03.title": "Negozio online"
+ },
+ "ku": {
+  "services.01.desc": "Nasnameyên dîtbar ên cihê, bi stratejî, zelalî û yekgirtinê hatine avakirin.",
+  "services.01.title": "Nasnameya dîtbar",
+  "services.02.desc": "Malperên nûjen û bi performansa bilind, ji bo zelalî, ewlehî û mezinbûnê hatine sêwirandin.",
+  "services.02.title": "Sêwirandin û xweşkirina malperê",
+  "services.03.desc": "Firoşgehên serhêl ên zelal û hêsan ku mêvanan dikin kirîyarên bêasteng.",
+  "services.03.title": "Firoşgeha serhêl"
+ },
+ "lt": {
+  "services.01.desc": "Išskirtiniai vizualūs identitetai, sukurti su strategija, aiškumu ir nuoseklumu.",
+  "services.01.title": "Vizualioji tapatybė",
+  "services.02.desc": "Modernios, didelio našumo svetainės, skirtos aiškumui, pasitikėjimui ir augimui.",
+  "services.02.title": "Svetainės dizainas ir optimizavimas",
+  "services.03.desc": "Aiškios ir intuityvios el. parduotuvės, paverčiančios lankytojus sklandžiais pirkėjais.",
+  "services.03.title": "El. parduotuvė"
+ },
+ "lv": {
+  "services.01.desc": "Atšķirīgas vizuālās identitātes, veidotas ar stratēģiju, skaidrību un konsekvenci.",
+  "services.01.title": "Vizuālā identitāte",
+  "services.02.desc": "Mūsdienīgas, augstas veiktspējas vietnes, veidotas skaidrībai, uzticībai un izaugsmei.",
+  "services.02.title": "Vietnes dizains un optimizācija",
+  "services.03.desc": "Skaidri un intuitīvi interneta veikali, kas apmeklētājus pārvērš raitā pircējos.",
+  "services.03.title": "Interneta veikals"
+ },
+ "mt": {
+  "services.01.desc": "Identitajiet viżwali distinti, mibnija bi strateġija, ċarezza u konsistenza.",
+  "services.01.title": "Identità viżwali",
+  "services.02.desc": "Websajts moderni u ta’ prestazzjoni għolja mfassla għaċ-ċarezza, il-fiduċja u t-tkabbir.",
+  "services.02.title": "Disinn u ottimizzazzjoni tal-websajt",
+  "services.03.desc": "Ħwienet online ċari u intuwittivi li jbiddlu l-viżitaturi fi xerrejja bla xkiel.",
+  "services.03.title": "Ħanut online"
+ },
+ "nl": {
+  "services.01.desc": "Onderscheidende visuele identiteiten, gebouwd met strategie, helderheid en consistentie.",
+  "services.01.title": "Visuele identiteit",
+  "services.02.desc": "Moderne, krachtige websites, ontworpen voor duidelijkheid, vertrouwen en groei.",
+  "services.02.title": "Websiteontwerp en -optimalisatie",
+  "services.03.desc": "Heldere, intuïtieve webshops die bezoekers moeiteloos kopers maken.",
+  "services.03.title": "Webshop"
+ },
+ "no": {
+  "services.01.desc": "Særpregede visuelle identiteter bygget på strategi, klarhet og konsistens.",
+  "services.01.title": "Visuell identitet",
+  "services.02.desc": "Moderne, høytytende nettsider designet for klarhet, tillit og vekst.",
+  "services.02.title": "Webdesign og optimalisering",
+  "services.03.desc": "Klare, intuitive nettbutikker som gjør besøkende til smidige kjøpere.",
+  "services.03.title": "Nettbutikk"
+ },
+ "pl": {
+  "services.01.desc": "Wyraziste identyfikacje wizualne oparte na strategii, klarowności i spójności.",
+  "services.01.title": "Identyfikacja wizualna",
+  "services.02.desc": "Nowoczesne, wydajne strony internetowe projektowane dla klarowności, zaufania i wzrostu.",
+  "services.02.title": "Projektowanie i optymalizacja stron",
+  "services.03.desc": "Przejrzyste i intuicyjne sklepy internetowe, które zmieniają odwiedzających w płynnych kupujących.",
+  "services.03.title": "Sklep internetowy"
+ },
+ "pt": {
+  "services.01.desc": "Identidades visuais próprias, construídas com estratégia, clareza e consistência.",
+  "services.01.title": "Identidade visual",
+  "services.02.desc": "Websites modernos de alto desempenho, desenhados para clareza, confiança e crescimento.",
+  "services.02.title": "Design e otimização de sites",
+  "services.03.desc": "Lojas online claras e intuitivas que transformam visitantes em compradores sem atrito.",
+  "services.03.title": "Loja online"
+ },
+ "ro": {
+  "services.01.desc": "Identități vizuale distincte, construite cu strategie, claritate și consecvență.",
+  "services.01.title": "Identitate vizuală",
+  "services.02.desc": "Site-uri moderne, de înaltă performanță, concepute pentru claritate, încredere și creștere.",
+  "services.02.title": "Design și optimizare site",
+  "services.03.desc": "Magazine online clare și intuitive care transformă vizitatorii în cumpărători fără fricțiune.",
+  "services.03.title": "Magazin online"
+ },
+ "sk": {
+  "services.01.desc": "Výrazné vizuálne identity postavené na stratégii, jasnosti a konzistencii.",
+  "services.01.title": "Vizuálna identita",
+  "services.02.desc": "Moderné vysokovýkonné weby navrhnuté pre jasnosť, dôveru a rast.",
+  "services.02.title": "Dizajn a optimalizácia webu",
+  "services.03.desc": "Prehľadné a intuitívne e-shopy, ktoré menia návštevníkov na plynulých nakupujúcich.",
+  "services.03.title": "E-shop"
+ },
+ "sl": {
+  "services.01.desc": "Izrazite vizualne identitete, zgrajene s strategijo, jasnostjo in doslednostjo.",
+  "services.01.title": "Vizualna identiteta",
+  "services.02.desc": "Sodobne, visoko zmogljive spletne strani, zasnovane za jasnost, zaupanje in rast.",
+  "services.02.title": "Oblikovanje in optimizacija spletnih strani",
+  "services.03.desc": "Jasne in intuitivne spletne trgovine, ki obiskovalce spremenijo v nemotene kupce.",
+  "services.03.title": "Spletna trgovina"
+ },
+ "sv": {
+  "services.01.desc": "Särpräglade visuella identiteter byggda med strategi, klarhet och konsekvens.",
+  "services.01.title": "Visuell identitet",
+  "services.02.desc": "Moderna, högpresterande webbplatser designade för klarhet, förtroende och tillväxt.",
+  "services.02.title": "Webbdesign och optimering",
+  "services.03.desc": "Tydliga, intuitiva webbshopar som gör besökare till smidiga köpare.",
+  "services.03.title": "Webbshop"
+ },
+ "tr": {
+  "services.01.desc": "Strateji, berraklık ve tutarlılıkla inşa edilmiş özgün görsel kimlikler.",
+  "services.01.title": "Görsel Kimlik",
+  "services.02.desc": "Berraklık, güven ve büyüme için tasarlanmış modern, yüksek performanslı web siteleri.",
+  "services.02.title": "Web Tasarımı & Optimizasyonu",
+  "services.03.desc": "Ziyaretçileri sorunsuz alıcılara dönüştüren sezgisel, modern e-ticaret mağazaları.",
+  "services.03.title": "E-Ticaret Mağazası"
+ }
+}
