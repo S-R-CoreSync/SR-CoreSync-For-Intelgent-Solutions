@@ -18,7 +18,8 @@ engine's output list and validates that list. A copy step that silently drops a
 file, or a rule that stops matching, passes there and fails here.
 
 Exit codes: 0 ok · 1 untracked files in the artefact · 2 artefact missing ·
-3 required file missing from the artefact · 4 artefact too large to publish.
+3 required file missing from the artefact · 4 artefact too large to publish ·
+5 artefact file differs from the working tree.
 """
 import os
 import subprocess
@@ -67,6 +68,23 @@ def describe(full_path):
         return '?'
 
 
+def differs(staged_path, tree_path):
+    """True when the artefact copy is not byte-identical to the working tree."""
+    try:
+        if os.path.getsize(staged_path) != os.path.getsize(tree_path):
+            return True
+        with open(staged_path, 'rb') as a, open(tree_path, 'rb') as b:
+            while True:
+                chunk_a = a.read(1 << 16)
+                chunk_b = b.read(1 << 16)
+                if chunk_a != chunk_b:
+                    return True
+                if not chunk_a:
+                    return False
+    except OSError:
+        return True
+
+
 def main():
     if not os.path.isdir(STAGE):
         sys.stderr.write('FAILED: %s does not exist - build the publish set first '
@@ -97,6 +115,25 @@ def main():
         sys.stderr.write('The rule engine lists them but the copy step dropped them; '
                          'check scripts/publish_set.py and the build log.\n')
         return 3
+
+    # A stale or half-finished artefact is the failure this repository keeps
+    # hitting: _site is regenerated rarely, so pages ship from yesterday's tree
+    # and every downstream check happily validates the wrong bytes.
+    stale = []
+    for rel in staged:
+        tree_path = os.path.join(ROOT, rel)
+        if not os.path.isfile(tree_path) or differs(os.path.join(STAGE, rel), tree_path):
+            stale.append(rel)
+    if stale:
+        sys.stderr.write('FAILED: %d artefact file(s) do not match the working tree.\n'
+                         % len(stale))
+        for rel in sorted(stale)[:20]:
+            sys.stderr.write('  - %s\n' % rel)
+        if len(stale) > 20:
+            sys.stderr.write('  ... and %d more\n' % (len(stale) - 20))
+        sys.stderr.write('Rebuild the publish set so the artefact is the tree: '
+                         'python scripts/prepare_publish_set.py\n')
+        return 5
 
     total_bytes = 0
     for rel in staged:
