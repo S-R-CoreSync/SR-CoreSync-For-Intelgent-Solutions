@@ -212,7 +212,7 @@ LOCALES_CONFIG = {
         'align': 'left'
     },
     'ku': {
-        'dir': 'rtl',
+        'dir': 'ltr',
         'nav_more': '06+ / Zêdetir',
         'store': '06 Firoşgeh',
         'faq': '07 Pirs',
@@ -253,7 +253,7 @@ LOCALES_CONFIG = {
         'btn_wa': 'Bi rêya WhatsAppê bişêwire 💬',
         'btn_book': '👔 Şêwirmendiyek taybet veqetînin',
         'btn_demo': '⚡ Ezmûna Pergala Cloud',
-        'align': 'right'
+        'align': 'left'
     },
     'ckb': {
         'dir': 'rtl',
