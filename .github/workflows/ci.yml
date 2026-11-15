@@ -150,6 +150,12 @@ jobs:
       - name: Build the publish artifact
         run: python scripts/prepare_publish_set.py
 
+      # The artefact is assembled from the working tree, so any file the app
+      # wrote there is copied into the public bundle. Ask git instead of a
+      # hardcoded list: a path HEAD does not track is not site content.
+      - name: Verify the artifact contains only tracked files
+        run: python scripts/check_publish_set_untracked.py
+
       - name: Build & Verify Transactional E-mails
         run: python scripts/build_email_templates.py
 
