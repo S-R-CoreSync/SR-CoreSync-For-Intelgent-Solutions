@@ -20,7 +20,7 @@
  * Usage: node scripts/browser_console_audit.mjs [--pages=10]
  */
 import { spawn } from 'node:child_process';
-import { mkdtempSync, rmSync, existsSync, readFileSync, statSync } from 'node:fs';
+import { mkdtempSync, rmSync, existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, extname, resolve } from 'node:path';
 import { setTimeout as sleep } from 'node:timers/promises';
@@ -65,6 +65,31 @@ const CSP_POLICY = CSP_ARG && CSP_ARG.includes('=') ? CSP_ARG.slice(CSP_ARG.inde
 let PORT = 9222;
 let HTTP_PORT = 8099;
 const SITE = resolve(process.env.SR_SITE_DIR || join(process.cwd(), '_site'));
+
+// A stale _site silently audits yesterday's pages: every route then passes for
+// code that is no longer in the working tree. Compare the newest page in both
+// trees (copies preserve mtime, so a single file proves nothing).
+if (!process.env.SR_SITE_DIR && existsSync(SITE)) {
+    const newest = (dir) => {
+        let best = 0;
+        const roots = [dir];
+        try {
+            for (const entry of readdirSync(dir, { withFileTypes: true })) {
+                if (entry.isDirectory() && entry.name.length <= 3) roots.push(join(dir, entry.name));
+            }
+        } catch { /* unreadable root */ }
+        for (const root of roots) {
+            const page = join(root, 'index.html');
+            if (existsSync(page)) best = Math.max(best, statSync(page).mtimeMs);
+        }
+        return best;
+    };
+    const drift = newest(process.cwd()) - newest(SITE);
+    if (drift > 60000) {
+        console.warn(`WARNING: ${SITE} trails the working tree by ${Math.round(drift / 60000)} min.`);
+        console.warn('         You are auditing STALE pages. Rebuild _site, or set SR_SITE_DIR to the tree root.');
+    }
+}
 
 // The DevTools port must be free before the browser is started. If another
 // browser already owns it, the launch silently attaches to that foreign
