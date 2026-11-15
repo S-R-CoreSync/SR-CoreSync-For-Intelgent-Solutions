@@ -46,7 +46,7 @@
   <p class="lede">ما بُني، وكيف يُبنى، وما لا يجوز فعله — وستة إجراءات تُنجز أي قسم جديد دون أن تلمس 29 ملفاً.</p>
   <div class="meta">
     <div><b>التاريخ:</b> 15 نوفمبر 2026</div>
-    <div><b>آخر التزام:</b> b1613ff8</div>
+    <div><b>آخر التزام:</b> b1613ff8 · <b>الوسم:</b> handover-b1613ff8</div>
     <div><b>النطاق:</b> 29 صفحة · 29 لغة · موقع حيّ يبيع</div>
   </div>
 </div>
@@ -58,6 +58,7 @@
 <tr><td>الأجزاء</td><td><code>partials/</code> (13 جزءاً)</td><td>الصفحة العربية <code>index.html</code></td></tr>
 <tr><td>أجزاء الإنجليزية</td><td><code>partials/en/</code></td><td><code>en/index.html</code></td></tr>
 <tr><td>الماستر</td><td><code>index.html</code> (منطقتُه العليا + أنماط)</td><td>الهيرو والقائمة في 27 صفحة</td></tr>
+<tr><td>مزامنة اللغات</td><td><code>index.html</code> (الهيرو)</td><td>الهيرو في 26 صفحة لغة عبر <code>sync_locales.py</code> — طبقة رابعة لا تُنسى</td></tr>
 <tr><td>المحتوى المعنوي</td><td><code>i18n/sections/*.json</code></td><td>نصوص الأقسام في كل لغة</td></tr>
 <tr><td>الفوتر</td><td><code>i18n/footer.calibrated.json</code></td><td>17 رابطاً في 28 صفحة</td></tr>
 </table>
@@ -69,24 +70,25 @@
 <table>
 <tr><th>#</th><th>الخطوة</th><th>الأمر / الملاحظة</th></tr>
 <tr><td>1</td><td>استنساخ المستودع</td><td><code>git clone https://github.com/S-R-CoreSync/SR-CoreSync-For-Intelgent-Solutions.git</code></td></tr>
-<tr><td>2</td><td>Python 3.12 أو أحدث</td><td>لا حزم خارجية إلزامية؛ بعض السكربتات تحتاج <code>lxml</code></td></tr>
+<tr><td>2</td><td>Python 3.12 أو أحدث</td><td><code>python -m pip install -r requirements.txt</code> — تثبت <code>lxml</code> وغيره</td></tr>
 <tr><td>3</td><td>Node 20 أو أحدث</td><td>لفحص المتصفح و<code>validate.js</code></td></tr>
 <tr><td>4</td><td>Chrome</td><td>لفحص السجل، ولتوليد PDF من HTML</td></tr>
 <tr><td>5</td><td>تفعيل الحارس</td><td><code>git config core.hooksPath .githooks</code></td></tr>
-<tr><td>6</td><td>التحقق الأول</td><td><code>python scripts/preflight.py</code></td></tr>
+<tr><td>6</td><td>التحقق الأول</td><td><code>python scripts/preflight.py --check</code> — يفحص ولا يكتب</td></tr>
 </table>
 <div class="box warn">
 <b>ما لا يُنسخ:</b> لا مفاتيح ولا أسرار في المستودع. النشر يتمّ عبر GitHub Actions بهوية المستودع. أي ملف <code>.env</code> أو مفتاح خدمة يبقى خارج git.
 </div>
 
 <h2>3 · الأوامر التي تُشغّلها فعلاً</h2>
-<pre>python scripts/preflight.py            # يُعيد بناء الطبقات الثلاث ثم يفحص — ابدأ من هنا دائماً
+<pre>python scripts/preflight.py --check    # تحقق فقط، لا يكتب شيئاً — ابدأ من هنا
+python scripts/preflight.py          # إصلاح ثم فحص: يعيد كتابة ثلاث طبقات قبل أن يفحص (بعد نسخة احتياطية)
 python scripts/build_site.py --check    # الجذر = أجزاؤه
 python scripts/build_lang.py --check en # الإنجليزية = أجزاؤها
 python scripts/check_hreflang.py        # 29 صفحة: lang · dir · canonical · 30 وسماً
 python scripts/check_site_links.py      # مراجع محلية مكسورة
 python scripts/check_command_handlers.py# كل onclick له تعريف
-node scripts/browser_console_audit.mjs  # 30 صفحة في متصفح حقيقي
+node scripts/browser_console_audit.mjs  # 29 صفحة في متصفح حقيقي (30 مساراً، /hr/ مكرر)
 python scripts/check_perf_budget.py     # الطلبات والوزن
 python scripts/section_parity.py        # أين يختلف الماستر عن الترجمات</pre>
 
@@ -108,7 +110,8 @@ python scripts/section_parity.py        # أين يختلف الماستر عن 
 <tr><td>ترجمة الأقسام</td><td>✅</td><td>930+ قيمة في 4 ملفات</td></tr>
 <tr><td>لغات نظيفة من الإنجليزية</td><td>✅ 25</td><td>⬜ 4 (el · ku · ga · mt)</td></tr>
 <tr><td>مختبر المؤسس في الماستر</td><td>✅ اليوم</td><td>15 نصاً بالعربية</td></tr>
-<tr><td>شريط الامتثال الأوروبي</td><td>⬜</td><td>في العربية وحدها</td></tr>
+<tr><td>شريط الامتثال الأوروبي</td><td>⬜</td><td>في العربية وحدها — مقيس: 1 من 29</td></tr>
+<tr><td>نافذة المقدّر في كل لغة</td><td>⬜</td><td>غائبة في ku وحدها — مقيس: 28 من 29</td></tr>
 </table>
 
 <h2>6 · الإجراء المعياري لأي قسم جديد</h2>
