@@ -1837,3 +1837,57 @@ header.header,
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
     color: #ffffff;
 }
+
+/* ---------------------------------------------------------------------------
+   "More" dropdown (06 ROI · 07 FAQ · 08 Blog · 09 API).
+   These rules lived only inside index.html's inline <style> block, so the 28
+   language pages had no rule at all for #navMoreSubmenu: it rendered as a naked
+   <ul> in the header flow, overlapping the logo and the menu labels. The toggle
+   JavaScript is present on every page (navMoreSubmenu appears 4 times), so only
+   the styling was missing. This file is loaded by the master and by all 28
+   language pages, which makes it the right home for the shared rule.
+   --------------------------------------------------------------------------- */
+#navMoreDropdown {
+    position: relative;
+}
+
+.nav-more-submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    min-width: 210px;
+    background: rgba(10, 15, 12, 0.98);
+    border: 1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35);
+    border-radius: 12px;
+    padding: 8px 0;
+    list-style: none;
+    margin: 0;
+    z-index: 9999;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
+}
+
+.nav-more-submenu.open {
+    display: block;
+}
+
+.nav-more-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-more-link:hover,
+.nav-more-link:focus {
+    background: rgba(var(--sr-gold-rgb, 212, 175, 55), 0.12);
+    color: #d4af37;
+    outline: none;
+}
