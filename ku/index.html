@@ -9949,5 +9949,18 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
 })();
 </script>
 <script src="../js/sr-dock-merge.js?v=20261113b" defer></script>
-/body>
+<script src="../js/sr-master-shell.js" defer></script>
+<script>
+/* nav "more" toggle - the button existed, the function did not */
+function toggleNavMore(e) {
+        if (e) e.stopPropagation();
+        var btn = document.getElementById('navMoreBtn');
+        var menu = document.getElementById('navMoreSubmenu');
+        if (!btn || !menu) return;
+        var isOpen = menu.classList.contains('open');
+        menu.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+    }
+</script>
+</body>
 </html>
