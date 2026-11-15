@@ -1891,3 +1891,17 @@ header.header,
     color: #d4af37;
     outline: none;
 }
+
+/* ---------------------------------------------------------------------------
+   Header breakpoint.
+   .nav-menu-main is forced to display:flex !important by a global override and
+   no media query ever hides it, so below ~1200px the menu is wider than the
+   header (835px of items against a 177px logo) and overflows to the LEFT, under
+   the brand. The floating "Menu" button (.btn-mobile-menu) is the intended
+   navigation at those widths, so the desktop row is hidden instead of squeezed.
+   --------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+    .tf-header .nav-menu-main {
+        display: none !important;
+    }
+}
