@@ -1,0 +1,6 @@
+{
+  "_comment": "Single source of truth for the company's legal identifiers. Every published page must match these two values. The pair below is the one already used by the invoices and UBL samples (the dominant one on the site), NOT a verified registration: confirm it against the KVK register and the Belastingdienst before relying on it.",
+  "kvk": "84920194",
+  "vat": "NL862145890B01",
+  "confirmed_by_owner": false
+}

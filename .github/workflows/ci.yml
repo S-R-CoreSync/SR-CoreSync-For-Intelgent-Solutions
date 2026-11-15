@@ -155,6 +155,12 @@ jobs:
       - name: Verify the artifact (tracked files only, required files present)
         run: python scripts/check_publish_set_integrity.py
 
+      # Identity drift: the public pages once announced four different KVK/VAT
+      # pairs. data/company-identity.json is the single source; the baseline
+      # tolerates today's mismatches until the real pair is confirmed.
+      - name: Verify company identifiers match the canonical pair
+        run: python scripts/check_company_identity.py
+
       - name: Build & Verify Transactional E-mails
         run: python scripts/build_email_templates.py
 

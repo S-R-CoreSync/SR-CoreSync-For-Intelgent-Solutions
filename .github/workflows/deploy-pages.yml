@@ -190,6 +190,11 @@ jobs:
       - name: Verify the publish set (tracked files only, required files present)
         run: python scripts/check_publish_set_integrity.py
 
+      # Identity drift: a page can copy a KVK/VAT number and keep an old value
+      # forever. One canonical pair lives in data/company-identity.json.
+      - name: Verify company identifiers match the canonical pair
+        run: python scripts/check_company_identity.py
+
       # ---------------------------------------------------------------------
       # Guard: the artifact must not contain broken local references.
       #
