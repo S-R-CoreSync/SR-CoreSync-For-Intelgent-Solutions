@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>خطة التسليم — كيف تُكمل المشروع على بيئة أخرى</title>
+<style>
+  @page{size:A4;margin:14mm 13mm 16mm}
+  *{box-sizing:border-box}
+  body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;color:#14181f;background:#fff;margin:0;
+       font-size:10.3pt;line-height:1.7;direction:rtl}
+  h1{font-size:21pt;margin:0 0 4px;color:#0d1b2a}
+  h2{font-size:13.4pt;color:#8a6a12;border-bottom:2px solid #e3d3a3;padding-bottom:5px;margin:24px 0 8px;page-break-after:avoid}
+  h3{font-size:11pt;margin:13px 0 4px;color:#1b2a3a;page-break-after:avoid}
+  p{margin:0 0 7px;text-align:justify}
+  table{width:100%;border-collapse:collapse;margin:7px 0 11px;font-size:9.1pt;page-break-inside:avoid}
+  th{background:#f6f2e6;color:#5f4a0d;text-align:right;padding:5px 7px;border:1px solid #e2dcc9;font-weight:600}
+  td{padding:4px 7px;border:1px solid #e8e4d8;vertical-align:top}
+  tr:nth-child(even) td{background:#fbfaf6}
+  code{font-family:Consolas,monospace;font-size:8.5pt;background:#f4f1e8;padding:1px 4px;border-radius:3px;direction:ltr;unicode-bidi:embed}
+  pre{font-family:Consolas,monospace;font-size:8.2pt;line-height:1.5;background:#f7f6f2;border:1px solid #e6e2d6;
+      border-inline-start:3px solid #d4af37;padding:8px 10px;border-radius:4px;direction:ltr;text-align:left;
+      white-space:pre-wrap;margin:6px 0 10px;page-break-inside:avoid}
+  .box{border:1px solid #e6e0cc;background:#fbf9f2;border-radius:6px;padding:9px 12px;margin:9px 0 11px;page-break-inside:avoid}
+  .warn{border-color:#e8cfc2;background:#fdf6f2}
+  .good{border-color:#cfe3d2;background:#f4faf5}
+  ul,ol{margin:5px 0 9px;padding-inline-start:19px}
+  li{margin-bottom:3px}
+  .cover{height:244mm;display:flex;flex-direction:column;justify-content:flex-start;padding-top:52mm;page-break-after:always}
+  .kicker{font-size:9.3pt;letter-spacing:2px;color:#8a6a12;margin-bottom:9px}
+  .rule{height:3px;width:84px;background:linear-gradient(90deg,#d4af37,#8a6a12);margin:12px 0 15px}
+  .lede{font-size:11.4pt;color:#33404f;max-width:150mm}
+  .meta{margin-top:20px;font-size:8.9pt;color:#5b6572}
+  .meta b{color:#14181f;font-weight:600}
+  .pbreak{page-break-before:always}
+  .step{background:#fbf9f2;border:1px solid #e6e0cc;border-radius:6px;padding:8px 12px;margin:6px 0}
+  .step b{color:#8a6a12}
+  footer{margin-top:18px;border-top:1px solid #e8e4d8;padding-top:7px;font-size:8.2pt;color:#6b7480}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="kicker">خطة تسليم · للاستكمال على بيئة أخرى</div>
+  <h1>S&amp;R CoreSync<br><span style="font-size:14.5pt;color:#4a5563;font-weight:400">دليل من يستلم المشروع غداً</span></h1>
+  <div class="rule"></div>
+  <p class="lede">ما بُني، وكيف يُبنى، وما لا يجوز فعله — وستة إجراءات تُنجز أي قسم جديد دون أن تلمس 29 ملفاً.</p>
+  <div class="meta">
+    <div><b>التاريخ:</b> 15 نوفمبر 2026</div>
+    <div><b>آخر التزام:</b> b1613ff8</div>
+    <div><b>النطاق:</b> 29 صفحة · 29 لغة · موقع حيّ يبيع</div>
+  </div>
+</div>
+
+<h2 style="margin-top:0">1 · ما هذا المشروع فعلاً</h2>
+<p>ليس موقعاً واحداً مترجماً، بل <b>تسع وعشرون صفحة كاملة</b> تُبنى من طبقات:</p>
+<table>
+<tr><th>الطبقة</th><th>المصدر</th><th>ما يولّده</th></tr>
+<tr><td>الأجزاء</td><td><code>partials/</code> (13 جزءاً)</td><td>الصفحة العربية <code>index.html</code></td></tr>
+<tr><td>أجزاء الإنجليزية</td><td><code>partials/en/</code></td><td><code>en/index.html</code></td></tr>
+<tr><td>الماستر</td><td><code>index.html</code> (منطقتُه العليا + أنماط)</td><td>الهيرو والقائمة في 27 صفحة</td></tr>
+<tr><td>المحتوى المعنوي</td><td><code>i18n/sections/*.json</code></td><td>نصوص الأقسام في كل لغة</td></tr>
+<tr><td>الفوتر</td><td><code>i18n/footer.calibrated.json</code></td><td>17 رابطاً في 28 صفحة</td></tr>
+</table>
+<div class="box">
+<b>الرقم الذي يفسّر كل شيء:</b> من صفحة ألمانية 712 كB، يُولَّد من الماستر <b>4 كB فقط</b>. أي 0.6%. توسيع هذه النسبة هو المشروع الحقيقي، لا إعادة كتابة الموقع.
+</div>
+
+<h2>2 · على الجهاز الجديد — خطوة بخطوة</h2>
+<table>
+<tr><th>#</th><th>الخطوة</th><th>الأمر / الملاحظة</th></tr>
+<tr><td>1</td><td>استنساخ المستودع</td><td><code>git clone https://github.com/S-R-CoreSync/SR-CoreSync-For-Intelgent-Solutions.git</code></td></tr>
+<tr><td>2</td><td>Python 3.12 أو أحدث</td><td>لا حزم خارجية إلزامية؛ بعض السكربتات تحتاج <code>lxml</code></td></tr>
+<tr><td>3</td><td>Node 20 أو أحدث</td><td>لفحص المتصفح و<code>validate.js</code></td></tr>
+<tr><td>4</td><td>Chrome</td><td>لفحص السجل، ولتوليد PDF من HTML</td></tr>
+<tr><td>5</td><td>تفعيل الحارس</td><td><code>git config core.hooksPath .githooks</code></td></tr>
+<tr><td>6</td><td>التحقق الأول</td><td><code>python scripts/preflight.py</code></td></tr>
+</table>
+<div class="box warn">
+<b>ما لا يُنسخ:</b> لا مفاتيح ولا أسرار في المستودع. النشر يتمّ عبر GitHub Actions بهوية المستودع. أي ملف <code>.env</code> أو مفتاح خدمة يبقى خارج git.
+</div>
+
+<h2>3 · الأوامر التي تُشغّلها فعلاً</h2>
+<pre>python scripts/preflight.py            # يُعيد بناء الطبقات الثلاث ثم يفحص — ابدأ من هنا دائماً
+python scripts/build_site.py --check    # الجذر = أجزاؤه
+python scripts/build_lang.py --check en # الإنجليزية = أجزاؤها
+python scripts/check_hreflang.py        # 29 صفحة: lang · dir · canonical · 30 وسماً
+python scripts/check_site_links.py      # مراجع محلية مكسورة
+python scripts/check_command_handlers.py# كل onclick له تعريف
+node scripts/browser_console_audit.mjs  # 30 صفحة في متصفح حقيقي
+python scripts/check_perf_budget.py     # الطلبات والوزن
+python scripts/section_parity.py        # أين يختلف الماستر عن الترجمات</pre>
+
+<h2>4 · ست قواعد — كل واحدة دفعتُ ثمنها</h2>
+<div class="step"><b>1 · بعد أي تعديل على صفحة:</b> <code>build_site.py --extract</code>، وإلا فشل الفحص وأوقف النشر.</div>
+<div class="step"><b>2 · بعد أي تعديل على CSS أو JS:</b> جدّد رقم النسخة <code>?v=</code> في 29 صفحة، وإلا بقي الزائر على القديم.</div>
+<div class="step"><b>3 · أي فحص يقرأ مجلد بناء:</b> ابنِ المجلد في الأمر نفسه، وإلا فأنت تفحص الماضي.</div>
+<div class="step"><b>4 · لا تثق بقياس يقرأ <code>el.text</code> وحده:</b> النص قد يسكن في <code>el.tail</code>.</div>
+<div class="step"><b>5 · لا تُعلن نتيجة قبل أن يُعيد القياس نفسه إنتاجها.</b></div>
+<div class="step"><b>6 · الحارس الذي يوقظك أفضل من النشر الذي يُحرجك.</b></div>
+
+<h2 class="pbreak">5 · ما أُنجز حتى الآن</h2>
+<table>
+<tr><th>المحور</th><th>الحالة</th><th>الرقم</th></tr>
+<tr><td>بنية الأجزاء + CI يبني من الأجزاء</td><td>✅</td><td>13 جزءاً · 3 طبقات</td></tr>
+<tr><td>canonical صحيح في كل لغة</td><td>✅</td><td>29 / 29</td></tr>
+<tr><td>حارس hreflang</td><td>✅</td><td>30 وسماً لكل صفحة</td></tr>
+<tr><td>الخطوط محلية + preload</td><td>✅</td><td>صفر أصول خارجية</td></tr>
+<tr><td>ترجمة الأقسام</td><td>✅</td><td>930+ قيمة في 4 ملفات</td></tr>
+<tr><td>لغات نظيفة من الإنجليزية</td><td>✅ 25</td><td>⬜ 4 (el · ku · ga · mt)</td></tr>
+<tr><td>مختبر المؤسس في الماستر</td><td>✅ اليوم</td><td>15 نصاً بالعربية</td></tr>
+<tr><td>شريط الامتثال الأوروبي</td><td>⬜</td><td>في العربية وحدها</td></tr>
+</table>
+
+<h2>6 · الإجراء المعياري لأي قسم جديد</h2>
+<p>هذا هو أثمن ما في هذه الخطة: ست خطوات تُنجز قسماً في 29 لغة، وتُثبت أنك لم تُغيّر حرفاً.</p>
+<div class="step"><b>1 · قِس التطابق.</b> <code>python scripts/next_section.py</code> — لا تُوثّق قسماً غير متطابق بنيوياً.</div>
+<div class="step"><b>2 · ضع المفاتيح.</b> <code>data-i18n="services.01.title"</code> — معنى لا مسار. في الجزء (<code>partials/</code>) لا في الصفحة.</div>
+<div class="step"><b>3 · أثبت أن النص لم يتغيّر.</b> احذف السمات الجديدة وقارن بالملف الأصلي — بايت ببايت. إن اختلفا، لا تكتب.</div>
+<div class="step"><b>4 · احصد.</b> اقرأ النصوص الحالية إلى <code>i18n/sections/&lt;section&gt;.json</code> بكل اللغات.</div>
+<div class="step"><b>5 · قِس الفجوة.</b> قارن كل خلية بنظيرتها الإنجليزية — هذا يكشف ما لا يكشفه أي فحص نصي.</div>
+<div class="step"><b>6 · ترجم ثم تحقّق.</b> طبّق، ثم أعد الحصد حتى يصبح الفرق صفراً، ثم <code>preflight</code> وانشر.</div>
+
+<h2>7 · الأماكن التي أخطأتُ فيها — احذرها</h2>
+<table>
+<tr><th>المكان</th><th>الخطأ</th><th>الحماية المقترحة</th></tr>
+<tr><td>regex على HTML</td><td>حذف مجموعة ملتقطة (تسمية تقييم، سمة)</td><td>قارن بعد الحذف قبل الكتابة</td></tr>
+<tr><td>استبدال نصي</td><td><code>&amp;</code> و<code>&amp;#x27;</code> يخدعان المطابقة</td><td>حلّل بـ<code>lxml</code> لا بتعبير نمطي</td></tr>
+<tr><td>النسخ المترجمة</td><td>الماستر ليس أكمل نسخة (مختبر المؤسس)</td><td><code>section_parity.py</code> قبل أي توليد</td></tr>
+<tr><td>الكاش</td><td>ملف محدَّث ولا يراه أحد</td><td>جدّد <code>?v=</code></td></tr>
+<tr><td>لغات مشابهة</td><td>نص سوراني في صفحة كورمانجية</td><td>الحارس يرفض — لا تتجاوزه</td></tr>
+</table>
+
+<h2>8 · الترتيب المقترح للاستكمال</h2>
+<table>
+<tr><th>#</th><th>العمل</th><th>الحجم</th><th>الأثر</th></tr>
+<tr><td>1</td><td>قرار شريط الامتثال الأوروبي: يُترجم لـ28 أم يبقى عربياً</td><td>قرار</td><td>يحدد اتجاه القسم التالي</td></tr>
+<tr><td>2</td><td>إكمال 3 أزرار في <code>en</code> وكتلة <code>ku</code></td><td>صغير</td><td>37 مفتاحاً في كل صفحة</td></tr>
+<tr><td>3</td><td>توثيق بقية الأقسام (امتثال · عائد · قيادة)</td><td>متوسط</td><td>يقرّب التوليد الكامل</td></tr>
+<tr><td>4</td><td>توليد 29 صفحة من الماستر + JSON</td><td>كبير</td><td>0.6% ← 100%</td></tr>
+<tr><td>5</td><td>دمج 17 ورقة أنماط في الجذر</td><td>متوسط</td><td>‎−16 طلباً</td></tr>
+<tr><td>6</td><td>اللغات الأربع: el · ku · ga · mt</td><td>ناطق</td><td>يُغلق الترجمة كلها</td></tr>
+</table>
+
+<div class="box good">
+<b>القاعدة التي تحكم كل ما سبق:</b> لا تنشر بلا معاينة، ولا تُعدّل بلا قياس، ولا تُعلن نجاحاً قبل أن يُعيد الفحص نفسه إنتاجه.
+</div>
+
+<footer>
+خطة تسليم · S&amp;R CoreSync · 15 نوفمبر 2026 · آخر التزام b1613ff8 · كل رقم فيها مقيس من المستودع أو من الموقع الحيّ.
+</footer>
+
+</body>
+</html>
