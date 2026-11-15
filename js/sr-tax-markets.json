@@ -180,12 +180,22 @@
       "name": {
         "ar": "هولندا",
         "de": "Niederlande",
-        "en": "Netherlands"
+        "en": "Netherlands",
+        "fr": "Pays-Bas",
+        "nl": "Nederland",
+        "tr": "Hollanda",
+        "es": "Países Bajos",
+        "it": "Paesi Bassi"
       },
       "city": {
         "ar": "أمستردام",
         "de": "Amsterdam",
-        "en": "Amsterdam"
+        "en": "Amsterdam",
+        "fr": "Amsterdam",
+        "nl": "Amsterdam",
+        "tr": "Amsterdam",
+        "es": "Ámsterdam",
+        "it": "Amsterdam"
       },
       "langName": {
         "ar": "Nederlands",
@@ -209,12 +219,22 @@
       "name": {
         "ar": "ألمانيا",
         "de": "Deutschland",
-        "en": "Germany"
+        "en": "Germany",
+        "fr": "Allemagne",
+        "nl": "Duitsland",
+        "tr": "Almanya",
+        "es": "Alemania",
+        "it": "Germania"
       },
       "city": {
         "ar": "برلين",
         "de": "Berlin",
-        "en": "Berlin"
+        "en": "Berlin",
+        "fr": "Berlin",
+        "nl": "Berlijn",
+        "tr": "Berlin",
+        "es": "Berlín",
+        "it": "Berlino"
       },
       "langName": {
         "ar": "Deutsch",
@@ -238,12 +258,22 @@
       "name": {
         "ar": "فرنسا",
         "de": "Frankreich",
-        "en": "France"
+        "en": "France",
+        "fr": "France",
+        "nl": "Frankrijk",
+        "tr": "Fransa",
+        "es": "Francia",
+        "it": "Francia"
       },
       "city": {
         "ar": "باريس",
         "de": "Paris",
-        "en": "Paris"
+        "en": "Paris",
+        "fr": "Paris",
+        "nl": "Parijs",
+        "tr": "Paris",
+        "es": "París",
+        "it": "Parigi"
       },
       "langName": {
         "ar": "Français",
@@ -266,12 +296,22 @@
       "name": {
         "ar": "المملكة المتحدة",
         "de": "Vereinigtes Königreich",
-        "en": "United Kingdom"
+        "en": "United Kingdom",
+        "fr": "Royaume-Uni",
+        "nl": "Verenigd Koninkrijk",
+        "tr": "Birleşik Krallık",
+        "es": "Reino Unido",
+        "it": "Regno Unito"
       },
       "city": {
         "ar": "لندن",
         "de": "London",
-        "en": "London"
+        "en": "London",
+        "fr": "Londres",
+        "nl": "Londen",
+        "tr": "Londra",
+        "es": "Londres",
+        "it": "Londra"
       },
       "langName": {
         "ar": "English",
@@ -294,12 +334,22 @@
       "name": {
         "ar": "إسبانيا",
         "de": "Spanien",
-        "en": "Spain"
+        "en": "Spain",
+        "fr": "Espagne",
+        "nl": "Spanje",
+        "tr": "İspanya",
+        "es": "España",
+        "it": "Spagna"
       },
       "city": {
         "ar": "مدريد",
         "de": "Madrid",
-        "en": "Madrid"
+        "en": "Madrid",
+        "fr": "Madrid",
+        "nl": "Madrid",
+        "tr": "Madrid",
+        "es": "Madrid",
+        "it": "Madrid"
       },
       "langName": {
         "ar": "Español",
@@ -322,12 +372,22 @@
       "name": {
         "ar": "إيطاليا",
         "de": "Italien",
-        "en": "Italy"
+        "en": "Italy",
+        "fr": "Italie",
+        "nl": "Italië",
+        "tr": "İtalya",
+        "es": "Italia",
+        "it": "Italia"
       },
       "city": {
         "ar": "روما",
         "de": "Rom",
-        "en": "Rome"
+        "en": "Rome",
+        "fr": "Rome",
+        "nl": "Rome",
+        "tr": "Roma",
+        "es": "Roma",
+        "it": "Roma"
       },
       "langName": {
         "ar": "Italiano",
@@ -350,12 +410,22 @@
       "name": {
         "ar": "البرتغال",
         "de": "Portugal",
-        "en": "Portugal"
+        "en": "Portugal",
+        "fr": "Portugal",
+        "nl": "Portugal",
+        "tr": "Portekiz",
+        "es": "Portugal",
+        "it": "Portogallo"
       },
       "city": {
         "ar": "لشبونة",
         "de": "Lissabon",
-        "en": "Lisbon"
+        "en": "Lisbon",
+        "fr": "Lisbonne",
+        "nl": "Lissabon",
+        "tr": "Lizbon",
+        "es": "Lisboa",
+        "it": "Lisbona"
       },
       "langName": {
         "ar": "Português",
@@ -378,12 +448,22 @@
       "name": {
         "ar": "أيرلندا",
         "de": "Irland",
-        "en": "Ireland"
+        "en": "Ireland",
+        "fr": "Irlande",
+        "nl": "Ierland",
+        "tr": "İrlanda",
+        "es": "Irlanda",
+        "it": "Irlanda"
       },
       "city": {
         "ar": "دبلن",
         "de": "Dublin",
-        "en": "Dublin"
+        "en": "Dublin",
+        "fr": "Dublin",
+        "nl": "Dublin",
+        "tr": "Dublin",
+        "es": "Dublín",
+        "it": "Dublino"
       },
       "langName": {
         "ar": "Gaeilge",
@@ -406,12 +486,22 @@
       "name": {
         "ar": "الدنمارك",
         "de": "Dänemark",
-        "en": "Denmark"
+        "en": "Denmark",
+        "fr": "Danemark",
+        "nl": "Denemarken",
+        "tr": "Danimarka",
+        "es": "Dinamarca",
+        "it": "Danimarca"
       },
       "city": {
         "ar": "كوبنهاغن",
         "de": "Kopenhagen",
-        "en": "Copenhagen"
+        "en": "Copenhagen",
+        "fr": "Copenhague",
+        "nl": "Kopenhagen",
+        "tr": "Kopenhag",
+        "es": "Copenhague",
+        "it": "Copenaghen"
       },
       "langName": {
         "ar": "Dansk",
@@ -434,12 +524,22 @@
       "name": {
         "ar": "النرويج",
         "de": "Norwegen",
-        "en": "Norway"
+        "en": "Norway",
+        "fr": "Norvège",
+        "nl": "Noorwegen",
+        "tr": "Norveç",
+        "es": "Noruega",
+        "it": "Norvegia"
       },
       "city": {
         "ar": "أوسلو",
         "de": "Oslo",
-        "en": "Oslo"
+        "en": "Oslo",
+        "fr": "Oslo",
+        "nl": "Oslo",
+        "tr": "Oslo",
+        "es": "Oslo",
+        "it": "Oslo"
       },
       "langName": {
         "ar": "Norsk",
@@ -462,12 +562,22 @@
       "name": {
         "ar": "السويد",
         "de": "Schweden",
-        "en": "Sweden"
+        "en": "Sweden",
+        "fr": "Suède",
+        "nl": "Zweden",
+        "tr": "İsveç",
+        "es": "Suecia",
+        "it": "Svezia"
       },
       "city": {
         "ar": "ستوكهولم",
         "de": "Stockholm",
-        "en": "Stockholm"
+        "en": "Stockholm",
+        "fr": "Stockholm",
+        "nl": "Stockholm",
+        "tr": "Stockholm",
+        "es": "Estocolmo",
+        "it": "Stoccolma"
       },
       "langName": {
         "ar": "Svenska",
@@ -490,12 +600,22 @@
       "name": {
         "ar": "فنلندا",
         "de": "Finnland",
-        "en": "Finland"
+        "en": "Finland",
+        "fr": "Finlande",
+        "nl": "Finland",
+        "tr": "Finlandiya",
+        "es": "Finlandia",
+        "it": "Finlandia"
       },
       "city": {
         "ar": "هلسنكي",
         "de": "Helsinki",
-        "en": "Helsinki"
+        "en": "Helsinki",
+        "fr": "Helsinki",
+        "nl": "Helsinki",
+        "tr": "Helsinki",
+        "es": "Helsinki",
+        "it": "Helsinki"
       },
       "langName": {
         "ar": "Suomi",
@@ -518,12 +638,22 @@
       "name": {
         "ar": "إستونيا",
         "de": "Estland",
-        "en": "Estonia"
+        "en": "Estonia",
+        "fr": "Estonie",
+        "nl": "Estland",
+        "tr": "Estonya",
+        "es": "Estonia",
+        "it": "Estonia"
       },
       "city": {
         "ar": "تالين",
         "de": "Tallinn",
-        "en": "Tallinn"
+        "en": "Tallinn",
+        "fr": "Tallinn",
+        "nl": "Tallinn",
+        "tr": "Tallinn",
+        "es": "Tallin",
+        "it": "Tallinn"
       },
       "langName": {
         "ar": "Eesti",
@@ -546,12 +676,22 @@
       "name": {
         "ar": "لاتفيا",
         "de": "Lettland",
-        "en": "Latvia"
+        "en": "Latvia",
+        "fr": "Lettonie",
+        "nl": "Letland",
+        "tr": "Letonya",
+        "es": "Letonia",
+        "it": "Lettonia"
       },
       "city": {
         "ar": "ريغا",
         "de": "Riga",
-        "en": "Riga"
+        "en": "Riga",
+        "fr": "Riga",
+        "nl": "Riga",
+        "tr": "Riga",
+        "es": "Riga",
+        "it": "Riga"
       },
       "langName": {
         "ar": "Latviešu",
@@ -574,12 +714,22 @@
       "name": {
         "ar": "ليتوانيا",
         "de": "Litauen",
-        "en": "Lithuania"
+        "en": "Lithuania",
+        "fr": "Lituanie",
+        "nl": "Litouwen",
+        "tr": "Litvanya",
+        "es": "Lituania",
+        "it": "Lituania"
       },
       "city": {
         "ar": "فيلنيوس",
         "de": "Vilnius",
-        "en": "Vilnius"
+        "en": "Vilnius",
+        "fr": "Vilnius",
+        "nl": "Vilnius",
+        "tr": "Vilnius",
+        "es": "Vilna",
+        "it": "Vilnius"
       },
       "langName": {
         "ar": "Lietuvių",
@@ -602,12 +752,22 @@
       "name": {
         "ar": "بولندا",
         "de": "Polen",
-        "en": "Poland"
+        "en": "Poland",
+        "fr": "Pologne",
+        "nl": "Polen",
+        "tr": "Polonya",
+        "es": "Polonia",
+        "it": "Polonia"
       },
       "city": {
         "ar": "وارسو",
         "de": "Warschau",
-        "en": "Warsaw"
+        "en": "Warsaw",
+        "fr": "Varsovie",
+        "nl": "Warschau",
+        "tr": "Varşova",
+        "es": "Varsovia",
+        "it": "Varsavia"
       },
       "langName": {
         "ar": "Polski",
@@ -629,12 +789,22 @@
       "name": {
         "ar": "التشيك",
         "de": "Tschechien",
-        "en": "Czechia"
+        "en": "Czechia",
+        "fr": "Tchéquie",
+        "nl": "Tsjechië",
+        "tr": "Çekya",
+        "es": "Chequia",
+        "it": "Cechia"
       },
       "city": {
         "ar": "براغ",
         "de": "Prag",
-        "en": "Prague"
+        "en": "Prague",
+        "fr": "Prague",
+        "nl": "Praag",
+        "tr": "Prag",
+        "es": "Praga",
+        "it": "Praga"
       },
       "langName": {
         "ar": "Čeština",
@@ -657,12 +827,22 @@
       "name": {
         "ar": "سلوفاكيا",
         "de": "Slowakei",
-        "en": "Slovakia"
+        "en": "Slovakia",
+        "fr": "Slovaquie",
+        "nl": "Slowakije",
+        "tr": "Slovakya",
+        "es": "Eslovaquia",
+        "it": "Slovacchia"
       },
       "city": {
         "ar": "براتيسلافا",
         "de": "Bratislava",
-        "en": "Bratislava"
+        "en": "Bratislava",
+        "fr": "Bratislava",
+        "nl": "Bratislava",
+        "tr": "Bratislava",
+        "es": "Bratislava",
+        "it": "Bratislava"
       },
       "langName": {
         "ar": "Slovenčina",
@@ -685,12 +865,22 @@
       "name": {
         "ar": "المجر",
         "de": "Ungarn",
-        "en": "Hungary"
+        "en": "Hungary",
+        "fr": "Hongrie",
+        "nl": "Hongarije",
+        "tr": "Macaristan",
+        "es": "Hungría",
+        "it": "Ungheria"
       },
       "city": {
         "ar": "بودابست",
         "de": "Budapest",
-        "en": "Budapest"
+        "en": "Budapest",
+        "fr": "Budapest",
+        "nl": "Boedapest",
+        "tr": "Budapeşte",
+        "es": "Budapest",
+        "it": "Budapest"
       },
       "langName": {
         "ar": "Magyar",
@@ -713,12 +903,22 @@
       "name": {
         "ar": "رومانيا",
         "de": "Rumänien",
-        "en": "Romania"
+        "en": "Romania",
+        "fr": "Roumanie",
+        "nl": "Roemenië",
+        "tr": "Romanya",
+        "es": "Rumanía",
+        "it": "Romania"
       },
       "city": {
         "ar": "بوخارست",
         "de": "Bukarest",
-        "en": "Bucharest"
+        "en": "Bucharest",
+        "fr": "Bucarest",
+        "nl": "Boekarest",
+        "tr": "Bükreş",
+        "es": "Bucarest",
+        "it": "Bucarest"
       },
       "langName": {
         "ar": "Română",
@@ -741,12 +941,22 @@
       "name": {
         "ar": "بلغاريا",
         "de": "Bulgarien",
-        "en": "Bulgaria"
+        "en": "Bulgaria",
+        "fr": "Bulgarie",
+        "nl": "Bulgarije",
+        "tr": "Bulgaristan",
+        "es": "Bulgaria",
+        "it": "Bulgaria"
       },
       "city": {
         "ar": "صوفيا",
         "de": "Sofia",
-        "en": "Sofia"
+        "en": "Sofia",
+        "fr": "Sofia",
+        "nl": "Sofia",
+        "tr": "Sofya",
+        "es": "Sofía",
+        "it": "Sofia"
       },
       "langName": {
         "ar": "Български",
@@ -769,12 +979,22 @@
       "name": {
         "ar": "كرواتيا",
         "de": "Kroatien",
-        "en": "Croatia"
+        "en": "Croatia",
+        "fr": "Croatie",
+        "nl": "Kroatië",
+        "tr": "Hırvatistan",
+        "es": "Croacia",
+        "it": "Croazia"
       },
       "city": {
         "ar": "زغرب",
         "de": "Zagreb",
-        "en": "Zagreb"
+        "en": "Zagreb",
+        "fr": "Zagreb",
+        "nl": "Zagreb",
+        "tr": "Zagreb",
+        "es": "Zagreb",
+        "it": "Zagabria"
       },
       "langName": {
         "ar": "Hrvatski",
@@ -797,12 +1017,22 @@
       "name": {
         "ar": "سلوفينيا",
         "de": "Slowenien",
-        "en": "Slovenia"
+        "en": "Slovenia",
+        "fr": "Slovénie",
+        "nl": "Slovenië",
+        "tr": "Slovenya",
+        "es": "Eslovenia",
+        "it": "Slovenia"
       },
       "city": {
         "ar": "ليوبليانا",
         "de": "Ljubljana",
-        "en": "Ljubljana"
+        "en": "Ljubljana",
+        "fr": "Ljubljana",
+        "nl": "Ljubljana",
+        "tr": "Ljubljana",
+        "es": "Liubliana",
+        "it": "Lubiana"
       },
       "langName": {
         "ar": "Slovenščina",
@@ -825,12 +1055,22 @@
       "name": {
         "ar": "اليونان",
         "de": "Griechenland",
-        "en": "Greece"
+        "en": "Greece",
+        "fr": "Grèce",
+        "nl": "Griekenland",
+        "tr": "Yunanistan",
+        "es": "Grecia",
+        "it": "Grecia"
       },
       "city": {
         "ar": "أثينا",
         "de": "Athen",
-        "en": "Athens"
+        "en": "Athens",
+        "fr": "Athènes",
+        "nl": "Athene",
+        "tr": "Atina",
+        "es": "Atenas",
+        "it": "Atene"
       },
       "langName": {
         "ar": "Ελληνικά",
@@ -853,12 +1093,22 @@
       "name": {
         "ar": "مالطا",
         "de": "Malta",
-        "en": "Malta"
+        "en": "Malta",
+        "fr": "Malte",
+        "nl": "Malta",
+        "tr": "Malta",
+        "es": "Malta",
+        "it": "Malta"
       },
       "city": {
         "ar": "فاليتا",
         "de": "Valletta",
-        "en": "Valletta"
+        "en": "Valletta",
+        "fr": "La Valette",
+        "nl": "Valletta",
+        "tr": "Valletta",
+        "es": "La Valeta",
+        "it": "La Valletta"
       },
       "langName": {
         "ar": "Malti",
@@ -880,12 +1130,22 @@
       "name": {
         "ar": "تركيا",
         "de": "Türkei",
-        "en": "Turkey"
+        "en": "Turkey",
+        "fr": "Turquie",
+        "nl": "Turkije",
+        "tr": "Türkiye",
+        "es": "Turquía",
+        "it": "Turchia"
       },
       "city": {
         "ar": "إسطنبول",
         "de": "Istanbul",
-        "en": "Istanbul"
+        "en": "Istanbul",
+        "fr": "Istanbul",
+        "nl": "Istanbul",
+        "tr": "İstanbul",
+        "es": "Estambul",
+        "it": "Istanbul"
       },
       "langName": {
         "ar": "Türkçe",
@@ -908,12 +1168,22 @@
       "name": {
         "ar": "بلجيكا",
         "de": "Belgien",
-        "en": "Belgium"
+        "en": "Belgium",
+        "fr": "Belgique",
+        "nl": "België",
+        "tr": "Belçika",
+        "es": "Bélgica",
+        "it": "Belgio"
       },
       "city": {
         "ar": "بروكسل",
         "de": "Brüssel",
-        "en": "Brussels"
+        "en": "Brussels",
+        "fr": "Bruxelles",
+        "nl": "Brussel",
+        "tr": "Brüksel",
+        "es": "Bruselas",
+        "it": "Bruxelles"
       },
       "langName": {
         "ar": "Français / Nederlands",
@@ -936,12 +1206,22 @@
       "name": {
         "ar": "النمسا",
         "de": "Österreich",
-        "en": "Austria"
+        "en": "Austria",
+        "fr": "Autriche",
+        "nl": "Oostenrijk",
+        "tr": "Avusturya",
+        "es": "Austria",
+        "it": "Austria"
       },
       "city": {
         "ar": "فيينا",
         "de": "Wien",
-        "en": "Vienna"
+        "en": "Vienna",
+        "fr": "Vienne",
+        "nl": "Wenen",
+        "tr": "Viyana",
+        "es": "Viena",
+        "it": "Vienna"
       },
       "langName": {
         "ar": "Deutsch",
@@ -964,12 +1244,22 @@
       "name": {
         "ar": "سويسرا",
         "de": "Schweiz",
-        "en": "Switzerland"
+        "en": "Switzerland",
+        "fr": "Suisse",
+        "nl": "Zwitserland",
+        "tr": "İsviçre",
+        "es": "Suiza",
+        "it": "Svizzera"
       },
       "city": {
         "ar": "زيورخ",
         "de": "Zürich",
-        "en": "Zurich"
+        "en": "Zurich",
+        "fr": "Zurich",
+        "nl": "Zürich",
+        "tr": "Zürih",
+        "es": "Zúrich",
+        "it": "Zurigo"
       },
       "langName": {
         "ar": "Deutsch / FR",
@@ -992,12 +1282,22 @@
       "name": {
         "ar": "السعودية",
         "de": "Saudi-Arabien",
-        "en": "Saudi Arabia"
+        "en": "Saudi Arabia",
+        "fr": "Arabie saoudite",
+        "nl": "Saoedi-Arabië",
+        "tr": "Suudi Arabistan",
+        "es": "Arabia Saudí",
+        "it": "Arabia Saudita"
       },
       "city": {
         "ar": "الرياض",
         "de": "Riad",
-        "en": "Riyadh"
+        "en": "Riyadh",
+        "fr": "Riyad",
+        "nl": "Riyad",
+        "tr": "Riyad",
+        "es": "Riad",
+        "it": "Riad"
       },
       "langName": {
         "ar": "العربية",
@@ -1021,12 +1321,22 @@
       "name": {
         "ar": "الإمارات العربية المتحدة",
         "de": "VAE",
-        "en": "United Arab Emirates"
+        "en": "United Arab Emirates",
+        "fr": "Émirats arabes unis",
+        "nl": "Verenigde Arabische Emiraten",
+        "tr": "Birleşik Arap Emirlikleri",
+        "es": "Emiratos Árabes Unidos",
+        "it": "Emirati Arabi Uniti"
       },
       "city": {
         "ar": "أبوظبي / دبي",
         "de": "Abu Dhabi / Dubai",
-        "en": "Abu Dhabi / Dubai"
+        "en": "Abu Dhabi / Dubai",
+        "fr": "Abou Dabi · Dubaï",
+        "nl": "Abu Dhabi · Dubai",
+        "tr": "Abu Dabi · Dubai",
+        "es": "Abu Dabi · Dubái",
+        "it": "Abu Dhabi · Dubai"
       },
       "langName": {
         "ar": "العربية",
@@ -1049,12 +1359,22 @@
       "name": {
         "ar": "قطر",
         "de": "Katar",
-        "en": "Qatar"
+        "en": "Qatar",
+        "fr": "Qatar",
+        "nl": "Qatar",
+        "tr": "Katar",
+        "es": "Catar",
+        "it": "Qatar"
       },
       "city": {
         "ar": "الدوحة",
         "de": "Doha",
-        "en": "Doha"
+        "en": "Doha",
+        "fr": "Doha",
+        "nl": "Doha",
+        "tr": "Doha",
+        "es": "Doha",
+        "it": "Doha"
       },
       "langName": {
         "ar": "العربية",
@@ -1077,12 +1397,22 @@
       "name": {
         "ar": "الكويت",
         "de": "Kuwait",
-        "en": "Kuwait"
+        "en": "Kuwait",
+        "fr": "Koweït",
+        "nl": "Koeweit",
+        "tr": "Kuveyt",
+        "es": "Kuwait",
+        "it": "Kuwait"
       },
       "city": {
         "ar": "مدينة الكويت",
         "de": "Kuwait-Stadt",
-        "en": "Kuwait City"
+        "en": "Kuwait City",
+        "fr": "Koweït (ville)",
+        "nl": "Koeweit-Stad",
+        "tr": "Kuveyt Şehri",
+        "es": "Kuwait (ciudad)",
+        "it": "Kuwait City"
       },
       "langName": {
         "ar": "العربية",
@@ -1105,12 +1435,22 @@
       "name": {
         "ar": "البحرين",
         "de": "Bahrain",
-        "en": "Bahrain"
+        "en": "Bahrain",
+        "fr": "Bahreïn",
+        "nl": "Bahrein",
+        "tr": "Bahreyn",
+        "es": "Baréin",
+        "it": "Bahrein"
       },
       "city": {
         "ar": "المنامة",
         "de": "Manama",
-        "en": "Manama"
+        "en": "Manama",
+        "fr": "Manama",
+        "nl": "Manama",
+        "tr": "Manama",
+        "es": "Manama",
+        "it": "Manama"
       },
       "langName": {
         "ar": "العربية",
@@ -1133,12 +1473,22 @@
       "name": {
         "ar": "عُمان",
         "de": "Oman",
-        "en": "Oman"
+        "en": "Oman",
+        "fr": "Oman",
+        "nl": "Oman",
+        "tr": "Umman",
+        "es": "Omán",
+        "it": "Oman"
       },
       "city": {
         "ar": "مسقط",
         "de": "Maskat",
-        "en": "Muscat"
+        "en": "Muscat",
+        "fr": "Mascate",
+        "nl": "Masqat",
+        "tr": "Maskat",
+        "es": "Mascate",
+        "it": "Mascate"
       },
       "langName": {
         "ar": "العربية",
@@ -1161,12 +1511,22 @@
       "name": {
         "ar": "الأردن",
         "de": "Jordanien",
-        "en": "Jordan"
+        "en": "Jordan",
+        "fr": "Jordanie",
+        "nl": "Jordanië",
+        "tr": "Ürdün",
+        "es": "Jordania",
+        "it": "Giordania"
       },
       "city": {
         "ar": "عمّان",
         "de": "Amman",
-        "en": "Amman"
+        "en": "Amman",
+        "fr": "Amman",
+        "nl": "Amman",
+        "tr": "Amman",
+        "es": "Ammán",
+        "it": "Amman"
       },
       "langName": {
         "ar": "العربية",
@@ -1189,12 +1549,22 @@
       "name": {
         "ar": "لبنان",
         "de": "Libanon",
-        "en": "Lebanon"
+        "en": "Lebanon",
+        "fr": "Liban",
+        "nl": "Libanon",
+        "tr": "Lübnan",
+        "es": "Líbano",
+        "it": "Libano"
       },
       "city": {
         "ar": "بيروت",
         "de": "Beirut",
-        "en": "Beirut"
+        "en": "Beirut",
+        "fr": "Beyrouth",
+        "nl": "Beiroet",
+        "tr": "Beyrut",
+        "es": "Beirut",
+        "it": "Beirut"
       },
       "langName": {
         "ar": "العربية",
@@ -1218,12 +1588,22 @@
       "name": {
         "ar": "سوريا",
         "de": "Syrien",
-        "en": "Syria"
+        "en": "Syria",
+        "fr": "Syrie",
+        "nl": "Syrië",
+        "tr": "Suriye",
+        "es": "Siria",
+        "it": "Siria"
       },
       "city": {
         "ar": "دمشق",
         "de": "Damaskus",
-        "en": "Damascus"
+        "en": "Damascus",
+        "fr": "Damas",
+        "nl": "Damascus",
+        "tr": "Şam",
+        "es": "Damasco",
+        "it": "Damasco"
       },
       "langName": {
         "ar": "العربية AR · SYP + KU",
@@ -1251,12 +1631,22 @@
       "name": {
         "ar": "العراق",
         "de": "Irak",
-        "en": "Iraq"
+        "en": "Iraq",
+        "fr": "Irak",
+        "nl": "Irak",
+        "tr": "Irak",
+        "es": "Irak",
+        "it": "Iraq"
       },
       "city": {
         "ar": "بغداد",
         "de": "Bagdad",
-        "en": "Baghdad"
+        "en": "Baghdad",
+        "fr": "Bagdad",
+        "nl": "Bagdad",
+        "tr": "Bağdat",
+        "es": "Bagdad",
+        "it": "Baghdad"
       },
       "langName": {
         "ar": "العربية AR · IQD",
@@ -1283,12 +1673,22 @@
       "name": {
         "ar": "العراق — إقليم كردستان",
         "de": "Irak — Region Kurdistan",
-        "en": "Iraq — Kurdistan Region"
+        "en": "Iraq — Kurdistan Region",
+        "fr": "Irak — région du Kurdistan",
+        "nl": "Irak — Koerdische regio",
+        "tr": "Irak — Kürdistan Bölgesi",
+        "es": "Irak — región del Kurdistán",
+        "it": "Iraq — regione del Kurdistan"
       },
       "city": {
         "ar": "أربيل",
         "de": "Erbil",
-        "en": "Erbil"
+        "en": "Erbil",
+        "fr": "Erbil",
+        "nl": "Erbil",
+        "tr": "Erbil",
+        "es": "Erbil",
+        "it": "Erbil"
       },
       "langName": {
         "ar": "کوردیی ناوەندی (سۆرانی)",
@@ -1311,12 +1711,22 @@
       "name": {
         "ar": "مصر",
         "de": "Ägypten",
-        "en": "Egypt"
+        "en": "Egypt",
+        "fr": "Égypte",
+        "nl": "Egypte",
+        "tr": "Mısır",
+        "es": "Egipto",
+        "it": "Egitto"
       },
       "city": {
         "ar": "القاهرة",
         "de": "Kairo",
-        "en": "Cairo"
+        "en": "Cairo",
+        "fr": "Le Caire",
+        "nl": "Caïro",
+        "tr": "Kahire",
+        "es": "El Cairo",
+        "it": "Il Cairo"
       },
       "langName": {
         "ar": "العربية",
@@ -1339,12 +1749,22 @@
       "name": {
         "ar": "المغرب",
         "de": "Marokko",
-        "en": "Morocco"
+        "en": "Morocco",
+        "fr": "Maroc",
+        "nl": "Marokko",
+        "tr": "Fas",
+        "es": "Marruecos",
+        "it": "Marocco"
       },
       "city": {
         "ar": "الرباط",
         "de": "Rabat",
-        "en": "Rabat"
+        "en": "Rabat",
+        "fr": "Rabat",
+        "nl": "Rabat",
+        "tr": "Rabat",
+        "es": "Rabat",
+        "it": "Rabat"
       },
       "langName": {
         "ar": "العربية",
@@ -1367,12 +1787,22 @@
       "name": {
         "ar": "الجزائر",
         "de": "Algerien",
-        "en": "Algeria"
+        "en": "Algeria",
+        "fr": "Algérie",
+        "nl": "Algerije",
+        "tr": "Cezayir",
+        "es": "Argelia",
+        "it": "Algeria"
       },
       "city": {
         "ar": "الجزائر",
         "de": "Algier",
-        "en": "Algiers"
+        "en": "Algiers",
+        "fr": "Alger",
+        "nl": "Algiers",
+        "tr": "Cezayir",
+        "es": "Argel",
+        "it": "Algeri"
       },
       "langName": {
         "ar": "العربية",
@@ -1395,12 +1825,22 @@
       "name": {
         "ar": "تونس",
         "de": "Tunesien",
-        "en": "Tunisia"
+        "en": "Tunisia",
+        "fr": "Tunisie",
+        "nl": "Tunesië",
+        "tr": "Tunus",
+        "es": "Túnez",
+        "it": "Tunisia"
       },
       "city": {
         "ar": "تونس",
         "de": "Tunis",
-        "en": "Tunis"
+        "en": "Tunis",
+        "fr": "Tunis",
+        "nl": "Tunis",
+        "tr": "Tunus",
+        "es": "Túnez",
+        "it": "Tunisi"
       },
       "langName": {
         "ar": "العربية",
@@ -1423,12 +1863,22 @@
       "name": {
         "ar": "ليبيا",
         "de": "Libyen",
-        "en": "Libya"
+        "en": "Libya",
+        "fr": "Libye",
+        "nl": "Libië",
+        "tr": "Libya",
+        "es": "Libia",
+        "it": "Libia"
       },
       "city": {
         "ar": "طرابلس",
         "de": "Tripolis",
-        "en": "Tripoli"
+        "en": "Tripoli",
+        "fr": "Tripoli",
+        "nl": "Tripoli",
+        "tr": "Trablus",
+        "es": "Trípoli",
+        "it": "Tripoli"
       },
       "langName": {
         "ar": "العربية",
@@ -1450,12 +1900,22 @@
       "name": {
         "ar": "السودان",
         "de": "Sudan",
-        "en": "Sudan"
+        "en": "Sudan",
+        "fr": "Soudan",
+        "nl": "Soedan",
+        "tr": "Sudan",
+        "es": "Sudán",
+        "it": "Sudan"
       },
       "city": {
         "ar": "الخرطوم",
         "de": "Khartum",
-        "en": "Khartoum"
+        "en": "Khartoum",
+        "fr": "Khartoum",
+        "nl": "Khartoom",
+        "tr": "Hartum",
+        "es": "Jartum",
+        "it": "Khartum"
       },
       "langName": {
         "ar": "العربية",
@@ -1477,12 +1937,22 @@
       "name": {
         "ar": "موريتانيا",
         "de": "Mauretanien",
-        "en": "Mauritania"
+        "en": "Mauritania",
+        "fr": "Mauritanie",
+        "nl": "Mauritanië",
+        "tr": "Moritanya",
+        "es": "Mauritania",
+        "it": "Mauritania"
       },
       "city": {
         "ar": "نواكشوط",
         "de": "Nouakchott",
-        "en": "Nouakchott"
+        "en": "Nouakchott",
+        "fr": "Nouakchott",
+        "nl": "Nouakchott",
+        "tr": "Nouakchott",
+        "es": "Nuakchot",
+        "it": "Nouakchott"
       },
       "langName": {
         "ar": "العربية",
@@ -1504,12 +1974,22 @@
       "name": {
         "ar": "الصومال",
         "de": "Somalia",
-        "en": "Somalia"
+        "en": "Somalia",
+        "fr": "Somalie",
+        "nl": "Somalië",
+        "tr": "Somali",
+        "es": "Somalia",
+        "it": "Somalia"
       },
       "city": {
         "ar": "مقديشو",
         "de": "Mogadischu",
-        "en": "Mogadishu"
+        "en": "Mogadishu",
+        "fr": "Mogadiscio",
+        "nl": "Mogadishu",
+        "tr": "Mogadişu",
+        "es": "Mogadiscio",
+        "it": "Mogadiscio"
       },
       "langName": {
         "ar": "العربية",
@@ -1531,12 +2011,22 @@
       "name": {
         "ar": "جيبوتي",
         "de": "Dschibuti",
-        "en": "Djibouti"
+        "en": "Djibouti",
+        "fr": "Djibouti",
+        "nl": "Djibouti",
+        "tr": "Cibuti",
+        "es": "Yibuti",
+        "it": "Gibuti"
       },
       "city": {
         "ar": "جيبوتي",
         "de": "Dschibuti",
-        "en": "Djibouti"
+        "en": "Djibouti",
+        "fr": "Djibouti",
+        "nl": "Djibouti",
+        "tr": "Cibuti",
+        "es": "Yibuti",
+        "it": "Gibuti"
       },
       "langName": {
         "ar": "العربية",
@@ -1558,12 +2048,22 @@
       "name": {
         "ar": "جزر القمر",
         "de": "Komoren",
-        "en": "Comoros"
+        "en": "Comoros",
+        "fr": "Comores",
+        "nl": "Comoren",
+        "tr": "Komorlar",
+        "es": "Comoras",
+        "it": "Comore"
       },
       "city": {
         "ar": "موروني",
         "de": "Moroni",
-        "en": "Moroni"
+        "en": "Moroni",
+        "fr": "Moroni",
+        "nl": "Moroni",
+        "tr": "Moroni",
+        "es": "Moroni",
+        "it": "Moroni"
       },
       "langName": {
         "ar": "العربية",
@@ -1585,12 +2085,22 @@
       "name": {
         "ar": "اليمن",
         "de": "Jemen",
-        "en": "Yemen"
+        "en": "Yemen",
+        "fr": "Yémen",
+        "nl": "Jemen",
+        "tr": "Yemen",
+        "es": "Yemen",
+        "it": "Yemen"
       },
       "city": {
         "ar": "صنعاء",
         "de": "Sanaa",
-        "en": "Sanaa"
+        "en": "Sanaa",
+        "fr": "Sanaa",
+        "nl": "Sanaa",
+        "tr": "Sana",
+        "es": "Saná",
+        "it": "Sana'a"
       },
       "langName": {
         "ar": "العربية",
@@ -1612,12 +2122,22 @@
       "name": {
         "ar": "فلسطين",
         "de": "Palästina",
-        "en": "Palestine"
+        "en": "Palestine",
+        "fr": "Palestine",
+        "nl": "Palestina",
+        "tr": "Filistin",
+        "es": "Palestina",
+        "it": "Palestina"
       },
       "city": {
         "ar": "رام الله",
         "de": "Ramallah",
-        "en": "Ramallah"
+        "en": "Ramallah",
+        "fr": "Ramallah",
+        "nl": "Ramallah",
+        "tr": "Ramallah",
+        "es": "Ramala",
+        "it": "Ramallah"
       },
       "langName": {
         "ar": "العربية",
@@ -1639,12 +2159,22 @@
       "name": {
         "ar": "سوريا — كردستان",
         "de": "Syrien — Kurdistan",
-        "en": "Syria — Kurdistan"
+        "en": "Syria — Kurdistan",
+        "fr": "Syrie — Kurdistan",
+        "nl": "Syrië — Kurdistan",
+        "tr": "Suriye — Kürdistan",
+        "es": "Siria — Kurdistán",
+        "it": "Siria — Kurdistan"
       },
       "city": {
         "ar": "القامشلي",
         "de": "Al-Qamischli",
-        "en": "Qamishli"
+        "en": "Qamishli",
+        "fr": "Qamichli",
+        "nl": "Qamishli",
+        "tr": "Kamışlı",
+        "es": "Qamishli",
+        "it": "Qamishli"
       },
       "langName": {
         "ar": "Kurmancî",
