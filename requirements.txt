@@ -25,3 +25,7 @@ win10toast>=0.9
 # أدوات مساعدة
 httpx>=0.27.0
 aiofiles>=23.0.0
+
+# تحليل XML/HTML — مستورد في 35 سكربتًا داخل scripts/ ولم يكن مصرّحًا هنا
+# (build_site.py و build_lang.py و sync_locales.py تعتمد عليه في تفكيك الأجزاء)
+lxml>=5.0
