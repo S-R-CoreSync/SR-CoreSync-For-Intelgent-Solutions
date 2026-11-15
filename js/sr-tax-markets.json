@@ -1,0 +1,1684 @@
+{
+  "ui": {
+    "ar": {
+      "tab": "أوروبا والعالم العربي",
+      "subtitle": "اضغط أي دولة لترى اللغة والضريبة (VAT/BTW) والعملة — أوروبا + 22 دولة عربية · الخط الذهبي من أمستردام.",
+      "hqHint": "✦ الخط الذهبي من المقر الرئيسي — أمستردام",
+      "capital": "العاصمة / المدينة",
+      "vat": "ضريبة القيمة المضافة",
+      "types": "أنواع الشركات",
+      "currency": "العملة",
+      "tz": "المنطقة الزمنية",
+      "lang": "اللغة",
+      "invoiceHq": "المقر الرئيسي — الفوترة من هولندا (KvK / BTW-nummer هولندي).",
+      "invoicePartner": "قاعدة الفوترة مع الشركة الهولندية (S&R CoreSync B.V. — أمستردام):",
+      "disclaimer": "⚖️ بيان إرشادي — يُعتمد العرض الرسمي في الفاتورة.",
+      "download": "⬇ تحميل ملف المعلومات (Info)",
+      "cardAria": "بطاقة المعلومات الضريبية",
+      "demoNote": "البيانات للعرض التوضيحي — تُثبَّت نهائياً من مصدر ضريبي رسمي قبل النشر.",
+      "h2": "أين تعمل؟ نُحدّث اللغة والضريبة والعملة معاً"
+    },
+    "de": {
+      "tab": "Europa & Arabische Welt",
+      "subtitle": "Klicken Sie auf ein Land für Sprache, Mehrwertsteuer (VAT/USt) und Währung — Europa + 22 arabische Länder · Goldlinie von Amsterdam.",
+      "hqHint": "✦ Goldlinie vom Hauptsitz — Amsterdam",
+      "capital": "Hauptstadt / Stadt",
+      "vat": "Mehrwertsteuer",
+      "types": "Unternehmensformen",
+      "currency": "Währung",
+      "tz": "Zeitzone",
+      "lang": "Sprache",
+      "invoiceHq": "Hauptsitz — Abrechnung aus den Niederlanden (niederländische KvK / USt-IdNr.).",
+      "invoicePartner": "Rechnungsstellung über die niederländische Gesellschaft (S&R CoreSync B.V. — Amsterdam):",
+      "disclaimer": "⚖️ Orientierungsangabe — maßgeblich ist der offizielle Rechnungsbetrag.",
+      "download": "⬇ Info-Datei herunterladen",
+      "cardAria": "Steuer-Infokarte",
+      "demoNote": "Daten sind indikativ — vor Veröffentlichung wird die offizielle Steuerquelle zugrunde gelegt.",
+      "h2": "Wo arbeiten wir? Sprache, Steuer und Währung gemeinsam"
+    },
+    "en": {
+      "tab": "Europe & the Arab World",
+      "subtitle": "Tap any country for language, VAT and currency — Europe + 22 Arab countries · Golden line from Amsterdam.",
+      "hqHint": "✦ Golden line from HQ — Amsterdam",
+      "capital": "Capital / City",
+      "vat": "VAT",
+      "types": "Company types",
+      "currency": "Currency",
+      "tz": "Time zone",
+      "lang": "Language",
+      "invoiceHq": "Headquarters — invoiced from the Netherlands (Dutch KvK / BTW number).",
+      "invoicePartner": "Invoicing via the Dutch entity (S&R CoreSync B.V. — Amsterdam):",
+      "disclaimer": "⚖️ Indicative only — the official invoice amount prevails.",
+      "download": "⬇ Download info file",
+      "cardAria": "Tax info card",
+      "demoNote": "Indicative data — an official tax source is locked in before publishing.",
+      "h2": "Where do you operate? Language, tax and currency together"
+    },
+    "fr": {
+      "tab": "Europe & monde arabe",
+      "subtitle": "Cliquez sur un pays pour la langue, la TVA et la devise — Europe + 22 pays arabes · Ligne dorée depuis Amsterdam.",
+      "hqHint": "✦ Ligne dorée depuis le siège — Amsterdam",
+      "capital": "Capitale / Ville",
+      "vat": "TVA",
+      "types": "Formes juridiques",
+      "currency": "Devise",
+      "tz": "Fuseau horaire",
+      "lang": "Langue",
+      "invoiceHq": "Siège social — facturation depuis les Pays-Bas (KvK / numéro de TVA néerlandais).",
+      "invoicePartner": "Facturation via l’entité néerlandaise (S&R CoreSync B.V. — Amsterdam) :",
+      "disclaimer": "⚖️ Indicatif — le montant officiel de la facture prévaut.",
+      "download": "⬇ Télécharger la fiche info",
+      "cardAria": "Fiche d’informations fiscales",
+      "demoNote": "Données indicatives — une source fiscale officielle sera verrouillée avant publication.",
+      "h2": "Où travaillez-vous ? Langue, fiscalité et devise ensemble"
+    },
+    "nl": {
+      "tab": "Europa & de Arabische wereld",
+      "subtitle": "Tik op een land voor taal, BTW/VAT en valuta — Europa + 22 Arabische landen · Gouden lijn vanuit Amsterdam.",
+      "hqHint": "✦ Gouden lijn vanuit het hoofdkantoor — Amsterdam",
+      "capital": "Hoofdstad / stad",
+      "vat": "BTW/VAT",
+      "types": "Ondernemingsvormen",
+      "currency": "Valuta",
+      "tz": "Tijdzone",
+      "lang": "Taal",
+      "invoiceHq": "Hoofdkantoor — gefactureerd vanuit Nederland (Nederlandse KvK / BTW-nummer).",
+      "invoicePartner": "Facturering via de Nederlandse entiteit (S&R CoreSync B.V. — Amsterdam):",
+      "disclaimer": "⚖️ Indicatief — het officiële factuurbedrag is leidend.",
+      "download": "⬇ Info bestand downloaden",
+      "cardAria": "Fiscale infokaart",
+      "demoNote": "Indicatieve gegevens — vóór publicatie wordt een officiële fiscale bron vastgelegd.",
+      "h2": "Waar werkt u? Taal, belasting en valuta samen"
+    },
+    "tr": {
+      "tab": "Avrupa & Arap Dünyası",
+      "subtitle": "Dil, KDV ve para birimi için bir ülkeye dokunun — Avrupa + 22 Arap ülkesi · Amsterdam’dan altın hat.",
+      "hqHint": "✦ Merkezi Amsterdam’dan altın hat",
+      "capital": "Başkent / Şehir",
+      "vat": "KDV",
+      "types": "Şirket türleri",
+      "currency": "Para birimi",
+      "tz": "Saat dilimi",
+      "lang": "Dil",
+      "invoiceHq": "Merkez — Hollanda’dan faturalama (Hollanda KvK / BTW numarası).",
+      "invoicePartner": "Hollanda şirketi üzerinden faturalama (S&R CoreSync B.V. — Amsterdam):",
+      "disclaimer": "⚖️ Bilgilendiricidir — resmi fatura tutarı esas alınır.",
+      "download": "⬇ Bilgi dosyasını indir",
+      "cardAria": "Vergi bilgi kartı",
+      "demoNote": "Bilgilendirme amaçlıdır — yayınlanmadan önce resmi vergi kaynağı sabitlenir.",
+      "h2": "Nerede çalışıyorsunuz? Dil, vergi ve para birimi birlikte"
+    },
+    "es": {
+      "tab": "Europa y el mundo árabe",
+      "subtitle": "Toca un país para idioma, IVA/VAT y moneda — Europa + 22 países árabes · Línea dorada desde Ámsterdam.",
+      "hqHint": "✦ Línea dorada desde la sede — Ámsterdam",
+      "capital": "Capital / Ciudad",
+      "vat": "IVA/VAT",
+      "types": "Tipos de sociedad",
+      "currency": "Moneda",
+      "tz": "Zona horaria",
+      "lang": "Idioma",
+      "invoiceHq": "Sede — facturación desde Países Bajos (KvK / NIF-IVA neerlandés).",
+      "invoicePartner": "Facturación a través de la entidad neerlandesa (S&R CoreSync B.V. — Ámsterdam):",
+      "disclaimer": "⚖️ Indicativo — prevalece el importe oficial de la factura.",
+      "download": "⬇ Descargar ficha de información",
+      "cardAria": "Ficha de información fiscal",
+      "demoNote": "Datos orientativos — se fijará una fuente fiscal oficial antes de publicar.",
+      "h2": "¿Dónde opera? Idioma, impuestos y moneda juntos"
+    },
+    "it": {
+      "tab": "Europa e mondo arabo",
+      "subtitle": "Tocca un paese per lingua, IVA/VAT e valuta — Europa + 22 paesi arabi · Linea dorata da Amsterdam.",
+      "hqHint": "✦ Linea dorata dalla sede — Amsterdam",
+      "capital": "Capitale / Città",
+      "vat": "IVA/VAT",
+      "types": "Forme societarie",
+      "currency": "Valuta",
+      "tz": "Fuso orario",
+      "lang": "Lingua",
+      "invoiceHq": "Sede — fatturazione dai Paesi Bassi (KvK / partita IVA olandese).",
+      "invoicePartner": "Fatturazione tramite l’entità olandese (S&R CoreSync B.V. — Amsterdam):",
+      "disclaimer": "⚖️ Indicativo — prevale l’importo ufficiale della fattura.",
+      "download": "⬇ Scarica la scheda info",
+      "cardAria": "Scheda informazioni fiscali",
+      "demoNote": "Dati indicativi — prima della pubblicazione viene fissata una fonte fiscale ufficiale.",
+      "h2": "Dove operi? Lingua, fisco e valuta insieme"
+    }
+  },
+  "invoice": {
+    "hq": {
+      "ar": "مبيعات محلية هولندية: <b>21% BTW</b>. B2B داخل الاتحاد الأوروبي برقم VAT صحيح: <b>0% BTW Reverse Charge</b> (المادة 196). خدمات خارج الاتحاد: <b>0% BTW</b>.",
+      "de": "Niederländische Inlandsumsätze: <b>21% BTW</b>. B2B im EU-Raum mit gültiger USt-IdNr.: <b>0% Reverse Charge</b> (Art. 196). Dienstleistungen außerhalb der EU: <b>0% BTW</b>.",
+      "en": "Dutch domestic sales: <b>21% BTW</b>. EU B2B with a valid VAT ID: <b>0% Reverse Charge</b> (Art. 196). Services outside the EU: <b>0% BTW</b>."
+    },
+    "eu": {
+      "ar": "B2B داخل الاتحاد الأوروبي: <b>0% Reverse Charge</b>. خارج الاتحاد: <b>0% تصدير خدمات</b>.",
+      "de": "B2B im EU-Raum: <b>0% Reverse Charge</b>. Außerhalb der EU: <b>0% Dienstleistungsexport</b>.",
+      "en": "EU B2B: <b>0% Reverse Charge</b>. Outside the EU: <b>0% exported services</b>."
+    },
+    "non_eu": {
+      "ar": "خارج الاتحاد الأوروبي: <b>0% BTW تصدير خدمات</b> من هولندا.",
+      "de": "Außerhalb der EU: <b>0% BTW Dienstleistungsexport</b> aus den Niederlanden.",
+      "en": "Outside the EU: <b>0% BTW exported services</b> from the Netherlands."
+    }
+  },
+  "markets": {
+    "nl": {
+      "billing": "hq",
+      "hq": true,
+      "flag": "🇳🇱",
+      "cur": "EUR",
+      "vat": "21% BTW",
+      "lat": 52.37,
+      "lon": 4.9,
+      "types": [
+        "B.V.",
+        "N.V.",
+        "V.O.F",
+        "Eenmanszaak"
+      ],
+      "name": {
+        "ar": "هولندا",
+        "de": "Niederlande",
+        "en": "Netherlands"
+      },
+      "city": {
+        "ar": "أمستردام",
+        "de": "Amsterdam",
+        "en": "Amsterdam"
+      },
+      "langName": {
+        "ar": "Nederlands",
+        "de": "Niederländisch",
+        "en": "Dutch"
+      }
+    },
+    "de": {
+      "billing": "eu",
+      "flag": "🇩🇪",
+      "cur": "EUR",
+      "vat": "19% MwSt",
+      "lat": 52.52,
+      "lon": 13.4,
+      "types": [
+        "GmbH",
+        "UG",
+        "AG",
+        "GbR"
+      ],
+      "name": {
+        "ar": "ألمانيا",
+        "de": "Deutschland",
+        "en": "Germany"
+      },
+      "city": {
+        "ar": "برلين",
+        "de": "Berlin",
+        "en": "Berlin"
+      },
+      "langName": {
+        "ar": "Deutsch",
+        "de": "Deutsch",
+        "en": "German"
+      }
+    },
+    "fr": {
+      "billing": "eu",
+      "flag": "🇫🇷",
+      "cur": "EUR",
+      "vat": "20% TVA",
+      "lat": 48.86,
+      "lon": 2.35,
+      "types": [
+        "SAS",
+        "SARL",
+        "SA",
+        "EURL"
+      ],
+      "name": {
+        "ar": "فرنسا",
+        "de": "Frankreich",
+        "en": "France"
+      },
+      "city": {
+        "ar": "باريس",
+        "de": "Paris",
+        "en": "Paris"
+      },
+      "langName": {
+        "ar": "Français",
+        "de": "Französisch",
+        "en": "French"
+      }
+    },
+    "gb": {
+      "billing": "non_eu",
+      "flag": "🇬🇧",
+      "cur": "GBP",
+      "vat": "20% VAT",
+      "lat": 51.51,
+      "lon": -0.13,
+      "types": [
+        "Ltd",
+        "LLP",
+        "PLC"
+      ],
+      "name": {
+        "ar": "المملكة المتحدة",
+        "de": "Vereinigtes Königreich",
+        "en": "United Kingdom"
+      },
+      "city": {
+        "ar": "لندن",
+        "de": "London",
+        "en": "London"
+      },
+      "langName": {
+        "ar": "English",
+        "de": "Englisch",
+        "en": "English"
+      }
+    },
+    "es": {
+      "billing": "eu",
+      "flag": "🇪🇸",
+      "cur": "EUR",
+      "vat": "21% IVA",
+      "lat": 40.42,
+      "lon": -3.7,
+      "types": [
+        "S.L.",
+        "S.A.",
+        "SLNE"
+      ],
+      "name": {
+        "ar": "إسبانيا",
+        "de": "Spanien",
+        "en": "Spain"
+      },
+      "city": {
+        "ar": "مدريد",
+        "de": "Madrid",
+        "en": "Madrid"
+      },
+      "langName": {
+        "ar": "Español",
+        "de": "Spanisch",
+        "en": "Spanish"
+      }
+    },
+    "it": {
+      "billing": "eu",
+      "flag": "🇮🇹",
+      "cur": "EUR",
+      "vat": "22% IVA",
+      "lat": 41.9,
+      "lon": 12.5,
+      "types": [
+        "S.r.l.",
+        "S.p.A.",
+        "S.n.c."
+      ],
+      "name": {
+        "ar": "إيطاليا",
+        "de": "Italien",
+        "en": "Italy"
+      },
+      "city": {
+        "ar": "روما",
+        "de": "Rom",
+        "en": "Rome"
+      },
+      "langName": {
+        "ar": "Italiano",
+        "de": "Italienisch",
+        "en": "Italian"
+      }
+    },
+    "pt": {
+      "billing": "eu",
+      "flag": "🇵🇹",
+      "cur": "EUR",
+      "vat": "23% IVA",
+      "lat": 38.72,
+      "lon": -9.14,
+      "types": [
+        "Lda",
+        "SA",
+        "Unipessoal"
+      ],
+      "name": {
+        "ar": "البرتغال",
+        "de": "Portugal",
+        "en": "Portugal"
+      },
+      "city": {
+        "ar": "لشبونة",
+        "de": "Lissabon",
+        "en": "Lisbon"
+      },
+      "langName": {
+        "ar": "Português",
+        "de": "Portugiesisch",
+        "en": "Portuguese"
+      }
+    },
+    "ga": {
+      "billing": "eu",
+      "flag": "🇮🇪",
+      "cur": "EUR",
+      "vat": "23% VAT",
+      "lat": 53.35,
+      "lon": -6.26,
+      "types": [
+        "Ltd",
+        "DAC",
+        "PLC"
+      ],
+      "name": {
+        "ar": "أيرلندا",
+        "de": "Irland",
+        "en": "Ireland"
+      },
+      "city": {
+        "ar": "دبلن",
+        "de": "Dublin",
+        "en": "Dublin"
+      },
+      "langName": {
+        "ar": "Gaeilge",
+        "de": "Irisch",
+        "en": "Irish"
+      }
+    },
+    "da": {
+      "billing": "eu",
+      "flag": "🇩🇰",
+      "cur": "DKK",
+      "vat": "25% moms",
+      "lat": 55.68,
+      "lon": 12.57,
+      "types": [
+        "ApS",
+        "A/S",
+        "Enkeltmandsvirksomhed"
+      ],
+      "name": {
+        "ar": "الدنمارك",
+        "de": "Dänemark",
+        "en": "Denmark"
+      },
+      "city": {
+        "ar": "كوبنهاغن",
+        "de": "Kopenhagen",
+        "en": "Copenhagen"
+      },
+      "langName": {
+        "ar": "Dansk",
+        "de": "Dänisch",
+        "en": "Danish"
+      }
+    },
+    "no": {
+      "billing": "non_eu",
+      "flag": "🇳🇴",
+      "cur": "NOK",
+      "vat": "25% MVA",
+      "lat": 59.91,
+      "lon": 10.75,
+      "types": [
+        "AS",
+        "ASA",
+        "ENK"
+      ],
+      "name": {
+        "ar": "النرويج",
+        "de": "Norwegen",
+        "en": "Norway"
+      },
+      "city": {
+        "ar": "أوسلو",
+        "de": "Oslo",
+        "en": "Oslo"
+      },
+      "langName": {
+        "ar": "Norsk",
+        "de": "Norwegisch",
+        "en": "Norwegian"
+      }
+    },
+    "sv": {
+      "billing": "eu",
+      "flag": "🇸🇪",
+      "cur": "SEK",
+      "vat": "25% moms",
+      "lat": 59.33,
+      "lon": 18.07,
+      "types": [
+        "AB",
+        "HB",
+        "Enskild firma"
+      ],
+      "name": {
+        "ar": "السويد",
+        "de": "Schweden",
+        "en": "Sweden"
+      },
+      "city": {
+        "ar": "ستوكهولم",
+        "de": "Stockholm",
+        "en": "Stockholm"
+      },
+      "langName": {
+        "ar": "Svenska",
+        "de": "Schwedisch",
+        "en": "Swedish"
+      }
+    },
+    "fi": {
+      "billing": "eu",
+      "flag": "🇫🇮",
+      "cur": "EUR",
+      "vat": "25.5% ALV",
+      "lat": 60.17,
+      "lon": 24.94,
+      "types": [
+        "Oy",
+        "Oyj",
+        "Tmi"
+      ],
+      "name": {
+        "ar": "فنلندا",
+        "de": "Finnland",
+        "en": "Finland"
+      },
+      "city": {
+        "ar": "هلسنكي",
+        "de": "Helsinki",
+        "en": "Helsinki"
+      },
+      "langName": {
+        "ar": "Suomi",
+        "de": "Finnisch",
+        "en": "Finnish"
+      }
+    },
+    "et": {
+      "billing": "eu",
+      "flag": "🇪🇪",
+      "cur": "EUR",
+      "vat": "22% km",
+      "lat": 59.44,
+      "lon": 24.75,
+      "types": [
+        "OÜ",
+        "AS",
+        "FIE"
+      ],
+      "name": {
+        "ar": "إستونيا",
+        "de": "Estland",
+        "en": "Estonia"
+      },
+      "city": {
+        "ar": "تالين",
+        "de": "Tallinn",
+        "en": "Tallinn"
+      },
+      "langName": {
+        "ar": "Eesti",
+        "de": "Estnisch",
+        "en": "Estonian"
+      }
+    },
+    "lv": {
+      "billing": "eu",
+      "flag": "🇱🇻",
+      "cur": "EUR",
+      "vat": "21% PVN",
+      "lat": 56.95,
+      "lon": 24.11,
+      "types": [
+        "SIA",
+        "AS",
+        "IK"
+      ],
+      "name": {
+        "ar": "لاتفيا",
+        "de": "Lettland",
+        "en": "Latvia"
+      },
+      "city": {
+        "ar": "ريغا",
+        "de": "Riga",
+        "en": "Riga"
+      },
+      "langName": {
+        "ar": "Latviešu",
+        "de": "Lettisch",
+        "en": "Latvian"
+      }
+    },
+    "lt": {
+      "billing": "eu",
+      "flag": "🇱🇹",
+      "cur": "EUR",
+      "vat": "21% PVM",
+      "lat": 54.69,
+      "lon": 25.28,
+      "types": [
+        "UAB",
+        "AB",
+        "MB"
+      ],
+      "name": {
+        "ar": "ليتوانيا",
+        "de": "Litauen",
+        "en": "Lithuania"
+      },
+      "city": {
+        "ar": "فيلنيوس",
+        "de": "Vilnius",
+        "en": "Vilnius"
+      },
+      "langName": {
+        "ar": "Lietuvių",
+        "de": "Litauisch",
+        "en": "Lithuanian"
+      }
+    },
+    "pl": {
+      "billing": "eu",
+      "flag": "🇵🇱",
+      "cur": "PLN",
+      "vat": "23% VAT",
+      "lat": 52.23,
+      "lon": 21.01,
+      "types": [
+        "Sp. z o.o.",
+        "S.A.",
+        "JDG"
+      ],
+      "name": {
+        "ar": "بولندا",
+        "de": "Polen",
+        "en": "Poland"
+      },
+      "city": {
+        "ar": "وارسو",
+        "de": "Warschau",
+        "en": "Warsaw"
+      },
+      "langName": {
+        "ar": "Polski",
+        "de": "Polnisch",
+        "en": "Polish"
+      }
+    },
+    "cs": {
+      "billing": "eu",
+      "flag": "🇨🇿",
+      "cur": "CZK",
+      "vat": "21% DPH",
+      "lat": 50.08,
+      "lon": 14.44,
+      "types": [
+        "s.r.o.",
+        "a.s."
+      ],
+      "name": {
+        "ar": "التشيك",
+        "de": "Tschechien",
+        "en": "Czechia"
+      },
+      "city": {
+        "ar": "براغ",
+        "de": "Prag",
+        "en": "Prague"
+      },
+      "langName": {
+        "ar": "Čeština",
+        "de": "Tschechisch",
+        "en": "Czech"
+      }
+    },
+    "sk": {
+      "billing": "eu",
+      "flag": "🇸🇰",
+      "cur": "EUR",
+      "vat": "23% DPH",
+      "lat": 48.15,
+      "lon": 17.11,
+      "types": [
+        "s.r.o.",
+        "a.s.",
+        "živnosť"
+      ],
+      "name": {
+        "ar": "سلوفاكيا",
+        "de": "Slowakei",
+        "en": "Slovakia"
+      },
+      "city": {
+        "ar": "براتيسلافا",
+        "de": "Bratislava",
+        "en": "Bratislava"
+      },
+      "langName": {
+        "ar": "Slovenčina",
+        "de": "Slowakisch",
+        "en": "Slovak"
+      }
+    },
+    "hu": {
+      "billing": "eu",
+      "flag": "🇭🇺",
+      "cur": "HUF",
+      "vat": "27% ÁFA",
+      "lat": 47.5,
+      "lon": 19.04,
+      "types": [
+        "Kft",
+        "Zrt",
+        "Bt"
+      ],
+      "name": {
+        "ar": "المجر",
+        "de": "Ungarn",
+        "en": "Hungary"
+      },
+      "city": {
+        "ar": "بودابست",
+        "de": "Budapest",
+        "en": "Budapest"
+      },
+      "langName": {
+        "ar": "Magyar",
+        "de": "Ungarisch",
+        "en": "Hungarian"
+      }
+    },
+    "ro": {
+      "billing": "eu",
+      "flag": "🇷🇴",
+      "cur": "RON",
+      "vat": "21% TVA",
+      "lat": 44.43,
+      "lon": 26.1,
+      "types": [
+        "SRL",
+        "SA",
+        "PFA"
+      ],
+      "name": {
+        "ar": "رومانيا",
+        "de": "Rumänien",
+        "en": "Romania"
+      },
+      "city": {
+        "ar": "بوخارست",
+        "de": "Bukarest",
+        "en": "Bucharest"
+      },
+      "langName": {
+        "ar": "Română",
+        "de": "Rumänisch",
+        "en": "Romanian"
+      }
+    },
+    "bg": {
+      "billing": "eu",
+      "flag": "🇧🇬",
+      "cur": "BGN",
+      "vat": "20% DDS",
+      "lat": 42.7,
+      "lon": 23.32,
+      "types": [
+        "OOD",
+        "AD",
+        "EOOD"
+      ],
+      "name": {
+        "ar": "بلغاريا",
+        "de": "Bulgarien",
+        "en": "Bulgaria"
+      },
+      "city": {
+        "ar": "صوفيا",
+        "de": "Sofia",
+        "en": "Sofia"
+      },
+      "langName": {
+        "ar": "Български",
+        "de": "Bulgarisch",
+        "en": "Bulgarian"
+      }
+    },
+    "hr": {
+      "billing": "eu",
+      "flag": "🇭🇷",
+      "cur": "EUR",
+      "vat": "25% PDV",
+      "lat": 45.81,
+      "lon": 15.98,
+      "types": [
+        "d.o.o.",
+        "d.d.",
+        "obrt"
+      ],
+      "name": {
+        "ar": "كرواتيا",
+        "de": "Kroatien",
+        "en": "Croatia"
+      },
+      "city": {
+        "ar": "زغرب",
+        "de": "Zagreb",
+        "en": "Zagreb"
+      },
+      "langName": {
+        "ar": "Hrvatski",
+        "de": "Kroatisch",
+        "en": "Croatian"
+      }
+    },
+    "sl": {
+      "billing": "eu",
+      "flag": "🇸🇮",
+      "cur": "EUR",
+      "vat": "22% DDV",
+      "lat": 46.06,
+      "lon": 14.51,
+      "types": [
+        "d.o.o.",
+        "d.d.",
+        "s.p."
+      ],
+      "name": {
+        "ar": "سلوفينيا",
+        "de": "Slowenien",
+        "en": "Slovenia"
+      },
+      "city": {
+        "ar": "ليوبليانا",
+        "de": "Ljubljana",
+        "en": "Ljubljana"
+      },
+      "langName": {
+        "ar": "Slovenščina",
+        "de": "Slowenisch",
+        "en": "Slovenian"
+      }
+    },
+    "el": {
+      "billing": "eu",
+      "flag": "🇬🇷",
+      "cur": "EUR",
+      "vat": "24% ΦΠΑ",
+      "lat": 37.98,
+      "lon": 23.73,
+      "types": [
+        "ΙΚΕ",
+        "ΑΕ",
+        "ΕΠΕ"
+      ],
+      "name": {
+        "ar": "اليونان",
+        "de": "Griechenland",
+        "en": "Greece"
+      },
+      "city": {
+        "ar": "أثينا",
+        "de": "Athen",
+        "en": "Athens"
+      },
+      "langName": {
+        "ar": "Ελληνικά",
+        "de": "Griechisch",
+        "en": "Greek"
+      }
+    },
+    "mt": {
+      "billing": "eu",
+      "flag": "🇲🇹",
+      "cur": "EUR",
+      "vat": "18% VAT",
+      "lat": 35.9,
+      "lon": 14.51,
+      "types": [
+        "Ltd",
+        "PLC",
+        "Partnership"
+      ],
+      "name": {
+        "ar": "مالطا",
+        "de": "Malta",
+        "en": "Malta"
+      },
+      "city": {
+        "ar": "فاليتا",
+        "de": "Valletta",
+        "en": "Valletta"
+      },
+      "langName": {
+        "ar": "Malti",
+        "de": "Maltesisch",
+        "en": "Maltese"
+      }
+    },
+    "tr": {
+      "billing": "non_eu",
+      "flag": "🇹🇷",
+      "cur": "TRY",
+      "vat": "20% KDV",
+      "lat": 41.01,
+      "lon": 28.98,
+      "types": [
+        "A.Ş.",
+        "Ltd. Şti."
+      ],
+      "name": {
+        "ar": "تركيا",
+        "de": "Türkei",
+        "en": "Turkey"
+      },
+      "city": {
+        "ar": "إسطنبول",
+        "de": "Istanbul",
+        "en": "Istanbul"
+      },
+      "langName": {
+        "ar": "Türkçe",
+        "de": "Türkisch",
+        "en": "Turkish"
+      }
+    },
+    "be": {
+      "billing": "eu",
+      "flag": "🇧🇪",
+      "cur": "EUR",
+      "vat": "21% TVA",
+      "lat": 50.85,
+      "lon": 4.35,
+      "types": [
+        "BV/SRL",
+        "NV/SA",
+        "CV/SComm"
+      ],
+      "name": {
+        "ar": "بلجيكا",
+        "de": "Belgien",
+        "en": "Belgium"
+      },
+      "city": {
+        "ar": "بروكسل",
+        "de": "Brüssel",
+        "en": "Brussels"
+      },
+      "langName": {
+        "ar": "Français / Nederlands",
+        "de": "Französisch / Niederländisch",
+        "en": "French / Dutch"
+      }
+    },
+    "at": {
+      "billing": "eu",
+      "flag": "🇦🇹",
+      "cur": "EUR",
+      "vat": "20% USt",
+      "lat": 48.21,
+      "lon": 16.37,
+      "types": [
+        "GmbH",
+        "AG",
+        "OG"
+      ],
+      "name": {
+        "ar": "النمسا",
+        "de": "Österreich",
+        "en": "Austria"
+      },
+      "city": {
+        "ar": "فيينا",
+        "de": "Wien",
+        "en": "Vienna"
+      },
+      "langName": {
+        "ar": "Deutsch",
+        "de": "Deutsch",
+        "en": "German"
+      }
+    },
+    "ch": {
+      "billing": "non_eu",
+      "flag": "🇨🇭",
+      "cur": "CHF",
+      "vat": "8.1% MWST",
+      "lat": 47.38,
+      "lon": 8.54,
+      "types": [
+        "GmbH",
+        "AG",
+        "Einzelfirma"
+      ],
+      "name": {
+        "ar": "سويسرا",
+        "de": "Schweiz",
+        "en": "Switzerland"
+      },
+      "city": {
+        "ar": "زيورخ",
+        "de": "Zürich",
+        "en": "Zurich"
+      },
+      "langName": {
+        "ar": "Deutsch / FR",
+        "de": "Deutsch / FR",
+        "en": "German / French"
+      }
+    },
+    "sa": {
+      "billing": "non_eu",
+      "flag": "🇸🇦",
+      "cur": "SAR",
+      "vat": "15% VAT",
+      "lat": 24.71,
+      "lon": 46.68,
+      "types": [
+        "LLC (ذ.م.م)",
+        "JSC",
+        "GP"
+      ],
+      "name": {
+        "ar": "السعودية",
+        "de": "Saudi-Arabien",
+        "en": "Saudi Arabia"
+      },
+      "city": {
+        "ar": "الرياض",
+        "de": "Riad",
+        "en": "Riyadh"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "ae": {
+      "billing": "non_eu",
+      "flag": "🇦🇪",
+      "cur": "AED",
+      "vat": "5% VAT",
+      "lat": 24.45,
+      "lon": 54.38,
+      "types": [
+        "LLC",
+        "FZCO",
+        "FZE",
+        "PJSC"
+      ],
+      "name": {
+        "ar": "الإمارات العربية المتحدة",
+        "de": "VAE",
+        "en": "United Arab Emirates"
+      },
+      "city": {
+        "ar": "أبوظبي / دبي",
+        "de": "Abu Dhabi / Dubai",
+        "en": "Abu Dhabi / Dubai"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "qa": {
+      "billing": "non_eu",
+      "flag": "🇶🇦",
+      "cur": "QAR",
+      "vat": "0% (لا VAT)",
+      "lat": 25.29,
+      "lon": 51.53,
+      "types": [
+        "WLL",
+        "QSC",
+        "SPC"
+      ],
+      "name": {
+        "ar": "قطر",
+        "de": "Katar",
+        "en": "Qatar"
+      },
+      "city": {
+        "ar": "الدوحة",
+        "de": "Doha",
+        "en": "Doha"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "kw": {
+      "billing": "non_eu",
+      "flag": "🇰🇼",
+      "cur": "KWD",
+      "vat": "0% (لا VAT)",
+      "lat": 29.38,
+      "lon": 47.99,
+      "types": [
+        "WLL",
+        "KSC",
+        "KSC(c)"
+      ],
+      "name": {
+        "ar": "الكويت",
+        "de": "Kuwait",
+        "en": "Kuwait"
+      },
+      "city": {
+        "ar": "مدينة الكويت",
+        "de": "Kuwait-Stadt",
+        "en": "Kuwait City"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "bh": {
+      "billing": "non_eu",
+      "flag": "🇧🇭",
+      "cur": "BHD",
+      "vat": "10% VAT",
+      "lat": 26.23,
+      "lon": 50.59,
+      "types": [
+        "WLL",
+        "BSC",
+        "SPC"
+      ],
+      "name": {
+        "ar": "البحرين",
+        "de": "Bahrain",
+        "en": "Bahrain"
+      },
+      "city": {
+        "ar": "المنامة",
+        "de": "Manama",
+        "en": "Manama"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "om": {
+      "billing": "non_eu",
+      "flag": "🇴🇲",
+      "cur": "OMR",
+      "vat": "5% VAT",
+      "lat": 23.59,
+      "lon": 58.41,
+      "types": [
+        "LLC",
+        "SAOC",
+        "SAOG"
+      ],
+      "name": {
+        "ar": "عُمان",
+        "de": "Oman",
+        "en": "Oman"
+      },
+      "city": {
+        "ar": "مسقط",
+        "de": "Maskat",
+        "en": "Muscat"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "jo": {
+      "billing": "non_eu",
+      "flag": "🇯🇴",
+      "cur": "JOD",
+      "vat": "16% GST",
+      "lat": 31.95,
+      "lon": 35.93,
+      "types": [
+        "LLC",
+        "PLC",
+        "SPC"
+      ],
+      "name": {
+        "ar": "الأردن",
+        "de": "Jordanien",
+        "en": "Jordan"
+      },
+      "city": {
+        "ar": "عمّان",
+        "de": "Amman",
+        "en": "Amman"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "lb": {
+      "billing": "non_eu",
+      "flag": "🇱🇧",
+      "cur": "LBP",
+      "vat": "11% VAT",
+      "lat": 33.89,
+      "lon": 35.5,
+      "types": [
+        "SARL",
+        "SAL",
+        "SNC"
+      ],
+      "name": {
+        "ar": "لبنان",
+        "de": "Libanon",
+        "en": "Lebanon"
+      },
+      "city": {
+        "ar": "بيروت",
+        "de": "Beirut",
+        "en": "Beirut"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "sy": {
+      "billing": "non_eu",
+      "flag": "🇸🇾",
+      "cur": "SYP",
+      "vat": "0% (استثناء)",
+      "lat": 33.51,
+      "lon": 36.29,
+      "types": [
+        "SARL",
+        "SAL",
+        "FZC"
+      ],
+      "ku": true,
+      "name": {
+        "ar": "سوريا",
+        "de": "Syrien",
+        "en": "Syria"
+      },
+      "city": {
+        "ar": "دمشق",
+        "de": "Damaskus",
+        "en": "Damascus"
+      },
+      "langName": {
+        "ar": "العربية AR · SYP + KU",
+        "de": "Arabisch + Kurdisch",
+        "en": "Arabic + Kurdish"
+      },
+      "note": {
+        "ar": "دعم لغوي: العربية AR · SYP + الكردية KU.",
+        "de": "Sprachsupport: Arabisch AR · SYP + Kurdisch KU.",
+        "en": "Language support: Arabic AR · SYP + Kurdish KU."
+      }
+    },
+    "iq": {
+      "billing": "non_eu",
+      "flag": "🇮🇶",
+      "cur": "IQD",
+      "vat": "لا VAT شامل (مبيعات/جمركية)",
+      "lat": 33.31,
+      "lon": 44.36,
+      "types": [
+        "LLC",
+        "JSC",
+        "SPC"
+      ],
+      "name": {
+        "ar": "العراق",
+        "de": "Irak",
+        "en": "Iraq"
+      },
+      "city": {
+        "ar": "بغداد",
+        "de": "Bagdad",
+        "en": "Baghdad"
+      },
+      "langName": {
+        "ar": "العربية AR · IQD",
+        "de": "Arabisch AR · IQD",
+        "en": "Arabic AR · IQD"
+      },
+      "note": {
+        "ar": "منفصلة عن إقليم كردستان (CKB · أربيل).",
+        "de": "Getrennt von der Region Kurdistan (CKB · Erbil).",
+        "en": "Separate from the Kurdistan Region (CKB · Erbil)."
+      }
+    },
+    "ckb": {
+      "billing": "non_eu",
+      "flag": "🏳️",
+      "cur": "IQD",
+      "vat": "0%",
+      "lat": 36.19,
+      "lon": 44.01,
+      "types": [
+        "LLC",
+        "JSC"
+      ],
+      "name": {
+        "ar": "العراق — إقليم كردستان",
+        "de": "Irak — Region Kurdistan",
+        "en": "Iraq — Kurdistan Region"
+      },
+      "city": {
+        "ar": "أربيل",
+        "de": "Erbil",
+        "en": "Erbil"
+      },
+      "langName": {
+        "ar": "کوردیی ناوەندی (سۆرانی)",
+        "de": "Sorani",
+        "en": "Sorani"
+      }
+    },
+    "eg": {
+      "billing": "non_eu",
+      "flag": "🇪🇬",
+      "cur": "EGP",
+      "vat": "14% VAT",
+      "lat": 30.04,
+      "lon": 31.24,
+      "types": [
+        "LLC",
+        "JSC",
+        "SPC"
+      ],
+      "name": {
+        "ar": "مصر",
+        "de": "Ägypten",
+        "en": "Egypt"
+      },
+      "city": {
+        "ar": "القاهرة",
+        "de": "Kairo",
+        "en": "Cairo"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "ma": {
+      "billing": "non_eu",
+      "flag": "🇲🇦",
+      "cur": "MAD",
+      "vat": "20% TVA",
+      "lat": 34.02,
+      "lon": -6.84,
+      "types": [
+        "SARL",
+        "SA",
+        "SNC"
+      ],
+      "name": {
+        "ar": "المغرب",
+        "de": "Marokko",
+        "en": "Morocco"
+      },
+      "city": {
+        "ar": "الرباط",
+        "de": "Rabat",
+        "en": "Rabat"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "dz": {
+      "billing": "non_eu",
+      "flag": "🇩🇿",
+      "cur": "DZD",
+      "vat": "19% TVA",
+      "lat": 36.75,
+      "lon": 3.06,
+      "types": [
+        "SPA",
+        "SARL",
+        "EURL"
+      ],
+      "name": {
+        "ar": "الجزائر",
+        "de": "Algerien",
+        "en": "Algeria"
+      },
+      "city": {
+        "ar": "الجزائر",
+        "de": "Algier",
+        "en": "Algiers"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "tn": {
+      "billing": "non_eu",
+      "flag": "🇹🇳",
+      "cur": "TND",
+      "vat": "19% TVA",
+      "lat": 36.81,
+      "lon": 10.18,
+      "types": [
+        "SARL",
+        "SA",
+        "SUARL"
+      ],
+      "name": {
+        "ar": "تونس",
+        "de": "Tunesien",
+        "en": "Tunisia"
+      },
+      "city": {
+        "ar": "تونس",
+        "de": "Tunis",
+        "en": "Tunis"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "ly": {
+      "billing": "non_eu",
+      "flag": "🇱🇾",
+      "cur": "LYD",
+      "vat": "0% (لا VAT)",
+      "lat": 32.89,
+      "lon": 13.19,
+      "types": [
+        "JSC",
+        "LLC",
+        "WLL"
+      ],
+      "name": {
+        "ar": "ليبيا",
+        "de": "Libyen",
+        "en": "Libya"
+      },
+      "city": {
+        "ar": "طرابلس",
+        "de": "Tripolis",
+        "en": "Tripoli"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "sd": {
+      "billing": "non_eu",
+      "flag": "🇸🇩",
+      "cur": "SDG",
+      "vat": "17% VAT",
+      "lat": 15.5,
+      "lon": 32.56,
+      "types": [
+        "LLC",
+        "PLC"
+      ],
+      "name": {
+        "ar": "السودان",
+        "de": "Sudan",
+        "en": "Sudan"
+      },
+      "city": {
+        "ar": "الخرطوم",
+        "de": "Khartum",
+        "en": "Khartoum"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "mr": {
+      "billing": "non_eu",
+      "flag": "🇲🇷",
+      "cur": "MRU",
+      "vat": "16% TVA",
+      "lat": 18.08,
+      "lon": -15.98,
+      "types": [
+        "SARL",
+        "SA"
+      ],
+      "name": {
+        "ar": "موريتانيا",
+        "de": "Mauretanien",
+        "en": "Mauritania"
+      },
+      "city": {
+        "ar": "نواكشوط",
+        "de": "Nouakchott",
+        "en": "Nouakchott"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "so": {
+      "billing": "non_eu",
+      "flag": "🇸🇴",
+      "cur": "SOS",
+      "vat": "0% (لا VAT)",
+      "lat": 2.04,
+      "lon": 45.34,
+      "types": [
+        "LLC",
+        "PLC"
+      ],
+      "name": {
+        "ar": "الصومال",
+        "de": "Somalia",
+        "en": "Somalia"
+      },
+      "city": {
+        "ar": "مقديشو",
+        "de": "Mogadischu",
+        "en": "Mogadishu"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "dj": {
+      "billing": "non_eu",
+      "flag": "🇩🇯",
+      "cur": "DJF",
+      "vat": "0% (لا VAT)",
+      "lat": 11.59,
+      "lon": 43.15,
+      "types": [
+        "SA",
+        "SARL"
+      ],
+      "name": {
+        "ar": "جيبوتي",
+        "de": "Dschibuti",
+        "en": "Djibouti"
+      },
+      "city": {
+        "ar": "جيبوتي",
+        "de": "Dschibuti",
+        "en": "Djibouti"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "km": {
+      "billing": "non_eu",
+      "flag": "🇰🇲",
+      "cur": "KMF",
+      "vat": "0% (لا VAT)",
+      "lat": -11.7,
+      "lon": 43.26,
+      "types": [
+        "SARL",
+        "SA"
+      ],
+      "name": {
+        "ar": "جزر القمر",
+        "de": "Komoren",
+        "en": "Comoros"
+      },
+      "city": {
+        "ar": "موروني",
+        "de": "Moroni",
+        "en": "Moroni"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "ye": {
+      "billing": "non_eu",
+      "flag": "🇾🇪",
+      "cur": "YER",
+      "vat": "5% VAT",
+      "lat": 15.37,
+      "lon": 44.19,
+      "types": [
+        "LLC",
+        "PLC"
+      ],
+      "name": {
+        "ar": "اليمن",
+        "de": "Jemen",
+        "en": "Yemen"
+      },
+      "city": {
+        "ar": "صنعاء",
+        "de": "Sanaa",
+        "en": "Sanaa"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "ps": {
+      "billing": "non_eu",
+      "flag": "🇵🇸",
+      "cur": "ILS",
+      "vat": "16% VAT",
+      "lat": 31.9,
+      "lon": 35.2,
+      "types": [
+        "PLC",
+        "LLC"
+      ],
+      "name": {
+        "ar": "فلسطين",
+        "de": "Palästina",
+        "en": "Palestine"
+      },
+      "city": {
+        "ar": "رام الله",
+        "de": "Ramallah",
+        "en": "Ramallah"
+      },
+      "langName": {
+        "ar": "العربية",
+        "de": "Arabisch",
+        "en": "Arabic"
+      }
+    },
+    "ku": {
+      "billing": "non_eu",
+      "flag": "🏳️",
+      "cur": "SYP",
+      "vat": "0%",
+      "lat": 37.05,
+      "lon": 41.22,
+      "types": [
+        "SARL",
+        "SAL"
+      ],
+      "name": {
+        "ar": "سوريا — كردستان",
+        "de": "Syrien — Kurdistan",
+        "en": "Syria — Kurdistan"
+      },
+      "city": {
+        "ar": "القامشلي",
+        "de": "Al-Qamischli",
+        "en": "Qamishli"
+      },
+      "langName": {
+        "ar": "Kurmancî",
+        "de": "Kurmandschi",
+        "en": "Kurmanji"
+      }
+    }
+  },
+  "extraKeys": [
+    "jo",
+    "bh",
+    "qa",
+    "kw",
+    "om",
+    "eg",
+    "ma",
+    "dz",
+    "tn",
+    "ly",
+    "sd",
+    "mr",
+    "so",
+    "dj",
+    "km",
+    "ye",
+    "ps",
+    "iq",
+    "sy",
+    "be",
+    "at",
+    "ch"
+  ],
+  "ams": {
+    "lat": 52.37,
+    "lon": 4.9
+  }
+}
