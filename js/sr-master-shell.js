@@ -92,7 +92,7 @@
         drawer.innerHTML = `
             <div class="sr-drawer-header">
                 <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="./assets/sr-core-emblem.svg" alt="S&R Emblem" width="30" height="30">
+                    <img src="/assets/sr-core-emblem.svg" alt="S&R Emblem" width="30" height="30">
                     <span style="font-weight:900; color:var(--sr-gold-light); font-size:0.95rem;">خريطة المنظومة الموحدة</span>
                 </div>
                 <button type="button" onclick="srCloseMasterDrawer()" style="background:none; border:none; color:#cbd5e1; font-size:1.4rem; cursor:pointer; line-height:1;">✕</button>
