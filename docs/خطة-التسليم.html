@@ -77,6 +77,9 @@
 <tr><td>6</td><td>التحقق الأول</td><td><code>python scripts/preflight.py --check</code> — يفحص ولا يكتب</td></tr>
 </table>
 <div class="box warn">
+<b>إن ظهر <code>drifted</code> أو <code>FAILED at char</code> بعد <code>git checkout</code>:</b> فالسبب نهايات الأسطر لا المحتوى — على Windows يكتب الـcheckout CRLF بينما الأدوات تبني بـLF وتقارن بايتًا ببايت. شغّل الأمر بلا <code>--check</code> مرة واحدة، فتعود الملفات LF وتتطابق.
+</div>
+<div class="box warn">
 <b>ما لا يُنسخ:</b> لا مفاتيح ولا أسرار في المستودع. النشر يتمّ عبر GitHub Actions بهوية المستودع. أي ملف <code>.env</code> أو مفتاح خدمة يبقى خارج git.
 </div>
 
