@@ -183,6 +183,12 @@ jobs:
       - name: Build publish set
         run: python scripts/prepare_publish_set.py
 
+      # The publish set is copied from the working tree, not from git, so a file
+      # the app wrote into the tree ships publicly unless something asks git.
+      # This asks git: anything HEAD does not track is not site content.
+      - name: Verify the publish set contains only tracked files
+        run: python scripts/check_publish_set_untracked.py
+
       # ---------------------------------------------------------------------
       # Guard: the artifact must not contain broken local references.
       #
