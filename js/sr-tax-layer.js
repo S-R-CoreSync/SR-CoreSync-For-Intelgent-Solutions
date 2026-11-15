@@ -449,7 +449,7 @@
     var self = document.currentScript ? document.currentScript.src : '';
     var url = self ? self.replace(/sr-tax-layer\.js.*$/, 'sr-tax-markets.json')
                    : 'js/sr-tax-markets.json';
-    url += (url.indexOf('?') === -1 ? '?v=20261116' : '&v=20261116');
+    url += (url.indexOf('?') === -1 ? '?v=20261116b' : '&v=20261116b');
     return fetch(url).then(function (res) {
       if (!res.ok) { throw new Error('tax json ' + res.status); }
       return res.json();
