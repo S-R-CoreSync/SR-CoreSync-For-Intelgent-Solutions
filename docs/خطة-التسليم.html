@@ -74,7 +74,7 @@
 <tr><td>3</td><td>Node 20 أو أحدث</td><td>لفحص المتصفح و<code>validate.js</code></td></tr>
 <tr><td>4</td><td>Chrome</td><td>لفحص السجل، ولتوليد PDF من HTML</td></tr>
 <tr><td>5</td><td>تفعيل الحارس</td><td><code>git config core.hooksPath .githooks</code></td></tr>
-<tr><td>6</td><td>التحقق الأول</td><td><code>python scripts/preflight.py --check</code> — يفحص ولا يكتب</td></tr>
+<tr><td>6</td><td>التحقق الأول</td><td>بعد الاستنساخ مباشرة: <code>python scripts/preflight.py</code> مرة واحدة (يضبط نهايات الأسطر)، ثم <code>python scripts/preflight.py --check</code> للتحقق</td></tr>
 </table>
 <div class="box warn">
 <b>إن ظهر <code>drifted</code> أو <code>FAILED at char</code> بعد <code>git checkout</code>:</b> فالسبب نهايات الأسطر لا المحتوى — على Windows يكتب الـcheckout CRLF بينما الأدوات تبني بـLF وتقارن بايتًا ببايت. شغّل الأمر بلا <code>--check</code> مرة واحدة، فتعود الملفات LF وتتطابق.
