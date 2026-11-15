@@ -1,0 +1,26 @@
+# S&R CoreSync — line ending policy
+# Repository stores LF; working tree checks out LF so generated partials
+# stop showing up as CRLF->LF churn on every commit.
+* text=auto eol=lf
+
+# Windows launchers must keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary assets — never normalize
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.mp4 binary
+*.webm binary
+*.zip binary
+*.db binary
+*.sqlite binary
