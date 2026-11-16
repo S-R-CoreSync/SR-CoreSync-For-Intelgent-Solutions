@@ -271,5 +271,21 @@
     "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Modelos de IA soberanos específicos para o seu projeto",
     "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Sessões semanais de planeamento de arquitetura com CTO & CFO",
     "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Acordo de nível de serviço oficial e vinculativo (SLA 99.99%)"
+  },
+  "lv": {
+    "🏛️": "🏛️",
+    "//": "//",
+    "مشاريع سيادية ضخمة": "Liela mēroga suverēni projekti",
+    "عرض مخصص (Bespoke)": "Personalizēts piedāvājums (Bespoke)",
+    "للبنوك والمؤسسات والجهات الكبرى التي تتطلب بنى سحابية مستقلة واستشارات معمارية مباشرة": "Bankām, institūcijām un lielām organizācijām, kurām nepieciešama neatkarīga mākoņinfrastruktūra un tiešas arhitektūras konsultācijas",
+    "استشارة هندسية خاصة 💬": "Privāta inženieru konsultācija 💬",
+    "طلب وثيقة الشروط (RFP/RFQ) 📄": "Pieprasīt prasību dokumentu (RFP/RFQ) 📄",
+    "متضمن للمؤسسات": "Iekļauts institūcijām",
+    "استضافة سيادية خاصة (On-Prem / Sovereign Cloud)": "Suverēns privāts hostings (On-Prem / Sovereign Cloud)",
+    "أنظمة FinTech ودفوعات معقدة وبلوكتشين": "FinTech sistēmas, sarežģīti maksājumi un blokķēde",
+    "حماية وامتثال كامل لمعايير DORA و GDPR و ISO 27001": "Pilnīga aizsardzība un atbilstība DORA, GDPR un ISO 27001 standartiem",
+    "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Suverēni AI modeļi, kas pielāgoti jūsu projektam",
+    "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Ikedēļas arhitektūras plānošanas sesijas ar CTO & CFO",
+    "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Oficiāls, saistošs pakalpojumu līmeņa līgums (SLA 99.99%)"
   }
 }
