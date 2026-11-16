@@ -335,5 +335,21 @@
     "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Mudelli ta' Intelliġenza Artifiċjali Sovrani Dedikati għall-Proġett Tiegħek",
     "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Sessjonijiet Ġimgħawija ta' Ippjanar Arkitettoniku ma' CTO & CFO",
     "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Ftehim Uffiċjali ta' Livell ta' Servizz Obbligatorju (SLA 99.99%)"
+  },
+  "no": {
+    "🏛️": "🏛️",
+    "//": "//",
+    "مشاريع سيادية ضخمة": "Storskala suverene prosjekter",
+    "عرض مخصص (Bespoke)": "Skreddersydd tilbud (Bespoke)",
+    "للبنوك والمؤسسات والجهات الكبرى التي تتطلب بنى سحابية مستقلة واستشارات معمارية مباشرة": "For banker, institusjoner og store organisasjoner som krever uavhengig skyinfrastruktur og direkte arkitekturkonsultasjoner",
+    "استشارة هندسية خاصة 💬": "Privat ingeniørkonsultasjon 💬",
+    "طلب وثيقة الشروط (RFP/RFQ) 📄": "Forespør kravdokument (RFP/RFQ) 📄",
+    "متضمن للمؤسسات": "Inkludert for institusjoner",
+    "استضافة سيادية خاصة (On-Prem / Sovereign Cloud)": "Suveren privat hosting (On-Prem / Sovereign Cloud)",
+    "أنظمة FinTech ودفوعات معقدة وبلوكتشين": "FinTech-systemer, komplekse betalinger og blokkjede",
+    "حماية وامتثال كامل لمعايير DORA و GDPR و ISO 27001": "Full beskyttelse og samsvar med DORA, GDPR og ISO 27001",
+    "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Suverene AI-modeller, spesialiserte for ditt prosjekt",
+    "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Ukentlige arkitekturplanleggingsøkter med CTO & CFO",
+    "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Offisiell og bindende serviceavtale (SLA 99,99 %)"
   }
 }
