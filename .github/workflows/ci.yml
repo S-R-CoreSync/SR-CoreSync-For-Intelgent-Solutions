@@ -49,6 +49,10 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install Python dependencies (lxml)
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "lxml>=5.0"
       - name: Verify HTML & CSS Syntax Integrity
         run: node scripts/validate.js
 
