@@ -1,6 +1,6 @@
 // S&R CoreSync For Intelligent Solutions - Enterprise Pre-render & Ultra-Low TTFB Service Worker
-// Version: coresync-prerender-v20-cockpit-speed
-const CACHE_NAME = 'coresync-prerender-v20-cockpit-speed';
+// Version: coresync-prerender-v21-live-content
+const CACHE_NAME = 'coresync-prerender-v21-live-content';
 
 // 1. Critical assets: everything the first screen needs to paint.
 // Anything that is only reachable after a scroll (founder banners, portraits,
@@ -153,6 +153,36 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname.endsWith('/status.html') || url.pathname.endsWith('/status')) {
     event.respondWith(
       fetch(request).catch(() => caches.match(request).then((cached) => cached || caches.match('./404.html')))
+    );
+    return;
+  }
+
+  // Live content must never be served stale: HTML documents and i18n JSON data
+  // change with every deployment, so they go network-first with a cache fallback.
+  const isLiveContent = request.mode === 'navigate'
+    || url.pathname.endsWith('.html')
+    || url.pathname.endsWith('.json');
+
+  if (isLiveContent) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then(async (cache) => {
+        try {
+          const fresh = await fetch(request);
+          if (fresh && fresh.status === 200) {
+            cache.put(request, fresh.clone());
+          }
+          return fresh;
+        } catch (err) {
+          const cached = await cache.match(request, { ignoreSearch: true });
+          if (cached) {
+            return cached;
+          }
+          if (request.mode === 'navigate') {
+            return cache.match('./offline.html') || cache.match('./index.html');
+          }
+          return new Response('Offline resource not available', { status: 503, statusText: 'Offline' });
+        }
+      })
     );
     return;
   }
