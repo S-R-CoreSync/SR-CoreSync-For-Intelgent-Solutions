@@ -466,5 +466,7 @@
  "Invoice": "Fatura",
  "Payment": "Ödeme",
  "Request": "Talep",
- "Get License": "Lisans al"
+ "Get License": "Lisans al",
+ "/ project": "/ proje",
+ "/ Projekt": "/ proje"
 }
