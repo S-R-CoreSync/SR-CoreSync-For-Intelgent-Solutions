@@ -26,7 +26,15 @@
     var url = selfUrl().replace(/sr-ui-i18n\.js.*$/, 'sr-ui-strings.json');
     var opts = { cache: 'no-store' };
     return fetch(url, opts).then(function (r) { return r.ok ? r.json() : {}; })
-      .then(function (all) { return (all && all[LANG]) || {}; })
+      .then(function (all) {
+        if (!all) { return {}; }
+        var own = all[LANG] || {};
+        var en = all.en || {};
+        /* page language wins; English is the interim fallback so no Arabic
+           survives in a locale we have not translated yet */
+        var out = Object.assign({}, en, own);
+        return out;
+      })
       .catch(function () { return {}; });
   }
 
