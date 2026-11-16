@@ -76,3 +76,14 @@
   }
   window.addEventListener('load', start, { once: true });
 })();
+/* Arabic portal: western digits inside Arabic prose read as foreign numerals.
+   Loaded from here as well as from index.html so the layer survives any stale
+   CDN copy of the home page. */
+(function () {
+  if ((document.documentElement.getAttribute('lang') || '').toLowerCase().indexOf('ar') !== 0) { return; }
+  if (document.querySelector('script[src*="sr-ar-numerals"]')) { return; }
+  var s = document.createElement('script');
+  s.src = 'js/sr-ar-numerals.js?v=20261120b';
+  s.defer = true;
+  (document.head || document.documentElement).appendChild(s);
+})();
