@@ -57,6 +57,7 @@
     var raw = n.nodeValue;
     if (!raw || !raw.trim()) { return; }
     var t = hit(raw);
+    if (!t && raw.trim().length > 40) { t = sentencePass(raw.trim()); }
     if (!t) { return; }
     var lead = raw.match(/^\s*/)[0], trail = raw.match(/\s*$/)[0];
     n.nodeValue = lead + t + trail;
