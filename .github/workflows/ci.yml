@@ -130,9 +130,11 @@ jobs:
         continue-on-error: true
         run: python docs/audit_structure_vs_master.py --strict
 
-      - name: Report content parity inside the sections (non-blocking)
-        continue-on-error: true
-        run: python scripts/check_content_depth_parity.py
+      # The 2026-11-16 language wave repaired every portal: the bespoke plan
+      # card, the shared cost estimator and the content dictionary reached
+      # all 28 portals, so the content-parity gate is now blocking.
+      - name: Content parity inside the sections (blocking)
+        run: python scripts/check_content_depth_parity.py --strict
 
       # Catches the Oct 2026 regression where rewritten landing pages declared
       # og:locale=en_US (or legacy ar_SA) regardless of their html lang.
