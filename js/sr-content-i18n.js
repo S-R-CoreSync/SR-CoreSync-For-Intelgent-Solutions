@@ -110,9 +110,12 @@
               }
             } else if (r.type === 'attributes' && r.target) {
               element(r.target);
+            } else if (r.type === 'characterData' && r.target) {
+              if (done) { done.delete(r.target); }
+              textNode(r.target);
             }
           }
-        }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ATTRS });
+        }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ATTRS, characterData: true });
       }
       var ticks = 0;
       var iv = setInterval(function () {
