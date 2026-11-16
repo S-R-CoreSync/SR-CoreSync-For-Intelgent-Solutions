@@ -94,10 +94,11 @@
 
   function start() {
     load().then(function (map) {
-      if (!map || !Object.keys(map).length) { return; }
+      if (!map || !Object.keys(map).length) { ready(); return; }
       MAP = map;
       buildCore();
       walk(document.body);
+      ready();
       if (window.MutationObserver) {
         new MutationObserver(function (recs) {
           for (var i = 0; i < recs.length; i++) {
@@ -119,6 +120,10 @@
         if (ticks > 24) { clearInterval(iv); }
       }, 500);
     });
+  }
+
+  function ready() {
+    try { window.dispatchEvent(new Event('sr-i18n-ready')); } catch (e) {}
   }
 
   if (document.readyState === 'loading') {

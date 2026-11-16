@@ -123,9 +123,10 @@
   function start() {
     loadMap().then(function (map) {
       MAP = map;
-      if (!MAP || !Object.keys(MAP).length) { return; }
+      if (!MAP || !Object.keys(MAP).length) { revealWhenReady(); return; }
       buildCore();
       walk(document.body);
+      revealWhenReady();
       if (window.MutationObserver) {
         new MutationObserver(function (records) {
           for (var i = 0; i < records.length; i++) {
@@ -155,9 +156,38 @@
     });
   }
 
+  /* First paint must never show the Arabic source text to a Turkish, German or
+     any other locale visitor. The document stays hidden until both translation
+     layers have applied, with a hard timeout so a slow network can never leave
+     the page blank. */
+  function hold() {
+    var style = document.createElement('style');
+    style.textContent = 'html.sr-i18n-wait body{visibility:hidden!important}html.sr-i18n-done body{visibility:visible!important}';
+    (document.head || document.documentElement).appendChild(style);
+    document.documentElement.classList.add('sr-i18n-wait');
+    setTimeout(reveal, 2500);
+  }
+
+  var revealed = false;
+  function reveal() {
+    if (revealed) { return; }
+    revealed = true;
+    document.documentElement.classList.remove('sr-i18n-wait');
+    document.documentElement.classList.add('sr-i18n-done');
+  }
+
+  /* the page-content layer announces itself; wait for it before painting */
+  function revealWhenReady() {
+    if (!document.querySelector('script[src*="sr-content-i18n"]')) { reveal(); return; }
+    var settled = false;
+    window.addEventListener('sr-i18n-ready', function () { settled = true; reveal(); }, { once: true });
+    setTimeout(function () { if (!settled) { reveal(); } }, 2000);
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', start);
   } else {
     start();
   }
+  hold();
 })();
