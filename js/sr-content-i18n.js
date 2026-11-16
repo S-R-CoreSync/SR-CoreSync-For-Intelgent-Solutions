@@ -63,6 +63,28 @@
     if (done) { done.add(n); }
   }
 
+  /* Long sentences are often split across inline tags (<strong>, <em>, <a>).
+     If the element's whole text matches a key and it only holds inline markup,
+     the translation replaces the fragment wholesale. */
+  var INLINE = /^(span|strong|em|b|i|a|small|br|sup|sub|u|mark|cite|q|time|abbr)$/;
+  function inlineOnly(el) {
+    var kids = el.children;
+    if (!kids || !kids.length) { return false; }
+    for (var i = 0; i < kids.length; i++) {
+      if (!INLINE.test((kids[i].tagName || '').toLowerCase())) { return false; }
+    }
+    return true;
+  }
+
+  function elementText(el) {
+    if (!el.children || !el.children.length || !inlineOnly(el)) { return; }
+    var raw = el.textContent || '';
+    if (raw.trim().length < 40) { return; }
+    var t = hit(raw);
+    if (!t) { return; }
+    el.textContent = t;
+  }
+
   function element(el) {
     if (!el || el.nodeType !== 1) { return; }
     var tag = (el.tagName || '').toLowerCase();
@@ -73,6 +95,7 @@
       var t = hit(v);
       if (t) { el.setAttribute(ATTRS[i], t); }
     }
+    elementText(el);
   }
 
   function walk(root) {
