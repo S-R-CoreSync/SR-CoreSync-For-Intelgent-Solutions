@@ -57,10 +57,45 @@
     var raw = n.nodeValue;
     if (!raw || !raw.trim()) { return; }
     var t = hit(raw);
+    if (!t && raw.trim().length > 40) { t = sentencePass(raw.trim()); }
     if (!t) { return; }
     var lead = raw.match(/^\s*/)[0], trail = raw.match(/\s*$/)[0];
     n.nodeValue = lead + t + trail;
     if (done) { done.add(n); }
+  }
+
+  /* Long sentences are often split across inline tags (<strong>, <em>, <a>).
+     If the element's whole text matches a key and it only holds inline markup,
+     the translation replaces the fragment wholesale. */
+  var INLINE = /^(span|strong|em|b|i|a|small|br|sup|sub|u|mark|cite|q|time|abbr)$/;
+  function inlineOnly(el) {
+    var kids = el.children;
+    if (!kids || !kids.length) { return false; }
+    for (var i = 0; i < kids.length; i++) {
+      if (!INLINE.test((kids[i].tagName || '').toLowerCase())) { return false; }
+    }
+    return true;
+  }
+
+  /* Several blocks glue two localised sentences into one paragraph. Split the
+     text into sentences and translate each one, then rejoin. */
+  function sentencePass(text) {
+    var parts = text.split(/(?<=[.!?])\s+/);
+    var changed = false;
+    for (var i = 0; i < parts.length; i++) {
+      var t = hit(parts[i]);
+      if (t) { parts[i] = t; changed = true; }
+    }
+    return changed ? parts.join(' ') : null;
+  }
+
+  function elementText(el) {
+    if (!el.children || !el.children.length || !inlineOnly(el)) { return; }
+    var raw = el.textContent || '';
+    if (raw.trim().length < 40) { return; }
+    var t = hit(raw) || sentencePass(raw);
+    if (!t) { return; }
+    el.textContent = t;
   }
 
   function element(el) {
@@ -73,6 +108,7 @@
       var t = hit(v);
       if (t) { el.setAttribute(ATTRS[i], t); }
     }
+    elementText(el);
   }
 
   function walk(root) {
