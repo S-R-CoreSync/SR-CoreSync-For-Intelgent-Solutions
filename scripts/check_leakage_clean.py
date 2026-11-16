@@ -29,7 +29,12 @@ for lang in non_ar_langs:
     ar_lines = []
     for idx, line in enumerate(lines):
         stripped = line.strip()
-        if stripped.startswith('<!--') or 'العربية' in stripped or 'data-name=' in stripped or 'sovereign-lang-' in stripped:
+        # Native-script language names (e.g. کوردی (سۆرانی)), the Sorani VAT badge
+        # (باج ٥٪) and the launchpad button metadata are intentional UI, matching
+        # the same exemptions audit_language_purity.py grants language-switcher lines.
+        if stripped.startswith('<!--') or 'العربية' in stripped or 'data-name=' in stripped or 'sovereign-lang-' in stripped \
+                or 'apple-launchpad-native' in stripped or 'apple-launchpad-vat' in stripped \
+                or 'apple-dock-launchpad-btn' in stripped:
             continue
         if arabic_pattern.search(stripped):
             ar_lines.append((idx+1, stripped[:60]))
