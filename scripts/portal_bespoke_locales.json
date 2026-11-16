@@ -367,5 +367,21 @@
     "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Κυρίαρχα μοντέλα AI εξειδικευμένα για το έργο σας",
     "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Εβδομαδιαίες συνεδρίες αρχιτεκτονικού σχεδιασμού με CTO & CFO",
     "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Επίσημη δεσμευτική συμφωνία επιπέδου υπηρεσίας (SLA 99,99%)"
+  },
+  "fi": {
+    "🏛️": "🏛️",
+    "//": "//",
+    "مشاريع سيادية ضخمة": "Massiiviset suvereenit hankkeet",
+    "عرض مخصص (Bespoke)": "Räätälöity tarjous (Bespoke)",
+    "للبنوك والمؤسسات والجهات الكبرى التي تتطلب بنى سحابية مستقلة واستشارات معمارية مباشرة": "Pankeille, instituutioille ja suurille organisaatioille, jotka vaativat riippumatonta pilvi-infrastruktuuria ja suoria arkkitehtuurikonsultaatioita",
+    "استشارة هندسية خاصة 💬": "Yksityinen insinöörikonsultaatio 💬",
+    "طلب وثيقة الشروط (RFP/RFQ) 📄": "Pyydä vaatimusasiakirjaa (RFP/RFQ) 📄",
+    "متضمن للمؤسسات": "Sisältyy instituutioille",
+    "استضافة سيادية خاصة (On-Prem / Sovereign Cloud)": "Yksityinen suvereeni hosting (On-Prem / Sovereign Cloud)",
+    "أنظمة FinTech ودفوعات معقدة وبلوكتشين": "FinTech-järjestelmät, monimutkaiset maksut ja lohkoketju",
+    "حماية وامتثال كامل لمعايير DORA و GDPR و ISO 27001": "Täydellinen suojaus ja vaatimustenmukaisuus DORA-, GDPR- ja ISO 27001 -standardien mukaisesti",
+    "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Projektiisi räätälöidyt suvereenit tekoälymallit",
+    "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Viikoittaiset arkkitehtuurin suunnittelusessiot CTO:n ja CFO:n kanssa",
+    "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Virallinen sitova palvelutason sopimus (SLA 99.99%)"
   }
 }
