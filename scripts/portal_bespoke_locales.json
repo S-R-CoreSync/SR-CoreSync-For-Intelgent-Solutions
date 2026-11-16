@@ -127,5 +127,21 @@
     "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Modele AI suverane, specializate pentru proiectul dumneavoastră",
     "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Sesiuni săptămânale de planificare arhitecturală cu CTO & CFO",
     "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Acord oficial obligatoriu privind nivelul de serviciu (SLA 99.99%)"
+  },
+  "pl": {
+    "🏛️": "🏛️",
+    "//": "//",
+    "مشاريع سيادية ضخمة": "Wielkie projekty suwerenne",
+    "عرض مخصص (Bespoke)": "Oferta na miarę (Bespoke)",
+    "للبنوك والمؤسسات والجهات الكبرى التي تتطلب بنى سحابية مستقلة واستشارات معمارية مباشرة": "Dla banków, instytucji i dużych organizacji wymagających niezależnej infrastruktury chmurowej oraz bezpośrednich konsultacji architektonicznych",
+    "استشارة هندسية خاصة 💬": "Prywatna konsultacja inżynierska 💬",
+    "طلب وثيقة الشروط (RFP/RFQ) 📄": "Zapytanie o dokument wymagań (RFP/RFQ) 📄",
+    "متضمن للمؤسسات": "W cenie dla instytucji",
+    "استضافة سيادية خاصة (On-Prem / Sovereign Cloud)": "Suwerenny hosting prywatny (On-Prem / Sovereign Cloud)",
+    "أنظمة FinTech ودفوعات معقدة وبلوكتشين": "Systemy FinTech, złożone płatności i blockchain",
+    "حماية وامتثال كامل لمعايير DORA و GDPR و ISO 27001": "Pełna ochrona i zgodność ze standardami DORA, GDPR i ISO 27001",
+    "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Suwerenne modele AI dedykowane Twojemu projektowi",
+    "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Tygodniowe sesje planowania architektury z CTO & CFO",
+    "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Oficjalna, wiążąca umowa dotycząca poziomu usług (SLA 99.99%)"
   }
 }
