@@ -415,5 +415,21 @@
     "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "مۆدێلە سەروەرەکانی AI ی تایبەتمەند بە پڕۆژەکەت",
     "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "دانیشتنی هەفتانەی پلاندانانی تەلارسازی لەگەڵ CTO & CFO",
     "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "ڕێککەوتننامەیەکی فەرمی و پابەندکەری ئاستی خزمەتگوزاری (SLA 99.99%)"
+  },
+  "ga": {
+    "🏛️": "🏛️",
+    "//": "//",
+    "مشاريع سيادية ضخمة": "Tionscadail ceannasacha móra",
+    "عرض مخصص (Bespoke)": "Tairiscint saincheaptha (Bespoke)",
+    "للبنوك والمؤسسات والجهات الكبرى التي تتطلب بنى سحابية مستقلة واستشارات معمارية مباشرة": "Do bhainc, institiúidí agus eagraíochtaí móra a éilíonn bonneagar scamall neamhspleách agus comhairle ailtireachta dhíreach",
+    "استشارة هندسية خاصة 💬": "Comhairle innealtóireachta phríobháideach 💬",
+    "طلب وثيقة الشروط (RFP/RFQ) 📄": "Iarratas ar cháipéis na riachtanas (RFP/RFQ) 📄",
+    "متضمن للمؤسسات": "San áireamh d'institiúidí",
+    "استضافة سيادية خاصة (On-Prem / Sovereign Cloud)": "Óstáil cheannasach phríobháideach (On-Prem / Sovereign Cloud)",
+    "أنظمة FinTech ودفوعات معقدة وبلوكتشين": "Córais FinTech, íocaíochtaí casta agus blochain",
+    "حماية وامتثال كامل لمعايير DORA و GDPR و ISO 27001": "Cosaint agus comhlíonadh iomlán le caighdeáin DORA, GDPR agus ISO 27001",
+    "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Móilíní AI ceannasacha sainiúla do do thionscadal",
+    "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Seisiúin pleanála ailtireachta seachtainiúla le CTO & CFO",
+    "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Comhaontú leibhéal seirbhíse oifigiúil ceanglaitheach (SLA 99.99%)"
   }
 }
