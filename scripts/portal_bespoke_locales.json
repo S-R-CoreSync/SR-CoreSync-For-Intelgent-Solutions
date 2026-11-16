@@ -95,5 +95,21 @@
     "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Suveræne AI-modeller dedikeret til dit projekt",
     "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Ugentlige sessioner til arkitekturplanlægning med CTO & CFO",
     "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Officiel, bindende serviceniveauaftale (SLA 99.99%)"
+  },
+  "lt": {
+    "🏛️": "🏛️",
+    "//": "//",
+    "مشاريع سيادية ضخمة": "Didelio masto suverenūs projektai",
+    "عرض مخصص (Bespoke)": "Individualus pasiūlymas (Bespoke)",
+    "للبنوك والمؤسسات والجهات الكبرى التي تتطلب بنى سحابية مستقلة واستشارات معمارية مباشرة": "Bankams, institucijoms ir didelėms organizacijoms, kurioms reikalinga nepriklausoma debesų infrastruktūra ir tiesioginės architektūros konsultacijos",
+    "استشارة هندسية خاصة 💬": "Privati inžinerinė konsultacija 💬",
+    "طلب وثيقة الشروط (RFP/RFQ) 📄": "Užklausa dėl reikalavimų dokumento (RFP/RFQ) 📄",
+    "متضمن للمؤسسات": "Įskaičiuota institucijoms",
+    "استضافة سيادية خاصة (On-Prem / Sovereign Cloud)": "Privatus suverenus talpinimas (On-Prem / Sovereign Cloud)",
+    "أنظمة FinTech ودفوعات معقدة وبلوكتشين": "FinTech sistemos, sudėtingi mokėjimai ir blokų grandinė",
+    "حماية وامتثال كامل لمعايير DORA و GDPR و ISO 27001": "Visapusiška apsauga ir atitiktis DORA, GDPR bei ISO 27001 standartams",
+    "نماذج ذكاء اصطناعي سيادية خاصة بمشروعك": "Suverenūs dirbtinio intelekto modeliai, pritaikyti jūsų projektui",
+    "جلسات تخطيط معماري أسبوعية مع CTO & CFO": "Savaitinės architektūros planavimo sesijos su CTO & CFO",
+    "اتفاقية مستوى خدمة رسمية ملزمة (SLA 99.99%)": "Oficiali ir privaloma paslaugų lygio sutartis (SLA 99.99%)"
   }
 }
