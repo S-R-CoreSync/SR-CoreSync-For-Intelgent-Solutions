@@ -131,6 +131,32 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+/* Some deployments land in front of a CDN that keeps serving the previous home
+   document. The service worker is the only asset a browser always revalidates,
+   so the Arabic numeral layer is injected here as well: a visitor never sees
+   western digits in Arabic prose, whatever copy of the HTML they are served. */
+async function withLanguageLayers(request, response) {
+  try {
+    if (request.mode !== 'navigate') { return response; }
+    const type = response.headers.get('content-type') || '';
+    if (!/text\/html/i.test(type)) { return response; }
+    let html = await response.clone().text();
+    if (html.indexOf('sr-ar-numerals') !== -1) { return response; }
+    if (!/<html[^>]*lang=["']ar/i.test(html)) { return response; }
+    const tag = '<script src="/js/sr-ar-numerals.js?v=20261120c" defer></script>';
+    html = html.indexOf('</body>') !== -1
+      ? html.replace('</body>', tag + '</body>')
+      : html + tag;
+    return new Response(html, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: response.headers
+    });
+  } catch (err) {
+    return response;
+  }
+}
+
 // Stale-While-Revalidate (SWR) Engine for Sub-50ms Global TTFB
 self.addEventListener('fetch', (event) => {
   const request = event.request;
@@ -167,8 +193,9 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       caches.open(CACHE_NAME).then(async (cache) => {
         try {
-          const fresh = await fetch(request);
+          let fresh = await fetch(request);
           if (fresh && fresh.status === 200) {
+            fresh = await withLanguageLayers(request, fresh);
             cache.put(request, fresh.clone());
           }
           return fresh;
