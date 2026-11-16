@@ -84,7 +84,8 @@ def main():
 
     page_path = ROOT / args.lang / "index.html"
     html = page_path.read_text(encoding="utf-8", errors="replace")
-    if f">{MARKER}<" in html:
+    # lxml escapes the '&' in the card title on write, so both forms count.
+    if f">{MARKER}<" in html or f">Bespoke Sovereign &amp; FinTech<" in html:
         print(f"{args.lang}: bespoke plan card already present")
         return 0
 
