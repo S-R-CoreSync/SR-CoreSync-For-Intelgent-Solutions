@@ -76,11 +76,23 @@
     return true;
   }
 
+  /* Several blocks glue two localised sentences into one paragraph. Split the
+     text into sentences and translate each one, then rejoin. */
+  function sentencePass(text) {
+    var parts = text.split(/(?<=[.!?])\s+/);
+    var changed = false;
+    for (var i = 0; i < parts.length; i++) {
+      var t = hit(parts[i]);
+      if (t) { parts[i] = t; changed = true; }
+    }
+    return changed ? parts.join(' ') : null;
+  }
+
   function elementText(el) {
     if (!el.children || !el.children.length || !inlineOnly(el)) { return; }
     var raw = el.textContent || '';
     if (raw.trim().length < 40) { return; }
-    var t = hit(raw);
+    var t = hit(raw) || sentencePass(raw);
     if (!t) { return; }
     el.textContent = t;
   }
