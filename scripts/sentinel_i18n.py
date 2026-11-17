@@ -36,6 +36,7 @@ CHECKS = [
     ('content depth parity --strict', ['python3', 'scripts/check_content_depth_parity.py', '--strict']),
     ('hero drift vs master', ['python3', 'scripts/sync_locales.py', '--check']),
     ('hero row 2 localization', ['python3', 'scripts/check_hero_row2_localization.py']),
+    ('structural parity vs ar root', ['python3', 'scripts/check_structure_parity.py']),
     ('hreflang agreement', ['python3', 'scripts/check_hreflang.py']),
     ('one version per script tag', ['python3', 'scripts/check_script_tags.py']),
     ('languages health (2x2/cache/hreflang)', ['python3', 'scripts/audit_all_languages_health.py']),
