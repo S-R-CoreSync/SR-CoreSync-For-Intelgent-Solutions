@@ -1924,3 +1924,17 @@
         gap: 20px !important;
     }
 }
+
+/* sr-cockpit-parity - unify the cockpit height across the ar root and all
+   portals (approved suggestion #13, 2026-11-18).
+   Measured natural heights vary 364-441px with language content; this
+   floor renders the cockpit at the same height on every page with the
+   three columns vertically centered. Desktop 3-column regime only
+   (at <=1100px the layout stacks, where a floor makes no sense).
+   Reversible: delete this block. */
+@media (min-width: 1101px) {
+    .c3-cockpit-layout {
+        min-height: 441px;
+        align-content: center;
+    }
+}
