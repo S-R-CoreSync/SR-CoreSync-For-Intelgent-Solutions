@@ -20,6 +20,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      # The sentinel bank imports lxml (content depth parity + the per-portal
+      # English scans). ci.yml installs the same dependency for the same
+      # reason; without it every gate in this job fails on ModuleNotFoundError.
+      - name: Install Python dependencies (lxml)
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "lxml>=5.0"
       - name: Hero and style layers must match the master
         run: python scripts/sync_locales.py --check
       - name: Sentinel - every language and map guard in one pass
