@@ -13,8 +13,8 @@
   // resolve the real file from this script's own address, so the same loader
   // works at / and at /de/ without a hard-coded relative path
   var self = document.currentScript ? document.currentScript.src : '';
-  var target = self ? self.replace(/sr-lang-map-lazy\.js.*$/, 'sr-lang-map.js?v=20261112-v17')
-                    : 'js/sr-lang-map.js?v=20261112-v17';
+  var target = self ? self.replace(/sr-lang-map-lazy\.js.*$/, 'sr-lang-map.js?v=20261117-v18')
+                    : 'js/sr-lang-map.js?v=20261117-v18';
 
   var SEL = '[aria-label*="Languages"], [aria-label*="اللغات"], #srLangMenuBtn, ' +
             '#appleDockLaunchpadBtn, .sr-lang-menu-trigger, .hv2__flag.more, ' +
