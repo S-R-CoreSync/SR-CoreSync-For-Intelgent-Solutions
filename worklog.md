@@ -7,6 +7,20 @@
 
 ---
 
+### [2026-11-17 22:04] — سؤال المالك «لماذا تتكرر أخطاء الرفع؟» + الحل الجذري بأمره الصريح (شفاء ذاتي في CI + بوابة ما قبل الدفع)
+- **الدليل القاطع على سبب التكرار الظاهري:** `git ls-remote origin main` عند [22:04] ما زال على `b1764b36` — فإعادة ظهور نفس رسالة الخطأ (`de/index.html: generated section content is out of date`) هي **نفس الفشل القديم على نفس الالتزام القديم**، لا انحراف جديد. إصلاح الجلسة السابقة (`11e90d54`، مُثبت 18/18 محلياً) لم يصل إلى GitHub لأن بيئة العمل بلا أي بيانات اعتماد دفع وخيار الرقع لم يُنفَّذ من جهاز المالك بعد.
+- **التحليل الجذري الصريح لنمط «الأخطاء دائماً» (بلا تحيز لنا):**
+  1. **كسر في حلقة الدفع:** كل إصلاح ينتهي محلياً-أخضر لكن البعيد يبقى أحمر لأن الدفع يتطلب توكن جديد لكل جلسة أو دفعاً يدوياً — الاحتكاك يؤخر وصول العلاج، وCI يواصل إبلاغ الحالة القديمة.
+  2. **موجات تعديل كبيرة بتحقق جزئي قبل الدفع:** `3796d5cb` (aria مشوهة، 2026-11-15)، رابط `hero-declutter.css` المفقود من en، `a20ac6b8` (الشريط داخل علامات المولّد، 28 صفحة) — كلها دُفعت دون تشغيل بطارية الفحوص الكاملة محلياً، فكان الانحراف يُكتشف بعد الدفع فقط.
+  3. **فحوص بايت-دقيقة هشة تجاه الأدوات:** أقوى الحراس (مقارنة الكتلة المشتركة بايت-ببايت) يفرض إعادة تشغيل المولّد بعد أي أداة تلمس كتلة مدارة — الأدوات التي لم تعدها أنتجت انحرافاً غير مرئي محلياً.
+  4. **de مجرد مُبلِّغ:** الرسالة تسمي de لأنها أول صفحة في ترتيب LANGUAGES — الانحراف في الـ28 كلها؛ «نفس الرسالة» لا تعني «نفس التحقيق».
+- **الطبقة 1 — الشفاء الذاتي في CI (التزام جديد، الملف `.github/workflows/ci.yml`):** أعلى الـ`validate` job (بعد تجهيز البيئة وقبل كل الفحوص): خطوة `Normalize generated shared sections (self-heal)` تشغّل `localize_multilingual_shared_sections.py --apply` فتطبعّ الأشجار، ثم خطوة `Commit shared-sections normalization (main push only)` بشرط `github.event_name == 'push' && github.ref == 'refs/heads/main'` تُلزم أي فرق تلقائياً بحساب `github-actions[bot]` عبر **GITHUB_TOKEN المدمج في CI** (أُضيفت `permissions: contents: write` محصورة على الـjob) — فتفحص كل الخطوات اللاحقة الشجرة المطبَّعة ويصبح أخضر. `--apply` idempotent ⇒ التشغيل التالي لا يجد فرقاً ⇒ لا حلقة التزامات. على PR يُطبَّع الاختبار دون التزام، وشفاء main يغطي ما بعده. YAML مُتحقق منه آلياً.
+- **الطبقة 2 — بوابة ما قبل الدفع (ملف جديد `scripts/prepush_gate.sh`):** 17 فحصاً حاجباً بترتيب ci.yml (validate.js · inline-scripts · js-identifiers · dock/command handlers · api-parity · arabic-containment · language-paths · script-tags · core-metadata · shared-sections · page-parity · structure-vs-master strict · content-depth strict · og-locale · seo-assets) + السنتينل الكامل، خروج غير صفري = ممنوع الدفع. **أُثبتت محلياً: GATE GREEN 17/17** بما فيها خطوة الفشل التاريخية. وسُجِّلت قاعدة رقم 6 في PLAN.md: لا دفع بلا أخضر كامل لهذه البوابة.
+- **ما تبقى حرفياً لإنهاء القصة:** خطوة واحدة — توكن جديد في رسالة قادمة (أدفع وأراقب CI حتى الأخضر وأذكّر بالتدوير وفق اقتراح 7)، أو `git am patches/*.patch && git push origin main` من جهاز المالك. سلسلة الرقع أُعيد توليدها (4 التزامات: `065863f0` · `11e90d54` · `aa613d30` + الحل الجذري) في مجلد التسليم.
+- **الفحوص قبل الإغلاق:** بوابة prepush 17/17 أخضر · YAML سليم · السنتينل ضمن البوابة PASSED (12 حارساً + 27 مسحاً).
+
+---
+
 ### [2026-11-17 21:54] — إصلاح فشل CI: شريط البوابات داخل علامات الكتلة المشتركة (`de/index.html: generated section content is out of date`)
 - **البلاغ:** فشل خطوة «Audit Shared Portal Sections and Demo Tracker Localization» في `ci.yml` على `origin/main` (`b1764b36`): `Shared portal localization failed: de/index.html: generated section content is out of date` — أعيد إنتاجه محلياً حرفياً.
 - **التشخيص (جذري):** `localize_multilingual_shared_sections.py` يملك بين علامتي `<!-- shared-index-sections:start/end -->` قسمي `services-compare` + `tech-pillars` حصراً، ويقارن الكتلة **بايت-ببايت** (`current != expected_block` بلا أي تطبيع). موجة التكافؤ البنيوي `a20ac6b8` أدخلت شريط البوابات السريع `<section id="portals" class="section-portals">` **داخل** هذه العلامات في الـ28 بوابة كلها (موثق من `git show a20ac6b8:de/index.html`)، فصارت الكتلة تحمل قسماً لا يولّده المولّد أبداً ⇒ فشل حتمي عند أول صفحة (أمر LANGUAGES). انحراف ثانٍ محجوب خلفه: مسافات بادئة وأسطر فارغة داخل الكتل لا تطابق توليد المولّد.
