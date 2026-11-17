@@ -30,7 +30,10 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # Portals whose existing #trust-metrics strip predates the parity wave and
 # is not yet dictionary-aligned (structural check only).
-TM_STRUCTURAL_ONLY = ['ckb']
+# ckb was aligned in suggestion #16 (approved 2026-11-18): the Fusha strip is
+# now the Sorani dictionary build, so the list is empty today; the mechanism
+# stays for any future no-dict portal.
+TM_STRUCTURAL_ONLY = []
 
 METRIC_VALUES = ['99.9%', 'EU & BTW', '< 30s', 'Amsterdam HQ']
 
