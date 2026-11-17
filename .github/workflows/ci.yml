@@ -115,6 +115,13 @@ jobs:
       - name: Audit Localized Relative Paths
         run: python scripts/audit_language_paths.py
 
+      # The language-map fix (2026-11-17) shipped through a hole this gate now
+      # closes: 57 pages kept a stale lazy-loader version while index.html was
+      # bumped, because sync_locales regenerates hero regions only. Browsers
+      # then served the cached old script and the fix never reached them.
+      - name: Audit Script Tag Version Sync (one version per script)
+        run: python scripts/check_script_tags.py
+
       - name: Audit Core Portal Localization
         run: python scripts/localize_portal_core_metadata.py --check
 
@@ -175,6 +182,12 @@ jobs:
 
       - name: Browser console audit (headless Chromium)
         run: node scripts/browser_console_audit.mjs
+
+      # The 2026-11-17 defect guarded forever: valid HTML, zero console errors,
+      # dead feature. This bank clicks the map the way a user does and proves
+      # the language actually switches, from / and from /sv/.
+      - name: Language switch E2E (headless Chromium click-through)
+        run: node scripts/lang_switch_e2e.mjs
 
       - name: Verify Dead PHP Gateway Is Not Referenced
         run: python scripts/audit_dead_gateway.py
