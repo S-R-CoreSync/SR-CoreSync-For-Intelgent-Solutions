@@ -1,3 +1,4 @@
+import argparse
 import os
 import re
 import sys
@@ -170,8 +171,17 @@ PORTAL_LOCALIZATIONS = {
     }
 }
 
-dirs = sorted(list(PORTAL_LOCALIZATIONS.keys()))
-print(f"Processing {len(dirs)} languages...")
+ap = argparse.ArgumentParser(
+    description='Apply the hero 2x2 action matrix to locale portals (idempotent).')
+ap.add_argument('--lang', default='',
+                help='comma-separated subset of languages, e.g. --lang de (default: all)')
+args = ap.parse_args()
+wanted = {x.strip() for x in args.lang.split(',') if x.strip()}
+unknown = wanted - set(PORTAL_LOCALIZATIONS)
+if unknown:
+    sys.exit(f"unknown language(s): {', '.join(sorted(unknown))}")
+dirs = sorted(d for d in PORTAL_LOCALIZATIONS if not wanted or d in wanted)
+print(f"Processing {len(dirs)} language(s): {', '.join(dirs)}")
 
 # Regex to find the hero action block
 pattern = re.compile(
