@@ -5,9 +5,11 @@ The 2x2 hero action matrix's second row (Developer Portal / Partner Portal)
 is localized from the single-source dictionary PORTAL_LOCALIZATIONS in
 scripts/sync_2x2_all_languages.py. This guard locks every dictionary portal
 to its dictionary verbatim (href + label + title), so no English fallback
-text can ever come back. Portals with no dictionary entry (ckb - Sorani,
-written in Arabic script by design) are checked structurally instead: both
-portal buttons must exist and their labels must not be English.
+text can ever come back. Since suggestion #15 (approved 2026-11-18) the ar
+ROOT page is locked too: its matrix (written by sync_root_hero_matrix.py)
+carries the dictionary's 'ar' entry with same-folder hrefs. Portals with no
+dictionary entry are checked structurally instead: both portal buttons must
+exist and their labels must not be English.
 """
 import re
 import sys
@@ -27,6 +29,12 @@ EXPECTED_HREFS = {
     'partner': '../partner-portal.html',
 }
 
+# The ar root lives at the repo root: its matrix links stay in the same folder.
+EXPECTED_HREFS_ROOT = {
+    'dev': 'developer-portal.html',
+    'partner': 'partner-portal.html',
+}
+
 # Portals written natively without a dictionary entry (structurally checked).
 # ckb joined the dictionary in suggestion #9 (approved 2026-11-18), so the
 # list is empty today; the mechanism stays for any future no-dict portal.
@@ -37,7 +45,7 @@ def text_of(el):
     return ' '.join(el.text_content().split())
 
 
-def check_dict_portal(lang, doc, faults):
+def check_dict_portal(lang, doc, faults, hrefs=EXPECTED_HREFS):
     loc = PORTAL_LOCALIZATIONS[lang]
     for key, cls, label_key, title_key in (
             ('dev', 'hero-btn-dev-portal', 'dev_label', 'dev_title'),
@@ -49,8 +57,8 @@ def check_dict_portal(lang, doc, faults):
             continue
         a = nodes[0]
         href, label, title = a.get('href'), text_of(a), (a.get('title') or '').strip()
-        if href != EXPECTED_HREFS[key]:
-            faults.append(f'{lang}: {cls} href={href!r} (expected {EXPECTED_HREFS[key]!r})')
+        if href != hrefs[key]:
+            faults.append(f'{lang}: {cls} href={href!r} (expected {hrefs[key]!r})')
         if label != loc[label_key]:
             faults.append(f'{lang}: {cls} label={label!r} (expected {loc[label_key]!r})')
         if title != loc[title_key]:
@@ -77,12 +85,14 @@ def main():
     faults = []
     checked_dict, checked_nodict = [], []
     for lang in sorted(PORTAL_LOCALIZATIONS):
-        p = ROOT / lang / 'index.html'
+        # ar is the root page (no ar/ dir): same dictionary, same-folder hrefs.
+        p = ROOT / 'index.html' if lang == 'ar' else ROOT / lang / 'index.html'
         if not p.exists():
             faults.append(f'{lang}: index.html missing')
             continue
         doc = LH.fromstring(p.read_text(encoding='utf-8', errors='replace'))
-        check_dict_portal(lang, doc, faults)
+        check_dict_portal(lang, doc, faults,
+                          hrefs=EXPECTED_HREFS_ROOT if lang == 'ar' else EXPECTED_HREFS)
         checked_dict.append(lang)
     for lang in NO_DICT_PORTALS:
         p = ROOT / lang / 'index.html'

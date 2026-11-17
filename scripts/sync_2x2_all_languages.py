@@ -177,6 +177,18 @@ PORTAL_LOCALIZATIONS = {
         'dev_title': 'پۆرتاڵی گەشەپێدەران، API و هۆلۆگرامی 3D کارلێکەر',
         'partner_label': 'پۆرتاڵی هاوبەشان و مۆڵەتەکان 💼',
         'partner_title': 'تۆڕی جیهانی هاوبەشان، نوێنەرایەتی تایبەت و مۆڵەتدانی دامەزراوەیی'
+    },
+    # Arabic root page (ar master) - suggestion #15 approved 2026-11-18:
+    # index.html (the root) joins the matrix parity. Labels are the root's own
+    # canonical wording (its #portals quick strip + mobile menu). The root is
+    # NOT a portal dir: sync_2x2 skips it (see run()); the root matrix is
+    # written by scripts/sync_root_hero_matrix.py and locked by guard 10 with
+    # same-folder hrefs (developer-portal.html, ../).
+    'ar': {
+        'dev_label': 'بوابة المطورين ⚡',
+        'dev_title': 'بوابة المطوّرين، واجهات API، والهولوغرام ثلاثي الأبعاد التفاعلي',
+        'partner_label': 'بوابة الوكلاء والتراخيص 💼',
+        'partner_title': 'الشبكة العالمية للشركاء والوكلاء، الوكالة الحصرية، والترخيص المؤسسي'
     }
 }
 
@@ -191,6 +203,9 @@ def main():
     if unknown:
         sys.exit(f"unknown language(s): {', '.join(sorted(unknown))}")
     dirs = sorted(d for d in PORTAL_LOCALIZATIONS if not wanted or d in wanted)
+    # The ar root is not a portal directory: its matrix is written (and kept
+    # idempotent) by scripts/sync_root_hero_matrix.py with same-folder hrefs.
+    dirs = [d for d in dirs if d != 'ar']
     print(f"Processing {len(dirs)} language(s): {', '.join(dirs)}")
     updated = run(dirs)
     print(f"\nTotal languages updated: {updated}/{len(dirs)}")
