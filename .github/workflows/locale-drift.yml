@@ -7,6 +7,10 @@ on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    # الجرد الدوري الشهري: نفس بنك الحوارس يُشغَّل في أول كل شهر.
+    # إدخال السجل المؤرخ في worklog.md يكتبه من يشغّل الفحص محلياً.
+    - cron: '0 6 1 * *'
 
 jobs:
   drift:
@@ -18,3 +22,5 @@ jobs:
           python-version: '3.12'
       - name: Hero and style layers must match the master
         run: python scripts/sync_locales.py --check
+      - name: Sentinel - every language and map guard in one pass
+        run: python scripts/sentinel_i18n.py
