@@ -37,6 +37,7 @@ CHECK = [
     ('hreflang agreement', ['scripts/check_hreflang.py']),
     ('event payloads', ['scripts/check_sr_args.py']),
     ('local links', ['scripts/check_site_links.py']),
+    ('script-tag sync', ['scripts/check_script_tags.py']),
 ]
 
 FULL = [
