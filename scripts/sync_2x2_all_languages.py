@@ -171,74 +171,80 @@ PORTAL_LOCALIZATIONS = {
     }
 }
 
-ap = argparse.ArgumentParser(
-    description='Apply the hero 2x2 action matrix to locale portals (idempotent).')
-ap.add_argument('--lang', default='',
-                help='comma-separated subset of languages, e.g. --lang de (default: all)')
-args = ap.parse_args()
-wanted = {x.strip() for x in args.lang.split(',') if x.strip()}
-unknown = wanted - set(PORTAL_LOCALIZATIONS)
-if unknown:
-    sys.exit(f"unknown language(s): {', '.join(sorted(unknown))}")
-dirs = sorted(d for d in PORTAL_LOCALIZATIONS if not wanted or d in wanted)
-print(f"Processing {len(dirs)} language(s): {', '.join(dirs)}")
+def main():
+    ap = argparse.ArgumentParser(
+        description='Apply the hero 2x2 action matrix to locale portals (idempotent).')
+    ap.add_argument('--lang', default='',
+                    help='comma-separated subset of languages, e.g. --lang de (default: all)')
+    args = ap.parse_args()
+    wanted = {x.strip() for x in args.lang.split(',') if x.strip()}
+    unknown = wanted - set(PORTAL_LOCALIZATIONS)
+    if unknown:
+        sys.exit(f"unknown language(s): {', '.join(sorted(unknown))}")
+    dirs = sorted(d for d in PORTAL_LOCALIZATIONS if not wanted or d in wanted)
+    print(f"Processing {len(dirs)} language(s): {', '.join(dirs)}")
+    updated = run(dirs)
+    print(f"\nTotal languages updated: {updated}/{len(dirs)}")
 
-# Regex to find the hero action block
-pattern = re.compile(
-    r'(<div class="hero-reference__actions[^"]*"[^>]*>)(.*?)(</div>(\s*<!--[^\n]*-->)?\s*</div>)',
-    re.DOTALL
-)
 
-updated_count = 0
+def run(dirs):
+    """Apply the matrix to the given language dirs; returns count of updated files."""
+    # Regex to find the hero action block
+    pattern = re.compile(
+        r'(<div class="hero-reference__actions[^"]*"[^>]*>)(.*?)(</div>(\s*<!--[^\n]*-->)?\s*</div>)',
+        re.DOTALL
+    )
 
-for d in dirs:
-    path = f"{d}/index.html"
-    if not os.path.exists(path):
-        print(f"Skipping {d}: file not found")
-        continue
+    updated_count = 0
 
-    with open(path, 'r', encoding='utf-8') as f:
-        content = f.read()
+    for d in dirs:
+        path = f"{d}/index.html"
+        if not os.path.exists(path):
+            print(f"Skipping {d}: file not found")
+            continue
 
-    m = pattern.search(content)
-    if not m:
-        print(f"Skipping {d}: hero actions pattern not matched")
-        continue
+        with open(path, 'r', encoding='utf-8') as f:
+            content = f.read()
 
-    inner = m.group(2)
-    # Extract demo button
-    demo_match = re.search(r'<a\s+href="demo\.html"[^>]*>.*?</a>', inner, re.DOTALL)
-    # Extract vip button
-    vip_match = re.search(r'<button\s+type="button"[^>]*openExecutiveBookingModal[^>]*>.*?</button>', inner, re.DOTALL)
+        m = pattern.search(content)
+        if not m:
+            print(f"Skipping {d}: hero actions pattern not matched")
+            continue
 
-    if not demo_match or not vip_match:
-        print(f"Skipping {d}: demo or vip button not found in inner html")
-        continue
+        inner = m.group(2)
+        # Extract demo button
+        demo_match = re.search(r'<a\s+href="demo\.html"[^>]*>.*?</a>', inner, re.DOTALL)
+        # Extract vip button
+        vip_match = re.search(r'<button\s+type="button"[^>]*openExecutiveBookingModal[^>]*>.*?</button>', inner, re.DOTALL)
 
-    demo_html = demo_match.group(0)
-    vip_html = vip_match.group(0)
+        if not demo_match or not vip_match:
+            print(f"Skipping {d}: demo or vip button not found in inner html")
+            continue
 
-    # Standardize classes for demo button: ensure hero-btn-gold-pair and hero-btn-primary-highlight
-    if 'hero-btn-gold-pair' not in demo_html:
-        demo_html = demo_html.replace('hero-btn-demo', 'hero-btn-gold-pair hero-btn-demo')
-    if 'hero-btn-primary-highlight' not in demo_html:
-        demo_html = demo_html.replace('hero-btn-demo', 'hero-btn-demo hero-btn-primary-highlight')
+        demo_html = demo_match.group(0)
+        vip_html = vip_match.group(0)
 
-    # Standardize classes for vip button: ensure hero-btn-gold-pair and hero-btn-primary-highlight
-    if 'hero-btn-gold-pair' not in vip_html:
-        vip_html = vip_html.replace('hero-btn-vip', 'hero-btn-gold-pair hero-btn-vip')
-    if 'hero-btn-primary-highlight' not in vip_html:
-        vip_html = vip_html.replace('hero-btn-vip', 'hero-btn-vip hero-btn-primary-highlight')
+        # Standardize classes for demo button: ensure hero-btn-gold-pair and hero-btn-primary-highlight
+        if 'hero-btn-gold-pair' not in demo_html:
+            demo_html = demo_html.replace('hero-btn-demo', 'hero-btn-gold-pair hero-btn-demo')
+        if 'hero-btn-primary-highlight' not in demo_html:
+            demo_html = demo_html.replace('hero-btn-demo', 'hero-btn-demo hero-btn-primary-highlight')
 
-    loc = PORTAL_LOCALIZATIONS[d]
+        # Standardize classes for vip button: ensure hero-btn-gold-pair and hero-btn-primary-highlight
+        if 'hero-btn-gold-pair' not in vip_html:
+            vip_html = vip_html.replace('hero-btn-vip', 'hero-btn-gold-pair hero-btn-vip')
+        if 'hero-btn-primary-highlight' not in vip_html:
+            vip_html = vip_html.replace('hero-btn-vip', 'hero-btn-vip hero-btn-primary-highlight')
 
-    row1 = f"""                                        <!-- Row 1: Gold Luxury Pair (Live Demo & VIP Executive Consultation) -->
+        loc = PORTAL_LOCALIZATIONS[d]
+
+        row1 = f"""                                        <!-- Row 1: Gold Luxury Pair (Live Demo & VIP Executive Consultation) -->
                                         <div class="hero-actions-row">
                                             {demo_html.strip()}
                                             {vip_html.strip()}
                                         </div>"""
 
-    row2 = f"""                                        <!-- Row 2: Dark Emerald Portal Pair (Developer Portal & Partner Portal) -->
+        row2 = f"""                                        <!-- Row 2: Dark Emerald Portal Pair (Developer Portal & Partner Portal) -->
                                         <div class="hero-actions-row">
                                             <a href="../developer-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-dev-portal" title="{loc['dev_title']}">
                                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
@@ -250,32 +256,29 @@ for d in dirs:
                                             </a>
                                         </div>"""
 
-    new_hero_actions = f"""<div class="hero-reference__actions hero-actions-2x2">
+        new_hero_actions = f"""<div class="hero-reference__actions hero-actions-2x2">
 {row1}
 
 {row2}
                                     </div>"""
 
-    # Replace the hero actions container
-    # Span of full match m: m.group(1) + m.group(2) + "</div>"
-    # To be very precise, find where the inner ends
-    start_pos = m.start(1)
-    # The container ends at m.group(3)'s first </div>
-    # Let's replace the whole container up to m.end(3) minus the trailing closing div
-    # Or replace m.group(1) + m.group(2) + "</div>"
-    container_old = m.group(1) + m.group(2) + "</div>"
-    
-    if container_old not in content:
-        print(f"Error matching container_old in {d}")
-        continue
+        # Replace the hero actions container using the FULL regex match span.
+        # 2026-11-17 fix: the previous logic rebuilt the span as
+        # m.group(1) + m.group(2) + "</div>", which under DOTALL swallowed one
+        # closing </div> too few and left an orphan </div> behind on every
+        # re-run. Slicing on m.start()/m.end() of the whole match is exactly
+        # idempotent (verified: en/nl produce zero diff on repeat runs).
+        content = content[:m.start()] + new_hero_actions + content[m.end():]
 
-    content = content.replace(container_old, new_hero_actions, 1)
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(content)
 
-    with open(path, 'w', encoding='utf-8') as f:
-        f.write(content)
+        updated_count += 1
+        print(f"Updated {d}/index.html successfully.")
 
-    updated_count += 1
-    print(f"Updated {d}/index.html successfully.")
+    return updated_count
 
-print(f"\nTotal languages updated: {updated_count}/{len(dirs)}")
+
+if __name__ == '__main__':
+    main()
 
