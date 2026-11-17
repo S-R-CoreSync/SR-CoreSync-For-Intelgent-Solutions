@@ -168,6 +168,15 @@ PORTAL_LOCALIZATIONS = {
         'dev_title': 'Portala Pêşvebiran, API û Holograma 3D ya Înteraktîf',
         'partner_label': 'Portala Hevalbendan & Lîsansê 💼',
         'partner_title': 'Tora gerdûnî ya hevalbendan, nûnertiya taybet û lîsanskirina saziyî'
+    },
+    # Sorani Kurdish (Central Kurdish, Arabic script) - suggestion #9 approved
+    # 2026-11-18: ckb/index.html lang="ckb" carried Fusha Arabic row-2 text;
+    # it now joins the single-source dictionary in its own language.
+    'ckb': {
+        'dev_label': 'پۆرتاڵی گەشەپێدەران و 3D کارلێکەر ⚡',
+        'dev_title': 'پۆرتاڵی گەشەپێدەران، API و هۆلۆگرامی 3D کارلێکەر',
+        'partner_label': 'پۆرتاڵی هاوبەشان و مۆڵەتەکان 💼',
+        'partner_title': 'تۆڕی جیهانی هاوبەشان، نوێنەرایەتی تایبەت و مۆڵەتدانی دامەزراوەیی'
     }
 }
 

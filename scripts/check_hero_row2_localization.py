@@ -28,7 +28,9 @@ EXPECTED_HREFS = {
 }
 
 # Portals written natively without a dictionary entry (structurally checked).
-NO_DICT_PORTALS = ['ckb']
+# ckb joined the dictionary in suggestion #9 (approved 2026-11-18), so the
+# list is empty today; the mechanism stays for any future no-dict portal.
+NO_DICT_PORTALS = []
 
 
 def text_of(el):
