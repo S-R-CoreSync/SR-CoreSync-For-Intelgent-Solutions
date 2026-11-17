@@ -33,6 +33,75 @@ def is_brand_only(text):
 EN = re.compile(r"\b(the|and|your|with|from|this|that|our|we|are|is|will|can|you|for|of|to|"
                 r"all|new|more|best|ready|solutions|systems|software|services)\b", re.I)
 
+# English-detector words that are ALSO valid words of the page language, so
+# they are not evidence of English prose: "for"/"at"/"to" in Danish, "is" is
+# the Estonian inessive suffix (AWS-is, Azure'is) and the ice-word in da/no/sv.
+SHARED_EN = {
+    'da': {'for', 'at', 'to', 'is'},
+    'no': {'for', 'to', 'is'},
+    'sv': {'for', 'to', 'is'},
+    'et': {'is'},
+    'nl': {'is'},
+}
+
+# Distinctive words of each locale (none of them are English words). Two or
+# more distinct hits mean the block already reads in the page language and is
+# not English prose - this zeroes the documented false alarms on da/et/no
+# (Scandinavian/Estonian function words tripping the English heuristic).
+LANG_WORDS = {
+    'da': {'og', 'til', 'som', 'med', 'ikke', 'vores', 'deres', 'hver', 'blir', 'kan',
+           'har', 'være', 'det', 'denne', 'dette', 'eller', 'hvor', 'når', 'også'},
+    'no': {'og', 'til', 'som', 'med', 'ikke', 'vår', 'våre', 'dere', 'hver', 'blir',
+           'kan', 'har', 'være', 'det', 'denne', 'dette', 'eller', 'hvor', 'når', 'også'},
+    'sv': {'och', 'till', 'som', 'med', 'inte', 'vår', 'våra', 'eras', 'varje', 'blir',
+           'kan', 'har', 'vara', 'det', 'denna', 'detta', 'eller', 'var', 'också'},
+    'et': {'ja', 'ei', 'või', 'ning', 'meie', 'teie', 'kõik', 'iga', 'samuti', 'aga',
+           'ole', 'olla', 'meid', 'teid', 'kuid'},
+    'de': {'der', 'das', 'und', 'nicht', 'mit', 'für', 'unser', 'unsere', 'ihre', 'ist',
+           'sind', 'auch', 'bei', 'von', 'dieser', 'diese', 'werden', 'können', 'mehr'},
+    'fr': {'les', 'des', 'une', 'nos', 'vos', 'pour', 'est', 'sont', 'dans', 'avec',
+           'nous', 'votre', 'vous', 'qui', 'que', 'cette', 'aux', 'sur', 'leur', 'ainsi'},
+    'es': {'los', 'las', 'una', 'está', 'están', 'para', 'con', 'sobre', 'más', 'pero',
+           'como', 'cuando', 'cada', 'además', 'nuestro', 'nuestra', 'usted', 'sus'},
+    'it': {'gli', 'delle', 'degli', 'sono', 'per', 'con', 'più', 'anche', 'nostro',
+           'nostra', 'questo', 'questa', 'loro', 'nella', 'nel', 'sul', 'alla', 'tutte'},
+    'pt': {'são', 'dos', 'das', 'uma', 'para', 'com', 'mais', 'como', 'também', 'nosso',
+           'nossa', 'isso', 'cada', 'sobre', 'pela', 'pelo', 'nas', 'todos', 'todas'},
+    'nl': {'het', 'een', 'van', 'niet', 'met', 'voor', 'ons', 'onze', 'zijn', 'wordt',
+           'ook', 'als', 'bij', 'deze', 'dit', 'naar', 'dat', 'uw', 'wij', 'hun'},
+    'tr': {'bir', 'için', 'olarak', 'daha', 'değil', 'olmak', 'olan', 'bu', 'şu', 'tüm',
+           'her', 'ile', 'kadar', 'bizim', 'sizin', 've', 'çok', 'yok'},
+    'pl': {'oraz', 'jest', 'są', 'dla', 'że', 'nie', 'jak', 'który', 'która', 'które',
+           'nasze', 'naszych', 'także', 'przez', 'może', 'każdy', 'wszystkie', 'się'},
+    'cs': {'jsou', 'pro', 'které', 'který', 'nám', 'vaše', 'naše', 'není', 'jako',
+           'podle', 'mezi', 'tím', 'této', 'toto', 'vše', 'každý', 'jsme', 'své'},
+    'sk': {'sú', 'pre', 'ktoré', 'ktorý', 'naše', 'vaše', 'nie', 'ako', 'medzi',
+           'týmto', 'tejto', 'všetky', 'každý', 'sme', 'svoje'},
+    'hu': {'és', 'egy', 'nem', 'minden', 'vagy', 'van', 'vannak', 'hogy', 'mely', 'önt',
+           'csak', 'nincs', 'az'},
+    'ro': {'și', 'este', 'sunt', 'pentru', 'fiecare', 'nostru', 'noastră', 'care', 'nu',
+           'mai', 'cele', 'ale', 'prin', 'fără'},
+    'bg': {'за', 'на', 'от', 'че', 'са', 'всяка', 'всеки', 'нашите', 'вашите', 'които',
+           'към', 'при', 'или', 'всички'},
+    'el': {'και', 'για', 'με', 'τα', 'τις', 'μας', 'σας', 'είναι', 'κάθε', 'όλες',
+           'όλα', 'που', 'στο', 'στη'},
+    'hr': {'su', 'se', 'za', 'koje', 'koja', 'naša', 'naše', 'vaše', 'nije', 'ali',
+           'sve', 'svaka', 'svaki', 'kroz', 'između', 'ili'},
+    'sl': {'so', 'se', 'za', 'ki', 'niso', 'vse', 'vsak', 'vsaka', 'naša', 'vaše',
+           'ali', 'vseh'},
+    'fi': {'ja', 'ovat', 'meidän', 'teidän', 'kaikki', 'joka', 'jokainen', 'myös',
+           'mutta', 'tämä', 'nämä', 'eivät', 'ole', 'sekä'},
+    'lv': {'un', 'ir', 'nav', 'vai', 'mūsu', 'jūsu', 'visi', 'katrs', 'arī', 'bet',
+           'kas', 'pie', 'uz'},
+    'lt': {'ir', 'yra', 'nėra', 'arba', 'mūsų', 'jūsų', 'visi', 'kiekvienas', 'kas',
+           'iš', 'nuo', 'taip'},
+    'ga': {'agus', 'na', 'ar', 'le', 'go', 'bhfuil', 'sé', 'sí', 'muid', 'sibh', 'iad',
+           'ár', 'bhur', 'nach', 'gur'},
+    'mt': {'ta', 'li', 'fil', 'tal', 'għal', 'fit', 'minn', 'għandna', 'tagħna',
+           'tagħkom', 'kollha', 'jew'},
+    'ku': {'û', 'bi', 'ji', 'bo', 'ev', 'ne', 'ye', 'hemû', 'her', 'xwe', 'yên'},
+}
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -58,9 +127,16 @@ def main():
         for brand in BRANDS:
             probe = re.sub(re.escape(brand), " ", probe, flags=re.I)
         probe = re.sub(r"[•·|/–—-]+", " ", probe)
-        hits = len(EN.findall(probe))
+        raw_hits = EN.findall(probe)
+        # English-detector words that double as words of the page language are
+        # not evidence (da/no "for", Estonian "-is" suffix, ...)
+        hits = [w for w in raw_hits if w.lower() not in SHARED_EN.get(args.lang, ())]
+        lang_hits = len({w for w in LANG_WORDS.get(args.lang, ())
+                         if re.search(rf"\b{re.escape(w)}\b", probe, re.I)})
         words = len(probe.split())
-        if hits < 2 or words < 4:
+        if lang_hits >= 2:
+            continue  # the block already reads in the page language
+        if len(hits) < 2 or words < 4:
             continue
         if is_brand_only(text):
             continue
