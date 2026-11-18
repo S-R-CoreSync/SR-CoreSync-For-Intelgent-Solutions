@@ -52,6 +52,9 @@
      at the far right, with the dock holding the centre. When the space left of
      the dock is too tight, it steps one level up instead of crowding it. */
   function stickTools() {
+    /* الشاشات القصيرة (≤880px ارتفاعاً): hero-declutter.css يتولى التثبيت بمواضع صارمة
+       — مطاردة الموضع هنا تعيد الأدوات إلى منتصف الشاشة فتدفن القمرة (شكوى 2026-11-18) */
+    if (window.matchMedia && window.matchMedia('(max-height: 880px)').matches) { return; }
     var cap = document.querySelector('.sr-tools-capsule');
     var dock = document.getElementById('appleMacosDockWrapper');
     if (!cap || !dock) { return; }
