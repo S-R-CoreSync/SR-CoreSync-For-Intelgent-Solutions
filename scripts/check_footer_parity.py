@@ -2,7 +2,7 @@
 """Footer parity: how far each locale's footer has drifted from the master."""
 import re, os
 
-ROOT = r'D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # كان مسار ويندوز مضمّناً — أصبح نسبياً للسكربت (البند 23)
 MASTER = os.path.join(ROOT, 'index.html')
 
 
@@ -26,10 +26,16 @@ def footer_span(src):
 
 def footer_links(path):
     s = open(path, encoding='utf-8', newline='').read()
-    span = footer_span(s)
+    # البند 23: الأداة كانت تلتقط أكبر فوتر — والأدق فوتر srf المعياري تحديداً
+    m = re.search(r'<footer class="srf".*?</footer>', s, re.S)
+    if not m:
+        span = footer_span(s)
+    else:
+        span = m.group(0)
     if not span:
         return None
-    return re.findall(r'<a[^>]*href="([^"]+)"', span)
+    # تطبيع المسارات: ../ و ./ مكافئتان بين المرجع والبوابات
+    return [re.sub(r'^\.\.?/', '', h) for h in re.findall(r'<a[^>]*href="([^"]+)"', span)]
 
 
 def main():

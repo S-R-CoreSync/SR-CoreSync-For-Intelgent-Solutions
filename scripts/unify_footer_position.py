@@ -23,7 +23,7 @@ import sys
 import os
 from lxml import etree
 
-LOCALES = ["cs","da","de","el","en","es","et","fi","fr","ga","hr","hu","it","ku",
+LOCALES = ["ckb","cs","da","de","el","en","es","et","fi","fr","ga","hr","hu","it","ku",
            "lt","lv","mt","nl","no","pl","pt","ro","sk","sl","sv","tr"]
 CORE = re.compile(
     r'<script src="\.\./js/sr-(command|lang-hint|sound|print-guard|consent)\.js[^"]*"[^>]*></script>')
