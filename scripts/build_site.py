@@ -43,30 +43,41 @@ def span(src, m, tag):
 
 
 def regions(src):
+    # حدود-أساس: كل منطقة تمتد من افتتاحها إلى افتتاح المنطقة التالية،
+    # فالبينية تُمتص داخل مناطقها ولا توجد فجوات وسيطة. هذا يجعل التفكيك
+    # وإعادة التجميع متطابقَين بايتياً بغض النظر عن التداخل الهيكلي
+    # (قسم غير مغلق أو أغلفة عابرة) - والدليل --check يثبت ذلك حرفياً.
+    # المنطقة الأخيرة (footer) وحدها تُغلق بعمق وسومها، وما بعدها = 99-tail.
     out = []
     for name, pat, tag in REGIONS:
         m = re.search(pat, src)
         if not m:
             raise SystemExit('region not found: ' + name)
-        a, b = span(src, m, tag)
-        out.append((name, a, b))
+        out.append((name, m.start(), m))
     out.sort(key=lambda r: r[1])
-    return out
+    resolved = []
+    for i, (name, a, m) in enumerate(out):
+        if i + 1 < len(out):
+            resolved.append((name, a, out[i + 1][1]))
+        else:
+            e = span(src, m, 'footer')
+            resolved.append((name, a, e[1] if e else len(src)))
+    return resolved
 
 
 def extract():
     src = open(MASTER, encoding='utf-8', newline='').read()
     regs = regions(src)
     os.makedirs(PARTS, exist_ok=True)
-    pieces, cursor = [], 0
+    pieces = []
+    first_a = regs[0][1]
+    if first_a > 0:
+        pieces.append(('00-gap', src[:first_a]))
     for idx, (name, a, b) in enumerate(regs):
-        if a > cursor:
-            nm = '%02d-gap' % idx
-            pieces.append((nm, src[cursor:a]))
         pieces.append((name, src[a:b]))
-        cursor = b
-    if cursor < len(src):
-        pieces.append(('99-tail', src[cursor:]))
+    last_b = regs[-1][2]
+    if last_b < len(src):
+        pieces.append(('99-tail', src[last_b:]))
 
     for nm, text in pieces:
         with open(os.path.join(PARTS, nm + '.html'), 'w', encoding='utf-8', newline='') as f:

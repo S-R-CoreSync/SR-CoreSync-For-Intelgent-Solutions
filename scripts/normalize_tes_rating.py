@@ -28,7 +28,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from publish_set import iter_publish_files  # noqa: E402
 
 CARDS = ("01", "02", "03", "04", "05")
-MIRROR = "partials/en/07-gap.html"
+MIRROR = "partials/en/99-tail.html"
 # نمط الوسم المشوّه (يغطي الشكلين A وB): كل ما بين aria-label=" المعطوب وإغلاق الوسم
 BROKEN = re.compile(
     r'aria-label=" data-i18n="(testimonials\.0[1-5]\.rating)"[^>]*>')
