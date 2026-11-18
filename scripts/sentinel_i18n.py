@@ -41,6 +41,7 @@ CHECKS = [
     ('hreflang agreement', ['python3', 'scripts/check_hreflang.py']),
     ('one version per script tag', ['python3', 'scripts/check_script_tags.py']),
     ('languages health (2x2/cache/hreflang)', ['python3', 'scripts/audit_all_languages_health.py']),
+    ('tes-rating dict-exact (guard 13)', ['python3', 'scripts/normalize_tes_rating.py', '--check']),
 ]
 
 TAIL_ON_FAIL = 12
