@@ -1,0 +1,29 @@
+
+
+<script id="hv2-belt">
+(function(){
+  'use strict';
+  function q(id){ return document.getElementById(id); }
+  function h(el){ if(!el) return 0; var s=getComputedStyle(el);
+    if(s.display==='none'||s.visibility==='hidden') return 0;
+    var r=el.getBoundingClientRect(); return r.height>4?r.height:0; }
+  function measure(){
+    var pb=q('srPrivacyBannerWrap'), ph=0;
+    if(pb){ var r=pb.getBoundingClientRect(); if(r.height>4){ ph=Math.max(r.height, window.innerHeight-r.top); } }
+    var c=document.querySelector('.sr-consent'), ch=0;
+    if(c){ var cs=getComputedStyle(c); if(cs.display!=='none'&&cs.visibility!=='hidden'){ ch=c.getBoundingClientRect().height||0; } }
+    document.documentElement.style.setProperty('--privacy-h', Math.round(ph)+'px');
+    document.documentElement.style.setProperty('--consent-h', Math.round(ch)+'px');
+    document.documentElement.style.setProperty('--chrome-h', Math.round(Math.max(h(q('srPrivacyBannerWrap')), h(q('srQuickDockContainer')), 0))+16+'px');
+    var hero=q('hero');
+    if(hero){ hero.style.setProperty('min-height', Math.max(460, Math.round(window.innerHeight-142-ch-ph))+'px', 'important'); }
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', measure, {once:true}); } else { measure(); }
+  window.addEventListener('load', measure, {once:true});
+  setTimeout(measure, 900); setTimeout(measure, 2200);
+  window.addEventListener('resize', measure, {passive:true});
+  if(window.MutationObserver){ new MutationObserver(measure).observe(document.body, {childList:true, attributes:true, attributeFilter:['class','style']}); }
+})();
+</script>
+<script src="../js/sr-dock-merge.js?v=20261113f" defer></script>
+
