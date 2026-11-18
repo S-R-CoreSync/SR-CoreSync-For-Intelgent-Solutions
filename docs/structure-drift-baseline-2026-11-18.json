@@ -1,0 +1,755 @@
+{
+ "master": {
+  "order": [
+   "hero",
+   "trust-metrics",
+   "services",
+   "pricing",
+   "software-hub",
+   "about",
+   "founders-showcase",
+   "trust-band",
+   "portals",
+   "services-compare",
+   "tech-pillars",
+   "compliance",
+   "process",
+   "testimonials",
+   "roi-calculator",
+   "guarantees",
+   "faq",
+   "executive-solutions-stage",
+   "contact",
+   "newsletter",
+   "insights"
+  ],
+  "footers": 4
+ },
+ "pages": {
+  "bg": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "ckb": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 19
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -6
+    },
+    "software-hub": {
+     "cards": 45,
+     "li": 9,
+     "btn": 28
+    }
+   }
+  },
+  "cs": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "da": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "de": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 48,
+     "li": 9,
+     "btn": 24
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "el": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "en": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 9
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "cards": -27,
+     "h2h3": -7,
+     "btn": -3
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 4
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "es": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "et": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "fi": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "fr": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "ga": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "hr": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "hu": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "it": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "ku": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "lt": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "lv": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "mt": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "nl": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "no": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "pl": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "pt": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "ro": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "sk": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "sl": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "sv": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 1,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  },
+  "tr": {
+   "missing": [],
+   "extra": [],
+   "first_drift": [],
+   "footers": 0,
+   "content_delta": {
+    "hero": {
+     "btn": 21
+    },
+    "services": {
+     "btn": -11
+    },
+    "pricing": {
+     "h2h3": -7,
+     "btn": 13
+    },
+    "software-hub": {
+     "cards": 36,
+     "li": 9,
+     "btn": 18
+    },
+    "founders-showcase": {
+     "btn": -5
+    }
+   }
+  }
+ }
+}
