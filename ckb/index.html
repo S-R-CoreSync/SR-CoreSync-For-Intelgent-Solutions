@@ -3187,6 +3187,53 @@ html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
                     <div class="es-pricing-vat-notice">
                         <span class="es-vat-live-badge">🇳🇱 BTW 21% (NL/EU Tax Compliant)</span>
                     </div>
+                </div><div class="sr-roi-calculator-wrap" id="srRoiCalculator">
+                    <div class="sr-roi-calc-card">
+                        <div class="sr-roi-head">
+                            <div class="sr-roi-title-group">
+                                <span class="sr-roi-badge">📊 حێسبەری گەشە</span>
+                                <h3 class="sr-roi-title">ROIی پرۆژەت بخەملێنە (ROI Calculator)</h3>
+                                <p class="sr-roi-sub">بە ئیکۆسیستەمی زیرەکی S&amp;R CoreSync دەستکەوتی خەرجیی ئۆپەراسیۆن و قازانجی ساڵانەی چاوەڕوانکراو ببینە.</p>
+                            </div>
+                            <div class="sr-roi-highlight-box">
+                                <span class="sr-roi-hl-lbl">ROIی چاوەڕوانکراو</span>
+                                <span class="sr-roi-hl-val" id="roiPercentOutput">+340%</span>
+                                <span class="sr-roi-hl-sub">لە ٦ مانگی یەکەمی کارکردندا</span>
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-controls-grid">
+                            <div class="sr-roi-control-item">
+                                <label for="roiSalesRange" class="sr-roi-label">
+                                    <span>قەبارەی چاوەڕوانکراوی فرۆشتنی مانگانە / داهات:</span>
+                                    <strong id="roiSalesVal" class="sr-roi-val-display">€25,000</strong>
+                                </label>
+                                <input type="range" id="roiSalesRange" min="5000" max="250000" step="5000" value="25000" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                            <div class="sr-roi-control-item">
+                                <label for="roiTeamRange" class="sr-roi-label">
+                                    <span>ژمارەی کارمەندان یان ئۆپەراسیۆنە دەستییەکان بە مانگ:</span>
+                                    <strong id="roiTeamVal" class="sr-roi-val-display">١٥ ئۆپەراسیۆن/کەس</strong>
+                                </label>
+                                <input type="range" id="roiTeamRange" min="3" max="100" step="1" value="15" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-results-strip">
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">دەستکەوتی ساڵانە لە خەرجیی ئۆتۆماتیزەیشن و کلۆد:</span>
+                                <strong class="sr-roi-res-num" id="roiSavingsOutput">€18,400</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">گەشەی چاوەڕوانکراوی فرۆشتنی خاوێن:</span>
+                                <strong class="sr-roi-res-num" style="color:#10b981;" id="roiGrowthOutput">+€32,500</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">ماوەی گەڕانەوەی سیستەم (Payback):</span>
+                                <strong class="sr-roi-res-num" style="color:var(--sr-gold-light, #f3dfba);" id="roiPaybackOutput">٢,١ مانگ</strong>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- شريط الحافز الضريبي الأوروبي لباقات الأسعار -->
@@ -3975,7 +4022,161 @@ html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
                     </div>
                 </div>
 
-                <div class="cost-estimator-wrapper" id="cost-estimator">
+                <div class="sr-pricing-extras" style="margin-top:3.5rem;display:flex;flex-direction:column;gap:2rem;">
+
+                    <!-- Lead capture (low friction) -->
+                    <div
+                        style="text-align:center;background:linear-gradient(135deg,rgba(var(--sr-gold-rgb, 212, 175, 55),0.12),rgba(30,120,90,0.08));border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:18px;padding:2.4rem 2rem;">
+                        <h3 style="color:#fff;font-size:1.5rem;margin:0 0 0.6rem;font-weight:800;">دڵنیا نیت کام پاکەتەکە گونجاوە بۆت؟</h3>
+                        <p style="color:#d3dbd7;margin:0 auto 1.4rem;max-width:min(620px,100%);line-height:1.8;">مشەوەرێکی بێخەرجیی ۳٠ خولەک حیجز بکە — باردوونی ت دەکەینەوە و گونجاوترین پاکەت پێشنیار دەکەین، بەبێ بەرپرسیارێتی.</p>
+                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20S%26R%20CoreSync%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%2030%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%84%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A3%D9%86%D8%B3%D8%A8"
+                            target="_blank" rel="noopener noreferrer" data-track="plan-cta"
+                            data-plan="free-consultation" data-action="whatsapp"
+                            style="display:inline-block;background:#d4af37;color:#04100b;font-weight:800;padding:0.9rem 2.2rem;border-radius:999px;text-decoration:none;font-size:1rem;">
+                            📅 مشەوەری بێخەرجیی ۳٠ خولەک حیجز بکە
+                        </a>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            چی دەڵێن کڕیارەکانمان</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem;">
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "بە Core Starter پلاتفۆرممان لە ٣ هەفتەدا راهاندنا. پشتگیری ٣٠ ڕۆژ بەس بوو بۆ تیممان."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— بەرپرسی ئۆپەراسیۆن، کۆمپانیای لۆجستی (NL)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Full ERP Sync پلانی حساباتمان + SEPA + BTW یەکخست. ١٥ کاتژمێر/هەفتە دەپارێزێت بۆمان."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CFO، کۆمپانیای بازرگانی (EU)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Custom ERP Ecosystem: ١٠٠% White-Label + BYOK. پاراستن لە ئاستی بانک."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CTO، FinTech (UAE)</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Add-ons -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            مۆدیولەکانی زیادە (Add-ons)</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">📦</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">مۆدیولی زیادە
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+١ مۆدیولی کار (module)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€190</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🎓</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">کاتژمێری ڕاهێنان
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+٥ کاتژمێری ڕاهێنان (Zoom)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€250</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🛠️</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">درێژکردنەوەی پشتگیری</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+٣٠ ڕۆژ درێژکردنەوەی پشتگیری (SLA)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€290</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🌍</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">زمانی زیادە</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+١ زمانی زیادە (i18n)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€180</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post-purchase steps -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">دوای حیجزکردن — ٤ هەنگاوی ڕوون</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    1</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">پشتەندیکردن (٢٤ کاتژمێر)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">ئیمەیڵی پشتەندیکردن + فاکتوری BTW</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    2</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Kickoff (٣ ڕۆژ)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">دانیشتنی ٦٠ خولەک — دیاریکردنی مەودا</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    3</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">جێبەجێکردن</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">ڕێکخستنی ERP + بەستنەوەی حسابات + تاقیکردنەوە
+                                </p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    4</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">دەستەڵات</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">سیستەمی ئامادە + دۆکیومێنتاتسیون + پشتگیری</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing FAQ -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">پرسیارە باوەکان دەربارەی نرخەکان</h3>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">نرخ BTW (VAT) دەگرێتەوە؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">نرخەکان
+                                <strong>hors taxe</strong> (بێ BTW). هەموو فاکتۆرەکان وەک فاکتۆری فەرمی باج (٢١% BTW) دەردەکرێن بەپێی Belastingdienst — دەکرێن وەک خەرجیی کارکردن کەم بکەنەوە.
+                            </p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">پشتگیری (Support) چەند درێژە بۆ هەر پاکەتێک؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Core Starter: ٣٠ ڕۆژ · Enterprise Growth: ٦٠ ڕۆژ · Core MAX: ١٨٠ ڕۆژ · ERP Setup: ٣٠ ڕۆژ · Full ERP Sync: ٦٠ ڕۆژ · Custom: ١٨٠ ڕۆژ. پشتگیری دەکرێت درێژ بکرێتەوە (Add-on).</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">دەتوانم دواتر نوێکردنەوە (Upgrade) بکەم؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">بەڵێ — لە هەر کاتێک دەتوانت نوێ بکەیتەوە. جیاوازییەکە (pro-rata) بەپێی ئەوەی دەتپارێت دەپەسەندین.</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">چ شێوازێکی پارەدان قبوڵ دەکرێن؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">iDEAL، Stripe، Mollie، Bancontact، Apple Pay، SEPA Direct Debit، گواستنەوەی بانکی. فاکتۆری فەرمی (PDF) بە BTW.
+                            </p>
+                        </details>
+                        <details style="padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">گرەنتی (Guarantee) هەیە؟</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">گرەنتی ڕەزامەندیی ١٤ ڕۆژ: ئەگەر لە ماوەی ١٤ ڕۆژ دوای kickoff ڕازی نیت، هەموو بڕەکە دەگەرێنینەوە. مشەوەری بێخەرجیی ٣٠ خولەک پێش بەرپرسیارێتی.</p>
+                        </details>
+                    </div>
+
+                    <!-- Guarantee badge -->
+                    <div style="text-align:center;">
+                        <span
+                            style="display:inline-block;background:rgba(var(--sr-gold-rgb, 212, 175, 55),0.12);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:999px;padding:0.7rem 1.6rem;color:#e4cfa9;font-weight:700;font-size:0.9rem;">
+                            🛡️ گرەنتی ڕەزامەندیی ١٤ ڕۆژ · مشەوەری بێخەرجیی ٣٠ خولەک · فاکتۆری فەرمی BTW
+                        </span>
+                    </div>
+                </div><div class="cost-estimator-wrapper" id="cost-estimator">
                     <div class="cost-estimator-card">
                         <div class="cost-estimator-header">
                             <span class="sr-logo-badge-pill mb-2 d-inline-flex">
@@ -12453,7 +12654,7 @@ try{(function(){var sl=document.querySelector('.srx-skip-link');if(sl&&!sl.hasAt
         </div>
     </div>
 </div>
-<script src="../js/sr-command.js" defer></script><script src="../js/services-enhancements-locale.js?v=20261118-j" defer></script>
+<script src="../js/sr-command.js" defer></script><script src="../js/services-enhancements-locale.js?v=20261118-j2" defer></script><script>document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("roiSalesRange"),b=document.getElementById("roiTeamRange");if(a&&!a.dataset.srRoiInit){a.dataset.srRoiInit="1";a.addEventListener("input",updateRoiCalc);if(b&&!b.dataset.srRoiInit){b.dataset.srRoiInit="1";b.addEventListener("input",updateRoiCalc);}updateRoiCalc();}});</script>
 <script src="../js/sr-lang-hint.js?v=20261114-ring" defer></script>
 <script src="../js/sr-sound.js?v=20261111b" defer></script>
 <script src="../js/sr-print-guard.js?v=20261111" defer></script>
