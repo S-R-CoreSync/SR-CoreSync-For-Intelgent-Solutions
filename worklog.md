@@ -9,6 +9,13 @@
 
 ---
 
+### [2026-11-18 11:00] — 24أ-ج الموجة الثانية: الجرد النهائي وخريطة التنفيذ (بانتظار «تابع»)
+- **التشخيص بالإبناء المباشر (lxml) لـ pricing > .container:** المرجع = 14 ابناً (s-header، currency-bar، **sr-roi-calculator-wrap**، tax-banner، tabs، tab-content، tier-matrix، **sr-pricing-extras**، cost-estimator-wrapper) · de = 7 أبناء فقط (بدون ROI وبدون tax-banner وبدون sr-pricing-extras كاملاً، وcost-estimator-grid بلا رأسه، وبعد tier-matrix ينقطع). فحص الازدواج بـ7 تواقيع ألمانية (Add-on/Zusatz/Häufige Fragen/nach der Buchung…): **صفر إصابة — الكتلتان غائبتان كليتين** فيصح البناء الكامل بلا خوف تكرار.
+- **حجم التأليف:** sr-pricing-extras ≈ 36 نصاً فريداً (5 عناوين + CTA + 3 اقتباسات + 3 إسناد + 8 إضافات + 9 خطوات + 10 أسئلة/إجابات + شارة) × 27 لغة ≈ 900 ترجمة · ROI ≈ 8 × 27 · رأس الحاسبة 1 × 27 · en cards −27 (تأليف إنجليزي ~25).
+- **القرار التنفيذي:** جودة الترجمة فوق السرعة — الموجة الثانية جلسة تأليف مستقلة بعُرف الدفعات، لا تسريخها في نهاية جولة طويلة. خريطتها الكاملة محفوظة في PLAN.md (الترتيب: رأس الحاسبة → extras → ROI → en cards، مع فحوص ودفع لكل خطوة).
+
+---
+
 ### [2026-11-18 10:30] — البند 24أ (الخيار ج): الموجة الأولى منفذة ومدفوعة — التزام `cc8e509a`
 - **إشارة المالك «نفّذ ج»** — الحدان المعلنان: حذف المخفي CSS حصراً + بناء كل المفقود المترجم. الأداة `scripts/transplant_option_j.py` (28 لغة، قوالب مستخرجة من المرجع وقت التشغيل، idempotent، إثبات إدراج صرف موضعي) + ملف مشتق `js/services-enhancements-locale.js` (node --check ✓).
 - **(أ) حذف المخفي (صفر مرئي):** أبناء #hero الغائبون عن المرجع (hero-compact-sectors-row — 12 زراً مخفياً بطبقة hv2-port) + تسوية أزرار `content-wrap` المشتركة بالتوقيع call-only: 13→4 (surplus = toggle/aria/fillHeroPromptSample×5/openVoicePlanner/oAVPM — كلها مخفية `#hero .content-wrap{display:none!important}`). حارسان مكتشفان بالتنفيذ: (1) **حارس الغلاف** — sl تلفّف بطلها بطبقات خاصة فكان الحذف «الغائب عن المرجع» سيُخلّي ببنيتها؛ أُضيف المنع إن حمل الابن hv2/content-wrap/overlay/canvas (اكتشف عبر انحراف sync_locales على sl قبل الدفع، استُعيدت وأُعيد التشغيل: 6/6 مثل المرجع). (2) **التوقيع call-only** بدل (call,args) — مناعة ضد انحراف args بين اللقاطات.
