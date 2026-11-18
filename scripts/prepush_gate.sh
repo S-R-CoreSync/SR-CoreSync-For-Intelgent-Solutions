@@ -36,22 +36,33 @@ steps=(
   "python scripts/sentinel_i18n.py"
 )
 
-echo "PRE-PUSH GATE: ${#steps[@]} blocking audits (CI order) + sentinel"
+echo "PRE-PUSH GATE: ${#steps[@]} audits (CI order) + sentinel"
+# إصلاح pipefail (موجة 2026-11-18): $? بعد الأنبوب كان يعكس tail دائماً فيقنّع
+# أي فشل — الآن الخروج يُلتقط مباشرة من الفحص نفسه، وآخر سطر المخرجات يُطبع.
+# الخطوات غير الحاجبة في ci.yml (continue-on-error) تُطبع [WARN] ولا تُحسب فاشلة
+# حتى تُقلب إلى حاجبة بعد موجة مكافئة المحتوى — محاذاة حرفية مع سياسة CI.
+NON_BLOCKING_RE="audit_structure_vs_master"
 fail_total=0
+warn_total=0
 for step in "${steps[@]}"; do
-  out=$(timeout 300 $step 2>&1 | tail -1)
+  out=$(timeout 300 $step 2>&1)
   code=$?
+  last_line=$(printf '%s\n' "$out" | tail -1)
   if [ $code -eq 0 ]; then
     echo "[PASS] $step"
+  elif [[ "$step" =~ $NON_BLOCKING_RE ]]; then
+    echo "[WARN-$code] $step (غير حاجب في ci.yml: continue-on-error)"
+    echo "        آخر سطر: $last_line"
+    warn_total=$((warn_total + 1))
   else
     echo "[FAIL-$code] $step"
-    echo "        آخر سطر: $out"
+    echo "        آخر سطر: $last_line"
     fail_total=$((fail_total + 1))
   fi
 done
 
 if [ $fail_total -eq 0 ]; then
-  echo "GATE GREEN: safe to push."
+  echo "GATE GREEN: safe to push. (${warn_total} warn غير حاجبة)"
 else
   echo "GATE RED: $fail_total failing audit(s) - do NOT push."
 fi
