@@ -1954,9 +1954,17 @@
   body .apple-macos-dock-wrapper { top: auto !important; bottom: 68px !important; }
   .sr-tools-capsule { top: auto !important; bottom: 122px !important; }
 }
-}
 
 /* ═══ الشريط الاجتماعي لا يجلس فوق لوحات القمرة في العروض المتوسطة (≤1500px) ═══ */
 @media (max-width: 1500px) {
   .concept-3-cockpit .c3-cockpit-layout { max-width: calc(100% - 116px) !important; margin-inline: auto !important; }
+}
+
+
+/* Ensure support dropdown menu is strictly hidden unless toggled active */
+.header-support-menu {
+    display: none !important;
+}
+.header-support-dropdown-wrap.is-active .header-support-menu {
+    display: flex !important;
 }
