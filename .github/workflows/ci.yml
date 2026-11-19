@@ -33,6 +33,11 @@ jobs:
   validate:
     runs-on: ubuntu-latest
 
+    # Self-healing commits the normalization of the generated shared sections
+    # back to main (below), so this job needs the built-in token to write.
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -53,6 +58,35 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install "lxml>=5.0"
+
+      # ---------------------------------------------------------------------------
+      # Self-healing: the shared-sections audit compares the managed blocks
+      # BYTE-EXACT against the ar root + the locales dictionary, so any tool
+      # wave that edits a portal without re-running the generator leaves
+      # invisible drift. That surfaced as recurring CI failures
+      # ("de/index.html: generated section content is out of date" — de is only
+      # the first page in iteration order; the drift was in all 28 portals).
+      # Normalize FIRST, then audit the normalized tree. On a main push, commit
+      # the normalization with the built-in GITHUB_TOKEN so this whole error
+      # class heals itself with no manual push. --apply is idempotent, so the
+      # follow-up run finds no diff and stops (no commit loop).
+      # ---------------------------------------------------------------------------
+      - name: Normalize generated shared sections (self-heal)
+        run: python scripts/localize_multilingual_shared_sections.py --apply
+
+      - name: Commit shared-sections normalization (main push only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet; then
+            echo "Shared sections already in sync - nothing to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "ci(self-heal): normalize generated shared sections"
+            git push
+          fi
+
       - name: Verify HTML & CSS Syntax Integrity
         run: node scripts/validate.js
 
@@ -115,6 +149,13 @@ jobs:
       - name: Audit Localized Relative Paths
         run: python scripts/audit_language_paths.py
 
+      # The language-map fix (2026-11-17) shipped through a hole this gate now
+      # closes: 57 pages kept a stale lazy-loader version while index.html was
+      # bumped, because sync_locales regenerates hero regions only. Browsers
+      # then served the cached old script and the fix never reached them.
+      - name: Audit Script Tag Version Sync (one version per script)
+        run: python scripts/check_script_tags.py
+
       - name: Audit Core Portal Localization
         run: python scripts/localize_portal_core_metadata.py --check
 
@@ -175,6 +216,12 @@ jobs:
 
       - name: Browser console audit (headless Chromium)
         run: node scripts/browser_console_audit.mjs
+
+      # The 2026-11-17 defect guarded forever: valid HTML, zero console errors,
+      # dead feature. This bank clicks the map the way a user does and proves
+      # the language actually switches, from / and from /sv/.
+      - name: Language switch E2E (headless Chromium click-through)
+        run: node scripts/lang_switch_e2e.mjs
 
       - name: Verify Dead PHP Gateway Is Not Referenced
         run: python scripts/audit_dead_gateway.py

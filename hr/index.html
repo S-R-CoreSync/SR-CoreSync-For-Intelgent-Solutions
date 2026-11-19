@@ -665,7 +665,7 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
 @media (max-width:980px){.sr-steps,.sr-pledges{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.sr-steps,.sr-pledges{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="../css/hero-declutter.css?v=20261114-type">
+<link rel="stylesheet" href="../css/hero-declutter.css?v=20261118-fit">
 <style id="hv2-port">
 #hero .content-wrap{display:none !important}
 .hero-reference{min-height:clamp(560px, 92vh, 900px); display:block}
@@ -1259,7 +1259,7 @@ html[dir="ltr"] .srf{direction:ltr}
                                                 </ul>
                                         </li>
                                     </ul>
-                                        </li>
+                                        
                                     
                                 </div>
                             </div>
@@ -1314,7 +1314,7 @@ html[dir="ltr"] .srf{direction:ltr}
                                             </div>
                                             <div class="support-menu-text">
                                                 <strong>Executive Consultation Booking 👔</strong>
-                                                <span>Book strategic meeting with the founders</span>
+                                                <span>Rezervirajte strateški sastanak s osnivačima</span>
                                             </div>
                                         </button>
                                         <button type="button" class="support-menu-item" role="menuitem"
@@ -1328,7 +1328,7 @@ html[dir="ltr"] .srf{direction:ltr}
                                             </div>
                                             <div class="support-menu-text">
                                                 <strong>Experience Rating & Feedback 💬</strong>
-                                                <span>Send direct feedback to enhance and develop service</span>
+                                                <span>Pošaljite izravne povratne informacije za unapređenje i razvoj usluge</span>
                                             </div>
                                         </button>
                                     </div>
@@ -1450,10 +1450,7 @@ html[dir="ltr"] .srf{direction:ltr}
                                     
                                     <!-- Hero Ambient Soundscape Controller -->
                                     <div class="hero-audio-ctrl-row">
-                                        <button type="button" class="hero-sound-toggle-btn" id="heroSoundToggle" data-sr-call="toggleHeroAmbientSound" aria-label="Toggle Ambient Audio Experience" title="Toggle Ambient Audio Experience">
-                                            <span class="sound-wave-icon" id="heroSoundIcon">🔊</span>
-                                            <span class="sound-label" id="heroSoundLabel">Ambijentalni zvuk (kliknite za reprodukciju)</span>
-                                        </button>
+                                        
                                     </div>
                                     <div class="hero-reference__actions hero-actions-2x2">
                                         <!-- Row 1: Gold Luxury Pair (Live Demo & VIP Executive Consultation) -->
@@ -1469,13 +1466,13 @@ html[dir="ltr"] .srf{direction:ltr}
 
                                         <!-- Row 2: Dark Emerald Portal Pair (Developer Portal & Partner Portal) -->
                                         <div class="hero-actions-row">
-                                            <a href="../developer-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-dev-portal" title="Developer Portal, APIs, and Interactive 3D Hologram">
+                                            <a href="../developer-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-dev-portal" title="Portal za programere, API-ji i interaktivni 3D hologram">
                                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
-                                                <span>Developer Portal & 3D Interactive ⚡</span>
+                                                <span>Portal za Razvojne Inženjere & 3D Interaktivan ⚡</span>
                                             </a>
-                                            <a href="../partner-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-partner-portal" title="Global Partner Network, Exclusive Agency, and Enterprise Licensing">
+                                            <a href="../partner-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-partner-portal" title="Globalna mreža partnera, ekskluzivno zastupstvo i licenciranje za poduzeća">
                                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                                                <span>Partners & Licensing Portal 💼</span>
+                                                <span>Portal za Partnere i Licence 💼</span>
                                             </a>
                                         </div>
                                     </div>
@@ -1490,33 +1487,18 @@ html[dir="ltr"] .srf{direction:ltr}
                                                 <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Type your project idea here (e.g. E-Commerce store, Cloud ERP, AI SaaS)..." autocomplete="off" aria-label="Project Idea AI Input">
                                             </div>
                                             <div class="hero-ai-idea-btns">
-                                                <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Speak your project idea with interactive voice" aria-label="Speak your project idea with interactive voice">
-                                                    <span class="hero-ai-mic-icon">🎙️</span>
-                                                </button>
-                                                <button type="submit" class="hero-ai-idea-submit-btn" title="Analyze with AI ⚡" aria-label="Analyze with AI ⚡">
-                                                    <span class="hero-ai-submit-text">Analyze with AI ⚡</span>
-                                                    <span class="hero-ai-submit-arrow">→</span>
-                                                </button>
+                                                
+                                                
                                             </div>
                                         </form>
                                         <!-- رقاقات الأفكار والقطاعات التخصصية (Executive Sector Chips) -->
                                         <div class="hero-ai-chips-wrap" aria-label="Poslovna područja:">
                                             <span class="hero-ai-chips-label">Poslovna područja:</span>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["European FinTech payment rail architecture compliant with PSD2 and iDEAL"]'>
-                                                <span>💳 FinTech i platni sustavi</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["CoreSync Cloud ERP suite for corporate accounting, Dutch BTW compliance, and operations"]'>
-                                                <span>🏢 CoreSync ERP i porezna usklađenost</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["Autonomous AI agent workflows and sovereign local RAG knowledgebase for operations"]'>
-                                                <span>🤖 Autonomni AI agenti</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["Smart European supply chain orchestration, multi-warehouse ERP, and distribution"]'>
-                                                <span>📦 Logistika i lanac opskrbe</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["High-conversion PWA e-commerce platform with automated iDEAL checkout and ERP sync"]'>
-                                                <span>🛒 Internetska trgovina</span>
-                                            </button>
+                                            
+                                            
+                                            
+                                            
+                                            
                                         </div>
                                     </div>
 <div class="sr-intent"><a href="#software-hub">Trebam trgovinu</a><a href="#pricing">Trebam ERP</a><a href="#roi-calculator">Koliko mogu uštedjeti?</a></div>
@@ -1546,11 +1528,7 @@ html[dir="ltr"] .srf{direction:ltr}
 
                                     </div>
                                     <div class="hero-emblem-voice-badge-wrap">
-                                        <button type="button" class="hero-emblem-voice-badge" data-sr-call="openAiVoicePlannerModal" title="Plan your project instantly with Sovereign AI Voice Engine">
-                                            <span class="emblem-voice-pulse">🎙️</span>
-                                            <span>Planirajte projekt interaktivnim glasom • AI inženjer je spreman</span>
-                                            <span class="emblem-voice-arrow">→</span>
-                                        </button>
+                                        
                                     </div>
 
                                 </div>
@@ -1558,18 +1536,30 @@ html[dir="ltr"] .srf{direction:ltr}
                         </div>
                     </div>
                 </div>
-            <div class="hero-compact-sectors-row hero-sectors-marquee"><span class="hero-compact-sectors-label">Naše specijalnosti:</span><div class="hero-sectors-viewport"><div class="hero-sectors-track"><div class="hero-sectors-half"><button type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 FinTech rješenja</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 AI agenti</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 Opskrbni lanci</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 Internetske trgovine</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ Centar CLGID</button></div><div class="hero-sectors-half" aria-hidden="true"><button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 FinTech rješenja</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 AI agenti</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 Opskrbni lanci</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 Internetske trgovine</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ Centar CLGID</button></div></div></div></div>
+            
             </section>
+</div><!-- /hero-editorial.hero-cinematic: نقل إغلاق غلاف البطل إلى موقعه الصحيح (إصلاح الاحتواء 2026-11-18) -->
+<section id="trust-metrics" class="section-trust-metrics" aria-label="S&amp;R CoreSync u brojkama"><div class="hero-trust-metrics-strip hero-trust-compact" aria-label="Pokazatelji učinka i europske akreditacije">
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">99.9%</span>
+                                            <span class="metric-lbl">Spremnost za oblak</span>
+                                        </div>
+                                        <div class="trust-metric-separator" aria-hidden="true"></div>
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">EU &amp; BTW</span>
+                                            <span class="metric-lbl">Usklađenost s porezima EU</span>
+                                        </div>
+                                        <div class="trust-metric-separator" aria-hidden="true"></div>
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">&lt; 30s</span>
+                                            <span class="metric-lbl">Neposredni početak</span>
+                                        </div>
+                                        <div class="trust-metric-separator" aria-hidden="true"></div>
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">Amsterdam HQ</span>
+                                            <span class="metric-lbl">Sjedište u Amsterdamu</span>
+                                        </div>
+                                        </div></section>
 <nav class="sr-jump" aria-label="Jump to section" data-sr-decision-bar><a href="#about" data-sr-jump="about"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 6.3 6.4.5-4.9 4.2 1.5 6.3L12 16.9 6.4 20.3l1.5-6.3L3 9.8l6.4-.5L12 3z"/></svg><span>Vrijednost</span></a><a href="#services" data-sr-jump="services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg><span>Sposobnosti</span></a><a href="#software-hub" data-sr-jump="software-hub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg><span>Trgovina</span></a><a href="#pricing" data-sr-jump="pricing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20"/><path d="M17 7H9.5a3 3 0 000 6H14a3 3 0 010 6H6"/></svg><span>Cijene</span></a><a href="#contact" data-sr-jump="contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg><span>Kontakt</span></a></nav>
 
 <section class="section-tech-stack-v2 service-orbit-section" id="services" data-section>
@@ -1628,7 +1618,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                     <span class="dana-price-value" data-eur-price="590"><span>€</span>590</span>
                                 </div>
                             </div>
-                            <div class="dana-card-actions-row">
+                            <div class="dana-card-actions-row"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["identity"]'>Detalji</button>
                                 <button type="button" class="dana-btn-booking" data-sr-call="openExecutiveBookingModal" data-sr-args='["identity"]' data-sr-stop="1">
                                     <span>Book Session 📅</span>
                                 </button>
@@ -1671,7 +1662,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                     <span class="dana-price-value" data-eur-price="980"><span>€</span>980</span>
                                 </div>
                             </div>
-                            <div class="dana-card-actions-row">
+                            <div class="dana-card-actions-row"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["web"]'>Detalji</button>
                                 <button type="button" class="dana-btn-booking" data-sr-call="openExecutiveBookingModal" data-sr-args='["website"]' data-sr-stop="1">
                                     <span>Book Session 📅</span>
                                 </button>
@@ -1724,7 +1716,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="dana-pay-badge" title="Mollie"><span class="dana-pay-dot mollie"></span>Mollie</span>
                                 <span class="dana-pay-badge" title="Apple Pay"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.150 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.84c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.09 1.75-.96 2.79 1.02.08 2.05-.52 2.68-1.27z"/></svg>Apple&nbsp;Pay</span>
                             </div>
-                            <div class="dana-card-actions-row">
+                            <div class="dana-card-actions-row"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["ecommerce"]'>Detalji</button>
                                 <button type="button" class="dana-btn-booking" data-sr-call="openExecutiveBookingModal" data-sr-args='["store"]' data-sr-stop="1">
                                     <span>Book Session 📅</span>
                                 </button>
@@ -1785,7 +1778,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">40 % manje troškova naslijeđene infrastrukture</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["cloud-software"]'>Detalji</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -1828,7 +1822,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">Odziv ispod sekunde i spremnost offline PWA</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["mobile-web"]'>Detalji</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["web"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -1871,7 +1866,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">Provjerena usklađenost sa SEPA i nizozemskim BTW-om</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["enterprise"]'>Detalji</button>
                             <a href="demo.html" class="tech-btn-consult tech-btn-consult--gold" title="Experience Live Cloud ERP Demo">
                                 <span>Demo ERP uživo ⚡</span>
                             </a>
@@ -1917,7 +1913,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">65 % manje sati ručne obrade</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["automation-ai"]'>Detalji</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -1962,7 +1959,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">Analiza novčanog toka i marže dobiti u stvarnom vremenu</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["finance-gov"]'>Detalji</button>
                             <a href="#roi-calculator" class="tech-btn-consult" title="Calculate Financial Savings via ROI Tool">
                                 <span>ROI Calculator 📊</span>
                             </a>
@@ -2006,7 +2004,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">99.9% dostupnost i šifriranje na razini banke</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["cloud-security"]'>Detalji</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -2018,8 +2017,8 @@ html[dir="ltr"] .srf{direction:ltr}
                     </div>
                 </div>
                 </div>
-            </div>
-        </section><section class="section-pricing flat-spacing flat-animate-tab" id="pricing" data-section>
+            </section>
+        <section class="section-pricing flat-spacing flat-animate-tab" id="pricing" data-section>
             <div class="bg-img">
                 <img loading="lazy" decoding="async" width="1440" height="1081" src="../assets/bg-4.png" alt="Backdrop Pricing Packages">
             </div>
@@ -2030,7 +2029,168 @@ html[dir="ltr"] .srf{direction:ltr}
                     </h2>
                 </div>
 
-            <div class="cost-estimator-grid" data-wa-title="*Novi projektni upit – S&amp;R CoreSync*" data-wa-type="📦 *Vrsta:*" data-wa-scope="📄 *Opseg:*" data-wa-lang="🌐 *Jezici:*" data-wa-pay="💳 *Plaćanje:*" data-wa-speed="⚡ *Isporuka:*" data-wa-total="💰 *Ukupna procjena: €{v}*" data-wa-duration="⏱ *Predviđeno trajanje: {v}*" data-wa-days="5 - 7 radnih dana">
+            <div class="sr-pricing-extras" style="margin-top:3.5rem;display:flex;flex-direction:column;gap:2rem;">
+
+                    <!-- Lead capture (low friction) -->
+                    <div
+                        style="text-align:center;background:linear-gradient(135deg,rgba(var(--sr-gold-rgb, 212, 175, 55),0.12),rgba(30,120,90,0.08));border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:18px;padding:2.4rem 2rem;">
+                        <h3 style="color:#fff;font-size:1.5rem;margin:0 0 0.6rem;font-weight:800;">Niste sigurni koji paket vam odgovara?</h3>
+                        <p style="color:#d3dbd7;margin:0 auto 1.4rem;max-width:min(620px,100%);line-height:1.8;">Rezervirajte besplatnu 30-minutnu konzultaciju — pregledamo vaš slučaj i preporučujemo najprikladniji paket, bez obveza.</p>
+                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20S%26R%20CoreSync%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%2030%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%84%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A3%D9%86%D8%B3%D8%A8"
+                            target="_blank" rel="noopener noreferrer" data-track="plan-cta"
+                            data-plan="free-consultation" data-action="whatsapp"
+                            style="display:inline-block;background:#d4af37;color:#04100b;font-weight:800;padding:0.9rem 2.2rem;border-radius:999px;text-decoration:none;font-size:1rem;">
+                            📅 Rezerviraj besplatnu 30-minutnu konzultaciju
+                        </a>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            Što kažu naši klijenti</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem;">
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "S Core Starterom pokrenuli smo platformu za 3 tjedna. 30 dana podrške bilo je dovolj našem timu."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— Direktor operacija, logistička tvrtka (NL)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Full ERP Sync ujednačio je naši računovodstveni plan + SEPA + BTW. Ušteda: 15 sati/tjedno."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CFO, trgovačka tvrtka (EU)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Custom ERP Ecosystem: 100% White-Label + BYOK. Sigurnost na bankovnoj razini."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CTO, FinTech (UAE)</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Add-ons -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            Dodatni moduli (Add-ons)</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">📦</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Dodatni moduli
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+1 radni modul (module)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€190</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🎓</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Sati obuke
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+5 sati obuke (Zoom)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€250</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🛠️</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Produženje podrške</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+30 dana produženja podrške (SLA)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€290</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🌍</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Dodatni jezik</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+1 dodatni jezik (i18n)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€180</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post-purchase steps -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">Nakon rezervacije — 4 jasna koraka</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    1</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Potvrda (24 sata)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">Potvrdni e-mail + račun BTW</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    2</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Kickoff (3 dana)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">Sastanak od 60 minuta — definiranje obsega</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    3</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Izvedba</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">Postavljanje ERP-a + povezivanje računa + testiranje
+                                </p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    4</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Predaja</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">Spremni sustav + dokumentacija + podrška</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing FAQ -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">FAQ o cijenama</h3>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Uključuje li cijena BTW (PDV)?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Cijene
+                                <strong>hors taxe</strong> (bez BTW). Svi računi izdaju se kao službene porezne fakture (21% BTW) u skladu s Belastingdienstom — odbitni kao operativni troškovi.
+                            </p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Koliko traje podrška (Support) po paketu?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Core Starter: 30 dana · Enterprise Growth: 60 dana · Core MAX: 180 dana · ERP Setup: 30 dana · Full ERP Sync: 60 dana · Custom: 180 dana. Podršku je moguće produžiti (Add-on).</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Mogu li kasnije izvršiti nadogradnju (Upgrade)?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Da — možete nadograditi u bilo kojem trenutku. Razliku nam odbijamo (pro-rata) na temelju onoga što ste platili.</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Koje metode plaćanja prihvaćamo?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">iDEAL, Stripe, Mollie, Bancontact, Apple Pay, SEPA Direct Debit, bankovni prijenos. Službeni račun (PDF) s BTW.
+                            </p>
+                        </details>
+                        <details style="padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Postoji li jamstvo (Guarantee)?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">14-dnevno jamstvo zadovoljstva: Ako niste zadovoljni u roku od 14 dana od kickoffa, vraćamo puni iznos. Besplatna 30-minutna konzultacija prije obveze.</p>
+                        </details>
+                    </div>
+
+                    <!-- Guarantee badge -->
+                    <div style="text-align:center;">
+                        <span
+                            style="display:inline-block;background:rgba(var(--sr-gold-rgb, 212, 175, 55),0.12);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:999px;padding:0.7rem 1.6rem;color:#e4cfa9;font-weight:700;font-size:0.9rem;">
+                            🛡️ 14-dnevno jamstvo zadovoljstva · besplatna 30-minutna konzultacija · službeni račun BTW
+                        </span>
+                    </div>
+                </div><div class="cost-estimator-header">
+                            <span class="sr-logo-badge-pill mb-2 d-inline-flex">
+                                <span class="gold-dot"></span>
+                                Interaktivni trenutačni kalkulator proračuna // procjena troškova i opsega
+                            </span>
+                            <h3 class="text-white mb-2">Sastavite svoj paket i odmah izračunajte trošak i vrijeme izvedbe</h3>
+                            <p class="text-white-64 mb-0">Odaberite vrstu projekta i potrebne specifikacije za trenutačno, točno i transparentno određivanje cijena — s trenutačnim prikvačivanjem i izravnom rezervacijom.</p>
+                        </div><div class="cost-estimator-grid" data-wa-title="*Novi projektni upit – S&amp;R CoreSync*" data-wa-type="📦 *Vrsta:*" data-wa-scope="📄 *Opseg:*" data-wa-lang="🌐 *Jezici:*" data-wa-pay="💳 *Plaćanje:*" data-wa-speed="⚡ *Isporuka:*" data-wa-total="💰 *Ukupna procjena: €{v}*" data-wa-duration="⏱ *Predviđeno trajanje: {v}*" data-wa-days="5 - 7 radnih dana">
                             <!-- عمود خيارات التخصيص التفاعلية -->
                             <div class="cost-estimator-controls">
                                 <!-- 01. نوع المشروع الأساسي -->
@@ -2186,7 +2346,13 @@ html[dir="ltr"] .srf{direction:ltr}
                                         <a href="../whitelabel-calculator.html" class="estimator-btn-calc-vip" title="Kalkulator licenci gotovih suverenih platformi">
                                             <span>🧮 Trenutačni kalkulator White-Label licenci (PDF)</span>
                                         </a>
-                                    </div>
+                                    <button type="button" data-sr-call="transferEstimatorToVipBooking"
+                                            class="estimator-btn-vip" title="Otvori prozor VIP rezervacije s detaljima ove procjene">
+                                            <span>Prikači ovu procjenu uz VIP rezervaciju</span>
+                                        </button><button type="button" data-sr-call="transferEstimatorToVipBooking"
+                                            class="estimator-btn-vip" title="Otvori prozor VIP rezervacije s detaljima ove procjene">
+                                            <span>Prikači ovu procjenu uz VIP rezervaciju</span>
+                                        </button></div>
                                 </div>
                             </div>
                         </div>
@@ -2206,6 +2372,53 @@ html[dir="ltr"] .srf{direction:ltr}
                     </div>
                     <div class="es-pricing-vat-notice">
                         <span class="es-vat-live-badge">🇬🇧 VAT 20% (EN Tax Compliant)</span>
+                    </div>
+                </div><div class="sr-roi-calculator-wrap" id="srRoiCalculator">
+                    <div class="sr-roi-calc-card">
+                        <div class="sr-roi-head">
+                            <div class="sr-roi-title-group">
+                                <span class="sr-roi-badge">📊 Kalkulator rasta</span>
+                                <h3 class="sr-roi-title">Procijenite ROI svog projekta (ROI Calculator)</h3>
+                                <p class="sr-roi-sub">Otkrijte uštede u operativnim troškovima i očekivane godišnje dobit uz pametni ekosustav S&amp;R CoreSync.</p>
+                            </div>
+                            <div class="sr-roi-highlight-box">
+                                <span class="sr-roi-hl-lbl">Očekivani ROI</span>
+                                <span class="sr-roi-hl-val" id="roiPercentOutput">+340%</span>
+                                <span class="sr-roi-hl-sub">u prvih 6 mjeseci rada</span>
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-controls-grid">
+                            <div class="sr-roi-control-item">
+                                <label for="roiSalesRange" class="sr-roi-label">
+                                    <span>Očekivani mjesečni obseg prodaje / prihoda:</span>
+                                    <strong id="roiSalesVal" class="sr-roi-val-display">€25,000</strong>
+                                </label>
+                                <input type="range" id="roiSalesRange" min="5000" max="250000" step="5000" value="25000" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                            <div class="sr-roi-control-item">
+                                <label for="roiTeamRange" class="sr-roi-label">
+                                    <span>Broj zaposlenih ili ručnih operacija mjesečno:</span>
+                                    <strong id="roiTeamVal" class="sr-roi-val-display">15 operacija/osobu</strong>
+                                </label>
+                                <input type="range" id="roiTeamRange" min="3" max="100" step="1" value="15" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-results-strip">
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">Godišnja ušteda na troškovima automatizacije i oblaka:</span>
+                                <strong class="sr-roi-res-num" id="roiSavingsOutput">€18,400</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">Procijenjeni rast neto prodaje:</span>
+                                <strong class="sr-roi-res-num" style="color:#10b981;" id="roiGrowthOutput">+€32,500</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">Period povratka sustava (Payback):</span>
+                                <strong class="sr-roi-res-num" style="color:var(--sr-gold-light, #f3dfba);" id="roiPaybackOutput">2,1 mjeseca</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -3053,10 +3266,10 @@ html[dir="ltr"] .srf{direction:ltr}
                             <span>Zatražite prilagođenu enterprise ponudu (B2B) →</span>
                         </a>
                     </div>
-                </div>
+                
     
-                </div>
-            </div>
+                
+            
         </section><section class="flat-spacing section-software-hub" id="software-hub" data-section>
             <div class="container">
                 <div class="s-header text-center mb-4">
@@ -3579,7 +3792,7 @@ html[dir="ltr"] .srf{direction:ltr}
                     </div>
                 </div>
 
-            </div>
+            
         <div class="sp-tabs" role="tablist"><button type="button" class="sp-tab is-active" role="tab" data-key="store" id="sp-tab-store" aria-controls="sp-panel-store" aria-selected="true"><span>Tržište softvera</span></button><button type="button" class="sp-tab" role="tab" data-key="wl" id="sp-tab-wl" aria-controls="sp-panel-wl" aria-selected="false" tabindex="-1"><span>White-label licenciranje</span></button><button type="button" class="sp-tab" role="tab" data-key="lab" id="sp-tab-lab" aria-controls="sp-panel-lab" aria-selected="false" tabindex="-1"><span>Laboratorij i partnerstva</span></button></div>
 <div class="sp-panel" id="sp-panel-store" role="tabpanel" aria-labelledby="sp-tab-store"><div class="software-filter-bar">
                     <button type="button" class="software-filter-pill active" data-sr-call="filterSoftwareMarketplace"
@@ -3847,7 +4060,11 @@ html[dir="ltr"] .srf{direction:ltr}
                             <span class="showcase-tab-dot"></span>
                             <span>Pametna NFC kartica 📲</span>
                         </a>
-                    </div>
+                    <a href="../social-8k-studio.html" target="_blank"
+                            class="showcase-tab-btn showcase-tab-btn-social8k" title="8K Social Branding Suite">
+                            <span class="showcase-tab-dot"></span>
+                            <span>Certificirani studio identiteta branda 🎬</span>
+                        </a></div>
                 </div>
 
                 <!-- 1. Interactive Slider Mode -->
@@ -3934,7 +4151,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85.%D8%B3%D9%84%D9%8A%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%87%D9%86%D8%AF%D8%B3%D8%A9%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp M. Salim 💬">
+                                                <span>WhatsApp M. Salim 💬</span>
+                                            </a></div>
                                     </div>
                                 </div>
                             </div>
@@ -3975,7 +4197,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["erp"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3.%D8%B1%D8%A7%D8%A6%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%86%D8%B8%D9%85%20ERP%20%D9%88%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AB%D8%A7%D9%84%20%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp A. Raed 💬">
+                                                <span>WhatsApp A. Raed 💬</span>
+                                            </a></div>
                                     </div>
                                 </div>
                             </div>
@@ -4085,7 +4312,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85.%D8%B3%D9%84%D9%8A%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%87%D9%86%D8%AF%D8%B3%D8%A9%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp M. Salim 💬">
+                                                <span>WhatsApp M. Salim 💬</span>
+                                            </a></div>
                         </div>
                     </div>
                 </div>
@@ -4125,7 +4357,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["erp"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3.%D8%B1%D8%A7%D8%A6%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%86%D8%B8%D9%85%20ERP%20%D9%88%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AB%D8%A7%D9%84%20%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp A. Raed 💬">
+                                                <span>WhatsApp A. Raed 💬</span>
+                                            </a></div>
                         </div>
                     </div>
                 </div>
@@ -4223,7 +4460,7 @@ html[dir="ltr"] .srf{direction:ltr}
 <section id="trust-band" class="trust-band" data-section><div class="trust-band-inner"><div class="trust-band-viewport"><div class="trust-band-track"><div class="trust-band-half"><span class="trust-band-chip">LogiTrans B.V. — Amsterdam</span><span class="trust-band-chip">OmniVenture GmbH — Frankfurt</span><span class="trust-band-chip">Boutique Aurum — Rotterdam</span><span class="trust-band-chip">Aurelia Luxury Atelier — Den Haag</span><span class="trust-band-badge">ISO 27001</span><span class="trust-band-badge">SOC 2</span><span class="trust-band-badge">GDPR</span><span class="trust-band-badge">PSD2</span><span class="trust-band-badge">SLA 99.9%</span></div><div class="trust-band-half" aria-hidden="true"><span class="trust-band-chip">LogiTrans B.V. — Amsterdam</span><span class="trust-band-chip">OmniVenture GmbH — Frankfurt</span><span class="trust-band-chip">Boutique Aurum — Rotterdam</span><span class="trust-band-chip">Aurelia Luxury Atelier — Den Haag</span><span class="trust-band-badge">ISO 27001</span><span class="trust-band-badge">SOC 2</span><span class="trust-band-badge">GDPR</span><span class="trust-band-badge">PSD2</span><span class="trust-band-badge">SLA 99.9%</span></div></div></div></div>
                         <p class="founders-link"><a href="#founders-showcase">Eng. Mohammad Salim Aziza · Mr. Mohammad Raed Kaaka<span aria-hidden="true">←</span></a></p>
 </section>
-        </div>
+        
 
         <!-- 1.1 Executive Leadership & Founders Showcase Slider -->
         
@@ -4238,6 +4475,15 @@ html[dir="ltr"] .srf{direction:ltr}
 
         <!-- 2.5 Executive Leadership & Cloud ERP Stage -->
         
+<section id="portals" class="section-portals" aria-label="S&amp;R CoreSync portali"><div class="hero-quick-portals-strip hero-quick-portals-strip--quiet">
+                                        <a href="../developer-portal.html" class="hero-quick-portal-link">Portal za programere ⚡</a>
+                                        <span class="hero-portal-sep">•</span>
+                                        <a href="../partner-portal.html" class="hero-quick-portal-link">Portal za partnere i licence 💼</a>
+                                        <span class="hero-portal-sep">•</span>
+                                        <button type="button" class="hero-quick-portal-btn" data-sr-call="openExecutiveBookingModal">Rezervirajte privatnu konzultaciju 👔</button>
+                                        <span class="hero-portal-sep">•</span>
+                                        <button type="button" class="hero-sound-toggle-btn" id="srSoundToggleBtn" onclick="toggleSoundMute()" title="Uključite ili isključite zvučne efekte sučelja">🔊 Zvuk sučelja</button>
+                                        </div></section>
 <!-- shared-index-sections:start -->
 <section class="flat-spacing" id="services-compare" data-section style="padding:0 0 2.5rem;">
             <div class="container">
@@ -4774,7 +5020,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.01.quote">Pravi kvantni skok u upravljanju više skladišta i računovodstvenim procesima nakon uvođenja prilagođenog ERP-a S&amp;R CoreSync. Izuzetna preciznost i arhitektonska rigoroznost.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.01.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Ocjena 5 od 5" data-i18n="testimonials.01.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Hendrik van Dijk</span><span class="client-flag" role="img" aria-label="Netherlands">🇳🇱</span></h6>
@@ -4791,7 +5037,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.02.quote">Njihovo dvostruko umijeće u vrhunskom softverskom inženjeringu i financijskoj regulativi uštedjelo nam je stotine ručnih sati pri svakom mjesečnom zatvaranju i usklađivanju prihoda.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.02.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Ocjena 5 od 5" data-i18n="testimonials.02.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Sultan Al-Rashed</span><span class="client-flag" role="img" aria-label="Saudi Arabia">🇸🇦</span></h6>
@@ -4808,7 +5054,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.03.quote">Mobilne platforme i izvršni cloud dashboardi koje je izradio S&amp;R CoreSync rade munjevitom brzinom uz bankovnu razinu sigurnosti. Naš pouzdani tehnički partner.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.03.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Ocjena 5 od 5" data-i18n="testimonials.03.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Klaus Weber</span><span class="client-flag" role="img" aria-label="Germany">🇩🇪</span></h6>
@@ -4825,7 +5071,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.04.quote">Dizajn našega web dućana i integracija iDEAL + Apple Pay udvostručili su našu nizozemsku prodaju u roku od 2 mjeseca. Munjevito brza naplata i besprijekorno korisničko iskustvo od prvog dana.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.04.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Ocjena 5 od 5" data-i18n="testimonials.04.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Elena Rossi</span><span class="client-flag" role="img" aria-label="Netherlands">🇳🇱</span></h6>
@@ -4842,7 +5088,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.05.quote">Naš vizualni identitet i Brand Book izrađeni su s profinjenošću vodećih svjetskih dizajnerskih studija u Londonu i Milanu. Time smo odmah stekli povjerenje investitora.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.05.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Ocjena 5 od 5" data-i18n="testimonials.05.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Dr. Tariq Al-Mansour</span><span class="client-flag" role="img" aria-label="UAE / Netherlands">🇦🇪</span></h6>
@@ -5614,7 +5860,7 @@ html[dir="ltr"] .srf{direction:ltr}
         </section>
 
         
-        <footer class="srf" id="srf-footer" role="contentinfo" dir="ltr"><div class="srf__inner"><div class="srf__brand"><div class="srf__mark"><b>S&amp;R CoreSync</b><span>INTELLIGENT SOLUTIONS</span></div><div class="srf__tag">Suvereno sistemsko inženjerstvo iz Amsterdama</div></div><nav class="srf__cols" aria-label="Footer"><div class="srf__col"><h3>Usluge</h3><ul><li><a href="../software.html">Cloud softver</a></li><li><a href="../work.html#platforms">Gotove platforme</a></li><li><a href="../whitelabel-calculator.html">Kalkulator licenci</a></li><li><a href="../estimator.html">Kalkulator projekata</a></li></ul></div><div class="srf__col"><h3>Tvrtka</h3><ul><li><a href="../index.html#about">O tvrtki</a></li><li><a href="../index.html#founders-showcase">Uprava</a></li><li><a href="../work.html">Portfolio</a></li><li><a href="../blog.html">Dnevnik</a></li></ul></div><div class="srf__col"><h3>Pravno i usklađenost</h3><ul><li><a href="../privacy.html">Privatnost i kolačići</a></li><li><a href="../terms.html">Uvjeti</a></li><li><a href="../verify.html">Provjeri dokument</a></li><li><a href="../security-trust-center.html">Centar povjerenja</a></li><li><a href="#" data-sr-call="openConsent">Postavke analitike</a></li></ul></div><div class="srf__col"><h3>Kontakt</h3><ul><li><a href="mailto:info@sr-coresync.com">info@sr-coresync.com</a></li><li><a href="tel:+31618111116">+31 6 1811 1116</a></li><li><a href="https://wa.me/31618111116">WhatsApp</a></li><li><a href="../index.html#contact">Rezervirajte konzultacije</a></li></ul></div></nav></div><div class="srf__legal"><span>© 2026 S&R CoreSync For Intelligent Solutions — Sva prava pridržana.</span><span>GDPR · NIS2 · eIDAS · ISO 27001</span></div></footer>
+        
     <!-- shared-index-insights:start -->
 <section class="flat-spacing" id="insights" data-section aria-labelledby="insightsTitle">
             <div class="container">
@@ -9361,7 +9607,7 @@ let currentFoundersTarget = 'salim';
     <script src="../js/sr-lead-dispatcher.js"></script>
     <script src="../js/sr-live-feed.js"></script>
    <script src="../js/sr-brand-inspector.js" defer></script>
-    <script src="../js/enterprise-suite.min.js"></script>
+    <script src="../js/enterprise-suite.min.js?v=20261102-p0-matrix"></script>
 
 
 
@@ -9369,7 +9615,7 @@ let currentFoundersTarget = 'salim';
     <script src="../js/sr-quick-dock.js?v=20261117" defer></script>
 
     <!-- S&R CoreSync Sovereign Geo-Language Detection Banner -->
-    <script src="../js/sr-geo-lang.js" defer></script>
+    <script src="../js/sr-geo-lang.js?v=20261118b?v=20261118b" defer></script>
     <!-- S&R CoreSync Sovereign Trust Ribbon & Tier Matrix Controllers -->
     <script src="../js/sr-trust-ribbon.js" defer></script>
     <script src="../js/sr-tier-matrix.js" defer></script>
@@ -9638,7 +9884,7 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
 
 
 
-</aside>
+
 
 
 
@@ -10160,6 +10406,8 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
 <script src="../js/sr-lang-hint.js?v=20261114-ring" defer></script>
 <script src="../js/sr-sound.js?v=20261111b" defer></script>
 <script src="../js/sr-print-guard.js?v=20261111" defer></script>
+<footer class="srf" id="srf-footer" role="contentinfo" dir="ltr"><div class="srf__inner"><div class="srf__brand"><div class="srf__mark"><b>S&amp;R CoreSync</b><span>INTELLIGENT SOLUTIONS</span></div><div class="srf__tag">Suvereno sistemsko inženjerstvo iz Amsterdama</div></div><nav class="srf__cols" aria-label="Footer"><div class="srf__col"><h3>Usluge</h3><ul><li><a href="../software.html">Cloud softver</a></li><li><a href="../work.html#platforms">Gotove platforme</a></li><li><a href="../whitelabel-calculator.html">Kalkulator licenci</a></li><li><a href="../estimator.html">Kalkulator projekata</a></li></ul></div><div class="srf__col"><h3>Tvrtka</h3><ul><li><a href="../index.html#about">O tvrtki</a></li><li><a href="../index.html#founders-showcase">Uprava</a></li><li><a href="../work.html">Portfolio</a></li><li><a href="../blog.html">Dnevnik</a></li></ul></div><div class="srf__col"><h3>Pravno i usklađenost</h3><ul><li><a href="../privacy.html">Privatnost i kolačići</a></li><li><a href="../terms.html">Uvjeti</a></li><li><a href="../verify.html">Provjeri dokument</a></li><li><a href="../security-trust-center.html">Centar povjerenja</a></li><li><a href="#" data-sr-call="openConsent">Postavke analitike</a></li></ul></div><div class="srf__col"><h3>Kontakt</h3><ul><li><a href="mailto:info@sr-coresync.com">info@sr-coresync.com</a></li><li><a href="tel:+31618111116">+31 6 1811 1116</a></li><li><a href="https://wa.me/31618111116">WhatsApp</a></li><li><a href="../index.html#contact">Rezervirajte konzultacije</a></li></ul></div></nav></div><div class="srf__legal"><span>© 2026 S&R CoreSync For Intelligent Solutions — Sva prava pridržana.</span><span>GDPR · NIS2 · eIDAS · ISO 27001</span></div></footer>
+
 <script src="../js/sr-hero-fit.js?v=20261112" defer></script>
 
 <script src="../js/sr-studio-peek.js"></script>
@@ -10188,7 +10436,7 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
   if(window.MutationObserver){ new MutationObserver(measure).observe(document.body, {childList:true, attributes:true, attributeFilter:['class','style']}); }
 })();
 </script>
-<script src="../js/sr-dock-merge.js?v=20261113b" defer></script>
+<script src="../js/sr-dock-merge.js?v=20261113f" defer></script>
 
     <style id="sr-estimator-modal-css">
 #srAiEstimateModal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:999999;opacity:0;visibility:hidden;transition:opacity .32s ease,visibility .32s ease}
@@ -10279,7 +10527,7 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
             <button type="button" class="sr-idea-modal-close" style="right: 18px;" onclick="closeIdeaModal()" aria-label="Close">✕</button>
             <div class="sr-idea-modal-badge">✨ S&R CoreSync Sovereign AI Architecture</div>
             <h2 class="sr-idea-modal-title" id="srIdeaModalTitle">Turn Your Vision into Sovereign Enterprise Reality</h2>
-            <p class="sr-idea-modal-subtitle">Describe your project or use voice dictation. Our AI architecture engine will immediately calculate technical scope, recommended stack, and launch roadmap.</p>
+            <p class="sr-idea-modal-subtitle">Opišite svoj projekt ili koristite glasovno diktiranje. Naš stroj AI arhitekture odmah će izračunati tehnički opseg, preporučeni stack i plan lansiranja.</p>
 
             <div class="sr-idea-input-wrapper">
                 <input type="text" id="userIdeaInput" class="sr-idea-input-field" style="direction:ltr; text-align:left; padding: 16px 52px 16px 16px;" placeholder="Type your project idea here (e.g. Luxury E-Commerce, Cloud ERP, Sovereign AI Agents)..." onkeydown="if(event.key==='Enter'){submitIdeaAnalysis();}" />
@@ -10381,11 +10629,11 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
     });
     </script>
 
-<script src="../js/sr-lang-map-lazy.js?v=20261114b" defer></script>
-<script src="../js/sr-tax-layer.js?v=20261116b" defer></script>
+<script src="../js/sr-lang-map-lazy.js?v=20261117a" defer></script>
+<script src="../js/sr-tax-layer.js?v=20261117b" defer></script>
 <script src="../js/sr-ui-i18n.js?v=20261121" defer></script>
 <script src="../js/sr-content-i18n.js?v=20261145" defer></script>
 <script src="../js/sr-master-shell.js" defer></script>
-<script src="../js/sr-estimator.js?v=20261112" defer></script>
+<script src="../js/sr-estimator.js?v=20261112" defer></script><script src="../js/services-enhancements-locale.js?v=20261118-j2" defer></script><script>document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("roiSalesRange"),b=document.getElementById("roiTeamRange");if(a&&!a.dataset.srRoiInit){a.dataset.srRoiInit="1";a.addEventListener("input",updateRoiCalc);if(b&&!b.dataset.srRoiInit){b.dataset.srRoiInit="1";b.addEventListener("input",updateRoiCalc);}updateRoiCalc();}});</script>
 </body>
 </html>

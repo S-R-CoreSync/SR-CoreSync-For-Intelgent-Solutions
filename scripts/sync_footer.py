@@ -58,7 +58,7 @@ def label(link, lang, labels=None):
 
 
 def render(model, lang, base='', labels=None):
-    rtl = lang == 'ar'
+    rtl = lang in ('ar', 'ckb')  # ckb سورانية بالعربي الكردي — RTL مثل ar
     tag = model['tagline'].get(lang) or model['tagline']['en']
     legal = model['legal_line'].get(lang) or model['legal_line']['en']
     cols = []

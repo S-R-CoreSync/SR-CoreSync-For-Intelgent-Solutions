@@ -666,7 +666,7 @@ a.hero-btn-demo.hero-btn-quiet svg{color:inherit!important;stroke:currentColor!i
 @media (max-width:560px){.sr-steps,.sr-pledges{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="../css/sr-estimator.css?v=20261114-type">
-<link rel="stylesheet" href="../css/hero-declutter.css?v=20261114-type">
+<link rel="stylesheet" href="../css/hero-declutter.css?v=20261118-fit">
 <style id="hv2-port">
 #hero .content-wrap{display:none !important}
 .hero-reference{min-height:clamp(560px, 92vh, 900px); display:block}
@@ -1211,7 +1211,7 @@ html[dir="ltr"] .srf{direction:ltr}
                                                 </ul>
                                         </li>
                                     </ul>
-                                        </li>
+                                        
                                     
                                 </div>
                             </div>
@@ -1402,22 +1402,32 @@ html[dir="ltr"] .srf{direction:ltr}
                                     
                                     <!-- Hero Ambient Soundscape Controller -->
                                     <div class="hero-audio-ctrl-row">
-                                        <button type="button" class="hero-sound-toggle-btn" id="heroSoundToggle" data-sr-call="toggleHeroAmbientSound" aria-label="Toggle Ambient Audio Experience" title="Toggle Ambient Audio Experience">
-                                            <span class="sound-wave-icon" id="heroSoundIcon">🔊</span>
-                                            <span class="sound-label" id="heroSoundLabel">Atmosphärisches Klangerlebnis (zum Abspielen anklicken)</span>
-                                        </button>
+                                        
                                     </div>
-                                    <div class="hero-reference__actions hero-actions-compact">
- <div class="hero-actions-row">
- <a href="demo.html" class="tf-btn hero-reference__action hero-btn-quiet hero-btn-demo">
- <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
- <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
- </svg>
- <span>Live System Demo ⚡</span>
- </a>
- 
- </div>
- </div>
+                                    <div class="hero-reference__actions hero-actions-2x2">
+                                        <!-- Row 1: Gold Luxury Pair (Live Demo & VIP Executive Consultation) -->
+                                        <div class="hero-actions-row">
+                                            <a href="demo.html" class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-demo hero-btn-primary-highlight hero-btn-quiet" title="Test Live Cloud ERP Platform Now">
+                                            <span>⚡ Live-Cloud-ERP-Demo</span>
+                                        </a>
+                                            <button type="button" class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-vip hero-btn-primary-highlight" data-sr-call="openExecutiveBookingModal" title="Request Executive VIP Consultation">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                            <span>VIP-Termin anfragen 👔</span>
+                                        </button>
+                                        </div>
+
+                                        <!-- Row 2: Dark Emerald Portal Pair (Developer Portal & Partner Portal) -->
+                                        <div class="hero-actions-row">
+                                            <a href="../developer-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-dev-portal" title="Entwicklerportal, APIs und interaktives 3D-Hologramm">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+                                                <span>Entwicklerportal & 3D Interaktiv ⚡</span>
+                                            </a>
+                                            <a href="../partner-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-partner-portal" title="Globales Partnernetzwerk, Exklusivagentur und Unternehmenslizenzierung">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                                <span>Partner- & Lizenzportal 💼</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                     </div>
                                     <!-- شريط كتابة الفكرة وهندسة المشروع الفوري بالذكاء الاصطناعي (Hero AI Idea Prompt Bar) -->
                                     <div class="hero-ai-idea-bar" id="heroAiIdeaBar">
@@ -1429,33 +1439,18 @@ html[dir="ltr"] .srf{direction:ltr}
                                                 <input type="text" id="heroAiIdeaInput" class="hero-ai-idea-input" placeholder="Type your project idea here (e.g. E-Commerce store, Cloud ERP, AI SaaS)..." autocomplete="off" aria-label="Project Idea AI Input">
                                             </div>
                                             <div class="hero-ai-idea-btns">
-                                                <button type="button" class="hero-ai-idea-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Speak your project idea with interactive voice" aria-label="Speak your project idea with interactive voice">
-                                                    <span class="hero-ai-mic-icon">🎙️</span>
-                                                </button>
-                                                <button type="submit" class="hero-ai-idea-submit-btn" title="Analyze with AI ⚡" aria-label="Analyze with AI ⚡">
-                                                    <span class="hero-ai-submit-text">Analyze with AI ⚡</span>
-                                                    <span class="hero-ai-submit-arrow">→</span>
-                                                </button>
+                                                
+                                                
                                             </div>
                                         </form>
                                         <!-- رقاقات الأفكار والقطاعات التخصصية (Executive Sector Chips) -->
                                         <div class="hero-ai-chips-wrap" aria-label="Geschäftsbereiche:">
                                             <span class="hero-ai-chips-label">Geschäftsbereiche:</span>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["European FinTech payment rail architecture compliant with PSD2 and iDEAL"]'>
-                                                <span>💳 FinTech & Zahlungsverkehr</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["CoreSync Cloud ERP suite for corporate accounting, Dutch BTW compliance, and operations"]'>
-                                                <span>🏢 CoreSync ERP & Steuerkonformität</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["Autonomous AI agent workflows and sovereign local RAG knowledgebase for operations"]'>
-                                                <span>🤖 Autonome KI-Agenten</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["Smart European supply chain orchestration, multi-warehouse ERP, and distribution"]'>
-                                                <span>📦 Logistik & Lieferkette</span>
-                                            </button>
-                                            <button type="button" class="hero-ai-chip" data-sr-call="fillHeroPromptSample" data-sr-args='["High-conversion PWA e-commerce platform with automated iDEAL checkout and ERP sync"]'>
-                                                <span>🛒 E-Commerce-Shop</span>
-                                            </button>
+                                            
+                                            
+                                            
+                                            
+                                            
                                         </div>
                                     </div>
 <div class="sr-intent"><a href="#software-hub">Ich brauche einen Shop</a><a href="#pricing">Ich brauche ERP</a><a href="#roi-calculator">Wie viel kann ich sparen?</a></div>
@@ -1485,11 +1480,7 @@ html[dir="ltr"] .srf{direction:ltr}
 
                                     </div>
                                     <div class="hero-emblem-voice-badge-wrap">
-                                        <button type="button" class="hero-emblem-voice-badge" data-sr-call="openAiVoicePlannerModal" title="Plan your project instantly with Sovereign AI Voice Engine">
-                                            <span class="emblem-voice-pulse">🎙️</span>
-                                            <span>Planen Sie Ihr Projekt per Sprachdialog • KI-Engineer bereit</span>
-                                            <span class="emblem-voice-arrow">→</span>
-                                        </button>
+                                        
                                     </div>
 
                                 </div>
@@ -1497,18 +1488,30 @@ html[dir="ltr"] .srf{direction:ltr}
                         </div>
                     </div>
                 </div>
-            <div class="hero-compact-sectors-row hero-sectors-marquee"><span class="hero-compact-sectors-label">Unsere Fachbereiche:</span><div class="hero-sectors-viewport"><div class="hero-sectors-track"><div class="hero-sectors-half"><button type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 FinTech-Lösungen</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 KI-Agenten</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 Lieferketten</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 Onlineshops</button>
-                                        <button type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ CLGID-Zentrum</button></div><div class="hero-sectors-half" aria-hidden="true"><button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('fintech')">💳 FinTech-Lösungen</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('erp')">🏢 CoreSync ERP</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('ai')">🤖 KI-Agenten</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('supply')">📦 Lieferketten</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('store')">🛒 Onlineshops</button>
-                                        <button tabindex="-1" type="button" class="hero-compact-chip" onclick="showStudioPeek('clgid')">🏛️ CLGID-Zentrum</button></div></div></div></div>
+            
             </section>
+</div><!-- /hero-editorial.hero-cinematic: نقل إغلاق غلاف البطل إلى موقعه الصحيح (إصلاح الاحتواء 2026-11-18) -->
+<section id="trust-metrics" class="section-trust-metrics" aria-label="S&amp;R CoreSync in Zahlen"><div class="hero-trust-metrics-strip hero-trust-compact" aria-label="Indikatoren für Leistung und europäische Akkreditierung">
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">99.9%</span>
+                                            <span class="metric-lbl">Cloud-Bereitschaft</span>
+                                        </div>
+                                        <div class="trust-metric-separator" aria-hidden="true"></div>
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">EU &amp; BTW</span>
+                                            <span class="metric-lbl">EU-Steuer-Compliance</span>
+                                        </div>
+                                        <div class="trust-metric-separator" aria-hidden="true"></div>
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">&lt; 30s</span>
+                                            <span class="metric-lbl">Sofortiger Start</span>
+                                        </div>
+                                        <div class="trust-metric-separator" aria-hidden="true"></div>
+                                        <div class="trust-metric-item">
+                                            <span class="metric-val">Amsterdam HQ</span>
+                                            <span class="metric-lbl">Hauptsitz Amsterdam</span>
+                                        </div>
+                                        </div></section>
 <nav class="sr-jump" aria-label="Jump to section" data-sr-decision-bar><a href="#about" data-sr-jump="about"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 6.3 6.4.5-4.9 4.2 1.5 6.3L12 16.9 6.4 20.3l1.5-6.3L3 9.8l6.4-.5L12 3z"/></svg><span>Wert</span></a><a href="#services" data-sr-jump="services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg><span>Kompetenzen</span></a><a href="#software-hub" data-sr-jump="software-hub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg><span>Shop</span></a><a href="#pricing" data-sr-jump="pricing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20"/><path d="M17 7H9.5a3 3 0 000 6H14a3 3 0 010 6H6"/></svg><span>Preise</span></a><a href="#contact" data-sr-jump="contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg><span>Kontakt</span></a></nav>
 
 <section class="section-tech-stack-v2 service-orbit-section" id="services" data-section>
@@ -1567,7 +1570,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                     <span class="dana-price-value" data-eur-price="590"><span>€</span>590</span>
                                 </div>
                             </div>
-                            <div class="dana-card-actions-row">
+                            <div class="dana-card-actions-row"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["identity"]'>Details</button>
                                 <button type="button" class="dana-btn-booking" data-sr-call="openExecutiveBookingModal" data-sr-args='["identity"]' data-sr-stop="1">
                                     <span>Book Session 📅</span>
                                 </button>
@@ -1610,7 +1614,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                     <span class="dana-price-value" data-eur-price="980"><span>€</span>980</span>
                                 </div>
                             </div>
-                            <div class="dana-card-actions-row">
+                            <div class="dana-card-actions-row"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["web"]'>Details</button>
                                 <button type="button" class="dana-btn-booking" data-sr-call="openExecutiveBookingModal" data-sr-args='["website"]' data-sr-stop="1">
                                     <span>Book Session 📅</span>
                                 </button>
@@ -1663,7 +1668,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="dana-pay-badge" title="Mollie"><span class="dana-pay-dot mollie"></span>Mollie</span>
                                 <span class="dana-pay-badge" title="Apple Pay"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.150 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.84c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.09 1.75-.96 2.79 1.02.08 2.05-.52 2.68-1.27z"/></svg>Apple&nbsp;Pay</span>
                             </div>
-                            <div class="dana-card-actions-row">
+                            <div class="dana-card-actions-row"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["ecommerce"]'>Details</button>
                                 <button type="button" class="dana-btn-booking" data-sr-call="openExecutiveBookingModal" data-sr-args='["store"]' data-sr-stop="1">
                                     <span>Book Session 📅</span>
                                 </button>
@@ -1725,7 +1731,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">40 % weniger Overhead durch Legacy-Infrastruktur</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["cloud-software"]'>Details</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -1768,7 +1775,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">Reaktion unter einer Sekunde und Offline-PWA-Bereitschaft</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["mobile-web"]'>Details</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["web"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -1811,7 +1819,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">Verifizierte SEPA- und niederländische BTW-Konformität</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["enterprise"]'>Details</button>
                             <a href="demo.html" class="tech-btn-consult tech-btn-consult--gold" title="Experience Live Cloud ERP Demo">
                                 <span>Live-ERP-Demo ⚡</span>
                             </a>
@@ -1857,7 +1866,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">65 % weniger manuelle Bearbeitungsstunden</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["automation-ai"]'>Details</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -1902,7 +1912,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">Echtzeit-Cashflow- und Gewinnmargen-Analyse</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["finance-gov"]'>Details</button>
                             <a href="#roi-calculator" class="tech-btn-consult" title="Calculate Financial Savings via ROI Tool">
                                 <span>ROI Calculator 📊</span>
                             </a>
@@ -1946,7 +1957,8 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span class="metric-text">99.9% Verfügbarkeit und Verschlüsselung auf Bankniveau</span>
                             </div>
                         </div>
-                        <div class="tech-card-footer-actions">
+                        <div class="tech-card-footer-actions"><button type="button" class="tech-btn-consult" data-sr-call="openServiceDetail"
+                                data-sr-args='["cloud-security"]'>Details</button>
                             <button type="button" class="tech-btn-consult" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                 <span>Book Consultation 📅</span>
                             </button>
@@ -1958,19 +1970,180 @@ html[dir="ltr"] .srf{direction:ltr}
                     </div>
                 </div>
                 </div>
-            </div>
-        </section><section class="section-pricing flat-spacing flat-animate-tab" id="pricing" data-section>
+            </section>
+        <section class="section-pricing flat-spacing flat-animate-tab" id="pricing" data-section>
             <div class="bg-img">
                 <img loading="lazy" decoding="async" width="1440" height="1081" src="../assets/bg-4.png" alt="Backdrop Pricing Packages">
             </div>
             <div class="container">
                 <div class="s-header justify-content-center">
                     <h2 class="text-display-2 letter-space--3 effectFade fadeUp">
-                        Planbare, transparente Preispakete
+                        Planbare, transparente Preise
                     </h2>
                 </div>
 
-            <div class="cost-estimator-grid" data-wa-title="*Neue Projektanfrage – S&amp;R CoreSync*" data-wa-type="📦 *Typ:*" data-wa-scope="📄 *Umfang:*" data-wa-lang="🌐 *Sprachen:*" data-wa-pay="💳 *Zahlung:*" data-wa-speed="⚡ *Lieferung:*" data-wa-total="💰 *Gesamtschätzung: €{v}*" data-wa-duration="⏱ *Voraussichtliche Dauer: {v}*" data-wa-days="5 - 7 Arbeitstage">
+            <div class="sr-pricing-extras" style="margin-top:3.5rem;display:flex;flex-direction:column;gap:2rem;">
+
+                    <!-- Lead capture (low friction) -->
+                    <div
+                        style="text-align:center;background:linear-gradient(135deg,rgba(var(--sr-gold-rgb, 212, 175, 55),0.12),rgba(30,120,90,0.08));border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:18px;padding:2.4rem 2rem;">
+                        <h3 style="color:#fff;font-size:1.5rem;margin:0 0 0.6rem;font-weight:800;">Nicht sicher, welches Paket zu Ihnen passt?</h3>
+                        <p style="color:#d3dbd7;margin:0 auto 1.4rem;max-width:min(620px,100%);line-height:1.8;">Buchen Sie ein kostenloses 30-Minuten-Beratungsgespräch — wir prüfen Ihren Fall und empfehlen das am besten geeignete Paket, ohne Verpflichtung.</p>
+                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20S%26R%20CoreSync%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%2030%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%84%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A3%D9%86%D8%B3%D8%A8"
+                            target="_blank" rel="noopener noreferrer" data-track="plan-cta"
+                            data-plan="free-consultation" data-action="whatsapp"
+                            style="display:inline-block;background:#d4af37;color:#04100b;font-weight:800;padding:0.9rem 2.2rem;border-radius:999px;text-decoration:none;font-size:1rem;">
+                            📅 Kostenloses 30-Minuten-Beratungsgespräch buchen
+                        </a>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            Was unsere Kunden sagen</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem;">
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Mit Core Starter haben wir unsere Plattform in 3 Wochen gestartet. Der 30-Tage-Support reichte unserem Team aus."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— Leiter Operations, Logistikunternehmen (NL)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Full ERP Sync hat unseren Kontenplan + SEPA + BTW vereinheitlicht. Spart uns 15 Stunden/Woche."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CFO, Handelsunternehmen (EU)</footer>
+                            </blockquote>
+                            <blockquote
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:1.6rem;margin:0;display:flex;flex-direction:column;gap:0.8rem;">
+                                <p style="color:#e8ecea;line-height:1.85;margin:0;font-style:italic;font-size:0.95rem;">
+                                    "Custom ERP Ecosystem: 100% White-Label + BYOK. Sicherheit auf Bankniveau."</p>
+                                <footer style="color:#ecd9a0;font-weight:700;font-size:0.85rem;margin-top:auto;">— CTO, FinTech (UAE)</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Add-ons -->
+                    <div>
+                        <h3
+                            style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;text-align:center;font-weight:800;">
+                            Zusatzmodule (Add-ons)</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">📦</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Zusätzliche Module
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+1 Arbeitsmodul (module)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€190</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🎓</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Schulungsstunden
+                                </h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+5 Schulungsstunden (Zoom)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€250</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🛠️</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Support-Verlängerung</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+30 Tage Support-Verlängerung (SLA)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€290</p>
+                            </div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:12px;padding:1.4rem;text-align:center;">
+                                <div style="font-size:1.6rem;margin-bottom:0.4rem;">🌍</div>
+                                <h4 style="color:#fff;font-size:1rem;margin:0 0 0.3rem;font-weight:700;">Zusätzliche Sprache</h4>
+                                <p style="color:#9fb0a8;font-size:0.82rem;margin:0 0 0.5rem;">+1 zusätzliche Sprache (i18n)</p>
+                                <p style="color:#ecd9a0;font-weight:800;margin:0;font-size:1.1rem;">+€180</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post-purchase steps -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">Nach der Buchung — 4 klare Schritte</h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    1</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Bestätigung (24 Stunden)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">Bestätigungs-E-Mail + BTW-Rechnung</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    2</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Kickoff (3 Tage)</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">60-Minuten-Session — Scope-Festlegung</p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    3</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Umsetzung</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">ERP-Einrichtung + Kontenanbindung + Tests
+                                </p>
+                            </div>
+                            <div style="text-align:center;padding:1rem;">
+                                <div
+                                    style="width:40px;height:40px;border-radius:50%;background:#d4af37;color:#04100b;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;">
+                                    4</div>
+                                <p style="color:#fff;font-weight:700;margin:0 0 0.3rem;font-size:0.9rem;">Übergabe</p>
+                                <p style="color:#9fb0a8;font-size:0.8rem;margin:0;">Fertiges System + Dokumentation + Support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing FAQ -->
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.20);border-radius:14px;padding:2rem;">
+                        <h3 style="color:#ecd9a0;font-size:1.25rem;margin:0 0 1.2rem;font-weight:800;">Preis-FAQ</h3>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Enthält der Preis die BTW (USt.)?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Preise
+                                <strong>hors taxe</strong> (ohne BTW). Alle Rechnungen werden als offizielle Steuerrechnungen (21% BTW) gemäß Belastingdienst ausgestellt — als Betriebsausgaben absetzbar.
+                            </p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Wie lang ist der Support (Support) pro Paket?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Core Starter: 30 Tage · Enterprise Growth: 60 Tage · Core MAX: 180 Tage · ERP Setup: 30 Tage · Full ERP Sync: 60 Tage · Custom: 180 Tage. Support verlängerbar (Add-on).</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Kann ich später ein Upgrade (Upgrade) machen?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">Ja — Sie können jederzeit ein Upgrade durchführen. Wir verrechnen die Differenz (pro-rata) auf Basis Ihrer Zahlung.</p>
+                        </details>
+                        <details style="border-bottom:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.15);padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Welche Zahlungsmethoden werden akzeptiert?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">iDEAL, Stripe, Mollie, Bancontact, Apple Pay, SEPA Direct Debit, Banküberweisung. Offizielle Rechnung (PDF) mit BTW.
+                            </p>
+                        </details>
+                        <details style="padding:0.9rem 0;">
+                            <summary style="cursor:pointer;font-weight:700;color:#fff;font-size:0.95rem;">Gibt es eine Garantie (Guarantee)?</summary>
+                            <p style="margin:0.7rem 0 0;color:#d3dbd7;line-height:1.8;font-size:0.9rem;">14-Tage-Zufriedenheitsgarantie: Sind Sie innerhalb von 14 Tagen nach dem Kickoff nicht zufrieden, erstatten wir den vollen Betrag. Kostenloses 30-Minuten-Beratungsgespräch vor der Verpflichtung.</p>
+                        </details>
+                    </div>
+
+                    <!-- Guarantee badge -->
+                    <div style="text-align:center;">
+                        <span
+                            style="display:inline-block;background:rgba(var(--sr-gold-rgb, 212, 175, 55),0.12);border:1px solid rgba(var(--sr-gold-line-rgb, 216, 178, 94),0.30);border-radius:999px;padding:0.7rem 1.6rem;color:#e4cfa9;font-weight:700;font-size:0.9rem;">
+                            🛡️ 14-Tage-Zufriedenheitsgarantie · kostenloses 30-Minuten-Beratungsgespräch · offizielle BTW-Rechnung
+                        </span>
+                    </div>
+                </div><div class="cost-estimator-header">
+                            <span class="sr-logo-badge-pill mb-2 d-inline-flex">
+                                <span class="gold-dot"></span>
+                                Interaktiver Sofort-Budgetrechner // Kosten- & Umfangsschätzung
+                            </span>
+                            <h3 class="text-white mb-2">Stellen Sie Ihr eigenes Paket zusammen und berechnen Sie Kosten und Umsetzungszeit sofort</h3>
+                            <p class="text-white-64 mb-0">Wählen Sie Projekttyp und benötigte Spezifikationen, um sofort eine präzise und transparente Preisangabe zu erhalten — mit Sofort-Fixierung und direkter Buchung.</p>
+                        </div><div class="cost-estimator-grid" data-wa-title="*Neue Projektanfrage – S&amp;R CoreSync*" data-wa-type="📦 *Typ:*" data-wa-scope="📄 *Umfang:*" data-wa-lang="🌐 *Sprachen:*" data-wa-pay="💳 *Zahlung:*" data-wa-speed="⚡ *Lieferung:*" data-wa-total="💰 *Gesamtschätzung: €{v}*" data-wa-duration="⏱ *Voraussichtliche Dauer: {v}*" data-wa-days="5 - 7 Arbeitstage">
                             <!-- عمود خيارات التخصيص التفاعلية -->
                             <div class="cost-estimator-controls">
                                 <!-- 01. نوع المشروع الأساسي -->
@@ -2126,7 +2299,16 @@ html[dir="ltr"] .srf{direction:ltr}
                                         <a href="../whitelabel-calculator.html" class="estimator-btn-calc-vip" title="Rechner für Lizenzen fertiger Sovereign-Plattformen">
                                             <span>🧮 Sofortrechner für White-Label-Lizenzen (PDF)</span>
                                         </a>
-                                    </div>
+                                    <button type="button" data-sr-call="transferEstimatorToVipBooking"
+                                            class="estimator-btn-vip" title="VIP-Buchungsfenster mit Details dieser Schätzung öffnen">
+                                            <span>Diese Schätzung als VIP-Buchung fixieren</span>
+                                        </button><button type="button" data-sr-call="transferEstimatorToVipBooking"
+                                            class="estimator-btn-vip" title="VIP-Buchungsfenster mit Details dieser Schätzung öffnen">
+                                            <span>Diese Schätzung als VIP-Buchung fixieren</span>
+                                        </button><button type="button" data-sr-call="transferEstimatorToVipBooking"
+                                            class="estimator-btn-vip" title="VIP-Buchungsfenster mit Details dieser Schätzung öffnen">
+                                            <span>Diese Schätzung als VIP-Buchung fixieren</span>
+                                        </button></div>
                                 </div>
                             </div>
                         </div>
@@ -2146,6 +2328,53 @@ html[dir="ltr"] .srf{direction:ltr}
                     </div>
                     <div class="es-pricing-vat-notice">
                         <span class="es-vat-live-badge">🇬🇧 VAT 20% (EN Tax Compliant)</span>
+                    </div>
+                </div><div class="sr-roi-calculator-wrap" id="srRoiCalculator">
+                    <div class="sr-roi-calc-card">
+                        <div class="sr-roi-head">
+                            <div class="sr-roi-title-group">
+                                <span class="sr-roi-badge">📊 Wachstumsrechner</span>
+                                <h3 class="sr-roi-title">Schätzen Sie den ROI Ihres Projekts (ROI Calculator)</h3>
+                                <p class="sr-roi-sub">Entdecken Sie die Einsparungen bei operativen Kosten und die erwarteten Jahresgewinne mit dem intelligenten S&amp;R CoreSync-Ökosystem.</p>
+                            </div>
+                            <div class="sr-roi-highlight-box">
+                                <span class="sr-roi-hl-lbl">Erwarteter ROI</span>
+                                <span class="sr-roi-hl-val" id="roiPercentOutput">+340%</span>
+                                <span class="sr-roi-hl-sub">in den ersten 6 Betriebsmonaten</span>
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-controls-grid">
+                            <div class="sr-roi-control-item">
+                                <label for="roiSalesRange" class="sr-roi-label">
+                                    <span>Erwartetes monatliches Verkaufsvolumen / Umsatz:</span>
+                                    <strong id="roiSalesVal" class="sr-roi-val-display">€25,000</strong>
+                                </label>
+                                <input type="range" id="roiSalesRange" min="5000" max="250000" step="5000" value="25000" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                            <div class="sr-roi-control-item">
+                                <label for="roiTeamRange" class="sr-roi-label">
+                                    <span>Anzahl der Mitarbeiter oder manuellen Vorgänge pro Monat:</span>
+                                    <strong id="roiTeamVal" class="sr-roi-val-display">15 Vorgänge/Person</strong>
+                                </label>
+                                <input type="range" id="roiTeamRange" min="3" max="100" step="1" value="15" class="sr-roi-range" oninput="updateRoiCalc()">
+                            </div>
+                        </div>
+
+                        <div class="sr-roi-results-strip">
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">Jährliche Einsparung bei Automatisierungs- & Cloud-Kosten:</span>
+                                <strong class="sr-roi-res-num" id="roiSavingsOutput">€18,400</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">Geschätztes Nettoumsatzwachstum:</span>
+                                <strong class="sr-roi-res-num" style="color:#10b981;" id="roiGrowthOutput">+€32,500</strong>
+                            </div>
+                            <div class="sr-roi-res-box">
+                                <span class="sr-roi-res-lbl">Amortisationszeit des Systems (Payback):</span>
+                                <strong class="sr-roi-res-num" style="color:var(--sr-gold-light, #f3dfba);" id="roiPaybackOutput">2,1 Monate</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -2995,10 +3224,10 @@ html[dir="ltr"] .srf{direction:ltr}
                             <span>Individuelles Enterprise-Angebot anfordern (B2B) →</span>
                         </a>
                     </div>
-                </div>
+                
     
-                </div>
-            </div>
+                
+            
         </section><section class="flat-spacing section-software-hub" id="software-hub" data-section>
             <div class="container">
                 <div class="s-header text-center mb-4">
@@ -3006,7 +3235,7 @@ html[dir="ltr"] .srf{direction:ltr}
                         S&amp;R EXKLUSIVE SOFTWARE-PRODUKTE &amp; ARCHITEKTEN-LABOR • BEREIT ZUM EINSATZ
                     </span>
                     <h2 class="text-display-2 letter-space--3 mb-3 text-white">
-                        Exclusive Software Marketplace &amp; Architect Lab
+                        Exklusiver Software-Marktplatz und Architekten-Labor
                     </h2>
                     <p class="desc text-white-64 mx-auto software-hub-desc">
                         Proprietäre Software-Suiten, ausschließlich von unserer Firma entwickelt und zertifiziert, geleitet von Eng. Salim Aziza und Raed Kaaka. Eigenständige Offline-Steuer-ERP-Lösungen, Entwickler-SDKs, Cloud-Agenten und unser Founder-Release-Portal mit geprüften digitalen Lizenzen und sofortiger Desktop-Bereitstellung.
@@ -3521,7 +3750,7 @@ html[dir="ltr"] .srf{direction:ltr}
                     </div>
                 </div>
 
-            </div>
+            
         <div class="lab-pipeline-grid">
                     <div class="lab-pipeline-card">
                         <div class="d-flex justify-content-between align-items-center mb-2">
@@ -3859,7 +4088,11 @@ html[dir="ltr"] .srf{direction:ltr}
                             <span class="showcase-tab-dot"></span>
                             <span>Intelligente NFC-Karte 📲</span>
                         </a>
-                    </div>
+                    <a href="../social-8k-studio.html" target="_blank"
+                            class="showcase-tab-btn showcase-tab-btn-social8k" title="8K Social Branding Suite">
+                            <span class="showcase-tab-dot"></span>
+                            <span>Zertifiziertes Markenidentitäts-Studio 🎬</span>
+                        </a></div>
                 </div>
 
                 <!-- 1. Interactive Slider Mode -->
@@ -3946,7 +4179,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85.%D8%B3%D9%84%D9%8A%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%87%D9%86%D8%AF%D8%B3%D8%A9%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp M. Salim 💬">
+                                                <span>WhatsApp M. Salim 💬</span>
+                                            </a></div>
                                     </div>
                                 </div>
                             </div>
@@ -3987,7 +4225,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["erp"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3.%D8%B1%D8%A7%D8%A6%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%86%D8%B8%D9%85%20ERP%20%D9%88%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AB%D8%A7%D9%84%20%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp A. Raed 💬">
+                                                <span>WhatsApp A. Raed 💬</span>
+                                            </a></div>
                                     </div>
                                 </div>
                             </div>
@@ -4097,7 +4340,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["cloud"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85.%D8%B3%D9%84%D9%8A%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%87%D9%86%D8%AF%D8%B3%D8%A9%20%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8%D8%A9%20%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp M. Salim 💬">
+                                                <span>WhatsApp M. Salim 💬</span>
+                                            </a></div>
                         </div>
                     </div>
                 </div>
@@ -4137,7 +4385,12 @@ html[dir="ltr"] .srf{direction:ltr}
                                             <button type="button" class="showcase-action-btn" data-sr-call="openExecutiveBookingModal" data-sr-args='["erp"]'>
                                                 <span>Consultation 👔</span>
                                             </button>
-                                        </div>
+                                        <a href="https://wa.me/31618111116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3.%D8%B1%D8%A7%D8%A6%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%AD%D9%88%D9%84%20%D9%86%D8%B8%D9%85%20ERP%20%D9%88%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AB%D8%A7%D9%84%20%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%20%D9%88%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A"
+                                                target="_blank" rel="noopener noreferrer"
+                                                class="showcase-action-btn showcase-action-wa"
+                                                title="WhatsApp A. Raed 💬">
+                                                <span>WhatsApp A. Raed 💬</span>
+                                            </a></div>
                         </div>
                     </div>
                 </div>
@@ -4235,7 +4488,7 @@ html[dir="ltr"] .srf{direction:ltr}
 <section id="trust-band" class="trust-band" data-section><div class="trust-band-inner"><div class="trust-band-viewport"><div class="trust-band-track"><div class="trust-band-half"><span class="trust-band-chip">LogiTrans B.V. — Amsterdam</span><span class="trust-band-chip">OmniVenture GmbH — Frankfurt</span><span class="trust-band-chip">Boutique Aurum — Rotterdam</span><span class="trust-band-chip">Aurelia Luxury Atelier — Den Haag</span><span class="trust-band-badge">ISO 27001</span><span class="trust-band-badge">SOC 2</span><span class="trust-band-badge">GDPR</span><span class="trust-band-badge">PSD2</span><span class="trust-band-badge">SLA 99.9%</span></div><div class="trust-band-half" aria-hidden="true"><span class="trust-band-chip">LogiTrans B.V. — Amsterdam</span><span class="trust-band-chip">OmniVenture GmbH — Frankfurt</span><span class="trust-band-chip">Boutique Aurum — Rotterdam</span><span class="trust-band-chip">Aurelia Luxury Atelier — Den Haag</span><span class="trust-band-badge">ISO 27001</span><span class="trust-band-badge">SOC 2</span><span class="trust-band-badge">GDPR</span><span class="trust-band-badge">PSD2</span><span class="trust-band-badge">SLA 99.9%</span></div></div></div></div>
                         <p class="founders-link"><a href="#founders-showcase">Dipl.-Ing. Mohammad Salim Aziza · Hr. Mohammad Raed Kaaka<span aria-hidden="true">←</span></a></p>
 </section>
-        </div>
+        
 
         <!-- 1.1 Executive Leadership & Founders Showcase Slider -->
         
@@ -4250,6 +4503,15 @@ html[dir="ltr"] .srf{direction:ltr}
 
         <!-- 2.5 Executive Leadership & Cloud ERP Stage -->
         
+<section id="portals" class="section-portals" aria-label="S&amp;R CoreSync-Portale"><div class="hero-quick-portals-strip hero-quick-portals-strip--quiet">
+                                        <a href="../developer-portal.html" class="hero-quick-portal-link">Entwicklerportal ⚡</a>
+                                        <span class="hero-portal-sep">•</span>
+                                        <a href="../partner-portal.html" class="hero-quick-portal-link">Partner- &amp; Lizenzportal 💼</a>
+                                        <span class="hero-portal-sep">•</span>
+                                        <button type="button" class="hero-quick-portal-btn" data-sr-call="openExecutiveBookingModal">Private Beratung buchen 👔</button>
+                                        <span class="hero-portal-sep">•</span>
+                                        <button type="button" class="hero-sound-toggle-btn" id="srSoundToggleBtn" onclick="toggleSoundMute()" title="Soundeffekte der Oberfläche ein- oder ausschalten">🔊 Interface-Sound</button>
+                                        </div></section>
 <!-- shared-index-sections:start -->
 <section class="flat-spacing" id="services-compare" data-section style="padding:0 0 2.5rem;">
             <div class="container">
@@ -4762,7 +5024,7 @@ html[dir="ltr"] .srf{direction:ltr}
                 </div>
             </div>
         </section>
-<section class="flat-spacing" id="process" data-section><div class="sr-block"><div class="sr-block__head"><span class="sr-block__eyebrow">So arbeiten wir</span><h2 class="sr-block__title">Vier Schritte von der Idee zum Eigentum</h2><p class="sr-block__sub">Keine offenen Stunden, kein schwammiger Umfang: jeder Schritt hat eine Dauer und ein schriftliches Ergebnis.</p></div><ol class="sr-steps"><li><span class="sr-steps__num">1</span><span class="sr-steps__meta">45 Minuten</span><h3 class="sr-steps__title">Erstgespräch</h3><p class="sr-steps__body">Eine Sitzung, um das benötigte System zu verstehen - mit kostenloser Scope-Notiz.</p></li><li><span class="sr-steps__num">2</span><span class="sr-steps__meta">3-5 Tage</span><h3 class="sr-steps__title">Fester Umfang</h3><p class="sr-steps__body">Ein schriftliches Angebot mit klaren Positionen - keine offenen Stunden, keine Überraschungen.</p></li><li><span class="sr-steps__num">3</span><span class="sr-steps__meta">2-8 Wochen</span><h3 class="sr-steps__title">Stufenweise Lieferung</h3><p class="sr-steps__body">Eine lauffähige Testumgebung ab Woche eins, mit Review nach jeder Stufe.</p></li><li><span class="sr-steps__num">4</span><span class="sr-steps__meta">Bei Übergabe</span><h3 class="sr-steps__title">Eigentumsübergang</h3><p class="sr-steps__body">Code, Dokumentation, Schlüssel und Team-Schulung, vertraglich festgehalten.</p></li></ol></div></section>
+<section class="flat-spacing" id="process" data-section><div class="sr-block"><div class="sr-block__head"><span class="sr-block__eyebrow">So arbeiten wir</span><h2 class="sr-block__title">Von der Idee zum Eigentum in vier Schritten</h2><p class="sr-block__sub">Keine offenen Stunden, kein schwammiger Umfang: jeder Schritt hat eine Dauer und ein schriftliches Ergebnis.</p></div><ol class="sr-steps"><li><span class="sr-steps__num">1</span><span class="sr-steps__meta">45 Minuten</span><h3 class="sr-steps__title">Erstgespräch</h3><p class="sr-steps__body">Eine Sitzung, um das benötigte System zu verstehen - mit kostenloser Scope-Notiz.</p></li><li><span class="sr-steps__num">2</span><span class="sr-steps__meta">3-5 Tage</span><h3 class="sr-steps__title">Fester Umfang</h3><p class="sr-steps__body">Ein schriftliches Angebot mit klaren Positionen - keine offenen Stunden, keine Überraschungen.</p></li><li><span class="sr-steps__num">3</span><span class="sr-steps__meta">2-8 Wochen</span><h3 class="sr-steps__title">Stufenweise Lieferung</h3><p class="sr-steps__body">Eine lauffähige Testumgebung ab Woche eins, mit Review nach jeder Stufe.</p></li><li><span class="sr-steps__num">4</span><span class="sr-steps__meta">Bei Übergabe</span><h3 class="sr-steps__title">Eigentumsübergang</h3><p class="sr-steps__body">Code, Dokumentation, Schlüssel und Team-Schulung, vertraglich festgehalten.</p></li></ol></div></section>
 
 
 <section class="section-testimonial flat-spacing tf-btn-swiper-main" id="testimonials" data-section>
@@ -4786,7 +5048,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.01.quote">Ein echter Quantensprung in unserem Multi-Lager- und Buchhaltungs-Workflow nach der Einführung des maßgeschneiderten ERP von S&R CoreSync. Exceptional precision and architectural rigor.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.01.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Bewertung 5 von 5" data-i18n="testimonials.01.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Hendrik van Dijk</span><span class="client-flag" role="img" aria-label="Netherlands">🇳🇱</span></h6>
@@ -4803,7 +5065,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.02.quote">Ihre doppelte Kompetenz in modernster Softwareentwicklung und Finanzregulierung hat uns bei jedem Monatsabschluss hunderte manuelle Stunden erspart.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.02.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Bewertung 5 von 5" data-i18n="testimonials.02.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Sultan Al-Rashed</span><span class="client-flag" role="img" aria-label="Saudi Arabia">🇸🇦</span></h6>
@@ -4820,7 +5082,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.03.quote">Die mobilen Plattformen und Executive-Cloud-Dashboards von S&R CoreSync laufen mit rasantem Tempo und Sicherheit auf Bankniveau. Our trusted technical partner.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.03.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Bewertung 5 von 5" data-i18n="testimonials.03.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Klaus Weber</span><span class="client-flag" role="img" aria-label="Germany">🇩🇪</span></h6>
@@ -4837,7 +5099,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.04.quote">Unser E-Store-Design und die iDEAL- + Apple-Pay-Integration haben unsere niederländischen Verkäufe innerhalb von 2 Monaten verdoppelt. Blitzschneller Checkout und makelloses UX vom ersten Tag an.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.04.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Bewertung 5 von 5" data-i18n="testimonials.04.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Elena Rossi</span><span class="client-flag" role="img" aria-label="Netherlands">🇳🇱</span></h6>
@@ -4854,7 +5116,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <p class="tes-text text-body-1" data-i18n="testimonials.05.quote">Unsere Markenidentität und das Brand Book wurden mit der Finesse weltklasse Designhäuser aus London und Mailand gestaltet. Es gewann sofort das Vertrauen der Investoren.</p>
                             <div class="tes-author">
                                 <div class="author_info">
-                                    <p class="tes-rating" role="img" aria-label=" data-i18n="testimonials.05.rating"">
+                                    <p class="tes-rating" role="img" aria-label="Bewertung 5 von 5" data-i18n="testimonials.05.rating">
                                         <svg viewBox="0 0 152 24" aria-hidden="true" width="120" height="19"><use href="#tes-star"/><use href="#tes-star" x="32"/><use href="#tes-star" x="64"/><use href="#tes-star" x="96"/><use href="#tes-star" x="128"/></svg>
                                     </p>
                                     <h6 class="info__name text-body-1 letter-space--1"><span class="client-name">Dr. Tariq Al-Mansour</span><span class="client-flag" role="img" aria-label="UAE / Netherlands">🇦🇪</span></h6>
@@ -4890,7 +5152,7 @@ html[dir="ltr"] .srf{direction:ltr}
                         Smarte ROI- und Enterprise-Kosteneinsparungs-Engine
                     </span>
                     <h2 class="text-display-2 letter-space--3 text-white">
-                        Erfahren Sie, wie viel Ihr Unternehmen jährlich mit <span class="gold-accent">CoreSync</span> spart
+                        Was Ihr Unternehmen mit <span class="gold-accent">CoreSync</span> jedes Jahr spart
                     </h2>
                     <p class="text-white-64 max-w-700 mx-auto mt-2">
                         Berechnen Sie die genaue finanzielle Ersparnis und die zurückgewonnenen Verwaltungsstunden die durch die Automatisierung Ihrer Abläufe und die ERP-Integration mit unseren Architekten frei werden.
@@ -5026,7 +5288,7 @@ html[dir="ltr"] .srf{direction:ltr}
                 <div class="container">
                     <div class="s-header justify-content-center">
                         <h2 class="text-display-2 letter-space--3">
-                            Selected Works
+                            Ausgewählte Projekte
                         </h2>
                     </div>
                     <ul class="work-tab_btn" role="tablist" aria-label="Featured Project Categories">
@@ -5241,7 +5503,7 @@ html[dir="ltr"] .srf{direction:ltr}
             <div class="container">
                 <div class="s-header d-block">
                     <h2 class="text-display-2 letter-space--3 text-center effectFade fadeUp">
-                        Frequently Asked Questions
+                        Schnelle Antworten
                     </h2>
                 </div>
                 <div class="row">
@@ -5403,9 +5665,7 @@ html[dir="ltr"] .srf{direction:ltr}
                             <span id="execStageBadgeText">Chief Cloud &amp; AI Architect &amp; CTO • Available for 2026 Enterprise Projects</span>
                         </div>
 
-                        <h2 class="exec-stage-title" id="execStageTitle">
-                            Intelligent Cloud Systems <span class="exec-gold-accent">&amp; Custom Architecture</span> Leading Your Enterprise
-                        </h2>
+                        <h2 class="exec-stage-title" id="execStageTitle"> Intelligente Cloud-Systeme <span class="exec-gold-accent">und individuelle Architektur</span> für Ihr Unternehmen </h2>
 
                         <p class="exec-stage-desc" id="execStageDesc">
                             Wir entwickeln belastbare Cloud-Systeme, leistungsstarke Web-Plattformen und automatisierte ERP-Architekturen, die Unternehmenswachstum in Europa und im Nahen Osten vorantreiben.
@@ -5489,7 +5749,7 @@ html[dir="ltr"] .srf{direction:ltr}
             <div class="container">
                 <div class="s-header justify-content-center">
                     <h2 class="text-display-2 letter-space--3 effectFade fadeUp">
-                        Let's Engineer Your Weiter Strategic System Together
+                        Gemeinsam bauen wir Ihr nächstes strategisches System
                     </h2>
                 </div>
             </div>
@@ -5591,7 +5851,7 @@ html[dir="ltr"] .srf{direction:ltr}
                                 <span>Digitales Executive-Briefing 2026</span>
                             </div>
                             <h2 class="sr-newsletter-title" id="newsletterHeadingEn">
-                                Join the <span class="gold-gradient-text sr-gold-accent">S&R CoreSync</span> Elite Network
+                                Dem <span class="gold-gradient-text sr-gold-accent">S&R CoreSync</span> Elite-Netzwerk beitreten
                             </h2>
                             <p class="sr-newsletter-subtitle">
                                 Erhalten Sie monatlich Unternehmens-ROI-Benchmarks, Updates zur europäischen Cloud-Steuerautomatisierung (BTW/VAT) und exklusiven Zugang zur Enterprise-Sandbox direkt in Ihr Postfach.
@@ -5622,7 +5882,7 @@ html[dir="ltr"] .srf{direction:ltr}
         </section>
 
         
-        <footer class="srf" id="srf-footer" role="contentinfo" dir="ltr"><div class="srf__inner"><div class="srf__brand"><div class="srf__mark"><b>S&amp;R CoreSync</b><span>INTELLIGENT SOLUTIONS</span></div><div class="srf__tag">Souveräne Systemtechnik aus Amsterdam</div></div><nav class="srf__cols" aria-label="Footer"><div class="srf__col"><h3>Leistungen</h3><ul><li><a href="../software.html">Cloud-Software</a></li><li><a href="../work.html#platforms">Fertige Plattformen</a></li><li><a href="../whitelabel-calculator.html">Lizenzrechner</a></li><li><a href="../estimator.html">Projekt-Kalkulator</a></li></ul></div><div class="srf__col"><h3>Unternehmen</h3><ul><li><a href="../index.html#about">Über das Unternehmen</a></li><li><a href="../index.html#founders-showcase">Geschäftsführung</a></li><li><a href="../work.html">Referenzen</a></li><li><a href="../blog.html">Journal</a></li></ul></div><div class="srf__col"><h3>Recht & Compliance</h3><ul><li><a href="../privacy.html">Datenschutz & Cookies</a></li><li><a href="../terms.html">AGB</a></li><li><a href="../verify.html">Dokument prüfen</a></li><li><a href="../security-trust-center.html">Trust Center</a></li><li><a href="#" data-sr-call="openConsent">Analyse-Einstellungen</a></li></ul></div><div class="srf__col"><h3>Kontakt</h3><ul><li><a href="mailto:info@sr-coresync.com">info@sr-coresync.com</a></li><li><a href="tel:+31618111116">+31 6 1811 1116</a></li><li><a href="https://wa.me/31618111116">WhatsApp</a></li><li><a href="../index.html#contact">Beratung buchen</a></li></ul></div></nav></div><div class="srf__legal"><span>© 2026 S&R CoreSync For Intelligent Solutions — Alle Rechte vorbehalten.</span><span>GDPR · NIS2 · eIDAS · ISO 27001</span></div></footer>
+        
     <!-- shared-index-insights:start -->
 <section class="flat-spacing" id="insights" data-section aria-labelledby="insightsTitle">
             <div class="container">
@@ -9369,7 +9629,7 @@ let currentFoundersTarget = 'salim';
     <script src="../js/sr-lead-dispatcher.js"></script>
     <script src="../js/sr-live-feed.js"></script>
    <script src="../js/sr-brand-inspector.js" defer></script>
-    <script src="../js/enterprise-suite.min.js"></script>
+    <script src="../js/enterprise-suite.min.js?v=20261102-p0-matrix"></script>
 
 
 
@@ -9377,7 +9637,7 @@ let currentFoundersTarget = 'salim';
     <script src="../js/sr-quick-dock.js?v=20261117" defer></script>
 
     <!-- S&R CoreSync Sovereign Geo-Language Detection Banner -->
-    <script src="../js/sr-geo-lang.js" defer></script>
+    <script src="../js/sr-geo-lang.js?v=20261118b?v=20261118b" defer></script>
     <!-- S&R CoreSync Sovereign Trust Ribbon & Tier Matrix Controllers -->
     <script src="../js/sr-trust-ribbon.js" defer></script>
     <script src="../js/sr-tier-matrix.js" defer></script>
@@ -9646,7 +9906,7 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
 
 
 
-</aside>
+
 
 
 
@@ -10164,7 +10424,9 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
 <script src="../js/sr-lang-hint.js?v=20261114-ring" defer></script>
 <script src="../js/sr-sound.js?v=20261111b" defer></script>
 <script src="../js/sr-print-guard.js?v=20261111" defer></script>
-<script src="../js/sr-estimator.js?v=20261111" defer></script>
+<footer class="srf" id="srf-footer" role="contentinfo" dir="ltr"><div class="srf__inner"><div class="srf__brand"><div class="srf__mark"><b>S&amp;R CoreSync</b><span>INTELLIGENT SOLUTIONS</span></div><div class="srf__tag">Souveräne Systemtechnik aus Amsterdam</div></div><nav class="srf__cols" aria-label="Footer"><div class="srf__col"><h3>Leistungen</h3><ul><li><a href="../software.html">Cloud-Software</a></li><li><a href="../work.html#platforms">Fertige Plattformen</a></li><li><a href="../whitelabel-calculator.html">Lizenzrechner</a></li><li><a href="../estimator.html">Projekt-Kalkulator</a></li></ul></div><div class="srf__col"><h3>Unternehmen</h3><ul><li><a href="../index.html#about">Über das Unternehmen</a></li><li><a href="../index.html#founders-showcase">Geschäftsführung</a></li><li><a href="../work.html">Referenzen</a></li><li><a href="../blog.html">Journal</a></li></ul></div><div class="srf__col"><h3>Recht & Compliance</h3><ul><li><a href="../privacy.html">Datenschutz & Cookies</a></li><li><a href="../terms.html">AGB</a></li><li><a href="../verify.html">Dokument prüfen</a></li><li><a href="../security-trust-center.html">Trust Center</a></li><li><a href="#" data-sr-call="openConsent">Analyse-Einstellungen</a></li></ul></div><div class="srf__col"><h3>Kontakt</h3><ul><li><a href="mailto:info@sr-coresync.com">info@sr-coresync.com</a></li><li><a href="tel:+31618111116">+31 6 1811 1116</a></li><li><a href="https://wa.me/31618111116">WhatsApp</a></li><li><a href="../index.html#contact">Beratung buchen</a></li></ul></div></nav></div><div class="srf__legal"><span>© 2026 S&R CoreSync For Intelligent Solutions — Alle Rechte vorbehalten.</span><span>GDPR · NIS2 · eIDAS · ISO 27001</span></div></footer>
+
+<script src="../js/sr-estimator.js?v=20261112" defer></script><script src="../js/services-enhancements-locale.js?v=20261118-j2" defer></script><script>document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("roiSalesRange"),b=document.getElementById("roiTeamRange");if(a&&!a.dataset.srRoiInit){a.dataset.srRoiInit="1";a.addEventListener("input",updateRoiCalc);if(b&&!b.dataset.srRoiInit){b.dataset.srRoiInit="1";b.addEventListener("input",updateRoiCalc);}updateRoiCalc();}});</script>
 <script src="../js/sr-hero-fit.js?v=20261112" defer></script>
 
 <script src="../js/sr-studio-peek.js"></script>
@@ -10193,7 +10455,7 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
   if(window.MutationObserver){ new MutationObserver(measure).observe(document.body, {childList:true, attributes:true, attributeFilter:['class','style']}); }
 })();
 </script>
-<script src="../js/sr-dock-merge.js?v=20261113b" defer></script>
+<script src="../js/sr-dock-merge.js?v=20261113f" defer></script>
 
     <style id="sr-estimator-modal-css">
 #srAiEstimateModal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:999999;opacity:0;visibility:hidden;transition:opacity .32s ease,visibility .32s ease}
@@ -10386,8 +10648,8 @@ try{(function(){window.addEventListener('scroll',function(){var winScroll=docume
     });
     </script>
 
-<script src="../js/sr-lang-map-lazy.js?v=20261114b" defer></script>
-<script src="../js/sr-tax-layer.js?v=20261116b" defer></script>
+<script src="../js/sr-lang-map-lazy.js?v=20261117a" defer></script>
+<script src="../js/sr-tax-layer.js?v=20261117b" defer></script>
 <script src="../js/sr-ui-i18n.js?v=20261121" defer></script>
 <script src="../js/sr-content-i18n.js?v=20261145" defer></script>
 <script src="../js/sr-master-shell.js" defer></script>

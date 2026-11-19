@@ -13,198 +13,338 @@
  },
  "bg": {
   "testimonials.01.quote": "Истински качествен скок в управлението на множество складове и счетоводните процеси след внедряването на персонализирания ERP на S&R CoreSync. Изключителна прецизност и архитектурна строгост.",
+  "testimonials.01.rating": "Оценка 5 от 5",
   "testimonials.02.quote": "Двойната им експертиза във водещото софтуерно инженерство и финансовите регулации ни спести стотици ръчни часове при всяко месечно приключване и сверка на приходите.",
+  "testimonials.02.rating": "Оценка 5 от 5",
   "testimonials.03.quote": "Мобилните платформи и облачните табла за ръководството, изградени от S&R CoreSync, работят със светкавична скорост и банкова сигурност. Наш доверен технически партньор.",
+  "testimonials.03.rating": "Оценка 5 от 5",
   "testimonials.04.quote": "Дизайнът на нашия онлайн магазин и интеграцията с iDEAL + Apple Pay удвоиха продажбите ни в Нидерландия за 2 месеца. Светкавично бързо плащане и безупречно потребителско изживяване от първия ден.",
-  "testimonials.05.quote": "Нашата бранд идентичност и Brand Book бяха създадени с прецизността на дизайнерски къщи от световна класа в Лондон и Милано. Те спечелиха доверието на инвеститорите мигновено."
+  "testimonials.04.rating": "Оценка 5 от 5",
+  "testimonials.05.quote": "Нашата бранд идентичност и Brand Book бяха създадени с прецизността на дизайнерски къщи от световна класа в Лондон и Милано. Те спечелиха доверието на инвеститорите мигновено.",
+  "testimonials.05.rating": "Оценка 5 от 5"
  },
  "ckb": {
   "testimonials.01.quote": "نقلة نوعية حقيقية في إدارة مستودعاتنا ومحاسبتنا بعد تطبيق نظام الـ ERP المخصص من S&R CoreSync. دقة واحترافية تفوق التوقعات.",
+  "testimonials.01.rating": "التقييم 5 من 5",
   "testimonials.02.quote": "فهمهم المشترك بين عبقرية البرمجة والعمق المالي وفّر علينا مئات الساعات في إقفال الحسابات الشهرية وتتبع المبيعات.",
+  "testimonials.02.rating": "التقييم 5 من 5",
   "testimonials.03.quote": "تطبيقات الجوال ولوحات التحكم السحابية التي طوروها لشركتنا تتميز بسرعة فائقة وأمان سيبراني مشدد. شريك تقني معتمد للأبد.",
+  "testimonials.03.rating": "التقييم 5 من 5",
   "testimonials.04.quote": "تصميم متجرنا الإلكتروني وتكامل بوابات iDEAL وApple Pay ضاعف مبيعاتنا في هولندا بنسبة 180% خلال أول شهرين. تجربة شراء خرافية وسرعة قياسية.",
-  "testimonials.05.quote": "الهوية البصرية ودليل العلامة التجارية صُمِّما بفخامة ملكية تضاهي بيوت التصميم العالمية في لندن وميلانو. منحتنا ثقة كبار المستثمرين والشركاء فوراً."
+  "testimonials.04.rating": "التقييم 5 من 5",
+  "testimonials.05.quote": "الهوية البصرية ودليل العلامة التجارية صُمِّما بفخامة ملكية تضاهي بيوت التصميم العالمية في لندن وميلانو. منحتنا ثقة كبار المستثمرين والشركاء فوراً.",
+  "testimonials.05.rating": "التقييم 5 من 5"
  },
  "cs": {
   "testimonials.01.quote": "Skutečný kvantový skok v řízení více skladů a v účetních procesech po nasazení zakázkového ERP od S&R CoreSync. Výjimečná přesnost a architektonická preciznost.",
+  "testimonials.01.rating": "Hodnocení 5 z 5",
   "testimonials.02.quote": "Jejich dvojí mistrovství ve špičkovém softwarovém inženýrství a finanční regulaci nám ušetřilo stovky ručních hodin při každé měsíční uzávěrce a rekonciliaci výnosů.",
+  "testimonials.02.rating": "Hodnocení 5 z 5",
   "testimonials.03.quote": "Mobilní platformy a cloudové dashboardy pro vedení, které navrhlo S&R CoreSync, běží bleskově a s bankovní úrovní zabezpečení. Náš důvěryhodný technický partner.",
+  "testimonials.03.rating": "Hodnocení 5 z 5",
   "testimonials.04.quote": "Návrh našeho e-shopu a integrace iDEAL + Apple Pay zdvojnásobily naše prodeje v Nizozemsku během 2 měsíců. Bleskurychlé odbavení nákupu a bezchybný uživatelský zážitek od prvního dne.",
-  "testimonials.05.quote": "Naše vizuální identita a Brand Book byly vytvořeny s precizností designových domů světové úrovně v Londýně a Miláně. Okamžitě získaly důvěru investorů."
+  "testimonials.04.rating": "Hodnocení 5 z 5",
+  "testimonials.05.quote": "Naše vizuální identita a Brand Book byly vytvořeny s precizností designových domů světové úrovně v Londýně a Miláně. Okamžitě získaly důvěru investorů.",
+  "testimonials.05.rating": "Hodnocení 5 z 5"
  },
  "da": {
   "testimonials.01.quote": "Et reelt kvantespring i vores lagerstyring og bogholderi efter implementeringen af S&R CoreSync specialbyggede ERP. Enestående præcision og arkitektonisk stringens.",
+  "testimonials.01.rating": "Vurdering 5 ud af 5",
   "testimonials.02.quote": "Deres dobbelte ekspertise i avanceret softwareudvikling og finansiel regulering sparer os hundredvis af manuelle timer ved hver månedsafslutning og afstemning.",
+  "testimonials.02.rating": "Vurdering 5 ud af 5",
   "testimonials.03.quote": "Mobilplatformene og cloud-dashboards fra S&R CoreSync kører med lynets hast og sikkerhed på bankniveau. Vores betroede tekniske partner.",
+  "testimonials.03.rating": "Vurdering 5 ud af 5",
   "testimonials.04.quote": "Vores webshopdesign og integration af iDEAL + Apple Pay fordoblede vores nederlandske salg på 2 måneder. Lynhurtig checkout og fejlfri brugeroplevelse fra dag ét.",
-  "testimonials.05.quote": "Vores brandidentitet og Brand Book blev udarbejdet med den finesse, som kendetegner designhuse i verdensklasse i London og Milano. Det vandt investorerne tillid med det samme."
+  "testimonials.04.rating": "Vurdering 5 ud af 5",
+  "testimonials.05.quote": "Vores brandidentitet og Brand Book blev udarbejdet med den finesse, som kendetegner designhuse i verdensklasse i London og Milano. Det vandt investorerne tillid med det samme.",
+  "testimonials.05.rating": "Vurdering 5 ud af 5"
  },
  "de": {
   "testimonials.01.quote": "Ein echter Quantensprung in unserem Multi-Lager- und Buchhaltungs-Workflow nach der Einführung des maßgeschneiderten ERP von S&R CoreSync. Exceptional precision and architectural rigor.",
+  "testimonials.01.rating": "Bewertung 5 von 5",
   "testimonials.02.quote": "Ihre doppelte Kompetenz in modernster Softwareentwicklung und Finanzregulierung hat uns bei jedem Monatsabschluss hunderte manuelle Stunden erspart.",
+  "testimonials.02.rating": "Bewertung 5 von 5",
   "testimonials.03.quote": "Die mobilen Plattformen und Executive-Cloud-Dashboards von S&R CoreSync laufen mit rasantem Tempo und Sicherheit auf Bankniveau. Our trusted technical partner.",
+  "testimonials.03.rating": "Bewertung 5 von 5",
   "testimonials.04.quote": "Unser E-Store-Design und die iDEAL- + Apple-Pay-Integration haben unsere niederländischen Verkäufe innerhalb von 2 Monaten verdoppelt. Blitzschneller Checkout und makelloses UX vom ersten Tag an.",
-  "testimonials.05.quote": "Unsere Markenidentität und das Brand Book wurden mit der Finesse weltklasse Designhäuser aus London und Mailand gestaltet. Es gewann sofort das Vertrauen der Investoren."
+  "testimonials.04.rating": "Bewertung 5 von 5",
+  "testimonials.05.quote": "Unsere Markenidentität und das Brand Book wurden mit der Finesse weltklasse Designhäuser aus London und Mailand gestaltet. Es gewann sofort das Vertrauen der Investoren.",
+  "testimonials.05.rating": "Bewertung 5 von 5"
  },
  "el": {
   "testimonials.01.quote": "A genuine quantum leap in our multi-warehouse management and accounting workflows after deploying S&R CoreSync custom ERP. Exceptional precision and architectural rigor.",
+  "testimonials.01.rating": "Αξιολόγηση 5 από 5",
   "testimonials.02.quote": "Their dual mastery of cutting-edge software engineering and financial regulations saved us hundreds of manual hours every monthly close and revenue reconciliation.",
+  "testimonials.02.rating": "Αξιολόγηση 5 από 5",
   "testimonials.03.quote": "The mobile platforms and executive cloud dashboards engineered by S&R CoreSync operate with blazing speed and bank-grade security. Our trusted technical partner.",
+  "testimonials.03.rating": "Αξιολόγηση 5 από 5",
   "testimonials.04.quote": "Ο σχεδιασμός του ηλεκτρονικού μας καταστήματος και η ενσωμάτωση iDEAL + Apple Pay διπλασίασαν τις ολλανδικές πωλήσεις μας μέσα σε 2 μήνες. Αστραπιαία ολοκλήρωση αγοράς και άψογη εμπειρία χρήστη από την πρώτη ημέρα.",
-  "testimonials.05.quote": "Η ταυτότητα της μάρκας μας και το Brand Book μας δημιουργήθηκαν με τη φινέτσα κορυφαίων οίκων σχεδίασης του Λονδίνου και του Μιλάνου. Κέρδισαν αμέσως την εμπιστοσύνη των επενδυτών."
+  "testimonials.04.rating": "Αξιολόγηση 5 από 5",
+  "testimonials.05.quote": "Η ταυτότητα της μάρκας μας και το Brand Book μας δημιουργήθηκαν με τη φινέτσα κορυφαίων οίκων σχεδίασης του Λονδίνου και του Μιλάνου. Κέρδισαν αμέσως την εμπιστοσύνη των επενδυτών.",
+  "testimonials.05.rating": "Αξιολόγηση 5 από 5"
  },
  "en": {
   "testimonials.01.quote": "A genuine quantum leap in our multi-warehouse management and accounting workflows after deploying S&R CoreSync custom ERP. Exceptional precision and architectural rigor.",
+  "testimonials.01.rating": "Rating 5 out of 5",
   "testimonials.02.quote": "Their dual mastery of cutting-edge software engineering and financial regulations saved us hundreds of manual hours every monthly close and revenue reconciliation.",
+  "testimonials.02.rating": "Rating 5 out of 5",
   "testimonials.03.quote": "The mobile platforms and executive cloud dashboards engineered by S&R CoreSync operate with blazing speed and bank-grade security. Our trusted technical partner.",
+  "testimonials.03.rating": "Rating 5 out of 5",
   "testimonials.04.quote": "Our e-store design and iDEAL + Apple Pay integration doubled our Dutch sales within 2 months. Lightning-fast checkout and flawless UX from day one.",
-  "testimonials.05.quote": "Our brand identity and Brand Book were crafted with the finesse of world-class design houses in London and Milan. It won investor trust instantly."
+  "testimonials.04.rating": "Rating 5 out of 5",
+  "testimonials.05.quote": "Our brand identity and Brand Book were crafted with the finesse of world-class design houses in London and Milan. It won investor trust instantly.",
+  "testimonials.05.rating": "Rating 5 out of 5"
  },
  "es": {
   "testimonials.01.quote": "Un auténtico salto cualitativo en nuestra gestión multi-almacén y en los flujos contables tras implantar el ERP personalizado de S&R CoreSync. Una precisión y un rigor arquitectónico excepcionales.",
+  "testimonials.01.rating": "Valoración 5 de 5",
   "testimonials.02.quote": "Su doble dominio de la ingeniería de software más avanzada y de la normativa financiera nos ahorró cientos de horas manuales en cada cierre mensual y en cada conciliación de ingresos.",
+  "testimonials.02.rating": "Valoración 5 de 5",
   "testimonials.03.quote": "Las plataformas móviles y los cuadros de mando ejecutivos en la nube desarrollados por S&R CoreSync funcionan con una velocidad extraordinaria y una seguridad de nivel bancario. Nuestro socio tecnológico de confianza.",
+  "testimonials.03.rating": "Valoración 5 de 5",
   "testimonials.04.quote": "El diseño de nuestra tienda online y la integración de iDEAL y Apple Pay duplicaron nuestras ventas en los Países Bajos en 2 meses. Un proceso de pago velocísimo y una experiencia de usuario impecable desde el primer día.",
-  "testimonials.05.quote": "Nuestra identidad de marca y nuestro Brand Book se elaboraron con la finura de los grandes estudios de diseño de Londres y Milán. Ganaron al instante la confianza de los inversores."
+  "testimonials.04.rating": "Valoración 5 de 5",
+  "testimonials.05.quote": "Nuestra identidad de marca y nuestro Brand Book se elaboraron con la finura de los grandes estudios de diseño de Londres y Milán. Ganaron al instante la confianza de los inversores.",
+  "testimonials.05.rating": "Valoración 5 de 5"
  },
  "et": {
   "testimonials.01.quote": "Tõeline hüpe meie mitme lao haldamises ja raamatupidamise töövoogudes pärast S&R CoreSync kohandatud ERP-i kasutuselevõttu. Erakordne täpsus ja arhitektuurne rangus.",
+  "testimonials.01.rating": "Hinnang 5 viiest",
   "testimonials.02.quote": "Nende kahekordne asjatundlikkus tipptasemel tarkvaraarenduses ja finantsregulatsioonides säästab meile sadu käsitsi tehtavaid tunde igal kuulõpus ja tulude võrdlemisel.",
+  "testimonials.02.rating": "Hinnang 5 viiest",
   "testimonials.03.quote": "S&R CoreSync poolt loodud mobiiliplatvormid ja pilve juhtimislauad töötavad välkkiiруsel ja pangatasemel turvalisusega. Meie usaldusväärne tehniline partner.",
+  "testimonials.03.rating": "Hinnang 5 viiest",
   "testimonials.04.quote": "Meie e-poe disain ning iDEAL + Apple Pay integratsioon kahekordistasid meie Hollandi müüki kahe kuuga. Välkkiire ostuprotsess ja laitmatu kasutuskogemus juba esimesest päevast.",
-  "testimonials.05.quote": "Meie visuaalne identiteet ja brändiraamat valmisid maailmatasemel disainistuudiote peenusega Londonis ja Milanos. See võitis investorite usalduse koheselt."
+  "testimonials.04.rating": "Hinnang 5 viiest",
+  "testimonials.05.quote": "Meie visuaalne identiteet ja brändiraamat valmisid maailmatasemel disainistuudiote peenusega Londonis ja Milanos. See võitis investorite usalduse koheselt.",
+  "testimonials.05.rating": "Hinnang 5 viiest"
  },
  "fi": {
   "testimonials.01.quote": "Todellinen harppaus varastohallinnassamme ja kirjanpidossamme S&R CoreSync -räätälöidyn ERP:n käyttöönoton jälkeen. Poikkeuksellinen tarkkuus ja arkkitehtoninen kurinalaisuus.",
+  "testimonials.01.rating": "Arvosana 5 / 5",
   "testimonials.02.quote": "Heidän kaksoisosaamisensa huipputason ohjelmistokehityksessä ja finanssisääntelyssä säästää meille satoja käsityötunteja joka kuukausikatkossa ja täsmäytyksessä.",
+  "testimonials.02.rating": "Arvosana 5 / 5",
   "testimonials.03.quote": "S&R CoreSyncin mobiilialustat ja pilvidashboardit toimivat salaman nopeudella ja pankkitason turvallisuudella. Luotettu tekninen kumppanimme.",
+  "testimonials.03.rating": "Arvosana 5 / 5",
   "testimonials.04.quote": "Verkkokauppasuunnittelumme ja iDEAL + Apple Pay -integraatio kaksinkertaistivat Alankomaiden myyntimme kahdessa kuukaudessa. Salamannopea kassa ja moitteeton käyttökokemus ensimmäisestä päivästä.",
-  "testimonials.05.quote": "Brändi-identiteettimme ja Brand Book toteutettiin lontoolaisten ja milanolaisten huippuluokan designstudioiden tyylikkyydellä. Se voitti sijoittajien luottamuksen välittömästi."
+  "testimonials.04.rating": "Arvosana 5 / 5",
+  "testimonials.05.quote": "Brändi-identiteettimme ja Brand Book toteutettiin lontoolaisten ja milanolaisten huippuluokan designstudioiden tyylikkyydellä. Se voitti sijoittajien luottamuksen välittömästi.",
+  "testimonials.05.rating": "Arvosana 5 / 5"
  },
  "fr": {
   "testimonials.01.quote": "Un véritable bond en avant dans notre gestion multi-entrepôts et nos flux comptables après le déploiement de l'ERP sur mesure de S&R CoreSync. Précision et rigueur architecturale exceptionnelles.",
+  "testimonials.01.rating": "Note 5 sur 5",
   "testimonials.02.quote": "Leur double maîtrise de l'ingénierie logicielle de pointe et de la réglementation financière nous a épargné des centaines d'heures manuelles à chaque clôture mensuelle.",
+  "testimonials.02.rating": "Note 5 sur 5",
   "testimonials.03.quote": "Les plateformes mobiles et les tableaux de bord cloud exécutifs conçus par S&R CoreSync fonctionnent à une vitesse fulgurante avec une sécurité de niveau bancaire. Notre partenaire technique de confiance.",
+  "testimonials.03.rating": "Note 5 sur 5",
   "testimonials.04.quote": "La conception de notre boutique en ligne et l'intégration iDEAL + Apple Pay ont doublé nos ventes néerlandaises en 2 mois. Paiement ultra-rapide et expérience utilisateur irréprochable dès le premier jour.",
-  "testimonials.05.quote": "Notre identité de marque et notre Brand Book ont été conçus avec la finesse des meilleurs studios de design de Londres et Milan. Ils ont immédiatement gagné la confiance des investisseurs."
+  "testimonials.04.rating": "Note 5 sur 5",
+  "testimonials.05.quote": "Notre identité de marque et notre Brand Book ont été conçus avec la finesse des meilleurs studios de design de Londres et Milan. Ils ont immédiatement gagné la confiance des investisseurs.",
+  "testimonials.05.rating": "Note 5 sur 5"
  },
  "ga": {
   "testimonials.01.quote": "A genuine quantum leap in our multi-warehouse management and accounting workflows after deploying S&R CoreSync custom ERP. Exceptional precision and architectural rigor.",
+  "testimonials.01.rating": "Rátáil 5 as 5",
   "testimonials.02.quote": "Their dual mastery of cutting-edge software engineering and financial regulations saved us hundreds of manual hours every monthly close and revenue reconciliation.",
+  "testimonials.02.rating": "Rátáil 5 as 5",
   "testimonials.03.quote": "The mobile platforms and executive cloud dashboards engineered by S&R CoreSync operate with blazing speed and bank-grade security. Our trusted technical partner.",
+  "testimonials.03.rating": "Rátáil 5 as 5",
   "testimonials.04.quote": "Mhéadaigh ár ndearadh ríomhshiopa agus comhtháthú iDEAL + Apple Pay ár ndíolacháin Ollannacha faoi dhó laistigh de 2 mhí. Seiceáil amach thar a bheith tapa agus taithí úsáideora gan locht ón gcéad lá.",
-  "testimonials.05.quote": "Ceardaíodh ár bhféiniúlacht bhranda agus ár Leabhar Branda chomh cumasach le tithe dearaidh den chéad scoth i Londain agus i Milano. Bhuaigh sé muinín infheisteoirí láithreach."
+  "testimonials.04.rating": "Rátáil 5 as 5",
+  "testimonials.05.quote": "Ceardaíodh ár bhféiniúlacht bhranda agus ár Leabhar Branda chomh cumasach le tithe dearaidh den chéad scoth i Londain agus i Milano. Bhuaigh sé muinín infheisteoirí láithreach.",
+  "testimonials.05.rating": "Rátáil 5 as 5"
  },
  "hr": {
   "testimonials.01.quote": "Pravi kvantni skok u upravljanju više skladišta i računovodstvenim procesima nakon uvođenja prilagođenog ERP-a S&R CoreSync. Izuzetna preciznost i arhitektonska rigoroznost.",
+  "testimonials.01.rating": "Ocjena 5 od 5",
   "testimonials.02.quote": "Njihovo dvostruko umijeće u vrhunskom softverskom inženjeringu i financijskoj regulativi uštedjelo nam je stotine ručnih sati pri svakom mjesečnom zatvaranju i usklađivanju prihoda.",
+  "testimonials.02.rating": "Ocjena 5 od 5",
   "testimonials.03.quote": "Mobilne platforme i izvršni cloud dashboardi koje je izradio S&R CoreSync rade munjevitom brzinom uz bankovnu razinu sigurnosti. Naš pouzdani tehnički partner.",
+  "testimonials.03.rating": "Ocjena 5 od 5",
   "testimonials.04.quote": "Dizajn našega web dućana i integracija iDEAL + Apple Pay udvostručili su našu nizozemsku prodaju u roku od 2 mjeseca. Munjevito brza naplata i besprijekorno korisničko iskustvo od prvog dana.",
-  "testimonials.05.quote": "Naš vizualni identitet i Brand Book izrađeni su s profinjenošću vodećih svjetskih dizajnerskih studija u Londonu i Milanu. Time smo odmah stekli povjerenje investitora."
+  "testimonials.04.rating": "Ocjena 5 od 5",
+  "testimonials.05.quote": "Naš vizualni identitet i Brand Book izrađeni su s profinjenošću vodećih svjetskih dizajnerskih studija u Londonu i Milanu. Time smo odmah stekli povjerenje investitora.",
+  "testimonials.05.rating": "Ocjena 5 od 5"
  },
  "hu": {
   "testimonials.01.quote": "Valódi kvantumugrás a több raktáras készletgazdálkodásunkban és számviteli folyamatainkban az S&R CoreSync egyedi ERP bevezetése óta. Kiemelkedő precizitás és építészeti fegyelem.",
+  "testimonials.01.rating": "Értékelés 5 az 5-ből",
   "testimonials.02.quote": "A legmodernebb szoftverfejlesztés és a pénzügyi szabályozás terén egyaránt bizonyított szakértelmük havonta több száz kézi munkaórát takarított meg nekünk a zárás és a bevétel-egyeztetés során.",
+  "testimonials.02.rating": "Értékelés 5 az 5-ből",
   "testimonials.03.quote": "Az S&R CoreSync által fejlesztett mobilplatformok és vezetői felhő-irányítópultok villámgyorsan és banki szintű biztonsággal működnek. Megbízható technikai partnerünk.",
+  "testimonials.03.rating": "Értékelés 5 az 5-ből",
   "testimonials.04.quote": "Webáruházunk dizájnja és az iDEAL + Apple Pay integráció két hónap alatt megduplázta hollandiai eladásainkat. Villámgyors fizetési folyamat és hibátlan felhasználói élmény az első naptól.",
-  "testimonials.05.quote": "Márkaidentitásunkat és Brand Bookünket a londoni és milánói világszínvonalú designstúdiók finomságával alkották meg. Azonnal elnyerte a befektetők bizalmát."
+  "testimonials.04.rating": "Értékelés 5 az 5-ből",
+  "testimonials.05.quote": "Márkaidentitásunkat és Brand Bookünket a londoni és milánói világszínvonalú designstúdiók finomságával alkották meg. Azonnal elnyerte a befektetők bizalmát.",
+  "testimonials.05.rating": "Értékelés 5 az 5-ből"
  },
  "it": {
   "testimonials.01.quote": "Un vero salto di qualità nella gestione dei nostri magazzini multipli e nei flussi contabili dopo l’adozione dell’ERP personalizzato S&R CoreSync. Precisione e rigore architetturale eccezionali.",
+  "testimonials.01.rating": "Valutazione 5 su 5",
   "testimonials.02.quote": "La loro doppia competenza in ingegneria del software d’avanguardia e in normative finanziarie ci ha fatto risparmiare centinaia di ore manuali a ogni chiusura mensile e riconciliazione dei ricavi.",
+  "testimonials.02.rating": "Valutazione 5 su 5",
   "testimonials.03.quote": "Le piattaforme mobile e le dashboard cloud direzionali sviluppate da S&R CoreSync operano con velocità straordinaria e sicurezza di livello bancario. Il nostro partner tecnico di fiducia.",
+  "testimonials.03.rating": "Valutazione 5 su 5",
   "testimonials.04.quote": "Il design del nostro e-store e l’integrazione iDEAL + Apple Pay hanno raddoppiato le vendite nei Paesi Bassi in 2 mesi. Checkout rapidissimo e UX impeccabile fin dal primo giorno.",
-  "testimonials.05.quote": "La nostra identità di marca e il Brand Book sono stati realizzati con la raffinatezza dei migliori studi di design di Londra e Milano. Hanno conquistato immediatamente la fiducia degli investitori."
+  "testimonials.04.rating": "Valutazione 5 su 5",
+  "testimonials.05.quote": "La nostra identità di marca e il Brand Book sono stati realizzati con la raffinatezza dei migliori studi di design di Londra e Milano. Hanno conquistato immediatamente la fiducia degli investitori.",
+  "testimonials.05.rating": "Valutazione 5 su 5"
  },
  "ku": {
-  "testimonials.01.quote": "A genuine quantum leap in our multi-warehouse management and accounting workflows after deploying S&R CoreSync custom ERP. Exceptional precision and architectural rigor.",
-  "testimonials.02.quote": "Their dual mastery of cutting-edge software engineering and financial regulations saved us hundreds of manual hours every monthly close and revenue reconciliation.",
-  "testimonials.03.quote": "The mobile platforms and executive cloud dashboards engineered by S&R CoreSync operate with blazing speed and bank-grade security. Our trusted technical partner.",
+  "testimonials.01.quote": "Pilekana kontûm a rasteqîn di rêveberiya depoyên pirjor û rêyên hesabdarî de piştî sazkirina ERP ya taybet a S&R CoreSync. Rastbûn û hişmendiya mîmarî ya bêmînak.",
+  "testimonials.01.rating": "Nirxandin 5 ji 5",
+  "testimonials.02.quote": "Zanîna wan a ducanî di endezyariya nermwêreya nûjen û rêznameyên darayî de me ji sedên demjimêrên destî rizgar kir di her girtina mehane û hevkirina dahatan de.",
+  "testimonials.02.rating": "Nirxandin 5 ji 5",
+  "testimonials.03.quote": "Platformên mobîl û dashboardên cloud ên rêveber yên ji hêla S&R CoreSync ve hatine afirandin bi leza bilind û ewlehiya asta bankê dixebitin. Hevalbendê me yê teknîkî yê pêbawer.",
+  "testimonials.03.rating": "Nirxandin 5 ji 5",
   "testimonials.04.quote": "Sêwirana firotgeha me ya elektronîk û entegrasyona iDEAL + Apple Pay di nav 2 mehan de firotina me ya Holandayê du qat kir. Prosesa dayînê ya pir bilez û UX-eke bêkêmasî ji roja yekem ve.",
-  "testimonials.05.quote": "Nasnameya me ya markayê û pirtûka markayê bi hostatiya xaniyên sêwirana asta cîhanê yên li London û Mîlanê hatin çêkirin. Di cih de pêbaweriya veberhêneran bi dest xist."
+  "testimonials.04.rating": "Nirxandin 5 ji 5",
+  "testimonials.05.quote": "Nasnameya me ya markayê û pirtûka markayê bi hostatiya xaniyên sêwirana asta cîhanê yên li London û Mîlanê hatin çêkirin. Di cih de pêbaweriya veberhêneran bi dest xist.",
+  "testimonials.05.rating": "Nirxandin 5 ji 5"
  },
  "lt": {
   "testimonials.01.quote": "Tikras šuolis mūsų kelių sandėlių valdyme ir apskaitos procesuose įdiegus individualų S&R CoreSync ERP. Išskirtinis tikslumas ir architektūrinis griežtumas.",
+  "testimonials.01.rating": "Įvertinimas 5 iš 5",
   "testimonials.02.quote": "Jų dviguba kompetencija pažangioje programinės įrangos inžinerijoje ir finansų reglamentuose sutaupo mums šimtus rankų darbo valandų kiekvieną mėnesio uždarymą ir pajamų suderinimą.",
+  "testimonials.02.rating": "Įvertinimas 5 iš 5",
   "testimonials.03.quote": "S&R CoreSync sukurtos mobiliosios platformos ir debesų vadovybės skydeliai veikia žaibo greičiu ir banko lygio saugumu. Mūsų patikimas techninis partneris.",
+  "testimonials.03.rating": "Įvertinimas 5 iš 5",
   "testimonials.04.quote": "Mūsų el. parduotuvės dizainas ir iDEAL + Apple Pay integracija per 2 mėnesius padvigubino Nyderlandų pardavimus. Žaibiškai greitas atsiskaitymas ir nepriekaištinga naudotojo patirtis nuo pirmos dienos.",
-  "testimonials.05.quote": "Mūsų prekės ženklo tapatybė ir prekės ženklo knyga sukurti su pasaulio lygio Londono ir Milano dizaino namų meistriškumu. Ji akimirksniu pelnė investuotojų pasitikėjimą."
+  "testimonials.04.rating": "Įvertinimas 5 iš 5",
+  "testimonials.05.quote": "Mūsų prekės ženklo tapatybė ir prekės ženklo knyga sukurti su pasaulio lygio Londono ir Milano dizaino namų meistriškumu. Ji akimirksniu pelnė investuotojų pasitikėjimą.",
+  "testimonials.05.rating": "Įvertinimas 5 iš 5"
  },
  "lv": {
   "testimonials.01.quote": "Īsts kvantu lēciens mūsu vairāku noliktavu pārvaldībā un grāmatvedības procesos pēc S&R CoreSync pielāgotā ERP ieviešanas. Izcila precizitāte un arhitektoniska stingrība.",
+  "testimonials.01.rating": "Vērtējums 5 no 5",
   "testimonials.02.quote": "Viņu dubultā kompetence progresīvā programmatūras inženierijā un finanšu regulējumā ietaupa mums simtiem roku darba stundu katrā mēneša slēgumā un ieņēmumu saskaņošanā.",
+  "testimonials.02.rating": "Vērtējums 5 no 5",
   "testimonials.03.quote": "S&R CoreSync veidotās mobilās platformas un mākoņa vadības paneļi darbojas zibens ātrumā un ar bankas līmeņa drošību. Mūsu uzticamais tehniskais partneris.",
+  "testimonials.03.rating": "Vērtējums 5 no 5",
   "testimonials.04.quote": "Mūsu e-veikala dizains un iDEAL + Apple Pay integrācija divu mēnešu laikā dubultoja mūsu pārdošanas apjomus Nīderlandē. Zibensātra apmaksas plūsma un nevainojama lietotāja pieredze jau no pirmās dienas.",
-  "testimonials.05.quote": "Mūsu zīmola identitāte un zīmola grāmata tika izstrādāta ar pasaules klases dizaina namu Londonā un Milānā smalkumu. Tā nekavējoties ieguva investoru uzticību."
+  "testimonials.04.rating": "Vērtējums 5 no 5",
+  "testimonials.05.quote": "Mūsu zīmola identitāte un zīmola grāmata tika izstrādāta ar pasaules klases dizaina namu Londonā un Milānā smalkumu. Tā nekavējoties ieguva investoru uzticību.",
+  "testimonials.05.rating": "Vērtējums 5 no 5"
  },
  "mt": {
   "testimonials.01.quote": "A genuine quantum leap in our multi-warehouse management and accounting workflows after deploying S&R CoreSync custom ERP. Exceptional precision and architectural rigor.",
+  "testimonials.01.rating": "Valutazzjoni 5 minn 5",
   "testimonials.02.quote": "Their dual mastery of cutting-edge software engineering and financial regulations saved us hundreds of manual hours every monthly close and revenue reconciliation.",
+  "testimonials.02.rating": "Valutazzjoni 5 minn 5",
   "testimonials.03.quote": "The mobile platforms and executive cloud dashboards engineered by S&R CoreSync operate with blazing speed and bank-grade security. Our trusted technical partner.",
+  "testimonials.03.rating": "Valutazzjoni 5 minn 5",
   "testimonials.04.quote": "Id-disinn tal-e-store tagħna u l-integrazzjoni ta’ iDEAL + Apple Pay irduppjaw il-bejgħ Olandiż tagħna f’xahrejn. Checkout rapidissimu u UX bla difett mill-ewwel jum.",
-  "testimonials.05.quote": "L-identità tal-marka u l-Brand Book tagħna nħadmu bl-irfinar tad-djar tad-disinn tal-ogħla livell ta’ Londra u Milan. Rebħu l-fiduċja tal-investituri minnufih."
+  "testimonials.04.rating": "Valutazzjoni 5 minn 5",
+  "testimonials.05.quote": "L-identità tal-marka u l-Brand Book tagħna nħadmu bl-irfinar tad-djar tad-disinn tal-ogħla livell ta’ Londra u Milan. Rebħu l-fiduċja tal-investituri minnufih.",
+  "testimonials.05.rating": "Valutazzjoni 5 minn 5"
  },
  "nl": {
   "testimonials.01.quote": "Een echte kwantumsprong in ons multi-magazijnbeheer en onze boekhoudworkflows na de implementatie van de custom ERP van S&R CoreSync. Uitzonderlijke precisie en architecturale strengheid.",
+  "testimonials.01.rating": "Beoordeling 5 van 5",
   "testimonials.02.quote": "Hun dubbele beheersing van geavanceerde software-engineering en financiële regelgeving heeft ons honderden handmatige uren bespaard bij elke maandafsluiting en omzetreconciliatie.",
+  "testimonials.02.rating": "Beoordeling 5 van 5",
   "testimonials.03.quote": "De mobiele platforms en executive cloud-dashboards die S&R CoreSync bouwt, werken met verbluffende snelheid en beveiliging op bankniveau. Onze vertrouwde technische partner.",
+  "testimonials.03.rating": "Beoordeling 5 van 5",
   "testimonials.04.quote": "Ons e-commerceontwerp en de iDEAL + Apple Pay-integratie verdubbelden onze Nederlandse omzet binnen 2 maanden. Bliksemsnelle checkout en foutloze UX vanaf dag één.",
-  "testimonials.05.quote": "Onze merkidentiteit en ons Brand Book zijn vervaardigd met de finesse van wereldfaam designhuizen in Londen en Milaan. Het won onmiddellijk het vertrouwen van investeerders."
+  "testimonials.04.rating": "Beoordeling 5 van 5",
+  "testimonials.05.quote": "Onze merkidentiteit en ons Brand Book zijn vervaardigd met de finesse van wereldfaam designhuizen in Londen en Milaan. Het won onmiddellijk het vertrouwen van investeerders.",
+  "testimonials.05.rating": "Beoordeling 5 van 5"
  },
  "no": {
   "testimonials.01.quote": "Et reelt kvantesprang i vår lagerstyring og regnskap etter innføringen av S&R CoreSync skreddersydde ERP. Enestående presisjon og arkitektonisk stringens.",
+  "testimonials.01.rating": "Vurdering 5 av 5",
   "testimonials.02.quote": "Deres doble ekspertise i avansert programvareutvikling og finansregulering sparer oss hundrevis av manuelle timer ved hver månedsavslutning og avstemming.",
+  "testimonials.02.rating": "Vurdering 5 av 5",
   "testimonials.03.quote": "Mobilplattformene og skydashbordene fra S&R CoreSync går lynraskt og med sikkerhet på banknivå. Vår betrodde tekniske partner.",
+  "testimonials.03.rating": "Vurdering 5 av 5",
   "testimonials.04.quote": "Designet av vår nettbutikk og integrasjonen med iDEAL og Apple Pay doblet det nederlandske salget vårt i løpet av to måneder. Lynrask betalingsflyt og feilfri brukeropplevelse fra første dag.",
-  "testimonials.05.quote": "Vår visuelle identitet og Brand Book ble utformet med den raffinement og presisjon som kjennetegner verdensledende designbyråer i London og Milano. Den vant investorenes tillit umiddelbart."
+  "testimonials.04.rating": "Vurdering 5 av 5",
+  "testimonials.05.quote": "Vår visuelle identitet og Brand Book ble utformet med den raffinement og presisjon som kjennetegner verdensledende designbyråer i London og Milano. Den vant investorenes tillit umiddelbart.",
+  "testimonials.05.rating": "Vurdering 5 av 5"
  },
  "pl": {
   "testimonials.01.quote": "Prawdziwy skok jakościowy w zarządzaniu wieloma magazynami i procesach księgowych po wdrożeniu dedykowanego ERP S&R CoreSync. Wyjątkowa precyzja i rygor architektoniczny.",
+  "testimonials.01.rating": "Ocena 5 na 5",
   "testimonials.02.quote": "Ich podwójna biegłość w najnowocześniejszej inżynierii oprogramowania i regulacjach finansowych oszczędza nam setki godzin ręcznej pracy przy każdym zamknięciu miesiąca i uzgadnianiu przychodów.",
+  "testimonials.02.rating": "Ocena 5 na 5",
   "testimonials.03.quote": "Platformy mobilne i zarządcze pulpity chmurowe zbudowane przez S&R CoreSync działają z zawrotną szybkością i bezpieczeństwem na poziomie bankowym. Nasz zaufany partner techniczny.",
+  "testimonials.03.rating": "Ocena 5 na 5",
   "testimonials.04.quote": "Projekt naszego sklepu internetowego oraz integracja iDEAL i Apple Pay podwoiły naszą sprzedaż w Holandii w ciągu 2 miesięcy. Błyskawiczne finalizowanie zamówień i bezbłędne doświadczenie użytkownika od pierwszego dnia.",
-  "testimonials.05.quote": "Nasza identyfikacja wizualna i Brand Book zostały opracowane z finezją najlepszych domów projektowych z Londynu i Mediolanu. Natychmiast zdobyły zaufanie inwestorów."
+  "testimonials.04.rating": "Ocena 5 na 5",
+  "testimonials.05.quote": "Nasza identyfikacja wizualna i Brand Book zostały opracowane z finezją najlepszych domów projektowych z Londynu i Mediolanu. Natychmiast zdobyły zaufanie inwestorów.",
+  "testimonials.05.rating": "Ocena 5 na 5"
  },
  "pt": {
   "testimonials.01.quote": "Um verdadeiro salto quântico na gestão multiarmazém e nos fluxos contabilísticos após implementar o ERP personalizado da S&R CoreSync. Precisão e rigor arquitetónico excecionais.",
+  "testimonials.01.rating": "Avaliação 5 de 5",
   "testimonials.02.quote": "O seu duplo domínio de engenharia de software de ponta e regulamentação financeira poupou-nos centenas de horas manuais em cada fecho mensal e reconciliação de receita.",
+  "testimonials.02.rating": "Avaliação 5 de 5",
   "testimonials.03.quote": "As plataformas móveis e os dashboards cloud executivos da S&R CoreSync funcionam a alta velocidade e com segurança de nível bancário. O nosso parceiro técnico de confiança.",
+  "testimonials.03.rating": "Avaliação 5 de 5",
   "testimonials.04.quote": "O design da nossa loja online e a integração iDEAL + Apple Pay duplicaram as nossas vendas nos Países Baixos em 2 meses. Checkout ultrarrápido e uma experiência de utilizador impecável desde o primeiro dia.",
-  "testimonials.05.quote": "A nossa identidade de marca e o Brand Book foram criados com a fineza das melhores casas de design de Londres e Milão. Conquistaram imediatamente a confiança dos investidores."
+  "testimonials.04.rating": "Avaliação 5 de 5",
+  "testimonials.05.quote": "A nossa identidade de marca e o Brand Book foram criados com a fineza das melhores casas de design de Londres e Milão. Conquistaram imediatamente a confiança dos investidores.",
+  "testimonials.05.rating": "Avaliação 5 de 5"
  },
  "ro": {
   "testimonials.01.quote": "Un salt cuantic real în gestionarea mai multor depozite și în fluxurile contabile, după implementarea ERP-ului personalizat S&R CoreSync. Precizie și rigoare arhitecturală excepționale.",
+  "testimonials.01.rating": "Evaluare 5 din 5",
   "testimonials.02.quote": "Dubla competență în inginerie software de vârf și reglementări financiare ne-a economisit sute de ore manuale la fiecare închidere lunară și reconciliere a veniturilor.",
+  "testimonials.02.rating": "Evaluare 5 din 5",
   "testimonials.03.quote": "Platformele mobile și dashboard-urile cloud executive create de S&R CoreSync funcționează cu o viteză remarcabilă și securitate de nivel bancar. Partenerul nostru tehnic de încredere.",
+  "testimonials.03.rating": "Evaluare 5 din 5",
   "testimonials.04.quote": "Designul magazinului nostru online și integrarea iDEAL + Apple Pay ne-au dublat vânzările din Țările de Jos în 2 luni. Proces de finalizare a comenzii extrem de rapid și o experiență de utilizare impecabilă din prima zi.",
-  "testimonials.05.quote": "Identitatea noastră de marcă și Brand Book-ul au fost create cu rafinamentul caselor de design de renume mondial din Londra și Milano. Au câștigat instantaneu încrederea investitorilor."
+  "testimonials.04.rating": "Evaluare 5 din 5",
+  "testimonials.05.quote": "Identitatea noastră de marcă și Brand Book-ul au fost create cu rafinamentul caselor de design de renume mondial din Londra și Milano. Au câștigat instantaneu încrederea investitorilor.",
+  "testimonials.05.rating": "Evaluare 5 din 5"
  },
  "sk": {
   "testimonials.01.quote": "Skutočný kvantový skok v riadení viacerých skladov a v účtovných procesoch po nasadení vlastného ERP od S&R CoreSync. Výnimočná presnosť a architektonická dôslednosť.",
+  "testimonials.01.rating": "Hodnotenie 5 z 5",
   "testimonials.02.quote": "Ich spojenie špičkového softvérového inžinierstva a znalosti finančných predpisov nám pri každej mesačnej uzávierke a zosúlaďovaní výnosov ušetrilo stovky manuálnych hodín.",
+  "testimonials.02.rating": "Hodnotenie 5 z 5",
   "testimonials.03.quote": "Mobilné platformy a cloudové panely pre vedenie od S&R CoreSync fungujú bleskovou rýchlosťou a s bezpečnosťou na úrovni bánk. Náš dôveryhodný technický partner.",
+  "testimonials.03.rating": "Hodnotenie 5 z 5",
   "testimonials.04.quote": "Návrh nášho e-shopu a integrácia iDEAL + Apple Pay zdvojnásobili naše holandské tržby za 2 mesiace. Bleskovo rýchly nákupný proces a bezchybný UX od prvého dňa.",
-  "testimonials.05.quote": "Naša vizuálna identita a Brand Book boli vytvorené s jemnosťou svetových dizajnérskych domov v Londýne a Miláne. Okamžite získali dôveru investorov."
+  "testimonials.04.rating": "Hodnotenie 5 z 5",
+  "testimonials.05.quote": "Naša vizuálna identita a Brand Book boli vytvorené s jemnosťou svetových dizajnérskych domov v Londýne a Miláne. Okamžite získali dôveru investorov.",
+  "testimonials.05.rating": "Hodnotenie 5 z 5"
  },
  "sl": {
   "testimonials.01.quote": "Resničen preskok v upravljanju več skladišč in računovodskih procesih po uvedbi ERP po meri S&R CoreSync. Izjemna natančnost in arhitekturna doslednost.",
+  "testimonials.01.rating": "Ocena 5 od 5",
   "testimonials.02.quote": "Njihovo dvojno znanje vrhunskega programskega inženiringa in finančne zakonodaje nam pri vsakem mesečnem zaključku in usklajevanju prihodkov prihrani na stotine ročnih ur.",
+  "testimonials.02.rating": "Ocena 5 od 5",
   "testimonials.03.quote": "Mobilne platforme in vodstvene oblačne nadzorne plošče, ki jih je razvil S&R CoreSync, delujejo bliskovito hitro in z varnostjo na ravni banke. Naš zaupanja vredni tehnični partner.",
+  "testimonials.03.rating": "Ocena 5 od 5",
   "testimonials.04.quote": "Zasnova naše spletne trgovine ter integracija iDEAL in Apple Pay sta v dveh mesecih podvojili našo prodajo na Nizozemskem. Bliskovito hitro plačilo in brezhibna uporabniška izkušnja že od prvega dne.",
-  "testimonials.05.quote": "Našo blagovno identiteto in Brand Book so oblikovali s prefinjenostjo vrhunskih oblikovalskih hiš iz Londona in Milana; takoj sta pridobila zaupanje vlagateljev."
+  "testimonials.04.rating": "Ocena 5 od 5",
+  "testimonials.05.quote": "Našo blagovno identiteto in Brand Book so oblikovali s prefinjenostjo vrhunskih oblikovalskih hiš iz Londona in Milana; takoj sta pridobila zaupanje vlagateljev.",
+  "testimonials.05.rating": "Ocena 5 od 5"
  },
  "sv": {
   "testimonials.01.quote": "Ett genuint kvantsprång i våra arbetsflöden för lagerstyrning och redovisning efter driftsättningen av S&R CoreSync skräddarsydda ERP. Enastående precision och arkitektonisk stringens.",
+  "testimonials.01.rating": "Betyg 5 av 5",
   "testimonials.02.quote": "Deras dubbla expertis inom banbrytande mjukvaruutveckling och finansiella regelverk sparade oss hundratals manuella timmar vid varje månadsavslut och intäktsavstämning.",
+  "testimonials.02.rating": "Betyg 5 av 5",
   "testimonials.03.quote": "Mobilplattformarna och molndashboardarna från S&R CoreSync går blixtsnabbt och med banksäkerhet. Vår betrodda tekniska partner.",
+  "testimonials.03.rating": "Betyg 5 av 5",
   "testimonials.04.quote": "Vår webbutiksdesign och integrationen med iDEAL + Apple Pay fördubblade vår nederländska försäljning inom två månader. Blixtsnabb kassa och felfri UX från dag ett.",
-  "testimonials.05.quote": "Vår varumärkesidentitet och Brand Book formgavs med elegans från designhus i London och Milano. Det vann investerarnas förtroende direkt."
+  "testimonials.04.rating": "Betyg 5 av 5",
+  "testimonials.05.quote": "Vår varumärkesidentitet och Brand Book formgavs med elegans från designhus i London och Milano. Det vann investerarnas förtroende direkt.",
+  "testimonials.05.rating": "Betyg 5 av 5"
  },
  "tr": {
   "testimonials.01.quote": "S&R CoreSync özel ERP’sini devreye aldıktan sonra çok depolu yönetimimizde ve muhasebe süreçlerimizde gerçek bir sıçrama. Olağanüstü hassasiyet ve mimari titizlik.",
+  "testimonials.01.rating": "Derecelendirme 5 üzerinden 5",
   "testimonials.02.quote": "İleri yazılım mühendisliği ve mali mevzuattaki çift uzmanlıkları, her ay sonu kapanışında ve gelir mutabakatında bize yüzlerce elle yapılan saat kazandırıyor.",
+  "testimonials.02.rating": "Derecelendirme 5 üzerinden 5",
   "testimonials.03.quote": "S&R CoreSync tarafından geliştirilen mobil platformlar ve yönetim bulut panelleri yıldırım hızında ve banka düzeyinde güvenlikle çalışıyor. Güvenilir teknik ortağımız.",
+  "testimonials.03.rating": "Derecelendirme 5 üzerinden 5",
   "testimonials.04.quote": "E-mağaza tasarımımız ve iDEAL + Apple Pay entegrasyonu, Hollanda satışlarımızı 2 ay içinde ikiye katladı. İlk günden itibaren ışık hızında ödeme ve kusursuz kullanıcı deneyimi.",
-  "testimonials.05.quote": "Marka kimliğimiz ve Marka Kitabımız, Londra ve Milano’daki dünya standartlarındaki tasarım stüdyolarının inceliğiyle hazırlandı. Yatırımcı güvenini anında kazandı."
+  "testimonials.04.rating": "Derecelendirme 5 üzerinden 5",
+  "testimonials.05.quote": "Marka kimliğimiz ve Marka Kitabımız, Londra ve Milano’daki dünya standartlarındaki tasarım stüdyolarının inceliğiyle hazırlandı. Yatırımcı güvenini anında kazandı.",
+  "testimonials.05.rating": "Derecelendirme 5 üzerinden 5"
  }
 }

@@ -1,38 +1,37 @@
 # Roll-out kit — closing the residue, language by language
 
-**Status (2026-11-11, v19):** the FAQ residue is gone. Every one of the 27
-non-English portals answers all 15 questions in its own language
-(`check_content_depth_parity.py`: `faq EN = 0` everywhere, 27/27).
-The 22-language wave wrote 196 question/answer pairs through
-`scripts/portal_faq_locales.json` + `scripts/apply_faq_locales.py`.
+**Status (2026-11-18, v20):** the residue is closed. Every one of the 28
+non-English portals carries the full localisation stack in its own language:
+15 FAQ answers, the interactive estimator (16 components per page, master
+parity confirmed by `check_content_depth_parity.py` — `PASSED`, 28/28), and
+the wave-2 pricing regions. The checklist below stays as the kit for future
+languages.
 
-What is left is not copy, it is a component: the interactive **estimator** is
-installed on `de` and `ckb` only, and only one of them works.
+The estimator blocker described in v19 is resolved, using exactly the
+mechanism this file prescribed:
 
-  ckb  complete inline implementation (state, recalculation, total, booking
-       modal) - works, but every string is Arabic, including the WhatsApp
-       message body
-  de   options only, and the module it loads (`js/sr-estimator.js`) uses
-       `_estimatorState`, which no page except the Arabic master defines;
-       no `estimatorTotalAmount` either. The first click throws ReferenceError.
+1. `js/sr-estimator.js` declares `_estimatorState` itself, initialises it
+   from `localStorage` and recalculates on load - no page-side globals
+   needed (only the Arabic master keeps its own inline implementation);
+2. every WhatsApp string comes from `data-wa-*` attributes on the widget
+   root (title, type, scope, pay, duration, days, total, speed, lang) -
+   the shared module holds no per-language literals; the wave scripts
+   author those attributes per language;
+3. the whole grid is installed per language, and the CI step
+   (`check_content_depth_parity.py --strict`) is blocking - the
+   `continue-on-error` era described below is over.
 
-So `de` was never functional. Shipping it a total and a call to action would
-hide that, which is why the v19.1 correction reverted the page.
+For the record, the v19 state (kept until 2026-11-17): the estimator lived
+on `de` and `ckb` only, `de` was never functional (options without
+`_estimatorState`, first click threw ReferenceError), and the WhatsApp
+message was composed in Arabic inside the shared module. Phase 201
+replaced all of it; do not follow the historical instructions below on the
+current fleet.
 
-## What the module needs before any wave
-
-1. declare `_estimatorState` inside `js/sr-estimator.js`, initialise it from
-   `localStorage`, mark the active options and calculate once on load;
-2. read the WhatsApp message segments from `data-wa-*` on the widget root, with
-   an English fallback - Arabic literals must leave the shared file;
-3. install the whole grid (`--full`), not the option block: the total, the
-   timeline and the CTA live in `docs/_extract/estimator-grid.html`;
-4. smoke-test in a browser on one page before touching the other 25.
-
-## The estimator, one language at a time
+## The estimator, one language at a time (historical loop - fleet complete)
 
 ```bash
-# 1. fill the 55 labels for that language (de is the reference, complete)
+# 1. fill the 55 labels for that language
 #    scripts/portal_estimator_locales.json -> {"xx": {"<arabic label>": "<translation>"}}
 python scripts/install_estimator.py --lang xx --dry-run   # must print 0 labels missing
 python scripts/install_estimator.py --lang xx
@@ -40,13 +39,15 @@ python scripts/check_content_depth_parity.py              # estimator > 0
 python scripts/audit_language_purity.py
 ```
 
-**Blocker to close before scaling to 25 languages:** the shared module has no
-state of its own and composes the WhatsApp enquiry in Arabic inside the code,
-falling back to `"5 - 7 أيام عمل"` for the duration. The containment gate cannot
-see it: it reads page text, not JS strings, and it exempts Arabic-script
-languages.
-Move the eight message segments into `portal_estimator_locales.json` under
-`whatsapp`, pass them as `data-*` on the widget root, and fall back to English.
+**Former blocker (closed in phase 201):** the shared module used to have no
+state of its own and composed the WhatsApp enquiry in Arabic inside the code.
+The containment gate could not see it: it reads page text, not JS strings, and
+it exempts Arabic-script languages. The fix landed exactly as prescribed here -
+the module state moved into `js/sr-estimator.js` with `localStorage`
+persistence, and the message segments became `data-wa-*` attributes authored
+per language on the widget root (the wave scripts carry them alongside the 55
+labels). The gate now covers the result: language purity is 100% across the
+fleet.
 
 ## Per-language loop for ordinary English blocks
 
@@ -87,6 +88,8 @@ Commit per language: `i18n(it): batch one — N blocks`.
 ## Guard rail
 
 `scripts/check_content_depth_parity.py` reports English FAQ leakage and the
-estimator per language. Its only remaining drift is the estimator; once that
-reaches every language, drop `continue-on-error` from the CI step and add
-`--strict`.
+estimator per language. Since phase 201 every language matches the master, and
+the CI step runs it as `--strict` under the name "Content parity inside the
+sections (blocking)" - there is no `continue-on-error` left to drop. Keep it
+that way: any new component must reach all 28 portals in the same wave, or the
+gate fails the build.

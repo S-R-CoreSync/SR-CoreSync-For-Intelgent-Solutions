@@ -1,0 +1,590 @@
+<section class="flat-spacing section-software-hub" id="software-hub" data-section>
+            <div class="container">
+                <div class="s-header text-center mb-4">
+                    <span class="about-hero-tag font-latin mb-2 software-hub-tag">
+                        S&amp;R EXCLUSIEVE SOFTWARE-PRODUCTEN &amp; ARCHITECTENLAB • KLAAR VOOR INZET
+                    </span>
+                    <h2 class="text-display-2 letter-space--3 mb-3 text-white">
+                        Exclusieve softwaremarktplaats en architect-lab
+                    </h2>
+                    <p class="desc text-white-64 mx-auto software-hub-desc">Eigen softwaresuites, exclusief ontworpen en gecertificeerd door ons bedrijf, onder leiding van Ir. Salim Aziza en Raed Kaaka. Zelfstandige offline belasting-ERP-oplossingen, developer-SDK's, cloudagents en ons founder-releaseportaal met geverifieerde digitale licenties en directe desktopimplementatie.</p>
+                </div>
+
+                <!-- Category Filtering Bar -->
+                <div class="software-filter-bar">
+                    <button type="button" class="software-filter-pill active" data-sr-call="filterSoftwareMarketplace" data-sr-args='["all"]' data-sr-this="last">
+                        <span>🗂️ Alle software en systemen</span>
+                        <span class="pill-count">6 Products</span>
+                    </button>
+                    <button type="button" class="software-filter-pill software-filter-pill--platforms" data-sr-call="filterSoftwareMarketplace" data-sr-args='["platforms"]' data-sr-this="last">
+                        <span>🏛️ White-Label Platforms</span>
+                        <span class="pill-count">3 platforms</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace" data-sr-args='["accounting"]' data-sr-this="last">
+                        <span>📊 Financiële en belastingoplossingen</span>
+                        <span class="pill-count">3 Solutions</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace" data-sr-args='["developer"]' data-sr-this="last">
+                        <span>💻 Ontwikkelaarstools en cloud-SDK</span>
+                        <span class="pill-count">3 Tools</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace" data-sr-args='["lab"]' data-sr-this="last">
+                        <span>🚀 Lab van oprichter ir. Salim</span>
+                        <span class="pill-count">Exclusive</span>
+                    </button>
+                </div>
+
+                <!-- Structured 3x2 Product Grid -->
+                <div class="row g-4 mb-4" id="softwareGridContainer">
+                    
+                    <!-- 1. S&R TaxSync Desktop -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card software-product-card--featured">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">💻</span>
+                                    <span class="status-badge status-completed software-card-badge">Meest populair ★ • Offline desktop</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R TaxSync Desktop</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.4 Pro • Windows 11/10 (64-bit) &amp; macOS
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.01.desc">Zelfstandige offline accounting- en belastingsoftware voor de desktop, om BTW/VAT 21% en 9% te berekenen en XML-belastingaangiften te genereren die conform de normen van de Belastingdienst en de GCC zijn.</p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Lokale AES-256-versleutelde database (geen cloudafhankelijkheid)</li>
+                                    <li>✓ Official XML tax returns &amp; audit reports</li>
+                                    <li>✓ Afdrukken van facturen conform de standaard EN 16931</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 189</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Jaarlijkse licentie / apparaat</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareDownloadModal" data-sr-args='["taxsync"]' title="Download and install offline software package">
+                                        <span>Download App 📥</span>
+                                    </button>
+                                    <a href="demo.html#software" class="btn-live-preview software-btn-sim" title="Test in interactive cloud sandbox">
+                                        <span>Simulator ⚡</span>
+                                    </a>
+                                <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. S&R CloudPOS Connector -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">⚡</span>
+                                    <span class="status-badge status-in-progress software-card-badge">POS-brug • Native synchronisatie</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R CloudPOS Connector</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v3.1 Agent • Windows POS Terminal &amp; Linux
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.02.desc">
+                                    Lichtgewicht middleware die kassasystemen rechtstreeks koppelt aan cloud-ERP-boekhouding zonder legacy-hardware te vervangen.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Integratie van kassabonprinter en optische streepjescodelezer</li>
+                                    <li>✓ Veerkrachtige offline buffer met automatische herverbindingssynchronisatie</li>
+                                    <li>✓ Directe kasafstemmingsrapporten bij dienstsluiting</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 25</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Maandelijks / kassaterminal</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareDownloadModal" data-sr-args='["cloudpos"]' title="Download POS Terminal Agent">
+                                        <span>Download Agent 📥</span>
+                                    </button>
+                                    <a href="demo.html#software" class="btn-live-preview software-btn-sim" title="Test POS bridge in sandbox">
+                                        <span>Simulator ⚡</span>
+                                    </a>
+                                <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. S&R FlowScan AI Mobile -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">📱</span>
+                                    <span class="status-badge status-in-progress software-card-badge">AI mobiele app • OCR-vision</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R FlowScan AI Mobile</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.8 • iOS 17+ &amp; Android 14 • PWA
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.03.desc">
+                                    Intelligente mobiele camera-app die papieren facturen, brandstofbonnen en kassabonnen scant en btw-tarieven extraheert met 99,4% OCR-nauwkeurigheid.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Directe optische herkenning en tabelverwerking</li>
+                                    <li>✓ Automatische categorisering van exploitatie en tankkosten</li>
+                                    <li>✓ Versleutelde cloudverzending naar de raad van bestuur</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 9.99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Maandelijks / gebruikerslicentie</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareDownloadModal" data-sr-args='["flowscan"]' title="Download Mobile App Package">
+                                        <span>Download App 📥</span>
+                                    </button>
+                                    <a href="demo.html#software" class="btn-live-preview software-btn-sim" title="Launch Mobile OCR Simulator">
+                                        <span>Simulator ⚡</span>
+                                    </a>
+                                <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. S&R Financial AI SDK -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🧩</span>
+                                    <span class="status-badge status-planned software-card-badge">Ontwikkelaars-SDK • REST en Node</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Financial AI SDK</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.2 Dev • Node.js / Python / C# / REST
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.04.desc">Hoogpresterende softwarebibliotheek waarmee ontwikkelaars en ondernemingen Europese belastingcompliance en cashflowprognoses in hun applicaties kunnen integreren.</p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Automatische Europese UBL- en PEPPOL-facturatie</li>
+                                    <li>✓ Cashflow-prognose-engine</li>
+                                    <li>✓ Microseconde-uitvoeringssnelheid met volledige testsuites</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 99</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Maandelijks (50k API-calls)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareDownloadModal" data-sr-args='["sdk"]' title="Download SDK Package">
+                                        <span>Download SDK 📥</span>
+                                    </button>
+                                    <a href="demo.html#software" class="btn-live-preview software-btn-sim" title="SDK API Sandbox">
+                                        <span>Sandbox ⚡</span>
+                                    </a>
+                                <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. S&R SecureVault B2B -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🛡️</span>
+                                    <span class="status-badge status-completed software-card-badge">Beveiliging • militair niveau</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R SecureVault B2B</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v2.0 • Win Server / Linux / Cloud
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.05.desc">
+                                    AES-256-versleuteling van militaire kwaliteit die databaseback-ups en gevoelige contracten beschermt, met automatische zero-knowledge Europese cloudsynchronisatie.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Client-side zero-knowledge AES-256-versleuteling</li>
+                                    <li>✓ Automatische roterende back-ups met hashing</li>
+                                    <li>✓ Redundant versleuteld back-upknooppunt in Amsterdam (AMS-01)</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 49</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Monthly (1TB Encrypted)</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareDownloadModal" data-sr-args='["vault"]' title="Download SecureVault Utility">
+                                        <span>Download Vault 📥</span>
+                                    </button>
+                                    <a href="demo.html#software" class="btn-live-preview software-btn-sim" title="Vault Test Environment">
+                                        <span>Sandbox ⚡</span>
+                                    </a>
+                                <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. S&R Cloud Terminal Agent -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-col justify-content-between software-product-card">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🖥️</span>
+                                    <span class="status-badge status-in-progress software-card-badge">Cloudagent • Operations-watcher</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&R Cloud Terminal Agent</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    v1.0 Pro • Windows / Linux Server
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.06.desc">
+                                    Ultralichte microservices-daemon die CPU, geheugen en databaseverbindingspools volgt en automatisch herstel uitvoert.
+                                </p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Realtime heartbeat-telemetrie en SLA-nalevingsstatistieken</li>
+                                    <li>✓ Zeer laag verbruik (&lt; 15 MB RAM)</li>
+                                    <li>✓ Directe versleutelde tunnel naar het Amsterdam AMS-01-cluster</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white font-latin fw-bold software-card-price">€ 39</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">Maandelijks / cloudnode</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareDownloadModal" data-sr-args='["terminal"]' title="Download Cloud Terminal Agent">
+                                        <span>Download Agent 📥</span>
+                                    </button>
+                                    <a href="demo.html#software" class="btn-live-preview software-btn-sim" title="Monitor Simulator">
+                                        <span>Sandbox ⚡</span>
+                                    </a>
+                                <a href="https://wa.me/31618111116"
+                                        target="_blank" rel="noopener noreferrer" class="software-btn-wa"
+                                       >
+                                        <span>WhatsApp 💬</span>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+
+<!-- ===== منصات S&R العامة القابلة للترخيص (Universal White-Label Platforms) ===== -->
+                    <div class="col-12 software-grid-item" data-category="platforms">
+                        <div class="sr-platforms-heading">
+                            <span class="sr-platforms-eyebrow">S&amp;R UNIVERSAL PLATFORMS • WHITE-LABEL</span>
+                            <h3 class="sr-platforms-title">White-labelplatforms, direct klaar voor uw organisatie</h3>
+                            <p class="sr-platforms-sub">Complete applicatie-engines, gebouwd en in productie beheerd in Nederland, nu beschikbaar voor elke gemeenschap, kliniek en bakkerij wereldwijd — onder uw eigen merk, logo en taal.</p>
+                            <div class="sr-platforms-calc-cta">
+                                <a href="../whitelabel-calculator.html" class="sr-platforms-calc-btn">
+                                    <span>🧮 Directe white-label licentiecalculator en offerte (PDF)</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. S&R CivicSync -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="platforms">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-column justify-content-between software-product-card software-product-card--platform">
+                            <div>
+                                <div class="sr-platform-cover">
+                                    <img src="../assets/work-civicsync-hero.webp" alt="S&amp;R CivicSync - Communities & Organizations Platform" loading="lazy" decoding="async">
+                                    <span class="sr-platform-flag">Vlaggenschipmodel: Syrische gemeenschap in NL</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🌐</span>
+                                    <span class="status-badge status-completed software-card-badge">Civic tech • white-label</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&amp;R CivicSync™</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    Web (Next.js) • iOS &amp; Android (Expo) • AR / NL / EN
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.07.desc">Universeel platform voor elke gemeenschap, vereniging of federatie: een eigen webportaal en mobiele app onder uw identiteit om leden, evenementen en diensten te beheren, met een AI-juridische assistent.</p>
+                                <ul class="software-card-specs">
+                                    <li>✓ Digitale lidmaatschapskaarten met directe QR-verificatie</li>
+                                    <li>✓ Juridische AI-assistent (RAG) en beveiligde documentkluis</li>
+                                    <li>✓ Drietalige dienstengids, nieuws, evenementen en vrijwilligerswerk</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white fw-bold software-card-price sr-platform-price">Custom Quote</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">White-label-licentie / organisatie</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareLiveApp" data-sr-args='["civicsync"]' title="Instant interactive launch in browser">
+                                        <span>⚡ Live Launch</span>
+                                    </button>
+                                    <a href="#work" onclick="navigateToPlatformWork('civicsync'); return false;" class="btn-live-preview software-btn-sim" title="Explore full case study">
+                                        <span>📄 Case Study</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="software-card-consult-bar">
+                                <button type="button" class="btn-consult-advisor btn-advisor-salim" data-sr-call="openExecutiveContactModal" data-sr-args='["systems", "S&R CivicSync - Demo Request"]' title="Request a demo with Eng. Mohammad Salim Aziza">
+                                    <span class="advisor-dot"></span>
+                                    <span>💬 Demo aanvragen (ir. Salim)</span>
+                                </button>
+                                <button type="button" class="btn-consult-email" data-sr-call="sendDirectInfoEmail" data-sr-args='["S&R CivicSync"]' title="Send direct email to info@sr-coresync.com">
+                                    <span>📧 Email info</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. S&R HealthBridge -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="platforms">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-column justify-content-between software-product-card software-product-card--platform">
+                            <div>
+                                <div class="sr-platform-cover">
+                                    <img src="../assets/work-healthbridge-hero.webp" alt="S&amp;R HealthBridge - Clinic & Telehealth Ecosystem" loading="lazy" decoding="async">
+                                    <span class="sr-platform-flag">Vlaggenschipmodel: HealthBridge Europe</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🏥</span>
+                                    <span class="status-badge status-completed software-card-badge">HealthTech • GDPR</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&amp;R HealthBridge™</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    Web + PWA • WebRTC • iDEAL / SEPA • AR / NL / EN
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.08.desc">Cloudecosysteem voor elke kliniek, elk medisch netwerk of elk telezorgcentrum: videoconsulten, afspraken, e-farmacie en patiënten-/artsportalen met volledige GDPR-naleving.</p>
+                                <ul class="software-card-specs">
+                                    <li>✓ 16 medische afdelingen en AI-gezondheidsassistent</li>
+                                    <li>✓ Medicatieherinneringen en controle op medicatie-interacties</li>
+                                    <li>✓ MFA-authenticatie, auditlogs en GDPR-privacytools</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white fw-bold software-card-price sr-platform-price">Custom Quote</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">White-label-licentie / kliniek</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareLiveApp" data-sr-args='["healthbridge"]' title="Instant interactive launch in browser">
+                                        <span>⚡ Live Launch</span>
+                                    </button>
+                                    <a href="#work" onclick="navigateToPlatformWork('healthbridge'); return false;" class="btn-live-preview software-btn-sim" title="Explore full case study">
+                                        <span>📄 Case Study</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="software-card-consult-bar">
+                                <button type="button" class="btn-consult-advisor btn-advisor-salim" data-sr-call="openExecutiveContactModal" data-sr-args='["systems", "S&R HealthBridge - Demo Request"]' title="Request a demo with Eng. Mohammad Salim Aziza">
+                                    <span class="advisor-dot"></span>
+                                    <span>💬 Demo aanvragen (ir. Salim)</span>
+                                </button>
+                                <button type="button" class="btn-consult-email" data-sr-call="sendDirectInfoEmail" data-sr-args='["S&R HealthBridge"]' title="Send direct email to info@sr-coresync.com">
+                                    <span>📧 Email info</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. S&R OmniBakery -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="platforms">
+                        <div class="founder-editorial-card h-100 p-4 d-flex flex-column justify-content-between software-product-card software-product-card--platform">
+                            <div>
+                                <div class="sr-platform-cover">
+                                    <img src="../assets/work-omnibakery-hero.webp" alt="S&amp;R OmniBakery - Bakery & Logistics ERP" loading="lazy" decoding="async">
+                                    <span class="sr-platform-flag">Vlaggenschipmodel: Queen Bakery — NL</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="software-card-icon">🥖</span>
+                                    <span class="status-badge status-completed software-card-badge">Bakkerij-ERP • Wagenpark</span>
+                                </div>
+                                <h4 class="text-white fw-bold mb-1 software-card-title">S&amp;R OmniBakery™</h4>
+                                <div class="text-caption text-white-64 font-latin mb-2 software-card-ver">
+                                    Cloud POS • Driver-webapp • HACCP • BTW 9% / 21%
+                                </div>
+                                <p class="text-white-64 software-card-desc" data-i18n="software.09.desc">Compleet ERP voor elke bakkerij of keten: cloud-POS, productie- en ovenplanning, voorraadbeheer en een chauffeursapp met routeoptimalisatie en bewijs van levering.</p>
+                                <ul class="software-card-specs">
+                                    <li>✓ 3 bedrijfsprofielen: Orientaals • Turks • Europees ambachtelijk</li>
+                                    <li>✓ Google Maps-routering en digitaal leveringsbewijs</li>
+                                    <li>✓ Btw 9% / 21% facturatie en HACCP-allergeenlabeling</li>
+                                </ul>
+                            </div>
+                            <div class="pt-3 border-top border-white-10 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="text-white fw-bold software-card-price sr-platform-price">Custom Quote</span>
+                                    <span class="text-caption text-white-64 d-block software-card-license-type">White-label-licentie / bakkerij</span>
+                                </div>
+                                <div class="software-card-actions">
+                                    <button type="button" class="software-btn-download" data-sr-call="openSoftwareLiveApp" data-sr-args='["omnibakery"]' title="Instant interactive launch in browser">
+                                        <span>⚡ Live Launch</span>
+                                    </button>
+                                    <a href="#work" onclick="navigateToPlatformWork('omnibakery'); return false;" class="btn-live-preview software-btn-sim" title="Explore full case study">
+                                        <span>📄 Case Study</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="software-card-consult-bar">
+                                <button type="button" class="btn-consult-advisor btn-advisor-salim" data-sr-call="openExecutiveContactModal" data-sr-args='["systems", "S&R OmniBakery - Demo Request"]' title="System, POS & fleet with Eng. Mohammad Salim Aziza">
+                                    <span class="advisor-dot"></span>
+                                    <span>💻 Systeem (ir. Salim)</span>
+                                </button>
+                                <button type="button" class="btn-consult-advisor btn-advisor-raed" data-sr-call="openExecutiveContactModal" data-sr-args='["accounting", "S&R OmniBakery - Billing & Taxes"]' title="Invoicing & BTW tax compliance with Mr. Mohammad Raed Kaaka">
+                                    <span class="advisor-dot"></span>
+                                    <span>📊 Belasting en ERP (dhr. Raed)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+</div>
+
+                <!-- Dedicated Architect's Software Lab & Commercial Releases -->
+                <div class="software-architect-lab" id="softwareArchitectLab">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <div class="lab-badge">
+                                <span>🚀 FOUNDER'S LAB &amp; COMMERCIAL DISTRIBUTION PORTAL</span>
+                            </div>
+                            <h3 class="lab-title">Hebt u eigen applicaties en systemen die u commercieel wilt licentiëren en distribueren?</h3>
+                            <p class="lab-desc">S&R CoreSync For Intelligent Solutions levert een commercialisatie-infrastructuur van enterpriseniveau, ontworpen voor softwarearchitecten en senior engineers. Implementeer uw zelfstandige desktoptools, API's en SaaS-projecten onder ons geverifieerde juridische kader, met cryptografische licentiesleutels, geautomatiseerde SEPA- en iDEAL-facturatie en Europese enterprise-compliance.</p>
+                            <div class="lab-pipeline-grid">
+                                <div class="pipeline-card">
+                                    <span class="p-icon">🔒</span>
+                                    <div class="p-title">Hardware-Bound Licensing</div>
+                                    <div class="p-desc">Automatische offline node-locking en validatie van abonnementstokens.</div>
+                                </div>
+                                <div class="pipeline-card">
+                                    <span class="p-icon">💳</span>
+                                    <div class="p-title">Automatische facturatie en btw</div>
+                                    <div class="p-desc">Wereldwijde betalingsafwikkeling via SEPA, iDEAL en creditcards met 21% btw-afhandeling.</div>
+                                </div>
+                                <div class="pipeline-card">
+                                    <span class="p-icon">🌐</span>
+                                    <div class="p-title">High-Availability Hosting</div>
+                                    <div class="p-desc">Snelle redundante downloadmirrors in de clusters Amsterdam en Frankfurt.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="lab-action-box">
+                                <div class="lab-action-badge">Exclusive Partner Program</div>
+                                <h4 class="text-white fw-bold mb-2">Publiceer en verzilver uw software</h4>
+                                <p class="text-white-64 mb-4 lab-action-desc">Neem rechtstreeks contact op met Lead Systems Architect Ir. Salim Aziza om uw systeem te beoordelen, commerciële licentieniveaus te definiëren en het te publiceren op onze marktplaats.</p>
+                                <div class="d-flex flex-column gap-3">
+                                    <button type="button" class="tf-btn w-100 justify-content-center" data-sr-call="openExecutiveBookingModal" data-sr-args='["dev"]'>
+                                        <span>Aanmelden om uw softwareproject te publiceren ←</span>
+                                    </button>
+                                    <a href="demo.html#software" class="btn-live-preview w-100 justify-content-center btn-live-preview--pad">
+                                        <span>Test interactieve softwaresimulator ⚡</span>
+                                    </a>
+                                </div>
+                                <div class="text-center mt-3 text-caption text-white-64">
+                                    Strikte NDA's, volledige bescherming van IE-eigendom en transparante omzetdeling.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+        <div class="sp-tabs" role="tablist"><button type="button" class="sp-tab is-active" role="tab" data-key="store" id="sp-tab-store" aria-controls="sp-panel-store" aria-selected="true"><span>Softwaremarkt</span></button><button type="button" class="sp-tab" role="tab" data-key="wl" id="sp-tab-wl" aria-controls="sp-panel-wl" aria-selected="false" tabindex="-1"><span>White-label-licenties</span></button><button type="button" class="sp-tab" role="tab" data-key="lab" id="sp-tab-lab" aria-controls="sp-panel-lab" aria-selected="false" tabindex="-1"><span>Lab en partnerschappen</span></button></div>
+<div class="sp-panel" id="sp-panel-store" role="tabpanel" aria-labelledby="sp-tab-store"><div class="software-filter-bar">
+                    <button type="button" class="software-filter-pill active" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["all"]' data-sr-this="last">
+                        <span>🗂️ Alle software en systemen</span>
+                        <span class="pill-count">9 producten</span>
+                    </button>
+                    <button type="button" class="software-filter-pill software-filter-pill--platforms"
+                        data-sr-call="filterSoftwareMarketplace" data-sr-args='["platforms"]' data-sr-this="last">
+                        <span>🏛️ Licentieklare platformen voor bedrijfsidentiteit</span>
+                        <span class="pill-count">3 platformen</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["accounting"]' data-sr-this="last">
+                        <span>📊 Zelfstandige boekhoud- en financiële oplossingen</span>
+                        <span class="pill-count">3 oplossingen</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["developer"]' data-sr-this="last">
+                        <span>💻 Developersoftware, cloud en SDK's</span>
+                        <span class="pill-count">3 tools</span>
+                    </button>
+                    <button type="button" class="software-filter-pill" data-sr-call="filterSoftwareMarketplace"
+                        data-sr-args='["lab"]' data-sr-this="last">
+                        <span>🚀 Projectlab van oprichter ir. Salim</span>
+                        <span class="pill-count">Exclusief</span>
+                    </button>
+                </div><div class="row g-4 mb-4" id="softwareGridContainer">
+
+                    <!-- 1. S&R TaxSync Desktop -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        
+                    </div>
+
+                    <!-- 2. S&R CloudPOS Connector -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        
+                    </div>
+
+                    <!-- 3. S&R FlowScan AI Mobile -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="accounting">
+                        
+                    </div>
+
+                    <!-- 4. S&R Financial AI SDK -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        
+                    </div>
+
+                    <!-- 5. S&R SecureVault B2B -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        
+                    </div>
+
+                    <!-- 6. S&R Cloud Terminal Agent -->
+                    <div class="col-lg-4 col-md-6 software-grid-item" data-category="developer">
+                        
+                    </div>
+
+
+
+                    <!-- ===== منصات S&R العامة القابلة للLicentie (Universal White-Label Platforms) ===== --></div></div>
+            <div class="sr-market-guarantees">
+                            <div class="sr-guarantee-pill">
+                                <span>🇳🇱</span>
+                                <span>Servers in Amsterdam AMS-IX</span>
+                            </div>
+                            <div class="sr-guarantee-pill">
+                                <span>🛡️</span>
+                                <span>Militaire versleuteling AES-256 GCM</span>
+                            </div>
+                            <div class="sr-guarantee-pill">
+                                <span>📑</span>
+                                <span>Belastingdienst- &amp; AVG-normen</span>
+                            </div>
+                            <div class="sr-guarantee-pill">
+                                <span>📷</span>
+                                <span>Ondersteuning voor telefooncamera en barcodes</span>
+                            </div>
+                            <div class="sr-guarantee-pill">
+                                <span>⚡</span>
+                                <span>Offline en cloud gebruik</span>
+                            </div>
+                        </div>
+            </section>

@@ -136,13 +136,20 @@
     card.querySelector('.sr-tax-dl').addEventListener('click', function () { downloadInfo(key); });
   }
 
-  /* مزامنة القائمة الجانبية الأصلية (.sr-lm__card) مع الدولة المختارة */
+  /* مزامنة القائمة الجانبية الأصلية (.sr-lm__card) مع الدولة المختارة.
+     زر التحويل (.sr-lm__go) الذي بنته الخريطة الأصلية يُحفَظ كما هو عبر إعادة
+     البناء: تبنّي الاختيار في الملاحِظ يضمن أن السوق المتزامن هو السوق المعروض،
+     فبقي زر select() الأصلي صالحاً لهذا السوق. أما أسواق extraKeys فبلا بوابة
+     لغوية أصلاً، فتُعرَض بلا زر كما كانت. بدون هذا الحفظ كان كل مؤقّت enhance
+     يمحو زر التحويل ويعيد البطاقة إلى السوق القديم — عيب E2E في 2026-11-17. */
   function syncSidebar(key) {
     var r = root();
     if (!r || !DATA) { return; }
     var d = pick(key);
     var cardEl = r.querySelector('.sr-lm__card');
     if (!d || !cardEl) { return; }
+    var preservedGo = DATA.extraKeys.indexOf(key) === -1
+      ? cardEl.querySelector('.sr-lm__go') : null;
     var tz = Math.round(d.lon / 15);
     var u = ui();
     cardEl.innerHTML =
@@ -155,6 +162,11 @@
         '<div class="sr-lm__row"><span>' + u.tz + '</span><b>UTC' + (tz >= 0 ? '+' : '') + tz + '</b></div>' +
       '</div>' +
       '<p class="sr-lm__note">' + u.demoNote + '</p>';
+    if (preservedGo) {
+      var noteEl = cardEl.querySelector('.sr-lm__note');
+      if (noteEl) { cardEl.insertBefore(preservedGo, noteEl); }
+      else { cardEl.appendChild(preservedGo); }
+    }
     Array.prototype.forEach.call(r.querySelectorAll('.sr-lm__item'), function (b) {
       var extra = b.getAttribute('data-extra');
       var idx = b.getAttribute('data-i');
@@ -431,6 +443,15 @@
       if (card && !r.querySelector('.sr-tax-card')) {
         var mapBox = r.querySelector('.sr-lm__map');
         if (mapBox) { mapBox.appendChild(card); }
+      }
+      /* تبنّي اختيار المستخدم: عندما تعيد الخريطة الأصلية بناء البطاقة لسوقٍ
+         آخر (نقرة قائمة أو دبوس)، تبنَّ السوق المعروض حتى لا تعيده المزامنة
+         التلقائية المُجدولة (enhance) إلى السوق القديم — بدون هذا كان النقر
+         على أي سوق يُلغى بعد أجزاء من الثانية ويمحو زر التحويل معه. */
+      var shownH3 = r.querySelector('.sr-lm__card h3');
+      if (shownH3 && DATA) {
+        var shownKey = countryToKey(shownH3.textContent);
+        if (shownKey) { lastKey = shownKey; }
       }
       /* أعِد الترجمة إذا أعاد buildList الأسماء العربية */
       var firstItem = list && list.querySelector('.sr-lm__item:not([data-extra]) span');

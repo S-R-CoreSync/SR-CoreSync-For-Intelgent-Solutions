@@ -37,7 +37,8 @@
      "mt": "Software cloud",
      "ga": "Bogearraí scamall",
      "ku": "Nermalava cloud",
-     "bg": "Облачен софтуер"
+     "bg": "Облачен софтуер",
+     "ckb": "نەرمەواژەی هەوری"
     },
     {
      "href": "./work.html#platforms",
@@ -68,7 +69,8 @@
      "mt": "Pjattaformi lesti",
      "ga": "Ardáin réidh",
      "ku": "Platformên amade",
-     "bg": "Готови платформи"
+     "bg": "Готови платформи",
+     "ckb": "پلاتفۆرمە ئامادەکراوەکان"
     },
     {
      "href": "./whitelabel-calculator.html",
@@ -99,7 +101,8 @@
      "mt": "Kalkulatur tal-liċenzji",
      "ga": "Áireamhán ceadúnas",
      "ku": "Hesabkera lîsansan",
-     "bg": "Калкулатор за лицензи"
+     "bg": "Калкулатор за лицензи",
+     "ckb": "ژمێرەری مۆڵەتەکان"
     },
     {
      "href": "./estimator.html",
@@ -130,7 +133,8 @@
      "mt": "Kalkulatur tal-proġetti",
      "ga": "Áireamhán tionscadail",
      "ku": "Hesabkera projeyan",
-     "bg": "Калкулатор за проекти"
+     "bg": "Калкулатор за проекти",
+     "ckb": "ژمێرەری پڕۆژەکان"
     }
    ],
    "title_de": "Leistungen",
@@ -158,7 +162,8 @@
    "title_mt": "Servizzi",
    "title_ga": "Seirbhísí",
    "title_ku": "Xizmet",
-   "title_bg": "Услуги"
+   "title_bg": "Услуги",
+   "title_ckb": "خزمەتگوزارییەکان"
   },
   {
    "key": "company",
@@ -194,7 +199,8 @@
      "mt": "Dwar il-kumpanija",
      "ga": "Faoin gcuideachta",
      "ku": "Derbarê pargîdanê",
-     "bg": "За компанията"
+     "bg": "За компанията",
+     "ckb": "دەربارەی کۆمپانیا"
     },
     {
      "href": "./index.html#founders-showcase",
@@ -225,7 +231,8 @@
      "mt": "Tmexxija",
      "ga": "Ceannaireacht",
      "ku": "Rêveberî",
-     "bg": "Ръководство"
+     "bg": "Ръководство",
+     "ckb": "سەرکردایەتی جێبەجێکار"
     },
     {
      "href": "./work.html",
@@ -256,7 +263,8 @@
      "mt": "Portfolio",
      "ga": "Punann",
      "ku": "Portfolîo",
-     "bg": "Портфолио"
+     "bg": "Портфолио",
+     "ckb": "پێشانگای کارەکان"
     },
     {
      "href": "./blog.html",
@@ -287,7 +295,8 @@
      "mt": "Ġurnal",
      "ga": "Dialann",
      "ku": "Kovar",
-     "bg": "Дневник"
+     "bg": "Дневник",
+     "ckb": "بلۆگ"
     }
    ],
    "title_de": "Unternehmen",
@@ -315,7 +324,8 @@
    "title_mt": "Kumpanija",
    "title_ga": "Cuideachta",
    "title_ku": "Pargîdan",
-   "title_bg": "Компания"
+   "title_bg": "Компания",
+   "title_ckb": "کۆمپانیا"
   },
   {
    "key": "legal",
@@ -351,7 +361,8 @@
      "mt": "Privatezza u cookies",
      "ga": "Príobháideachas agus fianáin",
      "ku": "Nepenî û cookies",
-     "bg": "Поверителност и бисквитки"
+     "bg": "Поверителност и бисквитки",
+     "ckb": "تایبەتمەندی و کوکیزەکان"
     },
     {
      "href": "./terms.html",
@@ -382,7 +393,8 @@
      "mt": "Termini",
      "ga": "Téarmaí",
      "ku": "Merc",
-     "bg": "Условия"
+     "bg": "Условия",
+     "ckb": "مەرجەکان و ماددەکان"
     },
     {
      "href": "./verify.html",
@@ -413,7 +425,8 @@
      "mt": "Ivverifika dokument",
      "ga": "Fíoraigh doiciméad",
      "ku": "Belgeyê piştrast bike",
-     "bg": "Провери документ"
+     "bg": "Провери документ",
+     "ckb": "پشکنینی بەڵگەنامەکان"
     },
     {
      "href": "./security-trust-center.html",
@@ -444,7 +457,8 @@
      "mt": "Ċentru tal-fiduċja",
      "ga": "Lár iontaoibhe",
      "ku": "Navenda baweriyê",
-     "bg": "Център за доверие"
+     "bg": "Център за доверие",
+     "ckb": "ناوەندی متمانە"
     },
     {
      "href": "#",
@@ -476,7 +490,8 @@
      "mt": "Settings tal-analitika",
      "ga": "Socruithe anailíse",
      "ku": "Sazkariyên analîzê",
-     "bg": "Настройки за анализ"
+     "bg": "Настройки за анализ",
+     "ckb": "ڕێکخستنی شیکارییەکان"
     }
    ],
    "title_de": "Recht & Compliance",
@@ -504,7 +519,8 @@
    "title_mt": "Legali u konformità",
    "title_ga": "Dlí agus comhlíonadh",
    "title_ku": "Hiqûq û lihevhatin",
-   "title_bg": "Правно и съответствие"
+   "title_bg": "Правно и съответствие",
+   "title_ckb": "یاسا و پابەندبوون"
   },
   {
    "key": "contact",
@@ -540,7 +556,8 @@
      "mt": "info@sr-coresync.com",
      "ga": "info@sr-coresync.com",
      "ku": "info@sr-coresync.com",
-     "bg": "info@sr-coresync.com"
+     "bg": "info@sr-coresync.com",
+     "ckb": "info@sr-coresync.com"
     },
     {
      "href": "tel:+31618111116",
@@ -571,7 +588,8 @@
      "mt": "+31 6 1811 1116",
      "ga": "+31 6 1811 1116",
      "ku": "+31 6 1811 1116",
-     "bg": "+31 6 1811 1116"
+     "bg": "+31 6 1811 1116",
+     "ckb": "‎+31 6 1811 1116"
     },
     {
      "href": "https://wa.me/31618111116",
@@ -602,7 +620,8 @@
      "mt": "WhatsApp",
      "ga": "WhatsApp",
      "ku": "WhatsApp",
-     "bg": "WhatsApp"
+     "bg": "WhatsApp",
+     "ckb": "واتساپی ڕاستەوخۆ"
     },
     {
      "href": "./index.html#contact",
@@ -633,7 +652,8 @@
      "mt": "Ibbukkja konsultazzjoni",
      "ga": "Cuir coinne le comhairle",
      "ku": "Şêwirmendiyê tomar bike",
-     "bg": "Запази консултация"
+     "bg": "Запази консултация",
+     "ckb": "داواتکردنی ڕاوێژ"
     }
    ],
    "title_de": "Kontakt",
@@ -661,7 +681,8 @@
    "title_mt": "Kuntatt",
    "title_ga": "Teagmháil",
    "title_ku": "Têkilî",
-   "title_bg": "Контакт"
+   "title_bg": "Контакт",
+   "title_ckb": "پەیوەندی"
   }
  ],
  "legal_line": {
@@ -692,7 +713,8 @@
   "mt": "© 2026 S&R CoreSync For Intelligent Solutions — Id-drittijiet kollha riservati.",
   "ga": "© 2026 S&R CoreSync For Intelligent Solutions — Gach ceart ar cosaint.",
   "ku": "© 2026 S&R CoreSync For Intelligent Solutions — Hemû maf parastî ne.",
-  "bg": "© 2026 S&R CoreSync For Intelligent Solutions — Всички права запазени."
+  "bg": "© 2026 S&R CoreSync For Intelligent Solutions — Всички права запазени.",
+  "ckb": "© 2026 S&R CoreSync For Intelligent Solutions — هەموو مافەکان پارێزراون."
  },
  "tagline": {
   "ar": "هندسة المنظومات السيادية من أمستردام",
@@ -722,6 +744,7 @@
   "mt": "Inġinerija tas-sistemi sovrani minn Amsterdam",
   "ga": "Innealtóireacht córas ceannasach ó Amstardam",
   "ku": "Endezyariya pergalên serwer ji Amsterdamê",
-  "bg": "Суверенно системно инженерство от Амстердам"
+  "bg": "Суверенно системно инженерство от Амстердам",
+  "ckb": "ئەندازیارانی سیستەمی سەروەران لە ئەمستردام"
  }
 }

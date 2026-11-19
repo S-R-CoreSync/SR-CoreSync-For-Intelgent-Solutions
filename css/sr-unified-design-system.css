@@ -667,6 +667,13 @@ p {
 .floating-follow {
     z-index: 99 !important;
 }
+/* البند 27ب: القاعدة الموثوقة المبكرة — هذا أول ملف CSS يُحمَّل في كل الصفحات،
+   فأول رسم يقع يميناً فوراً (كان dananajmah يضع left:18px فتُرسم يساراً
+   ثم يقلبها سكربت مضمّن متأخر إلى اليمين = وميض يسار←يمين عند فتح المتصفح). */
+.floating-follow {
+    left: auto !important;
+    right: 14px !important;
+}
 
 header.header,
 .header-original,

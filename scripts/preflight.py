@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 """One command before a commit: refresh what is generated, then prove it is fresh.
 
-The site has three generated layers, and each has bitten us in the same way:
+The site has four generated layers, and each has bitten us in the same way:
 
   · index.html        is generated from  partials/            (build_site)
   · en/index.html     is generated from  partials/en/         (build_lang)
   · xx/index.html ×26 is generated from  index.html's hero    (sync_locales)
+  · csp-hashes.txt    is generated from  _site's inline scripts (build_csp)
 
 Editing a page and forgetting to regenerate its layer leaves the repo
 inconsistent; the deploy then fails at the guard step, after the work is done.
@@ -36,6 +37,7 @@ CHECK = [
     ('hreflang agreement', ['scripts/check_hreflang.py']),
     ('event payloads', ['scripts/check_sr_args.py']),
     ('local links', ['scripts/check_site_links.py']),
+    ('script-tag sync', ['scripts/check_script_tags.py']),
 ]
 
 FULL = [
@@ -43,6 +45,13 @@ FULL = [
     ('language purity', ['scripts/audit_language_purity.py']),
     ('performance budget', ['scripts/check_perf_budget.py']),
 ]
+
+SITE = os.path.join(ROOT, '_site')
+
+# The CSP manifest must match the publish set built from this exact tree. CI is
+# the final judge (it rebuilds _site before checking); locally the check runs
+# whenever a _site build exists, and is skipped with a note when it does not.
+CSP_MANIFEST = ('CSP hash manifest', ['scripts/build_csp.py', '--check'])
 
 
 def run(label, args, quiet=True):
@@ -73,8 +82,25 @@ def main():
             return 1
 
     print('verifying')
-    for label, args in CHECK + (FULL if a.full else []):
-        failed += 0 if run(label, args) else 1
+    checks = list(CHECK)
+    if os.path.isdir(SITE):
+        checks.append(CSP_MANIFEST)
+    else:
+        print('  %-24s skip  (no local _site build; CI rebuilds and judges it)' % CSP_MANIFEST[0])
+    checks += list(FULL) if a.full else []
+
+    csp_failed = False
+    for label, args in checks:
+        ok = run(label, args)
+        if not ok:
+            failed += 1
+            if label == CSP_MANIFEST[0]:
+                csp_failed = True
+
+    if csp_failed:
+        print('\n  the CSP manifest no longer matches the publish set. Rebuild both, then stage:')
+        print('    python scripts/prepare_publish_set.py && python scripts/build_csp.py')
+        print('    git add csp-hashes.txt')
 
     if failed:
         print('\npreflight: %d check(s) failed' % failed)
