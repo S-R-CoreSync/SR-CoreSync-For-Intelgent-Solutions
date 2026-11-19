@@ -1,0 +1,606 @@
+[
+  {
+    "code": "nl",
+    "country": "هولندا (المقر الرئيسي)",
+    "city": "أمستردام",
+    "flag": "🇳🇱",
+    "lang": "Nederlands",
+    "cur": "EUR",
+    "vat": "21% BTW",
+    "billing": "المقر السيادي (KvK / BTW-nummer)",
+    "types": [
+      "B.V. (ذ.م.م هولندية)",
+      "N.V. (مساهمة عامة)",
+      "V.O.F (شراكة تجارية)",
+      "Eenmanszaak (مؤسسة فردية)"
+    ],
+    "lat": 52.37,
+    "lon": 4.9
+  },
+  {
+    "code": "ar",
+    "country": "جمهورية العراق",
+    "city": "بغداد",
+    "flag": "🇮🇶",
+    "lang": "العربية (اللغة الأم والرسمية الأولى)",
+    "cur": "IQD (دينار عراقي)",
+    "vat": "لا VAT شامل (ضرائب مبيعات وجمركية)",
+    "billing": "Non-EU Direct Sovereign Invoice",
+    "types": [
+      "ش.م.م (شركة ذات مسؤولية محدودة)",
+      "ش.م.خ (شركة مساهمة خاصة)",
+      "مشروع فردي (SPC)",
+      "فرع شركة أجنبية مسجل"
+    ],
+    "lat": 33.31,
+    "lon": 44.36
+  },
+  {
+    "code": "ckb",
+    "country": "إقليم كردستان العراق",
+    "city": "أربيل (Hewlêr)",
+    "flag": "☀️",
+    "lang": "کوردیی ناوەندی (السورانية - ckb)",
+    "cur": "IQD (دينار عراقي)",
+    "vat": "0% معفاة إقليمياً",
+    "billing": "KRG Sovereign Regional Invoice",
+    "types": [
+      "KRG LLC (کۆمپانیای سنووردار)",
+      "KRG JSC (کۆمپانیای پشکدار)",
+      "فرع إقليم كردستان (KRG Branch)"
+    ],
+    "lat": 36.19,
+    "lon": 44.01
+  },
+  {
+    "code": "ku",
+    "country": "الكردية الكرمانجية (سوريا / تركيا / دهوك)",
+    "city": "القامشلي — دهوك — ديار بكر",
+    "flag": "🌐",
+    "lang": "Kurmancî (بالحرف اللاتيني - ku)",
+    "cur": "USD / TRY / SYP",
+    "vat": "0% إقليمية / 20% KDV",
+    "billing": "Cross-Border Regional Invoice",
+    "types": [
+      "SARL (شمال شرق سوريا)",
+      "Ltd. Şti. (جنوب شرق تركيا)",
+      "LLC (دهوك)"
+    ],
+    "lat": 37.05,
+    "lon": 41.22
+  },
+  {
+    "code": "ar",
+    "country": "المملكة العربية السعودية",
+    "city": "الرياض",
+    "flag": "🇸🇦",
+    "lang": "العربية (المملكة العربية السعودية)",
+    "cur": "SAR (ريال سعودي)",
+    "vat": "15% ضريبة القيمة المضافة",
+    "billing": "ZATCA / فاتورة ضريبية إلكترونية",
+    "types": [
+      "شركة ذات مسؤولية محدودة (LLC)",
+      "شركة مساهمة مقفلة (CJSC)",
+      "فرع شركة خليجية / أجنبية",
+      "مؤسسة فردية"
+    ],
+    "lat": 24.71,
+    "lon": 46.67
+  },
+  {
+    "code": "ar",
+    "country": "الإمارات العربية المتحدة",
+    "city": "دبي — أبوظبي",
+    "flag": "🇦🇪",
+    "lang": "العربية (الإمارات)",
+    "cur": "AED (درهم إماراتي)",
+    "vat": "5% VAT + 9% ضريبة شركات",
+    "billing": "Federal Tax Authority (FTA e-Invoice)",
+    "types": [
+      "Free Zone Entity (FZ-LLC)",
+      "Mainland LLC (بر رئيسي)",
+      "Offshore Company (أوفشور)",
+      "Branch of Foreign Co."
+    ],
+    "lat": 25.2,
+    "lon": 55.27
+  },
+  {
+    "code": "de",
+    "country": "ألمانيا",
+    "city": "برلين — فرانكفورت",
+    "flag": "🇩🇪",
+    "lang": "Deutsch",
+    "cur": "EUR",
+    "vat": "19% MwSt.",
+    "billing": "EU Reverse Charge B2B (USt-IdNr.)",
+    "types": [
+      "GmbH (مسؤولية محدودة)",
+      "UG (haftungsbeschränkt)",
+      "AG (مساهمة)",
+      "GmbH & Co. KG (توصية بسيطة)"
+    ],
+    "lat": 52.52,
+    "lon": 13.4
+  },
+  {
+    "code": "fr",
+    "country": "فرنسا",
+    "city": "باريس",
+    "flag": "🇫🇷",
+    "lang": "Français",
+    "cur": "EUR",
+    "vat": "20% TVA",
+    "billing": "EU Reverse Charge B2B (Numéro TVA)",
+    "types": [
+      "SAS (مساهمة مبسطة)",
+      "SARL (مسؤولية محدودة)",
+      "SA (مساهمة كلاسيكية)",
+      "Micro-entreprise (مؤسسة ذاتية)"
+    ],
+    "lat": 48.85,
+    "lon": 2.35
+  },
+  {
+    "code": "tr",
+    "country": "الجمهورية التركية",
+    "city": "إسطنبول — أنقرة",
+    "flag": "🇹🇷",
+    "lang": "Türkçe",
+    "cur": "TRY (ليرة تركية)",
+    "vat": "20% KDV",
+    "billing": "GIB E-Fatura / Non-EU Standard",
+    "types": [
+      "Limited Şirket (Ltd. Şti.)",
+      "Anonim Şirket (A.Ş.)",
+      "Serbest Bölge (منطقة حرة)",
+      "İrtibat Bürosu (مكتب تمثيل)"
+    ],
+    "lat": 41.0,
+    "lon": 28.97
+  },
+  {
+    "code": "es",
+    "country": "إسبانيا",
+    "city": "مدريد — برشلونة",
+    "flag": "🇪🇸",
+    "lang": "Español",
+    "cur": "EUR",
+    "vat": "21% IVA",
+    "billing": "EU Reverse Charge B2B (NIF-IVA)",
+    "types": [
+      "S.L. (Sociedad Limitada)",
+      "S.A. (Sociedad Anónima)",
+      "Autónomo (عمل حر)",
+      "Sucursal (فرع أجنبي)"
+    ],
+    "lat": 40.41,
+    "lon": -3.7
+  },
+  {
+    "code": "it",
+    "country": "إيطاليا",
+    "city": "روما — ميلانو",
+    "flag": "🇮🇹",
+    "lang": "Italiano",
+    "cur": "EUR",
+    "vat": "22% IVA",
+    "billing": "EU Reverse Charge B2B (Partita IVA / SDI)",
+    "types": [
+      "S.r.l. (مسؤولية محدودة)",
+      "S.p.A. (مساهمة عامة)",
+      "S.r.l.s. (مبسطة)",
+      "Ditta Individuale (فردية)"
+    ],
+    "lat": 41.9,
+    "lon": 12.49
+  },
+  {
+    "code": "en",
+    "country": "المملكة المتحدة",
+    "city": "لندن",
+    "flag": "🇬🇧",
+    "lang": "English (UK)",
+    "cur": "GBP (جنيه إسترليني)",
+    "vat": "20% VAT",
+    "billing": "HMRC / UK-VAT Digital Tax System",
+    "types": [
+      "Private Limited Company (Ltd)",
+      "Public Limited Company (PLC)",
+      "Limited Liability Partnership (LLP)",
+      "Sole Trader"
+    ],
+    "lat": 51.5,
+    "lon": -0.12
+  },
+  {
+    "code": "en",
+    "country": "الولايات المتحدة",
+    "city": "نيويورك — ديلاوير",
+    "flag": "🇺🇸",
+    "lang": "English (US)",
+    "cur": "USD ($)",
+    "vat": "0% State Sales Tax (Export)",
+    "billing": "W-8BEN-E / Sovereign US Entity",
+    "types": [
+      "Delaware LLC",
+      "C-Corporation",
+      "S-Corporation",
+      "LLP"
+    ],
+    "lat": 40.71,
+    "lon": -74.01
+  },
+  {
+    "code": "en",
+    "country": "كندا",
+    "city": "تورونتو",
+    "flag": "🇨🇦",
+    "lang": "English (CA)",
+    "cur": "CAD",
+    "vat": "13% HST",
+    "billing": "CRA Direct Invoicing",
+    "types": [
+      "Federal Corporation",
+      "Provincial LLC / Corp",
+      "General Partnership"
+    ],
+    "lat": 43.65,
+    "lon": -79.38
+  },
+  {
+    "code": "en",
+    "country": "أستراليا",
+    "city": "سيدني",
+    "flag": "🇦🇺",
+    "lang": "English (AU)",
+    "cur": "AUD",
+    "vat": "10% GST",
+    "billing": "ATO Invoicing System",
+    "types": [
+      "Pty Ltd (Proprietary Limited)",
+      "Public Co Limited by Shares",
+      "Sole Trader"
+    ],
+    "lat": -33.87,
+    "lon": 151.21
+  },
+  {
+    "code": "en",
+    "country": "سنغافورة",
+    "city": "سنغافورة",
+    "flag": "🇸🇬",
+    "lang": "English (SG)",
+    "cur": "SGD",
+    "vat": "9% GST",
+    "billing": "IRAS Digital E-Invoicing",
+    "types": [
+      "Private Limited Company (Pte. Ltd.)",
+      "Exempt Private Company",
+      "Branch Office"
+    ],
+    "lat": 1.35,
+    "lon": 103.82
+  },
+  {
+    "code": "pt",
+    "country": "البرتغال",
+    "city": "لشبونة",
+    "flag": "🇵🇹",
+    "lang": "Português",
+    "cur": "EUR",
+    "vat": "23% IVA",
+    "billing": "EU Reverse Charge B2B (NIF)",
+    "types": [
+      "Lda (Sociedade por Quotas)",
+      "S.A. (Sociedade Anónima)",
+      "Unipessoal Lda"
+    ],
+    "lat": 38.72,
+    "lon": -9.13
+  },
+  {
+    "code": "ga",
+    "country": "أيرلندا",
+    "city": "دبلن",
+    "flag": "🇮🇪",
+    "lang": "Gaeilge",
+    "cur": "EUR",
+    "vat": "23% VAT",
+    "billing": "EU Reverse Charge B2B (IE-VAT)",
+    "types": [
+      "LTD (Private Company Limited by Shares)",
+      "DAC",
+      "PLC"
+    ],
+    "lat": 53.33,
+    "lon": -6.25
+  },
+  {
+    "code": "da",
+    "country": "الدنمارك",
+    "city": "كوبنهاغن",
+    "flag": "🇩🇰",
+    "lang": "Dansk",
+    "cur": "DKK",
+    "vat": "25% Moms",
+    "billing": "EU Reverse Charge B2B (CVR)",
+    "types": [
+      "ApS (Anpartsselskab)",
+      "A/S (Aktieselskab)",
+      "Enkeltmandsvirksomhed"
+    ],
+    "lat": 55.67,
+    "lon": 12.56
+  },
+  {
+    "code": "no",
+    "country": "النرويج",
+    "city": "أوسلو",
+    "flag": "🇳🇴",
+    "lang": "Norsk",
+    "cur": "NOK",
+    "vat": "25% MVA",
+    "billing": "Non-EU Direct Sovereign Invoice",
+    "types": [
+      "AS (Aksjeselskap)",
+      "ASA (Allmennaksjeselskap)",
+      "ENK (Enkeltpersonforetak)"
+    ],
+    "lat": 59.91,
+    "lon": 10.75
+  },
+  {
+    "code": "sv",
+    "country": "السويد",
+    "city": "ستوكهولم",
+    "flag": "🇸🇪",
+    "lang": "Svenska",
+    "cur": "SEK",
+    "vat": "25% Moms",
+    "billing": "EU Reverse Charge B2B (Org.nr)",
+    "types": [
+      "AB (Aktiebolag)",
+      "Publikt Aktiebolag",
+      "Enskild Firma"
+    ],
+    "lat": 59.33,
+    "lon": 18.06
+  },
+  {
+    "code": "fi",
+    "country": "فنلندا",
+    "city": "هلسنكي",
+    "flag": "🇫🇮",
+    "lang": "Suomi",
+    "cur": "EUR",
+    "vat": "25.5% ALV",
+    "billing": "EU Reverse Charge B2B (Y-tunnus)",
+    "types": [
+      "Oy (Osakeyhtiö)",
+      "Oyj (Julkinen osakeyhtiö)",
+      "Toiminimi"
+    ],
+    "lat": 60.17,
+    "lon": 24.94
+  },
+  {
+    "code": "et",
+    "country": "إستونيا",
+    "city": "تالين",
+    "flag": "🇪🇪",
+    "lang": "Eesti",
+    "cur": "EUR",
+    "vat": "22% KM",
+    "billing": "EU Reverse Charge (e-Residency Ready)",
+    "types": [
+      "OÜ (Osaühing - e-Residency)",
+      "AS (Aktsiaselts)",
+      "FIE"
+    ],
+    "lat": 59.43,
+    "lon": 24.75
+  },
+  {
+    "code": "lv",
+    "country": "لاتفيا",
+    "city": "ريغا",
+    "flag": "🇱🇻",
+    "lang": "Latviešu",
+    "cur": "EUR",
+    "vat": "21% PVN",
+    "billing": "EU Reverse Charge B2B",
+    "types": [
+      "SIA (Sabiedrība ar ierobežotu atbildību)",
+      "AS (Akciju sabiedrība)"
+    ],
+    "lat": 56.95,
+    "lon": 24.1
+  },
+  {
+    "code": "lt",
+    "country": "ليتوانيا",
+    "city": "فيلنيوس",
+    "flag": "🇱🇹",
+    "lang": "Lietuvių",
+    "cur": "EUR",
+    "vat": "21% PVM",
+    "billing": "EU Reverse Charge B2B",
+    "types": [
+      "UAB (Uždaroji akcinė bendrovė)",
+      "AB (Akcinė bendrovė)",
+      "MB (Mažoji bendrija)"
+    ],
+    "lat": 54.68,
+    "lon": 25.28
+  },
+  {
+    "code": "pl",
+    "country": "بولندا",
+    "city": "وارسو",
+    "flag": "🇵🇱",
+    "lang": "Polski",
+    "cur": "PLN",
+    "vat": "23% VAT",
+    "billing": "EU Reverse Charge B2B (NIP)",
+    "types": [
+      "Sp. z o.o. (Spółka z o.o.)",
+      "S.A. (Spółka Akcyjna)",
+      "Prosta Spółka Akcyjna (P.S.A.)"
+    ],
+    "lat": 52.23,
+    "lon": 21.01
+  },
+  {
+    "code": "cs",
+    "country": "التشيك",
+    "city": "براغ",
+    "flag": "🇨🇿",
+    "lang": "Čeština",
+    "cur": "CZK",
+    "vat": "21% DPH",
+    "billing": "EU Reverse Charge B2B (DIČ)",
+    "types": [
+      "s.r.o. (Společnost s r.o.)",
+      "a.s. (Akciová společnost)",
+      "OSVČ"
+    ],
+    "lat": 50.08,
+    "lon": 14.43
+  },
+  {
+    "code": "sk",
+    "country": "سلوفاكيا",
+    "city": "براتيسلافا",
+    "flag": "🇸🇰",
+    "lang": "Slovenčina",
+    "cur": "EUR",
+    "vat": "23% DPH",
+    "billing": "EU Reverse Charge B2B (IČ DPH)",
+    "types": [
+      "s.r.o. (Spoločnosť s r.o.)",
+      "a.s. (Akciová spoločnosť)",
+      "Živnosť"
+    ],
+    "lat": 48.14,
+    "lon": 17.1
+  },
+  {
+    "code": "hu",
+    "country": "المجر",
+    "city": "بودابست",
+    "flag": "🇭🇺",
+    "lang": "Magyar",
+    "cur": "HUF",
+    "vat": "27% ÁFA",
+    "billing": "EU Reverse Charge B2B (Adószám)",
+    "types": [
+      "Kft. (Korlátolt felelősségű társaság)",
+      "Zrt. (Részvénytársaság)",
+      "Bt."
+    ],
+    "lat": 47.49,
+    "lon": 19.04
+  },
+  {
+    "code": "ro",
+    "country": "رومانيا",
+    "city": "بوخارست",
+    "flag": "🇷🇴",
+    "lang": "Română",
+    "cur": "RON",
+    "vat": "21% TVA",
+    "billing": "EU Reverse Charge B2B (CIF/CUI)",
+    "types": [
+      "S.R.L. (Societate cu Răspundere Limitată)",
+      "S.A. (Societate pe Acțiuni)",
+      "PFA"
+    ],
+    "lat": 44.43,
+    "lon": 26.1
+  },
+  {
+    "code": "bg",
+    "country": "بلغاريا",
+    "city": "صوفيا",
+    "flag": "🇧🇬",
+    "lang": "Български",
+    "cur": "BGN",
+    "vat": "20% ДДС",
+    "billing": "EU Reverse Charge B2B (EIK)",
+    "types": [
+      "OOD / EOOD (ООД / ЕООД)",
+      "AD (АД - Акционерно дружество)"
+    ],
+    "lat": 42.69,
+    "lon": 23.32
+  },
+  {
+    "code": "hr",
+    "country": "كرواتيا",
+    "city": "زغرب",
+    "flag": "🇭🇷",
+    "lang": "Hrvatski",
+    "cur": "EUR",
+    "vat": "25% PDV",
+    "billing": "EU Reverse Charge B2B (OIB)",
+    "types": [
+      "d.o.o. (Društvo s o.o.)",
+      "j.d.o.o. (Jednostavno d.o.o.)",
+      "d.d."
+    ],
+    "lat": 45.81,
+    "lon": 15.98
+  },
+  {
+    "code": "sl",
+    "country": "سلوفينيا",
+    "city": "ليوبليانا",
+    "flag": "🇸🇮",
+    "lang": "Slovenščina",
+    "cur": "EUR",
+    "vat": "22% DDV",
+    "billing": "EU Reverse Charge B2B (ID za DDV)",
+    "types": [
+      "d.o.o. (Družba z o.o.)",
+      "d.d. (Delniška družba)",
+      "s.p."
+    ],
+    "lat": 46.05,
+    "lon": 14.5
+  },
+  {
+    "code": "el",
+    "country": "اليونان",
+    "city": "أثينا",
+    "flag": "🇬🇷",
+    "lang": "Ελληνικά",
+    "cur": "EUR",
+    "vat": "24% ΦΠΑ",
+    "billing": "EU Reverse Charge B2B (ΑΦΜ)",
+    "types": [
+      "I.K.E. (Ι.Κ.Ε. - Private Company)",
+      "E.P.E. (Ε.Π.Ε. - LLC)",
+      "A.E. (Α.Ε. - S.A.)"
+    ],
+    "lat": 37.98,
+    "lon": 23.72
+  },
+  {
+    "code": "mt",
+    "country": "مالطا",
+    "city": "فاليتا",
+    "flag": "🇲🇹",
+    "lang": "Malti",
+    "cur": "EUR",
+    "vat": "18% VAT",
+    "billing": "EU Reverse Charge B2B (MT-VAT)",
+    "types": [
+      "Private Limited Liability Company (Ltd)",
+      "Public Limited Company (Plc)",
+      "Holding Co."
+    ],
+    "lat": 35.89,
+    "lon": 14.51
+  }
+]
