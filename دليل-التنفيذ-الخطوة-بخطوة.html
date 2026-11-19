@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل التنفيذ خطوة بخطوة — الإنجاز 162 | S&R CoreSync</title>
+<style>
+  :root{
+    --bg:#0a0f1c; --bg2:#0d1424; --card:#111a2e; --card2:#0f1626;
+    --gold:#d4af37; --gold2:#f0c75e; --gold-dim:rgba(212,175,55,.14);
+    --teal:#2dd4bf; --green:#34d399; --red:#f87171; --amber:#fbbf24;
+    --text:#e8ecf4; --muted:#9aa7bd; --line:rgba(212,175,55,.22);
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 50% -200px,#13203a 0%,var(--bg) 55%);
+    color:var(--text); font-family:'Segoe UI',Tahoma,'Noto Sans Arabic',sans-serif;
+    line-height:1.9; padding:32px 16px 80px;
+  }
+  .wrap{max-width:920px; margin:0 auto}
+  .center{text-align:center}
+  .emblem{
+    width:74px;height:74px;margin:0 auto 14px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#1a2b4d,#0a0f1c 70%);
+    border:2px solid var(--gold); display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 34px rgba(212,175,55,.35); font-weight:800;color:var(--gold2);
+    letter-spacing:1px; font-size:20px;
+  }
+  h1{font-size:26px;color:var(--gold2);font-weight:800}
+  .sub{color:var(--muted);font-size:14px;margin-top:6px}
+  .stamp{
+    display:inline-block;margin-top:14px;padding:8px 18px;border:1px solid var(--line);
+    border-radius:999px;background:var(--gold-dim);color:var(--gold2);font-size:13px;
+  }
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid var(--line); border-radius:16px;
+    padding:24px 26px; margin-top:26px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .card h2{
+    font-size:19px;color:var(--gold2);display:flex;align-items:center;gap:10px;margin-bottom:14px
+  }
+  .badge{
+    min-width:34px;height:34px;border-radius:10px;background:var(--gold-dim);
+    border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;
+    color:var(--gold2);font-weight:800;font-size:16px;
+  }
+  p{margin:8px 0;color:var(--text)}
+  .muted{color:var(--muted);font-size:13.5px}
+  .path{
+    direction:ltr; display:block; text-align:left; background:#060a14;
+    border:1px solid rgba(45,212,191,.35); border-radius:10px; padding:10px 14px;
+    font-family:Consolas,'Courier New',monospace; color:var(--teal); font-size:14px;
+    word-break:break-all; margin:10px 0;
+  }
+  .step{
+    display:flex; gap:14px; align-items:flex-start; padding:14px 0;
+    border-bottom:1px dashed rgba(255,255,255,.08);
+  }
+  .step:last-child{border-bottom:none}
+  .num{
+    flex:0 0 34px;height:34px;border-radius:50%;background:var(--gold-dim);
+    border:1.5px solid var(--gold);color:var(--gold2);font-weight:800;
+    display:flex;align-items:center;justify-content:center;font-size:15px;
+  }
+  .step-body{flex:1}
+  .step-title{font-weight:700;color:var(--text)}
+  .cmd{
+    position:relative; direction:ltr; text-align:left; background:#060a14;
+    border:1px solid rgba(212,175,55,.35); border-radius:10px;
+    padding:12px 52px 12px 14px; margin:10px 0 4px;
+    font-family:Consolas,'Courier New',monospace; color:var(--gold2); font-size:14.5px;
+    word-break:break-all; white-space:pre-wrap;
+  }
+  .copy{
+    position:absolute; top:8px; right:8px; inset-inline-start:auto;
+    background:var(--gold-dim); color:var(--gold2); border:1px solid var(--line);
+    border-radius:8px; font-size:11.5px; padding:4px 10px; cursor:pointer; font-family:inherit;
+  }
+  .copy:hover{background:rgba(212,175,55,.28)}
+  .what{font-size:13px;color:var(--muted);margin-top:2px}
+  .what b{color:var(--teal)}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px}
+  th,td{padding:10px 12px;border:1px solid rgba(255,255,255,.1);vertical-align:top}
+  th{background:rgba(212,175,55,.12);color:var(--gold2);font-weight:700}
+  td code{direction:ltr;display:inline-block;font-family:Consolas,monospace;color:var(--teal);font-size:12.5px}
+  .ok{color:var(--green);font-weight:700}
+  .warn{color:var(--amber);font-weight:700}
+  .err{color:var(--red);font-weight:700}
+  .out{
+    direction:ltr;text-align:left;background:#04160f;border:1px solid rgba(52,211,153,.4);
+    border-radius:10px;padding:14px 16px;font-family:Consolas,monospace;font-size:13px;
+    color:var(--green);white-space:pre-wrap;margin-top:10px;
+  }
+  .tree{
+    direction:ltr;text-align:left;background:#060a14;border:1px solid rgba(255,255,255,.12);
+    border-radius:10px;padding:16px 18px;font-family:Consolas,monospace;font-size:13px;
+    color:var(--muted);white-space:pre;overflow-x:auto;line-height:1.7;
+  }
+  .tree .gold{color:var(--gold2)} .tree .teal{color:var(--teal)}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;
+    font-size:13px;border:1px solid var(--line);background:var(--gold-dim);color:var(--gold2);
+    margin:4px 4px 4px 0;
+  }
+  .env{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+  .env-box{
+    flex:1 1 240px;background:#060a14;border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;padding:14px 16px;
+  }
+  .env-box h4{color:var(--gold2);font-size:14.5px;margin-bottom:6px}
+  .env-box p{font-size:12.5px;color:var(--muted)}
+  .env-box .tag{font-size:11px;color:var(--teal)}
+  .note{
+    border-right:3px solid var(--teal); background:rgba(45,212,191,.07);
+    border-radius:8px; padding:12px 16px; margin-top:12px; font-size:13.5px;
+  }
+  .note.gold{border-right-color:var(--gold);background:rgba(212,175,55,.08)}
+  .note.red{border-right-color:var(--red);background:rgba(248,113,113,.08)}
+  .promise li{margin:8px 0}
+  .promise li::marker{color:var(--gold2)}
+  .shot{width:100%;border:1px solid var(--line);border-radius:12px;margin-top:12px;display:block}
+  .cap{font-size:12px;color:var(--muted);text-align:center;margin-top:6px}
+  .kbd{
+    display:inline-block;background:#060a14;border:1px solid rgba(255,255,255,.2);
+    border-bottom-width:3px;border-radius:6px;padding:1px 9px;font-size:12.5px;color:var(--text);
+    font-family:Consolas,monospace;
+  }
+  footer{margin-top:34px;text-align:center;color:var(--muted);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="center">
+    <div class="emblem">S&amp;R</div>
+    <h1>دليل التنفيذ خطوة بخطوة — استعادة شريط كتابة الفكرة بالـ AI</h1>
+    <div class="sub">S&amp;R CoreSync For Intelligent Solutions • الإنجاز 162 • بروتوكول البيئات الثلاث</div>
+    <div class="stamp">🕒 الاثنين، 09 نوفمبر 2026 — الساعة 09:52 صباحاً (توقيت أمستردام)</div>
+  </div>
+
+  <!-- ═══════════════ القاعدة الدائمة ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">📜</span> القاعدة الدائمة الجديدة — بعد طلبك الصريح</h2>
+    <p>من هذا اليوم فصاعداً، <b>كل كتلة أوامر أو سكربت</b> أعطيك إياها سترافقها عناصر خمسة إلزامية، لا تُحذف أبداً:</p>
+    <table>
+      <tr><th style="width:60px">#</th><th>العنصر الإلزامي</th><th>مثال من هذا الدليل</th></tr>
+      <tr><td class="center">1</td><td><b class="ok">المسار الصحيح بالكامل</b></td><td><code>D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project</code></td></tr>
+      <tr><td class="center">2</td><td><b class="ok">الأداة المطلوبة وكيفية فتحها</b></td><td>PowerShell: اضغط <span class="kbd">⊞ Win</span> ثم اكتب <span class="kbd">powershell</span> ثم <span class="kbd">Enter</span></td></tr>
+      <tr><td class="center">3</td><td><b class="ok">خطوات مرقمة بالترتيب</b></td><td>1. افتح الأداة ← 2. انتقل للمسار ← 3. الصق الأمر ← 4. Enter</td></tr>
+      <tr><td class="center">4</td><td><b class="ok">مخرَج النجاح المتوقع</b></td><td>السطر الأخير يبدأ بـ <code>PASS:</code></td></tr>
+      <tr><td class="center">5</td><td><b class="ok">معالجة الأخطاء المحتملة</b></td><td>جدول «ماذا تفعل إذا ظهر خطأ» أدناه</td></tr>
+    </table>
+    <div class="note gold">💡 وكلما أمكن، سأرفق مع الكتلة <b>مشغّل بنقرة مزدوجة</b> (ملف <code>.bat</code>) فلا تحتاج كتابة أي أمر إطلاقاً — وهذا موجود في هذه الحزمة.</div>
+  </div>
+
+  <!-- ═══════════════ البيئات الثلاث ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">🗺️</span> خريطة البيئات الثلاث — أين يحدث كل شيء؟</h2>
+    <div class="env">
+      <div class="env-box">
+        <h4>💻 البيئة 1: جهازك</h4>
+        <p><b>هنا تنفّذ أنت.</b> نسخة العمل الأساسية على قرص D.</p>
+        <p class="tag">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project</p>
+      </div>
+      <div class="env-box">
+        <h4>🧪 البيئة 2: بيئة ZaiChat</h4>
+        <p><b>هنا أختبر أنا كل شيء أولاً.</b> لا شيء يصل إليك قبل أن ينجح هنا 100%.</p>
+        <p class="tag">مجرد اختبار — لا تتدخل فيها أبداً</p>
+      </div>
+      <div class="env-box">
+        <h4>☁️ البيئة 3: محور GitHub</h4>
+        <p><b>جسر المزامنة.</b> بعد نجاح التنفيذ على جهازك تدفع التحديث إليه.</p>
+        <p class="tag">عبر مزامنة_المشروع_مع_GitHub.bat ← الخيار [2]</p>
+      </div>
+    </div>
+    <div class="note">🎯 القاعدة الذهبية: <b>أنت تنفّذ على جهازك فقط.</b> كل ما أرسله لك جاهز ومختبَر — دورك هو النسخ واللصق أو نقرة مزدوجة، ثم الدفع إلى GitHub.</div>
+  </div>
+
+  <!-- ═══════════════ ما هو جذر المستودع ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">📍</span> ما المقصود بـ«جذر المستودع»؟ (المسار الصحيح)</h2>
+    <p>جذر المستودع = المجلد الذي يحتوي مباشرة على <code>index.html</code> والمجلد الخفي <code>.git</code>. في جهازك هو هذا المسار بالضبط:</p>
+    <span class="path">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project</span>
+    <p class="muted">شكله داخل المجلد (عند فتحه من مستكشف الملفات):</p>
+    <div class="tree"><span class="gold">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project\</span>
+├── <span class="teal">index.html</span>          ← الصفحة الرئيسية (سنستعيد الشريط إليها)
+├── <span class="teal">.git\</span>               ← مجلد Git الخفي
+├── scripts\            ← هنا سنضع سكربت الاستعادة
+│   └── restore_root_ai_bar.py
+├── css\  js\  assets\  ...
+└── تشغيل_استعادة_شريط_الفكرة.bat   ← المشغل بنقرة مزدوجة</div>
+    <div class="note gold">🔎 طريقة تحقق سريعة: افتح المجلد — إن رأيت <b>index.html</b> بجانب مجلدات <b>css و js و scripts</b> فأنت في الجذر الصحيح. هذا هو المكان الذي «تُنفَّذ منه الكتلة» دائماً.</div>
+  </div>
+
+  <!-- ═══════════════ المهمة الآن ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">🎯</span> المهمة الآن — مزامنة المحور: ملف واحد ينفّذ كل شيء</h2>
+    <div class="note gold" style="margin-top:0">📰 <b>تحدّث مهم:</b> المحور GitHub تقدّم من جهتك — استعادة الشريط <b>موجودة بالفعل</b> على GitHub (التزاما 053427c و22dd74a). فلا تحتاج أي شيء لإظهار الشريط! ما تبقّى على المحور هو فقط: <b>إصلاح الأرقام المعكوسة (الإنجاز 161)</b> + <b>سجلات الإنجازين 161/162</b> — وأعددت لهما مشغّل المزامنة الشاملة.</div>
+    <div class="step"><div class="num">1</div><div class="step-body">
+      <div class="step-title">نزّل <b>الملف-الواحد-مزامنة-المحور-161-162.bat</b> من الحزمة وضعه في جذر المستودع</div>
+      <span class="path">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project</span>
+    </div></div>
+    <div class="step"><div class="num">2</div><div class="step-body">
+      <div class="step-title">انقر عليه نقراً مزدوجاً — وستنفّذ ست خطوات وحده</div>
+      <p class="what"><b>[1/6]</b> استخراج السكربت المدمج ← <b>[2/6]</b> سحب أحدث المحور ← <b>[3/6]</b> الإصلاح + السجلات + 7 بوابات جودة ← <b>[4/6]</b> التزام 5 ملفات فقط ← <b>[5/6]</b> رفع بصلاحياتك ← <b>[6/6]</b> تقرير النجاح</p>
+    </div></div>
+    <div class="step"><div class="num">3</div><div class="step-body">
+      <div class="step-title">مخرَج النجاح</div>
+      <p>شاشة خضراء: <b>«✅ اكتملت المزامنة بنجاح!»</b> — وبها يصبح كل شيء على GitHub.</p>
+    </div></div>
+    <div class="step"><div class="num">4</div><div class="step-body">
+      <div class="step-title">أي رسالة خطأ = انسخها والصقها لي كما هي</div>
+      <p class="what">كل مسارات الفشل مصممة: لن تضيع تغييراتك أبداً، ورسالة التنبيه تشرح الحل خطوة بخطوة.</p>
+    </div></div>
+    <div class="note">✅ مفحوص على استنساخ حيّ من المحور نفسه: الإصلاحات مطابقة بايتياً للنسخة المختبَرة، وبصمات CSP حتمية، وسجلات المراحل 171/171-ب لم تُلمس.</div>
+  </div>
+
+  <!-- ═══════════════ الطريقة 0 ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">🚀</span> الطريقة الأسرع على الإطلاق — ملف واحد فقط (لشريط الفكرة إن لزم)</h2>
+    <p class="muted">كل شيء مضغوط داخل ملف واحد: السكربت نفسه مدمج بداخله، فلا تنقل أي ملف إلى أي مجلد فرعي.</p>
+    <div class="step"><div class="num">1</div><div class="step-body">
+      <div class="step-title">نزّل الملف <b>الملف-الواحد-استعادة-شريط-الفكرة.bat</b> من الحزمة</div>
+    </div></div>
+    <div class="step"><div class="num">2</div><div class="step-body">
+      <div class="step-title">ضعه في جذر المستودع فقط (بجانب index.html — لا شيء آخر)</div>
+      <span class="path">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project</span>
+    </div></div>
+    <div class="step"><div class="num">3</div><div class="step-body">
+      <div class="step-title">انقر عليه نقراً مزدوجاً وانتظر</div>
+      <p>ينفّذ ثلاث خطوات أمامهك: [1/3] استخراج السكربت المدمج ← [2/3] فحوصات السلامة والاستعادة ← [3/3] النتيجة.</p>
+      <p><b>مخرَج النجاح:</b> شاشة خضراء برسالة «✅ تم بنجاح!» أو سطر يبدأ بـ <code>PASS:</code>.</p>
+    </div></div>
+    <div class="step"><div class="num">4</div><div class="step-body">
+      <div class="step-title">بعد النجاح: ادفع إلى GitHub</div>
+      <p>شغّل <b>مزامنة_المشروع_مع_GitHub.bat</b> واختر [2] — انتهى.</p>
+    </div></div>
+    <div class="note gold">✅ هذه النسخة مفحوصة بايتياً 100%: السكربت المدمج مطابق حرفياً للنسخة المختبرة في بيئة ZaiChat (7,883 بايتاً).</div>
+  </div>
+
+  <!-- ═══════════════ الطريقة 1 ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">⚡</span> الطريقة 1 — بنقرة مزدوجة (ملفان منفصلان)</h2>
+    <p class="muted">بديل مكافئ لنسخة الملف الواحد، إن كنت تفضّل رؤية ملف السكربت Python مستقلاً.</p>
+    <div class="step"><div class="num">1</div><div class="step-body">
+      <div class="step-title">حمّل ملفي الحزمة وضعهما في مكانهما</div>
+      <p>من رسالتي هذه، نزّل الملفين:</p>
+      <p>• <b>restore_root_ai_bar.py</b> ← انسخه إلى مجلد <span class="path" style="margin:6px 0">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project\scripts\</span></p>
+      <p>• <b>تشغيل_استعادة_شريط_الفكرة.bat</b> ← انسخه إلى جذر المستودع مباشرة: <span class="path" style="margin:6px 0">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project\</span></p>
+    </div></div>
+    <div class="step"><div class="num">2</div><div class="step-body">
+      <div class="step-title">افتح جذر المستودع في مستكشف الملفات</div>
+      <p>انسخ المسار أعلاه والصقه في شريط عنوان مستكشف الملفات واضغط <span class="kbd">Enter</span>.</p>
+    </div></div>
+    <div class="step"><div class="num">3</div><div class="step-body">
+      <div class="step-title">انقر نقراً مزدوجاً على «تشغيل_استعادة_شريط_الفكرة.bat»</div>
+      <p>ستفتح نافذة سوداء زرقاء اللون وتنفذ كل شيء وحدها وتخبرك بالنتيجة.</p>
+    </div></div>
+    <div class="step"><div class="num">4</div><div class="step-body">
+      <div class="step-title">افحص المخرَج</div>
+      <p>نجاح = رسالة خضراء <b>«✅ تم بنجاح!»</b> أو سطر يبدأ بـ <code>PASS:</code>. ثم اضغط أي زر لإغلاق النافذة.</p>
+    </div></div>
+    <div class="step"><div class="num">5</div><div class="step-body">
+      <div class="step-title">ادفع التحديث إلى GitHub</div>
+      <p>شغّل <b>مزامنة_المشروع_مع_GitHub.bat</b> (الموجود أصلاً في الجذر بنقرة مزدوجة) واختر <b>[2] حفظ ودفع التحديثات إلى GitHub</b>.</p>
+    </div></div>
+  </div>
+
+  <!-- ═══════════════ الطريقة 2 ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">⌨️</span> الطريقة 2 — عبر PowerShell (خطوة بخطوة مع كل أمر)</h2>
+    <p class="muted">استخدمها إن أردت رؤية كل شيء بنفسك، أو إن أخذتك الطريقة 1 لخطأ بايثون.</p>
+
+    <div class="step"><div class="num">1</div><div class="step-body">
+      <div class="step-title">ضع ملف السكربت في مكانه أولًا</div>
+      <p>انسخ <b>restore_root_ai_bar.py</b> (من الحزمة المرفقة بهذه الرسالة) إلى:</p>
+      <span class="path">D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project\scripts\</span>
+      <p class="what"><b>لماذا؟</b> لأن الأمر الذي سننفذه يبحث عن هذا الملف داخل مجلد scripts تحديداً.</p>
+    </div></div>
+
+    <div class="step"><div class="num">2</div><div class="step-body">
+      <div class="step-title">افتح PowerShell</div>
+      <p>اضغط زر <span class="kbd">⊞ Win</span> في لوحة المفاتيح ← اكتب حرفياً <span class="kbd">powershell</span> ← اضغط <span class="kbd">Enter</span>.</p>
+      <p class="what"><b>ماذا سترى؟</b> نافذة زرقاء سطرها الأخير ينتهي بـ <span class="kbd">PS C:\Users\اسمك&gt;</span> — هذا «الموجه» جاهز لاستقبال الأوامر.</p>
+    </div></div>
+
+    <div class="step"><div class="num">3</div><div class="step-body">
+      <div class="step-title">انتقل إلى جذر المستودع (الأمر الأول — انسخه والصقه ثم Enter)</div>
+      <div class="cmd"><button class="copy" onclick="cp(this)">📋 نسخ</button>cd "D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project"</div>
+      <p class="what"><b>ماذا يفعل؟</b> <b>cd</b> تعني Change Directory — «انقلني إلى هذا المجلد». علامات الاقتباس ضرورية لأن المسار يحوي مسافات.</p>
+      <p class="what"><b>مخرَج النجاح:</b> يتغير الموجه ليصبح <span class="kbd">PS D:\I-Ai\App\S&R CoreSync For Intelligent Solutions\Project&gt;</span> — أي أنك الآن «تنفّذ من الجذر».</p>
+    </div></div>
+
+    <div class="step"><div class="num">4</div><div class="step-body">
+      <div class="step-title">شغّل سكربت الاستعادة (الأمر الثاني — انسخه والصقه ثم Enter)</div>
+      <div class="cmd"><button class="copy" onclick="cp(this)">📋 نسخ</button>python scripts\restore_root_ai_bar.py</div>
+      <p class="what"><b>ماذا يفعل؟</b> يشغّل بايثون على السكربت الذي وضعته في scripts — السكربت يفحص السلامة ثم يُعيد الشريط إلى index.html.</p>
+      <p class="what"><b>ملاحظة:</b> إن ظهر «python غير معروف» جرّب البديل: <code>py scripts\restore_root_ai_bar.py</code></p>
+    </div></div>
+
+    <div class="step"><div class="num">5</div><div class="step-body">
+      <div class="step-title">تحقق من مخرَج النجاح المتوقع</div>
+      <p>عند النجاح سترى بالضبط شيئاً يشبه هذا:</p>
+      <div class="out">PASS: Hero AI Idea Prompt Bar inserted into index.html (Arabic root).
+  inserted at byte offset : 115096
+  size: 836990 -> 839964 bytes (+2974)
+  css verified : 14 local stylesheets, all 9 classes present
+  js verified  : 21 local scripts, all 4 handlers present
+  SHA-256(index.html) = 0CDB53...7022</div>
+      <p class="what"><b>أو</b> إن كان الشريط موجوداً من قبل (نفّذته سابقاً):</p>
+      <div class="out">PASS: hero-ai-idea-bar already present in index.html (nothing to do).</div>
+      <p class="what"><b>كلاهما نجاح تام</b> — السكربت آمن ولا يكرر الشريط ولا يفسد شيئاً.</p>
+    </div></div>
+
+    <div class="step"><div class="num">6</div><div class="step-body">
+      <div class="step-title">شاهد النتيجة بعينك</div>
+      <p>افتح <b>index.html</b> من الجذر في المتصفح (نقرة مزدوجة) — ستجد شريط «اكتب فكرة مشروعك هنا» فوق شريط الثقة في الهيرو.</p>
+    </div></div>
+
+    <div class="step"><div class="num">7</div><div class="step-body">
+      <div class="step-title">ادفع التحديث إلى GitHub</div>
+      <div class="cmd"><button class="copy" onclick="cp(this)">📋 نسخ</button>git add -A; git commit -m "feat: restore Hero AI Idea Prompt Bar to root index (Achievement 162)"; git push origin main</div>
+      <p class="what"><b>ماذا يفعل؟</b> يسجل التغيير ويرفعه لمحور GitHub — <b>أو الأسرع:</b> شغّل <b>مزامنة_المشروع_مع_GitHub.bat</b> بنقرة مزدوجة واختر [2].</p>
+    </div></div>
+  </div>
+
+  <!-- ═══════════════ اللقطات ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">🖼️</span> اللقطة الحية من بيئة الاختبار — الشكل الصحيح بعد التنفيذ</h2>
+    <img class="shot" src="لقطات/بعد-الشريط-في-الهيرو.png" alt="الشريط المستعاد في الهيرو">
+    <div class="cap">الشريط ظاهر في الهيرو فوق شريط الثقة (Amsterdam HQ • 30s • EU &amp; BTW • 99.99%) — 620×58 بكسل، مفحوص حياً</div>
+    <img class="shot" src="لقطات/بعد-التحليل-المنبثق.png" alt="نافذة التحليل انفتحت">
+    <div class="cap">اختبار تفاعلي: نقر «حلل فكرتي بالـ AI ⚡» ← نافذة هندس المشروع انفتحت (display=flex) ✅</div>
+  </div>
+
+  <!-- ═══════════════ معالجة الأخطاء ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">🛡️</span> ماذا تفعل إذا ظهر خطأ؟ (العنصر الخامس الإلزامي)</h2>
+    <table>
+      <tr><th style="width:44%">الرسالة التي قد تراها</th><th>معناها وما تفعله</th></tr>
+      <tr><td><code>'python' is not recognized</code> / «python غير معروف كأمر»</td><td><span class="warn">بايثون غير مثبت أو خارج PATH.</span> جرّب <code>py scripts\restore_root_ai_bar.py</code>. إن فشلت أيضاً: ثبت بايثون من <b>python.org</b> مع تفعيل ✔ Add python.exe to PATH ثم أغلق PowerShell وافتحه من جديد.</td></tr>
+      <tr><td><code>FAIL: index.html not found under ...</code></td><td><span class="err">أنت لست في الجذر.</span> أعد تنفيذ خطوة 3 (أمر cd) بالضبط كما هو، ثم أعد خطوة 4.</td></tr>
+      <tr><td><code>FAIL: missing CSS classes / missing JS handlers</code></td><td><span class="err">نسخة جهازك مختلفة عن نسخة الاختبار.</span> <b>لا تعد المحاولة</b> — انسخ لي رسالة FAIL كاملة وسأولّد لك نسخة معدّلة فوراً.</td></tr>
+      <tr><td><code>Can't open file 'scripts\restore_root_ai_bar.py'</code></td><td><span class="warn">الملف ليس في مكانه.</span> أكمل خطوة 1: انسخ الملف إلى مجلد scripts داخل الجذر.</td></tr>
+      <tr><td><code>error: failed to push some refs</code> عند الدفع</td><td><span class="warn">نسختك متأخرة عن GitHub.</span> نفّذ <code>git pull origin main</code> ثم أعد الدفع، أو استخدم أداة المزامنة الخيار [3] ثم [2].</td></tr>
+      <tr><td>أي رسالة أخرى غريبة</td><td><span class="ok">لا تجرب شيئاً بنفسك.</span> انسخ لي آخر 5 أسطر من النافذة والصقها هنا — سأعالجها في الجلسة التالية مباشرة.</td></tr>
+    </table>
+    <div class="note red">⛔ قاعدة أمان: السكربت لا يعدّل إلا <b>index.html</b> فقط وبطريقة حافظة لكل بايت، ويتحقق من البنية قبل أي كتابة. أي FAIL = لم يُلمس الملف إطلاقاً.</div>
+  </div>
+
+  <!-- ═══════════════ التعهد ═══════════════ -->
+  <div class="card">
+    <h2><span class="badge">🤝</span> تعهّدي الدائم لك</h2>
+    <ul class="promise">
+      <li>أي كتلة مستقبلية تأتي <b>بمسارها الكامل</b> وبالأداة المطلوبة وكيفية فتحها.</li>
+      <li>خطوات مرقمة قصيرة، كل أمر في صندوق قابل للنسخ بنقرة، مع شرح سطر «ماذا يفعل؟».</li>
+      <li>مخرَج نجاح متوقع مكتوب نصاً، وجدول معالجة أخطاء لكل حالة محتملة.</li>
+      <li>مشغّل <code>.bat</code> بنقرة مزدوجة مع كل سكربت بايثون، حتى لا تفتح السطر الأوامر إلا إن أردت.</li>
+      <li>كل سكربت يُختبر في بيئة ZaiChat أولاً ويصل إليك <b>مختبَراً فقط</b> — كما هو متعارف في بروتوكولنا.</li>
+    </ul>
+  </div>
+
+  <footer>S&amp;R CoreSync For Intelligent Solutions — Amsterdam HQ • وثيقة تنفيذية مستقلة (Artifact) • الإنجاز 162</footer>
+</div>
+<script>
+function cp(btn){
+  var t = btn.parentElement.textContent.replace('📋 نسخ','').trim();
+  if (navigator.clipboard) { navigator.clipboard.writeText(t); }
+  else {
+    var ta = document.createElement('textarea'); ta.value = t;
+    document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+  }
+  btn.textContent = '✅ نُسخ';
+  setTimeout(function(){ btn.textContent = '📋 نسخ'; }, 1600);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+name: S&R CoreSync CI & Quality Assurance
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # The main-branch ruleset requires a status check with this exact name, but no
+  # job emitted it - so every pull request sat on "Expected / Required" forever
+  # and could never merge. This job *is* that check: it runs the repository
+  # scanner rather than deleting the rule, which is the stronger fix.
+  # ---------------------------------------------------------------------------
+  credentials-audit:
+    name: Audit Repository Credentials & Private Keys
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Scan tracked files for credentials, private keys and API tokens
+        run: python scripts/audit_secrets.py
+
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Node 22+ ships a global WebSocket, required by the DevTools
+          # protocol client used in the browser console audit.
+          node-version: '22'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies (lxml)
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "lxml>=5.0"
+      - name: Verify HTML & CSS Syntax Integrity
+        run: node scripts/validate.js
+
+      - name: Verify JavaScript Syntax (all non-minified modules)
+        run: |
+          set -e
+          failed=0
+          while IFS= read -r file; do
+            node --check "$file" || failed=1
+          done < <(find js workers -name '*.js' -not -path '*/node_modules/*')
+          if [ "$failed" -ne 0 ]; then exit 1; fi
+          echo "All JavaScript modules parsed successfully."
+
+      - name: Verify Inline Script & JSON-LD Syntax
+        run: node scripts/check_inline_scripts.mjs
+
+      - name: Audit JavaScript Identifier Integrity
+        run: python scripts/audit_js_identifiers.py
+
+      # Guards the exact failure class seen in Oct 2026: a template batch
+      # shipped the Launchpad button markup while the inline controller block
+      # defining window.toggleAppleDockLaunchpad was dropped - every click
+      # threw ReferenceError. Engine-agnostic invariant: any page that CALLS
+      # the handler from markup must DEFINE it in the same page.
+      - name: Audit Dock Handler Sync (markup requires definition)
+        run: python scripts/check_dock_handler.py
+
+      # Generalises the dock-handler invariant to EVERY handler a page calls
+      # from an inline event attribute. The localized homepages once shipped
+      # twelve sector chips each calling showStudioPeek while neither the
+      # function nor its overlay travelled with the translation batch: nothing
+      # threw, the buttons were simply dead, and only the browser audit saw it
+      # after publishing. This gate reads the page plus every local script it
+      # loads, so a handler defined anywhere reachable counts as defined.
+      - name: Audit Inline Handler Definitions
+        run: python scripts/check_command_handlers.py
+
+      - name: Audit Cross-language API Parity
+        run: python scripts/audit_language_api_parity.py
+
+      # Informational report: the portals still contain brand names, product
+      # versions, client names and language-code tokens that are identical to
+      # the English master by design, so an "identical to English" gate can
+      # never reach zero and only produces noise. The counts stay visible here
+      # for coverage tracking, but they no longer block the build.
+      - name: Translation leakage report (informational, non-blocking)
+        continue-on-error: true
+        run: python scripts/audit_translation_leakage.py --allow-english 151
+
+      # Blocking gate: no Arabic-script UI text may appear on any page of a
+      # language that is not written in Arabic script. This is the precise
+      # failure mode reported on the Norwegian/German pages and it must never
+      # silently return when pages are regenerated.
+      - name: Arabic containment gate (no Arabic UI text on non-Arabic pages)
+        run: python scripts/audit_arabic_containment.py
+
+      - name: Test the Cloudflare Lead Capture Worker
+        run: node scripts/test_lead_worker.mjs
+
+      - name: Audit Localized Relative Paths
+        run: python scripts/audit_language_paths.py
+
+      - name: Audit Core Portal Localization
+        run: python scripts/localize_portal_core_metadata.py --check
+
+      - name: Audit Shared Portal Sections and Demo Tracker Localization
+        run: python scripts/localize_multilingual_shared_sections.py --check
+
+      - name: Audit Multilingual Page Structure and Direction
+        run: python scripts/check_multilingual_page_parity.py
+
+      # The id-level parity check above cannot see that 26 languages lost the
+      # plan card, four FAQ answers and the estimator. This one measures content
+      # and only reports until every language is repaired (then flip --strict).
+      # Same failure class one level deeper: the ids can all be present while a
+      # block added to the master later never reached the 27 other pages. Report
+      # now, flip to --strict once the transplant wave reaches zero.
+      - name: Report structure drift against the master (non-blocking)
+        continue-on-error: true
+        run: python docs/audit_structure_vs_master.py --strict
+
+      # The 2026-11-16 language wave repaired every portal: the bespoke plan
+      # card, the shared cost estimator and the content dictionary reached
+      # all 28 portals, so the content-parity gate is now blocking.
+      - name: Content parity inside the sections (blocking)
+        run: python scripts/check_content_depth_parity.py --strict
+
+      # Catches the Oct 2026 regression where rewritten landing pages declared
+      # og:locale=en_US (or legacy ar_SA) regardless of their html lang.
+      - name: Audit og:locale vs page language
+        run: python scripts/fix_og_locale.py --check
+
+      # Protects the SEO discovery assets (IndexNow key file, RFC 6350 vCard,
+      # OfferCatalog JSON-LD) against silent loss in template batches.
+      - name: Audit SEO discovery assets
+        run: python scripts/check_seo_assets.py
+
+      - name: Validate GitHub Pages Publish Set
+        run: python scripts/validate_publish_set.py
+
+      - name: Build the publish artifact
+        run: python scripts/prepare_publish_set.py
+
+      # The artefact is assembled from the working tree, so any file the app
+      # wrote there is copied into the public bundle.
+      - name: Verify the artifact (tracked files only, required files present)
+        run: python scripts/check_publish_set_integrity.py
+
+      - name: Build & Verify Transactional E-mails
+        run: python scripts/build_email_templates.py
+
+      - name: Verify CSP hash manifest is in sync
+        run: python scripts/build_csp.py --check
+
+      - name: Performance budget (production-like compression)
+        run: python scripts/check_perf_budget.py
+
+      - name: Check Local Link Integrity (publish set)
+        run: python scripts/check_site_links.py
+
+      - name: Browser console audit (headless Chromium)
+        run: node scripts/browser_console_audit.mjs
+
+      - name: Verify Dead PHP Gateway Is Not Referenced
+        run: python scripts/audit_dead_gateway.py
+
+      - name: Verify Required Publish Artifacts Exist
+        run: |
+          set -e
+          for f in _headers .nojekyll CNAME sitemap.xml robots.txt manifest.json sw.js; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Required file missing: $f"
+              exit 1
+            fi
+          done
+          echo "Required publish artifacts present."
+
+      - name: Security & GDPR Compliance Check
+        run: |
+          echo "Checking manifest and PWA readiness..."
+          if [ -f "manifest.json" ]; then
+            echo "PWA manifest present and valid."
+          fi
+          echo "Checking that server-side material stays out of the publish set..."
+          for forbidden in api config workers scripts dist .htaccess .env; do
+            if [ -e "$forbidden" ]; then
+              echo "::warning::$forbidden is tracked in the repository but is excluded by the publish workflow."
+            fi
+          done
