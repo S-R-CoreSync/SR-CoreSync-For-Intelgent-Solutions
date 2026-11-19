@@ -80,3 +80,8 @@ _css_archive_*/
 
 # Stray downloaded artifact
 Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash.html
+
+# VS Code extension build artifacts and dependencies
+sdk/**/node_modules/
+sdk/**/out/
+sdk/**/*.vsix
