@@ -733,11 +733,25 @@
     });
 
     var svgEl = wrap.querySelector('svg');
+    var _lastHoveredPin = -1;
     svgEl.addEventListener('mouseover', function (e) {
       var t = e.target;
       if (t && t.classList && t.classList.contains('sr-lm__pin')) {
         var idx = Number(t.getAttribute('data-i'));
-        select(idx);
+        if (idx !== _lastHoveredPin) {
+          _lastHoveredPin = idx;
+          select(idx);
+        }
+      }
+    });
+    svgEl.addEventListener('mouseout', function (e) {
+      var t = e.target;
+      if (t && t.classList && t.classList.contains('sr-lm__pin')) {
+        var rel = e.relatedTarget;
+        var stillOnPin = rel && rel.classList && rel.classList.contains('sr-lm__pin');
+        if (!stillOnPin && !cardEl.matches(':hover')) {
+          _lastHoveredPin = -1;
+        }
       }
     });
 
