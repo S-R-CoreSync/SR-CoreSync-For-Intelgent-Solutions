@@ -1027,14 +1027,14 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
   .section-trust-metrics .hero-trust-metrics-strip{
     height:46px !important; box-sizing:border-box !important;
     display:flex !important; flex-wrap:nowrap !important;
-    align-items:center !important; justify-content:flex-end !important;
-    gap:18px !important; margin:0 !important; padding:0 18px !important;
+    align-items:center !important; justify-content:center !important;
+    gap:20px !important; margin:0 !important; padding:0 22px !important;
     border-radius:999px !important;
-    border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35) !important;
-    background:linear-gradient(180deg, rgba(7, 16, 12, 0.94), rgba(4, 10, 7, 0.96)) !important;
-    box-shadow:0 16px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15) !important;
-    -webkit-backdrop-filter:blur(22px) saturate(180%) !important;
-    backdrop-filter:blur(22px) saturate(180%) !important;
+    border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.45) !important;
+    background:linear-gradient(180deg, rgba(8, 18, 14, 0.96), rgba(4, 10, 7, 0.98)) !important;
+    box-shadow:0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    -webkit-backdrop-filter:blur(26px) saturate(190%) !important;
+    backdrop-filter:blur(26px) saturate(190%) !important;
     font-family:'Alexandria','Figtree',system-ui,-apple-system,sans-serif !important;
   }
   .section-trust-metrics .trust-metric-item{
@@ -1064,6 +1064,11 @@ body:has(.sr-consent) #srQuickDockContainer{bottom:calc(var(--privacy-h, 0px) + 
 }
 @media (min-width:1320px){
   .section-trust-metrics{
+    
+    bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 76px) !important;
+  }
+  
+  .apple-macos-dock-wrapper{
     bottom:calc(var(--privacy-h, 0px) + var(--consent-h, 0px) + 14px) !important;
   }
 }
@@ -1325,14 +1330,14 @@ html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
   .section-trust-metrics .hero-trust-metrics-strip{
     height:46px !important; box-sizing:border-box !important;
     display:flex !important; flex-wrap:nowrap !important;
-    align-items:center !important; justify-content:flex-end !important;
-    gap:18px !important; margin:0 !important; padding:0 18px !important;
+    align-items:center !important; justify-content:center !important;
+    gap:20px !important; margin:0 !important; padding:0 22px !important;
     border-radius:999px !important;
-    border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35) !important;
-    background:linear-gradient(180deg, rgba(7, 16, 12, 0.94), rgba(4, 10, 7, 0.96)) !important;
-    box-shadow:0 16px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.15) !important;
-    -webkit-backdrop-filter:blur(22px) saturate(180%) !important;
-    backdrop-filter:blur(22px) saturate(180%) !important;
+    border:1px solid rgba(var(--sr-gold-rgb, 212, 175, 55), 0.45) !important;
+    background:linear-gradient(180deg, rgba(8, 18, 14, 0.96), rgba(4, 10, 7, 0.98)) !important;
+    box-shadow:0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    -webkit-backdrop-filter:blur(26px) saturate(190%) !important;
+    backdrop-filter:blur(26px) saturate(190%) !important;
     font-family:'Alexandria','Figtree',system-ui,-apple-system,sans-serif !important;
   }
   .section-trust-metrics .trust-metric-item{
