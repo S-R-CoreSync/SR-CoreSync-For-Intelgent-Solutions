@@ -78,6 +78,50 @@ export class CoreSyncDataViewerProvider implements IDataViewerDataProvider {
     }
 
     /**
+     * Factory constructor: creates a provider directly from a CSV file.
+     */
+    public static async fromCSV(csvContent: string): Promise<CoreSyncDataViewerProvider> {
+        const lines = csvContent.trim().split(/\r?\n/);
+        if (lines.length === 0) {
+            return new CoreSyncDataViewerProvider([]);
+        }
+        const headers = lines[0].split(',').map((h) => h.trim().replace(/^["']|["']$/g, ''));
+        const rows: Record<string, unknown>[] = [];
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+            const values = line.split(',').map((v) => v.trim().replace(/^["']|["']$/g, ''));
+            const row: Record<string, unknown> = {};
+            headers.forEach((h, idx) => {
+                const raw = values[idx] ?? '';
+                const num = Number(raw);
+                row[h] = !isNaN(num) && raw !== '' ? num : raw;
+            });
+            rows.push(row);
+        }
+        return new CoreSyncDataViewerProvider(rows);
+    }
+
+    /**
+     * Factory constructor: creates a provider from mock Cloud SQL / BigQuery JSON response.
+     */
+    public static fromCloudQuery(queryResult: { schema: { name: string; type: string }[]; rows: unknown[][] }): CoreSyncDataViewerProvider {
+        const cols: ColumnDefinition[] = queryResult.schema.map((s) => ({
+            key: s.name,
+            name: s.name,
+            type: s.type.toLowerCase()
+        }));
+        const records = queryResult.rows.map((row) => {
+            const obj: Record<string, unknown> = {};
+            queryResult.schema.forEach((col, idx) => {
+                obj[col.name] = row[idx];
+            });
+            return obj;
+        });
+        return new CoreSyncDataViewerProvider(records, cols);
+    }
+
+    /**
      * Cleanup and resource disposal.
      */
     public dispose(): void {
