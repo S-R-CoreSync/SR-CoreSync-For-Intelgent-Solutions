@@ -653,7 +653,7 @@
     return { x: (lon + 180) / 360 * VB_W, y: (LAT_TOP - lat) / (LAT_TOP - LAT_BOTTOM) * VB_H };
   }
 
-  function build() {
+    function build() {
     if (overlay) { return overlay; }
 
     host = document.getElementById('srLangMapHost');
@@ -662,7 +662,6 @@
       host.id = 'srLangMapHost';
       document.body.appendChild(host);
     }
-    /* إعدادات الموقع على المضيف نفسه، بـ!important، فلا تتجاوزها ورقة الصفحة */
     host.style.setProperty('position', 'fixed', 'important');
     host.style.setProperty('inset', '0', 'important');
     host.style.setProperty('z-index', '100070', 'important');
@@ -675,12 +674,12 @@
     wrap.className = 'sr-lm is-on';
     wrap.setAttribute('role', 'dialog');
     wrap.setAttribute('aria-modal', 'true');
-    wrap.setAttribute('aria-label', 'خريطة اللغات والأسواق');
+    wrap.setAttribute('aria-label', 'خريطة اللغات والأسواق السيادية والكيانات القانونية');
     wrap.innerHTML =
       '<div class="sr-lm__panel">' +
         '<div class="sr-lm__bar">' +
-          '<div><h2>أين تعمل؟ نُحدّث اللغة والضريبة والعملة معاً</h2>' +
-          '<p>اضغط أي دولة لترى اللغة والضريبة (VAT/BTW) والعملة — 29 لغة · 34 سوقاً.</p></div>' +
+          '<div><h2>خريطة اللغات والأسواق السيادية والكيانات القانونية — المعاينة الذكية (Hover HUD Mode)</h2>' +
+          '<p>حرك مؤشر الفأرة (Hover) فوق أي دولة لرسم الخط الذهبي فوراً من أمستردام وانبثاق بطاقة الكيانات والضرائب — أو انقر للتحويل المباشر.</p></div>' +
           '<div class="sr-lm__views">' +
             '<button type="button" data-view="emea" class="is-on">أوروبا والشرق الأوسط</button>' +
             '<button type="button" data-view="world">العالم</button>' +
@@ -689,22 +688,23 @@
           '<button type="button" class="sr-lm__close" aria-label="إغلاق">✕</button>' +
         '</div>' +
         '<div class="sr-lm__body">' +
-          '<aside class="sr-lm__side"><div class="sr-lm__card"></div><div class="sr-lm__list"></div></aside>' +
-'<div class="sr-lm__map">' +
-            
+          '<div class="sr-lm__hud floating-hud-card is-hidden" id="srHoverHud"></div>' +
+          '<div class="sr-lm__map">' +
             '<svg viewBox="' + VIEWS.emea + '" preserveAspectRatio="xMidYMid meet">' +
               '<path class="sr-lm__land" d="' + WORLD_PATH + '"></path>' +
-              '<g class="sr-lm__arcs"></g>' + '<g class="sr-lm__pins"></g>' +
+              '<g class="sr-lm__arcs"></g>' +
+              '<g class="sr-lm__gold-arc"></g>' +
+              '<g class="sr-lm__pins"></g>' +
+              '<g class="sr-lm__hq"></g>' +
             '</svg>' +
           '</div>' +
-                  '</div>' +
+        '</div>' +
       '</div>';
 
     root.appendChild(wrap);
 
     overlay = wrap;
-    cardEl = wrap.querySelector('.sr-lm__card');
-    listEl = wrap.querySelector('.sr-lm__list');
+    cardEl = wrap.querySelector('#srHoverHud');
     searchEl = wrap.querySelector('.sr-lm__search input');
 
     wrap.querySelector('.sr-lm__close').addEventListener('click', close);
@@ -718,17 +718,52 @@
         setView(view);
       });
     });
-    searchEl.addEventListener('input', function () { buildList(searchEl.value); });
-    wrap.querySelector('svg').addEventListener('click', function (e) {
-      var t = e.target;
-      if (t && t.classList && t.classList.contains('sr-lm__pin')) { select(Number(t.getAttribute('data-i'))); }
+
+    searchEl.addEventListener('input', function () {
+      var q = (searchEl.value || '').trim().toLowerCase();
+      if (!q) { return; }
+      for (var i = 0; i < MARKETS.length; i++) {
+        var m = MARKETS[i];
+        var hay = (m.country + ' ' + m.lang + ' ' + m.city + ' ' + m.code + ' ' + m.cur).toLowerCase();
+        if (hay.indexOf(q) !== -1) {
+          select(i);
+          break;
+        }
+      }
     });
+
+    var svgEl = wrap.querySelector('svg');
+    svgEl.addEventListener('mouseover', function (e) {
+      var t = e.target;
+      if (t && t.classList && t.classList.contains('sr-lm__pin')) {
+        var idx = Number(t.getAttribute('data-i'));
+        select(idx);
+      }
+    });
+
+    svgEl.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.classList && t.classList.contains('sr-lm__pin')) {
+        var idx = Number(t.getAttribute('data-i'));
+        var m = MARKETS[idx];
+        if (m && m.code) {
+          window.location.href = langUrl(m.code);
+        }
+      }
+    });
+
+    cardEl.addEventListener('click', function () {
+      var m = MARKETS[current];
+      if (m && m.code) {
+        window.location.href = langUrl(m.code);
+      }
+    });
+
     window.addEventListener('resize', function () { if (isOpen()) { setView(view); } }, { passive: true });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(); } });
 
     buildPins();
-    buildList('');
-    select(1);
+    select(2); // Kurdistan (ckb)
     return overlay;
   }
 
@@ -746,8 +781,9 @@
     return FLAGS[m.code] || '\uD83C\uDF10';
   }
 
-  function buildPins() {
+    function buildPins() {
     var g = overlay.querySelector('.sr-lm__pins');
+    var gHq = overlay.querySelector('.sr-lm__hq');
     var box = (overlay.querySelector('svg').getAttribute('viewBox') || VIEWS.emea).split(/[\s,]+/).map(Number);
     var k = (box[2] || 1000) / 1000;
     var out = '';
@@ -758,6 +794,13 @@
         esc(m.country) + ' — ' + esc(m.lang) + ' — VAT ' + esc(m.vat) + ' — ' + esc(m.cur) + '</title></circle>';
     });
     g.innerHTML = out;
+
+    if (gHq) {
+      var ams = proj(52.37, 4.90);
+      gHq.innerHTML =
+        '<circle class="sr-hq-star" cx="' + ams.x.toFixed(1) + '" cy="' + ams.y.toFixed(1) + '" r="5.5"></circle>' +
+        '<text class="sr-hq-label" x="' + (ams.x + 8).toFixed(1) + '" y="' + (ams.y - 6).toFixed(1) + '">AMS HQ (S&R CoreSync)</text>';
+    }
   }
 
   function setView(name) {
@@ -767,74 +810,35 @@
     buildEdges();
   }
 
-  /* المسارات: ثلاثة أسواق متوسطة البعد + أقصى سوق ظاهر، لا كل الشبكة */
   function buildEdges() {
     renderArcs();
   }
 
   function renderArcs() {
-    var g = overlay && overlay.querySelector('.sr-lm__arcs');
-    if (!g) { return; }
-    var svg = overlay.querySelector('svg');
-    var box = (svg.getAttribute('viewBox') || VIEWS.emea).split(/[\s,]+/).map(Number);
-    var inView = function (p) {
-      return p.x > box[0] + 4 && p.x < box[0] + box[2] - 4 &&
-             p.y > box[1] + 4 && p.y < box[1] + box[3] - 4;
-    };
+    var gGold = overlay && overlay.querySelector('.sr-lm__gold-arc');
+    if (!gGold) { return; }
+    var a = proj(52.37, 4.90); // Amsterdam HQ
+    var target = MARKETS[current] || MARKETS[0];
+    var b = proj(target.lat, target.lon);
 
-    var here = proj(MARKETS[current].lat, MARKETS[current].lon);
-    var ranked = MARKETS.map(function (m, i) {
-      var p = proj(m.lat, m.lon);
-      var dx = p.x - here.x, dy = p.y - here.y;
-      return { i: i, p: p, d: Math.sqrt(dx * dx + dy * dy) };
-    }).filter(function (o) {
-      return o.i !== current && inView(o.p);
-    }).sort(function (a, b) { return a.d - b.d; });
+    var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    var dx = b.x - a.x, dy = b.y - a.y;
+    var len = Math.sqrt(dx * dx + dy * dy) || 1;
+    var lift = Math.min(80, len * 0.22);
+    var cx = mx + (-dy / len) * lift, cy = my + (dx / len) * lift;
 
-    var picks = [];
-    var mid = ranked.slice(2, 5);
-    mid.forEach(function (o) { picks.push(o); });
-    if (ranked.length) { picks.push(ranked[ranked.length - 1]); }
+    var path = 'M' + a.x.toFixed(1) + ' ' + a.y.toFixed(1) +
+               ' Q' + cx.toFixed(1) + ' ' + cy.toFixed(1) +
+               ' ' + b.x.toFixed(1) + ' ' + b.y.toFixed(1);
 
-    var seen = {};
-    var out = '';
-    picks.forEach(function (o) {
-      if (seen[o.i]) { return; }
-      seen[o.i] = 1;
-      var p2 = o.p;
-      var mx = (here.x + p2.x) / 2, my = (here.y + p2.y) / 2;
-      var dx = p2.x - here.x, dy = p2.y - here.y;
-      var len = Math.sqrt(dx * dx + dy * dy) || 1;
-      var lift = Math.min(90, len * 0.28) * (o.i > current ? 1 : -1);
-      var cx = mx + (-dy / len) * lift, cy = my + (dx / len) * lift;
-      var cls = len > 190 ? ' class="sr-lm__far"' : '';
-      out += '<path d="M' + here.x.toFixed(1) + ' ' + here.y.toFixed(1) +
-             ' Q' + cx.toFixed(1) + ' ' + cy.toFixed(1) +
-             ' ' + p2.x.toFixed(1) + ' ' + p2.y.toFixed(1) + '"' + cls + '></path>';
-    });
-    g.innerHTML = out;
+    gGold.innerHTML =
+      '<path class="sr-gold-glow" d="' + path + '"></path>' +
+      '<path class="sr-gold-arc" d="' + path + '"></path>' +
+      '<circle cx="' + b.x.toFixed(1) + '" cy="' + b.y.toFixed(1) + '" r="8" fill="none" stroke="#f7df94" stroke-width="1.4" opacity="0.9"></circle>' +
+      '<circle cx="' + b.x.toFixed(1) + '" cy="' + b.y.toFixed(1) + '" r="3.6" fill="#fff3c4"></circle>';
   }
 
-  function buildList(filter) {
-    var q = (filter || '').trim().toLowerCase();
-    var out = '';
-    MARKETS.forEach(function (m, i) {
-      var hay = (m.country + ' ' + m.lang + ' ' + m.city + ' ' + m.code + ' ' + m.cur).toLowerCase();
-      if (q && hay.indexOf(q) === -1) { return; }
-      out += '<button type="button" class="sr-lm__item' + (i === current ? ' is-on' : '') + '" data-i="' + i + '">' +
-        '<span>' + esc(m.country) + '</span><span class="sr-lm__code">' + esc(m.code.toUpperCase()) + ' · ' + esc(m.cur) + '</span></button>';
-    });
-    listEl.innerHTML = out;
-    Array.prototype.forEach.call(listEl.children, function (b) {
-      b.addEventListener('click', function () {
-        var i = Number(b.getAttribute('data-i'));
-        /* نقرة أولى تعرض الدولة، ونقرة ثانية على الدولة المعروضة تحوّل إليها */
-        if (i === lastPicked && MARKETS[i] && MARKETS[i].code !== CUR) { window.location.href = langUrl(MARKETS[i].code); return; }
-        lastPicked = i;
-        select(i);
-      });
-    });
-  }
+  function buildList() {}
 
   function select(i) {
     current = i;
@@ -849,25 +853,47 @@
       });
       setView(want);
     }
+
+    var typesHtml = '';
+    if (m.types && m.types.length) {
+      typesHtml = '<div class="entity-chips-box">' +
+        '<label>الكيانات القانونية المعتمدة (Corporate Types):</label>' +
+        '<div class="entity-chips-list">' +
+        m.types.map(function (t) { return '<span class="entity-chip">' + esc(t) + '</span>'; }).join('') +
+        '</div></div>';
+    }
+
     var tz = Math.round(m.lon / 15);
+    var tzStr = 'UTC' + (tz >= 0 ? '+' : '') + tz;
+
     cardEl.innerHTML =
-      '<div class="sr-lm__flag">' + esc(flagOf(m)) + '</div>' +
-      '<h3>' + esc(m.country) + ' — ' + esc(m.city) + '</h3>' +
-      '<div class="sr-lm__rows">' +
-        '<div class="sr-lm__row"><span>اللغة</span><b>' + esc(m.lang) + ' <i>(' + esc(m.code) + ')</i></b></div>' +
-        '<div class="sr-lm__row"><span>ضريبة القيمة المضافة</span><b>' + esc(m.vat) + '</b></div>' +
-        '<div class="sr-lm__row"><span>العملة</span><b>' + esc(m.cur) + '</b></div>' +
-        '<div class="sr-lm__row"><span>المنطقة الزمنية</span><b>UTC' + (tz >= 0 ? '+' : '') + tz + '</b></div>' +
+      '<div class="hud-card-header">' +
+        '<div class="hud-card-title">' +
+          '<span class="hud-flag">' + esc(m.flag || flagOf(m)) + '</span>' +
+          '<div class="hud-titles">' +
+            '<h4>' + esc(m.country) + '</h4>' +
+            '<span>' + esc(m.city) + ' · ' + tzStr + '</span>' +
+          '</div>' +
+        '</div>' +
+        (m.code === 'nl' ? '<span class="hud-hq-badge">المقر الرئيسي</span>' : '') +
       '</div>' +
-      (m.code === CUR
-        ? '<a class="sr-lm__go is-current" aria-current="page">أنت على هذه اللغة الآن</a>'
-        : '<a class="sr-lm__go" href="' + esc(langUrl(m.code)) + '">فتح ' + esc(m.lang) + ' والتحويل إليها ←</a>') +
-      '<p class="sr-lm__note">البيانات للعرض التوضيحي — تُثبَّت نهائياً من مصدر ضريبي رسمي قبل النشر.</p>';
-    buildList(searchEl ? searchEl.value : '');
+      '<div class="hud-info-grid">' +
+        '<div class="hud-info-row"><span>اللغة الرسمية</span><strong>' + esc(m.lang) + ' (' + esc(m.code) + ')</strong></div>' +
+        '<div class="hud-info-row"><span>الضريبة / VAT</span><strong>' + esc(m.vat) + '</strong></div>' +
+        '<div class="hud-info-row"><span>العملة المعتمدة</span><strong>' + esc(m.cur) + '</strong></div>' +
+        '<div class="hud-info-row"><span>نظام الفوترة</span><strong>' + esc(m.billing || 'Standard Sovereign Invoice') + '</strong></div>' +
+      '</div>' +
+      typesHtml +
+      '<div class="hud-card-footer">' +
+        '<span class="hud-click-hint">⚡ انقر هنا أو على الدولة للتحويل الفوري المباشر</span>' +
+      '</div>';
+
+    cardEl.classList.remove('is-hidden');
+
     Array.prototype.forEach.call(overlay.querySelectorAll('.sr-lm__pin'), function (p) {
       p.classList.toggle('is-on', Number(p.getAttribute('data-i')) === i);
     });
-    if (overlay.querySelector('.sr-lm__arcs')) { renderArcs(); }
+    renderArcs();
   }
 
   function open() {
@@ -908,7 +934,7 @@
     }, true);
   }
 
-  var STYLES = '.sr-lm{position:fixed;inset:0;z-index:100070;direction:rtl;text-align:start;background:rgba(2,7,5,.96)}.sr-lm__panel{position:absolute;inset:14px;border:1px solid rgba(212,175,55,.28);border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.09),transparent 60%),#04100c;display:grid;grid-template-rows:auto 1fr}.sr-lm__bar{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap}.sr-lm__bar h2{font-size:1rem;color:#f3dfba;margin:0}.sr-lm__bar p{font-size:.74rem;color:#8fa0b5;margin:4px 0 0}.sr-lm__views{display:flex;gap:3px;padding:3px;border:1px solid rgba(255,255,255,.1);border-radius:999px}.sr-lm__views button{border:0;background:none;color:#9fb0c4;font:inherit;font-size:.72rem;font-weight:700;padding:6px 11px;border-radius:999px;cursor:pointer}.sr-lm__views button.is-on{background:rgba(212,175,55,.2);color:#f3dfba}.sr-lm__search{margin-inline-start:auto}.sr-lm__search input{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 14px;color:#e8eef6;font:inherit;font-size:.8rem;min-width:200px}.sr-lm__close{width:38px;height:38px;border-radius:11px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#cbd7e5;cursor:pointer;font-size:15px}.sr-lm__body{position:relative;display:grid;grid-template-columns:318px minmax(0,1fr);min-height:0}.sr-lm__map{position:relative;min-width:0;min-height:220px;margin:10px}.sr-lm__map svg{width:100%;height:100%;display:block;position:relative;z-index:1}.sr-lm__land{fill:rgba(212,175,55,.06);stroke:rgba(212,175,55,.3);stroke-width:.42;stroke-linejoin:round;vector-effect:non-scaling-stroke}.sr-lm__arcs path{fill:none;stroke:rgba(247,223,148,.5);stroke-width:1.3;vector-effect:non-scaling-stroke}.sr-lm__arcs path.sr-lm__far{stroke:rgba(212,175,55,.4);stroke-width:1;stroke-dasharray:5 5}.sr-lm__pin{fill:#d4af37;cursor:pointer}.sr-lm__pin:hover,.sr-lm__pin.is-on{fill:#f7df94}.sr-lm__halo{fill:rgba(212,175,55,.18);pointer-events:none}.sr-lm__side{position:relative;min-height:0;border-inline-end:1px solid rgba(255,255,255,.07);background:rgba(6,12,9,.55);overflow:auto;padding:12px;scrollbar-width:thin;scrollbar-color:rgba(212,175,55,.45) transparent}.sr-lm__card{border:1px solid rgba(212,175,55,.3);border-radius:14px;padding:13px;background:rgba(212,175,55,.06);margin-bottom:12px}.sr-lm__flag{font-size:1.4rem}.sr-lm__card h3{font-size:.95rem;color:#f3dfba;margin:6px 0 0}.sr-lm__rows{display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px 12px;margin:10px 0 0;font-size:.77rem}.sr-lm__row{display:contents}.sr-lm__row span{color:#8fa0b5}.sr-lm__row b{color:#dfe9f4;font-weight:700;justify-self:start;text-align:start}.sr-lm__row i{font-style:normal;font-family:\"JetBrains Mono\",monospace;font-size:.7rem;opacity:.75}.sr-lm__note{margin:10px 0 0;font-size:.68rem;color:#8fa0b5;line-height:1.7}.sr-lm__mono{font-family:"JetBrains Mono",monospace;direction:ltr;display:inline-block}.sr-lm__side::-webkit-scrollbar{width:7px}.sr-lm__side::-webkit-scrollbar-track{background:transparent}.sr-lm__side::-webkit-scrollbar-thumb{background:rgba(212,175,55,.38);border-radius:99px}.sr-lm__list{display:grid;gap:4px;align-content:start}.sr-lm__item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;cursor:pointer;border:1px solid transparent;background:none;color:#cfdbeb;font:inherit;font-size:.79rem;text-align:start;width:100%}.sr-lm__item:hover,.sr-lm__item.is-on{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.3);color:#f3dfba}.sr-lm__code{margin-inline-start:auto;font-family:"JetBrains Mono",monospace;font-size:.64rem;color:#8fa0b5}.sr-lm__go{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:12px 0 0;padding:10px 14px;border-radius:12px;border:1px solid rgba(212,175,55,.55);background:linear-gradient(180deg,rgba(212,175,55,.28),rgba(212,175,55,.16));color:#f7df94;font:inherit;font-size:.85rem;font-weight:800;text-decoration:none;cursor:pointer}.sr-lm__go:hover{background:linear-gradient(180deg,rgba(212,175,55,.4),rgba(212,175,55,.24));color:#fff2d0;border-color:rgba(212,175,55,.8)}.sr-lm__go.is-current{background:none;border-style:dashed;border-color:rgba(255,255,255,.14);color:#8fa0b5;cursor:default;font-weight:600}@media (max-width:760px){.sr-lm__body{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}.sr-lm__map{order:-1}.sr-lm__side{max-height:42vh;border-inline-end:0;border-top:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:12px}.sr-lm__card{margin-bottom:0}.sr-lm__list{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}';
+  var STYLES = '.sr-lm{position:fixed;inset:0;z-index:100070;direction:rtl;text-align:start;background:rgba(2,7,5,.96);font-family:Alexandria,system-ui,sans-serif}.sr-lm__panel{position:absolute;inset:14px;border:1px solid rgba(212,175,55,.28);border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.09),transparent 60%),#04100c;display:grid;grid-template-rows:auto 1fr}.sr-lm__bar{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap}.sr-lm__bar h2{font-size:1rem;color:#f3dfba;margin:0}.sr-lm__bar p{font-size:.74rem;color:#8fa0b5;margin:4px 0 0}.sr-lm__views{display:flex;gap:3px;padding:3px;border:1px solid rgba(255,255,255,.1);border-radius:999px}.sr-lm__views button{border:0;background:none;color:#9fb0c4;font:inherit;font-size:.72rem;font-weight:700;padding:6px 11px;border-radius:999px;cursor:pointer}.sr-lm__views button.is-on{background:rgba(212,175,55,.2);color:#f3dfba}.sr-lm__search{margin-inline-start:auto}.sr-lm__search input{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 14px;color:#e8eef6;font:inherit;font-size:.8rem;min-width:200px}.sr-lm__close{width:38px;height:38px;border-radius:11px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#cbd7e5;cursor:pointer;font-size:15px}.sr-lm__body{position:relative;display:flex;flex:1;min-height:0;overflow:hidden}.sr-lm__map{position:relative;flex:1;width:100%;height:100%;margin:6px}.sr-lm__map svg{width:100%;height:100%;display:block;position:relative;z-index:1}.sr-lm__land{fill:rgba(212,175,55,.06);stroke:rgba(212,175,55,.3);stroke-width:.42;stroke-linejoin:round;vector-effect:non-scaling-stroke}.sr-lm__pin{fill:#d4af37;cursor:pointer;transition:all .2s ease}.sr-lm__pin:hover,.sr-lm__pin.is-on{fill:#f7df94;r:7.5px}.sr-lm__halo{fill:rgba(212,175,55,.18);pointer-events:none}.floating-hud-card{position:absolute;top:18px;right:18px;width:360px;max-width:calc(100% - 36px);background:linear-gradient(145deg,rgba(8,24,18,.96),rgba(3,12,9,.98));border:1px solid rgba(212,175,55,.45);border-radius:18px;padding:18px;box-shadow:0 20px 50px rgba(0,0,0,.8),0 0 25px rgba(212,175,55,.22);backdrop-filter:blur(20px);z-index:100;transition:all .3s cubic-bezier(.16,1,.3,1);color:#dfe9f4;cursor:pointer}.floating-hud-card.is-hidden{opacity:0;transform:translateY(-10px) scale(.96);pointer-events:none}.hud-card-header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(212,175,55,.2);padding-bottom:12px;margin-bottom:12px}.hud-card-title{display:flex;align-items:center;gap:10px}.hud-flag{font-size:1.6rem}.hud-titles h4{font-size:.98rem;color:#f3dfba;font-weight:800;margin:0}.hud-titles span{font-size:.72rem;color:#94a3b8;margin-top:2px;display:block}.hud-hq-badge{background:rgba(212,175,55,.12);border:1px solid #d4af37;color:#f7df94;font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:999px;font-family:"JetBrains Mono",monospace}.hud-info-grid{display:grid;gap:8px;font-size:.77rem;margin-bottom:14px}.hud-info-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.hud-info-row span{color:#94a3b8}.hud-info-row strong{color:#e2e8f0;font-weight:700;text-align:left;direction:ltr}.entity-chips-box{background:rgba(16,185,129,.06);border:1px dashed rgba(16,185,129,.35);border-radius:12px;padding:10px;margin-bottom:12px}.entity-chips-box label{display:block;font-size:.7rem;font-weight:700;color:#6ee7b7;margin-bottom:6px}.entity-chips-list{display:flex;flex-wrap:wrap;gap:5px}.entity-chip{background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.4);color:#f7df94;font-size:.68rem;font-weight:700;padding:3px 8px;border-radius:6px;font-family:"JetBrains Mono",monospace}.hud-card-footer{text-align:center;padding-top:4px;border-top:1px solid rgba(255,255,255,.07)}.hud-click-hint{font-size:.72rem;color:#10b981;font-weight:700;display:inline-block}.sr-gold-glow{fill:none;stroke:rgba(247,223,148,.38);stroke-width:6;stroke-linecap:round;filter:blur(4px);pointer-events:none}.sr-gold-arc{fill:none;stroke:#f7df94;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:8 6;animation:srGoldDash 1.2s linear infinite;filter:drop-shadow(0 0 8px rgba(247,223,148,.95)) drop-shadow(0 0 16px rgba(212,175,55,.8));pointer-events:none}@keyframes srGoldDash{to{stroke-dashoffset:-28}}.sr-hq-star{fill:#f7df94;stroke:#8a6a12;stroke-width:.8;filter:drop-shadow(0 0 8px rgba(247,223,148,1));cursor:pointer}.sr-hq-label{font-family:"JetBrains Mono",monospace;font-size:8px;font-weight:700;fill:#f3dfba;paint-order:stroke;stroke:rgba(2,10,7,.95);stroke-width:2.5;pointer-events:none}@media (max-width:760px){.floating-hud-card{width:calc(100% - 24px);top:auto;bottom:12px;right:12px;padding:14px}}';
 
   global.SRLangMap = { open: open, close: close, isOpen: isOpen };
 
