@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>S&R CoreSync - معمل تجربة ومعاينة خيارات الهيرو 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sr-gold: #d4af37;
+            --sr-gold-light: #f3dfba;
+            --sr-bg: #030806;
+            --sr-emerald: #10b981;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--sr-bg);
+            color: #e2e8f0;
+            font-family: 'Alexandria', system-ui, sans-serif;
+            overflow-x: hidden;
+        }
+        /* Top Switcher Bar */
+        .preview-switcher {
+            position: fixed;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(7, 18, 13, 0.95);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 999px;
+            padding: 6px 14px;
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85), 0 0 25px rgba(212, 175, 55, 0.25);
+            backdrop-filter: blur(24px);
+        }
+        .switcher-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        .switcher-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--sr-gold);
+            color: #ffffff;
+        }
+        .switcher-btn.active {
+            background: linear-gradient(135deg, var(--sr-gold), #b89628);
+            border-color: var(--sr-gold-light);
+            color: #040c09;
+            box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Mock Header */
+        .mock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 48px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            background: rgba(4, 10, 7, 0.85);
+            backdrop-filter: blur(20px);
+            margin-top: 55px;
+        }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: #ffffff;
+        }
+        .header-brand span { color: var(--sr-gold); }
+        .header-nav {
+            display: flex;
+            gap: 24px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-pwa {
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid var(--sr-gold);
+            color: var(--sr-gold-light);
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.82rem;
+        }
+        .btn-support {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid var(--sr-emerald);
+            color: #a7f3d0;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.82rem;
+        }
+
+        /* Hero Stage */
+        .hero-stage {
+            min-height: calc(100vh - 140px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px 60px;
+            position: relative;
+            background: radial-gradient(circle at 50% 28%, rgba(20, 50, 38, 0.5) 0%, rgba(3, 8, 6, 0.98) 75%);
+        }
+
+        /* Centerpiece Container */
+        .centerpiece-box {
+            position: relative;
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .centerpiece-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 30px rgba(212, 175, 55, 0.35));
+            border-radius: 20px;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Typography */
+        .hero-title {
+            font-size: clamp(2rem, 3.6vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 14px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--sr-gold-light) 75%, var(--sr-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 950px;
+        }
+        .hero-sub {
+            font-size: clamp(0.95rem, 1.2vw, 1.12rem);
+            color: #94a3b8;
+            max-width: 720px;
+            line-height: 1.8;
+            margin: 0 auto 28px;
+        }
+
+        /* Bottom Deck */
+        .bottom-deck {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1350px;
+            margin-top: auto;
+            padding-top: 20px;
+            gap: 16px;
+        }
+        .deck-badge {
+            background: rgba(7, 16, 12, 0.94);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            color: #cbd5e1;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+        .dock-pill {
+            background: rgba(7, 16, 12, 0.94);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            padding: 8px 18px;
+            border-radius: 999px;
+            color: var(--sr-gold-light);
+            font-weight: 700;
+            font-size: 0.84rem;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Switcher -->
+    <div class="preview-switcher">
+        <span style="font-size:0.75rem; color:#94a3b8; margin-left:6px; font-weight:700;">المعمل الحي:</span>
+        <button type="button" class="switcher-btn active" onclick="selectDesign(5)">الخيار 5 (المجرة + الاسم والمسمى + الأيقونات)</button>
+        <button type="button" class="switcher-btn" onclick="selectDesign(3)">الخيار 3 (المدار + السحابة + الدرع)</button>
+        <button type="button" class="switcher-btn" onclick="selectDesign(4)">الخيار 4 (الشعار الذهبي + الاسم الكامل)</button>
+        <button type="button" class="switcher-btn" onclick="selectDesign(1)">الخيار 1 (شبكة الهواتف و ERP الكونية)</button>
+        <button type="button" class="switcher-btn" onclick="selectDesign(2)">الخيار 2 (الشعار المعدني المداري)</button>
+    </div>
+
+    <!-- Header Mock -->
+    <header class="mock-header">
+        <div class="header-brand">
+            <img src="./assets/sr-core-emblem-official.webp" width="44" height="44" alt="Logo">
+            <div>S&R <span>CoreSync</span></div>
+        </div>
+        <div class="header-nav">
+            <div>01 / الخدمات والأنظمة</div>
+            <div>02 / الأسعار والباقات</div>
+            <div>03 / المتجر الرقمي</div>
+            <div>04 / القيادة والمؤسسون</div>
+        </div>
+        <div class="header-actions">
+            <div class="btn-pwa">⚡ تثبيت التطبيق</div>
+            <div class="btn-support">أدوات الدعم المؤسسي ▾</div>
+        </div>
+    </header>
+
+    <!-- Main Hero -->
+    <section class="hero-stage">
+        <div class="centerpiece-box">
+            <img id="heroDisplayImg" src="./assets/branding/hero-emblem-galaxy-icons-full-name.webp" class="centerpiece-img" alt="Hero Centerpiece">
+        </div>
+
+        <h1 class="hero-title" id="heroTitleText">
+            قمرة قيادة المنظومات الرقمية المتكاملة
+        </h1>
+
+        <p class="hero-sub" id="heroSubText">
+            تفاعل مباشرة مع النواة الذكية لإطلاق منصتك السحابية وهويتك البصرية بدقة متناهية.
+        </p>
+
+        <!-- Bottom Deck -->
+        <div class="bottom-deck">
+            <div class="deck-badge">⚡ سرعة الاستجابة: 0.08s | SOC2 / ISO | Autonomous v2</div>
+            <div class="dock-pill">🌐 دوك اللغات العالمي الموحد (29 لغة)</div>
+            <div class="deck-badge">🛡️ أنظمة FinTech ومسارات التنفيذ الذكية</div>
+        </div>
+    </section>
+
+    <script>
+        const designs = {
+            1: {
+                src: './assets/branding/hero-constellation-network.webp',
+                title: 'قمرة قيادة المنظومات الرقمية المتكاملة',
+                sub: 'تكامل فوري يربط أنظمة الـ ERP، الهواتف الذكية، والبنى السحابية في مدار كوني موحد.'
+            },
+            2: {
+                src: './assets/branding/hero-emblem-metallic-rings.webp',
+                title: 'النواة السيادية للحوسبة السحابية الفائقة',
+                sub: 'حضور معدني ثلاثي الأبعاد يعكس استقلالية وصلابة الأنظمة الذكية المؤسسية.'
+            },
+            3: {
+                src: './assets/branding/hero-emblem-orbital-cloud-ecosystem.webp',
+                title: 'منظومة S&R CoreSync السحابية الشاملة',
+                sub: 'مدار متصل يربط المتاجر الإلكترونية، حماية البيانات، والذكاء الاصطناعي بنواة المنظومة.'
+            },
+            4: {
+                src: './assets/branding/hero-emblem-full-logo-typography.webp',
+                title: 'S&R CoreSync For Intelligent Solutions',
+                sub: 'الهوية السيادية الكاملة: الشعار المعدني الذهبي والمسمى التأسيسي بدقة متناهية.'
+            },
+            5: {
+                src: './assets/branding/hero-emblem-galaxy-icons-full-name.webp',
+                title: 'قمرة قيادة المنظومات الرقمية المتكاملة',
+                sub: 'الشعار السيادي ثلاثي الأبعاد بالاسم الكامل والمسمى، متصلاً بأيقونات شبكة المنظومة الذكية.'
+            }
+        };
+
+        function selectDesign(num) {
+            document.querySelectorAll('.switcher-btn').forEach(b => b.classList.remove('active'));
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+
+            const item = designs[num];
+            const img = document.getElementById('heroDisplayImg');
+            img.style.opacity = '0';
+            img.style.transform = 'scale(0.96)';
+
+            setTimeout(() => {
+                img.src = item.src;
+                document.getElementById('heroTitleText').innerText = item.title;
+                document.getElementById('heroSubText').innerText = item.sub;
+                img.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+            }, 200);
+        }
+    </script>
+</body>
+</html>
