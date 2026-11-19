@@ -97,6 +97,7 @@ EXCLUDED_DEV_PAGES = {
     'preview-software-modal.html',
     'preview-welcome-email.html',
     'دليل-التنفيذ-الخطوة-بخطوة.html',
+    'preview-vscode-dataviewer.html',
 }
 
 # ---------------------------------------------------------------------------

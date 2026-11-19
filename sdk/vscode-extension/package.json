@@ -1,0 +1,73 @@
+{
+  "name": "sr-coresync-python-toolkit",
+  "displayName": "S&R CoreSync Python & Data Science Toolkit",
+  "description": "Enterprise VS Code Extension integrating with official Python extension, remote debugpy launcher, and interactive Data Viewer.",
+  "version": "1.0.0",
+  "publisher": "SR-CoreSync",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Data Science",
+    "Debuggers"
+  ],
+  "keywords": [
+    "python",
+    "debugpy",
+    "dataviewer",
+    "data science",
+    "ai"
+  ],
+  "activationEvents": [
+    "onLanguage:python",
+    "onCommand:sr.runPythonScript",
+    "onCommand:sr.openDataViewer",
+    "onCommand:sr.startRemoteDebugger"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sr.runPythonScript",
+        "title": "S&R: Run Current File in Configured Python Environment",
+        "category": "S&R CoreSync"
+      },
+      {
+        "command": "sr.openDataViewer",
+        "title": "S&R: Launch Interactive Data Viewer",
+        "category": "S&R CoreSync"
+      },
+      {
+        "command": "sr.startRemoteDebugger",
+        "title": "S&R: Launch Remote debugpy Debugger",
+        "category": "S&R CoreSync"
+      }
+    ],
+    "configuration": {
+      "title": "S&R CoreSync Python Toolkit",
+      "properties": {
+        "sr.python.remoteDebugHost": {
+          "type": "string",
+          "default": "localhost",
+          "description": "Host address for remote debugpy debugging."
+        },
+        "sr.python.remoteDebugPort": {
+          "type": "number",
+          "default": 5678,
+          "description": "Port for remote debugpy debugging."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
