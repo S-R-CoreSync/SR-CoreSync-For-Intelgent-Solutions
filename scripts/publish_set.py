@@ -44,7 +44,8 @@ EXCLUDED_DIRS = {
     'uploads',
     # stray Chrome print scratch dirs from an old local run: 329 junk files that
     # no page references and that only bloat the Pages artefact.
-    'temp_chrome_print_dir', 'temp_chrome_print_dir2'
+    'temp_chrome_print_dir', 'temp_chrome_print_dir2',
+    'SR-CoreSync-For-Intelgent-Solutions'
 }
 
 # Any other dot-directory is tooling state (editor caches, agent artefacts), not
@@ -95,7 +96,7 @@ EXCLUDED_DEV_PAGES = {
     'preview-license-manager.html',
     'preview-software-modal.html',
     'preview-welcome-email.html',
-    'preview-welcome-email.html',
+    'دليل-التنفيذ-الخطوة-بخطوة.html',
 }
 
 # ---------------------------------------------------------------------------

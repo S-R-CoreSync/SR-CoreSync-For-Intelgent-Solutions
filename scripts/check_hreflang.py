@@ -22,9 +22,11 @@ BASE = 'https://sr-coresync.com'
 RTL = {'ar', 'ckb'}
 
 PAGES = ['ar']
-SKIP = {'_site', 'build', 'node_modules', 'scripts', 'docs', 'partials', 'assets', 'i18n', 'js', 'css', 'workers', '.git', '.githooks', '.zwork'}
+SKIP = {'_site', 'build', 'node_modules', 'scripts', 'docs', 'partials', 'assets', 'i18n', 'js', 'css', 'workers', '.git', '.githooks', '.zwork', 'SR-CoreSync-For-Intelgent-Solutions'}
 for name in sorted(os.listdir(ROOT)):
     if name in SKIP or name.startswith(('.', '_')):
+        continue
+    if len(name) > 4 or not name.isalpha():
         continue
     if os.path.isdir(os.path.join(ROOT, name)) and os.path.exists(os.path.join(ROOT, name, 'index.html')):
         PAGES.append(name)
