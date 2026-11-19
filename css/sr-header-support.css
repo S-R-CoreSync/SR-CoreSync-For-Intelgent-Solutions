@@ -1,6 +1,61 @@
 /* ==============================================================================
- * S&R CoreSync - Header Support Tools Dropdown (Enterprise Emerald Dark Luxury)
+ * S&R CoreSync - Header Support Tools Dropdown & Top Header Capsule (Emerald Gold)
  * ============================================================================== */
+
+/* ─── Top Header Capsule Container (Far Left in RTL / Far Right in LTR) ─── */
+.tf-header .header-col-actions {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+    padding: 4px 7px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(212, 175, 55, 0.35) !important;
+    background: linear-gradient(180deg, rgba(14, 20, 28, 0.94), rgba(8, 12, 18, 0.96)) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.15) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    z-index: 100 !important;
+    margin: 0 !important;
+}
+
+html[dir="rtl"] .tf-header .header-col-actions {
+    order: 3 !important;
+    margin-inline-start: auto !important;
+    margin-inline-end: 0 !important;
+}
+
+html[dir="ltr"] .tf-header .header-col-actions {
+    order: 3 !important;
+    margin-inline-start: auto !important;
+    margin-inline-end: 0 !important;
+}
+
+.tf-header .btn-pwa-header {
+    background: rgba(212, 175, 55, 0.1) !important;
+    border: 1px solid rgba(212, 175, 55, 0.45) !important;
+    color: #f3dfba !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    padding: 6px 14px !important;
+    border-radius: 999px !important;
+    font-size: 0.82rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    cursor: pointer !important;
+    font-family: inherit !important;
+    line-height: 1 !important;
+}
+
+.tf-header .btn-pwa-header:hover {
+    background: rgba(212, 175, 55, 0.22) !important;
+    border-color: #d4af37 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.45) !important;
+    transform: translateY(-1px);
+}
 
 .header-support-dropdown-wrap {
     position: relative;
