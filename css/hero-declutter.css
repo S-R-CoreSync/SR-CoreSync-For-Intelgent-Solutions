@@ -1961,10 +1961,16 @@
 }
 
 
-/* Ensure support dropdown menu is strictly hidden unless toggled active */
+/* Ensure support dropdown menu stays strictly hidden until user clicks button */
 .header-support-menu {
     display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 .header-support-dropdown-wrap.is-active .header-support-menu {
     display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
 }
