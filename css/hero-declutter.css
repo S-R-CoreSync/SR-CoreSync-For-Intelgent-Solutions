@@ -1974,3 +1974,15 @@
     visibility: visible !important;
     pointer-events: auto !important;
 }
+
+/* Fix text overlap and shadow leak in short viewports */
+.sr-tools-capsule .header-support-menu {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+.sr-tools-capsule .header-support-dropdown-wrap.is-active .header-support-menu {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
