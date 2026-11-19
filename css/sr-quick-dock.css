@@ -223,6 +223,45 @@
     transform: rotate(180deg);
 }
 
+/* ---------- توسيع شريط اللغة (dock) ---------- */
+.sr-quick-dock-container {
+    left: 0 !important;                     /* تثبيت إلى اليسار بدلاً من الوسط */
+    right: auto !important;
+    transform: none !important;
+    bottom: 24px !important;                /* موضع ثابت متناسق مع التصميم */
+    max-width: calc(100vw - 20px) !important;
+    overflow-x: auto !important;            /* تمكين التمرير الأفقي */
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;      /* سلاسة على الأجهزة اللمسية */
+    padding: 4px 8px !important;            /* مساحة داخلية خفيفة */
+    border-radius: 14px !important;
+    background: var(--sr-dock-bg) !important;
+    backdrop-filter: blur(22px) saturate(180%) !important;
+    scroll-snap-type: x mandatory !important;
+}
+
+/* ضبط العنصر الداخلي (dock) لاحتواء الأيقونات بصورة مرنة */
+.sr-quick-dock {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+/* كل عنصر لغة يجب أن يبقى سليمًا أثناء التمرير */
+.sr-dock-item {
+    flex: 0 0 auto !important;
+    scroll-snap-align: start !important;
+}
+
+/* تحسين الرسوم المتحركة عند إظهار/إخفاء الشريط */
+.sr-quick-dock-container.visible {
+    transform: translateX(0) translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
 /* Mobile Screens */
 @media (max-width: 640px) {
     .sr-quick-dock-container {
