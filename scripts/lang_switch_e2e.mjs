@@ -173,19 +173,7 @@ async function openLangMap(send) {
     }
     throw new Error('the language map did not open within 24s');
 }
-    const clicked = await evalJs(send,
-        `(() => { const b = document.querySelector('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"]');
-                  if (!b) return false; b.click(); return true; })()`);
-    if (!clicked) throw new Error('language map trigger not found on this page');
-    for (let i = 0; i < 30; i++) {
-        await sleep(400);
-        const ready = await evalJs(send,
-            `(() => { const h = document.getElementById('srLangMapHost');
-                      return !!(window.SRLangMap && h && h.shadowRoot && h.shadowRoot.querySelector('.sr-lm__item')); })()`);
-        if (ready) return true;
-    }
-    throw new Error('the language map did not open within 12s');
-}
+
 
 // Clicks the market whose country matches (السويد / ألمانيا ...), once.
 async function clickMarket(send, country) {
