@@ -680,8 +680,11 @@
     wrap.innerHTML =
       '<div class="sr-lm__panel">' +
         '<div class="sr-lm__bar">' +
-          '<div><h2>خريطة اللغات والأسواق السيادية والكيانات القانونية — المعاينة الذكية (Hover HUD Mode)</h2>' +
-          '<p>حرك مؤشر الفأرة (Hover) فوق أي دولة لرسم الخط الذهبي فوراً من أمستردام وانبثاق بطاقة الكيانات والضرائب والتوقيت الحي — أو انقر للتحويل المباشر.</p></div>' +
+          '<div style="display:flex; align-items:center; gap:12px;">' +
+            '<img src="assets/sr-hq-emblem-64.png" alt="S&R CoreSync" style="width:40px; height:40px; border-radius:10px; border:1px solid rgba(212,175,55,.45); box-shadow:0 0 14px rgba(212,175,55,.25); object-fit:cover; flex-shrink:0;">' +
+            '<div><h2>S&R CoreSync — خريطة اللغات والأسواق السيادية والكيانات القانونية</h2>' +
+            '<p>Intelligent Solutions. Connected Systems. · المقر السيادي: أمستردام (AMS HQ) · 29 لغة · شبكة الكيانات الدولية</p></div>' +
+          '</div>' +
           '<div class="sr-lm__views">' +
             '<button type="button" data-view="emea" class="is-on">أوروبا والشرق الأوسط</button>' +
             '<button type="button" data-view="world">العالم</button>' +
@@ -830,7 +833,7 @@
         '<circle class="sr-hq-halo" cx="' + ax + '" cy="' + ay + '" r="16"></circle>' +
         '<circle class="sr-hq-star" cx="' + ax + '" cy="' + ay + '" r="5.5"></circle>' +
         '<circle class="sr-hq-status-dot" cx="' + ax + '" cy="' + ay + '" r="2.2"></circle>' +
-        '<text class="sr-hq-label" x="' + (ams.x + 9).toFixed(1) + '" y="' + (ams.y - 7).toFixed(1) + '">AMS HQ · 99.99% Live Radar</text>';
+        '<text class="sr-hq-label" x="' + (ams.x + 9).toFixed(1) + '" y="' + (ams.y - 7).toFixed(1) + '">AMS HQ · S&R CoreSync (99.99% Live)</text>';
     }
   }
 
