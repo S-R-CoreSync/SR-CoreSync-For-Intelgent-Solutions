@@ -158,26 +158,31 @@ async function evalJs(send, expression) {
 // Opens the language map the way a user does: click the dock trigger, then
 // wait for the lazily loaded map script to build its shadow DOM.
 async function openLangMap(send) {
-    // Click the language map trigger
+    // Click the language map trigger (first matching element)
     const clicked = await evalJs(send,
-        `(() => { const b = document.querySelector('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"]'); if (!b) return false; b.click(); return true; })()`);
+        `(() => {
+            const elems = document.querySelectorAll('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"]');
+            if (!elems.length) return false;
+            elems[0].click();
+            return true;
+        })()`);
     if (!clicked) throw new Error('language map trigger not found on this page');
     // Initial delay to let lazy script start
-    await sleep(1500);
+    await sleep(2000);
     // Wait for the host element to appear (up to 30 attempts ≈12 s)
     for (let i = 0; i < 30; i++) {
         const hostExists = await evalJs(send, `(() => !!document.getElementById('srLangMapHost'))()`);
         if (hostExists) break;
         await sleep(400);
     }
-    // Poll for the map items (up to 90 attempts ≈36 s total)
-    for (let i = 0; i < 90; i++) {
+    // Poll for the map items (up to 120 attempts ≈48 s total)
+    for (let i = 0; i < 120; i++) {
         await sleep(400);
         const ready = await evalJs(send,
             `(() => { const h = document.getElementById('srLangMapHost'); return !!(window.SRLangMap && h && h.shadowRoot && h.shadowRoot.querySelector('.sr-lm__item')); })()`);
         if (ready) return true;
     }
-    throw new Error('the language map did not open within 36s');
+    throw new Error('the language map did not open within 48s');
 }
 
 
