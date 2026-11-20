@@ -179,7 +179,7 @@ async function openLangMap(send) {
     // Initial delay to let script start
     await sleep(2000);
     // Wait for the host element to appear (up to 30 attempts ≈12 s)
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 60; i++) {
         const hostExists = await evalJs(send, `(() => !!document.getElementById('srLangMapHost'))()`);
         if (hostExists) break;
         await sleep(400);
@@ -231,7 +231,7 @@ async function main() {
 
     PORT = await findFreePort(9223);
     HTTP_PORT = await findFreePort(8098);
-    const server = await startServer();
+    console.log('HTTP_PORT=', HTTP_PORT);
     const profile = mkdtempSync(join(tmpdir(), 'sr-e2e-'));
     let child = await launchBrowser(profile, ['--disable-web-security','--allow-running-insecure-content']);
     if (!child) { server.close(); console.log('SKIPPED - browser did not start correctly.'); return; }
