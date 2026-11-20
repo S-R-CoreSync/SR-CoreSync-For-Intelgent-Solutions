@@ -5,7 +5,7 @@ import subprocess
 import os
 import time
 
-PORT = 8922
+PORT = 8933
 ART_DIR = r'C:\Users\msali\.gemini\antigravity\brain\36a38584-d480-4aa6-b502-4d07f979cd72'
 chrome = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 temp_profile = os.path.join(ART_DIR, 'temp_chrome_profile_map')
@@ -29,26 +29,32 @@ test_html = """<!DOCTYPE html>
   </style>
 </head>
 <body>
-  <div style="padding: 40px; color: gold;">Testing Live SR Language Map Option 2 (Hover HUD + Clocks + Radar)...</div>
   <script src="js/sr-lang-map.js?v=20261120-hud2"></script>
   <script>
     window.addEventListener('DOMContentLoaded', function() {
       if (window.SRLangMap && window.SRLangMap.open) {
         window.SRLangMap.open();
         setTimeout(function() {
-          var pin = document.querySelector('.sr-lm__pin[data-id="iq"]');
-          if (pin) {
-            var evt = new MouseEvent('mouseenter', { bubbles: true, cancelable: true });
-            pin.dispatchEvent(evt);
+          var host = document.getElementById('srLangMapHost');
+          if (host && host.shadowRoot) {
+            var pin = host.shadowRoot.querySelector('.sr-lm__pin[data-id="iq"]');
+            if (pin) {
+              pin.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true, cancelable: true }));
+              console.log('Hover dispatched on iq!');
+            } else {
+              console.log('Pin iq not found');
+            }
+          } else {
+            console.log('Host/ShadowRoot not found');
           }
-        }, 600);
+        }, 500);
       }
     });
   </script>
 </body>
 </html>"""
 
-test_file = 'temp_map_test.html'
+test_file = 'temp_map_test2.html'
 with open(test_file, 'w', encoding='utf-8') as f:
     f.write(test_html)
 
@@ -60,7 +66,7 @@ cmd = [
     f'--user-data-dir={temp_profile}',
     f'--screenshot={out_file}',
     '--window-size=1600,980',
-    '--virtual-time-budget=4000',
+    '--virtual-time-budget=3000',
     '--run-all-compositor-stages-before-draw',
     url
 ]
@@ -71,4 +77,4 @@ if os.path.exists(test_file):
     os.remove(test_file)
 
 size = os.path.getsize(out_file) if os.path.exists(out_file) else 0
-print(f"Captured real_lang_map_option2_live.png via HTTP: exists={os.path.exists(out_file)}, size={size}")
+print(f"Captured real_lang_map_option2_live.png: exists={os.path.exists(out_file)}, size={size}")
