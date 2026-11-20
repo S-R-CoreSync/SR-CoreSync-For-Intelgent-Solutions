@@ -1,5 +1,15 @@
 <div dir="rtl">
 
+## 🌟 المرحلة 215: مزامنة وثيقة تجزئة أمان المحتوى `csp-hashes.txt` (226 Hashes) واجتياز فحص `build_csp.py --check` بنسبة 100%
+- [x] **تحديث وبناء تجزئات الـ CSP:**
+  - إعادة بناء وتحديث مجموعة النشر الكاملة `prepare_publish_set.py` لتشمل كافة صفحات الموقع (185 صفحة).
+  - تشغيل `python scripts/build_csp.py` لتحديث ملف `csp-hashes.txt` وإدراج الـ 226 تجزئة البرمجية الصريحة للسكربتات المضمنة.
+- [x] **التحقق الشامل:**
+  - اجتياز فحص `python scripts/build_csp.py --check` بنجاح كامل: `PASSED - csp-hashes.txt matches the publish set (226 hashes)`.
+  - اجتياز اختبار `preflight.py` الشامل بجميع بواباته الثمانية بنجاح تام.
+- [x] **الاعتماد والدفع إلى GitHub:**
+  - اعتماد ملف `csp-hashes.txt` والدفع إلى `origin/main`.
+
 ## 🌟 المرحلة 214: إصلاح الخطأ النحوي (SyntaxError) في `js/sr-lang-map.js` واجتياز فحص `node --check` بنسبة 100%
 - [x] **تشخيص الخطأ النحوي في سطر الـ STYLES:**
   - رصد وجود رمز زائد `';` في نهاية السطر 1054 (`padding:14px}}';';`) أدى لفشل فحص البناء `node --check` في GitHub Actions.
