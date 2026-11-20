@@ -158,6 +158,21 @@ async function evalJs(send, expression) {
 // Opens the language map the way a user does: click the dock trigger, then
 // wait for the lazily loaded map script to build its shadow DOM.
 async function openLangMap(send) {
+    // Click the language map trigger
+    const clicked = await evalJs(send,
+        `(() => { const b = document.querySelector('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"]'); if (!b) return false; b.click(); return true; })()`);
+    if (!clicked) throw new Error('language map trigger not found on this page');
+    // Give the lazy script a moment to start loading before we start polling
+    await sleep(800);
+    // Increase polling attempts to 60 (≈24 s) to accommodate slower loads
+    for (let i = 0; i < 60; i++) {
+        await sleep(400);
+        const ready = await evalJs(send,
+            `(() => { const h = document.getElementById('srLangMapHost'); return !!(window.SRLangMap && h && h.shadowRoot && h.shadowRoot.querySelector('.sr-lm__item')); })()`);
+        if (ready) return true;
+    }
+    throw new Error('the language map did not open within 24s');
+}
     const clicked = await evalJs(send,
         `(() => { const b = document.querySelector('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"]');
                   if (!b) return false; b.click(); return true; })()`);
