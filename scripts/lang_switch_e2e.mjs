@@ -235,6 +235,7 @@ async function main() {
     const profile = mkdtempSync(join(tmpdir(), 'sr-e2e-'));
     let child = await launchBrowser(profile, []);
     if (!child) { server.close(); console.log('SKIPPED - browser did not start correctly.'); return; }
+    console.log('Browser launched with PID', child.pid);
 
     const base = `http://127.0.0.1:${HTTP_PORT}`;
 
