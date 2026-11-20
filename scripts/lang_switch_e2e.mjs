@@ -158,14 +158,18 @@ async function evalJs(send, expression) {
 // Opens the language map the way a user does: click the dock trigger, then
 // wait for the lazily loaded map script to build its shadow DOM.
 async function openLangMap(send) {
+    console.log('Opening language map');
+    // Ensure page is fully loaded
+    await evalJs(send, `(() => document.readyState === 'complete')`);
     // Click the language map trigger (first matching element)
     const clicked = await evalJs(send,
         `(() => {
-            const elems = document.querySelectorAll('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"]');
+            const elems = document.querySelectorAll('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"], [aria-label*="Languages"]');
             if (!elems.length) return false;
             elems[0].click();
             return true;
         })()`);
+    console.log('Trigger clicked:', clicked);
     if (!clicked) throw new Error('language map trigger not found on this page');
     // Ensure the lazy map script is loaded (force inject if missing)
     await evalJs(send, `(() => {
@@ -174,24 +178,36 @@ async function openLangMap(send) {
             s.src = '/js/sr-lang-map.js';
             s.type = 'module';
             document.body.appendChild(s);
+            console.log('Injected sr-lang-map.js');
+        } else {
+            console.log('sr-lang-map.js already present');
         }
     })()`);
-    // Initial delay to let script start
-    await sleep(2000);
-    // Wait for the host element to appear (up to 30 attempts ≈12 s)
-    for (let i = 0; i < 60; i++) {
-        const hostExists = await evalJs(send, `(() => !!document.getElementById('srLangMapHost'))()`);
+    // Wait a moment for script to start
+    await sleep(3000);
+    // Wait for the host element to appear (up to 120 attempts ≈48 s)
+    let hostExists = false;
+    for (let i = 0; i < 120; i++) {
+        hostExists = await evalJs(send, `(() => !!document.getElementById('srLangMapHost'))()`);
         if (hostExists) break;
         await sleep(400);
     }
-    // Poll for the map items (up to 120 attempts ≈48 s total)
-    for (let i = 0; i < 120; i++) {
+    console.log('Host existence:', hostExists);
+    if (!hostExists) throw new Error('srLangMapHost not found after waiting');
+    // Poll for the map items (up to 300 attempts ≈120 s total)
+    for (let i = 0; i < 300; i++) {
         await sleep(400);
         const ready = await evalJs(send,
-            `(() => { const h = document.getElementById('srLangMapHost'); return !!(window.SRLangMap && h && h.shadowRoot && h.shadowRoot.querySelector('.sr-lm__item')); })()`);
-        if (ready) return true;
+            `(() => {
+                const h = document.getElementById('srLangMapHost').shadowRoot;
+                return !!(window.SRLangMap && h && h.querySelector('.sr-lm__item'));
+            })()`);
+        if (ready) {
+            console.log('Map ready after attempts', i + 1);
+            return true;
+        }
     }
-    throw new Error('the language map did not open within 48s');
+    throw new Error('the language map did not open within 120s');
 }
 
 
