@@ -167,7 +167,16 @@ async function openLangMap(send) {
             return true;
         })()`);
     if (!clicked) throw new Error('language map trigger not found on this page');
-    // Initial delay to let lazy script start
+    // Ensure the lazy map script is loaded (force inject if missing)
+    await evalJs(send, `(() => {
+        if (!document.querySelector('script[src*="sr-lang-map.js"]')) {
+            const s = document.createElement('script');
+            s.src = '/js/sr-lang-map.js';
+            s.type = 'module';
+            document.body.appendChild(s);
+        }
+    })()`);
+    // Initial delay to let script start
     await sleep(2000);
     // Wait for the host element to appear (up to 30 attempts ≈12 s)
     for (let i = 0; i < 30; i++) {
