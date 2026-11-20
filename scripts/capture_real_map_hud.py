@@ -1,10 +1,23 @@
+import http.server
+import socketserver
+import threading
 import subprocess
 import os
 import time
 
+PORT = 8922
 ART_DIR = r'C:\Users\msali\.gemini\antigravity\brain\36a38584-d480-4aa6-b502-4d07f979cd72'
 chrome = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 temp_profile = os.path.join(ART_DIR, 'temp_chrome_profile_map')
+
+class Handler(http.server.SimpleHTTPRequestHandler):
+    def log_message(self, format, *args):
+        pass
+
+httpd = socketserver.TCPServer(('127.0.0.1', PORT), Handler)
+server_thread = threading.Thread(target=httpd.serve_forever)
+server_thread.daemon = True
+server_thread.start()
 
 test_html = """<!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -35,12 +48,12 @@ test_html = """<!DOCTYPE html>
 </body>
 </html>"""
 
-test_path = 'temp_real_map_test.html'
-with open(test_path, 'w', encoding='utf-8') as f:
+test_file = 'temp_map_test.html'
+with open(test_file, 'w', encoding='utf-8') as f:
     f.write(test_html)
 
 out_file = os.path.join(ART_DIR, 'real_lang_map_option2_live.png')
-t_url = 'file:///' + os.path.abspath(test_path).replace('\\', '/')
+url = f'http://127.0.0.1:{PORT}/{test_file}'
 
 cmd = [
     chrome, '--headless=new', '--disable-gpu', '--no-sandbox', '--incognito',
@@ -49,12 +62,13 @@ cmd = [
     '--window-size=1600,980',
     '--virtual-time-budget=4000',
     '--run-all-compositor-stages-before-draw',
-    t_url
+    url
 ]
-subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+res = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+httpd.shutdown()
 
-if os.path.exists(test_path):
-    os.remove(test_path)
+if os.path.exists(test_file):
+    os.remove(test_file)
 
 size = os.path.getsize(out_file) if os.path.exists(out_file) else 0
-print(f"Captured real_lang_map_option2_live.png: exists={os.path.exists(out_file)}, size={size}")
+print(f"Captured real_lang_map_option2_live.png via HTTP: exists={os.path.exists(out_file)}, size={size}")
