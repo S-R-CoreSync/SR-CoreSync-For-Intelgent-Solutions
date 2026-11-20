@@ -14,7 +14,7 @@
      - صياغة عنوان الصفحات: `S&R CoreSync — Intelligent Solutions. Connected Systems.`.
      - حصر الاسم القانوني القديم في سجلات الامتثال والـ KVK أسفل الفوتر دون التأثير على الهوية البصرية.
   3. **بناء خطة استبدال الأصول الرقمية (Omni-Channel Asset Pipeline):**
-     - شريط التنقل والهيدر (`assets/logo.svg`, `assets/logo-icon.svg`).
+     - شريط التنقل والهيدر (`new_master_logo_2026.png`, `new_logo_emblem_crop.png`).
      - أيقونات المتصفح وتطبيقات الويب (`favicon.ico`, `favicon-96.png`, `favicon-180.png`, `icon-192.png`, `icon-maskable-512.png`).
      - بطاقات المشاركة الاجتماعية والـ Open Graph 8K (`og:image`).
      - أختام الحوكمة وبطاقات الـ NFC للرؤساء التنفيذيين (`assets/sr-core-emblem-official.png`, `assets/nfc-card-*-spec.png`).
@@ -128,7 +128,7 @@
      - صياغة عنوان الصفحات: `S&R CoreSync — Intelligent Solutions. Connected Systems.`.
      - حصر الاسم القانوني القديم في سجلات الامتثال والـ KVK أسفل الفوتر دون التأثير على الهوية البصرية.
   3. **بناء خطة استبدال الأصول الرقمية (Omni-Channel Asset Pipeline):**
-     - شريط التنقل والهيدر (`assets/logo.svg`, `assets/logo-icon.svg`).
+     - شريط التنقل والهيدر (`new_master_logo_2026.png`, `new_logo_emblem_crop.png`).
      - أيقونات المتصفح وتطبيقات الويب (`favicon.ico`, `favicon-96.png`, `favicon-180.png`, `icon-192.png`, `icon-maskable-512.png`).
      - بطاقات المشاركة الاجتماعية والـ Open Graph 8K (`og:image`).
      - أختام الحوكمة وبطاقات الـ NFC للرؤساء التنفيذيين (`assets/sr-core-emblem-official.png`, `assets/nfc-card-*-spec.png`).
@@ -242,7 +242,7 @@
      - صياغة عنوان الصفحات: `S&R CoreSync — Intelligent Solutions. Connected Systems.`.
      - حصر الاسم القانوني القديم في سجلات الامتثال والـ KVK أسفل الفوتر دون التأثير على الهوية البصرية.
   3. **بناء خطة استبدال الأصول الرقمية (Omni-Channel Asset Pipeline):**
-     - شريط التنقل والهيدر (`assets/logo.svg`, `assets/logo-icon.svg`).
+     - شريط التنقل والهيدر (`new_master_logo_2026.png`, `new_logo_emblem_crop.png`).
      - أيقونات المتصفح وتطبيقات الويب (`favicon.ico`, `favicon-96.png`, `favicon-180.png`, `icon-192.png`, `icon-maskable-512.png`).
      - بطاقات المشاركة الاجتماعية والـ Open Graph 8K (`og:image`).
      - أختام الحوكمة وبطاقات الـ NFC للرؤساء التنفيذيين (`assets/sr-core-emblem-official.png`, `assets/nfc-card-*-spec.png`).
@@ -356,7 +356,7 @@
      - صياغة عنوان الصفحات: `S&R CoreSync — Intelligent Solutions. Connected Systems.`.
      - حصر الاسم القانوني القديم في سجلات الامتثال والـ KVK أسفل الفوتر دون التأثير على الهوية البصرية.
   3. **بناء خطة استبدال الأصول الرقمية (Omni-Channel Asset Pipeline):**
-     - شريط التنقل والهيدر (`assets/logo.svg`, `assets/logo-icon.svg`).
+     - شريط التنقل والهيدر (`new_master_logo_2026.png`, `new_logo_emblem_crop.png`).
      - أيقونات المتصفح وتطبيقات الويب (`favicon.ico`, `favicon-96.png`, `favicon-180.png`, `icon-192.png`, `icon-maskable-512.png`).
      - بطاقات المشاركة الاجتماعية والـ Open Graph 8K (`og:image`).
      - أختام الحوكمة وبطاقات الـ NFC للرؤساء التنفيذيين (`assets/sr-core-emblem-official.png`, `assets/nfc-card-*-spec.png`).
@@ -576,7 +576,7 @@
      - صياغة عنوان الصفحات: `S&R CoreSync — Intelligent Solutions. Connected Systems.`.
      - حصر الاسم القانوني القديم في سجلات الامتثال والـ KVK أسفل الفوتر دون التأثير على الهوية البصرية.
   3. **بناء خطة استبدال الأصول الرقمية (Omni-Channel Asset Pipeline):**
-     - شريط التنقل والهيدر (`assets/logo.svg`, `assets/logo-icon.svg`).
+     - شريط التنقل والهيدر (`new_master_logo_2026.png`, `new_logo_emblem_crop.png`).
      - أيقونات المتصفح وتطبيقات الويب (`favicon.ico`, `favicon-96.png`, `favicon-180.png`, `icon-192.png`, `icon-maskable-512.png`).
      - بطاقات المشاركة الاجتماعية والـ Open Graph 8K (`og:image`).
      - أختام الحوكمة وبطاقات الـ NFC للرؤساء التنفيذيين (`assets/sr-core-emblem-official.png`, `assets/nfc-card-*-spec.png`).
