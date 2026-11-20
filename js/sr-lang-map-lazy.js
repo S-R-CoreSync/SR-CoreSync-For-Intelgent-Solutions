@@ -45,31 +45,4 @@
       if (window.SRLangMap && window.SRLangMap.open) { window.SRLangMap.open(); }
     });
   }, true);
-
-  /* Global Hotkey (M / L / Esc): Sovereignty at fingertips from any page */
-  document.addEventListener('keydown', function (e) {
-    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) { return; }
-    var tag = (e.target && e.target.tagName ? e.target.tagName : '').toUpperCase();
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (e.target && e.target.isContentEditable)) {
-      return;
-    }
-    var k = (e.key || '').toLowerCase();
-    if (k === 'm' || k === 'l') {
-      e.preventDefault();
-      if (window.SRLangMap && window.SRLangMap.open) {
-        if (window.SRLangMap.isOpen && window.SRLangMap.isOpen()) {
-          window.SRLangMap.close();
-        } else {
-          window.SRLangMap.open();
-        }
-      } else {
-        if (state === 'loading') { return; }
-        state = 'loading';
-        load(function () {
-          state = 'ready';
-          if (window.SRLangMap && window.SRLangMap.open) { window.SRLangMap.open(); }
-        });
-      }
-    }
-  }, true);
 })();
