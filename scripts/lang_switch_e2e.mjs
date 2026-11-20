@@ -233,7 +233,7 @@ async function main() {
     HTTP_PORT = await findFreePort(8098);
     const server = await startServer();
     const profile = mkdtempSync(join(tmpdir(), 'sr-e2e-'));
-    let child = await launchBrowser(profile, []);
+    let child = await launchBrowser(profile, ['--disable-web-security','--allow-running-insecure-content']);
     if (!child) { server.close(); console.log('SKIPPED - browser did not start correctly.'); return; }
     console.log('Browser launched with PID', child.pid);
 
