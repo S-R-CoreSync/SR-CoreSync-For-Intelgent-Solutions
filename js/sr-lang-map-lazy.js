@@ -45,4 +45,30 @@
       if (window.SRLangMap && window.SRLangMap.open) { window.SRLangMap.open(); }
     });
   }, true);
+
+  // Sovereign Global Hotkeys: M or L opens map from anywhere
+  document.addEventListener('keydown', function (e) {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) {
+      return;
+    }
+    var key = (e.key || '').toLowerCase();
+    if (key === 'm' || key === 'l') {
+      if (window.SRLangMap && window.SRLangMap.open) {
+        if (window.SRLangMap.isOpen && window.SRLangMap.isOpen()) {
+          window.SRLangMap.close();
+        } else {
+          window.SRLangMap.open();
+        }
+        e.preventDefault();
+        return;
+      }
+      e.preventDefault();
+      if (state === 'loading') { return; }
+      state = 'loading';
+      load(function () {
+        state = 'ready';
+        if (window.SRLangMap && window.SRLangMap.open) { window.SRLangMap.open(); }
+      });
+    }
+  });
 })();

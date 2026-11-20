@@ -681,10 +681,14 @@
       '<div class="sr-lm__panel">' +
         '<div class="sr-lm__bar">' +
           '<div><h2>خريطة اللغات والأسواق السيادية والكيانات القانونية — المعاينة الذكية (Hover HUD Mode)</h2>' +
-          '<p>حرك مؤشر الفأرة (Hover) فوق أي دولة لرسم الخط الذهبي فوراً من أمستردام وانبثاق بطاقة الكيانات والضرائب — أو انقر للتحويل المباشر.</p></div>' +
+          '<p>حرك مؤشر الفأرة (Hover) فوق أي دولة لرسم الخط الذهبي فوراً من أمستردام وانبثاق بطاقة الكيانات والضرائب والتوقيت الحي — أو انقر للتحويل المباشر.</p></div>' +
           '<div class="sr-lm__views">' +
             '<button type="button" data-view="emea" class="is-on">أوروبا والشرق الأوسط</button>' +
             '<button type="button" data-view="world">العالم</button>' +
+          '</div>' +
+          '<div class="sr-lm__hotkey-badge" title="اختصارات لوحة المفاتيح السيادية">' +
+            '<span class="hotkey-dot">●</span>' +
+            '<span>اختصار الخريطة: <kbd>M</kbd> أو <kbd>L</kbd> · إغلاق: <kbd>Esc</kbd></span>' +
           '</div>' +
           '<label class="sr-lm__search"><input type="search" placeholder="ابحث عن دولة أو لغة…" autocomplete="off"></label>' +
           '<button type="button" class="sr-lm__close" aria-label="إغلاق">✕</button>' +
