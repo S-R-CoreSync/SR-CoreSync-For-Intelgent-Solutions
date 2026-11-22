@@ -71,10 +71,7 @@ jobs:
                 "publish set is served.")
           PY
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -241,12 +238,16 @@ jobs:
         with:
           path: '_site'
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # The publish set is ~350 MB / ~1.3k files; GitHub's CDN sync of an
-          # artifact this size regularly needs more than the 10 minute default,
-          # and the step then aborts on "syncing_files" and cancels the deploy.
-          timeout: 1800000
-          reporting_interval: 15000
+          timeout: 600000
+          reporting_interval: 10000
