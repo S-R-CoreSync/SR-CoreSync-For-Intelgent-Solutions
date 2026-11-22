@@ -88,9 +88,9 @@ def update_banner_emblem(img_path, center_x, center_y, diameter, coin):
     # Save back in original format and quality
     fmt = "JPEG" if img_path.lower().endswith(('.jpg', '.jpeg')) else "WEBP"
     if fmt == "JPEG":
-        banner.convert("RGB").save(img_path, "JPEG", quality=95, optimize=True)
+        banner.convert("RGB").save(img_path, "JPEG", quality=92, optimize=True)
     else:
-        banner.save(img_path, "WEBP", quality=95, method=6)
+        banner.save(img_path, "WEBP", quality=82, method=6)
     return True
 
 def generate_scaled_variants(base_2560_path, base_name, is_jpg=True):
@@ -101,16 +101,16 @@ def generate_scaled_variants(base_2560_path, base_name, is_jpg=True):
         im_4k = im_rgb.resize((3840, 2160), Image.Resampling.LANCZOS)
         p_4k_jpg = os.path.join(ASSETS_DIR, f"{base_name}-4k.jpg")
         p_4k_webp = os.path.join(ASSETS_DIR, f"{base_name}-4k.webp")
-        im_4k.save(p_4k_jpg, "JPEG", quality=95, optimize=True)
-        im_4k.save(p_4k_webp, "WEBP", quality=95, method=6)
+        im_4k.save(p_4k_jpg, "JPEG", quality=92, optimize=True)
+        im_4k.save(p_4k_webp, "WEBP", quality=82, method=6)
         
         # 2560 WebP
         p_2560_webp = os.path.join(ASSETS_DIR, f"{base_name}-2560.webp")
-        im_rgb.save(p_2560_webp, "WEBP", quality=95, method=6)
+        im_rgb.save(p_2560_webp, "WEBP", quality=82, method=6)
         
         # Base WebP (2560)
         p_base_webp = os.path.join(ASSETS_DIR, f"{base_name}.webp")
-        im_rgb.save(p_base_webp, "WEBP", quality=95, method=6)
+        im_rgb.save(p_base_webp, "WEBP", quality=82, method=6)
         
         # 1280 (1280x720)
         im_1280 = im_rgb.resize((1280, 720), Image.Resampling.LANCZOS)
