@@ -1,6 +1,37 @@
 
 <div dir="rtl">
 
+## 🌟 المرحلة 219: معالجة أخطاء الـ CI في GitHub Actions، ترقية بنك اختبار التبديل اللغوي E2E، وضبط حزمة النشر السيادي بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:48 صباحاً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاقات الـ CI الواردة من GitHub Actions في خطوتي `lang_switch_e2e.mjs` و `build_csp.py --check`، وتطهير حزمة النشر من أصول الـ SDK غير المتتبعة.
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **معالجة خطأ `lang_switch_e2e.mjs` واكتمال بنك الاختبار:**
+     - إصلاح خطأ `ReferenceError: server is not defined` عبر استدعاء وتمرير كائن `server` من `startServer()` وتوفير كود الإغلاق الآمن للاتصالات.
+     - إضافة الأعلام اللارأسية التوافقية (`--headless=new` و fallback إلى `--headless`) لدعم العمل في بيئات Linux (Ubuntu runner) وبيئات Windows.
+     - تحديث محددات العناصر لتتطابق بدقة متناهية مع شجرة الـ Shadow DOM الفعلية لخريطة الرادار السيادية (`sr-lm__pin` و `#srHoverHud` والتحويل الفوري عبر `langUrl`).
+     - تنفيذ بنك الاختبار محلياً واجتياز السيناريوهات الثلاثة كاملة بنجاح 100%:
+       - `PASS from / the map switches to /sv/ (real click-through)`
+       - `PASS from /sv/ Germany CTA resolves at the site root`
+       - `PASS click on the displayed market navigates to /de/`
+  2. **تطهير حزمة النشر في `scripts/publish_set.py` وحمايتها:**
+     - كشف ملفات البناء المؤقتة غير المتتبعة في `sdk/vscode-extension/out` و `*.vsix`.
+     - إضافة `sdk` و `out` إلى `EXCLUDED_DIRS` وإضافة `sdk` إلى قائمة الممنوعات `FORBIDDEN_PUBLISHED` لضمان عدم تسريب كود التطوير إلى موقع الويب المنشور.
+     - حذف المخلفات وإعادة بناء الحزمة: أصبحت الحزمة تتكون من **991 ملفاً سيادياً نظيفاً** متتبعاً في Git بنسبة 100%.
+  3. **مزامنة تجزئات أمان المحتوى `csp-hashes.txt` (226 Hashes):**
+     - اجتياز اختبار `python scripts/build_csp.py --check` بنجاح: `PASSED - csp-hashes.txt matches the publish set (226 hashes)`.
+  4. **التحقق الشامل والتزامن مع GitHub:**
+     - اجتياز `check_publish_set_integrity.py` واختبار `audit_secrets.py` (صفر تسريبات).
+     - تسجيل الالتزامات الرسمية ودفعها إلى `origin/main` بنجاح كامل.
+  5. **التقاط لقطة شاشة مرئية حية للمعاينة (Live Visual Snapshot):**
+     - بناء أداة `scripts/capture_live_snapshot.mjs` والتقاط لقطة شاشة مرئية حقيقية للمنصة بدقة عالية وتخزينها في مجلد الأصول التفاعلية:
+       `live_preview_snapshot_2026.png`.
+
+---
+
+</div>
+
+<div dir="rtl">
+
 ## 🌟 المرحلة 218: استبدال وتطبيق الهوية البصرية الجديدة والشعار ثلاثي الأبعاد 2026 في كافة واجهات وأصول المنصة بنسبة 100%
 - **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:07 صباحاً (+01:00).
 - **السياق:** استبدال وتطبيق الهوية البصرية الجديدة والشعار ثلاثي الأبعاد الكرومي 2026 لعلامة `S&R CoreSync` في كافة واجهات وأصول المنصة.
@@ -166,6 +197,37 @@
 
 <div dir="rtl">
 
+## 🌟 المرحلة 219: معالجة أخطاء الـ CI في GitHub Actions، ترقية بنك اختبار التبديل اللغوي E2E، وضبط حزمة النشر السيادي بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:48 صباحاً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاقات الـ CI الواردة من GitHub Actions في خطوتي `lang_switch_e2e.mjs` و `build_csp.py --check`، وتطهير حزمة النشر من أصول الـ SDK غير المتتبعة.
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **معالجة خطأ `lang_switch_e2e.mjs` واكتمال بنك الاختبار:**
+     - إصلاح خطأ `ReferenceError: server is not defined` عبر استدعاء وتمرير كائن `server` من `startServer()` وتوفير كود الإغلاق الآمن للاتصالات.
+     - إضافة الأعلام اللارأسية التوافقية (`--headless=new` و fallback إلى `--headless`) لدعم العمل في بيئات Linux (Ubuntu runner) وبيئات Windows.
+     - تحديث محددات العناصر لتتطابق بدقة متناهية مع شجرة الـ Shadow DOM الفعلية لخريطة الرادار السيادية (`sr-lm__pin` و `#srHoverHud` والتحويل الفوري عبر `langUrl`).
+     - تنفيذ بنك الاختبار محلياً واجتياز السيناريوهات الثلاثة كاملة بنجاح 100%:
+       - `PASS from / the map switches to /sv/ (real click-through)`
+       - `PASS from /sv/ Germany CTA resolves at the site root`
+       - `PASS click on the displayed market navigates to /de/`
+  2. **تطهير حزمة النشر في `scripts/publish_set.py` وحمايتها:**
+     - كشف ملفات البناء المؤقتة غير المتتبعة في `sdk/vscode-extension/out` و `*.vsix`.
+     - إضافة `sdk` و `out` إلى `EXCLUDED_DIRS` وإضافة `sdk` إلى قائمة الممنوعات `FORBIDDEN_PUBLISHED` لضمان عدم تسريب كود التطوير إلى موقع الويب المنشور.
+     - حذف المخلفات وإعادة بناء الحزمة: أصبحت الحزمة تتكون من **991 ملفاً سيادياً نظيفاً** متتبعاً في Git بنسبة 100%.
+  3. **مزامنة تجزئات أمان المحتوى `csp-hashes.txt` (226 Hashes):**
+     - اجتياز اختبار `python scripts/build_csp.py --check` بنجاح: `PASSED - csp-hashes.txt matches the publish set (226 hashes)`.
+  4. **التحقق الشامل والتزامن مع GitHub:**
+     - اجتياز `check_publish_set_integrity.py` واختبار `audit_secrets.py` (صفر تسريبات).
+     - تسجيل الالتزامات الرسمية ودفعها إلى `origin/main` بنجاح كامل.
+  5. **التقاط لقطة شاشة مرئية حية للمعاينة (Live Visual Snapshot):**
+     - بناء أداة `scripts/capture_live_snapshot.mjs` والتقاط لقطة شاشة مرئية حقيقية للمنصة بدقة عالية وتخزينها في مجلد الأصول التفاعلية:
+       `live_preview_snapshot_2026.png`.
+
+---
+
+</div>
+
+<div dir="rtl">
+
 ## 🌟 المرحلة 218: استبدال وتطبيق الهوية البصرية الجديدة والشعار ثلاثي الأبعاد 2026 في كافة واجهات وأصول المنصة بنسبة 100%
 - **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:07 صباحاً (+01:00).
 - **السياق:** استبدال وتطبيق الهوية البصرية الجديدة والشعار ثلاثي الأبعاد الكرومي 2026 لعلامة `S&R CoreSync` في كافة واجهات وأصول المنصة.
@@ -331,6 +393,37 @@
 
 <div dir="rtl">
 
+## 🌟 المرحلة 219: معالجة أخطاء الـ CI في GitHub Actions، ترقية بنك اختبار التبديل اللغوي E2E، وضبط حزمة النشر السيادي بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:48 صباحاً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاقات الـ CI الواردة من GitHub Actions في خطوتي `lang_switch_e2e.mjs` و `build_csp.py --check`، وتطهير حزمة النشر من أصول الـ SDK غير المتتبعة.
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **معالجة خطأ `lang_switch_e2e.mjs` واكتمال بنك الاختبار:**
+     - إصلاح خطأ `ReferenceError: server is not defined` عبر استدعاء وتمرير كائن `server` من `startServer()` وتوفير كود الإغلاق الآمن للاتصالات.
+     - إضافة الأعلام اللارأسية التوافقية (`--headless=new` و fallback إلى `--headless`) لدعم العمل في بيئات Linux (Ubuntu runner) وبيئات Windows.
+     - تحديث محددات العناصر لتتطابق بدقة متناهية مع شجرة الـ Shadow DOM الفعلية لخريطة الرادار السيادية (`sr-lm__pin` و `#srHoverHud` والتحويل الفوري عبر `langUrl`).
+     - تنفيذ بنك الاختبار محلياً واجتياز السيناريوهات الثلاثة كاملة بنجاح 100%:
+       - `PASS from / the map switches to /sv/ (real click-through)`
+       - `PASS from /sv/ Germany CTA resolves at the site root`
+       - `PASS click on the displayed market navigates to /de/`
+  2. **تطهير حزمة النشر في `scripts/publish_set.py` وحمايتها:**
+     - كشف ملفات البناء المؤقتة غير المتتبعة في `sdk/vscode-extension/out` و `*.vsix`.
+     - إضافة `sdk` و `out` إلى `EXCLUDED_DIRS` وإضافة `sdk` إلى قائمة الممنوعات `FORBIDDEN_PUBLISHED` لضمان عدم تسريب كود التطوير إلى موقع الويب المنشور.
+     - حذف المخلفات وإعادة بناء الحزمة: أصبحت الحزمة تتكون من **991 ملفاً سيادياً نظيفاً** متتبعاً في Git بنسبة 100%.
+  3. **مزامنة تجزئات أمان المحتوى `csp-hashes.txt` (226 Hashes):**
+     - اجتياز اختبار `python scripts/build_csp.py --check` بنجاح: `PASSED - csp-hashes.txt matches the publish set (226 hashes)`.
+  4. **التحقق الشامل والتزامن مع GitHub:**
+     - اجتياز `check_publish_set_integrity.py` واختبار `audit_secrets.py` (صفر تسريبات).
+     - تسجيل الالتزامات الرسمية ودفعها إلى `origin/main` بنجاح كامل.
+  5. **التقاط لقطة شاشة مرئية حية للمعاينة (Live Visual Snapshot):**
+     - بناء أداة `scripts/capture_live_snapshot.mjs` والتقاط لقطة شاشة مرئية حقيقية للمنصة بدقة عالية وتخزينها في مجلد الأصول التفاعلية:
+       `live_preview_snapshot_2026.png`.
+
+---
+
+</div>
+
+<div dir="rtl">
+
 ## 🌟 المرحلة 218: استبدال وتطبيق الهوية البصرية الجديدة والشعار ثلاثي الأبعاد 2026 في كافة واجهات وأصول المنصة بنسبة 100%
 - **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:07 صباحاً (+01:00).
 - **السياق:** استبدال وتطبيق الهوية البصرية الجديدة والشعار ثلاثي الأبعاد الكرومي 2026 لعلامة `S&R CoreSync` في كافة واجهات وأصول المنصة.
@@ -493,6 +586,37 @@
 </div>
 
 <div dir="rtl">
+
+<div dir="rtl">
+
+## 🌟 المرحلة 219: معالجة أخطاء الـ CI في GitHub Actions، ترقية بنك اختبار التبديل اللغوي E2E، وضبط حزمة النشر السيادي بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:48 صباحاً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاقات الـ CI الواردة من GitHub Actions في خطوتي `lang_switch_e2e.mjs` و `build_csp.py --check`، وتطهير حزمة النشر من أصول الـ SDK غير المتتبعة.
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **معالجة خطأ `lang_switch_e2e.mjs` واكتمال بنك الاختبار:**
+     - إصلاح خطأ `ReferenceError: server is not defined` عبر استدعاء وتمرير كائن `server` من `startServer()` وتوفير كود الإغلاق الآمن للاتصالات.
+     - إضافة الأعلام اللارأسية التوافقية (`--headless=new` و fallback إلى `--headless`) لدعم العمل في بيئات Linux (Ubuntu runner) وبيئات Windows.
+     - تحديث محددات العناصر لتتطابق بدقة متناهية مع شجرة الـ Shadow DOM الفعلية لخريطة الرادار السيادية (`sr-lm__pin` و `#srHoverHud` والتحويل الفوري عبر `langUrl`).
+     - تنفيذ بنك الاختبار محلياً واجتياز السيناريوهات الثلاثة كاملة بنجاح 100%:
+       - `PASS from / the map switches to /sv/ (real click-through)`
+       - `PASS from /sv/ Germany CTA resolves at the site root`
+       - `PASS click on the displayed market navigates to /de/`
+  2. **تطهير حزمة النشر في `scripts/publish_set.py` وحمايتها:**
+     - كشف ملفات البناء المؤقتة غير المتتبعة في `sdk/vscode-extension/out` و `*.vsix`.
+     - إضافة `sdk` و `out` إلى `EXCLUDED_DIRS` وإضافة `sdk` إلى قائمة الممنوعات `FORBIDDEN_PUBLISHED` لضمان عدم تسريب كود التطوير إلى موقع الويب المنشور.
+     - حذف المخلفات وإعادة بناء الحزمة: أصبحت الحزمة تتكون من **991 ملفاً سيادياً نظيفاً** متتبعاً في Git بنسبة 100%.
+  3. **مزامنة تجزئات أمان المحتوى `csp-hashes.txt` (226 Hashes):**
+     - اجتياز اختبار `python scripts/build_csp.py --check` بنجاح: `PASSED - csp-hashes.txt matches the publish set (226 hashes)`.
+  4. **التحقق الشامل والتزامن مع GitHub:**
+     - اجتياز `check_publish_set_integrity.py` واختبار `audit_secrets.py` (صفر تسريبات).
+     - تسجيل الالتزامات الرسمية ودفعها إلى `origin/main` بنجاح كامل.
+  5. **التقاط لقطة شاشة مرئية حية للمعاينة (Live Visual Snapshot):**
+     - بناء أداة `scripts/capture_live_snapshot.mjs` والتقاط لقطة شاشة مرئية حقيقية للمنصة بدقة عالية وتخزينها في مجلد الأصول التفاعلية:
+       `live_preview_snapshot_2026.png`.
+
+---
+
+</div>
 
 <div dir="rtl">
 
@@ -764,6 +888,37 @@
    - تنفيذ أمر التثبيت بنجاح: code --install-extension sr-coresync-python-toolkit-1.0.0.vsix.
    - تأكيد ظهورها في قائمة الإضافات المثبتة برمز: sr-coresync.sr-coresync-python-toolkit.
 
+
+<div dir="rtl">
+
+## 🌟 المرحلة 219: معالجة أخطاء الـ CI في GitHub Actions، ترقية بنك اختبار التبديل اللغوي E2E، وضبط حزمة النشر السيادي بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 07:48 صباحاً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاقات الـ CI الواردة من GitHub Actions في خطوتي `lang_switch_e2e.mjs` و `build_csp.py --check`، وتطهير حزمة النشر من أصول الـ SDK غير المتتبعة.
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **معالجة خطأ `lang_switch_e2e.mjs` واكتمال بنك الاختبار:**
+     - إصلاح خطأ `ReferenceError: server is not defined` عبر استدعاء وتمرير كائن `server` من `startServer()` وتوفير كود الإغلاق الآمن للاتصالات.
+     - إضافة الأعلام اللارأسية التوافقية (`--headless=new` و fallback إلى `--headless`) لدعم العمل في بيئات Linux (Ubuntu runner) وبيئات Windows.
+     - تحديث محددات العناصر لتتطابق بدقة متناهية مع شجرة الـ Shadow DOM الفعلية لخريطة الرادار السيادية (`sr-lm__pin` و `#srHoverHud` والتحويل الفوري عبر `langUrl`).
+     - تنفيذ بنك الاختبار محلياً واجتياز السيناريوهات الثلاثة كاملة بنجاح 100%:
+       - `PASS from / the map switches to /sv/ (real click-through)`
+       - `PASS from /sv/ Germany CTA resolves at the site root`
+       - `PASS click on the displayed market navigates to /de/`
+  2. **تطهير حزمة النشر في `scripts/publish_set.py` وحمايتها:**
+     - كشف ملفات البناء المؤقتة غير المتتبعة في `sdk/vscode-extension/out` و `*.vsix`.
+     - إضافة `sdk` و `out` إلى `EXCLUDED_DIRS` وإضافة `sdk` إلى قائمة الممنوعات `FORBIDDEN_PUBLISHED` لضمان عدم تسريب كود التطوير إلى موقع الويب المنشور.
+     - حذف المخلفات وإعادة بناء الحزمة: أصبحت الحزمة تتكون من **991 ملفاً سيادياً نظيفاً** متتبعاً في Git بنسبة 100%.
+  3. **مزامنة تجزئات أمان المحتوى `csp-hashes.txt` (226 Hashes):**
+     - اجتياز اختبار `python scripts/build_csp.py --check` بنجاح: `PASSED - csp-hashes.txt matches the publish set (226 hashes)`.
+  4. **التحقق الشامل والتزامن مع GitHub:**
+     - اجتياز `check_publish_set_integrity.py` واختبار `audit_secrets.py` (صفر تسريبات).
+     - تسجيل الالتزامات الرسمية ودفعها إلى `origin/main` بنجاح كامل.
+  5. **التقاط لقطة شاشة مرئية حية للمعاينة (Live Visual Snapshot):**
+     - بناء أداة `scripts/capture_live_snapshot.mjs` والتقاط لقطة شاشة مرئية حقيقية للمنصة بدقة عالية وتخزينها في مجلد الأصول التفاعلية:
+       `live_preview_snapshot_2026.png`.
+
+---
+
+</div>
 
 <div dir="rtl">
 
