@@ -1,5 +1,23 @@
 <div dir="rtl">
 
+## 🌟 المرحلة 226: تنفيذ استضافة خطوط Google Fonts محلياً (Self-Hosting Tajawal & Cinzel & Cairo) وتطهير 140 ملفاً بنسبة 100%
+- [x] **تنزيل وتوطين ملفات WOFF2 الأصلية فائقة الضغط:**
+  - بناء وتشغيل `scripts/download_self_hosted_fonts.py` لتنزيل خطوط `Tajawal` (12 ملفاً)، `Cinzel` (8 ملفات)، و `Cairo` (15 ملفاً) مباشرة داخل `assets/fonts/gf/`.
+- [x] **بناء الحزمة الموحدة للخطوط المحلية (`assets/fonts/gf/fonts.css`):**
+  - دمج كافة الأوزان والخطوط مع تعيين بدائل الخطوط الفاخرة (`Plus Jakarta Sans`, `Playfair Display`, `Outfit`, `IBM Plex Sans Arabic`).
+- [x] **تطهير كافة الاستدعاءات الخارجية عبر المنظومة:**
+  - تشغيل `scripts/bundle_self_hosted_fonts.py` لاستبدال كافة وسوم `<link>` الخارجية لـ Google Fonts في **140 ملفاً** تشمل صفحات الـ demo لـ 28 لغة، والصفحات والأدوات المستقلة (`3d-mockup.html`, `blog.html`, `api-docs.html`, إلخ).
+  - إزالة استدعاء `@import url('https://fonts.googleapis.com...')` من حزمة `js/enterprise-suite.min.js`.
+- [x] **إعادة بناء حزمة النشر السيادي ومزامنة تجزئات CSP:**
+  - تشغيل `prepare_publish_set.py` وتحديث الحزمة إلى 1054 ملفاً متتبعاً بنسبة 100%.
+  - مطابقة 226 تجزئة أمان محتوى نظيفة ومطابقة في `csp-hashes.txt`.
+- [x] **التحقق الشامل واجتياز كافة بوابات الـ CI:**
+  - اجتياز `check_perf_budget.py` بنجاح كامل (`PASSED - inside budget`).
+  - اجتياز `sentinel_i18n.py` بكافة أجنحته الـ 13 وفحوصات اللغات الـ 27.
+  - اجتياز `build_csp.py --check` بنجاح 100%.
+  - اجتياز `validate_publish_set.py` و `check_publish_set_integrity.py`.
+  - اجتياز `audit_secrets.py` (صفر أسرار مسربة).
+
 ## 🌟 المرحلة 225: الحل الجذري الشامل للشعار ثلاثي الأبعاد الأصلي، إزالة الشعار القديم والشعارات المكررة في اللوحات السيادية الثلاث بنسبة 100%
 - [x] **التشخيص الجذري لما حدث بدقة وشفافية متناهية:**
   - كشف سبب استمرار الشعار القديم (النجمة والمدارات) نتيجة اعتماد الكود السابق خطأً على ملف أرشيفي قديم `coresync-emblem-8k.png`.
