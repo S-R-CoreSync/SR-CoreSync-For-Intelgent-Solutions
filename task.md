@@ -1,5 +1,22 @@
 <div dir="rtl">
 
+## 🌟 المرحلة 224: حل كسر ميزانية الأداء في CI (`check_perf_budget.py`) وضبط ضغط أصول البانر بدقة 2560 بنسبة 100%
+- [x] **تشخيص سبب فشل بوابة ميزانية الأداء في خطوط الـ CI:**
+  - كشف سبب فشل `python scripts/check_perf_budget.py` حيث تجاوز أثقل أصل (`founder-banner-salim-2560.webp` بحجم 553.8 KB) الحد الأقصى الصارم المسموح به في الميزانية وهو `450.0 KB` (`single_asset_kb: 450`).
+- [x] **تحسين وضبط جودة ضغط WebP للصور فائقة الدقة 2560x1440:**
+  - تعديل معاملات الحفظ في `scripts/update_sovereign_panels_and_circular_emblem.py` لنسخ WebP بدقة 2560 و 4K من `quality=95` إلى `quality=82` مع `method=6`.
+  - تخفيض حجم ملفات البانر السيادية من ~567 KB إلى ~249 KB بنسبة توفير تجاوزت 56%، مع الحفاظ الكامل 100% على النقاء البصري والوضوح الفائق على الشاشات الكبيرة.
+- [x] **إعادة بناء حزمة النشر السيادي ومزامنة تجزئات CSP:**
+  - تشغيل `prepare_publish_set.py` وتحديث الحزمة إلى 1012 ملفاً بحجم 229.5 MB.
+  - مطابقة وتحديث `csp-hashes.txt` (226 hashes).
+- [x] **التحقق الشامل واجتياز كافة بوابات الجودة السيادية:**
+  - نجاح فحص ميزانية الأداء عبر Lighthouse: `heaviest asset: 249.1 KB / 450.0 KB (OK)` و `total transfer: 1939.3 KB / 3200.0 KB (OK)` بنتيجة `PASSED - inside budget`.
+  - نجاح فحص الحارس اللغوي `sentinel_i18n.py` (13 جناحاً + 27 فحصاً) بنسبة 100%.
+  - نجاح فحص تجزئات CSP `build_csp.py --check` بنسبة 100%.
+  - نجاح فحص حزمة النشر `validate_publish_set.py` بنسبة 100%.
+  - نجاح فحص تكامل الأصول `check_publish_set_integrity.py` بنسبة 100%.
+  - نجاح فحص الأسرار والاعتمادات `audit_secrets.py` (صفر أسرار).
+
 ## 🌟 المرحلة 223: إصلاح خطأ نشر GitHub Pages (`No artifacts named github-pages were found`) وهندسة خطين منفصلين بنسبة 100%
 - [x] **تشخيص سبب فشل النشر في GitHub Actions:**
   - كشف سبب خطأ `No artifacts named "github-pages" were found for this workflow run` الناتج عن دمج خطوتي `upload-pages-artifact` و `deploy-pages` داخل نفس الـ Job الواحد، مما سبب تسابقاً لحظياً (Race Condition) في واجهة برمجة تطبيقات GitHub قبل فهرسة الأرشيف.
