@@ -248,9 +248,24 @@ async function main() {
     PORT = await findFreePort(9223);
     HTTP_PORT = await findFreePort(8098);
     console.log('HTTP_PORT=', HTTP_PORT);
+    const server = await startServer();
     const profile = mkdtempSync(join(tmpdir(), 'sr-e2e-'));
-    let child = await launchBrowser(profile, ['--disable-web-security','--allow-running-insecure-content']);
-    if (!child) { server.close(); console.log('SKIPPED - browser did not start correctly.'); return; }
+    const browserArgs = ['--disable-web-security', '--allow-running-insecure-content', '--window-size=1600,1000'];
+    let child = await launchBrowser(profile, ['--headless=new', ...browserArgs]);
+    if (!child) {
+        child = await launchBrowser(profile, ['--headless', ...browserArgs]);
+    }
+    if (!child) {
+        if (server) {
+            if (typeof server.closeAllConnections === 'function') server.closeAllConnections();
+            server.close();
+        }
+        try { rmSync(profile, { recursive: true, force: true }); } catch { }
+        console.log('='.repeat(72));
+        console.log('SKIPPED - the headless browser did not expose a DevTools endpoint.');
+        console.log('='.repeat(72));
+        return;
+    }
     console.log('Browser launched with PID', child.pid);
 
     const base = `http://127.0.0.1:${HTTP_PORT}`;
