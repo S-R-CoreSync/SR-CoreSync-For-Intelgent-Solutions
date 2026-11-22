@@ -49,7 +49,8 @@ TAIL_ON_FAIL = 12
 
 def run(name, cmd, quiet):
     t0 = time.time()
-    proc = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
+    effective_cmd = [sys.executable if c == 'python3' else c for c in cmd]
+    proc = subprocess.run(effective_cmd, cwd=ROOT, capture_output=True, text=True)
     dt = time.time() - t0
     ok = proc.returncode == 0
     print(f'{"PASS" if ok else "FAIL"}  {name:<40} {dt:5.1f}s')
@@ -84,7 +85,7 @@ def main():
     bad = []
     for lang in SCAN_LANGS:
         proc = subprocess.run(
-            ['python3', 'scripts/i18n_scan_english.py', '--lang', lang],
+            [sys.executable, 'scripts/i18n_scan_english.py', '--lang', lang],
             cwd=ROOT, capture_output=True, text=True)
         first = (proc.stdout or '').strip().splitlines()[:1]
         summary = first[0] if first else f'{lang}: scan error'
