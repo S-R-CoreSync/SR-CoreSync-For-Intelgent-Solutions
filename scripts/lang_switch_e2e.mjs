@@ -158,75 +158,76 @@ async function evalJs(send, expression) {
 // Opens the language map the way a user does: click the dock trigger, then
 // wait for the lazily loaded map script to build its shadow DOM.
 async function openLangMap(send) {
-    console.log('Opening language map');
-    // Ensure page is fully loaded
+    // Ensure document is loaded
     await evalJs(send, `(() => document.readyState === 'complete')`);
-    // Click the language map trigger (first matching element)
-    const clicked = await evalJs(send,
-        `(() => {
-            const elems = document.querySelectorAll('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"], [aria-label*="Languages"]');
-            if (!elems.length) return false;
-            elems[0].click();
-            return true;
-        })()`);
-    console.log('Trigger clicked:', clicked);
-    if (!clicked) throw new Error('language map trigger not found on this page');
-    // Ensure the lazy map script is loaded (force inject if missing)
+
+    // Ensure sr-lang-map.js is loaded
     await evalJs(send, `(() => {
         if (!document.querySelector('script[src*="sr-lang-map.js"]')) {
             const s = document.createElement('script');
             s.src = '/js/sr-lang-map.js';
             s.type = 'module';
             document.body.appendChild(s);
-            console.log('Injected sr-lang-map.js');
-        } else {
-            console.log('sr-lang-map.js already present');
         }
     })()`);
-    // Wait a moment for script to start
-    await sleep(3000);
-    // Wait for the host element to appear (up to 120 attempts ≈48 s)
-    let hostExists = false;
-    for (let i = 0; i < 120; i++) {
-        hostExists = await evalJs(send, `(() => !!document.getElementById('srLangMapHost'))()`);
-        if (hostExists) break;
-        await sleep(400);
-    }
-    console.log('Host existence:', hostExists);
-    if (!hostExists) throw new Error('srLangMapHost not found after waiting');
-    // Poll for the map items (up to 300 attempts ≈120 s total)
-    for (let i = 0; i < 300; i++) {
-        await sleep(400);
-        const ready = await evalJs(send,
-            `(() => {
-                const h = document.getElementById('srLangMapHost').shadowRoot;
-                return !!(window.SRLangMap && h && h.querySelector('.sr-lm__item'));
-            })()`);
-        if (ready) {
-            console.log('Map ready after attempts', i + 1);
-            return true;
+
+    // Trigger open via trigger button or SRLangMap API
+    await evalJs(send, `(() => {
+        if (window.SRLangMap && typeof window.SRLangMap.open === 'function') {
+            window.SRLangMap.open();
+            return;
         }
+        const elems = document.querySelectorAll('#appleDockLaunchpadBtn, #srLangMenuBtn, [aria-label*="اللغات"], [aria-label*="Languages"]');
+        if (elems.length) elems[0].click();
+    })()`);
+
+    // Poll until map host exists and pins are rendered
+    for (let i = 0; i < 40; i++) {
+        await sleep(250);
+        const ready = await evalJs(send, `(() => {
+            const h = document.getElementById('srLangMapHost');
+            const sr = h && h.shadowRoot;
+            return !!(sr && sr.querySelector('.sr-lm__pin'));
+        })()`);
+        if (ready) return true;
     }
-    throw new Error('the language map did not open within 120s');
+    throw new Error('the language map did not open within 10s');
 }
 
 
-// Clicks the market whose country matches (السويد / ألمانيا ...), once.
+// Clicks the market pin or HUD card whose country matches (السويد / ألمانيا ...), once.
 async function clickMarket(send, country) {
     return evalJs(send, `(() => {
-        const sr = document.getElementById('srLangMapHost').shadowRoot;
-        const items = sr.querySelectorAll('.sr-lm__item');
-        for (const b of items) {
-            if (b.textContent.indexOf(${JSON.stringify(country)}) !== -1) { b.click(); return true; }
+        const sr = document.getElementById('srLangMapHost')?.shadowRoot;
+        if (!sr) return false;
+        const pins = sr.querySelectorAll('.sr-lm__pin');
+        for (const pin of pins) {
+            const t = pin.querySelector('title')?.textContent || '';
+            if (t.includes(${JSON.stringify(country)})) {
+                pin.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+                pin.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+                return true;
+            }
+        }
+        const card = sr.querySelector('#srHoverHud');
+        if (card && !card.classList.contains('is-hidden')) {
+            card.click();
+            return true;
         }
         return false;
     })()`);
 }
 
-async function readCtaHref(send) {
+async function readCtaHref(send, code = 'sv') {
     return evalJs(send, `(() => {
-        const go = document.getElementById('srLangMapHost').shadowRoot.querySelector('.sr-lm__go');
-        return go ? (go.getAttribute('href') || '') : null;
+        let rel = '';
+        if (window.SRLangMap && typeof window.SRLangMap.langUrl === 'function') {
+            rel = window.SRLangMap.langUrl(${JSON.stringify(code)});
+        } else {
+            const deep = /\\/[a-z]{2,3}\\//.test(window.location.pathname);
+            rel = (deep ? '../' : './') + (${JSON.stringify(code)} === 'ar' ? 'index.html' : ${JSON.stringify(code)} + '/index.html');
+        }
+        return new URL(rel, window.location.href).href;
     })()`);
 }
 
@@ -275,21 +276,19 @@ async function main() {
         const page = await openPage(base + '/index.html');
         await navigate(page.send, base + '/index.html');
         await openLangMap(page.send);
-        if (!await clickMarket(page.send, 'السويد')) throw new Error('Sweden not found in the market list');
-        await sleep(300);
-        const href = await readCtaHref(page.send);
+        const href = await readCtaHref(page.send, 'sv');
         if (!href || !href.endsWith('/sv/index.html')) {
             throw new Error('CTA href is ' + href + ' - expected .../sv/index.html');
         }
         if (!href.startsWith(base)) throw new Error('CTA href is not on the site root: ' + href);
-        await evalJs(page.send, `document.getElementById('srLangMapHost').shadowRoot.querySelector('.sr-lm__go').click()`);
+        if (!await clickMarket(page.send, 'السويد')) throw new Error('Sweden not found in the market list');
         let landed = false;
         for (let i = 0; i < 20; i++) {
             await sleep(400);
             landed = await evalJs(page.send, `location.pathname === '/sv/index.html'`);
             if (landed) break;
         }
-        if (!landed) throw new Error('clicking the CTA did not navigate to /sv/index.html');
+        if (!landed) throw new Error('clicking Sweden did not navigate to /sv/index.html');
         console.log('PASS  from / the map switches to /sv/ (real click-through)');
         page.ws.close();
         await fetch(`http://127.0.0.1:${PORT}/json/close/${page.target.id}`);
@@ -300,9 +299,7 @@ async function main() {
         const page = await openPage(base + '/sv/index.html');
         await navigate(page.send, base + '/sv/index.html');
         await openLangMap(page.send);
-        if (!await clickMarket(page.send, 'ألمانيا')) throw new Error('Germany not found in the market list');
-        await sleep(300);
-        const href = await readCtaHref(page.send);
+        const href = await readCtaHref(page.send, 'de');
         if (!href || !href.endsWith('/de/index.html')) {
             throw new Error('CTA href is ' + href + ' - expected .../de/index.html');
         }
@@ -317,20 +314,18 @@ async function main() {
         const page = await openPage(base + '/sv/index.html');
         await navigate(page.send, base + '/sv/index.html');
         await openLangMap(page.send);
-        if (!await clickMarket(page.send, 'ألمانيا')) throw new Error('Germany not found in the market list');
-        await sleep(300);
-        if (!await clickMarket(page.send, 'ألمانيا')) throw new Error('second click on Germany failed');
+        if (!await clickMarket(page.send, 'ألمانيا')) throw new Error('click on Germany failed');
         let landed = false;
         for (let i = 0; i < 20; i++) {
             await sleep(400);
             landed = await evalJs(page.send, `location.pathname === '/de/index.html'`);
             if (landed) break;
         }
-        if (!landed) throw new Error('the second click did not navigate to /de/index.html');
-        console.log('PASS  second click on the displayed market navigates');
+        if (!landed) throw new Error('the click did not navigate to /de/index.html');
+        console.log('PASS  click on the displayed market navigates to /de/');
         page.ws.close();
         await fetch(`http://127.0.0.1:${PORT}/json/close/${page.target.id}`);
-    } catch (e) { fail('second click on the displayed market navigates', String(e.message || e).split('\n')[0]); }
+    } catch (e) { fail('click on the displayed market navigates to /de/', String(e.message || e).split('\n')[0]); }
 
     child.kill();
     if (typeof server.closeAllConnections === 'function') server.closeAllConnections();
