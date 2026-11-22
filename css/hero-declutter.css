@@ -200,6 +200,8 @@
     box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
     cursor: pointer;
     transition: transform 0.3s;
+
+    overflow: hidden !important;
 }
 
 .c3-core-orb:hover {
@@ -219,9 +221,12 @@
 }
 
 .c3-orb-img {
-    width: 82px;
-    height: 82px;
+    width: 132px !important;
+    height: 132px !important;
     filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 .hero-cockpit-title {
@@ -437,6 +442,8 @@
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.2) !important;
     cursor: pointer !important;
     transition: transform 0.25s ease !important;
+
+    overflow: hidden !important;
 }
 
 .c3-core-orb:hover {
@@ -447,6 +454,9 @@
     width: 58px !important;
     height: 58px !important;
     filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)) !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 /* Badge */
@@ -671,6 +681,8 @@
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.2) !important;
     cursor: pointer !important;
     transition: transform 0.25s ease !important;
+
+    overflow: hidden !important;
 }
 
 .c3-core-orb:hover {
@@ -681,6 +693,9 @@
     width: 58px !important;
     height: 58px !important;
     filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)) !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 /* Badge */
@@ -876,11 +891,17 @@
 .c3-core-orb {
     width: 96px !important;
     height: 96px !important;
+
+    overflow: hidden !important;
+    border-radius: 50% !important;
 }
 
 .c3-orb-img {
     width: 64px !important;
     height: 64px !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 .hv2 h1.hv2__h1, .hero-refined-title {
@@ -982,11 +1003,17 @@
 .c3-core-orb {
     width: 104px !important;
     height: 104px !important;
+
+    overflow: hidden !important;
+    border-radius: 50% !important;
 }
 
 .c3-orb-img {
     width: 70px !important;
     height: 70px !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 .hv2 h1.hv2__h1, .hero-refined-title {
@@ -1103,12 +1130,17 @@
     justify-content: center !important;
     background: radial-gradient(circle, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.03) 70%) !important;
     box-shadow: 0 0 35px rgba(212, 175, 55, 0.28) !important;
+
+    overflow: hidden !important;
 }
 
 .c3-orb-img {
-    width: 96px !important;
-    height: 96px !important;
+    width: 132px !important;
+    height: 132px !important;
     filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 .c3-orb-ring-outer {
@@ -1213,6 +1245,8 @@
     cursor: pointer !important;
     margin: 0 auto !important;
     animation: rotateOrb 25s infinite linear !important;
+
+    overflow: hidden !important;
 }
 
 @keyframes rotateOrb {
@@ -1220,10 +1254,13 @@
 }
 
 .c3-orb-img {
-    width: 96px !important;
-    height: 96px !important;
+    width: 132px !important;
+    height: 132px !important;
     animation: unrotateOrb 25s infinite linear !important;
     filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 @keyframes unrotateOrb {
@@ -1411,6 +1448,8 @@
     cursor: pointer !important;
     margin: 0 auto !important;
     animation: rotateOrb 25s infinite linear !important;
+
+    overflow: hidden !important;
 }
 
 @keyframes rotateOrb {
@@ -1418,10 +1457,13 @@
 }
 
 .c3-orb-img {
-    width: 96px !important;
-    height: 96px !important;
+    width: 132px !important;
+    height: 132px !important;
     animation: unrotateOrb 25s infinite linear !important;
     filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 @keyframes unrotateOrb {
@@ -1609,6 +1651,8 @@
     cursor: pointer !important;
     margin: 0 auto !important;
     animation: rotateOrb 25s infinite linear !important;
+
+    overflow: hidden !important;
 }
 
 @keyframes rotateOrb {
@@ -1616,10 +1660,13 @@
 }
 
 .c3-orb-img {
-    width: 96px !important;
-    height: 96px !important;
+    width: 132px !important;
+    height: 132px !important;
     animation: unrotateOrb 25s infinite linear !important;
     filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 @keyframes unrotateOrb {
@@ -1807,6 +1854,8 @@
     cursor: pointer !important;
     margin: 0 auto !important;
     animation: rotateOrb 25s infinite linear !important;
+
+    overflow: hidden !important;
 }
 
 @keyframes rotateOrb {
@@ -1814,10 +1863,13 @@
 }
 
 .c3-orb-img {
-    width: 96px !important;
-    height: 96px !important;
+    width: 132px !important;
+    height: 132px !important;
     animation: unrotateOrb 25s infinite linear !important;
     filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 
 @keyframes unrotateOrb {
