@@ -32,10 +32,10 @@ MIRROR = "partials/en/99-tail.html"
 # نمط الوسم المشوّه (يغطي الشكلين A وB): كل ما بين aria-label=" المعطوب وإغلاق الوسم
 BROKEN = re.compile(
     r'aria-label=" data-i18n="(testimonials\.0[1-5]\.rating)"[^>]*>')
-TAG = re.compile(r'<p class="tes-rating"[^>]*>')
+TAG = re.compile(r'<p class="tes-rating"[^>]*>', re.DOTALL)
 CLEAN_TAG = re.compile(
-    r'^<p class="tes-rating" role="img" aria-label="([^"]*)" '
-    r'data-i18n="(testimonials\.0[1-5]\.rating)">$')
+    r'^<p\s+class="tes-rating"\s+role="img"\s+aria-label="([^"]*)"\s+'
+    r'data-i18n="(testimonials\.0[1-5]\.rating)">$', re.DOTALL)
 VISIBLE_STRIP = re.compile(r"<[^>]+>")
 
 def load_dict():
