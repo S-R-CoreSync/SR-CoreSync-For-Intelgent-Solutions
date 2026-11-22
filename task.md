@@ -411,4 +411,19 @@
 - [x] **التقاط لقطة شاشة مرئية حية ومباشرة من شاشة العرض (Visual Live Snapshot):**
   - التقاط اللقطة وحفظها باسم `live_preview_snapshot_2026.png` وتضمينها بالتقرير.
 
+## 🌟 المرحلة 228: تدشين المحاكي البرمجي التفاعلي الحي لكافة منتجات السوق الـ 9 (Interactive Software Showcase)
+- [x] **ربط وتصحيح استدعاءات المحاكي البرمجي (Interactive Launch Triggers):**
+  - تصحيح بطاقة "S&R Cloud Terminal Agent" في `index.html` و `partials/23-store.html` لاستدعاء محاكي `terminal` بدلاً من `sdk`.
+  - توحيد زر «⚡ تشغيل فوري» لجميع المنتجات التسعة لفتح نافذة المحاكاة التفاعلية مباشرة في المتصفح.
+- [x] **توسيع شريط التنقل الفرعي للنافذة المنبثقة (Subnav Bar) ليشمل المنصات الـ 9 كاملة:**
+  - إضافة كافة المنصات التسعة (`taxsync`, `flowscan`, `cloudpos`, `vault`, `sdk`, `civicsync`, `healthbridge`, `omnibakery`, `terminal`) لتسهيل التبديل السلس بين الأنظمة بنقرة زر واحدة دون مغادرة النافذة.
+- [x] **بناء واجهة المحاكي التفاعلية المتطورة لوكيل السيرفرات (Cloud Terminal Agent):**
+  - شاشة كونسول تفاعلية تحاكي بيئة لينكس الحية في عنقود أمستردام (AMS-IX Equinix AM3).
+  - أزرار تشخيص سريعة (`curl /health`, `docker ps`, `vmstat -s`, `restart gateway`, `status`).
+  - لوحة قياس ومؤشرات لحظية (SLA 99.98%, Edge Latency 1.8ms, CPU/RAM telemetry).
+  - توفير وظائف نسخ المفتاح السحابي وتصدير تقارير الجاهزية.
+- [x] **اجتياز بوابات الجودة والتزامن التام بنسبة 100%:**
+  - اجتياز `sentinel_i18n.py` (13 جناحاً), و `build_csp.py --check`, و `validate_publish_set.py`, و `check_publish_set_integrity.py`, ومسح الأسرار.
+  - التقاط لقطة الشاشة الحية للمحاكي النشط وحفظها في `live_preview_snapshot_2026.png`.
+
 </div>

@@ -2009,4 +2009,20 @@
      - اجتياز بوابات الفحص الست بنجاح تام: `sentinel_i18n.py` (13 جناحاً), `build_csp.py --check` (226 تجزئة), `validate_publish_set.py`, `check_publish_set_integrity.py`, `audit_secrets.py`.
      - التقاط اللقطة الحية المباشرة من المتصفح وحفظها في `live_preview_snapshot_2026.png`.
 
+## 🌟 المرحلة 228: تدشين المحاكي البرمجي التفاعلي الحي لكافة منتجات السوق الـ 9 (Interactive Software Showcase)
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 05:55 مساءً (+01:00).
+- **السياق:** تنفيذاً لـ **الخيار الأول المعتمد** لتدشين تجربة التشغيل الفوري التفاعلي لجميع منتجات السوق البرمجية الـ 9.
+- **الإنجاز الهندسي بنسبة 100%:**
+  1. **تصحيح وسائط وربط المحاكي البرمجي:**
+     - تم تعديل بطاقة منتج "S&R Cloud Terminal Agent" في `index.html` و `partials/23-store.html` لاستدعاء محاكي `terminal` المخصص بعد أن كان يشير بالخطأ إلى `sdk`.
+  2. **توسيع شريط التنقل الفرعي للنافذة (Modal Subnav Navigation):**
+     - تم تحديث شريط التنقل العلوي داخل نافذة المحاكي ليشمل كافة الأنظمة التسعة بالتساوي (`TaxSync`, `FlowScan AI`, `CloudPOS`, `SecureVault`, `Dev SDK`, `CivicSync`, `HealthBridge`, `OmniBakery`, `Terminal Agent`).
+  3. **بناء محاكي كونسول الخوادم (Cloud Terminal DevOps Agent):**
+     - بيئة كونسول سحابية تفاعلية تتصل مباشرة بخوادم أمستردام (Equinix AM3) مع معالجة أوامر `health`, `docker`, `metrics`, `restart`, `status`.
+     - شاشة قياس لحظي ترصد مؤشرات الجاهزية (99.98% SLA) وسرعة الاستجابة (1.8ms) ومعدلات استهلاك المعالج والذاكرة.
+     - دوال نسخ المفتاح وتصدير التقرير التنفيذي مع مؤثرات صوتية ناعمة.
+  4. **اجتياز كافة بوابات CI والجودة:**
+     - `sentinel_i18n.py` (13 جناحاً ➔ PASSED) · `build_csp.py --check` (226 تجزئة ➔ PASSED) · `validate_publish_set.py` ➔ PASSED · `check_publish_set_integrity.py` ➔ PASSED · فحص الأسرار ➔ 0 أسرار.
+     - التقاط لقطة شاشة مرئية حية بالمتصفح لمظهر المحاكي النشط وحفظها في `live_preview_snapshot_2026.png`.
+
 </div>
