@@ -39,6 +39,7 @@ EXCLUDED_DIRS = {
     '.git', '_site', '.github', '.githooks', '.secrets', '.agents', '.vscode',
     '.zwork', 'api', 'config', 'workers', 'scripts', 'dist', 'deploy',
     'scratch', 'node_modules', '__pycache__', 'docs', 'partials', 'build',
+    'sdk', 'out',
     # User uploads are fed into the RAG engine; they are private input, not
     # site content.
     'uploads',
@@ -146,7 +147,7 @@ def _is_saved_page(path):
 # Paths that must never appear in the published artifact.
 # ---------------------------------------------------------------------------
 FORBIDDEN_PUBLISHED = [
-    'api', 'config', 'workers', 'scripts', 'dist', 'deploy',
+    'api', 'config', 'workers', 'scripts', 'dist', 'deploy', 'sdk',
     '.htaccess', '.env', '.env.example', '.env.vault', '.github', '.githooks', '.secrets',
     'auth_keys.json', 'chat_history.txt', 'uploads',
 ]
