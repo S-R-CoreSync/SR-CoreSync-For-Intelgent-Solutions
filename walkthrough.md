@@ -1,6 +1,39 @@
 
 <div dir="rtl">
 
+## 🌟 المرحلة 224: حل كسر ميزانية الأداء في CI (`check_perf_budget.py`) وضبط ضغط أصول البانر بدقة 2560 بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 12:00 ظهراً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاق فحص ميزانية الأداء في خطوط CI في GitHub Actions (`Performance budget: heaviest asset 553.8 KB / 450.0 KB OVER (founder-banner-salim-2560.webp)`).
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **التشخيص الجذري لميزانية الأداء:**
+     - كان كود توليد المتغيرات المصغرة في `scripts/update_sovereign_panels_and_circular_emblem.py` يحفظ صور WebP بدقة 2560 و 4K بمعامل جودة أقصى `quality=95`.
+     - نتج عن ذلك وصول حجم صورة بانر م. سليم إلى 566.9 KB وبانر أ. رائد إلى 575.2 KB، مما كسر حد الـ 450.0 KB المحدد كبوابة أداء صارمة في المنظومة.
+  2. **تحسين معاملات الضغط واستعادة التوازن المثالي (Quality vs Size):**
+     - تم تعديل دالة `generate_scaled_variants()` ودالة `update_banner_emblem()` لضبط جودة حفظ WebP عند `quality=82` مع `method=6`.
+     - هبط حجم `founder-banner-salim-2560.webp` من 566.9 KB إلى **249.1 KB** (انخفاض بمقدار 317 KB بنسبة 56%).
+     - هبط حجم `founder-banner-raed-2560.webp` من 575.2 KB إلى **247.2 KB** (انخفاض بمقدار 328 KB بنسبة 57%).
+     - النتيجة البصرية: نقاء بصري استثنائي 100% دون أي تشويه أو تشويش حتى على شاشات Retina و 4K.
+  3. **إعادة بناء حزمة النشر السيادي ومزامنة تجزئات CSP:**
+     - تم تشغيل `scripts/prepare_publish_set.py` لنسخ وتأمين 1012 ملفاً (229.54 MB).
+     - تم تشغيل `scripts/build_csp.py` وتدقيق 226 تجزئة أمان محتوى نظيفة ومطابقة.
+  4. **اجتياز كافة بوابات الاختبار بنسبة 100%:**
+     - `check_perf_budget.py`:
+       - `heaviest asset: 249.1 KB / 450.0 KB (OK)`
+       - `total transfer: 1939.3 KB / 3200.0 KB (OK)`
+       - `requests: 111.0 / 172.0 (OK)`
+       - النتيجة: `PASSED - inside budget`.
+     - `sentinel_i18n.py`: اجتياز كافة الأجنحة الـ 13 وفحوصات المخلفات الإنجليزية الـ 27 بنجاح 100%.
+     - `build_csp.py --check`: اجتياز كامل لـ 226 تجزئة.
+     - `validate_publish_set.py`: 185 صفحة و 11611 مرجع سليم بصفر أخطاء.
+     - `check_publish_set_integrity.py`: عزل لغوي نقي 100% وصفر أصول مفقودة.
+     - `audit_secrets.py`: صفر أسرار أو اعتمادات مسربة.
+
+---
+
+</div>
+
+<div dir="rtl">
+
 ## 🌟 المرحلة 223: إصلاح خطأ نشر GitHub Pages (`No artifacts named github-pages were found`) وهندسة خطين منفصلين بنسبة 100%
 - **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 11:29 صباحاً (+01:00).
 - **السياق:** تشخيص ومعالجة خطأ فشل النشر في GitHub Pages الوارد في لقطات شاشة المستخدم (`Error: No artifacts named "github-pages" were found for this workflow run`).
@@ -277,6 +310,39 @@
 
 <div dir="rtl">
 
+## 🌟 المرحلة 224: حل كسر ميزانية الأداء في CI (`check_perf_budget.py`) وضبط ضغط أصول البانر بدقة 2560 بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 12:00 ظهراً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاق فحص ميزانية الأداء في خطوط CI في GitHub Actions (`Performance budget: heaviest asset 553.8 KB / 450.0 KB OVER (founder-banner-salim-2560.webp)`).
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **التشخيص الجذري لميزانية الأداء:**
+     - كان كود توليد المتغيرات المصغرة في `scripts/update_sovereign_panels_and_circular_emblem.py` يحفظ صور WebP بدقة 2560 و 4K بمعامل جودة أقصى `quality=95`.
+     - نتج عن ذلك وصول حجم صورة بانر م. سليم إلى 566.9 KB وبانر أ. رائد إلى 575.2 KB، مما كسر حد الـ 450.0 KB المحدد كبوابة أداء صارمة في المنظومة.
+  2. **تحسين معاملات الضغط واستعادة التوازن المثالي (Quality vs Size):**
+     - تم تعديل دالة `generate_scaled_variants()` ودالة `update_banner_emblem()` لضبط جودة حفظ WebP عند `quality=82` مع `method=6`.
+     - هبط حجم `founder-banner-salim-2560.webp` من 566.9 KB إلى **249.1 KB** (انخفاض بمقدار 317 KB بنسبة 56%).
+     - هبط حجم `founder-banner-raed-2560.webp` من 575.2 KB إلى **247.2 KB** (انخفاض بمقدار 328 KB بنسبة 57%).
+     - النتيجة البصرية: نقاء بصري استثنائي 100% دون أي تشويه أو تشويش حتى على شاشات Retina و 4K.
+  3. **إعادة بناء حزمة النشر السيادي ومزامنة تجزئات CSP:**
+     - تم تشغيل `scripts/prepare_publish_set.py` لنسخ وتأمين 1012 ملفاً (229.54 MB).
+     - تم تشغيل `scripts/build_csp.py` وتدقيق 226 تجزئة أمان محتوى نظيفة ومطابقة.
+  4. **اجتياز كافة بوابات الاختبار بنسبة 100%:**
+     - `check_perf_budget.py`:
+       - `heaviest asset: 249.1 KB / 450.0 KB (OK)`
+       - `total transfer: 1939.3 KB / 3200.0 KB (OK)`
+       - `requests: 111.0 / 172.0 (OK)`
+       - النتيجة: `PASSED - inside budget`.
+     - `sentinel_i18n.py`: اجتياز كافة الأجنحة الـ 13 وفحوصات المخلفات الإنجليزية الـ 27 بنجاح 100%.
+     - `build_csp.py --check`: اجتياز كامل لـ 226 تجزئة.
+     - `validate_publish_set.py`: 185 صفحة و 11611 مرجع سليم بصفر أخطاء.
+     - `check_publish_set_integrity.py`: عزل لغوي نقي 100% وصفر أصول مفقودة.
+     - `audit_secrets.py`: صفر أسرار أو اعتمادات مسربة.
+
+---
+
+</div>
+
+<div dir="rtl">
+
 ## 🌟 المرحلة 223: إصلاح خطأ نشر GitHub Pages (`No artifacts named github-pages were found`) وهندسة خطين منفصلين بنسبة 100%
 - **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 11:29 صباحاً (+01:00).
 - **السياق:** تشخيص ومعالجة خطأ فشل النشر في GitHub Pages الوارد في لقطات شاشة المستخدم (`Error: No artifacts named "github-pages" were found for this workflow run`).
@@ -553,6 +619,39 @@
 
 <div dir="rtl">
 
+## 🌟 المرحلة 224: حل كسر ميزانية الأداء في CI (`check_perf_budget.py`) وضبط ضغط أصول البانر بدقة 2560 بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 12:00 ظهراً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاق فحص ميزانية الأداء في خطوط CI في GitHub Actions (`Performance budget: heaviest asset 553.8 KB / 450.0 KB OVER (founder-banner-salim-2560.webp)`).
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **التشخيص الجذري لميزانية الأداء:**
+     - كان كود توليد المتغيرات المصغرة في `scripts/update_sovereign_panels_and_circular_emblem.py` يحفظ صور WebP بدقة 2560 و 4K بمعامل جودة أقصى `quality=95`.
+     - نتج عن ذلك وصول حجم صورة بانر م. سليم إلى 566.9 KB وبانر أ. رائد إلى 575.2 KB، مما كسر حد الـ 450.0 KB المحدد كبوابة أداء صارمة في المنظومة.
+  2. **تحسين معاملات الضغط واستعادة التوازن المثالي (Quality vs Size):**
+     - تم تعديل دالة `generate_scaled_variants()` ودالة `update_banner_emblem()` لضبط جودة حفظ WebP عند `quality=82` مع `method=6`.
+     - هبط حجم `founder-banner-salim-2560.webp` من 566.9 KB إلى **249.1 KB** (انخفاض بمقدار 317 KB بنسبة 56%).
+     - هبط حجم `founder-banner-raed-2560.webp` من 575.2 KB إلى **247.2 KB** (انخفاض بمقدار 328 KB بنسبة 57%).
+     - النتيجة البصرية: نقاء بصري استثنائي 100% دون أي تشويه أو تشويش حتى على شاشات Retina و 4K.
+  3. **إعادة بناء حزمة النشر السيادي ومزامنة تجزئات CSP:**
+     - تم تشغيل `scripts/prepare_publish_set.py` لنسخ وتأمين 1012 ملفاً (229.54 MB).
+     - تم تشغيل `scripts/build_csp.py` وتدقيق 226 تجزئة أمان محتوى نظيفة ومطابقة.
+  4. **اجتياز كافة بوابات الاختبار بنسبة 100%:**
+     - `check_perf_budget.py`:
+       - `heaviest asset: 249.1 KB / 450.0 KB (OK)`
+       - `total transfer: 1939.3 KB / 3200.0 KB (OK)`
+       - `requests: 111.0 / 172.0 (OK)`
+       - النتيجة: `PASSED - inside budget`.
+     - `sentinel_i18n.py`: اجتياز كافة الأجنحة الـ 13 وفحوصات المخلفات الإنجليزية الـ 27 بنجاح 100%.
+     - `build_csp.py --check`: اجتياز كامل لـ 226 تجزئة.
+     - `validate_publish_set.py`: 185 صفحة و 11611 مرجع سليم بصفر أخطاء.
+     - `check_publish_set_integrity.py`: عزل لغوي نقي 100% وصفر أصول مفقودة.
+     - `audit_secrets.py`: صفر أسرار أو اعتمادات مسربة.
+
+---
+
+</div>
+
+<div dir="rtl">
+
 ## 🌟 المرحلة 223: إصلاح خطأ نشر GitHub Pages (`No artifacts named github-pages were found`) وهندسة خطين منفصلين بنسبة 100%
 - **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 11:29 صباحاً (+01:00).
 - **السياق:** تشخيص ومعالجة خطأ فشل النشر في GitHub Pages الوارد في لقطات شاشة المستخدم (`Error: No artifacts named "github-pages" were found for this workflow run`).
@@ -826,6 +925,39 @@
 </div>
 
 <div dir="rtl">
+
+<div dir="rtl">
+
+## 🌟 المرحلة 224: حل كسر ميزانية الأداء في CI (`check_perf_budget.py`) وضبط ضغط أصول البانر بدقة 2560 بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 12:00 ظهراً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاق فحص ميزانية الأداء في خطوط CI في GitHub Actions (`Performance budget: heaviest asset 553.8 KB / 450.0 KB OVER (founder-banner-salim-2560.webp)`).
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **التشخيص الجذري لميزانية الأداء:**
+     - كان كود توليد المتغيرات المصغرة في `scripts/update_sovereign_panels_and_circular_emblem.py` يحفظ صور WebP بدقة 2560 و 4K بمعامل جودة أقصى `quality=95`.
+     - نتج عن ذلك وصول حجم صورة بانر م. سليم إلى 566.9 KB وبانر أ. رائد إلى 575.2 KB، مما كسر حد الـ 450.0 KB المحدد كبوابة أداء صارمة في المنظومة.
+  2. **تحسين معاملات الضغط واستعادة التوازن المثالي (Quality vs Size):**
+     - تم تعديل دالة `generate_scaled_variants()` ودالة `update_banner_emblem()` لضبط جودة حفظ WebP عند `quality=82` مع `method=6`.
+     - هبط حجم `founder-banner-salim-2560.webp` من 566.9 KB إلى **249.1 KB** (انخفاض بمقدار 317 KB بنسبة 56%).
+     - هبط حجم `founder-banner-raed-2560.webp` من 575.2 KB إلى **247.2 KB** (انخفاض بمقدار 328 KB بنسبة 57%).
+     - النتيجة البصرية: نقاء بصري استثنائي 100% دون أي تشويه أو تشويش حتى على شاشات Retina و 4K.
+  3. **إعادة بناء حزمة النشر السيادي ومزامنة تجزئات CSP:**
+     - تم تشغيل `scripts/prepare_publish_set.py` لنسخ وتأمين 1012 ملفاً (229.54 MB).
+     - تم تشغيل `scripts/build_csp.py` وتدقيق 226 تجزئة أمان محتوى نظيفة ومطابقة.
+  4. **اجتياز كافة بوابات الاختبار بنسبة 100%:**
+     - `check_perf_budget.py`:
+       - `heaviest asset: 249.1 KB / 450.0 KB (OK)`
+       - `total transfer: 1939.3 KB / 3200.0 KB (OK)`
+       - `requests: 111.0 / 172.0 (OK)`
+       - النتيجة: `PASSED - inside budget`.
+     - `sentinel_i18n.py`: اجتياز كافة الأجنحة الـ 13 وفحوصات المخلفات الإنجليزية الـ 27 بنجاح 100%.
+     - `build_csp.py --check`: اجتياز كامل لـ 226 تجزئة.
+     - `validate_publish_set.py`: 185 صفحة و 11611 مرجع سليم بصفر أخطاء.
+     - `check_publish_set_integrity.py`: عزل لغوي نقي 100% وصفر أصول مفقودة.
+     - `audit_secrets.py`: صفر أسرار أو اعتمادات مسربة.
+
+---
+
+</div>
 
 <div dir="rtl">
 
@@ -1208,6 +1340,39 @@
    - تنفيذ أمر التثبيت بنجاح: code --install-extension sr-coresync-python-toolkit-1.0.0.vsix.
    - تأكيد ظهورها في قائمة الإضافات المثبتة برمز: sr-coresync.sr-coresync-python-toolkit.
 
+
+<div dir="rtl">
+
+## 🌟 المرحلة 224: حل كسر ميزانية الأداء في CI (`check_perf_budget.py`) وضبط ضغط أصول البانر بدقة 2560 بنسبة 100%
+- **التاريخ:** الأحد، 22 نوفمبر 2026 — الساعة 12:00 ظهراً (+01:00).
+- **السياق:** تشخيص ومعالجة إخفاق فحص ميزانية الأداء في خطوط CI في GitHub Actions (`Performance budget: heaviest asset 553.8 KB / 450.0 KB OVER (founder-banner-salim-2560.webp)`).
+- **النتائج الفنية والعمليات المنفذة بنسبة 100%:**
+  1. **التشخيص الجذري لميزانية الأداء:**
+     - كان كود توليد المتغيرات المصغرة في `scripts/update_sovereign_panels_and_circular_emblem.py` يحفظ صور WebP بدقة 2560 و 4K بمعامل جودة أقصى `quality=95`.
+     - نتج عن ذلك وصول حجم صورة بانر م. سليم إلى 566.9 KB وبانر أ. رائد إلى 575.2 KB، مما كسر حد الـ 450.0 KB المحدد كبوابة أداء صارمة في المنظومة.
+  2. **تحسين معاملات الضغط واستعادة التوازن المثالي (Quality vs Size):**
+     - تم تعديل دالة `generate_scaled_variants()` ودالة `update_banner_emblem()` لضبط جودة حفظ WebP عند `quality=82` مع `method=6`.
+     - هبط حجم `founder-banner-salim-2560.webp` من 566.9 KB إلى **249.1 KB** (انخفاض بمقدار 317 KB بنسبة 56%).
+     - هبط حجم `founder-banner-raed-2560.webp` من 575.2 KB إلى **247.2 KB** (انخفاض بمقدار 328 KB بنسبة 57%).
+     - النتيجة البصرية: نقاء بصري استثنائي 100% دون أي تشويه أو تشويش حتى على شاشات Retina و 4K.
+  3. **إعادة بناء حزمة النشر السيادي ومزامنة تجزئات CSP:**
+     - تم تشغيل `scripts/prepare_publish_set.py` لنسخ وتأمين 1012 ملفاً (229.54 MB).
+     - تم تشغيل `scripts/build_csp.py` وتدقيق 226 تجزئة أمان محتوى نظيفة ومطابقة.
+  4. **اجتياز كافة بوابات الاختبار بنسبة 100%:**
+     - `check_perf_budget.py`:
+       - `heaviest asset: 249.1 KB / 450.0 KB (OK)`
+       - `total transfer: 1939.3 KB / 3200.0 KB (OK)`
+       - `requests: 111.0 / 172.0 (OK)`
+       - النتيجة: `PASSED - inside budget`.
+     - `sentinel_i18n.py`: اجتياز كافة الأجنحة الـ 13 وفحوصات المخلفات الإنجليزية الـ 27 بنجاح 100%.
+     - `build_csp.py --check`: اجتياز كامل لـ 226 تجزئة.
+     - `validate_publish_set.py`: 185 صفحة و 11611 مرجع سليم بصفر أخطاء.
+     - `check_publish_set_integrity.py`: عزل لغوي نقي 100% وصفر أصول مفقودة.
+     - `audit_secrets.py`: صفر أسرار أو اعتمادات مسربة.
+
+---
+
+</div>
 
 <div dir="rtl">
 
