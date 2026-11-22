@@ -67,7 +67,7 @@ ALLOWED_EXTENSIONS = {
 
 def get_target_files(staged_only=False):
     """Returns list of relative file paths to inspect."""
-    cmd = ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR"] if staged_only else ["git", "ls-files"]
+    cmd = ["git", "-c", "safe.directory=*", "diff", "--cached", "--name-only", "--diff-filter=ACMR"] if staged_only else ["git", "-c", "safe.directory=*", "ls-files"]
     try:
         res = subprocess.run(cmd, capture_output=True, text=True, check=True)
         files = [line.strip() for line in res.stdout.splitlines() if line.strip()]

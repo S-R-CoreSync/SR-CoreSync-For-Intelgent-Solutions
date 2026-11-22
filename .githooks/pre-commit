@@ -5,9 +5,18 @@
 # Git Pre-Commit Hook: Auto-Regeneration & Sovereign Security Audit
 # ==============================================================================
 
+# Resolve Python binary (prefer project virtualenv, then py launcher, then python)
+if [ -f ".venv/Scripts/python.exe" ]; then
+    PY_BIN=".venv/Scripts/python.exe"
+elif command -v py >/dev/null 2>&1; then
+    PY_BIN="py"
+else
+    PY_BIN="python"
+fi
+
 echo "🔒 [S&R CoreSync] Executing Sovereign Secret & Credential Pre-Commit Audit..."
 
-python scripts/audit_secrets.py --staged
+"$PY_BIN" scripts/audit_secrets.py --staged
 
 EXIT_CODE=$?
 if [ $EXIT_CODE -ne 0 ]; then
@@ -24,7 +33,7 @@ echo "✅ [S&R CoreSync] Pre-commit audit passed: Zero secrets detected."
 # all language layers and parts, staging any regenerated files seamlessly.
 # ------------------------------------------------------------------------------
 echo "🔄 [S&R CoreSync] Auto-synchronizing language layers & site parts..."
-python scripts/preflight.py
+"$PY_BIN" scripts/preflight.py
 
 if [ $? -ne 0 ]; then
     echo ""
