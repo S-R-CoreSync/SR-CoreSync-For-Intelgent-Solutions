@@ -3,76 +3,85 @@
                 <canvas id="heroMotionCanvas" class="hero-motion-canvas" aria-hidden="true"></canvas>
                 <div class="overlay"></div>
 
-<div class="hv2" id="hv2-hero">
-    <div class="concept-3-cockpit">
-        <div class="c3-cockpit-layout">
-            <!-- 1. Telemetry Panel -->
-            <div class="c3-sidebar-panel">
-                <h4 class="c3-panel-head">📊 القياس اللحظي</h4>
-                <div class="c3-stat-row">
-                    <span>سرعة الاستجابة</span>
-                    <strong style="color:#10b981;">0.08s</strong>
+                <div class="hv2" id="hv2-hero">
+                    <div class="concept-3-cockpit">
+                        <div class="c3-cockpit-layout">
+                            <!-- 1. Telemetry Panel -->
+                            <div class="c3-sidebar-panel">
+                                <h4 class="c3-panel-head">📊 القياس اللحظي</h4>
+                                <div class="c3-stat-row">
+                                    <span>سرعة الاستجابة</span>
+                                    <strong style="color:#10b981;">0.08s</strong>
+                                </div>
+                                <div class="c3-stat-row">
+                                    <span>الأمان السيبراني</span>
+                                    <strong style="color:var(--sr-gold-light,#f3dfba);">SOC2 / ISO</strong>
+                                </div>
+                                <div class="c3-stat-row">
+                                    <span>محرك الـ AI</span>
+                                    <strong style="color:#38bdf8;">Autonomous v2</strong>
+                                </div>
+                            </div>
+
+                            <!-- 2. Central Cockpit -->
+                            <div class="c3-center-stage">
+                                <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox"
+                                    data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
+                                    <img src="./assets/sr-core-emblem-official.webp"
+                                        alt="S&amp;R CoreSync Sovereign Intelligent Core" width="100" height="100"
+                                        class="c3-orb-img" loading="eager" decoding="async">
+                                </div>
+
+                                <h1 class="c3-hero-h1">
+                                    قمرة قيادة المنظومات الرقمية المتكاملة
+                                </h1>
+
+                                <p class="c3-hero-sub">
+                                    تفاعل مباشرة مع النواة الذكية لإطلاق منصتك السحابية وهويتك البصرية بدقة متناهية.
+                                </p>
+
+                                <!-- AI Idea Bar -->
+                                <form class="hero-ai-idea-form lux-ai-search-bar" data-sr-call="submitHeroAiIdea"
+                                    data-sr-on="submit" data-sr-prevent="1">
+                                    <span class="lux-ai-sparkle">⚡</span>
+                                    <input type="text" id="heroAiIdeaInput" class="lux-ai-input"
+                                        placeholder="أدخل أهداف مشروعك لبدء تهيئة المنظومة البرمجية…" autocomplete="off"
+                                        aria-label="Project Idea AI Input">
+                                    <button type="button" class="lux-ai-mic-btn" data-sr-call="openVoicePlannerFromHero"
+                                        title="تحدث بفكرة مشروعك بالصوت التفاعلي"
+                                        aria-label="تحدث بفكرة مشروعك بالصوت التفاعلي">
+                                        <span class="hero-ai-mic-icon">🎙️</span>
+                                    </button>
+                                    <button type="submit" class="lux-ai-submit-btn" title="تهيئة النظام ✦"
+                                        aria-label="تهيئة النظام ✦">
+                                        <span>تهيئة النظام ✦</span>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- 3. Pillars Panel -->
+                            <div class="c3-sidebar-panel">
+                                <h4 class="c3-panel-head">⚡ مسارات التنفيذ</h4>
+                                <a href="#services" class="c1-chip">
+                                    <span>💳</span>
+                                    <span>أنظمة FinTech ودفوعات</span>
+                                </a>
+                                <a href="#services" class="c1-chip">
+                                    <span>🛒</span>
+                                    <span>منصات تجارة عالمية</span>
+                                </a>
+                                <a href="#services" class="c1-chip">
+                                    <span>📦</span>
+                                    <span>سلاسل التوريد الذكية</span>
+                                </a>
+                                <a href="#services" class="c1-chip">
+                                    <span>🏛️</span>
+                                    <span>مركز CLGID للابتكار</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="c3-stat-row">
-                    <span>الأمان السيبراني</span>
-                    <strong style="color:var(--sr-gold-light,#f3dfba);">SOC2 / ISO</strong>
-                </div>
-                <div class="c3-stat-row">
-                    <span>محرك الـ AI</span>
-                    <strong style="color:#38bdf8;">Autonomous v2</strong>
-                </div>
-            </div>
-
-            <!-- 2. Central Cockpit -->
-            <div class="c3-center-stage">
-                <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox" data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
-                    <img src="./assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Sovereign Intelligent Core" width="100" height="100" class="c3-orb-img" loading="eager" decoding="async">
-                </div>
-
-                <h1 class="c3-hero-h1">
-                    قمرة قيادة المنظومات الرقمية المتكاملة
-                </h1>
-
-                <p class="c3-hero-sub">
-                    تفاعل مباشرة مع النواة الذكية لإطلاق منصتك السحابية وهويتك البصرية بدقة متناهية.
-                </p>
-
-                <!-- AI Idea Bar -->
-                <form class="hero-ai-idea-form lux-ai-search-bar" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
-                    <span class="lux-ai-sparkle">⚡</span>
-                    <input type="text" id="heroAiIdeaInput" class="lux-ai-input" placeholder="أدخل أهداف مشروعك لبدء تهيئة المنظومة البرمجية…" autocomplete="off" aria-label="Project Idea AI Input">
-                    <button type="button" class="lux-ai-mic-btn" data-sr-call="openVoicePlannerFromHero" title="تحدث بفكرة مشروعك بالصوت التفاعلي" aria-label="تحدث بفكرة مشروعك بالصوت التفاعلي">
-                        <span class="hero-ai-mic-icon">🎙️</span>
-                    </button>
-                    <button type="submit" class="lux-ai-submit-btn" title="تهيئة النظام ✦" aria-label="تهيئة النظام ✦">
-                        <span>تهيئة النظام ✦</span>
-                    </button>
-                </form>
-            </div>
-
-            <!-- 3. Pillars Panel -->
-            <div class="c3-sidebar-panel">
-                <h4 class="c3-panel-head">⚡ مسارات التنفيذ</h4>
-                <a href="#services" class="c1-chip">
-                    <span>💳</span>
-                    <span>أنظمة FinTech ودفوعات</span>
-                </a>
-                <a href="#services" class="c1-chip">
-                    <span>🛒</span>
-                    <span>منصات تجارة عالمية</span>
-                </a>
-                <a href="#services" class="c1-chip">
-                    <span>📦</span>
-                    <span>سلاسل التوريد الذكية</span>
-                </a>
-                <a href="#services" class="c1-chip">
-                    <span>🏛️</span>
-                    <span>مركز CLGID للابتكار</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
                 <div class="content-wrap">
                     <div class="container container-hero-luxury">
                         <div class="hero-reference__grid">
@@ -80,55 +89,102 @@
                                 <div class="hero-reference__actions hero-actions-2x2">
                                     <!-- Row 1: Gold Luxury Pair (Live Demo & VIP Executive Consultation) -->
                                     <div class="hero-actions-row">
-                                        <a href="demo.html" class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-demo hero-btn-primary-highlight hero-btn-quiet" title="تجربة نظام ERP المالي الحي">
+                                        <a href="demo.html"
+                                            class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-demo hero-btn-primary-highlight hero-btn-quiet"
+                                            title="تجربة نظام ERP المالي الحي">
                                             <span>تجربة النظام المؤسسي ديمو ⚡</span>
                                         </a>
-                                        <button type="button" class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-vip hero-btn-primary-highlight" data-sr-call="openExecutiveBookingModal" title="حجز استشارة تنفيذية VIP">
-                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        <button type="button"
+                                            class="tf-btn hero-reference__action hero-btn-gold-pair hero-btn-vip hero-btn-primary-highlight"
+                                            data-sr-call="openExecutiveBookingModal" title="حجز استشارة تنفيذية VIP">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                                                stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                            </svg>
                                             <span>حجز استشارة خاصة 👔</span>
                                         </button>
                                     </div>
 
                                     <!-- Row 2: Dark Emerald Portal Pair (Developer Portal & Partner Portal) -->
                                     <div class="hero-actions-row">
-                                        <a href="developer-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-dev-portal" title="بوابة المطوّرين، واجهات API، والهولوغرام ثلاثي الأبعاد التفاعلي">
-                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+                                        <a href="developer-portal.html"
+                                            class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-dev-portal"
+                                            title="بوابة المطوّرين، واجهات API، والهولوغرام ثلاثي الأبعاد التفاعلي">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                                                stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                                <path d="M16 18l6-6-6-6" />
+                                                <path d="M8 6l-6 6 6 6" />
+                                            </svg>
                                             <span>بوابة المطورين ⚡</span>
                                         </a>
-                                        <a href="partner-portal.html" class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-partner-portal" title="الشبكة العالمية للشركاء والوكلاء، الوكالة الحصرية، والترخيص المؤسسي">
-                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                        <a href="partner-portal.html"
+                                            class="tf-btn hero-reference__action hero-btn-portal-pair hero-btn-partner-portal"
+                                            title="الشبكة العالمية للشركاء والوكلاء، الوكالة الحصرية، والترخيص المؤسسي">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                                                stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                            </svg>
                                             <span>بوابة الوكلاء والتراخيص 💼</span>
                                         </a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /hero-editorial.hero-cinematic: إغلاق غلاف البطل السينمائي كان مفقوداً فابتلع بقية الصفحة (إصلاح الاحتواء 2026-11-18) -->
+        <section id="trust-metrics" class="section-trust-metrics" aria-label="S&R CoreSync in numbers">
+            <div class="hero-trust-metrics-strip hero-trust-compact" aria-label="مؤشرات الأداء والاعتماد الأوروبي">
+                <div class="trust-metric-item">
+                    <span class="metric-val">99.9%</span>
+                    <span class="metric-lbl">جاهزية سحابية</span>
+                </div>
+                <div class="trust-metric-separator" aria-hidden="true"></div>
+                <div class="trust-metric-item">
+                    <span class="metric-val">EU &amp; BTW</span>
+                    <span class="metric-lbl">امتثال ضريبي أوروبي</span>
+                </div>
+                <div class="trust-metric-separator" aria-hidden="true"></div>
+                <div class="trust-metric-item">
+                    <span class="metric-val">&lt; 30s</span>
+                    <span class="metric-lbl">بدء فوري</span>
+                </div>
+                <div class="trust-metric-separator" aria-hidden="true"></div>
+                <div class="trust-metric-item">
+                    <span class="metric-val">Amsterdam HQ</span>
+                    <span class="metric-lbl">مقر أمستردام</span>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-</div><!-- /hero-editorial.hero-cinematic: إغلاق غلاف البطل السينمائي كان مفقوداً فابتلع بقية الصفحة (إصلاح الاحتواء 2026-11-18) -->
-<section id="trust-metrics" class="section-trust-metrics" aria-label="S&R CoreSync in numbers"><div class="hero-trust-metrics-strip hero-trust-compact" aria-label="مؤشرات الأداء والاعتماد الأوروبي">
-                                        <div class="trust-metric-item">
-                                            <span class="metric-val">99.9%</span>
-                                            <span class="metric-lbl">جاهزية سحابية</span>
-                                        </div>
-                                        <div class="trust-metric-separator" aria-hidden="true"></div>
-                                        <div class="trust-metric-item">
-                                            <span class="metric-val">EU &amp; BTW</span>
-                                            <span class="metric-lbl">امتثال ضريبي أوروبي</span>
-                                        </div>
-                                        <div class="trust-metric-separator" aria-hidden="true"></div>
-                                        <div class="trust-metric-item">
-                                            <span class="metric-val">&lt; 30s</span>
-                                            <span class="metric-lbl">بدء فوري</span>
-                                        </div>
-                                        <div class="trust-metric-separator" aria-hidden="true"></div>
-                                        <div class="trust-metric-item">
-                                            <span class="metric-val">Amsterdam HQ</span>
-                                            <span class="metric-lbl">مقر أمستردام</span>
-                                        </div>
-                                    </div></section>
+        </section>
 
-<nav class="sr-jump" aria-label="القفز إلى الأقسام" data-sr-decision-bar><a href="#about" data-sr-jump="about"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 6.3 6.4.5-4.9 4.2 1.5 6.3L12 16.9 6.4 20.3l1.5-6.3L3 9.8l6.4-.5L12 3z"/></svg><span>القيمة</span></a><a href="#services" data-sr-jump="services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg><span>القدرات</span></a><a href="#software-hub" data-sr-jump="software-hub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg><span>المتجر</span></a><a href="#pricing" data-sr-jump="pricing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20"/><path d="M17 7H9.5a3 3 0 000 6H14a3 3 0 010 6H6"/></svg><span>السعر</span></a><a href="#contact" data-sr-jump="contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg><span>تواصل</span></a></nav>
+        <nav class="sr-jump" aria-label="القفز إلى الأقسام" data-sr-decision-bar><a href="#about"
+                data-sr-jump="about"><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3l2.6 6.3 6.4.5-4.9 4.2 1.5 6.3L12 16.9 6.4 20.3l1.5-6.3L3 9.8l6.4-.5L12 3z" />
+                </svg><span>القيمة</span></a><a href="#services" data-sr-jump="services"><svg viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path d="M3 21h18" />
+                    <path d="M5 21V8l7-5 7 5v13" />
+                    <path d="M10 21v-6h4v6" />
+                </svg><span>القدرات</span></a><a href="#software-hub" data-sr-jump="software-hub"><svg
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 9l2-5h14l2 5" />
+                    <path d="M4 9v11h16V9" />
+                    <path d="M9 20v-6h6v6" />
+                </svg><span>المتجر</span></a><a href="#pricing" data-sr-jump="pricing"><svg viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path d="M12 2v20" />
+                    <path d="M17 7H9.5a3 3 0 000 6H14a3 3 0 010 6H6" />
+                </svg><span>السعر</span></a><a href="#contact" data-sr-jump="contact"><svg viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path d="M4 5h16v14H4z" />
+                    <path d="M4 7l8 6 8-6" />
+                </svg><span>تواصل</span></a></nav>
 
-<div id="service" data-section class="section-scroll-anchor" aria-hidden="true"></div>
+        <div id="service" data-section class="section-scroll-anchor" aria-hidden="true"></div>
+        

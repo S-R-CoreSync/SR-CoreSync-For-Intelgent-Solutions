@@ -1,75 +1,84 @@
 <section id="hero" class="section-hero-v1 hero-reference">
 <!-- SR:BEGIN hero -->
 <div class="hv2" id="hv2-hero">
-    <div class="concept-3-cockpit">
-        <div class="c3-cockpit-layout">
-            <!-- 1. Telemetry Panel -->
-            <div class="c3-sidebar-panel">
-                <h4 class="c3-panel-head">📊 Live Telemetry</h4>
-                <div class="c3-stat-row">
-                    <span>Response Speed</span>
-                    <strong style="color:#10b981;">0.08s</strong>
+                    <div class="concept-3-cockpit">
+                        <div class="c3-cockpit-layout">
+                            <!-- 1. Telemetry Panel -->
+                            <div class="c3-sidebar-panel">
+                                <h4 class="c3-panel-head">📊 Live Telemetry</h4>
+                                <div class="c3-stat-row">
+                                    <span>Response Speed</span>
+                                    <strong style="color:#10b981;">0.08s</strong>
+                                </div>
+                                <div class="c3-stat-row">
+                                    <span>Cyber Security</span>
+                                    <strong style="color:var(--sr-gold-light,#f3dfba);">SOC2 / ISO</strong>
+                                </div>
+                                <div class="c3-stat-row">
+                                    <span>AI Engine</span>
+                                    <strong style="color:#38bdf8;">Autonomous v2</strong>
+                                </div>
+                            </div>
+
+                            <!-- 2. Central Cockpit -->
+                            <div class="c3-center-stage">
+                                <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox"
+                                    data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
+                                    <img src="../assets/sr-core-emblem-official.webp"
+                                        alt="S&amp;R CoreSync Sovereign Intelligent Core" width="100" height="100"
+                                        class="c3-orb-img" loading="eager" decoding="async">
+                                </div>
+
+                                <h1 class="c3-hero-h1">
+                                    Integrated Digital Systems Cockpit
+                                </h1>
+
+                                <p class="c3-hero-sub">
+                                    Interact directly with the intelligent core to launch your cloud platform and brand identity with absolute precision.
+                                </p>
+
+                                <!-- AI Idea Bar -->
+                                <form class="hero-ai-idea-form lux-ai-search-bar" data-sr-call="submitHeroAiIdea"
+                                    data-sr-on="submit" data-sr-prevent="1">
+                                    <span class="lux-ai-sparkle">⚡</span>
+                                    <input type="text" id="heroAiIdeaInput" class="lux-ai-input"
+                                        placeholder="Enter your project goals to initialize software architecture…" autocomplete="off"
+                                        aria-label="Project Idea AI Input">
+                                    <button type="button" class="lux-ai-mic-btn" data-sr-call="openVoicePlannerFromHero"
+                                        title="Speak your project idea interactively"
+                                        aria-label="Speak your project idea interactively">
+                                        <span class="hero-ai-mic-icon">🎙️</span>
+                                    </button>
+                                    <button type="submit" class="lux-ai-submit-btn" title="Initialize System ✦"
+                                        aria-label="Initialize System ✦">
+                                        <span>Initialize System ✦</span>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- 3. Pillars Panel -->
+                            <div class="c3-sidebar-panel">
+                                <h4 class="c3-panel-head">⚡ Execution Tracks</h4>
+                                <a href="#services" class="c1-chip">
+                                    <span>💳</span>
+                                    <span>FinTech & Payment Systems</span>
+                                </a>
+                                <a href="#services" class="c1-chip">
+                                    <span>🛒</span>
+                                    <span>Global Commerce Platforms</span>
+                                </a>
+                                <a href="#services" class="c1-chip">
+                                    <span>📦</span>
+                                    <span>Smart Supply Chains</span>
+                                </a>
+                                <a href="#services" class="c1-chip">
+                                    <span>🏛️</span>
+                                    <span>CLGID Innovation Center</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="c3-stat-row">
-                    <span>Cyber Security</span>
-                    <strong style="color:var(--sr-gold-light,#f3dfba);">SOC2 / ISO</strong>
-                </div>
-                <div class="c3-stat-row">
-                    <span>AI Engine</span>
-                    <strong style="color:#38bdf8;">Autonomous v2</strong>
-                </div>
-            </div>
-
-            <!-- 2. Central Cockpit -->
-            <div class="c3-center-stage">
-                <div class="c3-core-orb" id="heroOrbCore" data-sr-call="openLogoLightbox" data-sr-event="1" title="S&amp;R CoreSync Sovereign Intelligent Core">
-                    <img src="../assets/sr-core-emblem-official.webp" alt="S&amp;R CoreSync Sovereign Intelligent Core" width="100" height="100" class="c3-orb-img" loading="eager" decoding="async">
-                </div>
-
-                <h1 class="c3-hero-h1">
-                    Integrated Digital Systems Cockpit
-                </h1>
-
-                <p class="c3-hero-sub">
-                    Interact directly with the intelligent core to launch your cloud platform and brand identity with absolute precision.
-                </p>
-
-                <!-- AI Idea Bar -->
-                <form class="hero-ai-idea-form lux-ai-search-bar" data-sr-call="submitHeroAiIdea" data-sr-on="submit" data-sr-prevent="1">
-                    <span class="lux-ai-sparkle">⚡</span>
-                    <input type="text" id="heroAiIdeaInput" class="lux-ai-input" placeholder="Enter your project goals to initialize software architecture…" autocomplete="off" aria-label="Project Idea AI Input">
-                    <button type="button" class="lux-ai-mic-btn" data-sr-call="openVoicePlannerFromHero" title="Speak your project idea interactively" aria-label="Speak your project idea interactively">
-                        <span class="hero-ai-mic-icon">🎙️</span>
-                    </button>
-                    <button type="submit" class="lux-ai-submit-btn" title="Initialize System ✦" aria-label="Initialize System ✦">
-                        <span>Initialize System ✦</span>
-                    </button>
-                </form>
-            </div>
-
-            <!-- 3. Pillars Panel -->
-            <div class="c3-sidebar-panel">
-                <h4 class="c3-panel-head">⚡ Execution Tracks</h4>
-                <a href="#services" class="c1-chip">
-                    <span>💳</span>
-                    <span>FinTech & Payment Systems</span>
-                </a>
-                <a href="#services" class="c1-chip">
-                    <span>🛒</span>
-                    <span>Global Commerce Platforms</span>
-                </a>
-                <a href="#services" class="c1-chip">
-                    <span>📦</span>
-                    <span>Smart Supply Chains</span>
-                </a>
-                <a href="#services" class="c1-chip">
-                    <span>🏛️</span>
-                    <span>CLGID Innovation Center</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- SR:END hero -->
 
                 <!-- Interactive Dynamic Motion Canvas -->
