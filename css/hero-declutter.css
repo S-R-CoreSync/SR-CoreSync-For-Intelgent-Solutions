@@ -188,7 +188,10 @@
     padding: 10px;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -430,7 +433,10 @@
     margin-bottom: 12px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 88px !important;
     height: 88px !important;
     border-radius: 50% !important;
@@ -669,7 +675,10 @@
     margin-bottom: 12px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 88px !important;
     height: 88px !important;
     border-radius: 50% !important;
@@ -888,7 +897,10 @@
     padding-left: 0 !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 96px !important;
     height: 96px !important;
 
@@ -1000,7 +1012,10 @@
     margin-bottom: 14px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 104px !important;
     height: 104px !important;
 
@@ -1120,7 +1135,10 @@
     margin-bottom: 16px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 138px !important;
     height: 138px !important;
     border-radius: 50% !important;
@@ -1232,12 +1250,15 @@
     padding-top: 12px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 150px !important;
     height: 150px !important;
     border-radius: 50% !important;
     background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    border: none !important;
     box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
@@ -1246,7 +1267,7 @@
     margin: 0 auto !important;
     animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 @keyframes majesticAuraPulse {
@@ -1439,12 +1460,15 @@
     padding-top: 12px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 150px !important;
     height: 150px !important;
     border-radius: 50% !important;
     background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    border: none !important;
     box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
@@ -1453,7 +1477,7 @@
     margin: 0 auto !important;
     animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 @keyframes majesticAuraPulse {
@@ -1646,12 +1670,15 @@
     padding-top: 12px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 150px !important;
     height: 150px !important;
     border-radius: 50% !important;
     background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    border: none !important;
     box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
@@ -1660,7 +1687,7 @@
     margin: 0 auto !important;
     animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 @keyframes majesticAuraPulse {
@@ -1853,12 +1880,15 @@
     padding-top: 12px !important;
 }
 
-.c3-core-orb {
+#service, #services {
+    scroll-margin-top: 110px !important;
+}
+
     width: 150px !important;
     height: 150px !important;
     border-radius: 50% !important;
     background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    border: none !important;
     box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
@@ -1867,7 +1897,7 @@
     margin: 0 auto !important;
     animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 @keyframes majesticAuraPulse {
