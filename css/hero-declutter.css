@@ -1158,7 +1158,7 @@
     width: 100% !important;
     max-width: 1400px !important;
     margin: 0 auto !important;
-    padding: 85px 20px 110px 20px !important;
+    padding: 35px 20px 15px 20px !important;
     position: relative !important;
     z-index: 2 !important;
 }
@@ -1233,38 +1233,42 @@
 }
 
 .c3-core-orb {
-    width: 140px !important;
-    height: 140px !important;
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 50% !important;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px dashed rgba(212, 175, 55, 0.55) !important;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
+    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 0 35px rgba(212, 175, 55, 0.3) !important;
     cursor: pointer !important;
     margin: 0 auto !important;
-    animation: rotateOrb 25s infinite linear !important;
+    animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
     overflow: hidden !important;
 }
 
-@keyframes rotateOrb {
-    100% { transform: rotate(360deg); }
+@keyframes majesticAuraPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 18px rgba(212, 175, 55, 0.15), 0 0 25px rgba(212, 175, 55, 0.25);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.35), inset 0 0 28px rgba(212, 175, 55, 0.28), 0 0 42px rgba(212, 175, 55, 0.45);
+        transform: scale(1.02);
+    }
 }
 
 .c3-orb-img {
-    width: 132px !important;
-    height: 132px !important;
-    animation: unrotateOrb 25s infinite linear !important;
-    filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+    width: 95px !important;
+    height: 95px !important;
+    animation: none !important;
+    transform: none !important;
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.65)) !important;
 
     border-radius: 50% !important;
-    object-fit: cover !important;
-}
-
-@keyframes unrotateOrb {
-    100% { transform: rotate(-360deg); }
+    object-fit: contain !important;
 }
 
 .c3-hero-h1 {
@@ -1361,7 +1365,7 @@
     width: 100% !important;
     max-width: 1400px !important;
     margin: 0 auto !important;
-    padding: 85px 20px 110px 20px !important;
+    padding: 35px 20px 15px 20px !important;
     position: relative !important;
     z-index: 2 !important;
 }
@@ -1436,38 +1440,42 @@
 }
 
 .c3-core-orb {
-    width: 140px !important;
-    height: 140px !important;
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 50% !important;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px dashed rgba(212, 175, 55, 0.55) !important;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
+    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 0 35px rgba(212, 175, 55, 0.3) !important;
     cursor: pointer !important;
     margin: 0 auto !important;
-    animation: rotateOrb 25s infinite linear !important;
+    animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
     overflow: hidden !important;
 }
 
-@keyframes rotateOrb {
-    100% { transform: rotate(360deg); }
+@keyframes majesticAuraPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 18px rgba(212, 175, 55, 0.15), 0 0 25px rgba(212, 175, 55, 0.25);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.35), inset 0 0 28px rgba(212, 175, 55, 0.28), 0 0 42px rgba(212, 175, 55, 0.45);
+        transform: scale(1.02);
+    }
 }
 
 .c3-orb-img {
-    width: 132px !important;
-    height: 132px !important;
-    animation: unrotateOrb 25s infinite linear !important;
-    filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+    width: 95px !important;
+    height: 95px !important;
+    animation: none !important;
+    transform: none !important;
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.65)) !important;
 
     border-radius: 50% !important;
-    object-fit: cover !important;
-}
-
-@keyframes unrotateOrb {
-    100% { transform: rotate(-360deg); }
+    object-fit: contain !important;
 }
 
 .c3-hero-h1 {
@@ -1564,7 +1572,7 @@
     width: 100% !important;
     max-width: 1400px !important;
     margin: 0 auto !important;
-    padding: 85px 20px 110px 20px !important;
+    padding: 35px 20px 15px 20px !important;
     position: relative !important;
     z-index: 2 !important;
 }
@@ -1639,38 +1647,42 @@
 }
 
 .c3-core-orb {
-    width: 140px !important;
-    height: 140px !important;
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 50% !important;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px dashed rgba(212, 175, 55, 0.55) !important;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
+    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 0 35px rgba(212, 175, 55, 0.3) !important;
     cursor: pointer !important;
     margin: 0 auto !important;
-    animation: rotateOrb 25s infinite linear !important;
+    animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
     overflow: hidden !important;
 }
 
-@keyframes rotateOrb {
-    100% { transform: rotate(360deg); }
+@keyframes majesticAuraPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 18px rgba(212, 175, 55, 0.15), 0 0 25px rgba(212, 175, 55, 0.25);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.35), inset 0 0 28px rgba(212, 175, 55, 0.28), 0 0 42px rgba(212, 175, 55, 0.45);
+        transform: scale(1.02);
+    }
 }
 
 .c3-orb-img {
-    width: 132px !important;
-    height: 132px !important;
-    animation: unrotateOrb 25s infinite linear !important;
-    filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+    width: 95px !important;
+    height: 95px !important;
+    animation: none !important;
+    transform: none !important;
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.65)) !important;
 
     border-radius: 50% !important;
-    object-fit: cover !important;
-}
-
-@keyframes unrotateOrb {
-    100% { transform: rotate(-360deg); }
+    object-fit: contain !important;
 }
 
 .c3-hero-h1 {
@@ -1767,7 +1779,7 @@
     width: 100% !important;
     max-width: 1400px !important;
     margin: 0 auto !important;
-    padding: 85px 20px 110px 20px !important;
+    padding: 35px 20px 15px 20px !important;
     position: relative !important;
     z-index: 2 !important;
 }
@@ -1842,38 +1854,42 @@
 }
 
 .c3-core-orb {
-    width: 140px !important;
-    height: 140px !important;
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 50% !important;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
-    border: 2px dashed rgba(212, 175, 55, 0.55) !important;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.02) 70%) !important;
+    border: 2px solid rgba(212, 175, 55, 0.85) !important;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 20px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.25) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 0 35px rgba(212, 175, 55, 0.3) !important;
     cursor: pointer !important;
     margin: 0 auto !important;
-    animation: rotateOrb 25s infinite linear !important;
+    animation: majesticAuraPulse 4s ease-in-out infinite !important;
 
     overflow: hidden !important;
 }
 
-@keyframes rotateOrb {
-    100% { transform: rotate(360deg); }
+@keyframes majesticAuraPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18), inset 0 0 18px rgba(212, 175, 55, 0.15), 0 0 25px rgba(212, 175, 55, 0.25);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.35), inset 0 0 28px rgba(212, 175, 55, 0.28), 0 0 42px rgba(212, 175, 55, 0.45);
+        transform: scale(1.02);
+    }
 }
 
 .c3-orb-img {
-    width: 132px !important;
-    height: 132px !important;
-    animation: unrotateOrb 25s infinite linear !important;
-    filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.65)) !important;
+    width: 95px !important;
+    height: 95px !important;
+    animation: none !important;
+    transform: none !important;
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.65)) !important;
 
     border-radius: 50% !important;
-    object-fit: cover !important;
-}
-
-@keyframes unrotateOrb {
-    100% { transform: rotate(-360deg); }
+    object-fit: contain !important;
 }
 
 .c3-hero-h1 {
