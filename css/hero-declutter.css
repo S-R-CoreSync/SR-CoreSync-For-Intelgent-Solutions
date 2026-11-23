@@ -2100,3 +2100,6 @@
     z-index: 1000 !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 0 12px rgba(212, 175, 55, 0.45) !important;
 }
+
+/* Added smooth scrolling for better anchor navigation */
+html { scroll-behavior: smooth; }
