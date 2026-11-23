@@ -1,5 +1,16 @@
 <div dir="rtl">
 
+## 🌟 المرحلة 227: إعداد محرك خادم التطوير المحلي وإتاحة أمر `npm start` في المجلد الجذري ومجلد المشروع بنسبة 100%
+- [x] **تشخيص سبب خطأ ENOENT عند تشغيل `npm start`:**
+  - كشف سبب المشكلة: تشغيل الأمر كان يتم من مسار المجلد الأب `D:\I-Ai\App\S&R CoreSync For Intelligent Solutions` الذي لم يكن يحتوي على `package.json`، بالإضافة إلى خلو `package.json` الأصلي في `Project` من أمر `"start"`.
+- [x] **بناء خادم تطوير محلي مستقل خفيف وعالي الأداء (`scripts/serve.mjs`):**
+  - بناء محرك خادم HTTP مدمج بلغة Node.js نقية دون أي تبعيات خارجية لدعم كافة أنواع الـ MIME (.html, .js, .css, .json, .png, .webp, إلخ) والعمل على المنفذ `3000`.
+- [x] **تحديث ملفات التكوين والربط السيادي:**
+  - إضافة `"start": "node scripts/serve.mjs"` إلى `Project/package.json`.
+  - إنشاء `package.json` في المجلد الجذري الأب للربط التلقائي `--prefix Project` ليعمل `npm start` فوراً من كلا المسارين دون أي خطأ.
+- [x] **التحقق الشامل واجتياز كافة بوابات البناء والـ CI بنسبة 100%:**
+  - اجتياز `npm run build` بنجاح كامل بجميع مراحله الست (Modules, Syntax, Publish Set, CSP Hashes, Sentinel i18n, Secret Scanner).
+
 ## 🌟 المرحلة 226: تنفيذ استضافة خطوط Google Fonts محلياً (Self-Hosting Tajawal & Cinzel & Cairo) وتطهير 140 ملفاً بنسبة 100%
 - [x] **تنزيل وتوطين ملفات WOFF2 الأصلية فائقة الضغط:**
   - بناء وتشغيل `scripts/download_self_hosted_fonts.py` لتنزيل خطوط `Tajawal` (12 ملفاً)، `Cinzel` (8 ملفات)، و `Cairo` (15 ملفاً) مباشرة داخل `assets/fonts/gf/`.
