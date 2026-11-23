@@ -23,7 +23,7 @@ export class FinancialService {
     return FinancialService.instance;
   }
 
-  public calculateBtw(baseAmount: number, rate: 0.21 | 0.09 = 0.21): TaxCalculationResult {
+  public calculateBtw(baseAmount: number, rate: number = 0.21): TaxCalculationResult {
     const btwAmount = Math.round(baseAmount * rate * 100) / 100;
     const total = Math.round((baseAmount + btwAmount) * 100) / 100;
     return {

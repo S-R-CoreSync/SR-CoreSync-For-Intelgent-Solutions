@@ -67,7 +67,7 @@ EXCLUDED_DIR_PREFIXES = ('_',)
 EXCLUDED_ROOT_FILES = {
     '.env', '.env.example', '.env.local', '.env.vault', '.gitignore',
     '.dockerignore', '.htaccess', 'LICENSE', 'serve.py',
-    'auth_keys.json', 'chat_history.txt'
+    'auth_keys.json', 'chat_history.txt', 'package.json', 'package-lock.json'
 }
 
 # Root level file suffixes that are never published.

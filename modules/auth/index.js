@@ -6,8 +6,8 @@
 
 
 export class AuthService {
-  static instance: AuthService;
-  state= {
+  static instance;
+  state = {
     isAuthenticated,
     currentUser,
     permissions: []

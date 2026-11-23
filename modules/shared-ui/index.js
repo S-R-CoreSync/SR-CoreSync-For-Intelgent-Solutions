@@ -6,7 +6,7 @@
 
 
 export class SharedUiService {
-  static instance: SharedUiService;
+  static instance;
 
   constructor() {}
 

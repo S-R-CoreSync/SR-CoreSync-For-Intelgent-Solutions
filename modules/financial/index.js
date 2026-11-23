@@ -5,7 +5,7 @@
 
 
 export class FinancialService {
-  static instance: FinancialService;
+  static instance;
 
   constructor() {}
 
@@ -16,7 +16,7 @@ export class FinancialService {
     return FinancialService.instance;
   }
 
-  calculateBtw(baseAmount, rate: 0.21 | 0.09 = 0.21) {
+  calculateBtw(baseAmount, rate= 0.21) {
     const btwAmount = Math.round(baseAmount * rate * 100) / 100;
     const total = Math.round((baseAmount + btwAmount) * 100) / 100;
     return {

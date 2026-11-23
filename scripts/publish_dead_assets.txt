@@ -29,7 +29,6 @@ assets/social-8k-branding/youtube/youtube-channel-banner-8k.jpg
 assets/social-8k-branding/universal/sr-coresync-profile-avatar-raed-8k.webp
 assets/social-8k-branding/youtube/youtube-thumbnail-master-8k.webp
 assets/service-finance-advisory-3d.jpg
-assets/hero-founder-cinematic-ultra-opt.mp4
 assets/social-8k-branding/linkedin/linkedin-company-cover-8k.jpg
 assets/service-erp-finance-3d.jpg
 assets/social-8k-branding/universal/sr-coresync-profile-avatar-salim-8k.webp

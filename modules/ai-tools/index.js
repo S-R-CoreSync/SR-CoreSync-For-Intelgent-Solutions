@@ -6,7 +6,7 @@
 
 
 export class AiToolsService {
-  static instance: AiToolsService;
+  static instance;
 
   constructor() {}
 

@@ -5,7 +5,7 @@
 
 
 export class MemberService {
-  static instance: MemberService;
+  static instance;
 
   constructor() {}
 

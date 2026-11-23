@@ -5,7 +5,7 @@
 
 
 export class MediaHubService {
-  static instance: MediaHubService;
+  static instance;
 
   constructor() {}
 
