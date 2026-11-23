@@ -701,24 +701,13 @@ header.header,
 /* ==========================================================
    Compact Viewport-Fitted Sovereign Hero Section (100% Height)
    ========================================================== */
-.hero-editorial.hero-cinematic {
-    position: relative !important;
-    min-height: 100vh !important;
-    min-height: 100dvh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    overflow: hidden !important;
-}
-
 .section-hero-v1.hero-reference {
-    flex: 1 1 auto !important;
-    min-height: auto !important;
-    max-height: none;
+    min-height: calc(100vh - 85px) !important;
+    max-height: 920px;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 10px 0 15px !important;
+    padding: 15px 0 25px !important;
     overflow: hidden;
 }
 
@@ -905,8 +894,8 @@ header.header,
 .section-trust-metrics {
     position: relative !important;
     z-index: 25 !important;
-    margin-top: 10px !important;
-    margin-bottom: 25px !important;
+    margin-top: -65px !important;
+    margin-bottom: 35px !important;
     padding: 0 20px !important;
     display: flex !important;
     justify-content: center !important;
