@@ -1529,13 +1529,38 @@
     line-height: 1.65 !important;
 }
 
+.lab-action-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    align-items: stretch !important;
+}
+
+.lab-action-box .tf-btn,
+.lab-action-box .btn-consult-advisor,
+.lab-action-box .btn-live-preview {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    padding: 12px 18px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    text-align: center !important;
+    margin: 0 !important;
+    flex: none !important;
+    text-decoration: none !important;
+}
+
 .lab-action-box .tf-btn {
     background: linear-gradient(135deg, #d4af37 0%, #b8912d 100%) !important;
     color: #060b09 !important;
     font-weight: 800 !important;
     border: none !important;
-    border-radius: 12px !important;
-    min-height: 48px !important;
     font-size: 0.92rem !important;
     box-shadow: 0 4px 18px rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35) !important;
     transition: all 0.25s ease !important;
@@ -1549,10 +1574,19 @@
 }
 
 .lab-action-box .btn-consult-advisor {
-    border-radius: 12px !important;
-    min-height: 46px !important;
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.35) !important;
     font-size: 0.88rem !important;
     font-weight: 700 !important;
+    transition: all 0.25s ease !important;
+}
+
+.lab-action-box .btn-consult-advisor:hover {
+    background: rgba(16, 185, 129, 0.22) !important;
+    border-color: #34d399 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
 }
 
 .lab-action-box .btn-live-preview {
@@ -1560,8 +1594,6 @@
     border: 1px dashed rgba(var(--sr-gold-rgb, 212, 175, 55), 0.35) !important;
     color: #f3dfba !important;
     font-weight: 700 !important;
-    border-radius: 12px !important;
-    min-height: 46px !important;
     font-size: 0.88rem !important;
     transition: all 0.25s ease !important;
 }
@@ -1810,7 +1842,6 @@ img, video, iframe, svg, canvas {
 
 /* RTL flex override for inline items */
 [dir="rtl"] .hero-actions-row,
-[dir="rtl"] .lab-action-box,
 [dir="rtl"] .pipeline-grid {
     flex-direction: row-reverse;
 }
