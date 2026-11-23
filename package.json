@@ -3,6 +3,7 @@
   "version": "2026.11.0",
   "description": "S&R CoreScience / CoreSync Sovereign Intelligent Enterprise Platform",
   "scripts": {
+    "start": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "test": "node scripts/build.mjs",
     "lint": "python scripts/sentinel_i18n.py"
