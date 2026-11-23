@@ -98,3 +98,489 @@ Agent ID: AGENT-SR-AMS01-2026-SOVEREIGN</div>`;
     };
 
 }(),"undefined"!=typeof window&&"serviceWorker"in navigator&&window.addEventListener("load",function(){var e=!!window.location.pathname.match(/\/[a-z]{2,3}\//)?"../sw.js":"./sw.js";navigator.serviceWorker.register(e).catch(function(){})});
+
+/* ==========================================================================
+   S&R CoreSync - Partner Application Intake Modal Engine
+   ========================================================================== */
+(function() {
+    let currentPartnerApp = null;
+
+    function createPartnerModalDOM() {
+        let modal = document.getElementById("srPartnerIntakeModal");
+        if (modal) return modal;
+
+        modal = document.createElement("div");
+        modal.id = "srPartnerIntakeModal";
+        modal.className = "sr-partner-modal-overlay";
+        modal.setAttribute("role", "dialog");
+        modal.setAttribute("aria-modal", "true");
+        modal.setAttribute("aria-labelledby", "srPartnerHeaderTitle");
+
+        modal.innerHTML = `
+            <div class="sr-partner-dialog" id="srPartnerDialog">
+                <!-- Header -->
+                <div class="sr-partner-header">
+                    <div class="sr-partner-header-info">
+                        <div class="sr-partner-header-icon">🚀</div>
+                        <div>
+                            <span class="sr-partner-header-badge">مختبر المؤسس • بوابة المطورين والشركاء 2026</span>
+                            <h3 class="sr-partner-header-title" id="srPartnerHeaderTitle">طلب اعتماد وترخيص مشروع برمجى للتوزيع التجاري</h3>
+                            <p class="sr-partner-header-sub">انشر برمجياتك المستقلة عبر البنية التحتية القانونية والتقنية لـ S&R CoreSync في أوروبا</p>
+                        </div>
+                    </div>
+                    <button type="button" class="sr-partner-close-btn" onclick="window.closePartnerIntakeModal()" aria-label="إغلاق النافذة">✕</button>
+                </div>
+
+                <!-- Body -->
+                <div class="sr-partner-body">
+                    <!-- View 1: Application Form -->
+                    <div id="srPartnerModalFormView">
+                        <!-- Advisor Selector -->
+                        <div class="sr-partner-advisor-selector">
+                            <div class="sr-partner-section-label">
+                                <span>👔 اختر مسار المراجعة والاعتماد التنفيذي:</span>
+                                <span style="font-size:0.75rem; color:#94a3b8;">جلسة مباشرة عبر الفيديو أو المقر</span>
+                            </div>
+                            <input type="hidden" id="srPartnerAdvisorField" value="both">
+                            <div class="sr-partner-advisors-grid">
+                                <!-- Salim Card -->
+                                <div class="sr-partner-advisor-card" id="srAdvCardSalim" onclick="window.selectPartnerAdvisor('salim')">
+                                    <div class="sr-partner-adv-top">
+                                        <div class="sr-partner-adv-avatar">👨‍💻</div>
+                                        <div>
+                                            <h4 class="sr-partner-adv-name">م. محمد سليم عزيزة</h4>
+                                            <p class="sr-partner-adv-role">كبير مهندسي النظم والذكاء الاصطناعي</p>
+                                        </div>
+                                    </div>
+                                    <p class="sr-partner-adv-desc">مراجعة المعمارية البرمجية، البنية السحابية، التشفير، وحماية الترخيص العتادي دون اتصال (DRM).</p>
+                                </div>
+
+                                <!-- Raed Card -->
+                                <div class="sr-partner-advisor-card" id="srAdvCardRaed" onclick="window.selectPartnerAdvisor('raed')">
+                                    <div class="sr-partner-adv-top">
+                                        <div class="sr-partner-adv-avatar">💼</div>
+                                        <div>
+                                            <h4 class="sr-partner-adv-name">أ. محمد رائد كعكة</h4>
+                                            <p class="sr-partner-adv-role">المستشار المالي ومطور نظم ERP</p>
+                                        </div>
+                                    </div>
+                                    <p class="sr-partner-adv-desc">الامتثال الضريبي الأوروبي BTW 21%، الفوترة وقنوات الدفع SEPA/iDEAL، ونماذج التوزيع التجاري.</p>
+                                </div>
+
+                                <!-- Joint Review Card -->
+                                <div class="sr-partner-advisor-card selected" id="srAdvCardBoth" onclick="window.selectPartnerAdvisor('both')">
+                                    <div class="sr-partner-adv-top">
+                                        <div class="sr-partner-adv-avatar">🤝</div>
+                                        <div>
+                                            <h4 class="sr-partner-adv-name">المراجعة المشتركة (موصى به)</h4>
+                                            <p class="sr-partner-adv-role">اعتماد تقني + مالي شامل</p>
+                                        </div>
+                                    </div>
+                                    <p class="sr-partner-adv-desc">جلسة متكاملة تجمع الشريكين المؤسسين لتقييم الكود وتحديد أسعار التراخيص وتوقيع اتفاقية النشر.</p>
+                                </div>
+                            </div>
+
+                            <div class="sr-partner-advisor-hint" id="srPartnerAdvisorHint">
+                                <span>✨</span>
+                                <span id="srPartnerAdvisorHintText">مراجعة تنفيذية مشتركة: اعتماد تقني وقانوني وتجاري متكامل لمشروعك البرمجي تمهيداً لطرحه في السوق.</span>
+                            </div>
+                        </div>
+
+                        <!-- Main Form -->
+                        <form id="srPartnerMainForm" onsubmit="window.submitPartnerIntakeForm(event)">
+                            <div class="sr-partner-form-grid">
+                                <!-- Developer Name -->
+                                <div class="sr-partner-form-group">
+                                    <label class="sr-partner-label" for="srPartnerDevName">
+                                        <span>👤 اسم المطور أو الاستوديو البرمجي</span>
+                                        <span class="req">*</span>
+                                    </label>
+                                    <input type="text" id="srPartnerDevName" class="sr-partner-input" placeholder="مثال: م. أحمد عبد الله / Apex Tech Studio" required>
+                                </div>
+
+                                <!-- Software Name -->
+                                <div class="sr-partner-form-group">
+                                    <label class="sr-partner-label" for="srPartnerSoftwareName">
+                                        <span>💻 اسم المنظومة أو المشروع البرمجي</span>
+                                        <span class="req">*</span>
+                                    </label>
+                                    <input type="text" id="srPartnerSoftwareName" class="sr-partner-input" placeholder="مثال: SmartLogistics ERP / MedVault Desktop" required>
+                                </div>
+
+                                <!-- Software Sector -->
+                                <div class="sr-partner-form-group">
+                                    <label class="sr-partner-label" for="srPartnerSectorSelect">
+                                        <span>🏷️ تصنيف المنظومة والقطاع المستهدف</span>
+                                    </label>
+                                    <select id="srPartnerSectorSelect" class="sr-partner-select">
+                                        <option value="erp">نظم مالية ومحاسبية وتخطيط موارد (ERP & Accounting)</option>
+                                        <option value="ai">حلول ذكاء اصطناعي وأتمتة مسارات العمل (AI & Automation)</option>
+                                        <option value="pos">نقاط بيع وكاشير وتجارة تجزئة (POS & Retail)</option>
+                                        <option value="security">أمن سيبراني وتشفير وإدارة تراخيص (Cybersecurity & DRM)</option>
+                                        <option value="cloud">منصات سحابية وواجهات API وخدمات Microservices</option>
+                                        <option value="desktop">تطبيقات مكتبية مستقلة (Windows / macOS / Linux Native)</option>
+                                        <option value="specialized">حلول متخصصة (عيادات، مخابز، لوجستيات، عقارات)</option>
+                                    </select>
+                                </div>
+
+                                <!-- Tech Stack Chips & Input -->
+                                <div class="sr-partner-form-group">
+                                    <label class="sr-partner-label" for="srPartnerCustomStack">
+                                        <span>⚡ لغات البرمجة والبيئة التقنية (اختر أو اكتب)</span>
+                                    </label>
+                                    <input type="text" id="srPartnerCustomStack" class="sr-partner-input" placeholder="C# .NET, Python, Node.js, Flutter...">
+                                    <div class="sr-partner-chips" id="srPartnerStackChips">
+                                        <span class="sr-partner-chip active" onclick="window.togglePartnerStackChip(this, 'C# / .NET')">C# / .NET</span>
+                                        <span class="sr-partner-chip active" onclick="window.togglePartnerStackChip(this, 'Python AI')">Python AI</span>
+                                        <span class="sr-partner-chip" onclick="window.togglePartnerStackChip(this, 'Node.js / React')">Node.js / React</span>
+                                        <span class="sr-partner-chip" onclick="window.togglePartnerStackChip(this, 'Flutter / Dart')">Flutter / Dart</span>
+                                        <span class="sr-partner-chip" onclick="window.togglePartnerStackChip(this, 'Rust / C++')">Rust / C++</span>
+                                        <span class="sr-partner-chip" onclick="window.togglePartnerStackChip(this, 'PHP / Laravel')">PHP / Laravel</span>
+                                    </div>
+                                    <input type="hidden" id="srPartnerStackSelected" value="C# / .NET, Python AI">
+                                </div>
+
+                                <!-- Licensing Model Selector -->
+                                <div class="sr-partner-form-group full-width">
+                                    <label class="sr-partner-label">
+                                        <span>🔒 نموذج الترخيص والحماية المنشود:</span>
+                                    </label>
+                                    <input type="hidden" id="srPartnerLicenseField" value="hardware_drm">
+                                    <div class="sr-partner-license-grid">
+                                        <div class="sr-partner-license-opt selected" id="srLicOptDrm" onclick="window.setPartnerLicenseModel('hardware_drm', this)">
+                                            <div class="sr-partner-license-title">🔒 ترخيص عتادي مشفر دون اتصال</div>
+                                            <div class="sr-partner-license-desc">ربط النظام باللوحة الأم والمعالج وحماية الكود من القرصنة دون الحاجة لإنترنت.</div>
+                                        </div>
+                                        <div class="sr-partner-license-opt" id="srLicOptSaas" onclick="window.setPartnerLicenseModel('saas_subscription', this)">
+                                            <div class="sr-partner-license-title">☁️ فوترة سحابية واشتراكات دورية</div>
+                                            <div class="sr-partner-license-desc">تحصيل دوري شهري/سنوي عبر SEPA وiDEAL مع إدارة الحسابات والامتثال لـ BTW 21%.</div>
+                                        </div>
+                                        <div class="sr-partner-license-opt" id="srLicOptWhitelabel" onclick="window.setPartnerLicenseModel('whitelabel', this)">
+                                            <div class="sr-partner-license-title">🏷️ توزيع تجاري موسع White-Label</div>
+                                            <div class="sr-partner-license-desc">طرح المنظومة كحل معتمد ضمن حزمة S&R Enterprise للشركات في هولندا وأوروبا.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="sr-partner-form-group">
+                                    <label class="sr-partner-label" for="srPartnerEmail">
+                                        <span>📧 البريد الإلكتروني الرسمي</span>
+                                        <span class="req">*</span>
+                                    </label>
+                                    <input type="email" id="srPartnerEmail" class="sr-partner-input" placeholder="developer@company.com" required>
+                                </div>
+
+                                <!-- Phone / WhatsApp -->
+                                <div class="sr-partner-form-group">
+                                    <label class="sr-partner-label" for="srPartnerPhone">
+                                        <span>📱 رقم الواتساب الدولي المباشر</span>
+                                        <span class="req">*</span>
+                                    </label>
+                                    <input type="tel" id="srPartnerPhone" class="sr-partner-input" placeholder="+31 ... / +966 ... / +971 ..." required>
+                                </div>
+
+                                <!-- Demo / Repo URL -->
+                                <div class="sr-partner-form-group full-width">
+                                    <label class="sr-partner-label" for="srPartnerDemoUrl">
+                                        <span>🌐 رابط العرض التجريبي أو المستودع / العرض التقديمي (اختياري)</span>
+                                    </label>
+                                    <input type="url" id="srPartnerDemoUrl" class="sr-partner-input" placeholder="https://github.com/... أو https://demo.mysystem.com">
+                                </div>
+
+                                <!-- Software Brief -->
+                                <div class="sr-partner-form-group full-width">
+                                    <label class="sr-partner-label" for="srPartnerNotes">
+                                        <span>📝 نبذة عن النظام والميزات التنافسية والقيمة المضافة:</span>
+                                    </label>
+                                    <textarea id="srPartnerNotes" class="sr-partner-textarea" rows="3" placeholder="اشرح باختصار المشكلة التي يحلها نظامك، فئات العملاء المستهدفة، وأي تفاصيل ترغب بمناقشتها مع المستشارين..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="sr-partner-actions">
+                                <button type="submit" class="sr-partner-btn-submit">
+                                    <span>🚀 تقديم طلب الاعتماد وتحديد موعد الجلسة التنفيذية ←</span>
+                                </button>
+                                <button type="button" class="sr-partner-btn-wa" onclick="window.sendPartnerQuickWhatsApp()">
+                                    <span>💬 استفسار فوري عبر واتساب</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- View 2: Success Confirmation Screen -->
+                    <div id="srPartnerModalSuccessView" style="display:none;" class="sr-partner-success-view">
+                        <div class="sr-partner-success-icon">🎉</div>
+                        <h3 class="text-white fw-bold mb-2">تم تسجيل طلب اعتماد مشروعك البرمجي بنجاح!</h3>
+                        <p class="text-white-64 mb-3" style="font-size:0.9rem;">
+                            أهلاً بك في شبكة شركاء وموردي S&R CoreSync. تم توجيه طلبك مباشرة إلى الإدارة التنفيذية لمراجعته.
+                        </p>
+                        
+                        <div>
+                            <span class="text-white-64" style="font-size:0.8rem;">الرقم المرجعي الرسمي للطلب:</span><br>
+                            <span class="sr-partner-ref-badge" id="srPartnerSuccessRef">SR-PART-2026-8841</span>
+                        </div>
+
+                        <!-- Recap Table -->
+                        <div class="sr-partner-recap-table" id="srPartnerRecapTable">
+                            <!-- Injected dynamically -->
+                        </div>
+
+                        <div style="background:rgba(212,175,55,0.08); border:1px solid rgba(212,175,55,0.3); border-radius:10px; padding:12px; margin-bottom:20px; font-size:0.82rem; color:#e5cfad;">
+                            ⚡ سيقوم المستشار المسؤول بالتواصل معك عبر الواتساب والبريد الإلكتروني خلال <strong>24 ساعة عمل</strong> لتزويدك بتقرير المراجعة الأولية وتحديد موعد جلسة الفيديو المباشرة.
+                        </div>
+
+                        <!-- Success Actions -->
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <button type="button" class="sr-partner-btn-submit" id="srPartnerSuccessWaBtn" style="flex:none; min-width:220px;">
+                                <span>💬 إرسال ملخص الطلب عبر واتساب المستشار ←</span>
+                            </button>
+                            <button type="button" class="sr-partner-btn-wa" onclick="window.copyPartnerApplicationRef()" style="flex:none; min-width:180px; color:#d4af37; border-color:rgba(212,175,55,0.4); background:rgba(212,175,55,0.1);">
+                                <span>📋 نسخ بيانات الطلب</span>
+                            </button>
+                            <button type="button" class="btn-consult-advisor btn-advisor-raed" onclick="window.closePartnerIntakeModal()" style="min-width:120px; justify-content:center;">
+                                <span>✕ إغلاق النافذة</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Close on backdrop click
+        modal.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                window.closePartnerIntakeModal();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && modal.classList.contains("active")) {
+                window.closePartnerIntakeModal();
+            }
+        });
+
+        document.body.appendChild(modal);
+        return modal;
+    }
+
+    window.openPartnerIntakeModal = function(advisor = "both") {
+        const modal = createPartnerModalDOM();
+        
+        // Reset view to form
+        const formView = document.getElementById("srPartnerModalFormView");
+        const successView = document.getElementById("srPartnerModalSuccessView");
+        if (formView) formView.style.display = "block";
+        if (successView) successView.style.display = "none";
+
+        // Select advisor
+        window.selectPartnerAdvisor(advisor);
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+
+        // Sound effect
+        try {
+            if (typeof LuxuryAudio !== "undefined" && LuxuryAudio.play) {
+                LuxuryAudio.play("open");
+            }
+        } catch(e) {}
+    };
+
+    window.closePartnerIntakeModal = function() {
+        const modal = document.getElementById("srPartnerIntakeModal");
+        if (modal && modal.classList.contains("active")) {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+            try {
+                if (typeof LuxuryAudio !== "undefined" && LuxuryAudio.play) {
+                    LuxuryAudio.play("close");
+                }
+            } catch(e) {}
+        }
+    };
+
+    window.selectPartnerAdvisor = function(advisor) {
+        const field = document.getElementById("srPartnerAdvisorField");
+        if (field) field.value = advisor;
+
+        const cardSalim = document.getElementById("srAdvCardSalim");
+        const cardRaed = document.getElementById("srAdvCardRaed");
+        const cardBoth = document.getElementById("srAdvCardBoth");
+
+        if (cardSalim) cardSalim.classList.toggle("selected", advisor === "salim");
+        if (cardRaed) cardRaed.classList.toggle("selected", advisor === "raed");
+        if (cardBoth) cardBoth.classList.toggle("selected", advisor === "both");
+
+        const hintText = document.getElementById("srPartnerAdvisorHintText");
+        if (hintText) {
+            if (advisor === "salim") {
+                hintText.textContent = "جلسة فنية ومعمارية: مراجعة الكود، البنية السحابية، التشفير وحماية التراخيص العتادية DRM مع م. سليم عزيزة.";
+            } else if (advisor === "raed") {
+                hintText.textContent = "جلسة اعتماد مالي وضريبي: تراخيص التوزيع الأوروبية، فوترة SEPA/iDEAL وامتثال BTW 21% مع أ. رائد كعكة.";
+            } else {
+                hintText.textContent = "مراجعة تنفيذية مشتركة: اعتماد تقني وقانوني وتجاري متكامل لمشروعك البرمجي تمهيداً لطرحه في السوق.";
+            }
+        }
+    };
+
+    window.togglePartnerStackChip = function(el, name) {
+        if (!el) return;
+        el.classList.toggle("active");
+        
+        const chipsContainer = document.getElementById("srPartnerStackChips");
+        if (!chipsContainer) return;
+        
+        const activeChips = Array.from(chipsContainer.querySelectorAll(".sr-partner-chip.active")).map(c => c.textContent.trim());
+        const customInput = document.getElementById("srPartnerCustomStack");
+        const customVal = customInput && customInput.value.trim() ? customInput.value.trim() : "";
+        
+        let all = [...activeChips];
+        if (customVal && !all.includes(customVal)) all.push(customVal);
+        
+        const hiddenField = document.getElementById("srPartnerStackSelected");
+        if (hiddenField) hiddenField.value = all.join(", ");
+    };
+
+    window.setPartnerLicenseModel = function(model, el) {
+        const field = document.getElementById("srPartnerLicenseField");
+        if (field) field.value = model;
+
+        const all = document.querySelectorAll(".sr-partner-license-opt");
+        all.forEach(opt => opt.classList.remove("selected"));
+        if (el) el.classList.add("selected");
+    };
+
+    window.submitPartnerIntakeForm = function(e) {
+        if (e && e.preventDefault) e.preventDefault();
+
+        const devName = document.getElementById("srPartnerDevName")?.value.trim() || "";
+        const softwareName = document.getElementById("srPartnerSoftwareName")?.value.trim() || "";
+        const email = document.getElementById("srPartnerEmail")?.value.trim() || "";
+        const phone = document.getElementById("srPartnerPhone")?.value.trim() || "";
+        const sector = document.getElementById("srPartnerSectorSelect")?.options[document.getElementById("srPartnerSectorSelect").selectedIndex]?.text || "نظم عامة";
+        const customStack = document.getElementById("srPartnerCustomStack")?.value.trim() || "";
+        const stackSelected = document.getElementById("srPartnerStackSelected")?.value || "";
+        const finalStack = [stackSelected, customStack].filter(Boolean).join(" | ");
+        const licenseModel = document.getElementById("srPartnerLicenseField")?.value || "hardware_drm";
+        const advisor = document.getElementById("srPartnerAdvisorField")?.value || "both";
+        const demoUrl = document.getElementById("srPartnerDemoUrl")?.value.trim() || "غير مرفق";
+        const notes = document.getElementById("srPartnerNotes")?.value.trim() || "لا توجد ملاحظات إضافية";
+
+        if (!devName || !softwareName || !email || !phone) {
+            alert("يرجى ملء جميع الحقول الإلزامية (*): اسم المطور، اسم المشروع، البريد ورقم الواتساب.");
+            return false;
+        }
+
+        const refId = "SR-PART-2026-" + Math.floor(1000 + Math.random() * 9000);
+        const licenseLabels = {
+            hardware_drm: "🔒 ترخيص عتادي مشفر دون اتصال (Hardware DRM)",
+            saas_subscription: "☁️ فوترة سحابية واشتراكات دورية (SaaS Subscription)",
+            whitelabel: "🏷️ توزيع White-Label معتمد عبر شبكة S&R"
+        };
+        const advisorLabels = {
+            salim: "م. محمد سليم عزيزة (البنية السحابية والتشفير)",
+            raed: "أ. محمد رائد كعكة (الضرائب والفوترة BTW 21%)",
+            both: "المراجعة المشتركة (م. سليم + أ. رائد)"
+        };
+
+        currentPartnerApp = {
+            refId: refId,
+            devName: devName,
+            softwareName: softwareName,
+            email: email,
+            phone: phone,
+            sector: sector,
+            stack: finalStack || "غير محدد",
+            licenseModel: licenseLabels[licenseModel] || licenseModel,
+            advisor: advisorLabels[advisor] || advisor,
+            advisorKey: advisor,
+            demoUrl: demoUrl,
+            notes: notes,
+            date: new Date().toISOString()
+        };
+
+        try {
+            localStorage.setItem("sr_partner_app_" + refId, JSON.stringify(currentPartnerApp));
+        } catch(err) {}
+
+        // Populate Success View
+        const successRef = document.getElementById("srPartnerSuccessRef");
+        if (successRef) successRef.textContent = refId;
+
+        const recapTable = document.getElementById("srPartnerRecapTable");
+        if (recapTable) {
+            recapTable.innerHTML = `
+                <div class="sr-partner-recap-row">
+                    <span class="sr-partner-recap-label">اسم المطور / الشركة:</span>
+                    <span class="sr-partner-recap-val">${devName}</span>
+                </div>
+                <div class="sr-partner-recap-row">
+                    <span class="sr-partner-recap-label">اسم المنظومة البرمجية:</span>
+                    <span class="sr-partner-recap-val">${softwareName}</span>
+                </div>
+                <div class="sr-partner-recap-row">
+                    <span class="sr-partner-recap-label">القطاع والبيئة التقنية:</span>
+                    <span class="sr-partner-recap-val">${sector} • ${finalStack}</span>
+                </div>
+                <div class="sr-partner-recap-row">
+                    <span class="sr-partner-recap-label">نموذج الترخيص المنشود:</span>
+                    <span class="sr-partner-recap-val">${licenseLabels[licenseModel] || licenseModel}</span>
+                </div>
+                <div class="sr-partner-recap-row">
+                    <span class="sr-partner-recap-label">المستشار المطلوب:</span>
+                    <span class="sr-partner-recap-val">${advisorLabels[advisor] || advisor}</span>
+                </div>
+                <div class="sr-partner-recap-row">
+                    <span class="sr-partner-recap-label">رقم التواصل والبريد:</span>
+                    <span class="sr-partner-recap-val">${phone} • ${email}</span>
+                </div>
+            `;
+        }
+
+        // Configure WhatsApp CTA on Success View
+        const waBtn = document.getElementById("srPartnerSuccessWaBtn");
+        if (waBtn) {
+            waBtn.onclick = function() {
+                const msg = `*طلب اعتماد وترخيص مشروع برمجى - S&R CoreSync*\n━━━━━━━━━━━━━━━━━━━━\n📌 *رقم المرجع:* ${refId}\n👤 *المطور:* ${devName}\n💻 *المنظومة:* ${softwareName}\n⚙️ *البيئة التقنية:* ${finalStack}\n🏷️ *القطاع:* ${sector}\n🔒 *نوع الترخيص:* ${licenseLabels[licenseModel] || licenseModel}\n👔 *المستشار المطلوب:* ${advisorLabels[advisor] || advisor}\n📱 *الهاتف:* ${phone}\n📧 *البريد:* ${email}\n🌐 *رابط المشروع:* ${demoUrl}\n━━━━━━━━━━━━━━━━━━━━\n_نود حجز جلسة الاعتماد ومناقشة تفاصيل النشر._`;
+                window.open(`https://wa.me/31618111116?text=${encodeURIComponent(msg)}`, "_blank");
+            };
+        }
+
+        // Toggle Views
+        const formView = document.getElementById("srPartnerModalFormView");
+        const successView = document.getElementById("srPartnerModalSuccessView");
+        if (formView) formView.style.display = "none";
+        if (successView) successView.style.display = "block";
+
+        if (typeof showPortalToast === "function") {
+            showPortalToast(`🎉 تم تسجيل طلب اعتماد المشروع [${softwareName}] بنجاح برقم: ${refId}`);
+        }
+
+        return false;
+    };
+
+    window.copyPartnerApplicationRef = function() {
+        if (!currentPartnerApp) return;
+        const text = `طلب اعتماد برمجيات S&R CoreSync\nرقم المرجع: ${currentPartnerApp.refId}\nالمطور: ${currentPartnerApp.devName}\nالبرنامج: ${currentPartnerApp.softwareName}\nالترخيص: ${currentPartnerApp.licenseModel}\nالمستشار: ${currentPartnerApp.advisor}`;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+                if (typeof showPortalToast === "function") {
+                    showPortalToast("📋 تم نسخ بيانات ورقم مرجع الطلب إلى الحافظة!");
+                } else {
+                    alert("تم نسخ البيانات إلى الحافظة!");
+                }
+            });
+        }
+    };
+
+    window.sendPartnerQuickWhatsApp = function() {
+        const advisor = document.getElementById("srPartnerAdvisorField")?.value || "both";
+        const advisorText = advisor === "salim" ? "م. سليم عزيزة (الأنظمة والتشفير)" : advisor === "raed" ? "أ. رائد كعكة (الضرائب والفوترة)" : "الشريكين المؤسسين (اعتماد شامل)";
+        const msg = `*استفسار بوابة الشركاء والمطورين - S&R CoreSync*\n━━━━━━━━━━━━━━━━━━━━\nمرحباً، أود الاستفسار عن متطلبات اعتماد ونشر مشروع برمجي في سوقكم.\nالمستشار المطلوب: ${advisorText}\n━━━━━━━━━━━━━━━━━━━━`;
+        window.open(`https://wa.me/31618111116?text=${encodeURIComponent(msg)}`, "_blank");
+    };
+
+})();
