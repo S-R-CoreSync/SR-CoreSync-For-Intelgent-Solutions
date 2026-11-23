@@ -890,17 +890,12 @@ header.header,
     transform: translateY(-1px);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   Sovereign Trust Metrics — HERO INTEGRATED VIEWPORT FIT
-   شريط مؤشرات الثقة مثبّت داخل الهيرو تماماً فوق خط الطي
-   ═══════════════════════════════════════════════════════════ */
+/* Sovereign Integrated Trust Metrics (Hero Bottom Anchor) */
 .section-trust-metrics {
-    position: absolute !important;    /* ← خارج التدفق العادي: لا يؤثر على ارتفاع الهيرو */
-    bottom: 22px !important;          /* ← 22px فوق الحافة السفلية لشاشة الهيرو */
-    left: 0 !important;
-    right: 0 !important;
+    position: relative !important;
     z-index: 25 !important;
-    margin: 0 !important;             /* ← لا هوامش سالبة بعد الآن */
+    margin-top: -65px !important;
+    margin-bottom: 35px !important;
     padding: 0 20px !important;
     display: flex !important;
     justify-content: center !important;
