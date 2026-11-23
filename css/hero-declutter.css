@@ -2103,3 +2103,31 @@
 
 /* Added smooth scrolling for better anchor navigation */
 html { scroll-behavior: smooth; }
+
+/* ==== إصلاح مظهر الشعار (logo) عبر جميع اللغات ==== */
+.c3-core-orb,
+.c3-core-orb-wrapper {
+    border: none !important;               /* إلغاء الحد الذهبي المكرر */
+    overflow: visible !important;          /* السماح للـ SVG بالظهور كاملًا */
+    width: 180px !important;               /* حجم أكبر لتفادي القص */
+    height: 180px !important;
+    margin: 0 auto;
+}
+
+/* تطبيق الشعار الموحد على جميع اللغات */
+[data-lang] .c3-core-orb,
+[data-lang] .c3-core-orb-wrapper {
+    background-image: url("../assets/sr-emblem-gold-luxury.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* تحسين النص داخل الشعار إذا كان موجودًا */
+.c3-core-orb .logo-text {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    color: #f3dfba;
+    text-align: center;
+    margin-top: 4px;
+}
