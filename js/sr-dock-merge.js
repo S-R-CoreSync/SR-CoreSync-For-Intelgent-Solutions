@@ -1,47 +1,69 @@
-/* ==========================================================================
-   S&R CoreSync — Dock visibility (no merging)
-   - Inside the hero: the language dock is shown.
-   - Past the hero:    the language dock hides, and the quick dock appears
-                       on its own. The two are never combined.
-   ========================================================================== */
 (function () {
   'use strict';
 
   var hero = document.getElementById('hero');
-  if (!hero) { return; }
+  var wrap = document.getElementById('appleMacosDockWrapper');
+  if (!hero || !wrap) { return; }
 
-  var past = false, timer = null;
+  var inner = wrap.querySelector('.apple-macos-dock');
+  if (!inner) { return; }
 
-  function isPast() {
-    var r = hero.getBoundingClientRect();
-    var vh = window.innerHeight || 800;
-    return r.bottom < vh * (past ? 0.55 : 0.35);
+  var seg = null, sep = null, merged = false, timer = null;
+
+  function quickRoot() {
+    return document.querySelector('#srQuickDockContainer .sr-quick-dock');
   }
 
-  function apply() {
-    var p = isPast();
-    if (p === past) { return; }
-    past = p;
-    document.body.classList.toggle('sr-past-hero', p);
+  function merge() {
+    var root = quickRoot();
+    if (merged || !root || !inner || !inner.isConnected) { return; }
+    seg = document.createElement('span');
+    seg.className = 'sr-lang-seg';
+    sep = document.createElement('span');
+    sep.className = 'sr-dock-sep';
+    seg.appendChild(inner);
+    root.insertBefore(sep, root.firstChild);
+    root.insertBefore(seg, sep);
+    merged = true;
+    document.body.classList.add('sr-dock-merged');
+    wrap.style.setProperty('display', 'none', 'important');
+  }
+
+  function unmerge() {
+    if (!merged) { return; }
+    if (inner) { wrap.appendChild(inner); }
+    if (seg && seg.parentNode) { seg.remove(); }
+    if (sep && sep.parentNode) { sep.remove(); }
+    seg = sep = null;
+    merged = false;
+    document.body.classList.remove('sr-dock-merged');
+    wrap.style.removeProperty('display');
+  }
+
+  function pastHero() {
+    var r = hero.getBoundingClientRect();
+    var vh = window.innerHeight || 800;
+    return r.bottom < vh * (merged ? 0.55 : 0.35);
+  }
+
+  function evaluate() {
+    if (!quickRoot()) { return; }
+    if (pastHero()) { merge(); } else { unmerge(); }
   }
 
   function start() {
     if (timer) { return; }
-    apply();
-    // Do not move .header-col-actions to bottom capsule; keep it in the top header bar at far left
-    timer = setInterval(apply, 250);
+    evaluate();
+    timer = setInterval(evaluate, 250);
   }
 
-  /* Disabled: .header-col-actions stays in the top header bar per user requirement */
-  function seatTools() {
-    return;
-  }
-
-  function stickTools() {
-    return;
-  }
-
-  window.__srDock = { apply: apply, state: function () { return { past: past }; } };
+  window.__srDock = {
+    merge: merge,
+    unmerge: unmerge,
+    evaluate: evaluate,
+    start: start,
+    state: function () { return { merged: merged, seg: !!seg, inner: !!inner }; }
+  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', start, { once: true });
@@ -49,15 +71,4 @@
     start();
   }
   window.addEventListener('load', start, { once: true });
-})();
-/* Arabic portal: western digits inside Arabic prose read as foreign numerals.
-   Loaded from here as well as from index.html so the layer survives any stale
-   CDN copy of the home page. */
-(function () {
-  if ((document.documentElement.getAttribute('lang') || '').toLowerCase().indexOf('ar') !== 0) { return; }
-  if (document.querySelector('script[src*="sr-ar-numerals"]')) { return; }
-  var s = document.createElement('script');
-  s.src = 'js/sr-ar-numerals.js?v=20261120b';
-  s.defer = true;
-  (document.head || document.documentElement).appendChild(s);
 })();
