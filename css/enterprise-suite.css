@@ -2183,33 +2183,62 @@ h2.section-heading {
 .sr-license-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(2, 6, 4, 0.88);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10000;
+  padding: 16px;
+  animation: srFadeIn 0.25s ease-out;
 }
 .sr-license-modal-content {
-  background: #1a1a1a;
+  background: linear-gradient(145deg, #071710, #020704);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 18px;
+  max-width: 440px;
+  width: 100%;
   padding: 24px;
-  border-radius: 12px;
-  max-width: 340px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  position: relative;
   text-align: center;
   color: #fff;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-  position: relative;
+  direction: rtl;
+  animation: srModalZoom 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sr-license-modal-content img {
   max-width: 100%;
-  margin-bottom: 12px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
 }
 .sr-license-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 1.4rem;
+  top: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.sr-license-close:hover {
+  background: rgba(239, 68, 68, 0.25);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.5);
+}
+@keyframes srFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes srModalZoom {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }

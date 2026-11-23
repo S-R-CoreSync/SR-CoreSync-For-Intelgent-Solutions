@@ -45,7 +45,7 @@ INLINE = re.compile(r'(?is)<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>')
 HOSTS = {
     'script': "'self' https://cdn.jsdelivr.net https://cdn.tailwindcss.com https://unpkg.com https://js.stripe.com",
     'style': "'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com",
-    'img': "'self' data: blob:",
+    'img': "'self' data: blob: https://api.qrserver.com",
     'font': "'self' data: https://fonts.gstatic.com",
     'connect': "'self' https://sr-lead-capture.sr-coresync.workers.dev https://fonts.googleapis.com https://api.telegram.org",
     'frame': "'self' https://js.stripe.com https://hooks.stripe.com https://www.mollie.com",

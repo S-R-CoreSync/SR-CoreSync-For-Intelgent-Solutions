@@ -645,4 +645,85 @@ Agent ID: AGENT-SR-AMS01-2026-SOVEREIGN</div>`;
             }
         };
 
+        window.showLicenseQrModal = function () {
+            const licEl = document.getElementById("srCurrentLicenseDisplay");
+            const licenseKey = (licEl && licEl.textContent.trim()) || "SRPOS-PRO-2026-C310-LIVE";
+            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(licenseKey)}`;
+
+            const existing = document.getElementById("srLicenseQrModal");
+            if (existing) existing.remove();
+
+            const modal = document.createElement("div");
+            modal.id = "srLicenseQrModal";
+            modal.className = "sr-license-modal";
+            modal.innerHTML = `
+                <div class="sr-license-modal-content" onclick="event.stopPropagation()">
+                    <button type="button" class="sr-license-close" onclick="closeLicenseQrModal()" title="إغلاق">✕</button>
+                    <div style="font-size:1.8rem;margin-bottom:8px;">📱</div>
+                    <h3 style="margin:0 0 6px 0;font-size:1.15rem;font-weight:800;color:#f3dfba;">رمز الاستجابة السريعة للترخيص (QR)</h3>
+                    <p style="font-size:0.78rem;color:#94a3b8;margin:0 0 16px 0;">امسح الرمز من خلال تطبيق الهاتف أو كاميرا الكاشير لتفعيل الترخيص فورياً</p>
+                    
+                    <div style="background:#ffffff;padding:12px;border-radius:12px;display:inline-block;box-shadow:0 8px 25px rgba(0,0,0,0.5);margin-bottom:14px;">
+                        <img src="${qrUrl}" alt="License QR Code" width="220" height="220">
+                    </div>
+
+                    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,0.25);border-radius:10px;padding:8px 12px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                        <span style="font-family:monospace;font-size:0.8rem;color:#34d399;word-break:break-all;direction:ltr;" id="srModalLicenseText">${licenseKey}</span>
+                        <button type="button" id="srModalCopyLicBtn" class="sr-app-btn secondary" style="padding:4px 8px;font-size:0.72rem;white-space:nowrap;" onclick="copyLicenseKeyFromModal('${licenseKey}')">نسخ 📋</button>
+                    </div>
+
+                    <div style="display:flex;gap:8px;justify-content:center;">
+                        <a href="${qrUrl}" download="License-QR.png" target="_blank" class="sr-app-btn emerald" style="flex:1;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 12px;font-size:0.82rem;border-radius:8px;">
+                            <span>📥 تحميل الـ QR</span>
+                        </a>
+                        <button type="button" class="sr-app-btn secondary" style="flex:1;padding:8px 12px;font-size:0.82rem;border-radius:8px;" onclick="closeLicenseQrModal()">
+                            <span>إغلاق</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            modal.addEventListener("click", function (e) {
+                if (e.target === modal) closeLicenseQrModal();
+            });
+
+            document.body.appendChild(modal);
+
+            const escHandler = function (e) {
+                if (e.key === "Escape") {
+                    closeLicenseQrModal();
+                    document.removeEventListener("keydown", escHandler);
+                }
+            };
+            document.addEventListener("keydown", escHandler);
+
+            try {
+                if (typeof a === "function") a(700, "sine", 0.1);
+            } catch (err) {}
+        };
+
+        window.closeLicenseQrModal = function () {
+            const m = document.getElementById("srLicenseQrModal");
+            if (m) m.remove();
+        };
+
+        window.copyLicenseKeyFromModal = function (key) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(key).then(() => {
+                    const btn = document.getElementById("srModalCopyLicBtn");
+                    if (btn) {
+                        const orig = btn.textContent;
+                        btn.textContent = "تم النسخ ✓";
+                        btn.style.color = "#34d399";
+                        setTimeout(() => {
+                            btn.textContent = orig;
+                            btn.style.color = "";
+                        }, 2000);
+                    }
+                });
+            } else {
+                prompt("انسخ مفتاح الترخيص:", key);
+            }
+        };
+
     })();
