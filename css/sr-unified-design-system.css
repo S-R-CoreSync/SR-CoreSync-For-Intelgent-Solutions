@@ -890,21 +890,80 @@ header.header,
     transform: translateY(-1px);
 }
 
-/* Compact Trust Metrics */
-.hero-trust-compact {
-    margin-top: 10px !important;
-    padding: 10px 16px !important;
-    border-radius: 12px !important;
-    background: rgba(255, 255, 255, 0.02) !important;
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+/* Sovereign Integrated Trust Metrics (Hero Bottom Anchor) */
+.section-trust-metrics {
+    position: relative !important;
+    z-index: 25 !important;
+    margin-top: -65px !important;
+    margin-bottom: 35px !important;
+    padding: 0 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    pointer-events: auto !important;
+}
+
+.hero-trust-metrics-strip.hero-trust-compact {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 16px 28px !important;
+    background: rgba(6, 17, 13, 0.88) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    backdrop-filter: blur(18px) !important;
+    border: 1px solid rgba(212, 175, 55, 0.45) !important;
+    border-radius: 999px !important;
+    padding: 10px 34px !important;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hero-trust-metrics-strip.hero-trust-compact:hover {
+    border-color: rgba(243, 223, 186, 0.75) !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85), 0 0 30px rgba(212, 175, 55, 0.25) !important;
+    transform: translateY(-2px) !important;
+}
+
+.hero-trust-compact .trust-metric-item {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 8px !important;
 }
 
 .hero-trust-compact .metric-val {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
+    font-weight: 900 !important;
+    color: #f3dfba !important;
+    line-height: 1.2 !important;
+    font-family: monospace, sans-serif !important;
 }
 
 .hero-trust-compact .metric-lbl {
-    font-size: 0.72rem !important;
+    font-size: 0.74rem !important;
+    font-weight: 700 !important;
+    color: #a7f3d0 !important;
+    line-height: 1.2 !important;
+    margin-top: 2px !important;
+}
+
+.hero-trust-compact .trust-metric-separator {
+    width: 1px !important;
+    height: 24px !important;
+    background: rgba(212, 175, 55, 0.35) !important;
+}
+
+@media (max-width: 768px) {
+    .section-trust-metrics {
+        margin-top: -15px !important;
+        margin-bottom: 24px !important;
+    }
+    .hero-trust-metrics-strip.hero-trust-compact {
+        border-radius: 20px !important;
+        padding: 12px 18px !important;
+        gap: 12px 18px !important;
+    }
 }
 
 /* Scaled 3D Emblem Stage to Fit Screen Perfectly & Circular Cover */
