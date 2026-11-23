@@ -1685,17 +1685,15 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.18;
+    opacity: 0.22;
+    mix-blend-mode: screen;
     pointer-events: none;
-    contain: strict;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
 }
 
 .sr-hero-video-overlay {
@@ -1708,7 +1706,7 @@ html, body {
 
 @media (max-width: 767.98px) {
     .sr-hero-bg-video {
-        opacity: 0.12;
+        opacity: 0.15;
         object-position: center;
     }
 }
@@ -2022,11 +2020,10 @@ img, video, iframe, svg, canvas {
     height: auto;
     object-fit: cover;
     object-position: center;
-    opacity: 0.18;
+    opacity: 0.22;
+    mix-blend-mode: screen;
     pointer-events: none;
-    contain: strict;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    will-change: opacity;
 }
 
 .sr-hero-video-overlay {
@@ -2041,7 +2038,7 @@ img, video, iframe, svg, canvas {
 
 @media (max-width: 767.98px) {
     .sr-hero-bg-video {
-        opacity: 0.12;
+        opacity: 0.14;
         object-position: 60% center;
     }
 }
@@ -2098,37 +2095,6 @@ h2.section-heading {
     min-width: 0;
     word-break: break-word;
     overflow-wrap: break-word;
-}
-
-/* ── lab-action-box: prevent text overflow on smaller screens ── */
-.lab-action-box {
-    overflow: hidden;
-}
-
-.lab-action-box h4 {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-.lab-action-desc,
-.lab-action-box p {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    min-width: 0;
-}
-
-/* Partnership badge: cap width, never overflow to the right */
-.lab-action-badge {
-    max-width: 100%;
-    white-space: normal;
-    word-break: break-word;
-}
-
-/* col-lg-7 must not break out of the row on medium screens */
-.lab-action-box .col-lg-7,
-.lab-action-box .col-lg-5 {
-    min-width: 0;
 }
 
 @media (max-width: 767.98px) {
