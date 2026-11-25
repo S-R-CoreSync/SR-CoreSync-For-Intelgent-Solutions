@@ -47,7 +47,7 @@ EXCLUDED_DIRS = {
     # no page references and that only bloat the Pages artefact.
     'temp_chrome_print_dir', 'temp_chrome_print_dir2',
     'SR-CoreSync-For-Intelgent-Solutions',
-    'powershell_repo', 'src'
+    'powershell_repo', 'src', 'tests'
 }
 
 # Any other dot-directory is tooling state (editor caches, agent artefacts), not

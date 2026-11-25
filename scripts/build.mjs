@@ -33,8 +33,8 @@ for (const f of jsFiles) {
 }
 console.log('  ✅ JavaScript & CSS syntax verification passed.');
 
-// 3. Compile Tailwind CSS & Prepare Publish Set
-console.log('\n[3/6] Compiling Tailwind CSS & Preparing Publish Set...');
+// 3. Compile Tailwind CSS & Update CSP Hashes
+console.log('\n[3/6] Compiling Tailwind CSS & Updating CSP Hashes...');
 const twCli = join(process.cwd(), 'node_modules', '@tailwindcss', 'cli', 'dist', 'index.mjs');
 if (existsSync(twCli)) {
     const twRes = spawnSync(process.execPath, [twCli, '-i', 'src/tailwind.css', '-o', 'css/tailwind.generated.css', '--minify'], { stdio: 'inherit' });
@@ -45,14 +45,15 @@ if (existsSync(twCli)) {
     console.log('  ✅ Tailwind CSS compiled to css/tailwind.generated.css.');
 }
 const pyBin = existsSync('.venv/Scripts/python.exe') ? '.venv/Scripts/python.exe' : 'python';
+spawnSync(pyBin, ['scripts/build_csp.py'], { stdio: 'inherit' });
+
+// 4. Prepare Publish Set & Verify CSP Hashes
+console.log('\n[4/6] Preparing Publish Set & Verifying CSP Hashes Manifest...');
 const prepRes = spawnSync(pyBin, ['scripts/prepare_publish_set.py'], { stdio: 'inherit' });
 if (prepRes.status !== 0) {
     console.error('❌ Failed to prepare publish set.');
     process.exit(1);
 }
-// 4. Update and Check CSP Hashes
-console.log('\n[4/6] Verifying CSP Hashes Manifest...');
-spawnSync(pyBin, ['scripts/build_csp.py'], { stdio: 'inherit' });
 const cspRes = spawnSync(pyBin, ['scripts/build_csp.py', '--check'], { stdio: 'inherit' });
 if (cspRes.status !== 0) {
     console.error('❌ CSP hashes verification failed.');

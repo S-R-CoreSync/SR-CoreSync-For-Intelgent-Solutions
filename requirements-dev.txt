@@ -1,0 +1,20 @@
+# متطلبات التطوير والاختبار لـ S&R CoreSync
+# التثبيت: pip install -r requirements-dev.txt
+
+# إطار العمل للاختبارات
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+httpx>=0.25.0
+
+# غطاء الاختبار (Coverage)
+pytest-cov>=4.1.0
+
+# محاكاة الكائنات (Mocking)
+responses>=0.23.0
+freezegun>=1.2.2
+
+# فحص النوع (Type Checking)
+mypy>=1.8.0
+
+# تحليل الكود الثابت
+ruff>=0.1.0
