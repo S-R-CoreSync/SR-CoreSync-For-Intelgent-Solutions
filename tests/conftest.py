@@ -29,9 +29,12 @@ def project_root():
 
 @pytest.fixture
 def temp_dir():
-    """إنشاء دليل مؤقت للاختبارات."""
+    """إنشاء دليل مؤقت للاختبارات مع ضمان إغلاق الاتصالات."""
+    import gc
     with tempfile.TemporaryDirectory() as tmp:
         yield Path(tmp)
+        # إجبار garbage collection لإغلاق اتصالات SQLite قبل الحذف
+        gc.collect()
 
 
 @pytest.fixture

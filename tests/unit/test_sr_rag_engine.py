@@ -193,8 +193,10 @@ class TestVectorBlobConversion:
     """اختبارات لتحويل المتجهات إلى وحدات ثنائية والعكس."""
 
     def test_vector_to_blob_roundtrip(self):
-        """يجب استعادة المتجه نفسه بعد التحويل إلى وحدة ثنائية والعكس."""
+        """يجب استعادة المتجه نفسه بعد التحويل إلى وحدة ثنائية والعكس (within float32 precision)."""
         original = [0.1, 0.2, -0.3, 0.5] * 32
         blob = vector_to_blob(original)
         restored = blob_to_vector(blob)
-        assert original == restored
+        assert len(original) == len(restored)
+        for o, r in zip(original, restored):
+            assert abs(o - r) < 1e-6
