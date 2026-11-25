@@ -412,3 +412,104 @@ class TestSovereignKeyStoreFacade:
         payload = principal.as_dict()
         assert payload["role"] == ROLE_READONLY
         assert "rag:read" in payload["permissions"]
+
+
+class FakeMonotonic:
+    """ساعة يدوية لاختبار كبح إعادة التحميل."""
+
+    def __init__(self, start: float = 1000.0):
+        self.now = start
+
+    def __call__(self) -> float:
+        return self.now
+
+    def advance(self, seconds: float) -> None:
+        self.now += seconds
+
+
+class TestCrossWorkerCoherence:
+    """عاملان على نفس الملف: الإدارة من أحدهما تسري على الآخر بلا إعادة تشغيل."""
+
+    @pytest.fixture
+    def stores(self, tmp_path):
+        path = str(tmp_path / "keys.json")
+        worker_a = AdvancedKeyStore(auth_file=path, load_env=False, reload_interval=0.0)
+        worker_b = AdvancedKeyStore(auth_file=path, load_env=False, reload_interval=0.0)
+        return worker_a, worker_b
+
+    def test_key_added_by_one_worker_is_valid_on_the_other(self, stores):
+        worker_a, worker_b = stores
+        plain = worker_a.add_key(name="shared-new", role=ROLE_CLIENT)
+        assert worker_b.authenticate(plain) is not None
+
+    def test_revocation_reaches_the_other_worker(self, stores):
+        worker_a, worker_b = stores
+        plain = worker_a.add_key(name="to-kill", role=ROLE_CLIENT)
+        assert worker_b.authenticate(plain) is not None
+
+        worker_a.revoke_key(hash_api_key(plain))
+        assert worker_b.authenticate(plain) is None
+
+    def test_rotation_reaches_the_other_worker(self, stores):
+        worker_a, worker_b = stores
+        old_plain = worker_a.add_key(name="rotating", role=ROLE_WRITER)
+        new_plain = worker_a.rotate_key(hash_api_key(old_plain))
+
+        assert worker_b.authenticate(old_plain) is None
+        entry = worker_b.authenticate(new_plain)
+        assert entry is not None and entry.name == "rotating"
+
+    def test_no_lost_update_between_workers(self, stores):
+        """كتابة عامل لا تمحو مفتاحاً أضافه الآخر (read-modify-write)."""
+        worker_a, worker_b = stores
+        key_a = worker_a.add_key(name="from-a", role=ROLE_CLIENT)
+        key_b = worker_b.add_key(name="from-b", role=ROLE_CLIENT)
+
+        fresh = AdvancedKeyStore(auth_file=str(worker_a.auth_file), load_env=False)
+        assert fresh.authenticate(key_a) is not None
+        assert fresh.authenticate(key_b) is not None
+
+    def test_usage_counters_survive_reload(self, stores):
+        worker_a, worker_b = stores
+        plain = worker_a.add_key(name="counted", role=ROLE_CLIENT)
+        digest = hash_api_key(plain)
+
+        worker_b.authenticate(plain)
+        worker_b.authenticate(plain)
+
+        worker_a.add_key(name="forces-reload", role=ROLE_CLIENT)
+        assert worker_b.reload_if_changed(force=True) is True
+        assert worker_b.get_entry(digest).usage_count == 2
+
+    def test_volatile_keys_survive_external_reload(self, stores):
+        worker_a, worker_b = stores
+        ephemeral = worker_a.add_key(name="ephemeral", role=ROLE_CLIENT, persist=False)
+        assert worker_b.authenticate(ephemeral) is None  # لم يُكتب إلى الملف
+
+        worker_b.add_key(name="durable", role=ROLE_CLIENT)  # عامل آخر يغيّر الملف
+        assert worker_a.reload_if_changed(force=True) is True
+        assert worker_a.authenticate(ephemeral) is not None
+
+    def test_reload_is_throttled_then_allowed(self, tmp_path):
+        clock = FakeMonotonic()
+        path = str(tmp_path / "throttle.json")
+        writer = AdvancedKeyStore(auth_file=path, load_env=False)
+        reader = AdvancedKeyStore(auth_file=path, load_env=False,
+                                  reload_interval=5.0, clock=clock)
+
+        plain = writer.add_key(name="late", role=ROLE_CLIENT)
+        assert reader.reload_if_changed() is True          # أول فحص مسموح دائماً
+        clock.advance(1)
+        assert reader.reload_if_changed() is False         # داخل المهلة
+
+        writer.add_key(name="later", role=ROLE_CLIENT)
+        assert reader.reload_if_changed() is False         # ما زال داخل المهلة
+        clock.advance(10)
+        assert reader.reload_if_changed() is True          # انتهت المهلة وملف متغيّر
+        assert reader.authenticate(plain) is not None
+
+    def test_no_reload_when_file_unchanged(self, stores):
+        worker_a, worker_b = stores
+        worker_a.add_key(name="stable", role=ROLE_CLIENT)
+        assert worker_b.reload_if_changed(force=True) is True
+        assert worker_b.reload_if_changed(force=True) is False

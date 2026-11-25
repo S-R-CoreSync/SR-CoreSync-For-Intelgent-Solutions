@@ -37,12 +37,13 @@ import os
 import sys
 import json
 import hmac
+import time
 import logging
 import secrets
 import hashlib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, FrozenSet, Iterable, List, NamedTuple, Optional, Tuple
+from typing import Any, Callable, Dict, FrozenSet, Iterable, List, NamedTuple, Optional, Tuple
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -387,42 +388,102 @@ class AdvancedKeyStore:
     """
     مخزن مفاتيح مهشّرة مع إدارة كاملة للدورة الحياتية.
 
+    التوافق بين العمال: الملف هو المصدر الوحيد للحقيقة، وكل عامل يفحص بصمته
+    (mtime + size) ويتحمّل أي تغيير تلقائياً — فالإنشاء/الإلغاء/الدوران من أي
+    عامل يسري على البقية خلال `reload_interval` ثانية (افتراضياً 0.25s) دون
+    إعادة تشغيل. الكتابات الإدارية تُسبق دائماً بتحديث من الملف حتى لا يمحو
+    عاملٌ مفتاحاً أضافه غيره (read-modify-write).
+
     ملاحظة أداء: المصادقة لا تكتب إلى القرص إطلاقاً؛ تُحدَّث العدادات في الذاكرة
     ويُعلَّم المخزن بـ dirty، ثم يُفرَّغ عند عملية إدارية أو عند إطفاء الخادم.
     """
 
     def __init__(self, auth_file: Optional[str] = None, persist: bool = True,
-                 load_env: bool = True):
+                 load_env: bool = True, reload_interval: float = 0.25,
+                 clock: Callable[[], float] = time.monotonic):
         self.auth_file = Path(auth_file) if auth_file else Path(
             os.getenv("CORESYNC_AUTH_FILE") or (PROJECT_DIR / "auth_keys.json")
         )
         self.persist = persist
         self._entries: Dict[str, AdvancedKeyEntry] = {}
+        self._env_entries: Dict[str, AdvancedKeyEntry] = {}
+        self._volatile: Dict[str, AdvancedKeyEntry] = {}  # مفاتيح persist=False
         self._dirty = False
+        self._reload_interval = max(float(reload_interval), 0.0)
+        self._clock = clock
+        self._last_reload_check = 0.0
+        self._file_fingerprint: Optional[Tuple[int, int]] = None
         self._load(load_env=load_env)
 
     # --- التحميل ----------------------------------------------------------------
     def _load(self, load_env: bool = True) -> None:
-        # (أ) ملف JSON بالمفاتيح المهشّرة (المصدر الدائم)
-        try:
-            if self.auth_file.is_file():
-                data = json.loads(self.auth_file.read_text(encoding="utf-8"))
-                loaded = 0
-                for entry_data in data.get("keys", []):
-                    entry = AdvancedKeyEntry.from_dict(entry_data)
-                    if len(entry.key_sha256) != 64:
-                        logger.warning("تم تجاهل مفتاح ببصمة غير صالحة: %s", entry.name)
-                        continue
-                    self._entries[entry.key_sha256] = entry
-                    loaded += 1
-                if loaded:
-                    logger.info("تم تحميل %d مفتاح API من %s", loaded, self.auth_file)
-        except Exception as exc:  # ملف تالف لا يجب أن يفتح الخادم على مصراعيه
-            logger.error("تعذر تحميل ملف المصادقة %s: %s", self.auth_file, exc)
-
-        # (ب) مفاتيح من متغير البيئة (الأسرار السريعة/CD): الاسم:المفتاح:الدور
+        self._entries = {}
+        loaded = self._read_file_into_entries() if self.auth_file.is_file() else 0
         if load_env:
             self._load_env_keys()
+        for digest, entry in self._env_entries.items():
+            self._entries.setdefault(digest, entry)
+        self._file_fingerprint = self._current_fingerprint()
+        if loaded:
+            logger.info("تم تحميل %d مفتاح API من %s", loaded, self.auth_file)
+
+    def _read_file_into_entries(self, previous_entries: Optional[Dict[str, AdvancedKeyEntry]] = None) -> int:
+        """قراءة الملف ودمجه في `_entries` مع الحفاظ على عدادات الاستخدام الأحدث."""
+        previous_map = self._entries if previous_entries is None else previous_entries
+        try:
+            data = json.loads(self.auth_file.read_text(encoding="utf-8"))
+        except Exception as exc:  # ملف تالف لا يجب أن يفتح الخادم على مصراعيه
+            logger.error("تعذر تحميل ملف المصادقة %s: %s", self.auth_file, exc)
+            return 0
+
+        loaded = 0
+        for entry_data in data.get("keys", []):
+            entry = AdvancedKeyEntry.from_dict(entry_data)
+            if len(entry.key_sha256) != 64:
+                logger.warning("تم تجاهل مفتاح ببصمة غير صالحة: %s", entry.name)
+                continue
+            previous = previous_map.get(entry.key_sha256)
+            if previous is not None and previous.usage_count > entry.usage_count:
+                # لا نفقد عدادات الاستخدام غير المفروغة
+                entry.usage_count = previous.usage_count
+                entry.last_used_at = previous.last_used_at or entry.last_used_at
+            self._entries[entry.key_sha256] = entry
+            loaded += 1
+        return loaded
+
+    def _current_fingerprint(self) -> Optional[Tuple[int, int]]:
+        try:
+            stat = self.auth_file.stat()
+        except OSError:
+            return None
+        return (stat.st_mtime_ns, stat.st_size)
+
+    def reload_if_changed(self, force: bool = False) -> bool:
+        """
+        إعادة تحميل المفاتيح إذا تغيّر الملف على القرص (أضاف/ألغى عامل آخر).
+        `force=True` يتجاهل المهلة — تُستخدم قبل أي كتابة إدارية.
+        """
+        if not self.persist:
+            return False
+        now = self._clock()
+        if not force and (now - self._last_reload_check) < self._reload_interval:
+            return False
+        self._last_reload_check = now
+
+        fingerprint = self._current_fingerprint()
+        if fingerprint is None or fingerprint == self._file_fingerprint:
+            return False
+
+        before = len(self._entries)
+        previous_entries = self._entries
+        self._entries = {}
+        loaded = self._read_file_into_entries(previous_entries) if self.auth_file.is_file() else 0
+        for digest, entry in self._env_entries.items():
+            self._entries.setdefault(digest, entry)
+        self._entries.update(self._volatile)
+        self._file_fingerprint = fingerprint
+        logger.info("أُعيد تحميل المفاتيح (%d بدل %d) بعد تغيّر الملف", loaded, before)
+        return True
 
     def _load_env_keys(self) -> None:
         env_keys = os.getenv("CORESYNC_API_KEYS", "").strip()
@@ -440,7 +501,7 @@ class AdvancedKeyStore:
                 role = ROLE_CLIENT
             digest = hash_api_key(plain)
             # لا نطغى على تعريف ملف صريح لنفس البصمة
-            self._entries.setdefault(
+            self._env_entries.setdefault(
                 digest, AdvancedKeyEntry(name=name, role=role, key_sha256=digest)
             )
             loaded += 1
@@ -476,13 +537,16 @@ class AdvancedKeyStore:
             except OSError:
                 pass  # Windows لا يدعم نموذج POSIX؛ تُضبط الصلاحيات عبر NTFS ACL
             os.replace(tmp_path, self.auth_file)
+            # ملفنا الجديد ليس تغييراً خارجياً: حدّث البصمة لتفادي إعادة تحميل ذاتية
+            self._file_fingerprint = self._current_fingerprint()
             logger.info("تم حفظ %d مفتاح في %s", len(self._entries), self.auth_file)
         except Exception as exc:
             logger.error("تعذر حفظ ملف المصادقة %s: %s", self.auth_file, exc)
 
     def flush_usage(self) -> bool:
-        """تفريغ عدادات الاستخدام المتراكمة في الذاكرة (إن تغيّرت)."""
+        """تفريغ عدادات الاستخدام المتراكمة في الذاكرة (إن تغيّرت)، بعد دمج تغييرات العمال الآخرين."""
         if self._dirty:
+            self.reload_if_changed(force=True)
             self.save_to_file()
             return True
         return False
@@ -501,6 +565,7 @@ class AdvancedKeyStore:
         name = (name or "").strip()
         if not name:
             raise ValueError("اسم المفتاح مطلوب.")
+        self.reload_if_changed(force=True)  # دمج مفاتيح العمال الآخرين قبل الكتابة
         role = (role or ROLE_CLIENT).strip().lower()
         if role not in VALID_ROLES:
             raise ValueError(
@@ -539,24 +604,30 @@ class AdvancedKeyStore:
         )
         if persist:
             self.save_to_file()
+        else:
+            self._volatile[digest] = self._entries[digest]
         logger.info("تمت إضافة مفتاح: %s (الدور: %s)", name, role)
         return plain
 
     def revoke_key(self, key_sha256: str) -> bool:
+        self.reload_if_changed(force=True)
         entry = self._entries.get(key_sha256)
         if entry is None:
             return False
         if not entry.is_revoked:
             entry.is_revoked = True
+            self._volatile.pop(key_sha256, None)
             self.save_to_file()
         logger.info("تم إلغاء المفتاح: %s (الاسم: %s)", mask_digest(key_sha256), entry.name)
         return True
 
     def revoke_by_name(self, name: str) -> int:
+        self.reload_if_changed(force=True)
         count = 0
         for entry in self._entries.values():
             if entry.name == name and not entry.is_revoked:
                 entry.is_revoked = True
+                self._volatile.pop(entry.key_sha256, None)
                 count += 1
         if count:
             self.save_to_file()
@@ -568,6 +639,7 @@ class AdvancedKeyStore:
         دوران المفتاح: يُحذف القديم ويُنشأ جديد بنفس الاسم والدور والصلاحيات
         والانتهاء. يعيد المفتاح الجديد (مرة واحدة) أو None إن لم يوجد القديم.
         """
+        self.reload_if_changed(force=True)
         old = self._entries.get(old_key_sha256)
         if old is None:
             return None
@@ -592,12 +664,14 @@ class AdvancedKeyStore:
             metadata=metadata,
         )
         del self._entries[old_key_sha256]
+        self._volatile.pop(old_key_sha256, None)
         self.save_to_file()
         logger.info("تم دوران المفتاح: %s", old.name)
         return new_plain
 
     def purge_expired(self, include_revoked: bool = False) -> int:
         """إزالة المفاتيح المنتهية (واختيارياً الملغاة) من الملف."""
+        self.reload_if_changed(force=True)
         stale = [
             sha for sha, entry in self._entries.items()
             if entry.is_expired() or (include_revoked and entry.is_revoked)
@@ -613,6 +687,7 @@ class AdvancedKeyStore:
         return self._entries.get(key_sha256)
 
     def list_entries(self, include_revoked: bool = True) -> List[AdvancedKeyEntry]:
+        self.reload_if_changed()
         entries = list(self._entries.values())
         if not include_revoked:
             entries = [e for e in entries if e.is_valid()]
@@ -630,9 +705,11 @@ class AdvancedKeyStore:
         """
         مصادقة مفتاح مقدَّم بمقارنة زمن-ثابت (hmac.compare_digest).
         يعيد None للمفقود/الخاطئ/الملغى/المنتهي دون كشف السبب.
+        يفصح عن تغييرات الملف من العمال الآخرين قبل المقارنة (إنشاء/إلغاء/دوران).
         """
         if not presented_key:
             return None
+        self.reload_if_changed()
         digest = hash_api_key(presented_key)
         for candidate, entry in self._entries.items():
             if hmac.compare_digest(candidate, digest):
@@ -649,6 +726,7 @@ class AdvancedKeyStore:
 
     # --- الإحصاءات ---------------------------------------------------------------
     def stats(self) -> Dict[str, Any]:
+        self.reload_if_changed()
         entries = list(self._entries.values())
         return {
             "total_keys": len(entries),

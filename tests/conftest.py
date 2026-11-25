@@ -18,6 +18,8 @@ sys.path.insert(0, str(PROJECT_ROOT))
 _AUTH_TMP_DIR = Path(tempfile.mkdtemp(prefix="coresync_auth_"))
 os.environ.setdefault("CORESYNC_AUTH_FILE", str(_AUTH_TMP_DIR / "auth_keys.json"))
 os.environ.setdefault("CORESYNC_KEY_TTL_DAYS", "0")
+# في الاختبارات: كل طلب يتحقق من بصمة الملف فوراً (سلوك الإنتاج: 0.25s)
+os.environ.setdefault("CORESYNC_AUTH_RELOAD_INTERVAL", "0")
 
 # عزل عدّادات حدّ المعدل أيضاً في مجلد مؤقت (لا ملفات تُنشأ داخل المستودع)
 _RATE_TMP_DIR = Path(tempfile.mkdtemp(prefix="coresync_rl_"))

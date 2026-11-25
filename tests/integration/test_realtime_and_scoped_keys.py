@@ -30,7 +30,7 @@ from fastapi.testclient import TestClient
 from starlette.websockets import WebSocketDisconnect
 
 from sr_agent_server import app
-from sr_auth import get_key_store
+from sr_auth import SovereignKeyStore, get_key_store
 from sr_auth_advanced import hash_api_key
 
 ADMIN_HEADERS = {"X-API-Key": "sk-admin-secret-123"}
@@ -318,6 +318,28 @@ class TestWebSocketChat:
             ws.send_text("سؤال بصيغة نص خام")
             frame = ws.receive_json()
             assert frame["type"] in ("chunk", "error")
+
+
+class TestCrossWorkerKeyManagement:
+    """إدارة المفاتيح من عامل آخر تسري على هذا العامل بلا إعادة تشغيل."""
+
+    def test_revocation_from_a_sibling_worker_is_enforced(self, client):
+        plain, _body = _create_key(client, name="revoked-by-sibling", role="readonly")
+        headers = {"X-API-Key": plain}
+        assert client.get("/api/rag/stats", headers=headers).status_code == 200
+
+        # عامل آخر يقرأ/يكتب نفس الملف (كأنه uvicorn --workers آخر)
+        sibling = SovereignKeyStore(auth_file=str(get_key_store().auth_file))
+        assert sibling.revoke_key(hash_api_key(plain)) is True
+
+        # الطلب التالي على هذا العامل يرى الإلغاء دون إعادة تشغيل
+        assert client.get("/api/rag/stats", headers=headers).status_code == 401
+
+    def test_key_created_by_a_sibling_worker_works_here(self, client):
+        sibling = SovereignKeyStore(auth_file=str(get_key_store().auth_file))
+        plain = sibling.add_key(name="created-by-sibling", role="readonly")
+
+        assert client.get("/api/rag/stats", headers={"X-API-Key": plain}).status_code == 200
 
 
 class TestRateLimitStore:

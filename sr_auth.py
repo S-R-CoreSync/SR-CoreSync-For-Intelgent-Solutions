@@ -136,8 +136,16 @@ class SovereignKeyStore:
     بيئة، مصادقة زمن-ثابت، وإدارة دورة حياة المفاتيح (إنشاء/إلغاء/دوران).
     """
 
-    def __init__(self, auth_file: Optional[str] = None, persist: bool = True):
-        self._advanced = AdvancedKeyStore(auth_file=auth_file, persist=persist)
+    def __init__(self, auth_file: Optional[str] = None, persist: bool = True,
+                 reload_interval: Optional[float] = None):
+        if reload_interval is None:
+            try:
+                reload_interval = float(os.getenv("CORESYNC_AUTH_RELOAD_INTERVAL", "0.25"))
+            except ValueError:
+                reload_interval = 0.25
+        self._advanced = AdvancedKeyStore(
+            auth_file=auth_file, persist=persist, reload_interval=reload_interval
+        )
         self.auth_file = self._advanced.auth_file
 
     # --- توافق خلفي -------------------------------------------------------------
