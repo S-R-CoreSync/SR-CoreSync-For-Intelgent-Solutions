@@ -7,8 +7,7 @@
     <meta charset="utf-8">
     <!-- Sovereign Intelligent System Language Auto-Detector (0ms Frictionless Device & Media App Routing) -->
     <!-- Sovereign Intelligent System Language Router (Polite Mode: User-driven & Zero Forced Hijacking) -->
-    <script
-        id="srLangAutoDetect">!function () { try { if (/bot|crawl|spider|slurp|google|bing|yandex|lighthouse|headless/i.test(navigator.userAgent)) return; var a = new URLSearchParams(window.location.search); if ("1" === a.get("noredirect")) return; var e = a.get("lang"), r = ["ar", "en", "nl", "de", "fr", "tr", "sv", "no", "es", "it", "ku", "ckb", "pl", "pt", "da", "fi", "cs", "el", "ro", "hu", "bg", "sk", "hr", "lt", "sl", "lv", "et", "ga", "mt"], t = (document.documentElement.getAttribute("lang") || "ar").toLowerCase().split("-")[0], n = -1 !== window.location.pathname.indexOf("demo.html") ? "demo.html" : "index.html", o = !!window.location.pathname.match(/\/[a-z]{2,3}\//), i = o ? "../" : "./"; if (e && -1 !== r.indexOf(e.toLowerCase())) { var l = e.toLowerCase(); try { sessionStorage.setItem("sr_user_lang_locked", l), localStorage.setItem("sr_lang_pref", l) } catch (a) { } if (l !== t) { var s = "ar" === l ? n : l + "/" + n; window.location.replace(i + s + window.location.hash) } return } if (o) return; var c = null; try { c = sessionStorage.getItem("sr_user_lang_locked") } catch (a) { } if (c && -1 !== r.indexOf(c)) { if (c !== t) { s = "ar" === c ? n : c + "/" + n; window.location.replace(i + s + window.location.hash) } return } } catch (a) { } }();</script>
+    <!-- Disabled language auto-detect for local development -->
 
 
 
@@ -2711,6 +2710,22 @@
             background-position: 0 -114px
         }
     </style>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#1A73E8',
+          secondary: '#FF9800'
+        },
+        fontFamily: {
+          sans: ['"Cairo"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="counter-scroll preloader-complete">

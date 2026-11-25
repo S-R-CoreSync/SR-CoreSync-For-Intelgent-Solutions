@@ -6,8 +6,12 @@ __pycache__/
 
 # IDE & Editor files
 .vscode/
+.vs/
 .idea/
 .DS_Store
+
+# Local development reference repositories (never commit)
+powershell_repo/
 
 # Environment variables & secrets (Strictly ignored)
 # [P2] ملاحظة الإصلاح: أُزيلت الاستثناءات السابقة (!.env.vault) التي كانت
@@ -85,3 +89,4 @@ Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash.html
 sdk/**/node_modules/
 sdk/**/out/
 sdk/**/*.vsix
+node_modules
