@@ -37,12 +37,12 @@ console.log('  ✅ JavaScript & CSS syntax verification passed.');
 console.log('\n[3/6] Compiling Tailwind CSS & Preparing Publish Set...');
 const twCli = join(process.cwd(), 'node_modules', '@tailwindcss', 'cli', 'dist', 'index.mjs');
 if (existsSync(twCli)) {
-    const twRes = spawnSync(process.execPath, [twCli, '-i', 'src/tailwind.css', '-o', 'css/tailwind.generated.css', '--minify'], { stdio: 'inherit' });
+    const twRes = spawnSync(process.execPath, [twCli, '-i', 'src/tailwind.css', '-o', 'dist/tailwind.generated.css', '--minify'], { stdio: 'inherit' });
     if (twRes.status !== 0) {
         console.error('❌ Failed to compile Tailwind CSS.');
         process.exit(1);
     }
-    console.log('  ✅ Tailwind CSS compiled to css/tailwind.generated.css.');
+    console.log('  ✅ Tailwind CSS compiled to dist/tailwind.generated.css.');
 }
 const pyBin = existsSync('.venv/Scripts/python.exe') ? '.venv/Scripts/python.exe' : 'python';
 const prepRes = spawnSync(pyBin, ['scripts/prepare_publish_set.py'], { stdio: 'inherit' });

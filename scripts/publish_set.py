@@ -46,7 +46,8 @@ EXCLUDED_DIRS = {
     # stray Chrome print scratch dirs from an old local run: 329 junk files that
     # no page references and that only bloat the Pages artefact.
     'temp_chrome_print_dir', 'temp_chrome_print_dir2',
-    'SR-CoreSync-For-Intelgent-Solutions'
+    'SR-CoreSync-For-Intelgent-Solutions',
+    'powershell_repo', 'src'
 }
 
 # Any other dot-directory is tooling state (editor caches, agent artefacts), not
@@ -67,7 +68,8 @@ EXCLUDED_DIR_PREFIXES = ('_',)
 EXCLUDED_ROOT_FILES = {
     '.env', '.env.example', '.env.local', '.env.vault', '.gitignore',
     '.dockerignore', '.htaccess', 'LICENSE', 'serve.py',
-    'auth_keys.json', 'chat_history.txt', 'package.json', 'package-lock.json'
+    'auth_keys.json', 'chat_history.txt', 'package.json', 'package-lock.json',
+    'postcss.config.js', 'tailwind.config.js', 'server.js'
 }
 
 # Root level file suffixes that are never published.
