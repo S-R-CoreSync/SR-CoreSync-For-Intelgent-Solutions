@@ -29,7 +29,8 @@ class TestHealthEndpoints:
 
     @pytest.fixture
     def client(self):
-        return TestClient(app)
+        with TestClient(app) as client:
+            yield client
 
     def test_root_endpoint(self, client):
         """يجب أن يعيد نقطة الجذر حالة الخادم."""
@@ -52,7 +53,8 @@ class TestAuthentication:
 
     @pytest.fixture
     def client(self):
-        return TestClient(app)
+        with TestClient(app) as client:
+            yield client
 
     @pytest.fixture
     def admin_headers(self):
@@ -93,7 +95,8 @@ class TestChatEndpoints:
 
     @pytest.fixture
     def client(self):
-        return TestClient(app)
+        with TestClient(app) as client:
+            yield client
 
     @pytest.fixture
     def client_headers(self):
@@ -136,7 +139,8 @@ class TestWorkspacePortals:
 
     @pytest.fixture
     def client(self):
-        return TestClient(app)
+        with TestClient(app) as client:
+            yield client
 
     @pytest.fixture
     def client_headers(self):
