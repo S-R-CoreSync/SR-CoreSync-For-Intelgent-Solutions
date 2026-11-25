@@ -34,9 +34,8 @@ class TestSovereignKeyStore:
     def test_authenticate_valid_key(self):
         """يجب أن يُعاد هوية صالحة عند تقديم مفتاح صحيح."""
         store = SovereignKeyStore()
-        # إضافة مفتاح تجريبي يدويًا
-        digest = store.hash_key("test-valid-key")
-        store._entries[digest] = ("test-user", ROLE_ADMIN)
+        # إضافة مفتاح تجريبي في الذاكرة فقط (بلا كتابة إلى الملف)
+        store.add_key(name="test-user", plain_key="test-valid-key", role=ROLE_ADMIN, persist=False)
 
         principal = store.authenticate("test-valid-key")
         assert principal is not None
@@ -118,15 +117,12 @@ class TestKeyStoreWithEnvVars:
         assert principal.name == "env-client"
         assert principal.role == ROLE_CLIENT
 
-    def test_auth_disabled_when_no_keys(self, monkeypatch):
-        """يجب تعطيل المصادقة عندما لا توجد مفاتيح محددة."""
+    def test_auth_disabled_when_no_keys(self, monkeypatch, tmp_path):
+        """يجب تعطيل المصادقة عندما لا توجد مفاتيح محددة (إغلاق افتراضي)."""
         monkeypatch.setenv("CORESYNC_API_KEYS", "")
-        monkeypatch.setenv("CORESYNC_AUTH_FILE", str(tmp_path := __import__('tempfile').mkdtemp() + "/auth_keys.json"))
+        monkeypatch.setenv("CORESYNC_AUTH_FILE", str(tmp_path / "auth_keys.json"))
 
-        # إزالة ملف المصادقة إذا وجد
-        auth_file = Path(__import__('tempfile').mkdtemp() + "/auth_keys.json")
-
-        store = SovereignKeyStore.__new__(SovereignKeyStore)
-        store._entries = {}
-        store.auth_enabled = False
+        store = SovereignKeyStore()
         assert store.auth_enabled is False
+        assert len(store) == 0
+        assert store.authenticate("any-key") is None

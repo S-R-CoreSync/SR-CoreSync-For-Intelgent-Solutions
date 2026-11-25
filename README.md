@@ -9,7 +9,7 @@
 ```text
 Project/
 ├── sr_agent_core.py            # المحرك الأساسي: ميثاق الهوية، أدوات مساحة العمل (Workspace Tools)، ودالة التهيئة
-├── sr_agent_server.py          # خادم الويب المصغر (FastAPI / Uvicorn / SSE) ونقاط نهاية ai-concierge
+├── sr_agent_server.py          # خادم الويب المصغر (FastAPI / Uvicorn / SSE / WebSocket) ونقاط نهاية ai-concierge
 ├── interactive_agent.py        # واجهة المحادثة التفاعلية الحية عبر سطر الأوامر (CLI Terminal)
 ├── example_agent.py            # سكربت الإطلاق السريع لطلب واحد
 ├── ai-concierge-simulator.html # المحاكي التفاعلي المربوط تلقائياً بخادم الوكيل المحلي
@@ -46,7 +46,7 @@ python -u interactive_agent.py
 
 ---
 
-## 4️⃣ تشغيل خادم الويب المصغر (FastAPI & SSE)
+## 4️⃣ تشغيل خادم الويب المصغر (FastAPI / SSE / WebSocket)
 لتشغيل الخادم المحلي وربطه بالواجهات الرسومية:
 ```powershell
 python sr_agent_server.py
@@ -62,6 +62,13 @@ python -m uvicorn sr_agent_server:app --host 127.0.0.1 --port 8000
 - **`POST /api/chat`**: نقطة نهاية برمجية عامة لاستقبال الأسئلة وإرجاع الإجابات.
 - **`GET /api/chat/stream?message=...`**: بث الكلمات لحظياً بتقنية **Server-Sent Events (SSE)**.
 - **`GET /api/workspace/portals`**: ملخص فوري لصفحات وبوابات المشروع.
+- **`GET /api/rag/search?query=...`**: بحث هجين في ذاكرة المتجهات مع **تخزين مؤقت (بصمة + TTL)** يُبيّن `hit`/`miss`.
+- **`GET /api/rag/cache/stats`** · **`DELETE /api/rag/cache`**: إحصاءات الذاكرة المؤقتة وإبطالها.
+- **`WS /ws/chat`**: قناة محادثة ثنائية الاتجاه (بث JSON) بالتوازي مع SSE، بنفس طبقة المصادقة.
+- **`WS /ws/events`**: نفس ناقل الأحداث السيادية عبر WebSocket (المصدر الواحد للقناتين).
+- **`GET/POST /api/admin/keys`** · **`POST /api/admin/keys/{sha256}/revoke|rotate`**: إدارة مفاتيح بصلاحيات دقيقة وتاريخ انتهاء.
+
+> 🔐 الدليل الكامل (كتالوج الصلاحيات، الأدوار، أمثلة إدارة المفاتيح، بروتوكول WebSocket، وإعدادات الذاكرة المؤقتة): [`docs/BACKEND-AUTH-CACHE-WS.md`](docs/BACKEND-AUTH-CACHE-WS.md)
 
 ---
 

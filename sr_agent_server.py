@@ -2,13 +2,18 @@ import os
 import sys
 import io
 import json
+import time
 import asyncio
 import hashlib
+import logging
 from datetime import datetime
 from contextlib import asynccontextmanager
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Tuple
 
-from fastapi import FastAPI, HTTPException, Request, Query, Path, UploadFile, File
+from fastapi import (
+    FastAPI, HTTPException, Request, Query, Path, UploadFile, File,
+    WebSocket, WebSocketDisconnect,
+)
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse, HTMLResponse
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
@@ -16,6 +21,8 @@ from pydantic import BaseModel, Field
 
 # ضبط الترميز لدعم العربية في الطرفية
 sys.stdout.reconfigure(encoding="utf-8")
+
+logger = logging.getLogger("sr_agent_server")
 
 from sr_agent_core import (
     create_sovereign_agent_config,
@@ -30,6 +37,7 @@ from sr_auth import (
     SovereignAuthMiddleware,
     SovereignRateLimitMiddleware,
     get_principal,
+    get_key_store,
 )
 from google.antigravity import Agent
 
@@ -79,29 +87,124 @@ class AppealRequest(BaseModel):
     evidence_worm_hash: Optional[str] = Field(None, description="بصمة SHA-256 للمستند الجنائي في WORM", example="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
     counsel_signature: Optional[str] = Field("Counsel Salim Al-Din (Bar Reg. 104)", description="توقيع المستشار القانوني المعتمد")
 
+class CreateKeyRequest(BaseModel):
+    """طلب إنشاء مفتاح API بصلاحيات دقيقة وتاريخ انتهاء."""
+    name: str = Field(..., description="اسم وصفي للمفتاح (الجهة/التطبيق)", example="partner-portal-eu")
+    role: str = Field("client", description="الدور: admin | writer | client | readonly", example="client")
+    expires_in_days: Optional[int] = Field(None, description="عمر المفتاح بالأيام (اتركه فارغاً لعدم الانتهاء)", example=90)
+    permissions: Optional[List[str]] = Field(None, description="تجاوز صلاحيات الدور بصيغة <المورد>:<الإجراء>", example=["chat:read", "rag:read"])
+    metadata: Optional[Dict[str, Any]] = Field(None, description="بيانات وصفية حرة (الجهة، التذكرة، البيئة)")
+
 # ==============================================================================
-# إدارة البث المباشر للنبض السيادي (Mission 110: SSE Event Bus)
+# إدارة البث المباشر للنبض السيادي (SSE + WebSocket Event Bus)
 # ==============================================================================
+# مجموعة اشتراكات واحدة تغذي الناقلين معاً: كل مشترك يحصل على رسائل (dict) خام،
+# وكل نقطة نهاية (SSE أو WebSocket) تُسلسلها بصيغتها. هذا يضمن أن الحدث الواحد
+# بمخطط واحد على كل القنوات.
 sse_subscribers: set[asyncio.Queue] = set()
 
-async def broadcast_live_event(event_type: str, payload: dict):
-    """بث حدث لحظي لجميع الواجهات المتصلة عبر تقنية Server-Sent Events"""
+
+def sse_frame(message: Dict[str, Any]) -> str:
+    """تغليف رسالة في إطار SSE موحد."""
+    return f"data: {json.dumps(message, ensure_ascii=False)}\n\n"
+
+
+def split_text_chunks(text: str, max_chars: int = 24) -> List[str]:
+    """تقسيم نص إلى مقاطع بثٍّ قصيرة (بحدود الكلمات، مع الإبقاء على المسافات)."""
+    chunks: List[str] = []
+    buffer: List[str] = []
+    length = 0
+    for word in (text or "").split(" "):
+        piece = word + " "
+        buffer.append(piece)
+        length += len(piece)
+        if length >= max_chars:
+            chunks.append("".join(buffer))
+            buffer, length = [], 0
+    if buffer:
+        chunks.append("".join(buffer))
+    return chunks or [""]
+
+
+async def broadcast_live_event(event_type: str, payload: dict) -> int:
+    """بث حدث لحظي لجميع الواجهات المتصلة (SSE و WebSocket) وإرجاع عدد المستلمين."""
     if not sse_subscribers:
-        return
+        return 0
     message = {
         "event": event_type,
         "timestamp": datetime.now().isoformat(),
-        "payload": payload
+        "payload": payload,
     }
-    encoded = f"data: {json.dumps(message, ensure_ascii=False)}\n\n"
+    delivered = 0
     dead_queues = set()
     for q in sse_subscribers:
         try:
-            q.put_nowait(encoded)
+            q.put_nowait(message)
+            delivered += 1
         except asyncio.QueueFull:
             dead_queues.add(q)
     for dq in dead_queues:
         sse_subscribers.discard(dq)
+    return delivered
+
+async def call_agent_text(prompt: str) -> Optional[str]:
+    """
+    نداء واحد لوكيل Google Antigravity وإرجاع النص، أو None عند فشل الاتصال
+    بالمنظومة الخارجية كي يستخدم المستدعي الصمود السيادي القائم على RAG.
+    """
+    try:
+        async with Agent(app.state.config) as agent:
+            resp = await asyncio.wait_for(agent.chat(prompt), timeout=60.0)
+            return await resp.text()
+    except Exception as exc:
+        logger.debug("تعذر الوصول إلى وكيل Antigravity، سيُستخدم الصمود السيادي: %s", exc)
+        return None
+
+
+async def generate_sovereign_answer(
+    message: str,
+    session_id: str,
+    principal,
+    *,
+    max_turns: int = 4,
+    top_k: int = 2,
+    fallback_lead: str = "وفقاً للوثائق الرسمية",
+    fallback_contact: str = "للمزيد تواصل عبر واتساب: +31 618111116.",
+) -> Tuple[str, str, List[Dict[str, Any]]]:
+    """
+    خط توليد الإجابة الموحّد (HTTP و WebSocket):
+      1. حفظ رسالة المستخدم.
+      2. سحب سياق الجلسة + استرجاع RAG المخزأ مؤقتاً (بصمة + TTL).
+      3. نداء الوكيل، أو الصمود السيادي من RAG/أدوات مساحة العمل.
+      4. حفظ رد الوكيل وإرجاع (النص، المصدر، مطابقات RAG).
+    """
+    sr_session_db.add_message(session_id, "user", message, source="user", owner=principal.name)
+
+    context = sr_session_db.get_formatted_context(session_id, max_turns=max_turns)
+    rag_matches = app.state.rag_db.hybrid_search_cached(message, top_k=top_k)
+    rag_context = ""
+    if rag_matches and rag_matches[0]["score"] >= 0.40:
+        rag_snippets = "\n".join(f"• [{r['title']}]: {r['content'][:300]}" for r in rag_matches)
+        rag_context = f"\n[المعرفة الموثقة من مساحة عمل المشروع (Local RAG Context)]:\n{rag_snippets}\n"
+
+    prompt = f"{context}\n{rag_context}\nسؤال المستخدم الحالي: {message}".strip()
+
+    reply_text = await call_agent_text(prompt)
+    source = "google_antigravity_agent"
+    if reply_text is None:
+        source = "sovereign_rag_knowledge_engine"
+        if rag_matches and rag_matches[0]["score"] >= 0.40:
+            top_match = rag_matches[0]
+            reply_text = (
+                f"{fallback_lead} ({top_match['title']}):\n"
+                f"{top_match['content'][:350]}...\n\n{fallback_contact}"
+            )
+        else:
+            reply_text = tool_get_service_details(message)
+
+    sr_session_db.add_message(session_id, "assistant", reply_text, source=source, owner=principal.name)
+    return reply_text, source, rag_matches
+
 
 pulse_shutdown_event: Optional[asyncio.Event] = None
 
@@ -194,13 +297,19 @@ async def lifespan(app: FastAPI):
     print("  🏛️ خادم S&R CoreSync Sovereign Agent API قيد التشغيل والجاهزية")
     print(f"  🧠 ذاكرة المتجهات (RAG): {stats.get('total_documents', 0)} مستنداً و {stats.get('total_chunks', 0)} قطعة دلالية.")
     print("  🛡️ الوكيل الفرعي للتدقيق الذاتي (Subagent Monitor): نشط وجاهز.")
-    print("  ⚡ البث المباشر للنبض السيادي (SSE Live Pulse): جاهز للاشتراك.")
+    print("  ⚡ البث المباشر للنبض السيادي (SSE + WebSocket): جاهز للاشتراك.")
+    print("  🔐 صلاحيات دقيقة لكل مفتاح (read/write/admin) مع تاريخ انتهاء: مفعّلة.")
     print(f"  🤖 النموذج النشط: {app.state.config.model}")
     print("  📚 توثيق Swagger التفاعلي متاح على: http://127.0.0.1:8000/docs")
     print("  💾 ذاكرة الجلسات المستمرة (SQLite): نشطة وجاهزة")
     print("=" * 70)
     yield
     get_pulse_shutdown_event().set()
+    # تفريغ إحصاءات استخدام المفاتيح المتراكمة في الذاكرة (إن تغيّرت)
+    try:
+        get_key_store().flush_usage()
+    except Exception:
+        pass
     print("🛑 إيقاف خادم الوكيل الذكي بنجاح.")
 
 # إنشاء تطبيق FastAPI مع تعطيل مسارات docs التلقائية لتخصيصها بهوية S&R
@@ -215,7 +324,7 @@ app = FastAPI(
 - **بث مباشر بتقنية Server-Sent Events (SSE)** لتدفق الكلمات لحظياً.
 - **ربط مباشر مع واجهات الويب ومحاكي الذكاء الاصطناعي.**
     """,
-    version="2.0.0",
+    version="2.1.0",
     docs_url=None,   # يتم تقديمها مخصصة
     redoc_url=None,
     lifespan=lifespan
@@ -292,10 +401,20 @@ async def root():
     return {
         "service": "S&R CoreSync Sovereign Agent API",
         "status": "online",
-        "version": "2.0.0",
+        "version": "2.1.0",
         "model": app.state.config.model,
         "swagger_docs": "/docs",
         "redoc": "/redoc",
+        "transports": {
+            "sse_events": "/api/stream/events",
+            "websocket_events": "/ws/events",
+            "websocket_chat": "/ws/chat",
+        },
+        "auth": {
+            "scheme": "X-API-Key | Bearer | ?api_key=",
+            "permissions": "<resource>:<action> (read/write/admin)",
+            "key_management": "/api/admin/keys",
+        },
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
@@ -321,37 +440,12 @@ async def ai_concierge_endpoint(req: ConciergeRequest, request: Request):
     if not user_msg:
         raise HTTPException(status_code=400, detail="الرسالة لا يمكن أن تكون فارغة")
 
-    # 1. حفظ رسالة المستخدم في قاعدة بيانات الجلسة
-    sr_session_db.add_message(session_id, "user", user_msg, source="user", owner=principal.name)
-
-    # 2. استخراج سياق المحادثة واسترجاع المعرفة عبر ذاكرة المتجهات (RAG)
-    context = sr_session_db.get_formatted_context(session_id, max_turns=4)
-    rag_matches = app.state.rag_db.hybrid_search(user_msg, top_k=2)
-    rag_context = ""
-    if rag_matches and rag_matches[0]["score"] >= 0.40:
-        rag_snippets = "\n".join([f"• [{r['title']}]: {r['content'][:300]}" for r in rag_matches])
-        rag_context = f"\n[المعرفة الموثقة من مساحة عمل المشروع (Local RAG Context)]:\n{rag_snippets}\n"
-
-    prompt_with_memory = f"{context}\n{rag_context}\nسؤال المستخدم الحالي: {user_msg}".strip()
-
-    reply_text = ""
-    source = "google_antigravity_agent"
-
-    try:
-        async with Agent(app.state.config) as agent:
-            resp = await asyncio.wait_for(agent.chat(prompt_with_memory), timeout=60.0)
-            reply_text = await resp.text()
-    except Exception as e:
-        print(f"⚠️ استخدام الصمود السيادي البديل مع RAG: {e}")
-        if rag_matches and rag_matches[0]["score"] >= 0.40:
-            top_m = rag_matches[0]
-            reply_text = f"بناءً على وثائق وبوابات المنظومة الرسمية ({top_m['title']}):\n{top_m['content'][:350]}...\n\nلطلب استشارة مخصصة، تواصل مع المبيعات على +31 618111116."
-        else:
-            reply_text = tool_get_service_details(user_msg)
-        source = "sovereign_rag_knowledge_engine"
-
-    # 3. حفظ رد الوكيل في قاعدة بيانات الجلسة
-    sr_session_db.add_message(session_id, "assistant", reply_text, source=source, owner=principal.name)
+    # 1-3. حفظ الرسالة، بناء سياق RAG (مخزأ مؤقتاً)، توليد الرد، ثم حفظ رد الوكيل
+    reply_text, source, _rag_matches = await generate_sovereign_answer(
+        user_msg, session_id, principal, max_turns=4, top_k=2,
+        fallback_lead="بناءً على وثائق وبوابات المنظومة الرسمية",
+        fallback_contact="لطلب استشارة مخصصة، تواصل مع المبيعات على +31 618111116.",
+    )
 
     actions = [
         ActionButton(label="💬 محادثة واتساب VIP المباشرة", url="https://wa.me/31618111116"),
@@ -380,36 +474,10 @@ async def chat_endpoint(req: ChatRequest, request: Request):
     if not user_msg:
         raise HTTPException(status_code=400, detail="الرسالة لا يمكن أن تكون فارغة")
 
-    # حفظ رسالة المستخدم
-    sr_session_db.add_message(session_id, "user", user_msg, source="user", owner=principal.name)
-
-    # استرجاع سياق الجلسة ودمج ذاكرة المتجهات RAG
-    context = sr_session_db.get_formatted_context(session_id, max_turns=4)
-    rag_matches = app.state.rag_db.hybrid_search(user_msg, top_k=2)
-    rag_context = ""
-    if rag_matches and rag_matches[0]["score"] >= 0.40:
-        rag_snippets = "\n".join([f"• [{r['title']}]: {r['content'][:300]}" for r in rag_matches])
-        rag_context = f"\n[المعرفة الموثقة من مساحة عمل المشروع (Local RAG Context)]:\n{rag_snippets}\n"
-
-    prompt_with_memory = f"{context}\n{rag_context}\nسؤال المستخدم الحالي: {user_msg}".strip()
-
-    reply_text = ""
-    source = "google_antigravity_agent"
-
-    try:
-        async with Agent(app.state.config) as agent:
-            resp = await asyncio.wait_for(agent.chat(prompt_with_memory), timeout=60.0)
-            reply_text = await resp.text()
-    except Exception as e:
-        if rag_matches and rag_matches[0]["score"] >= 0.40:
-            top_m = rag_matches[0]
-            reply_text = f"وفقاً للوثائق الرسمية ({top_m['title']}):\n{top_m['content'][:350]}...\n\nللمزيد تواصل عبر واتساب: +31 618111116."
-        else:
-            reply_text = tool_get_service_details(user_msg)
-        source = "sovereign_rag_knowledge_engine"
-
-    # حفظ استجابة الوكيل
-    sr_session_db.add_message(session_id, "assistant", reply_text, source=source, owner=principal.name)
+    # حفظ رسالة المستخدم، ثم توليد الرد مع سياق الجلسة وذاكرة المتجهات RAG
+    reply_text, source, _rag_matches = await generate_sovereign_answer(
+        user_msg, session_id, principal, max_turns=4, top_k=2,
+    )
 
     return ChatResponseModel(
         reply=reply_text,
@@ -437,29 +505,29 @@ async def chat_stream_endpoint(
         full_text = ""
         source = "google_antigravity_agent"
         try:
-            try:
-                async with Agent(app.state.config) as agent:
-                    resp = await asyncio.wait_for(agent.chat(prompt), timeout=60.0)
-                    full_text = await resp.text()
-            except Exception:
+            agent_text = await call_agent_text(prompt)
+            if agent_text is None:
                 full_text = tool_get_service_details(message)
                 source = "sovereign_knowledge_engine"
+            else:
+                full_text = agent_text
 
             # حفظ الرد المكتمل في الجلسة
             sr_session_db.add_message(session_id, "assistant", full_text, source=source, owner=principal.name)
 
-            words = full_text.split(" ")
-            for w in words:
-                payload = json.dumps({"chunk": w + " ", "session_id": session_id}, ensure_ascii=False)
-                yield f"data: {payload}\n\n"
-                await asyncio.sleep(0.015)
+            for chunk in split_text_chunks(full_text):
+                yield sse_frame({"chunk": chunk, "session_id": session_id})
+                await asyncio.sleep(0.01)
             yield "data: [DONE]\n\n"
         except Exception as e:
-            err_payload = json.dumps({"error": str(e)}, ensure_ascii=False)
-            yield f"data: {err_payload}\n\n"
+            yield sse_frame({"error": str(e)})
             yield "data: [DONE]\n\n"
 
-    return StreamingResponse(sse_generator(), media_type="text/event-stream")
+    return StreamingResponse(
+        sse_generator(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
 
 # ==============================================================================
 # إدارة جلسات المحادثة والذاكرة (Session Management Endpoints)
@@ -503,28 +571,111 @@ async def delete_session(request: Request, session_id: str = Path(..., descripti
 @app.get("/api/rag/search", tags=["ذاكرة المتجهات RAG"])
 async def rag_search_endpoint(
     query: str = Query(..., description="نص الاستعلام للبحث في ذاكرة المتجهات"),
-    top_k: int = Query(4, description="عدد النتائج المسترجعة")
+    top_k: int = Query(4, description="عدد النتائج المسترجعة"),
+    use_cache: bool = Query(True, description="استخدام الذاكرة المؤقتة (بصمة + TTL)"),
 ):
     """
-    البحث الهجين (Dense Vectors + FTS5 BM25) في كافة صفحات ووثائق المشروع ومقالات المدونة.
+    البحث الهجين (Dense Vectors + FTS5 BM25) في كافة صفحات ووثائق المشروع ومقالات المدونة،
+    مع طبقة تخزين مؤقت قائمة على بصمة الاستعلام وتاريخ انتهاء (TTL).
     """
-    results = app.state.rag_db.hybrid_search(query, top_k=top_k)
+    results, cache_meta = app.state.rag_db.search_with_cache(query, top_k=top_k, use_cache=use_cache)
     return {
         "query": query,
         "count": len(results),
+        "cache": cache_meta,
         "results": results
     }
 
 @app.get("/api/rag/stats", tags=["ذاكرة المتجهات RAG"])
 async def rag_stats_endpoint():
-    """استعراض إحصائيات ذاكرة المتجهات وعدد المستندات والقطع المفهرسة"""
+    """استعراض إحصائيات ذاكرة المتجهات وعدد المستندات والقطع المفهرسة وحالة الذاكرة المؤقتة"""
     return app.state.rag_db.get_stats()
+
+@app.get("/api/rag/cache/stats", tags=["ذاكرة المتجهات RAG"])
+async def rag_cache_stats_endpoint():
+    """إحصاءات الذاكرة المؤقتة للاستعلامات: نسبة الإصابة والحجم والإبطالات وعمر القطعة"""
+    return app.state.rag_db.cache_stats()
+
+@app.delete("/api/rag/cache", tags=["ذاكرة المتجهات RAG"])
+async def rag_cache_clear_endpoint():
+    """إبطال كل نتائج الاستعلامات المخزأة (يتطلب صلاحية rag:reindex)"""
+    removed = app.state.rag_db.clear_cache()
+    return {
+        "status": "cleared",
+        "entries_removed": removed,
+        "timestamp": datetime.now().isoformat()
+    }
 
 @app.post("/api/rag/reindex", tags=["ذاكرة المتجهات RAG"])
 async def rag_reindex_endpoint():
-    """إعادة فهرسة وتحديث متجهات المشروع بالكامل على الفور"""
+    """إعادة فهرسة وتحديث متجهات المشروع بالكامل على الفور (يُبطل الذاكرة المؤقتة تلقائياً)"""
     stats = build_or_update_knowledge_index()
     return {"status": "success", "message": "تم تحديث ذاكرة المتجهات بنجاح", "stats": stats}
+
+# ==============================================================================
+# إدارة مفاتيح API بصلاحيات دقيقة (Path 2: Scoped Keys & Expiry)
+# ==============================================================================
+@app.get("/api/admin/keys", tags=["إدارة مفاتيح API"])
+async def list_api_keys(
+    include_revoked: bool = Query(True, description="إدراج المفاتيح الملغاة"),
+):
+    """سرد المفاتيح بصلاحياتها الفعالة وحالتها (بصمات مقنّعة، بلا أي مفتاح نصي)"""
+    store = get_key_store()
+    keys = store.list_keys(include_revoked=include_revoked)
+    return {"count": len(keys), "stats": store.stats(), "keys": keys}
+
+@app.post("/api/admin/keys", status_code=201, tags=["إدارة مفاتيح API"])
+async def create_api_key(req: CreateKeyRequest):
+    """
+    إنشاء مفتاح جديد بصلاحيات محددة وتاريخ انتهاء. يُعاد المفتاح النصي **مرة واحدة فقط**،
+    ويُخزَّن من ثم بصمته SHA-256 فقط.
+    """
+    store = get_key_store()
+    try:
+        plain_key = store.add_key(
+            name=req.name,
+            role=req.role,
+            expires_in_days=req.expires_in_days,
+            permissions=req.permissions,
+            metadata=req.metadata,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+    info = store.get_key_info(store.hash_key(plain_key)) or {}
+    return {
+        "status": "created",
+        "api_key": plain_key,
+        "warning": "هذا المفتاح لن يُعرض مرة أخرى؛ خزّنه في مدير أسرار آمن.",
+        "key": info,
+    }
+
+@app.post("/api/admin/keys/{key_sha256}/revoke", tags=["إدارة مفاتيح API"])
+async def revoke_api_key(
+    key_sha256: str = Path(..., min_length=8, max_length=64, description="بصمة SHA-256 للمفتاح"),
+):
+    """إلغاء مفتاح فوراً (يُرفض في الطلب التالي حتى لو بقي في الملف)"""
+    if not get_key_store().revoke_key(key_sha256):
+        raise HTTPException(status_code=404, detail="مفتاح غير موجود.")
+    return {"status": "revoked", "key_sha256": key_sha256, "timestamp": datetime.now().isoformat()}
+
+@app.post("/api/admin/keys/{key_sha256}/rotate", tags=["إدارة مفاتيح API"])
+async def rotate_api_key(
+    key_sha256: str = Path(..., min_length=8, max_length=64, description="بصمة المفتاح القديم"),
+):
+    """دوران المفتاح مع الحفاظ على الاسم والدور والصلاحيات وتاريخ الانتهاء"""
+    try:
+        new_key = get_key_store().rotate_key(key_sha256)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+    if new_key is None:
+        raise HTTPException(status_code=404, detail="مفتاح غير موجود.")
+    return {
+        "status": "rotated",
+        "api_key": new_key,
+        "warning": "المفتاح القديم أُبطل؛ هذا المفتاح الجديد يُعرض مرة واحدة فقط.",
+        "rotated_from": key_sha256,
+    }
 
 # ==============================================================================
 # وكيل التدقيق الذاتي الفرعي (Autonomous Subagent Monitoring Endpoints)
@@ -672,7 +823,7 @@ async def stream_sovereign_events(request: Request):
                 "hubs_monitored": ["104-Arbitration", "105-CBDC", "106-ZKP", "107A-Forensics", "107B-Escrow", "111-Counsel"]
             }
         }
-        yield f"data: {json.dumps(init_event, ensure_ascii=False)}\n\n"
+        yield sse_frame(init_event)
 
         try:
             while True:
@@ -680,7 +831,7 @@ async def stream_sovereign_events(request: Request):
                     break
                 try:
                     data = await asyncio.wait_for(queue.get(), timeout=12.0)
-                    yield data
+                    yield sse_frame(data)
                 except asyncio.TimeoutError:
                     yield f": heartbeat {datetime.now().strftime('%H:%M:%S')}\n\n"
         finally:
@@ -698,14 +849,140 @@ async def stream_sovereign_events(request: Request):
 
 @app.post("/api/events/publish", tags=["البث السيادي المباشر SSE"])
 async def publish_sovereign_event(req: PublishEventRequest):
-    """نشر حدث لحظي جديد في قناة البث المباشر SSE من أي بوابة أو طرفية سيادية"""
-    await broadcast_live_event(req.event_type, req.payload)
+    """نشر حدث لحظي جديد يُوزَّع على مشتركي SSE و WebSocket معاً"""
+    delivered = await broadcast_live_event(req.event_type, req.payload)
     return {
         "status": "ok",
         "event_published": req.event_type,
-        "subscribers_delivered": len(sse_subscribers),
+        "subscribers_delivered": delivered,
+        "transports": ["sse", "websocket"],
         "timestamp": datetime.now().isoformat()
     }
+
+# ==============================================================================
+# النقل ثنائي الاتجاه (Path 4): WebSocket بالتوازي مع SSE بنفس طبقة المصادقة
+# ==============================================================================
+# المصادقة تحدث في الوسيلة (SovereignAuthMiddleware) قبل accept: مفتاح غير صالح
+# يُغلق الاتصال برمز ASGI 4401، ونقص الصلاحية 4403، وغياب التهيئة 4503 (المتصفح
+# يرى فشل مصافحة HTTP 403 لأن الإغلاق يسبق accept). الصلاحيات: /ws/chat=chat:write
+# و /ws/events=events:read. لا يمكن تمرير ترويسات من متصفح لـ WebSocket، لذا
+# يُقبل ?api_key= (نفس استثناء SSE) أو الترويسة في العملاء الخادميين.
+@app.websocket("/ws/chat")
+async def ws_chat_endpoint(
+    websocket: WebSocket,
+    session_id: str = Query("default", description="معرف الجلسة الافتراضي"),
+):
+    """
+    قناة محادثة ثنائية الاتجاه: يستقبل العميل رسائل JSON ويبث الخادم الرد مقاطعاً.
+
+    بروتوكول العميل → الخادم:  {"message": "نص", "session_id": "اختياري", "type": "ping"}
+    بروتوكول الخادم → العميل:  ready | chunk | done | error | pong
+    """
+    principal = get_principal(websocket)
+    await websocket.accept()
+    await websocket.send_json({
+        "type": "ready",
+        "transport": "websocket",
+        "principal": principal.name,
+        "role": principal.role,
+        "session_id": session_id or "default",
+        "timestamp": datetime.now().isoformat(),
+    })
+
+    try:
+        while True:
+            raw = await websocket.receive()
+            if raw.get("type") == "websocket.disconnect":
+                break
+            text = raw.get("text")
+            if text is None:
+                continue  # تُهمل الحزم الثنائية (البروتوكول نصي JSON)
+
+            try:
+                payload = json.loads(text)
+            except json.JSONDecodeError:
+                payload = {"message": text}
+            if not isinstance(payload, dict):
+                payload = {"message": str(payload)}
+
+            if payload.get("type") == "ping":
+                await websocket.send_json({"type": "pong", "timestamp": datetime.now().isoformat()})
+                continue
+
+            message = str(payload.get("message", "")).strip()
+            if not message:
+                await websocket.send_json({"type": "error", "detail": "الرسالة لا يمكن أن تكون فارغة"})
+                continue
+
+            target_session = str(payload.get("session_id") or session_id or "default")
+            started = time.monotonic()
+            reply, source, matches = await generate_sovereign_answer(
+                message, target_session, principal
+            )
+
+            for chunk in split_text_chunks(reply):
+                await websocket.send_json({
+                    "type": "chunk", "delta": chunk, "session_id": target_session,
+                })
+                await asyncio.sleep(0.01)
+
+            await websocket.send_json({
+                "type": "done",
+                "reply": reply,
+                "session_id": target_session,
+                "source": source,
+                "citations": [
+                    {"title": m["title"], "path": m["path"], "score": m["score"]}
+                    for m in matches[:3]
+                ],
+                "elapsed_ms": int((time.monotonic() - started) * 1000),
+            })
+    except WebSocketDisconnect:
+        logger.debug("انقطع اتصال WebSocket للمحادثة (الجلسة: %s)", session_id)
+    except Exception as exc:  # لا نُسقط الخادم بسبب عميل واحد
+        logger.error("خطأ في قناة WebSocket للمحادثة: %s", exc)
+        try:
+            await websocket.send_json({"type": "error", "detail": str(exc)})
+        except Exception:
+            pass
+
+@app.websocket("/ws/events")
+async def ws_sovereign_events(websocket: WebSocket):
+    """
+    نفس ناقل أحداث SSE لكن عبر WebSocket (JSON): connected → event* → heartbeat*.
+    الحدث الواحد يُبث للقناتين من نفس المصدر (broadcast_live_event).
+    """
+    principal = get_principal(websocket)
+    await websocket.accept()
+    queue: asyncio.Queue = asyncio.Queue(maxsize=100)
+    sse_subscribers.add(queue)
+
+    try:
+        await websocket.send_json({
+            "type": "connected",
+            "transport": "websocket",
+            "principal": principal.name,
+            "subscribers_active": len(sse_subscribers),
+            "hubs_monitored": [
+                "104-Arbitration", "105-CBDC", "106-ZKP", "107A-Forensics",
+                "107B-Escrow", "111-Counsel",
+            ],
+            "timestamp": datetime.now().isoformat(),
+        })
+
+        while True:
+            try:
+                event = await asyncio.wait_for(queue.get(), timeout=12.0)
+            except asyncio.TimeoutError:
+                await websocket.send_json({
+                    "type": "heartbeat", "timestamp": datetime.now().isoformat(),
+                })
+                continue
+            await websocket.send_json({"type": "event", **event})
+    except (WebSocketDisconnect, RuntimeError):
+        pass
+    finally:
+        sse_subscribers.discard(queue)
 
 # ==============================================================================
 # بوابة المستشار القانوني والتحقق من WORM (Mission 111: Corporate Counsel Portal API)

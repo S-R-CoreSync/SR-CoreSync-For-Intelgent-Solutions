@@ -13,12 +13,16 @@ import os
 import sys
 import re
 import math
+import time
 import struct
 import sqlite3
 import hashlib
+import threading
+from collections import OrderedDict
+from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any, Tuple, Optional
+from typing import Callable, List, Dict, Any, Tuple, Optional
 
 # ضبط الترميز لدعم العربية في الطرفية
 sys.stdout.reconfigure(encoding="utf-8")
@@ -26,6 +30,26 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJECT_ROOT = Path(__file__).resolve().parent
 DB_PATH = PROJECT_ROOT / "sr_rag_knowledge.db"
 VECTOR_DIM = 128
+
+# إعدادات التخزين المؤقت للاستعلامات (يمكن ضبطها من البيئة)
+DEFAULT_CACHE_TTL_SECONDS = 300.0      # عمر القطعة المخزأة: 5 دقائق
+DEFAULT_CACHE_MAX_ENTRIES = 256        # سقف عدد الاستعلامات المخزأة (LRU)
+
+
+def _env_float(name: str, default: float) -> float:
+    try:
+        value = os.getenv(name, "")
+        return float(value) if value not in (None, "") else default
+    except (TypeError, ValueError):
+        return default
+
+
+def _env_int(name: str, default: int) -> int:
+    try:
+        value = os.getenv(name, "")
+        return int(value) if value not in (None, "") else default
+    except (TypeError, ValueError):
+        return default
 
 # ==============================================================================
 # 1. تطبيع النصوص واستخراج المتجهات الكثيفة محلياً (Dense Vector Embedder)
@@ -107,12 +131,169 @@ def cosine_similarity(v1: List[float], v2: List[float]) -> float:
     return sum(a * b for a, b in zip(v1, v2))
 
 # ==============================================================================
+# 1.b طبقة التخزين المؤقت لاستعلامات RAG (Query Cache: Fingerprint + TTL + LRU)
+# ==============================================================================
+
+class QueryCache:
+    """
+    ذاكرة مؤقتة لنتائج البحث الهجين.
+
+    لماذا: البحث الهجين يقرأ كل القطع من SQLite ويحسب تشابه المتجهات لكل قطعة في
+    كل استدعاء. الأسئلة المتكررة (نفس الاستفسار/الواجهة/جلسة المحاكاة) تُعاد
+    من الذاكرة فتوفّر القراءة والحساب وتسرّع الاستجابة. المفتاح = بصمة SHA-256
+    (الاستعلام المُطبَّع + top_k + alpha + إصدار الفهرس)، فلا يختلط استعلام بآخر
+    ولا تُخدم نتيجة قديمة بعد كتابة جديدة.
+
+    الأمان: النسخ عند القراءة والكتابة (deepcopy) حتى لا يُفسد مستدعٍ النتائج
+    المخزأة للآخرين. الحماية: threading.RLock لأن FastAPI قد يخدم طلبات متزامنة.
+
+    TTL = 0 أو أقل يعطّل الطبقة بالكامل (سلوك ما قبل الإضافة).
+    """
+
+    def __init__(self, ttl_seconds: Optional[float] = None,
+                 max_entries: Optional[int] = None,
+                 namespace: str = "default",
+                 clock: Callable[[], float] = time.monotonic):
+        self.ttl_seconds = (
+            float(ttl_seconds) if ttl_seconds is not None
+            else _env_float("CORESYNC_RAG_CACHE_TTL", DEFAULT_CACHE_TTL_SECONDS)
+        )
+        self.max_entries = (
+            int(max_entries) if max_entries is not None
+            else _env_int("CORESYNC_RAG_CACHE_MAX_ENTRIES", DEFAULT_CACHE_MAX_ENTRIES)
+        )
+        self.namespace = namespace
+        self._clock = clock
+        self._lock = threading.RLock()
+        self._entries: "OrderedDict[str, Tuple[List[Dict[str, Any]], float]]" = OrderedDict()
+        self._version = 0
+        self._hits = 0
+        self._misses = 0
+        self._stores = 0
+        self._expirations = 0
+        self._lru_evictions = 0
+        self._invalidations = 0
+        self._last_invalidated_at: Optional[str] = None
+
+    # --- الحالة ----------------------------------------------------------------
+    @property
+    def enabled(self) -> bool:
+        return self.ttl_seconds > 0 and self.max_entries > 0
+
+    def __len__(self) -> int:
+        with self._lock:
+            return len(self._entries)
+
+    # --- المفتاح ----------------------------------------------------------------
+    def fingerprint(self, query: str, top_k: int = 4, alpha: float = 0.55) -> str:
+        """بصمة مستقرة للاستعلام: تطبيع عربي/لاتيني + معاملات البحث + إصدار الفهرس."""
+        payload = "|".join((
+            self.namespace,
+            str(self._version),
+            normalize_text(query or ""),
+            str(int(top_k)),
+            f"{float(alpha):.4f}",
+        ))
+        return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+    # --- القراءة والكتابة -------------------------------------------------------
+    def get(self, key: str) -> Optional[List[Dict[str, Any]]]:
+        """نتيجة مخزأة صالحة (نسخة مستقلة) أو None مع احتساب miss."""
+        if not self.enabled:
+            return None
+        with self._lock:
+            item = self._entries.get(key)
+            if item is None:
+                self._misses += 1
+                return None
+            value, expires_at = item
+            if expires_at <= self._clock():
+                del self._entries[key]
+                self._expirations += 1
+                self._misses += 1
+                return None
+            self._entries.move_to_end(key)  # LRU: الأحدث استخداماً في النهاية
+            self._hits += 1
+            return deepcopy(value)
+
+    def set(self, key: str, value: List[Dict[str, Any]]) -> None:
+        """تخزين نتيجة مع طابع انتهاء، مع إخلاء الأقدم عند تجاوز السقف."""
+        if not self.enabled:
+            return
+        with self._lock:
+            self._entries[key] = (deepcopy(value), self._clock() + self.ttl_seconds)
+            self._entries.move_to_end(key)
+            self._stores += 1
+            while len(self._entries) > self.max_entries:
+                self._entries.popitem(last=False)
+                self._lru_evictions += 1
+
+    def invalidate(self) -> int:
+        """إبطال كل النتائج (بعد أي كتابة في الفهرس) وإرجاع عدد المُزال."""
+        with self._lock:
+            removed = len(self._entries)
+            self._entries.clear()
+            self._version += 1
+            self._invalidations += 1
+            self._last_invalidated_at = datetime.now().isoformat()
+            return removed
+
+    # --- الإحصاءات --------------------------------------------------------------
+    def stats(self) -> Dict[str, Any]:
+        with self._lock:
+            lookups = self._hits + self._misses
+            return {
+                "enabled": self.enabled,
+                "namespace": self.namespace,
+                "ttl_seconds": self.ttl_seconds,
+                "max_entries": self.max_entries,
+                "size": len(self._entries),
+                "hits": self._hits,
+                "misses": self._misses,
+                "hit_rate": round(self._hits / lookups, 4) if lookups else 0.0,
+                "stores": self._stores,
+                "expirations": self._expirations,
+                "lru_evictions": self._lru_evictions,
+                "invalidations": self._invalidations,
+                "last_invalidated_at": self._last_invalidated_at,
+            }
+
+
+# سجل عمليات: ذاكرة واحدة لكل مسار قاعدة بيانات، حتى تتشاركها كل الكائنات
+_CACHE_REGISTRY: Dict[str, QueryCache] = {}
+_CACHE_REGISTRY_LOCK = threading.Lock()
+
+
+def get_shared_query_cache(db_path) -> QueryCache:
+    """إرجاع الذاكرة المؤقتة المشتركة لقاعدة بيانات معينة (إنشاء عند أول طلب)."""
+    key = str(Path(db_path).resolve())
+    with _CACHE_REGISTRY_LOCK:
+        cache = _CACHE_REGISTRY.get(key)
+        if cache is None:
+            cache = QueryCache(namespace=key)
+            _CACHE_REGISTRY[key] = cache
+        return cache
+
+
+def reset_query_caches() -> None:
+    """إفراغ سجل الذاكرات (للاختبارات أو بعد تغيير إعدادات البيئة)."""
+    with _CACHE_REGISTRY_LOCK:
+        for cache in _CACHE_REGISTRY.values():
+            cache.invalidate()
+        _CACHE_REGISTRY.clear()
+
+
+# ==============================================================================
 # 2. مستودع المعرفة الهجين (SQLite Hybrid Store + FTS5)
 # ==============================================================================
 
 class SovereignRAGDatabase:
-    def __init__(self, db_path: Path = DB_PATH):
+    def __init__(self, db_path: Path = DB_PATH, cache: Optional[QueryCache] = None,
+                 cache_ttl: Optional[float] = None):
         self.db_path = str(db_path)
+        self._cache = cache if cache is not None else get_shared_query_cache(self.db_path)
+        if cache_ttl is not None:
+            self._cache.ttl_seconds = float(cache_ttl)
         self._init_schema()
 
     def get_connection(self) -> sqlite3.Connection:
@@ -210,6 +391,9 @@ class SovereignRAGDatabase:
                     (doc_id, idx, ch.get("title", title), ch["content"], blob)
                 )
 
+        # أي كتابة في الفهرس تُبطل النتائج المخزأة: لا نخدم سياقاً قديماً أبداً
+        self._cache.invalidate()
+
     def hybrid_search(self, query: str, top_k: int = 4, alpha: float = 0.55) -> List[Dict[str, Any]]:
         """
         البحث الهجين (Hybrid Search): دمج البحث الدلالي بالمتجهات الكثيفة مع بحث الكلمات المفتاحية FTS5
@@ -286,6 +470,52 @@ class SovereignRAGDatabase:
             scored_results.sort(key=lambda x: x["score"], reverse=True)
             return scored_results[:top_k]
 
+    def hybrid_search_cached(self, query: str, top_k: int = 4, alpha: float = 0.55,
+                             use_cache: bool = True) -> List[Dict[str, Any]]:
+        """البحث الهجين مع ذاكرة مؤقتة (الواجهة الموصى بها لنقاط النهاية)."""
+        results, _meta = self.search_with_cache(query, top_k=top_k, alpha=alpha, use_cache=use_cache)
+        return results
+
+    def search_with_cache(self, query: str, top_k: int = 4, alpha: float = 0.55,
+                          use_cache: bool = True) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
+        """
+        بحث هجين مع بيانات وصفية عن حالة الذاكرة (hit / miss / bypass).
+        يُستخدم في نقطة النهاية لإظهار ما إذا كانت الاستجابة من الذاكرة أم لا.
+        """
+        if not use_cache or not self._cache.enabled:
+            reason = "cache_disabled" if not self._cache.enabled else "by_request"
+            results = self.hybrid_search(query, top_k=top_k, alpha=alpha)
+            return results, {"status": "bypass", "reason": reason, "ttl_seconds": self._cache.ttl_seconds}
+
+        key = self._cache.fingerprint(query, top_k=top_k, alpha=alpha)
+        cached = self._cache.get(key)
+        if cached is not None:
+            return cached, {
+                "status": "hit",
+                "fingerprint": key[:12],
+                "ttl_seconds": self._cache.ttl_seconds,
+            }
+
+        results = self.hybrid_search(query, top_k=top_k, alpha=alpha)
+        self._cache.set(key, results)
+        return results, {
+            "status": "miss",
+            "fingerprint": key[:12],
+            "ttl_seconds": self._cache.ttl_seconds,
+        }
+
+    def cache_stats(self) -> Dict[str, Any]:
+        """إحصاءات طبقة التخزين المؤقت (نسبة الإصابة، الحجم، الإبطالات...)"""
+        stats = self._cache.stats()
+        # لا نكشف المسار المطلق للقرص في استجابات API؛ اسم الملف يكفي للتشخيص
+        stats["namespace"] = Path(self.db_path).name
+        stats["db_path"] = Path(self.db_path).name
+        return stats
+
+    def clear_cache(self) -> int:
+        """إبطال كل النتائج المخزأة وإرجاع عدد القطع المُزالة."""
+        return self._cache.invalidate()
+
     def get_stats(self) -> Dict[str, Any]:
         with self.get_connection() as con:
             cur = con.cursor()
@@ -300,6 +530,7 @@ class SovereignRAGDatabase:
                 "total_chunks": chunk_count,
                 "vector_dimension": VECTOR_DIM,
                 "hybrid_mode": "Dense Vector (128-d) + SQLite FTS5 (BM25)",
+                "query_cache": self._cache.stats(),
                 "recent_documents": recent
             }
 
@@ -471,7 +702,7 @@ def query_rag_knowledge(query: str, top_k: int = 4) -> str:
     استعلام فوري عن معلومات موثقة من صفحات وخدمات ووثائق المشروع عبر RAG الهجين.
     """
     db = SovereignRAGDatabase()
-    results = db.hybrid_search(query, top_k=top_k)
+    results = db.hybrid_search_cached(query, top_k=top_k)
     if not results:
         return "لم يتم العثور على مقاطع مطابقة تماماً في ذاكرة المتجهات المحلية للمشروع."
 

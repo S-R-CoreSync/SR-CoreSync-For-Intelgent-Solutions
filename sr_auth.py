@@ -17,8 +17,12 @@ of this file, via any medium, is strictly prohibited.
   - A8 (متوسط): جلسات المحادثة بلا مالك؛ أي طرف يقرأ/يحذف جلسات الغير.
 
 نموذج الأمان المعتمد:
-  - مفاتيح API (X-API-Key أو Authorization: Bearer أو ?api_key= للـ SSE/المتصفح).
-  - دوران: admin (كل الصلاحيات) و client (المحادثة والقراءة فقط).
+  - مفاتيح API (X-API-Key أو Authorization: Bearer <key> أو ?api_key=<key> لقنوات
+    SSE/WebSocket التي لا تستطيع تمرير ترويسات).
+  - صلاحيات دقيقة (Fine-Grained Scopes) بصيغة <المورد>:<الإجراء> انظر
+    sr_auth_advanced.ROUTE_PERMISSIONS: لكل مسار صلاحية محددة، ولكل مفتاح
+    صلاحيات دوره الافتراضية أو تجاوز صريح، مع تاريخ انتهاء صلاحية (expires_at).
+  - أدوار: admin (كل الصلاحيات) / writer / client / readonly.
   - الإغلاق الافتراضي (Fail-Closed): إن لم تُضبط أي مفاتيح تُرفض الطلبات المحمية
     بخطأ 503 ولا يعمل الخادم بشكل مفتوح أبداً.
   - مفتاح التطوير المحلي: CORESYNC_AUTH_DISABLED=1 (للاختبار على 127.0.0.1 فقط).
@@ -30,7 +34,6 @@ of this file, via any medium, is strictly prohibited.
   CORESYNC_API_KEYS        قائمة مفاتيح نصية مفصولة بفواصل بالصيغة: الاسم:المفتاح:الدور
                            مثال: ops-console:sk_live_xxx:admin,site-widget:sk_web_yyy:client
   CORESYNC_AUTH_FILE       مسار ملف JSON بالمفاتيح المُهشّرة (افتراضياً auth_keys.json)
-                           الصيغة: {"keys":[{"name":"...","key_sha256":"...","role":"admin"}]}
   CORESYNC_AUTH_DISABLED   "1" لتعطيل المصادقة في التطوير المحلي فقط (يُسجّل تحذير)
   CORESYNC_RATE_LIMIT      الحد العام، مثال "120/min" (افتراضي 120/min)
   CORESYNC_CHAT_RATE_LIMIT حد مسارات المحادثة المكلفة، مثال "10/min" (افتراضي 10/min)
@@ -39,13 +42,28 @@ of this file, via any medium, is strictly prohibited.
 import os
 import sys
 import time
-import json
-import hmac
-import hashlib
 import logging
 from pathlib import Path
 from collections import defaultdict, deque
-from typing import Optional, Dict, List, Tuple, Callable, Awaitable
+from typing import Deque, Dict, List, Optional, Tuple
+from urllib.parse import parse_qs
+
+from sr_auth_advanced import (
+    ALL_PERMISSIONS,
+    ROLE_ADMIN,
+    ROLE_CLIENT,
+    ROLE_PERMISSIONS,
+    ROLE_READONLY,
+    ROLE_WRITER,
+    VALID_ROLES,
+    WILDCARD,
+    AdvancedKeyEntry,
+    AdvancedKeyStore,
+    hash_api_key,
+    mask_digest,
+    permissions_for_role,
+    required_permission,
+)
 
 logger = logging.getLogger("sr_auth")
 
@@ -57,97 +75,99 @@ except Exception:
 
 PROJECT_DIR = Path(__file__).resolve().parent
 
+# أكواد إغلاق WebSocket (النطاق 4000-4999 محجوز للتطبيقات)
+WS_CLOSE_UNAUTHORIZED = 4401
+WS_CLOSE_FORBIDDEN = 4403
+WS_CLOSE_NOT_CONFIGURED = 4503
+
+
 # ==============================================================================
 # 1. الهويات والأدوار (Principals & Roles)
 # ==============================================================================
-ROLE_ADMIN = "admin"
-ROLE_CLIENT = "client"
-_VALID_ROLES = {ROLE_ADMIN, ROLE_CLIENT}
+_VALID_ROLES = VALID_ROLES
 
 
 class Principal:
-    """هوية مستدعي مُصادق عليها (مفتاح API مرتبط باسم ودور)"""
+    """
+    هوية مستدعي مُصادق عليها (مفتاح API مرتبط باسم ودور وصلاحيات).
+    الصلاحيات إمّا تجاوز صريح من المفتاح أو الافتراضي الخاص بدوره.
+    """
 
-    __slots__ = ("name", "role", "source")
+    __slots__ = ("name", "role", "source", "permissions", "expires_at")
 
-    def __init__(self, name: str, role: str, source: str = "api_key"):
+    def __init__(self, name: str, role: str, source: str = "api_key",
+                 permissions: Optional[Tuple[str, ...]] = None,
+                 expires_at: Optional[str] = None):
         self.name = name
         self.role = role if role in _VALID_ROLES else ROLE_CLIENT
         self.source = source
+        self.permissions = (
+            frozenset(permissions) if permissions is not None
+            else permissions_for_role(self.role)
+        )
+        self.expires_at = expires_at
 
     @property
     def is_admin(self) -> bool:
         return self.role == ROLE_ADMIN
 
-    def as_dict(self) -> Dict[str, str]:
-        return {"name": self.name, "role": self.role, "source": self.source}
+    def has(self, permission: str) -> bool:
+        """هل يملك هذا المستدعي صلاحية بعينها؟ (admin يملك كل شيء)"""
+        if self.is_admin:
+            return True
+        return WILDCARD in self.permissions or permission in self.permissions
+
+    def as_dict(self) -> Dict[str, object]:
+        return {
+            "name": self.name,
+            "role": self.role,
+            "source": self.source,
+            "permissions": sorted(self.permissions),
+            "expires_at": self.expires_at,
+        }
 
 
 # ==============================================================================
-# 2. مخزن المفاتيح (Key Store) — تُخزَّن المفاتيح مهشّرة SHA-256 فقط
+# 2. مخزن المفاتيح (Key Store) — واجهة رقيقة فوق AdvancedKeyStore
 # ==============================================================================
 class SovereignKeyStore:
-    """تحميل مفاتيح API من ملف JSON مهشّر و/أو متغير بيئة، والمصادقة بمقارنة زمن-ثابت"""
+    """
+    واجهة متوافقة خلفياً حول AdvancedKeyStore: تحميل من ملف مهشّر و/أو متغير
+    بيئة، مصادقة زمن-ثابت، وإدارة دورة حياة المفاتيح (إنشاء/إلغاء/دوران).
+    """
 
-    def __init__(self):
-        self._entries: Dict[str, Tuple[str, str]] = {}  # key_sha256 -> (name, role)
-        self.auth_enabled: bool = False
-        self._load()
+    def __init__(self, auth_file: Optional[str] = None, persist: bool = True):
+        self._advanced = AdvancedKeyStore(auth_file=auth_file, persist=persist)
+        self.auth_file = self._advanced.auth_file
 
+    # --- توافق خلفي -------------------------------------------------------------
     @staticmethod
     def hash_key(plain: str) -> str:
-        return hashlib.sha256(plain.encode("utf-8")).hexdigest()
+        return hash_api_key(plain)
 
-    def _load(self) -> None:
-        # (أ) ملف JSON بالمفاتيح المُهشّرة مسبقاً (الأسلوب الموصى به للإنتاج)
-        auth_file = Path(os.getenv("CORESYNC_AUTH_FILE", str(PROJECT_DIR / "auth_keys.json")))
-        try:
-            if auth_file.is_file():
-                data = json.loads(auth_file.read_text(encoding="utf-8"))
-                count = 0
-                for entry in data.get("keys", []):
-                    digest = str(entry.get("key_sha256", "")).strip().lower()
-                    name = str(entry.get("name", "unnamed")).strip()
-                    role = str(entry.get("role", ROLE_CLIENT)).strip()
-                    if len(digest) == 64:
-                        self._entries[digest] = (name, role)
-                        count += 1
-                if count:
-                    logger.info("تم تحميل %d مفتاح API مهشّر من %s", count, auth_file)
-        except Exception as exc:  # ملف تالف لا يجب أن يفتح الخادم
-            logger.error("تعذر تحميل ملف مفاتيح المصادقة %s: %s", auth_file, exc)
+    @property
+    def auth_enabled(self) -> bool:
+        return self._advanced.auth_enabled
 
-        # (ب) متغير بيئة بصيغة الاسم:المفتاح_النصي:الدور (يُهشَّر فور التحميل)
-        env_keys = os.getenv("CORESYNC_API_KEYS", "").strip()
-        if env_keys:
-            count = 0
-            for spec in env_keys.split(","):
-                parts = [p.strip() for p in spec.split(":") if p.strip()]
-                if len(parts) < 2:
-                    continue
-                name = parts[0]
-                plain = parts[1]
-                role = parts[2] if len(parts) >= 3 else ROLE_CLIENT
-                self._entries[self.hash_key(plain)] = (name, role)
-                count += 1
-            if count:
-                logger.info("تم تحميل %d مفتاح API من متغير البيئة CORESYNC_API_KEYS", count)
+    def __len__(self) -> int:
+        return len(self._advanced)
 
-        self.auth_enabled = bool(self._entries)
-
+    # --- المصادقة ---------------------------------------------------------------
     def authenticate(self, presented_key: str) -> Optional[Principal]:
-        """مصادقة مفتاح مقدَّم بمقارنة زمن-ثابت؛ لا يكشف أي معلومة عند الفشل"""
-        if not presented_key:
+        """مصادقة مفتاح بمقارنة زمن-ثابت؛ لا يكشف أي معلومة عند الفشل."""
+        entry: Optional[AdvancedKeyEntry] = self._advanced.authenticate(presented_key)
+        if entry is None:
             return None
-        digest = self.hash_key(presented_key)
-        for candidate, (name, role) in self._entries.items():
-            if hmac.compare_digest(candidate, digest):
-                return Principal(name=name, role=role)
-        return None
+        return Principal(
+            name=entry.name,
+            role=entry.role,
+            permissions=tuple(entry.permission_set),
+            expires_at=entry.expires_at,
+        )
 
-    def extract_key(self, raw_headers, query_string: bytes) -> Optional[str]:
-        """استخراج المفتاح من الترويسات أو الاستعلام (الاستعلام لقنوات SSE/EventSource)"""
-        # ترويسات ASGI قائمة أزواج (bytes, bytes) وليست قاموساً
+    @staticmethod
+    def extract_key(raw_headers, query_string: bytes) -> Optional[str]:
+        """استخراج المفتاح من الترويسات أو الاستعلام (لقنوات SSE/WebSocket)."""
         headers = dict(raw_headers or [])
         api_key = headers.get(b"x-api-key")
         if api_key:
@@ -158,7 +178,6 @@ class SovereignKeyStore:
             if value.lower().startswith("bearer "):
                 return value[7:].strip()
         if query_string:
-            from urllib.parse import parse_qs
             try:
                 params = parse_qs(query_string.decode("latin-1"))
                 values = params.get("api_key")
@@ -168,25 +187,63 @@ class SovereignKeyStore:
                 pass
         return None
 
+    # --- الإدارة ----------------------------------------------------------------
+    def add_key(self, name: str, plain_key: Optional[str] = None, role: str = ROLE_CLIENT,
+                expires_in_days: Optional[int] = None,
+                permissions: Optional[List[str]] = None,
+                metadata: Optional[Dict] = None,
+                persist: bool = True) -> str:
+        return self._advanced.add_key(
+            name=name, plain_key=plain_key, role=role,
+            expires_in_days=expires_in_days, permissions=permissions,
+            metadata=metadata, persist=persist,
+        )
+
+    def revoke_key(self, key_sha256: str) -> bool:
+        return self._advanced.revoke_key(key_sha256)
+
+    def rotate_key(self, old_key_sha256: str, new_plain_key: Optional[str] = None) -> Optional[str]:
+        return self._advanced.rotate_key(old_key_sha256, new_plain_key=new_plain_key)
+
+    def get_key_info(self, key_sha256: str) -> Optional[Dict]:
+        return self._advanced.get_key_info(key_sha256)
+
+    def list_keys(self, include_revoked: bool = True) -> List[Dict]:
+        return self._advanced.list_keys(include_revoked=include_revoked)
+
+    def purge_expired(self, include_revoked: bool = False) -> int:
+        return self._advanced.purge_expired(include_revoked=include_revoked)
+
+    def flush_usage(self) -> bool:
+        return self._advanced.flush_usage()
+
+    def stats(self) -> Dict:
+        return self._advanced.stats()
+
+
+# مخزن وحيد مشترك بين الوسيلة ونقاط نهاية الإدارة (المفاتيح المُنشأة تعمل فوراً)
+_KEY_STORE: Optional[SovereignKeyStore] = None
+
+
+def get_key_store() -> SovereignKeyStore:
+    """المخزن الوحيد للعملية (Singleton) بعد ضبط متغيرات البيئة."""
+    global _KEY_STORE
+    if _KEY_STORE is None:
+        _KEY_STORE = SovereignKeyStore()
+    return _KEY_STORE
+
+
+def reset_key_store() -> None:
+    """إعادة بناء المخزن (للاختبارات أو بعد تعديل متغيرات البيئة)."""
+    global _KEY_STORE
+    _KEY_STORE = None
+
 
 # ==============================================================================
 # 3. وسيلة المصادقة السيادية (Pure-ASGI Middleware) — إغلاق افتراضي
 # ==============================================================================
 # مسارات عامة لا تتطلب مصادقة (فحوص الجاهزية للوِب المحمل)
 PUBLIC_PATHS = {"/", "/health"}
-
-# مسارات الإدارة الحصرية (تتطلب دور admin): (الطريقة، المسار، مطابقة_بالبادئة؟)
-# كل ما عداها يتطلب مصادقة صالحة فقط (admin أو client)
-ADMIN_RULES: Tuple[Tuple[str, str, bool], ...] = (
-    ("DELETE", "/api/sessions/", True),   # حذف الجلسات (A1: كان مكشوفاً)
-    ("POST", "/api/upload", False),       # حقن المعرفة في RAG (A2: قناة تسميم)
-    ("POST", "/api/rag/reindex", False),  # إعادة الفهرسة الكاملة
-    ("POST", "/api/subagent/run-audit", False),
-    ("POST", "/api/events/publish", False),  # بث أحداث مزيّفة للوحة القيادة (A7)
-    ("POST", "/api/appeals/lodge", False),   # قيد استئنافات وتجميد أصول (Mission 112)
-    ("GET", "/api/appeals/list", False),
-    ("GET", "/api/sessions", False),      # سرد كل الجلسات (مطابقة تامة، لا تشمل سجل جلسة بعينها)
-)
 
 
 def _dev_principal() -> Principal:
@@ -195,17 +252,19 @@ def _dev_principal() -> Principal:
 
 class SovereignAuthMiddleware:
     """
-    مصادقة جميع الطلبات المحمية على مستوى ASGI، مع الإغلاق الافتراضي:
-      - 401 لمفتاح غائب/خاطئ.
-      - 403 لمفتاح صحيح على مسار إداري بدور client.
+    مصادقة جميع الطلبات المحمية على مستوى ASGI (HTTP + WebSocket)، مع الإغلاق
+    الافتراضي وتفويض دقيق مبني على الصلاحيات:
+      - 401 لمفتاح غائب/خاطئ/منتهٍ/ملغى.
+      - 403 لمفتاح صحيح ينقصه صلاحية المسار المطلوبة.
       - 503 إن لم تُهيّأ أي مفاتيح على الإطلاق (فشل التهيئة، لا فتحٌ للخادم).
+      - WebSocket: إغلاق بـ 4401/4403/4503 قبل قبول الاتصال.
     الهوية المُصادقة تُخزَّن في scope["state"]["principal"] لاستخدامها في
     نقاط النهاية (التحقق من ملكية الجلسات عبر get_principal).
     """
 
     def __init__(self, app, key_store: Optional[SovereignKeyStore] = None):
         self.app = app
-        self.key_store = key_store or SovereignKeyStore()
+        self.key_store = key_store or get_key_store()
         if not self.key_store.auth_enabled and os.getenv("CORESYNC_AUTH_DISABLED") != "1":
             logger.warning(
                 "⚠️ لم تُضبط أي مفاتيح API (CORESYNC_API_KEYS أو CORESYNC_AUTH_FILE). "
@@ -214,18 +273,20 @@ class SovereignAuthMiddleware:
             )
 
     async def __call__(self, scope, receive, send):
-        if scope["type"] != "http":
+        scope_type = scope.get("type")
+        if scope_type not in ("http", "websocket"):
             return await self.app(scope, receive, send)
 
+        is_ws = scope_type == "websocket"
         path = scope.get("path", "")
-        method = scope.get("method", "GET").upper()
+        method = "WS" if is_ws else scope.get("method", "GET").upper()
 
         # طلبات CORS المسبقة (OPTIONS) تُمرَّر لوسيلة CORS الخارجية دون مصادقة
-        if method == "OPTIONS":
+        if not is_ws and method == "OPTIONS":
             return await self.app(scope, receive, send)
 
-        # مسارات الصحة العامة فقط
-        if path in PUBLIC_PATHS:
+        # مسارات الصحة العامة فقط (HTTP)
+        if not is_ws and path in PUBLIC_PATHS:
             return await self.app(scope, receive, send)
 
         # وضع التطوير المحلي الصريح (لن يعمل الخادم الإنتاجي هكذا)
@@ -233,37 +294,56 @@ class SovereignAuthMiddleware:
             if os.getenv("CORESYNC_AUTH_DISABLED") == "1":
                 scope.setdefault("state", {})["principal"] = _dev_principal()
                 return await self.app(scope, receive, send)
-            await self._send_json_error(send, 503, {
-                "status": "auth_not_configured",
-                "detail": "المصادقة غير مهيأة: اضبط CORESYNC_API_KEYS أو CORESYNC_AUTH_FILE قبل التشغيل."
-            })
+            await self._reject(
+                send, is_ws, WS_CLOSE_NOT_CONFIGURED, 503,
+                {
+                    "status": "auth_not_configured",
+                    "detail": "المصادقة غير مهيأة: اضبط CORESYNC_API_KEYS أو CORESYNC_AUTH_FILE قبل التشغيل.",
+                },
+            )
             return
 
-        principal = self.key_store.authenticate(
-            self.key_store.extract_key(scope.get("headers") or [], scope.get("query_string", b""))
-        )  # type: ignore[arg-type]
+        presented = self.key_store.extract_key(
+            scope.get("headers") or [], scope.get("query_string", b"")
+        )
+        principal = self.key_store.authenticate(presented or "")
         if principal is None:
-            await self._send_json_error(send, 401, {
-                "status": "unauthorized",
-                "detail": "مفتاح API مفقود أو غير صالح. مرّره عبر الترويسة X-API-Key أو Authorization: Bearer."
-            })
+            await self._reject(
+                send, is_ws, WS_CLOSE_UNAUTHORIZED, 401,
+                {
+                    "status": "unauthorized",
+                    "detail": "مفتاح API مفقود أو غير صالح. مرّره عبر الترويسة X-API-Key أو Authorization: Bearer <key>",
+                },
+            )
             return
 
-        # فرض الدور على مسارات الإدارة الحصرية
-        for required_method, rule_path, is_prefix in ADMIN_RULES:
-            if method != required_method:
-                continue
-            if path.startswith(rule_path) if is_prefix else (path == rule_path):
-                if not principal.is_admin:
-                    await self._send_json_error(send, 403, {
-                        "status": "forbidden",
-                        "detail": "هذه العملية تتطلب مفتاحاً بدور admin."
-                    })
-                    return
-                break
+        # تفويض دقيق: صلاحية المسار المطلوبة (إن وُجدت)
+        needed = required_permission(method, path)
+        if needed and not principal.has(needed):
+            await self._reject(
+                send, is_ws, WS_CLOSE_FORBIDDEN, 403,
+                {
+                    "status": "forbidden",
+                    "detail": f"هذه العملية تتطلب الصلاحية '{needed}'.",
+                    "required_permission": needed,
+                    "principal": principal.name,
+                },
+            )
+            return
 
         scope.setdefault("state", {})["principal"] = principal
         return await self.app(scope, receive, send)
+
+    async def _reject(self, send, is_ws: bool, ws_code: int, http_status: int, body: dict) -> None:
+        """رفض موحّد: إغلاق WebSocket برمز تطبيقي أو استجابة JSON لـ HTTP."""
+        if is_ws:
+            await send({
+                "type": "websocket.close",
+                "code": ws_code,
+                "reason": str(body.get("status", "unauthorized"))[:120],
+            })
+            return
+        await self._send_json_error(send, http_status, body)
 
     async def _send_json_error(self, send, status: int, body: dict) -> None:
         import json as _json
@@ -314,7 +394,7 @@ class SovereignRateLimitMiddleware:
         chat = _parse_rate(os.getenv("CORESYNC_CHAT_RATE_LIMIT", "10/min"), (10, 60))
         self.general_limit, self.general_window = general
         self.chat_limit, self.chat_window = chat
-        self._hits: Dict[Tuple[str, str, int], deque] = defaultdict(deque)
+        self._hits: Dict[Tuple[str, str, int], Deque[float]] = defaultdict(deque)
 
     def _client_ip(self, scope) -> str:
         client = scope.get("client")
@@ -326,7 +406,7 @@ class SovereignRateLimitMiddleware:
             return f"key:{principal.name}"
         return f"ip:{self._client_ip(scope)}"
 
-    def _allow(self, bucket: Tuple[str, int], limit: int, window: int) -> Tuple[bool, int]:
+    def _allow(self, bucket: Tuple[str, str, int], limit: int, window: int) -> Tuple[bool, int]:
         now = time.monotonic()
         hits = self._hits[bucket]
         while hits and hits[0] <= now - window:
@@ -345,12 +425,16 @@ class SovereignRateLimitMiddleware:
         identity = self._identity(scope)
 
         if path.startswith(self.CHAT_PREFIXES):
-            allowed, retry_after = self._allow(("chat", identity, self.chat_window), self.chat_limit, self.chat_window)
+            allowed, retry_after = self._allow(
+                ("chat", identity, self.chat_window), self.chat_limit, self.chat_window
+            )
             if not allowed:
                 await self._send_rate_limited(send, retry_after, "تجاوزت حد معدل المحادثة المسموح؛ حاول لاحقاً.")
                 return
 
-        allowed, retry_after = self._allow(("general", identity, self.general_window), self.general_limit, self.general_window)
+        allowed, retry_after = self._allow(
+            ("general", identity, self.general_window), self.general_limit, self.general_window
+        )
         if not allowed:
             await self._send_rate_limited(send, retry_after, "تجاوزت الحد العام لمعدل الطلبات؛ حاول لاحقاً.")
             return
@@ -375,8 +459,8 @@ class SovereignRateLimitMiddleware:
 # ==============================================================================
 # 5. تبعيات FastAPI للوصول إلى الهوية وملكية الجلسات
 # ==============================================================================
-def get_principal(request):
-    """تبعية FastAPI: استرجاع الهوية المُصادقة التي ضبطتها وسيلة المصادقة"""
+def get_principal(request) -> Principal:
+    """تبعية FastAPI: استرجاع الهوية المُصادقة التي ضبطتها وسيلة المصادقة."""
     principal = getattr(request.state, "principal", None)
     if principal is None:
         # وصلنا إلى نقطة نهاية محمية دون وسيلة مصادقة (وضع التطوير المحلي)
@@ -387,3 +471,24 @@ def get_principal(request):
 def principal_label(principal) -> str:
     """التسمية الآمنة للسجلات (بدون أي أسرار)"""
     return f"{principal.name}({principal.role})"
+
+
+__all__ = [
+    "Principal",
+    "SovereignKeyStore",
+    "SovereignAuthMiddleware",
+    "SovereignRateLimitMiddleware",
+    "get_key_store",
+    "reset_key_store",
+    "get_principal",
+    "principal_label",
+    "PUBLIC_PATHS",
+    "ROLE_ADMIN",
+    "ROLE_CLIENT",
+    "ROLE_WRITER",
+    "ROLE_READONLY",
+    "ALL_PERMISSIONS",
+    "ROLE_PERMISSIONS",
+    "required_permission",
+    "mask_digest",
+]
