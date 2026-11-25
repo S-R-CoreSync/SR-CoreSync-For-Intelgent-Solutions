@@ -4,7 +4,7 @@
 
 **الملفات:** `sr_auth_advanced.py` · `sr_auth.py` · `sr_rate_limit.py` · `sr_rag_engine.py` · `sr_agent_server.py`
 **الاختبارات:** `tests/unit/test_sr_auth_advanced.py` · `tests/unit/test_rate_limit.py` · `tests/unit/test_rag_cache.py` · `tests/integration/test_realtime_and_scoped_keys.py`
-**الحالة:** 195 اختباراً ناجحاً (42 سابقة + 153 جديدة) — 0 فشل.
+**الحالة:** 198 اختباراً ناجحاً (42 سابقة + 156 جديدة) — 0 فشل.
 
 ---
 
@@ -235,7 +235,7 @@ asyncio.run(ask())
 ## 5. اختبارات
 
 ```powershell
-# المجموعة الكاملة (195 اختباراً)
+# المجموعة الكاملة (198 اختباراً)
 .\.venv\Scripts\python.exe -m pytest tests -q
 
 # حدّ المعدل المشترك (نافذة منزلقة، تعدد العمال)
