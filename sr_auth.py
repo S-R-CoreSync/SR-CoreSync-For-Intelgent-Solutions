@@ -41,12 +41,12 @@ of this file, via any medium, is strictly prohibited.
 
 import os
 import sys
-import time
 import logging
 from pathlib import Path
-from collections import defaultdict, deque
-from typing import Deque, Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import parse_qs
+
+from sr_rate_limit import RateLimitStore, get_rate_limit_store
 
 from sr_auth_advanced import (
     ALL_PERMISSIONS,
@@ -378,66 +378,99 @@ def _parse_rate(spec: str, default: Tuple[int, int]) -> Tuple[int, int]:
 
 class SovereignRateLimitMiddleware:
     """
-    حد من المعدل بنافذة منزلقة مفصولة إلى مجموعتين:
-      - المجموعة العامة: كل المسارات (افتراضياً 120 طلب/دقيقة).
-      - مجموعة المحادثة المكلفة: مسارات استهلاك Gemini (افتراضياً 10 طلبات/دقيقة).
-    المفتاح: اسم الهوية المُصادقة إن وُجدت وإلا عنوان IP.
-    ملاحظة صادقة: العدّاد في الذاكرة المحلية لكل عملية uvicorn؛ عند التشغيل
-    بعمليات متعددة استخدم حداً مركزياً (Redis/الوكيل العكسي) — موثق في الدليل.
+    حدّ من المعدل بطبقتين، بنافذة منزلقة مشتركة بين كل العمال:
+
+      1. **طبقة العنوان (الأساسية):** لكل IP — تحمي عدالة الاستخدام (زوار خلف
+         نفس الـ NAT لا يستهلكون حصة غيرهم) وتصدّ الفيضان.
+         الحدود: `CORESYNC_RATE_LIMIT` (عام) و`CORESYNC_CHAT_RATE_LIMIT` (محادثة).
+      2. **سقف الاعتماد (الثانوية):** لكل مفتاح API (بصمة SHA-256، بلا تخزين للمفتاح)
+         — يحمي حصة النموذج من استخدام موزّع عبر عناوين كثيرة لمفتاح مسرّب/مشترك.
+         الحدود: `CORESYNC_KEY_RATE_LIMIT` و`CORESYNC_KEY_CHAT_RATE_LIMIT`
+         (افتراضياً 10 أضعاف حدود العنوان).
+
+    لماذا IP أولاً؟ لأن مفتاح الويدجت العام مشترك بين كل زوار الموقع؛ لو كان الحساب
+    على المفتاح وحده لشارك كل الزوار حصة واحدة. ولماذا السقف ثانياً؟ لأن مفتاح
+    شريك مسرّب قد يدور على عناوين لا نهائية. كلاهما يمرّ على نفس المخزن المشترك.
     """
 
     CHAT_PREFIXES = ("/api/chat", "/api/ai-concierge")
 
-    def __init__(self, app):
+    def __init__(self, app, store: Optional[RateLimitStore] = None,
+                 general: Optional[Tuple[int, int]] = None,
+                 chat: Optional[Tuple[int, int]] = None,
+                 key_general: Optional[Tuple[int, int]] = None,
+                 key_chat: Optional[Tuple[int, int]] = None):
         self.app = app
-        general = _parse_rate(os.getenv("CORESYNC_RATE_LIMIT", "120/min"), (120, 60))
-        chat = _parse_rate(os.getenv("CORESYNC_CHAT_RATE_LIMIT", "10/min"), (10, 60))
+        self.store = store if store is not None else get_rate_limit_store()
+        general = general or _parse_rate(os.getenv("CORESYNC_RATE_LIMIT", "120/min"), (120, 60))
+        chat = chat or _parse_rate(os.getenv("CORESYNC_CHAT_RATE_LIMIT", "10/min"), (10, 60))
         self.general_limit, self.general_window = general
         self.chat_limit, self.chat_window = chat
-        self._hits: Dict[Tuple[str, str, int], Deque[float]] = defaultdict(deque)
+        # السقف لكل مفتاح: افتراضياً 10 أضعاف حدود العنوان
+        self.key_general_limit, self.key_general_window = key_general or _parse_rate(
+            os.getenv("CORESYNC_KEY_RATE_LIMIT", ""), (general[0] * 10, general[1])
+        )
+        self.key_chat_limit, self.key_chat_window = key_chat or _parse_rate(
+            os.getenv("CORESYNC_KEY_CHAT_RATE_LIMIT", ""), (chat[0] * 10, chat[1])
+        )
 
     def _client_ip(self, scope) -> str:
         client = scope.get("client")
         return client[0] if client else "unknown"
 
-    def _identity(self, scope) -> str:
-        principal = (scope.get("state") or {}).get("principal")
-        if principal is not None:
-            return f"key:{principal.name}"
-        return f"ip:{self._client_ip(scope)}"
+    @staticmethod
+    def _presented_key(scope) -> Optional[str]:
+        """استخراج المفتاح كما تفعل المصادقة، بلا أي تحقق أو تسجيل استخدام."""
+        return SovereignKeyStore.extract_key(
+            scope.get("headers") or [], scope.get("query_string", b"")
+        )
 
-    def _allow(self, bucket: Tuple[str, str, int], limit: int, window: int) -> Tuple[bool, int]:
-        now = time.monotonic()
-        hits = self._hits[bucket]
-        while hits and hits[0] <= now - window:
-            hits.popleft()
-        if len(hits) >= limit:
-            retry_after = int(window - (now - hits[0])) + 1
-            return False, max(retry_after, 1)
-        hits.append(now)
-        return True, 0
+    def _credential_identity(self, scope) -> Optional[str]:
+        presented = self._presented_key(scope)
+        if not presented:
+            return None
+        # بصمة مختصرة فقط: لا يُخزَّن المفتاح نفسه في جدول العدّادات
+        return "cred:" + SovereignKeyStore.hash_key(presented)[:16]
+
+    def _allow(self, name: str, identity: str, limit: int, window: int) -> Tuple[bool, int]:
+        # النافذة جزء من اسم الحزمة: تغيير الإعداد لا يخلط عدّادات بنوافذ مختلفة
+        return self.store.hit(f"{name}:{window}", identity, limit, window)
 
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http" or scope.get("method", "GET").upper() == "OPTIONS":
             return await self.app(scope, receive, send)
 
         path = scope.get("path", "")
-        identity = self._identity(scope)
+        is_chat = path.startswith(self.CHAT_PREFIXES)
 
-        if path.startswith(self.CHAT_PREFIXES):
-            allowed, retry_after = self._allow(
-                ("chat", identity, self.chat_window), self.chat_limit, self.chat_window
-            )
+        # الطبقة 1: حصة العنوان (زائر/جهاز واحد)
+        checks = [(
+            "chat" if is_chat else "general",
+            f"ip:{self._client_ip(scope)}",
+            self.chat_limit if is_chat else self.general_limit,
+            self.chat_window if is_chat else self.general_window,
+        )]
+
+        # الطبقة 2: سقف الاعتماد (المفتاح نفسه) إن قُدّم مفتاح
+        credential = self._credential_identity(scope)
+        if credential:
+            checks.append((
+                "key-chat" if is_chat else "key-general",
+                credential,
+                self.key_chat_limit if is_chat else self.key_general_limit,
+                self.key_chat_window if is_chat else self.key_general_window,
+            ))
+
+        for bucket, identity, limit, window in checks:
+            allowed, retry_after = self._allow(bucket, identity, limit, window)
             if not allowed:
-                await self._send_rate_limited(send, retry_after, "تجاوزت حد معدل المحادثة المسموح؛ حاول لاحقاً.")
+                detail = (
+                    "تجاوزت حد معدل المحادثة المسموح؛ حاول لاحقاً."
+                    if is_chat else
+                    "تجاوزت الحد العام لمعدل الطلبات؛ حاول لاحقاً."
+                )
+                await self._send_rate_limited(send, retry_after, detail)
                 return
-
-        allowed, retry_after = self._allow(
-            ("general", identity, self.general_window), self.general_limit, self.general_window
-        )
-        if not allowed:
-            await self._send_rate_limited(send, retry_after, "تجاوزت الحد العام لمعدل الطلبات؛ حاول لاحقاً.")
-            return
 
         return await self.app(scope, receive, send)
 

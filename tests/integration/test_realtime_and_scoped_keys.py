@@ -320,6 +320,29 @@ class TestWebSocketChat:
             assert frame["type"] in ("chunk", "error")
 
 
+class TestRateLimitStore:
+    """حدّ المعدل المشترك: الحالة في SQLite لا في ذاكرة العامل."""
+
+    def test_endpoint_requires_admin_system_scope(self, client):
+        response = client.get("/api/admin/system/rate-limit", headers=CLIENT_HEADERS)
+        assert response.status_code == 403
+        assert response.json()["required_permission"] == "admin:system"
+
+    def test_endpoint_reports_shared_backend(self, client):
+        response = client.get("/api/admin/system/rate-limit", headers=ADMIN_HEADERS)
+        assert response.status_code == 200
+        body = response.json()
+        assert body["store"]["backend"] == "sqlite"
+        assert body["store"]["shared_across_workers"] is True
+        assert "general" in body["limits"] and "chat" in body["limits"]
+
+    def test_requests_are_counted_in_the_store(self, client):
+        before = client.get("/api/admin/system/rate-limit", headers=ADMIN_HEADERS).json()["store"]
+        client.get("/api/rag/stats", headers=CLIENT_HEADERS)
+        after = client.get("/api/admin/system/rate-limit", headers=ADMIN_HEADERS).json()["store"]
+        assert after["tracked_hits"] >= before["tracked_hits"]
+
+
 class TestWebSocketEvents:
     """ناقل الأحداث الموحد بين SSE و WebSocket."""
 

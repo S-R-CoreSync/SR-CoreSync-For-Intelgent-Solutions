@@ -195,6 +195,7 @@ ROUTE_PERMISSIONS: Tuple[RouteRule, ...] = (
     RouteRule("POST", "/api/admin/keys", "admin:keys"),
     RouteRule("POST", "/api/admin/keys/", "admin:keys", prefix=True),
     RouteRule("DELETE", "/api/admin/keys/", "admin:keys", prefix=True),
+    RouteRule("GET", "/api/admin/system/rate-limit", "admin:system"),
 )
 
 

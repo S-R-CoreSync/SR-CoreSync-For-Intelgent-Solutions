@@ -39,6 +39,7 @@ from sr_auth import (
     get_principal,
     get_key_store,
 )
+from sr_rate_limit import get_rate_limit_store
 from google.antigravity import Agent
 
 # ==============================================================================
@@ -675,6 +676,24 @@ async def rotate_api_key(
         "api_key": new_key,
         "warning": "المفتاح القديم أُبطل؛ هذا المفتاح الجديد يُعرض مرة واحدة فقط.",
         "rotated_from": key_sha256,
+    }
+
+@app.get("/api/admin/system/rate-limit", tags=["إدارة مفاتيح API"])
+async def rate_limit_stats_endpoint():
+    """
+    حالة حدّ المعدل: هل الحالة مشتركة بين كل العمال (SQLite) أم محلية لعامل واحد،
+    مع العدّادات والحدود الفعّالة. يتطلب الصلاحية admin:system.
+    """
+    store = get_rate_limit_store()
+    return {
+        "store": store.stats(),
+        "limits": {
+            "general": os.getenv("CORESYNC_RATE_LIMIT", "120/min"),
+            "chat": os.getenv("CORESYNC_CHAT_RATE_LIMIT", "10/min"),
+            "chat_prefixes": list(SovereignRateLimitMiddleware.CHAT_PREFIXES),
+        },
+        "configured_backend": os.getenv("CORESYNC_RATE_LIMIT_STORE", "auto"),
+        "timestamp": datetime.now().isoformat(),
     }
 
 # ==============================================================================

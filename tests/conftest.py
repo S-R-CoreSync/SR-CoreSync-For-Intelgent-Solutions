@@ -19,6 +19,10 @@ _AUTH_TMP_DIR = Path(tempfile.mkdtemp(prefix="coresync_auth_"))
 os.environ.setdefault("CORESYNC_AUTH_FILE", str(_AUTH_TMP_DIR / "auth_keys.json"))
 os.environ.setdefault("CORESYNC_KEY_TTL_DAYS", "0")
 
+# عزل عدّادات حدّ المعدل أيضاً في مجلد مؤقت (لا ملفات تُنشأ داخل المستودع)
+_RATE_TMP_DIR = Path(tempfile.mkdtemp(prefix="coresync_rl_"))
+os.environ.setdefault("CORESYNC_RATE_LIMIT_DB", str(_RATE_TMP_DIR / "rate_limit.db"))
+
 # ضبط الترميز للعربية
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
