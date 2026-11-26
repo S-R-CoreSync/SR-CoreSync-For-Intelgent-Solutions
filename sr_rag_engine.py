@@ -12,11 +12,13 @@ of this file, via any medium, is strictly prohibited.
 import os
 import sys
 import re
+import json
 import math
 import time
 import struct
 import sqlite3
 import hashlib
+import logging
 import threading
 from collections import OrderedDict
 from copy import deepcopy
@@ -26,6 +28,8 @@ from typing import Callable, List, Dict, Any, Tuple, Optional
 
 # ضبط الترميز لدعم العربية في الطرفية
 sys.stdout.reconfigure(encoding="utf-8")
+
+logger = logging.getLogger("sr_rag_engine")
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 DB_PATH = PROJECT_ROOT / "sr_rag_knowledge.db"
@@ -157,6 +161,92 @@ def query_terms(text: str) -> List[str]:
         if token not in terms:
             terms.append(token)
     return terms
+
+
+# ==============================================================================
+# 1.b خريطة الترسيخ (Query Pinning) — بيانات خارجية قابلة للتحرير
+# ==============================================================================
+# لماذا: سؤال «ما هي باقاتكم؟» لا يجد صفحة الباقات لأنها تسمّي خططها Core
+# Starter / Business Pro ولا تكرار لكلمة «باقات» في متنها. جُرّبت توسيعات
+# معجمية وعقوبات ملاحية فانحدرت الترتيب، فالحلّ المحسوم هو ترسيخ صريح
+# (data-driven) لعدد صغير من الأسئلة المعروفة، يُطبّق قبل الترتيب المعجمي
+# ولا يُغيّر سلوك أي استعلام لا يطابق محفّزاته.
+PINS_PATH = PROJECT_ROOT / "rag_pins.json"
+_PINS_CACHE: Dict[str, Any] = {"key": None, "pins": []}
+
+
+def load_pins(path=None) -> List[Dict[str, Any]]:
+    """
+    تحميل خريطة الترسيخ مع تخزين مؤقت بحسب بصمة الملف.
+    ملف غائب أو تالف → لا ترسيخ (فشل آمن، لا استثناء).
+    """
+    file_path = Path(path or PINS_PATH)
+    try:
+        mtime = file_path.stat().st_mtime_ns
+    except OSError:
+        return []
+    cache_key = (str(file_path.resolve()), mtime)
+    if _PINS_CACHE["key"] == cache_key:
+        return _PINS_CACHE["pins"]
+
+    try:
+        data = json.loads(file_path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        logger.warning("تعذر تحميل خريطة الترسيخ %s: %s", file_path, exc)
+        return []
+
+    pins: List[Dict[str, Any]] = []
+    for raw in data.get("pins", []):
+        triggers = frozenset(
+            token for term in raw.get("terms", []) for token in stem_tokens(str(term))
+        )
+        anchors = frozenset(
+            token for term in raw.get("chunk_terms", []) for token in stem_tokens(str(term))
+        )
+        path_value = str(raw.get("path", "")).strip()
+        if not triggers or not path_value:
+            continue
+        pins.append({
+            "name": str(raw.get("name") or path_value),
+            "triggers": triggers,
+            "anchors": anchors,
+            "path": path_value,
+            "require": max(1, int(raw.get("require", 1))),
+            "priority": int(raw.get("priority", 0)),
+            "score": min(1.0, max(0.0, float(raw.get("score", 0.92)))),
+            "max_chunks": max(1, int(raw.get("max_chunks", 2))),
+        })
+
+    _PINS_CACHE["key"] = cache_key
+    _PINS_CACHE["pins"] = pins
+    if pins:
+        logger.info("تم تحميل %d قاعدة ترسيخ من %s", len(pins), file_path)
+    return pins
+
+
+def reset_pins_cache() -> None:
+    _PINS_CACHE["key"] = None
+    _PINS_CACHE["pins"] = []
+
+
+def match_pin(terms: List[str], pins: Optional[List[Dict[str, Any]]] = None) -> Optional[Dict[str, Any]]:
+    """
+    أفضل قاعدة ترسيخ تنطبق على مصطلحات الاستعلام.
+    الأولوية: عدد المحفّزات المطابقة ثم priority (لأخذ الأكثر تحديداً عند التعادل).
+    """
+    if not terms:
+        return None
+    best = None
+    best_key = None
+    for pin in (pins if pins is not None else load_pins()):
+        matched = sum(1 for term in terms if term in pin["triggers"])
+        if matched < pin["require"]:
+            continue
+        # priority أولاً: خريطة صريحة ومُدارة، فصاحب الأولوية الأعلى يحسم التعادل
+        key = (pin["priority"], matched)
+        if best_key is None or key > best_key:
+            best, best_key = pin, key
+    return best
 
 
 def compute_dense_vector(text: str, dim: int = VECTOR_DIM) -> List[float]:
@@ -599,6 +689,15 @@ class SovereignRAGDatabase:
             # ترتيب: الدرجة ثم التغطية (فاصل حاسم عند تعادل الدرجات)
             scored_results.sort(key=lambda x: (x["score"], x["coverage"]), reverse=True)
 
+            # ترسيخ صريح لأسئلة معروفة (قبل التنويع): يُضمن المقطع الصحيح حتى لو
+            # لم تحتوِ الصفحة لفظ السؤال (باقات ↔ Core Starter / Business Pro)
+            pin = match_pin(terms)
+            if pin:
+                pinned = self._pinned_matches(cur, pin, terms, query_vec)
+                if pinned:
+                    pinned_ids = {item["id"] for item in pinned}
+                    scored_results = pinned + [r for r in scored_results if r["id"] not in pinned_ids]
+
             # تنويع: لا تحتكر صفحة واحدة (شريط تنقّل مكرر) قائمة النتائج
             selected: List[Dict[str, Any]] = []
             per_doc: Dict[int, int] = {}
@@ -618,6 +717,63 @@ class SovereignRAGDatabase:
                         selected.append(result)
 
             return selected
+
+    def _pinned_matches(self, cur, pin: Dict[str, Any], terms: List[str],
+                        query_vec: List[float]) -> List[Dict[str, Any]]:
+        """
+        مقاطع الوثيقة المثبّتة، مرتّبة بتطابق المراسي ثم تغطية مصطلحات السؤال.
+        تتجاوز مرشّح «لا صلة معجمية» عمداً: الصفحة الصحيحة قد لا تذكر لفظ السؤال.
+        توثيق غائب أو بلا مراسٍ مطابقة → لا نتائج (فشل آمن، يكمل الترتيب الطبيعي).
+        """
+        cur.execute("""
+            SELECT c.id, c.doc_id, c.title, c.content, c.content_stem,
+                   c.vector_blob, d.path, d.category, c.chunk_index
+            FROM chunks c JOIN documents d ON c.doc_id = d.id
+            WHERE d.path = ?
+        """, (pin["path"],))
+        rows = cur.fetchall()
+        if not rows:
+            return []
+
+        anchors = pin["anchors"]
+        total_terms = len(terms) or 1
+        ranked = []
+        for c_id, doc_id, ch_title, ch_content, ch_stem, vec_blob, doc_path, category, chunk_index in rows:
+            # المراسي تُطابق العنوان أيضاً: «Core Starter» في العنوان لا في المتن
+            tokens = set((ch_stem or "").split()) | set(stem_text(ch_title).split())
+            anchor_hits = sum(1 for anchor in anchors if anchor in tokens) if anchors else 0
+            if anchors and anchor_hits == 0:
+                continue
+            coverage = sum(1 for term in terms if term in tokens) / total_terms
+            ranked.append((anchor_hits, coverage, -int(chunk_index or 0),
+                           (c_id, doc_id, ch_title, ch_content, vec_blob, doc_path, category)))
+        if not ranked:
+            return []
+
+        # المراسي أولاً، ثم التغطية، ثم ترتيب المقطع في الصفحة (ثبات النتيجة)
+        ranked.sort(key=lambda item: (item[0], item[1], item[2]), reverse=True)
+        pinned_results: List[Dict[str, Any]] = []
+        for _anchor_hits, coverage, _idx, row in ranked[: pin["max_chunks"]]:
+            c_id, doc_id, ch_title, ch_content, vec_blob, doc_path, category = row
+            title_terms = set(stem_text(ch_title).split())
+            pinned_results.append({
+                "id": c_id,
+                "doc_id": doc_id,
+                "title": ch_title,
+                "content": ch_content,
+                "path": doc_path,
+                "category": category,
+                "coverage": round(coverage, 4),
+                "title_coverage": round(
+                    sum(1 for term in terms if term in title_terms) / total_terms, 4
+                ),
+                "dense_score": round(cosine_similarity(query_vec, blob_to_vector(vec_blob)), 4),
+                "bm25_score": 0.0,
+                "score": round(pin["score"], 4),
+                "pinned": True,
+                "pin": pin["name"],
+            })
+        return pinned_results
 
     def hybrid_search_cached(self, query: str, top_k: int = 4, alpha: float = 0.25,
                              use_cache: bool = True) -> List[Dict[str, Any]]:

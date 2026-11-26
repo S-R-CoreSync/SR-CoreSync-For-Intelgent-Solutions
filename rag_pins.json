@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "_comment": "خريطة ترسيخ استعلامات RAG: تُطبَّق قبل ترتيب النتائج لضمان صفحة صحيحة لأسئلة معروفة. تُقطَّع كل العبارات بنفس مقص sr_rag_engine (وقف + اشتقاق). الفصل بين قاعدتين متطابقتين بـ priority (الأعلى يفوز)، ثم بعدد المحفّزات المطابقة.",
+  "pins": [
+    {
+      "name": "pricing",
+      "priority": 10,
+      "require": 1,
+      "terms": [
+        "باقات",
+        "باقة",
+        "أسعار",
+        "سعر",
+        "تسعير",
+        "تكلفة",
+        "اشتراك",
+        "pricing",
+        "price",
+        "plans"
+      ],
+      "path": "index.html",
+      "chunk_terms": [
+        "starter",
+        "business"
+      ],
+      "score": 0.93,
+      "max_chunks": 2
+    },
+    {
+      "name": "social-8k",
+      "priority": 30,
+      "require": 1,
+      "terms": [
+        "سوشيال",
+        "8k",
+        "instagram",
+        "linkedin",
+        "تيك توك"
+      ],
+      "path": "social-8k-studio.html",
+      "chunk_terms": [
+        "8k",
+        "سوشيال"
+      ],
+      "score": 0.93,
+      "max_chunks": 2
+    },
+    {
+      "name": "contact",
+      "priority": 20,
+      "require": 1,
+      "terms": [
+        "تواصل",
+        "اتصال",
+        "واتساب",
+        "هاتف",
+        "whatsapp",
+        "email",
+        "بريد"
+      ],
+      "path": "index.html",
+      "chunk_terms": [
+        "اتصال",
+        "هاتف",
+        "واتساب",
+        "بريد"
+      ],
+      "score": 0.92,
+      "max_chunks": 1
+    }
+  ]
+}

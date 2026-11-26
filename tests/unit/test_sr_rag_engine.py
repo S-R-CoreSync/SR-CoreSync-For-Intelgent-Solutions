@@ -20,8 +20,11 @@ from sr_rag_engine import (
     compute_dense_vector,
     cosine_similarity,
     light_stem,
+    load_pins,
+    match_pin,
     normalize_text,
     query_terms,
+    reset_pins_cache,
     reset_query_caches,
     stem_text,
     vector_to_blob,
@@ -302,3 +305,109 @@ class TestRetrievalRelevance:
         top = db.hybrid_search("باقات", top_k=1)[0]
         assert "coverage" in top and "title_coverage" in top
         assert top["score"] <= 1.0
+
+
+class TestQueryPinning:
+    """
+    الترسيخ الصريح: أسئلة معروفة تُوجَّه لصفحتها الصحيحة بالبيانات لا بالتخمين.
+    صفحة الباقات تسمّي خططها Core Starter / Business Pro ولا تكرّر «باقات».
+    """
+
+    def test_repo_pins_load(self):
+        pins = load_pins()
+        assert {p["name"] for p in pins} >= {"pricing", "social-8k", "contact"}
+        assert all(p["triggers"] and p["path"] for p in pins)
+
+    def test_pricing_trigger_matches(self):
+        pins = load_pins()
+        assert match_pin(["باقات"], pins)["name"] == "pricing"
+        assert match_pin(["سعر", "باقه"], pins)["name"] == "pricing"
+
+    def test_priority_breaks_the_tie(self):
+        pins = load_pins()
+        # «سوشيال» و«سعر» معاً: الأولوية الأعلى (social-8k) تحسم
+        assert match_pin(["سوشيال", "سعر"], pins)["name"] == "social-8k"
+
+    def test_no_pin_for_unrelated_query(self):
+        pins = load_pins()
+        assert match_pin(["تحكيم", "تجار"], pins) is None
+        assert match_pin([], pins) is None
+
+    def test_missing_or_broken_file_fails_safe(self, tmp_path):
+        assert load_pins(str(tmp_path / "absent.json")) == []
+        broken = tmp_path / "broken.json"
+        broken.write_text("{ this is not json", encoding="utf-8")
+        assert load_pins(str(broken)) == []
+
+
+class TestPinnedRetrieval:
+    """تطبيق الترسيخ على قاعدة بيانات فعلية (فشل آمن عند غياب الوثيقة)."""
+
+    @pytest.fixture
+    def db(self, temp_dir):
+        reset_pins_cache()
+        database = SovereignRAGDatabase(db_path=temp_dir / "pins.db")
+        database.upsert_document(
+            path="index.html",
+            title="S&R CoreSync",
+            category="web_portal",
+            file_hash="p1",
+            chunks=[
+                {"title": "S&R CoreSync", "content": "الرئيسية الخدمات الأسعار الباقات المتجر تواصل"},
+                {"title": "S&R CoreSync - Core Starter", "content": "للشركات الناشئة € 1,192 / شهرياً"},
+                {"title": "S&R CoreSync - Business Pro", "content": "للشركات المتوسطة € 2,312 / شهرياً"},
+            ],
+        )
+        database.upsert_document(
+            path="social-8k-studio.html",
+            title="استوديو الهوية البصرية وحزمة السوشيال ميديا 8K",
+            category="web_portal",
+            file_hash="p2",
+            chunks=[{"title": "استوديو 8K", "content": "حزمة السوشيال ميديا 8K تشمل شورتس وريلز"}],
+        )
+        database.upsert_document(
+            path="sovereign-arbitration-hub.html",
+            title="التحكيم التجاري الدولي",
+            category="web_portal",
+            file_hash="p3",
+            chunks=[{"title": "التحكيم التجاري الدولي", "content": "محرك التحكيم التجاري الدولي وتسوية النزاعات"}],
+        )
+        yield database
+        reset_query_caches()
+
+    def test_pricing_question_is_pinned_to_plan_cards(self, db):
+        results = db.hybrid_search("ما هي باقاتكم؟", top_k=3)
+        assert results[0]["pinned"] is True
+        assert results[0]["path"] == "index.html"
+        assert "Core Starter" in results[0]["title"]
+        assert "1,192" in results[0]["content"]
+        # الخطة الثانية مثبّتة أيضاً
+        assert "Business Pro" in results[1]["title"]
+        assert results[1]["pinned"] is True
+
+    def test_social_question_wins_over_pricing_pin(self, db):
+        results = db.hybrid_search("كم سعر باقة السوشيال ميديا؟", top_k=2)
+        assert results[0]["pinned"] is True
+        assert results[0]["path"] == "social-8k-studio.html"
+
+    def test_unpinned_query_is_unaffected(self, db):
+        results = db.hybrid_search("التحكيم التجاري الدولي", top_k=2)
+        assert all(not r.get("pinned") for r in results)
+        assert results[0]["path"] == "sovereign-arbitration-hub.html"
+
+    def test_missing_pinned_document_falls_back(self, db):
+        # قاعدة تشير إلى وثيقة غير موجودة (صفحة أُعيدت تسميتها) → لا نتائج مثبّتة، بلا انفجار
+        ghost = {"name": "ghost", "triggers": frozenset({"باقات"}), "anchors": frozenset(),
+                 "path": "ghost.html", "require": 1, "priority": 99, "score": 0.9, "max_chunks": 1}
+        with db.get_connection() as con:
+            assert db._pinned_matches(con.cursor(), ghost, ["باقات"], [0.0] * VECTOR_DIM) == []
+
+        # والبحث الطبيعي يعمل كما هو
+        assert db.hybrid_search("التحكيم التجاري الدولي", top_k=1)
+
+    def test_pin_without_matching_anchor_is_ignored(self, db):
+        empty_anchor = {"name": "no-anchor", "triggers": frozenset({"باقات"}),
+                        "anchors": frozenset({"xyzzy"}), "path": "index.html",
+                        "require": 1, "priority": 99, "score": 0.9, "max_chunks": 1}
+        with db.get_connection() as con:
+            assert db._pinned_matches(con.cursor(), empty_anchor, ["باقات"], [0.0] * VECTOR_DIM) == []
