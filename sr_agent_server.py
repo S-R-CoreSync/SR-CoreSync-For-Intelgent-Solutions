@@ -172,6 +172,19 @@ async def call_agent_text(prompt: str) -> Optional[str]:
         return None
 
 
+def _is_usable_match(matches: List[Dict[str, Any]], min_score: float = 0.40,
+                     min_coverage: float = 0.50) -> bool:
+    """
+    هل مطابقات RAG صالحة لبناء سياق؟ بعد إضافة «التغطية» صارت الجودة تُقاس
+    بمدى تغطية مصطلحات السؤال، لا بدرجة ملتبسة: مقطع يطابق نصف السؤال فقط
+    (شريط تنقّل مثلاً) لا يُحقن في سياق النموذج.
+    """
+    if not matches:
+        return False
+    top = matches[0]
+    return top.get("score", 0.0) >= min_score and top.get("coverage", 1.0) >= min_coverage
+
+
 async def generate_sovereign_answer(
     message: str,
     session_id: str,
@@ -194,7 +207,7 @@ async def generate_sovereign_answer(
     context = sr_session_db.get_formatted_context(session_id, max_turns=max_turns)
     rag_matches = app.state.rag_db.hybrid_search_cached(message, top_k=top_k)
     rag_context = ""
-    if rag_matches and rag_matches[0]["score"] >= 0.40:
+    if _is_usable_match(rag_matches):
         rag_snippets = "\n".join(f"• [{r['title']}]: {r['content'][:300]}" for r in rag_matches)
         rag_context = f"\n[المعرفة الموثقة من مساحة عمل المشروع (Local RAG Context)]:\n{rag_snippets}\n"
 
@@ -204,7 +217,7 @@ async def generate_sovereign_answer(
     source = "google_antigravity_agent"
     if reply_text is None:
         source = "sovereign_rag_knowledge_engine"
-        if rag_matches and rag_matches[0]["score"] >= 0.40:
+        if _is_usable_match(rag_matches):
             top_match = rag_matches[0]
             reply_text = (
                 f"{fallback_lead} ({top_match['title']}):\n"

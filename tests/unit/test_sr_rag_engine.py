@@ -13,13 +13,18 @@ sys.path.insert(0, str(PROJECT_ROOT))
 import pytest
 import math
 from sr_rag_engine import (
-    normalize_text,
-    compute_dense_vector,
-    vector_to_blob,
-    blob_to_vector,
-    cosine_similarity,
+    INDEX_VERSION,
     SovereignRAGDatabase,
     VECTOR_DIM,
+    blob_to_vector,
+    compute_dense_vector,
+    cosine_similarity,
+    light_stem,
+    normalize_text,
+    query_terms,
+    reset_query_caches,
+    stem_text,
+    vector_to_blob,
 )
 
 
@@ -200,3 +205,100 @@ class TestVectorBlobConversion:
         assert len(original) == len(restored)
         for o, r in zip(original, restored):
             assert abs(o - r) < 1e-6
+
+class TestQueryUnderstanding:
+    """الوقف والاشتقاق: أساس ترتيب النتائج."""
+
+    def test_possessive_suffix_is_stripped(self):
+        assert query_terms("ما هي باقاتكم؟") == ["باقات"]
+
+    def test_stopwords_are_dropped(self):
+        assert query_terms("ما هي؟") == []
+        assert query_terms("the and of") == []
+
+    def test_definite_article_and_adjective(self):
+        assert query_terms("التحكيم التجاري") == ["تحكيم", "تجار"]
+
+    def test_plural_forms_unify(self):
+        assert light_stem("الباقات") == light_stem("باقاتكم") == "باقات"
+
+    def test_short_word_is_not_over_stemmed(self):
+        # «باقات» يجب أن تبقى كما هي (لو قُلّمت إلى «باق» لفقدنا التطابق)
+        assert light_stem("باقات") == "باقات"
+
+    def test_stem_text_keeps_repetition_for_bm25(self):
+        assert stem_text("باقات باقات").split() == ["باقات", "باقات"]
+
+    def test_terms_are_unique_and_ordered(self):
+        assert query_terms("الخدمات خدماتنا الخدمات") == ["خدمات"]
+
+    def test_index_version_declared(self):
+        assert INDEX_VERSION >= 2
+
+
+class TestRetrievalRelevance:
+    """
+    الانحدار الحقيقي: سؤال «ما هي باقاتكم؟» كان يعيد صفحة المحاكي لأن كلمتي
+    «ما/هي» تطابقان كل نص، و«باقاتكم» لا تطابق «باقات».
+    """
+
+    @pytest.fixture
+    def db(self, temp_dir):
+        database = SovereignRAGDatabase(db_path=temp_dir / "relevance.db")
+        # صفحة محاكي: «الباقات» تظهر فقط داخل شريط تنقّل
+        database.upsert_document(
+            path="predictive-cashflow-risk.html",
+            title="محاكي تحليل وتوقع تدفقات السيولة والمخاطر الائتمانية",
+            category="web_portal",
+            file_hash="h1",
+            chunks=[{
+                "title": "محاكي تحليل وتوقع تدفقات السيولة",
+                "content": "لوحة القيادة المركزية التسويات عبر الحدود الضمان الذكي "
+                           "الرئيسية الخدمات الباقات الأسعار تواصل معنا",
+            }],
+        )
+        # صفحة الباقات الحقيقية
+        database.upsert_document(
+            path="index.html",
+            title="الباقات والأسعار",
+            category="web_portal",
+            file_hash="h2",
+            chunks=[{
+                "title": "الباقات والأسعار",
+                "content": "باقة السوشيال ميديا 8K بسعر 890 يورو، وباقة المنصة الرقمية، "
+                           "وباقات التحكيم والامتثال، مع دعم كامل",
+            }],
+        )
+        yield database
+        reset_query_caches()
+
+    def test_pricing_question_returns_pricing_page_first(self, db):
+        results = db.hybrid_search("ما هي باقاتكم؟", top_k=3)
+        assert results
+        assert results[0]["path"] == "index.html"
+        assert results[0]["coverage"] == 1.0
+
+    def test_full_coverage_beats_partial_match(self, db):
+        db.upsert_document(
+            path="sovereign-arbitration-hub.html",
+            title="التحكيم التجاري الدولي",
+            category="web_portal",
+            file_hash="h3",
+            chunks=[{
+                "title": "التحكيم التجاري الدولي",
+                "content": "محرك التحكيم التجاري الدولي وتسوية النزاعات الذكية",
+            }],
+        )
+        results = db.hybrid_search("التحكيم التجاري الدولي", top_k=2)
+        assert results[0]["path"] == "sovereign-arbitration-hub.html"
+        assert results[0]["coverage"] == 1.0
+        # الوثيقة التي تطابق مصطلحاً واحداً تبقى موجودة لكن بأقل
+        assert all(r["coverage"] <= results[0]["coverage"] for r in results)
+
+    def test_stopword_only_query_returns_nothing(self, db):
+        assert db.hybrid_search("ما هي؟") == []
+
+    def test_results_expose_coverage_fields(self, db):
+        top = db.hybrid_search("باقات", top_k=1)[0]
+        assert "coverage" in top and "title_coverage" in top
+        assert top["score"] <= 1.0

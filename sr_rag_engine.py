@@ -34,6 +34,10 @@ VECTOR_DIM = 128
 # إعدادات التخزين المؤقت للاستعلامات (يمكن ضبطها من البيئة)
 DEFAULT_CACHE_TTL_SECONDS = 300.0      # عمر القطعة المخزأة: 5 دقائق
 DEFAULT_CACHE_MAX_ENTRIES = 256        # سقف عدد الاستعلامات المخزأة (LRU)
+MAX_CHUNKS_PER_DOC = 2                 # تنويع النتائج: لا تحتكر صفحة واحدة قائمة النتائج
+
+# يُرفع عند تغيير التطبيع/الاشتقاق/المخطط → الفهرس كله مشتق، فيُعاد بناؤه
+INDEX_VERSION = 2
 
 
 def _env_float(name: str, default: float) -> float:
@@ -68,6 +72,92 @@ def normalize_text(text: str) -> str:
     text = re.sub(r'[\r\n\t]+', ' ', text)
     text = re.sub(r'\s{2,}', ' ', text)
     return text.strip().lower()
+
+
+# ==============================================================================
+# 1.a كلمات الوقف والاشتقاق الخفيف (Stopwords + Arabic Light Stemming)
+# ==============================================================================
+# لماذا: الاستعلام «ما هي باقاتكم؟» كان يطابق كل الصفحات لأن «ما» و«هي» تظهران في
+# كل نص (BM25 ≈ 0.83 للجميع)، وكانت «باقاتكم» لا تطابق «باقات» أصلاً. النتيجة:
+# ترتيب شبه عشوائي. الحلّ: إسقاط الوقف ثم اشتقاق خفيف متسق على طرفي الفهرسة
+# والاستعلام، بحيث يصبح «باقاتكم» = «باقات» = «الباقات».
+_RAW_ARABIC_STOPWORDS = """
+ما هي هو هم هن انا انت انتم نحن من في على عن الي ان او اي ايضا هل ثم قد لقد
+كان كانت يكون تكون هذا هذه ذلك تلك هولاء الذي التي الذين اللذان كل بعض غير
+بين بعد قبل عند مع يا اما لكن كما حيث حتى اذا كيف متي كم اين لماذا ماذا هناك هنا
+الان جدا فقط عليه عليها به بها له لها و ف ب ل ك
+""".split()
+
+ARABIC_STOPWORDS = frozenset(
+    normalize_text(word) for word in _RAW_ARABIC_STOPWORDS if normalize_text(word)
+)
+
+ENGLISH_STOPWORDS = frozenset("""
+the a an and or of to in on for with what is are was were be been being do does did
+your you we our it its this that these those how why when where which who whom from
+at by as about into over under can could should would will just not no yes
+""".split())
+
+_AR_PREFIXES = (("وال", 3), ("بال", 3), ("كال", 3), ("فال", 3), ("لل", 3), ("ال", 3), ("و", 4))
+# (اللاحقة، أقل طول يجب أن يبقى بعده)
+# ملاحظة مقصودة: لا نقلّم «ات» ولا «ه» حتى لا ينفصل «باقات» عن «باقة» ثم
+# ينكسر التطابق بين «باقات» و«الباقات» و«وباقات» — السابقة «ال/و» تكفي لتوحيدها.
+_AR_SUFFIXES = (
+    ("كما", 3), ("هما", 3), ("كم", 3), ("كن", 3), ("هم", 3), ("هن", 3),
+    ("ها", 3), ("نا", 3), ("ون", 4), ("ين", 4), ("يه", 4), ("ي", 3),
+)
+
+_TOKEN_RE = re.compile(r"[0-9a-z\u0600-\u06FF]+")
+# علامات ترقيم عربية تقع داخل نطاق الحروف (؟ ، ؛ ٪ …) فتُستبدل بمسافة قبل التقطيع
+_AR_PUNCT_TABLE = str.maketrans({
+    ch: " " for ch in "\u060c\u061b\u061f\u066a\u066b\u066c\u06d4\u0640"
+})
+
+
+def light_stem(word: str) -> str:
+    """اشتقاق عربي خفيف: يوحّد السوابق واللواحق الشائعة بلا قوائم جذور."""
+    stem = word or ""
+    if len(stem) < 3:
+        return stem
+    for prefix, min_rest in _AR_PREFIXES:
+        if stem.startswith(prefix) and len(stem) - len(prefix) >= min_rest:
+            stem = stem[len(prefix):]
+            break
+    for suffix, min_rest in _AR_SUFFIXES:
+        if stem.endswith(suffix) and len(stem) - len(suffix) >= min_rest:
+            stem = stem[:-len(suffix)]
+            break
+    return stem
+
+
+def stem_tokens(text: str, drop_stopwords: bool = True) -> List[str]:
+    """كلمات النص بعد التطبيع وإسقاط الوقف والاشتقاق، مع الحفاظ على التكرار (BM25)."""
+    tokens: List[str] = []
+    cleaned = normalize_text(text).translate(_AR_PUNCT_TABLE)
+    for token in _TOKEN_RE.findall(cleaned):
+        if len(token) < 2:
+            continue
+        if drop_stopwords and (token in ARABIC_STOPWORDS or token in ENGLISH_STOPWORDS):
+            continue
+        stem = light_stem(token)
+        if len(stem) >= 2:
+            tokens.append(stem)
+    return tokens
+
+
+def stem_text(text: str) -> str:
+    """نص مشتق يُخزَّن في عمود FTS مستقل ليطابق الاستعلام المشتق."""
+    return " ".join(stem_tokens(text))
+
+
+def query_terms(text: str) -> List[str]:
+    """مصطلحات الاستعلام الفريدة بالترتيب (بلا وقف، مشتقة)."""
+    terms: List[str] = []
+    for token in stem_tokens(text):
+        if token not in terms:
+            terms.append(token)
+    return terms
+
 
 def compute_dense_vector(text: str, dim: int = VECTOR_DIM) -> List[float]:
     """
@@ -304,6 +394,16 @@ class SovereignRAGDatabase:
 
     def _init_schema(self):
         with self.get_connection() as con:
+            con.execute("CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);")
+            row = con.execute("SELECT value FROM meta WHERE key = 'index_version'").fetchone()
+            stored_version = row[0] if row else None
+            if stored_version != str(INDEX_VERSION):
+                # الفهرس كله مشتق من الملفات: نُسقطه ونعيد بناءه عند تغيّر التطبيع/المخطط
+                con.executescript("""
+                DROP TABLE IF EXISTS chunks_fts;
+                DROP TABLE IF EXISTS chunks;
+                DROP TABLE IF EXISTS documents;
+                """)
             con.executescript("""
             CREATE TABLE IF NOT EXISTS documents (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -320,31 +420,42 @@ class SovereignRAGDatabase:
                 chunk_index INTEGER NOT NULL,
                 title TEXT,
                 content TEXT NOT NULL,
+                content_stem TEXT NOT NULL DEFAULT '',
                 vector_blob BLOB NOT NULL,
                 FOREIGN KEY (doc_id) REFERENCES documents(id) ON DELETE CASCADE
             );
 
+            -- عمود content_stem: صيغة مشتقة من المحتوى ليطابقها الاستعلام المشتق
             CREATE VIRTUAL TABLE IF NOT EXISTS chunks_fts USING fts5(
                 title,
                 content,
+                content_stem,
                 content='chunks',
                 content_rowid='id'
             );
 
             -- Triggers to sync FTS5 with chunks table
             CREATE TRIGGER IF NOT EXISTS chunks_ai AFTER INSERT ON chunks BEGIN
-                INSERT INTO chunks_fts(rowid, title, content) VALUES (new.id, new.title, new.content);
+                INSERT INTO chunks_fts(rowid, title, content, content_stem)
+                VALUES (new.id, new.title, new.content, new.content_stem);
             END;
 
             CREATE TRIGGER IF NOT EXISTS chunks_ad AFTER DELETE ON chunks BEGIN
-                INSERT INTO chunks_fts(chunks_fts, rowid, title, content) VALUES('delete', old.id, old.title, old.content);
+                INSERT INTO chunks_fts(chunks_fts, rowid, title, content, content_stem)
+                VALUES('delete', old.id, old.title, old.content, old.content_stem);
             END;
 
             CREATE TRIGGER IF NOT EXISTS chunks_au AFTER UPDATE ON chunks BEGIN
-                INSERT INTO chunks_fts(chunks_fts, rowid, title, content) VALUES('delete', old.id, old.title, old.content);
-                INSERT INTO chunks_fts(rowid, title, content) VALUES (new.id, new.title, new.content);
+                INSERT INTO chunks_fts(chunks_fts, rowid, title, content, content_stem)
+                VALUES('delete', old.id, old.title, old.content, old.content_stem);
+                INSERT INTO chunks_fts(rowid, title, content, content_stem)
+                VALUES (new.id, new.title, new.content, new.content_stem);
             END;
             """)
+            con.execute(
+                "INSERT OR REPLACE INTO meta(key, value) VALUES('index_version', ?)",
+                (str(INDEX_VERSION),),
+            )
 
     def get_document_by_path(self, path: str) -> Optional[Dict[str, Any]]:
         with self.get_connection() as con:
@@ -387,72 +498,89 @@ class SovereignRAGDatabase:
                 vec = compute_dense_vector(f"{ch.get('title', '')} {ch['content']}")
                 blob = vector_to_blob(vec)
                 cur.execute(
-                    "INSERT INTO chunks (doc_id, chunk_index, title, content, vector_blob) VALUES (?, ?, ?, ?, ?)",
-                    (doc_id, idx, ch.get("title", title), ch["content"], blob)
+                    "INSERT INTO chunks (doc_id, chunk_index, title, content, content_stem, vector_blob) VALUES (?, ?, ?, ?, ?, ?)",
+                    (doc_id, idx, ch.get("title", title), ch["content"], stem_text(ch["content"]), blob)
                 )
 
         # أي كتابة في الفهرس تُبطل النتائج المخزأة: لا نخدم سياقاً قديماً أبداً
         self._cache.invalidate()
 
-    def hybrid_search(self, query: str, top_k: int = 4, alpha: float = 0.55) -> List[Dict[str, Any]]:
+    def hybrid_search(self, query: str, top_k: int = 4, alpha: float = 0.25) -> List[Dict[str, Any]]:
         """
-        البحث الهجين (Hybrid Search): دمج البحث الدلالي بالمتجهات الكثيفة مع بحث الكلمات المفتاحية FTS5
-        alpha: وزن المتجهات الكثيفة (0.55 Dense + 0.45 BM25)
+        البحث الهجين: تغطية مصطلحات الاستعلام (بعد الاشتقاق) + BM25 (FTS5) + متجهات كثيفة.
+
+        alpha: وزن القناة الكثيفة (0.25 افتراضياً). داخل القناة المعجمية:
+            0.72 × تغطية المصطلحات + 0.28 × BM25، والتغطية تُضخَّم حتى 30% عند
+            ظهور المصطلح في العنوان (أقوى دلالة من ظهوره في نص عابر).
+        التغطية تُرجَّح على التطابق الجزئي: استعلام بثلاثة مصطلحات يتقدّم فيه من
+        يطابقها كلها على من يطابق واحداً، وهذا ما كان مفقوداً سابقاً.
         """
-        clean_q = normalize_text(query)
-        if not clean_q:
+        terms = query_terms(query)
+        if not terms:
+            # استعلام من كلمات وقف فقط («ما هي؟») لا يحمل دلالة بحث
             return []
 
         query_vec = compute_dense_vector(query)
+        total_terms = len(terms)
 
         with self.get_connection() as con:
             cur = con.cursor()
 
-            # 1. بحث FTS5 (BM25)
-            # استخراج الكلمات لتكوين استعلام FTS5 آمن
-            tokens = [re.sub(r'[^\w\s]', '', t) for t in clean_q.split() if len(t) >= 2]
+            # 1. FTS5/BM25 على النص المشتق
             fts_scores: Dict[int, float] = {}
-            
-            if tokens:
-                fts_query = " OR ".join(f'"{t}"*' for t in tokens)
-                try:
-                    cur.execute("""
-                        SELECT rowid, rank
-                        FROM chunks_fts
-                        WHERE chunks_fts MATCH ?
-                        ORDER BY rank
-                        LIMIT 30
-                    """, (fts_query,))
-                    rows = cur.fetchall()
-                    if rows:
-                        best_rank = abs(rows[0][1]) if rows[0][1] != 0 else 1.0
-                        for r_id, rank in rows:
-                            # Normalize BM25 rank score between 0.0 and 1.0
-                            norm_score = max(0.0, 1.0 - (abs(rank) / (best_rank * 2.5)))
-                            fts_scores[r_id] = norm_score
-                except Exception:
-                    pass
+            fts_query = " OR ".join(f'"{t}"*' for t in terms)
+            try:
+                cur.execute("""
+                    SELECT rowid, rank
+                    FROM chunks_fts
+                    WHERE chunks_fts MATCH ?
+                    ORDER BY rank
+                    LIMIT 80
+                """, (fts_query,))
+                rows = cur.fetchall()
+            except Exception:
+                rows = []
+            if rows:
+                raws = [abs(r[1]) for r in rows]
+                best_raw, worst_raw = min(raws), max(raws)
+                span = worst_raw - best_raw
+                for r_id, rank in rows:
+                    raw = abs(rank)
+                    # min-max: توزيع [0,1] على مرشحي هذا الاستعلام بدل تشبّع الجميع عند 1.0
+                    fts_scores[r_id] = 1.0 if span <= 1e-9 else (worst_raw - raw) / span
 
-            # 2. بحث المتجهات الكثيفة (Dense Vector Cosine Similarity)
+            # 2. مسح القطع: تغطية المصطلحات + المتجهات الكثيفة
             cur.execute("""
-                SELECT c.id, c.doc_id, c.title, c.content, c.vector_blob, d.path, d.category
+                SELECT c.id, c.doc_id, c.title, c.content, c.content_stem,
+                       c.vector_blob, d.path, d.category
                 FROM chunks c
                 JOIN documents d ON c.doc_id = d.id
             """)
             all_chunks = cur.fetchall()
 
             scored_results = []
-            for c_id, doc_id, ch_title, ch_content, vec_blob, doc_path, category in all_chunks:
-                ch_vec = blob_to_vector(vec_blob)
-                dense_sim = cosine_similarity(query_vec, ch_vec)
+            for c_id, doc_id, ch_title, ch_content, ch_stem, vec_blob, doc_path, category in all_chunks:
+                content_terms = set((ch_stem or "").split())
+                if not content_terms:
+                    continue
+
+                matched = sum(1 for t in terms if t in content_terms)
                 bm25_sim = fts_scores.get(c_id, 0.0)
+                if matched == 0 and bm25_sim == 0.0:
+                    continue  # لا صلة معجمية إطلاقاً
 
-                # دمج الدرجتين بالوزن التراكمي
-                combined_score = (alpha * max(0.0, dense_sim)) + ((1.0 - alpha) * bm25_sim)
+                coverage = matched / total_terms
+                title_terms = set(stem_text(ch_title).split())
+                title_coverage = (
+                    sum(1 for t in terms if t in title_terms) / total_terms
+                )
+                lexical = coverage * (1.0 + 0.5 * title_coverage)
 
-                # تعزيز إذا تطابقت كلمات العنوان
-                if any(t in normalize_text(ch_title) for t in tokens):
-                    combined_score += 0.15
+                dense_sim = cosine_similarity(query_vec, blob_to_vector(vec_blob))
+                combined_score = (
+                    alpha * max(0.0, dense_sim)
+                    + (1.0 - alpha) * (0.72 * lexical + 0.28 * bm25_sim)
+                )
 
                 scored_results.append({
                     "id": c_id,
@@ -461,22 +589,43 @@ class SovereignRAGDatabase:
                     "content": ch_content,
                     "path": doc_path,
                     "category": category,
+                    "coverage": round(coverage, 4),
+                    "title_coverage": round(title_coverage, 4),
                     "dense_score": round(dense_sim, 4),
                     "bm25_score": round(bm25_sim, 4),
-                    "score": round(combined_score, 4)
+                    "score": round(min(1.0, combined_score), 4),
                 })
 
-            # ترتيب النتائج بالأعلى درجة
-            scored_results.sort(key=lambda x: x["score"], reverse=True)
-            return scored_results[:top_k]
+            # ترتيب: الدرجة ثم التغطية (فاصل حاسم عند تعادل الدرجات)
+            scored_results.sort(key=lambda x: (x["score"], x["coverage"]), reverse=True)
 
-    def hybrid_search_cached(self, query: str, top_k: int = 4, alpha: float = 0.55,
+            # تنويع: لا تحتكر صفحة واحدة (شريط تنقّل مكرر) قائمة النتائج
+            selected: List[Dict[str, Any]] = []
+            per_doc: Dict[int, int] = {}
+            for result in scored_results:
+                if len(selected) >= top_k:
+                    break
+                if per_doc.get(result["doc_id"], 0) >= MAX_CHUNKS_PER_DOC:
+                    continue
+                selected.append(result)
+                per_doc[result["doc_id"]] = per_doc.get(result["doc_id"], 0) + 1
+
+            if len(selected) < top_k:
+                for result in scored_results:
+                    if len(selected) >= top_k:
+                        break
+                    if result not in selected:
+                        selected.append(result)
+
+            return selected
+
+    def hybrid_search_cached(self, query: str, top_k: int = 4, alpha: float = 0.25,
                              use_cache: bool = True) -> List[Dict[str, Any]]:
         """البحث الهجين مع ذاكرة مؤقتة (الواجهة الموصى بها لنقاط النهاية)."""
         results, _meta = self.search_with_cache(query, top_k=top_k, alpha=alpha, use_cache=use_cache)
         return results
 
-    def search_with_cache(self, query: str, top_k: int = 4, alpha: float = 0.55,
+    def search_with_cache(self, query: str, top_k: int = 4, alpha: float = 0.25,
                           use_cache: bool = True) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         """
         بحث هجين مع بيانات وصفية عن حالة الذاكرة (hit / miss / bypass).
