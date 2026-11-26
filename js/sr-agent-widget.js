@@ -546,6 +546,7 @@
                         </div>
                     </div>
                     <div class="sr-agent-header-actions">
+                        <button id="sr-agent-voice-gender" class="sr-voice-lang-btn" title="جنس الصوت: تلقائي حسب صوتك (انقر للتبديل: تلقائي / ذكر / أنثى)">تلقائي</button>
                         <button id="sr-agent-voice-lang" class="sr-voice-lang-btn" title="تغيير لغة الصوت (AR / EN)">AR</button>
                         <button id="sr-agent-export" title="تصدير الاستشارة كملف نصي">⬇</button>
                         <button id="sr-agent-clear" title="مسح المحادثة وتجديد الجلسة">↺</button>
@@ -688,7 +689,89 @@
             }
         });
 
-        // Speech-to-Text Setup
+        // Speech-to-Text Setup + Pitch-Based Gender Detection & Neural TTS Controls
+        const genderBtn = document.getElementById('sr-agent-voice-gender');
+        let voiceGenderMode = 'auto'; // 'auto' | 'male' | 'female'
+        let detectedVoiceGender = 'male';
+        let activeAudio = null;
+
+        if (genderBtn) {
+            genderBtn.addEventListener('click', () => {
+                if (voiceGenderMode === 'auto') {
+                    voiceGenderMode = 'male';
+                    genderBtn.textContent = 'ذكر';
+                    genderBtn.title = 'جنس الصوت: ذكر (انقر للتبديل)';
+                } else if (voiceGenderMode === 'male') {
+                    voiceGenderMode = 'female';
+                    genderBtn.textContent = 'أنثى';
+                    genderBtn.title = 'جنس الصوت: أنثى (انقر للتبديل)';
+                } else {
+                    voiceGenderMode = 'auto';
+                    genderBtn.textContent = 'تلقائي';
+                    genderBtn.title = 'جنس الصوت: تلقائي حسب صوتك (انقر للتبديل)';
+                }
+            });
+        }
+
+        function detectPitchHz(buf, sampleRate) {
+            let rms = 0;
+            for (let i = 0; i < buf.length; i++) rms += buf[i] * buf[i];
+            rms = Math.sqrt(rms / buf.length);
+            if (rms < 0.015) return -1;
+
+            const minLag = Math.floor(sampleRate / 350);
+            const maxLag = Math.floor(sampleRate / 75);
+            let bestLag = -1;
+            let bestCorr = 0;
+            for (let lag = minLag; lag <= maxLag; lag++) {
+                let corr = 0;
+                for (let i = 0; i < buf.length - lag; i++) {
+                    corr += buf[i] * buf[i + lag];
+                }
+                if (corr > bestCorr) {
+                    bestCorr = corr;
+                    bestLag = lag;
+                }
+            }
+            return bestLag > 0 ? sampleRate / bestLag : -1;
+        }
+
+        let pitchStream = null;
+        let pitchCtx = null;
+        let pitchTimer = null;
+        let pitchSamples = [];
+
+        function startPitchMonitor() {
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return;
+            pitchSamples = [];
+            navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+                pitchStream = stream;
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                pitchCtx = new AudioCtx();
+                const src = pitchCtx.createMediaStreamSource(stream);
+                const analyser = pitchCtx.createAnalyser();
+                analyser.fftSize = 2048;
+                src.connect(analyser);
+                const buf = new Float32Array(analyser.fftSize);
+                pitchTimer = setInterval(() => {
+                    analyser.getFloatTimeDomainData(buf);
+                    const hz = detectPitchHz(buf, pitchCtx.sampleRate);
+                    if (hz >= 75 && hz <= 350) pitchSamples.push(hz);
+                }, 120);
+            }).catch(() => {});
+        }
+
+        function stopPitchMonitor() {
+            if (pitchTimer) { clearInterval(pitchTimer); pitchTimer = null; }
+            if (pitchStream) { pitchStream.getTracks().forEach(t => t.stop()); pitchStream = null; }
+            if (pitchCtx) { pitchCtx.close().catch(() => {}); pitchCtx = null; }
+            if (pitchSamples.length >= 3) {
+                const sorted = [...pitchSamples].sort((a, b) => a - b);
+                const median = sorted[Math.floor(sorted.length / 2)];
+                detectedVoiceGender = median >= 165 ? 'female' : 'male';
+            }
+        }
+
         let isListening = false;
         let recognition = null;
         const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -701,12 +784,14 @@
 
             function stopListening() {
                 isListening = false;
+                stopPitchMonitor();
                 micBtn.classList.remove('sr-listening');
                 input.placeholder = currentVoiceLang === 'ar-SA' ? 'اكتب سؤالك أو تحدث بالصوت...' : 'Type your question or speak...';
             }
 
             recognition.onstart = () => {
                 isListening = true;
+                startPitchMonitor();
                 micBtn.classList.add('sr-listening');
                 input.placeholder = currentVoiceLang === 'ar-SA' ? '🎙️ جارٍ الاستماع... تحدث الآن' : '🎙️ Listening... Speak now';
             };
@@ -754,11 +839,15 @@
             });
         }
 
-        // Text-to-Speech (Audio Synthesis)
-        function speakText(rawText, ttsButton) {
-            if (!('speechSynthesis' in window)) return;
-
-            if (window.speechSynthesis.speaking) {
+        // Text-to-Speech (Real Human Neural Voices with Gender Matching)
+        async function speakText(rawText, ttsButton) {
+            if (activeAudio) {
+                activeAudio.pause();
+                activeAudio = null;
+                document.querySelectorAll('.sr-agent-tts-btn').forEach(b => b.classList.remove('sr-speaking'));
+                return;
+            }
+            if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
                 window.speechSynthesis.cancel();
                 document.querySelectorAll('.sr-agent-tts-btn').forEach(b => b.classList.remove('sr-speaking'));
                 return;
@@ -777,39 +866,61 @@
 
             if (!cleanText) return;
 
-            const utterance = new SpeechSynthesisUtterance(cleanText);
             const isEnglish = /^[A-Za-z0-9\s.,!?\'"()-]+$/.test(cleanText.slice(0, 50));
-            utterance.lang = isEnglish ? 'en-US' : 'ar-SA';
-            utterance.pitch = 0.88; // Deep masculine tone
-            utterance.rate = 0.95;  // Authoritative executive cadence
-
-            const femaleKeywords = ["laila", "zeina", "salma", "hoda", "maryam", "fatima", "yasmin", "zari", "sara", "noor", "female", "woman"];
-            const malePreferred = ["maged", "tarik", "naayf", "shakir", "zayd", "hamed", "bassam", "male"];
-            const allVoices = (window.speechSynthesis && window.speechSynthesis.getVoices) ? window.speechSynthesis.getVoices() : [];
-
-            let maleVoice = allVoices.find(v => {
-                const name = (v.name || "").toLowerCase(), lang = (v.lang || "").toLowerCase();
-                if (!lang.startsWith(isEnglish ? 'en' : 'ar')) return false;
-                if (femaleKeywords.some(f => name.includes(f))) return false;
-                return isEnglish ? true : malePreferred.some(m => name.includes(m));
-            });
-            if (!maleVoice) {
-                maleVoice = allVoices.find(v => {
-                    const name = (v.name || "").toLowerCase(), lang = (v.lang || "").toLowerCase();
-                    return lang.startsWith(isEnglish ? 'en' : 'ar') && !femaleKeywords.some(f => name.includes(f));
-                });
-            }
-            if (maleVoice) utterance.voice = maleVoice;
-
+            const activeGender = voiceGenderMode === 'auto' ? detectedVoiceGender : voiceGenderMode;
             if (ttsButton) ttsButton.classList.add('sr-speaking');
 
-            utterance.onend = () => {
-                if (ttsButton) ttsButton.classList.remove('sr-speaking');
-            };
-            utterance.onerror = () => {
-                if (ttsButton) ttsButton.classList.remove('sr-speaking');
-            };
+            try {
+                const resp = await fetch('/api/tts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        text: cleanText,
+                        lang: isEnglish ? 'en' : 'ar',
+                        gender: activeGender
+                    })
+                });
+                if (resp.ok) {
+                    const blob = await resp.blob();
+                    const url = URL.createObjectURL(blob);
+                    const audio = new Audio(url);
+                    activeAudio = audio;
+                    audio.onended = () => {
+                        URL.revokeObjectURL(url);
+                        activeAudio = null;
+                        if (ttsButton) ttsButton.classList.remove('sr-speaking');
+                    };
+                    audio.onerror = () => {
+                        URL.revokeObjectURL(url);
+                        activeAudio = null;
+                        if (ttsButton) ttsButton.classList.remove('sr-speaking');
+                    };
+                    await audio.play();
+                    return;
+                }
+            } catch (e) {
+                console.warn('[S&R TTS] Neural TTS unavailable, falling back to browser voice:', e);
+            }
 
+            if (!('speechSynthesis' in window)) {
+                if (ttsButton) ttsButton.classList.remove('sr-speaking');
+                return;
+            }
+            const utterance = new SpeechSynthesisUtterance(cleanText);
+            utterance.lang = isEnglish ? 'en-US' : 'ar-SA';
+            utterance.pitch = 1.0;
+            utterance.rate = 1.0;
+            const femaleKeywords = ["laila", "zeina", "salma", "hoda", "maryam", "fatima", "yasmin", "zari", "sara", "noor", "jenny", "aria", "female", "woman"];
+            const allVoices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+            const matched = allVoices.find(v => {
+                const name = (v.name || "").toLowerCase(), lang = (v.lang || "").toLowerCase();
+                if (!lang.startsWith(isEnglish ? 'en' : 'ar')) return false;
+                const isFem = femaleKeywords.some(f => name.includes(f));
+                return activeGender === 'female' ? isFem : !isFem;
+            });
+            if (matched) utterance.voice = matched;
+            utterance.onend = () => { if (ttsButton) ttsButton.classList.remove('sr-speaking'); };
+            utterance.onerror = () => { if (ttsButton) ttsButton.classList.remove('sr-speaking'); };
             window.speechSynthesis.speak(utterance);
         }
 

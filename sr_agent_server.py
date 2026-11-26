@@ -1231,6 +1231,42 @@ async def list_appeals():
         "appeals": app.state.appeals
     }
 
+class TTSRequest(BaseModel):
+    text: str = Field(..., min_length=1, max_length=4000, description="النص المراد تحويله إلى صوت بشري")
+    lang: str = Field("ar", description="اللغة: ar | en")
+    gender: str = Field("male", description="جنس الصوت: male | female")
+
+
+_NEURAL_VOICES = {
+    ("ar", "male"): "ar-SA-HamedNeural",
+    ("ar", "female"): "ar-SA-ZariyahNeural",
+    ("en", "male"): "en-US-GuyNeural",
+    ("en", "female"): "en-US-JennyNeural",
+}
+
+
+@app.post("/api/tts", tags=["تحويل النص إلى صوت بشري (Neural TTS)"])
+async def text_to_speech(req: TTSRequest):
+    """توليد صوت بشري طبيعي (ذكر أو أنثى) باللغتين العربية والإنجليزية باستخدام Edge Neural TTS."""
+    import edge_tts
+    from fastapi.responses import Response
+
+    lang_key = "en" if (req.lang or "").lower().startswith("en") else "ar"
+    gender_key = "female" if (req.gender or "").lower() == "female" else "male"
+    voice = _NEURAL_VOICES[(lang_key, gender_key)]
+
+    communicate = edge_tts.Communicate(req.text.strip(), voice)
+    chunks = []
+    async for chunk in communicate.stream():
+        if chunk.get("type") == "audio":
+            chunks.append(chunk["data"])
+
+    if not chunks:
+        raise HTTPException(status_code=502, detail="تعذر توليد الصوت البشري من مزود TTS.")
+
+    return Response(content=b"".join(chunks), media_type="audio/mpeg")
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("sr_agent_server:app", host="127.0.0.1", port=8000, reload=False)
