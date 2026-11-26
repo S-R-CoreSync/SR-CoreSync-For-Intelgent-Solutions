@@ -182,6 +182,9 @@ def _is_usable_match(matches: List[Dict[str, Any]], min_score: float = 0.40,
     if not matches:
         return False
     top = matches[0]
+    # المقطع المثبّت مُختار بقاعدة مُدارة (pinning)، فلا نُخضعه لشرط التغطية اللفظي
+    if top.get("pinned"):
+        return top.get("score", 0.0) >= min_score
     return top.get("score", 0.0) >= min_score and top.get("coverage", 1.0) >= min_coverage
 
 
