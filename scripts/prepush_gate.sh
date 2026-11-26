@@ -9,7 +9,8 @@
 #
 # Rule 6 of PLAN.md: NO push without a full green from this script.
 # It runs, locally and in CI order, every blocking audit of ci.yml
-# (except the three browser e2e suites, which CI runs on the pushed tree).
+# (except the three browser e2e suites, which CI runs on the pushed tree),
+# plus the backend/API test suite (pytest) so regressions there block a push too.
 # Exit code 0 => safe to push. Anything else => fix locally first.
 #
 # Usage:  bash scripts/prepush_gate.sh
@@ -47,6 +48,9 @@ steps=(
   "$PY scripts/fix_og_locale.py --check"
   "$PY scripts/check_seo_assets.py"
   "$PY scripts/sentinel_i18n.py"
+  # [2026-11-26 — الاقتراح 23] اختبارات الخلفية/ـAI: كانت 230 اختباراً خارج البوابة،
+  # فأي انحدار خلفي لا يوقف الدفع. تُشغّل بمفسّر المشروع نفسه.
+  "$PY -m pytest tests -q"
 )
 
 echo "PRE-PUSH GATE: ${#steps[@]} audits (CI order) + sentinel"
