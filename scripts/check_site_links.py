@@ -34,10 +34,31 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = re.compile(r'(?:href|src)\s*=\s*"([^"]+)"')
+# [2026-11-26] srcset was invisible to this gate, so a page could point at a
+# 404 for every responsive candidate while href/src stayed clean. Each
+# candidate is `url [descriptor]`, comma-separated; these URLs never carry
+# commas, and data:/external candidates are filtered by is_external().
+SRCSET = re.compile(r'srcset\s*=\s*"([^"]+)"')
+SRCSET_URL = re.compile(r'(?:^|,)\s*([^\s,]+)')
 
 
 def is_external(url):
     return bool(re.match(r'^(?:[a-zA-Z][a-zA-Z0-9+.\-]*:|//|#)', url))
+
+
+def resolve(target, dirpath, url):
+    """Absolute path a local reference points at, or None when skipped."""
+    url = url.strip()
+    if not url or is_external(url):
+        return None
+    if '${' in url or '{{' in url:
+        return None  # JS template placeholder, not a real path
+    path = unquote(urlsplit(url).path)
+    if not path:
+        return None
+    if path.startswith('/'):
+        return os.path.join(target, path.lstrip('/'))
+    return os.path.normpath(os.path.join(dirpath, path))
 
 
 def main():
@@ -62,19 +83,13 @@ def main():
             page = os.path.join(dirpath, name)
             with open(page, encoding='utf-8', errors='ignore') as fh:
                 html = fh.read()
-            for raw in REF.findall(html):
-                url = raw.strip()
-                if not url or is_external(url):
+            refs = list(REF.findall(html))
+            for raw_set in SRCSET.findall(html):
+                refs.extend(SRCSET_URL.findall(raw_set))
+            for raw in refs:
+                resolved = resolve(target, dirpath, raw)
+                if resolved is None:
                     continue
-                if '${' in url or '{{' in url:
-                    continue  # JS template placeholder, not a real path
-                path = unquote(urlsplit(url).path)
-                if not path:
-                    continue
-                if path.startswith('/'):
-                    resolved = os.path.join(target, path.lstrip('/'))
-                else:
-                    resolved = os.path.normpath(os.path.join(dirpath, path))
                 checked += 1
                 if os.path.isdir(resolved):
                     resolved = os.path.join(resolved, 'index.html')

@@ -47,6 +47,11 @@ steps=(
   "$PY scripts/check_content_depth_parity.py --strict"
   "$PY scripts/fix_og_locale.py --check"
   "$PY scripts/check_seo_assets.py"
+  # [2026-11-26 — الاقتراح 29] سلامة الروابط والأصول على مجموعة النشر الفعلية:
+  # الفحص القديم كان يقرأ href/src فقط، فمرّت 55 صورة مكسورة (مسارات لغات +
+  # srcset مسطّح) دون أن يراها أحد. الآن يُبنى العرف الكامل ويُفحص كل مرشّح srcset.
+  "$PY scripts/prepare_publish_set.py"
+  "$PY scripts/check_site_links.py"
   "$PY scripts/sentinel_i18n.py"
   # [2026-11-26 — الاقتراح 23] اختبارات الخلفية/ـAI: كانت 230 اختباراً خارج البوابة،
   # فأي انحدار خلفي لا يوقف الدفع. تُشغّل بمفسّر المشروع نفسه.
