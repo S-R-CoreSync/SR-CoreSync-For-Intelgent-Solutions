@@ -27,6 +27,40 @@
 
     const API_ENDPOINT = (typeof localStorage !== 'undefined' && localStorage.getItem('sr_agent_endpoint')) || 'http://127.0.0.1:8000/api/ai-concierge';
 
+    // مفتاح الواجهة العامة (دور client) — اختياري؛ لا يمنح أي صلاحية إدارة.
+    // وجوده يفعّل الخادم المُصادق (بدونه يعمل الويدجت على المحرك المحلي فقط).
+    const API_KEY = (function () {
+        try { return localStorage.getItem('sr_agent_key') || ''; } catch (e) { return ''; }
+    })();
+
+    // --- النقل: WebSocket أولاً ثم HTTP ثم المحرك المحلي (Path 4) -----------------
+    const WS_ENDPOINT = (function (endpoint) {
+        try {
+            const url = new URL(endpoint, window.location.href);
+            if (/\/api\/(ai-concierge|chat)$/.test(url.pathname)) url.pathname = '/ws/chat';
+            url.protocol = url.protocol === 'https:' ? 'wss:' : 'ws:';
+            url.search = '';
+            return url.toString();
+        } catch (e) { return ''; }
+    })(API_ENDPOINT);
+
+    const WS_TRANSPORT_ENABLED = (function () {
+        try {
+            if (typeof WebSocket === 'undefined' || !WS_ENDPOINT) return false;
+            if (new URLSearchParams(window.location.search).get('transport') === 'http') return false;
+            if (localStorage.getItem('sr_agent_transport') === 'http') return false;
+            // صفحة https إلى خادم ws:// محجوبة (Mixed Content) — نلجأ إلى HTTP مباشرة
+            if (window.location.protocol === 'https:' && WS_ENDPOINT.indexOf('wss:') !== 0) return false;
+            return true;
+        } catch (e) { return false; }
+    })();
+
+    // نفس الإجراءات التي يُرجعها الخادم في /api/ai-concierge، حتى لا تختفي عند مسار WS
+    const WS_ACTIONS = [
+        { label: '💬 محادثة واتساب VIP المباشرة', url: 'https://wa.me/31618111116' },
+        { label: '📋 طلب عرض سعر مخصص (RFQ)', action: 'open_rfq' }
+    ];
+
     // Immediate stub API
     let widgetInstance = null;
     let lastToggleTime = 0;
@@ -958,18 +992,144 @@
             messagesEl.scrollTop = messagesEl.scrollHeight;
         }
 
+        function createStreamingBubble() {
+            const node = document.createElement('div');
+            node.className = 'sr-msg sr-msg-agent sr-msg-streaming';
+            const span = document.createElement('span');
+            node.appendChild(span);
+            messagesEl.insertBefore(node, typingEl);
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+            return {
+                update: function (text) {
+                    span.textContent = text;
+                    messagesEl.scrollTop = messagesEl.scrollHeight;
+                },
+                remove: function () {
+                    if (node.parentNode) node.parentNode.removeChild(node);
+                }
+            };
+        }
+
+        /**
+         * بث الرد مقطعاً عبر WebSocket بنفس طبقة المصادقة والصلاحيات.
+         * يرفض الطلب عند أي فشل (رمز إغلاق 4401/4403، انقطاع، مهلة) ليتولى HTTP
+         * المهمة بدل أن يرى المستخدم خطأ — أي أن التدهور إلى SSE/HTTP مقصود.
+         */
+        function streamViaWebSocket(text, onDelta) {
+            return new Promise(function (resolve, reject) {
+                if (!WS_TRANSPORT_ENABLED) { reject(new Error('ws-disabled')); return; }
+
+                let ws = null;
+                let settled = false;
+                let buffer = '';
+                let readyTimer = null;
+                let totalTimer = null;
+
+                function finish(err, value) {
+                    if (settled) return;
+                    settled = true;
+                    clearTimeout(readyTimer);
+                    clearTimeout(totalTimer);
+                    try { if (ws && ws.readyState <= 1) ws.close(); } catch (e) { /* ignore */ }
+                    if (err) reject(err); else resolve(value);
+                }
+
+                // 5s للـ ready (المصادقة/الصلاحية تُرفض فوراً)، و90s للسقف الكلي
+                readyTimer = setTimeout(function () { finish(new Error('ws-ready-timeout')); }, 5000);
+                totalTimer = setTimeout(function () { finish(new Error('ws-total-timeout')); }, 90000);
+
+                try {
+                    ws = new WebSocket(
+                        WS_ENDPOINT +
+                        '?session_id=' + encodeURIComponent(sessionId) +
+                        (API_KEY ? '&api_key=' + encodeURIComponent(API_KEY) : '')
+                    );
+                } catch (e) { finish(e); return; }
+
+                ws.onopen = function () {
+                    try {
+                        ws.send(JSON.stringify({ message: text, session_id: sessionId }));
+                    } catch (e) { finish(e); }
+                };
+
+                ws.onmessage = function (event) {
+                    let frame;
+                    try { frame = JSON.parse(event.data); } catch (e) { return; }
+
+                    if (frame.type === 'ready') {
+                        clearTimeout(readyTimer);
+                        return;
+                    }
+                    if (frame.type === 'chunk') {
+                        clearTimeout(readyTimer);
+                        buffer += frame.delta || '';
+                        if (onDelta) onDelta(buffer);
+                        return;
+                    }
+                    if (frame.type === 'done') {
+                        finish(null, {
+                            reply: frame.reply || buffer,
+                            source: frame.source || 'websocket',
+                            citations: frame.citations || []
+                        });
+                        return;
+                    }
+                    if (frame.type === 'error') {
+                        finish(new Error(frame.detail || 'ws-error'));
+                    }
+                };
+
+                ws.onerror = function () { finish(new Error('ws-error')); };
+                ws.onclose = function (event) {
+                    if (!settled) finish(new Error('ws-closed-' + event.code));
+                };
+            });
+        }
+
         async function sendMessage(text) {
             appendMessage(text, true);
             typingEl.style.display = 'inline-flex';
             messagesEl.scrollTop = messagesEl.scrollHeight;
 
+            // 1) WebSocket: بث لحظي مع فقاعة مؤقتة تُستبدل بالرسالة النهائية
+            if (WS_TRANSPORT_ENABLED) {
+                const bubble = createStreamingBubble();
+                let streamed = false;
+                try {
+                    const result = await streamViaWebSocket(text, function (partial) {
+                        streamed = true;
+                        bubble.update(partial);
+                    });
+                    bubble.remove();
+                    typingEl.style.display = 'none';
+                    window.__srLastTransport = 'websocket';
+                    appendMessage(result.reply, false, WS_ACTIONS);
+                    return;
+                } catch (wsError) {
+                    bubble.remove();
+                    typingEl.style.display = 'inline-flex';
+                    window.__srLastTransport = 'http-pending';
+                    console.log('[S&R Sovereign Agent]: WS غير متاح (' + wsError.message + ') — تحويل إلى HTTP.');
+                    if (streamed) {
+                        // وصل جزء من الرد ثم انقطع: نكمل عبر HTTP بدل عرض نص ناقص
+                        console.log('[S&R Sovereign Agent]: انقطع البث بعد استلام جزء؛ يُعاد الطلب عبر HTTP.');
+                    }
+                }
+            }
+
+            // 2) HTTP (السلوك التاريخي كما هو، مع تمرير المفتاح إن وُجد)
             try {
                 const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 4000);
+                // 15s: مسار RAG السيادي يستغرق ~5s؛ مهلة 4s السابقة كانت تُسقط الطلب
+                // إلى المحرك المحلي دائماً. الاتصال الميت يفشل فوراً بأي حال.
+                const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+                const headers = { 'Content-Type': 'application/json' };
+                if (API_KEY) headers['X-API-Key'] = API_KEY;
 
                 const response = await fetch(API_ENDPOINT, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: headers,
                     body: JSON.stringify({
                         message: text,
                         session_id: sessionId,
@@ -985,9 +1145,11 @@
 
                 const data = await response.json();
                 typingEl.style.display = 'none';
+                window.__srLastTransport = 'http';
                 appendMessage(data.reply, false, data.actions);
             } catch (err) {
                 typingEl.style.display = 'none';
+                window.__srLastTransport = 'offline';
                 console.log('[S&R Sovereign Agent]: Resolving via Offline Intelligence Engine...');
                 
                 // Smart Offline Knowledge Base Lookup

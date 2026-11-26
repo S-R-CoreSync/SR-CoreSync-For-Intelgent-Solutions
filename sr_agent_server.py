@@ -152,11 +152,21 @@ async def call_agent_text(prompt: str) -> Optional[str]:
     """
     نداء واحد لوكيل Google Antigravity وإرجاع النص، أو None عند فشل الاتصال
     بالمنظومة الخارجية كي يستخدم المستدعي الصمود السيادي القائم على RAG.
+
+    ⚠️ يُنفَّذ في خيط عامل (worker thread) لأن SDK الوكيل يقوم بإدخال/إخراج
+    متزامن (شبكة/تهيئة عميل) داخل دالتِه الـ async؛ تنفيذه على حلقة الأحداث
+    كان يُجمّد الخادم بأكمله 10-12 ثانية (توقف /health و SSE و WebSocket لكل
+    المستخدمين). العزل في خيط يُبقي الحلقة حيّة ويحفظ زمن الاستجابة للبقية.
     """
+    def _run_blocking() -> str:
+        async def _inner() -> str:
+            async with Agent(app.state.config) as agent:
+                resp = await asyncio.wait_for(agent.chat(prompt), timeout=60.0)
+                return await resp.text()
+        return asyncio.run(_inner())
+
     try:
-        async with Agent(app.state.config) as agent:
-            resp = await asyncio.wait_for(agent.chat(prompt), timeout=60.0)
-            return await resp.text()
+        return await asyncio.wait_for(asyncio.to_thread(_run_blocking), timeout=70.0)
     except Exception as exc:
         logger.debug("تعذر الوصول إلى وكيل Antigravity، سيُستخدم الصمود السيادي: %s", exc)
         return None
