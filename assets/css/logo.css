@@ -1,0 +1,8 @@
+/* شعار موحد */
+.site-logo {
+    width: 240px; /* العرض المرجعي */
+    height: auto; /* الحفاظ على نسبة الأبعاد */
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
