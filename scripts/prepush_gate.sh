@@ -16,24 +16,37 @@
 # =============================================================================
 cd "$(dirname "$0")/.." || exit 1
 
+# [2026-11-26] مفسّر بايثون صريح: على Windows/Git Bash تختلط ثلاثة مفسّرات
+# (AutoClaw المرفق، .venv، النظام) فيفشل الفحص بخطأ «ملف غير موجود» أو 127
+# رغم وجود الملف. نُثبّت مفسّر المشروع أولاً حتى تكون البوابة قابلة للتنفيذ حرفياً
+# كما تقتضي القاعدة 6 (كانت تعمل في CI على Linux فقط).
+if [ -x ".venv/Scripts/python.exe" ]; then
+  PY=".venv/Scripts/python.exe"
+elif [ -x ".venv/bin/python" ]; then
+  PY=".venv/bin/python"
+else
+  PY="$(command -v python3 || command -v python || echo python)"
+fi
+echo "PRE-PUSH GATE: python = $PY"
+
 steps=(
   "node scripts/validate.js"
   "node scripts/check_inline_scripts.mjs"
-  "python scripts/audit_js_identifiers.py"
-  "python scripts/check_dock_handler.py"
-  "python scripts/check_command_handlers.py"
-  "python scripts/audit_language_api_parity.py"
-  "python scripts/audit_arabic_containment.py"
-  "python scripts/audit_language_paths.py"
-  "python scripts/check_script_tags.py"
-  "python scripts/localize_portal_core_metadata.py --check"
-  "python scripts/localize_multilingual_shared_sections.py --check"
-  "python scripts/check_multilingual_page_parity.py"
-  "python docs/audit_structure_vs_master.py --strict"
-  "python scripts/check_content_depth_parity.py --strict"
-  "python scripts/fix_og_locale.py --check"
-  "python scripts/check_seo_assets.py"
-  "python scripts/sentinel_i18n.py"
+  "$PY scripts/audit_js_identifiers.py"
+  "$PY scripts/check_dock_handler.py"
+  "$PY scripts/check_command_handlers.py"
+  "$PY scripts/audit_language_api_parity.py"
+  "$PY scripts/audit_arabic_containment.py"
+  "$PY scripts/audit_language_paths.py"
+  "$PY scripts/check_script_tags.py"
+  "$PY scripts/localize_portal_core_metadata.py --check"
+  "$PY scripts/localize_multilingual_shared_sections.py --check"
+  "$PY scripts/check_multilingual_page_parity.py"
+  "$PY docs/audit_structure_vs_master.py --strict"
+  "$PY scripts/check_content_depth_parity.py --strict"
+  "$PY scripts/fix_og_locale.py --check"
+  "$PY scripts/check_seo_assets.py"
+  "$PY scripts/sentinel_i18n.py"
 )
 
 echo "PRE-PUSH GATE: ${#steps[@]} audits (CI order) + sentinel"
