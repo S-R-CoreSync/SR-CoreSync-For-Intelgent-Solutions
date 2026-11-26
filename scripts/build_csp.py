@@ -47,7 +47,8 @@ HOSTS = {
     'style': "'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com",
     'img': "'self' data: blob: https://api.qrserver.com",
     'font': "'self' data: https://fonts.gstatic.com",
-    'connect': "'self' https://sr-lead-capture.sr-coresync.workers.dev https://fonts.googleapis.com https://api.telegram.org",
+    'connect': "'self' https://sr-lead-capture.sr-coresync.workers.dev https://fonts.googleapis.com https://api.telegram.org "
+               "wss://api.sr-coresync.com wss://api.coresync.eu wss://api.coresync.solutions",
     'frame': "'self' https://js.stripe.com https://hooks.stripe.com https://www.mollie.com",
 }
 
