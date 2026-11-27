@@ -295,3 +295,73 @@
     background-size:cover;background-position:center;border:1px solid rgba(255,255,255,.4);
     box-shadow:0 1px 3px rgba(0,0,0,.55);pointer-events:none}
 .sr-dock-lang:hover .sr-dock-lang-flag{bottom:2px}
+
+/* ==========================================================================
+   [2026-11-27] sr-dock-rail — الدوك على يسار الشاشة بنفس قياس وتصميم دوك
+   السوشيال ميديا: دوائر 30px، فراغ 7px، حشوة 10px/5px، كبسولة زجاجية.
+   على الشاشات ≤900px يعود شريطاً أفقياً أسفل الشاشة (سلوك الجوال).
+   ========================================================================== */
+@media (min-width: 901px) {
+    .sr-quick-dock-container {
+        left: 16px !important;
+        right: auto !important;
+        top: 50% !important;
+        bottom: auto !important;
+        transform: translateY(-50%) translateX(-34px) !important;
+        opacity: 0;
+        transition: opacity .3s ease, transform .34s cubic-bezier(.16, 1, .3, 1) !important;
+    }
+
+    .sr-quick-dock-container { height: 432px !important; max-height: none !important; overflow: visible !important; }
+    .sr-quick-dock-container.visible {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0) !important;
+    }
+
+    .sr-quick-dock {
+        flex-direction: column !important;
+        gap: 7px !important;
+        padding: 10px 5px !important;
+        border-radius: 999px !important;
+    }
+
+    .sr-dock-item {
+        width: 30px !important;
+        height: 30px !important;
+        border-color: rgba(255, 255, 255, .12) !important;
+    }
+
+    .sr-dock-item svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .sr-dock-item:hover {
+        transform: translateX(4px) scale(1.1) !important;
+    }
+
+    .sr-dock-divider {
+        width: 18px !important;
+        height: 1px !important;
+        margin: 2px 0 !important;
+    }
+
+    .sr-dock-tooltip {
+        bottom: auto !important;
+        top: 50% !important;
+        left: calc(100% + 12px) !important;
+        transform: translateY(-50%) translateX(-6px) !important;
+        white-space: nowrap;
+    }
+
+    .sr-dock-item:hover .sr-dock-tooltip {
+        transform: translateY(-50%) translateX(0) !important;
+    }
+
+    .sr-dock-lang-flag {
+        right: 1px;
+        bottom: 1px;
+        width: 12px;
+        height: 8px;
+    }
+}

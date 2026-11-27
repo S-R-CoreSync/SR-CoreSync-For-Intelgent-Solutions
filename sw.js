@@ -1,6 +1,6 @@
 // S&R CoreSync For Intelligent Solutions - Enterprise Pre-render & Ultra-Low TTFB Service Worker
 // Version: coresync-prerender-v21-live-content
-const CACHE_NAME = 'coresync-prerender-v25-dock';
+const CACHE_NAME = 'coresync-prerender-v26-rail';
 
 // 1. Critical assets: everything the first screen needs to paint.
 // Anything that is only reachable after a scroll (founder banners, portraits,
