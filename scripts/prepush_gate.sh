@@ -67,7 +67,9 @@ NON_BLOCKING_RE="audit_structure_vs_master"
 fail_total=0
 warn_total=0
 for step in "${steps[@]}"; do
-  out=$(timeout 300 $step 2>&1)
+  # [2026-11-27] 300s كانت تضيّق على السنتينل على ويندوز تحت حِمل (قِيس 396s
+  # مقابل 128s في تشغيل هادئ) فيسقط بمهلة 124 لا بفشل حقيقي. المهلة liveness لا صحّة.
+  out=$(timeout 600 $step 2>&1)
   code=$?
   last_line=$(printf '%s\n' "$out" | tail -1)
   if [ $code -eq 0 ]; then
