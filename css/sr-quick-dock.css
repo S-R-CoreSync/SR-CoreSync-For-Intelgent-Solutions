@@ -288,3 +288,10 @@
         display: none; /* Hide tooltips on touch */
     }
 }
+
+/* [2026-11-27] زر اللغة داخل دوك التحكم: كرة أرضية + علم اللغة الحالية */
+.sr-dock-lang{position:relative}
+.sr-dock-lang-flag{position:absolute;right:4px;bottom:4px;width:16px;height:11px;border-radius:3px;
+    background-size:cover;background-position:center;border:1px solid rgba(255,255,255,.4);
+    box-shadow:0 1px 3px rgba(0,0,0,.55);pointer-events:none}
+.sr-dock-lang:hover .sr-dock-lang-flag{bottom:2px}
