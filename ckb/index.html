@@ -9838,7 +9838,7 @@ html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         <span>تحميل الشعار بدقة فائقة الجودة</span>
                     </a>
-                    <a href="../assets/logo-official.jpg" download="SR-CoreSync-Official-Emblem.png" class="tf-btn sr-modal-btn-sub">
+                    <a href="../assets/sr-badge-official.png" download="SR-CoreSync-Official-Badge.png" class="tf-btn sr-modal-btn-sub">
                         <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
                         <span>تحميل الأيقونة الشفافة بدقة عالية</span>
                     </a>
@@ -10530,7 +10530,7 @@ html[dir="ltr"] .nav-menu-main > li{text-align:left !important}
         }
 
         function copyLogoAssetPath(btn) {
-            const fullUrl = new URL('../assets/logo-official.jpg', window.location.href).href;
+            const fullUrl = new URL('../assets/sr-badge-official.png', window.location.href).href;
             LuxuryAudio.play('switch');
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(fullUrl).then(() => {
