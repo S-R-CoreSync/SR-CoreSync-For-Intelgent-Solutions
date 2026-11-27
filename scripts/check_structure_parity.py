@@ -4,7 +4,7 @@
 The Arabic root page is the normative reference. This guard locks:
 1. every portal's ordered section skeleton (21 ids) == root's, with no
    section nested inside another section;
-2. #trust-metrics present right after the hero with the 4-metric strip,
+2. #trust-metrics present under the setup bar (centre stage) with 4 metrics,
    labels verbatim from TRUST_METRICS_LOCALIZATIONS (ckb carries its own
    pre-existing Fusha strip today - structural check only);
 3. #portals present before #services-compare with the quick-portals strip,
@@ -53,6 +53,10 @@ def check_root(doc, faults):
         return None
     if 'trust-metrics' not in order:
         faults.append('root: #trust-metrics missing')
+    tm_stage = doc.xpath('//*[contains(@class,"c3-center-stage")]/section[@id="trust-metrics"]')
+    if len(tm_stage) != 1:
+        faults.append('root: #trust-metrics is not the last block of the centre stage')
+
     if 'portals' not in order:
         faults.append('root: #portals missing')
     tm = doc.xpath('//section[@id="trust-metrics"]')
@@ -70,8 +74,13 @@ def check_portal(lang, doc, root_order, faults):
     if order != root_order:
         faults.append(f'{lang}: section order {order} != root {root_order}')
         return
+    # [2026-11-27] #trust-metrics moved inside the hero's centre stage (under the
+    # System-Setup bar) by owner request, so it is the one permitted nested section.
     for parent in doc.xpath('//section[.//section]'):
-        faults.append(f'{lang}: section #{parent.get("id")} contains a nested section')
+        nested = [s for s in parent.xpath('.//section')
+                  if s.get('id') != 'trust-metrics']
+        if nested:
+            faults.append(f'{lang}: section #{parent.get("id")} contains a nested section')
 
     # 2) trust-metrics strip
     tm = doc.xpath('//section[@id="trust-metrics"]')
