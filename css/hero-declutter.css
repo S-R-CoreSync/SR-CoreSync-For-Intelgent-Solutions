@@ -2131,3 +2131,19 @@ html { scroll-behavior: smooth; }
     text-align: center;
     margin-top: 4px;
 }
+
+
+/* ==========================================================================
+   [2026-11-28 · item 22b] Uniform cockpit height across languages
+   Measured at 1440x900 with scripts/measure-cockpit-windows.mjs:
+   ar 560 · en 562 · fr 562 · nl 562 · de 502  (centre stage 510/512/512/512/452).
+   The gap is a deficit in de, not an overflow anywhere, so a max-height ceiling
+   would never have fixed it. Pinning the centre stage to the tallest measured
+   value (512px) equalises every language without clipping a single line.
+   Mobile keeps its natural height: the shortest viewport must stay compact.
+   ========================================================================== */
+@media (min-width: 901px) {
+    .concept-3-cockpit .c3-center-stage {
+        min-height: 512px;
+    }
+}
