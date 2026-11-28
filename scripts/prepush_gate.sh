@@ -66,9 +66,12 @@ steps=(
 echo "PRE-PUSH GATE: ${#steps[@]} audits (CI order) + sentinel"
 # إصلاح pipefail (موجة 2026-11-18): $? بعد الأنبوب كان يعكس tail دائماً فيقنّع
 # أي فشل — الآن الخروج يُلتقط مباشرة من الفحص نفسه، وآخر سطر المخرجات يُطبع.
-# الخطوات غير الحاجبة في ci.yml (continue-on-error) تُطبع [WARN] ولا تُحسب فاشلة
-# حتى تُقلب إلى حاجبة بعد موجة مكافئة المحتوى — محاذاة حرفية مع سياسة CI.
-NON_BLOCKING_RE="audit_structure_vs_master"
+# الخطوات غير الحاجبة في ci.yml (continue-on-error) تُطبع [WARN] ولا تُحسب فاشلة —
+# محاذاة حرفية مع سياسة CI. يجب أن تطابق القائمة continue-on-error في ci.yml،
+# وإلا صارت البوابة أقسى أو أرخى من CI في نفس الالتزام.
+# [2026-11-28] audit_structure_vs_master خرج من هذه القائمة: قُلب إلى حاجب في ci.yml
+# بعد فصل الإشارة البنيوية عن كثافة المحتوى. الباقي الوحيد هناك: تقرير تسرّب الترجمة.
+NON_BLOCKING_RE="audit_translation_leakage"
 fail_total=0
 warn_total=0
 for step in "${steps[@]}"; do

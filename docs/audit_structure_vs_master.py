@@ -24,6 +24,14 @@ LANGS = ["bg", "ckb", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "ga"
          "sv", "tr"]
 TOLERANCE = 2
 
+# عناصر البنية الحاكمة: تتغيّر فقط إذا لم يصل قسمٌ أو كتلةٌ إلى الصفحة.
+BLOCKING_METRICS = ("li", "tr", "h2h3")
+# عدّ البطاقات والأزرار = كثافة محتوى تجاري مترجَم، لا بنية: الماستر يعرض 96
+# بطاقة software-hub مقابل 108 في de، وكل لغة تحمل كتلة CTAs في pricing أكبر
+# بـ15-16 زراً من تخطيط الماستر الأحدث. مقارنتها أنتجت 28 إنذاراً كاذباً من 28
+# صفحة فصار الحارس غير قابل للتفعيل كحاجب. تبقى في التقرير، ولا يحجب عليها إلا --strict-all.
+ADVISORY_METRICS = ("cards", "btn")
+
 
 def fingerprint(path):
     raw = pathlib.Path(path).read_text(encoding="utf-8", errors="replace")
@@ -49,6 +57,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", default="")
     ap.add_argument("--strict", action="store_true")
+    ap.add_argument("--strict-all", action="store_true",
+                    help="أيضاً احجب على كثافة المحتوى (cards/btn) — للاستخدام بعد موجة الترحيل")
     args = ap.parse_args()
 
     master = fingerprint(ROOT / "index.html")
@@ -62,6 +72,7 @@ def main():
 
     report = {"master": {"order": order, "footers": master["footers"]}, "pages": {}}
     problems_total = 0
+    advisory_total = 0
     for lang in LANGS:
         page = ROOT / lang / "index.html"
         if not page.exists():
@@ -73,21 +84,27 @@ def main():
         first = next((i for i, (a, b) in enumerate(zip(order, seq)) if a != b), None)
         drift = [order[first], seq[first]] if first is not None else []
 
-        counts = {}
+        counts, advisory = {}, {}
         for m, p in zip(master["sections"], fp["sections"]):
             if m["key"] != p["key"]:
                 continue
-            d = {k: p[k] - m[k] for k in ("cards", "li", "tr", "h2h3", "btn")
-                 if abs(p[k] - m[k]) > TOLERANCE}
-            if d:
-                counts[m["key"]] = d
+            for k in BLOCKING_METRICS + ADVISORY_METRICS:
+                if abs(p[k] - m[k]) <= TOLERANCE:
+                    continue
+                bucket = advisory if k in ADVISORY_METRICS else counts
+                bucket.setdefault(m["key"], {})[k] = p[k] - m[k]
 
-        bad = bool(missing or extra or drift or counts)
+        footer_drift = fp["footers"] != master["footers"]
+        if advisory:
+            advisory_total += 1
+
+        bad = bool(missing or extra or drift or counts or footer_drift)
         if bad:
             problems_total += 1
         report["pages"][lang] = {
             "missing": missing, "extra": extra, "first_drift": drift,
             "footers": fp["footers"], "content_delta": counts,
+            "advisory_delta": advisory,
         }
         print(f"{lang:5}{len(seq):>4} sections  {fp['footers']} footers  "
               f"{'DRIFT' if bad else 'ok'}")
@@ -97,16 +114,25 @@ def main():
             print(f"      extra  : {extra}")
         if drift:
             print(f"      order  : master has '{drift[0]}' where page has '{drift[1]}'")
+        if footer_drift:
+            print(f"      footers: master has {master['footers']} where page has {fp['footers']}")
         for sec, d in counts.items():
             print(f"      {sec}: {d}")
+        for sec, d in advisory.items():
+            print(f"      advisory {sec}: {d}  (content density, not blocking)")
 
     print("-" * 100)
+    if advisory_total:
+        print(f"advisory: {advisory_total} page(s) carry different commercial content density "
+              f"(cards/btn) - reported, not blocking unless --strict-all")
+    if args.strict_all:
+        problems_total += advisory_total
     print(f"{problems_total} of {len(report['pages'])} pages differ from the master")
     if args.json:
         pathlib.Path(args.json).write_text(
             json.dumps(report, indent=1, ensure_ascii=False), encoding="utf-8")
         print("wrote", args.json)
-    if args.strict and problems_total:
+    if (args.strict or args.strict_all) and problems_total:
         print("STRICT: structure drift is blocking")
         return 1
     return 0
