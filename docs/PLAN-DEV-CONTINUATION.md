@@ -52,7 +52,7 @@ $env:PYTEST_ADDOPTS='--ignore=tests/test_tts_e2e.py'
 |---|---|---|
 | `preflight` | `scripts/preflight.py` | يعيد توليد `partials/` من `index.html`، و`en`، و29 لغة، ثم يتحقق أن الشجرة تُعيد بناء نفسها بايت-ببايت |
 | `build` | `scripts/build.mjs` | 6 مراحل: تحقق JS/CSS، CSP، Tailwind، مجموعة النشر، السنتينل (13 حارساً)، سلامة النشر + فحص الأسرار |
-| `gate` | `scripts/prepush_gate.sh` | 20 فحصاً بترتيب CI + `pytest` + `prepare_publish_set` + `check_site_links` (بما فيها `srcset`) |
+| `gate` | `scripts/prepush_gate.sh` | 21 فحصاً بترتيب CI + `pytest` + `prepare_publish_set` + `check_site_links` (بما فيها `srcset`) + `build_email_templates` |
 | `push` | `git push origin main` | يُطلق `ci.yml` + `deploy-pages.yml` |
 
 > **مزلق متكرر:** CSP يتقهقر إذا عدّلت سكربتاً مضمّناً ولم تُعِد التوليد. الترتيب الآمن: `prepare_publish_set` ← `build_csp` ← `build`.
@@ -73,6 +73,8 @@ $env:PYTEST_ADDOPTS='--ignore=tests/test_tts_e2e.py'
 | `b7b6e4d3`, `0f21217d` | كاش/إصدارات + رفع مهلة البوابة إلى 600s |
 
 **قرارات تصميم مثبتة:** الشعار الدائري للأحجام ≤120px، والقفل/البانر للأحجام الكبيرة · شريط المؤشرات تحت شريط التهيئة داخل `.c3-center-stage` (القسم المتداخل الوحيد المسموح في حارس التكافؤ) · الدوك سكة يسرى على ≥901px وشريط سفلي على الجوال.
+
+**إصلاح 2026-11-28 — CI أحمر سبع دورات والبّوابة خضراء:** `CI & QA #2699–#2706` فشلت كلها على خطوة «Build & Verify Transactional E-mails» بسبب رابط مشوّه في قالبَي البريد (`...sr-coresync.com../assets/sr-core-emblem-official.webp`). أُصلح الرابط وصار البناء يخرجه `email-emblem-192.png`، وأُضيفت الخطوة إلى البوابة (20 ← 21) لأن أي فحص حاجب في `ci.yml` غير موجود في البوابة يجعل «GATE GREEN» مُضلّلة.
 
 ---
 
@@ -102,6 +104,7 @@ $env:PYTEST_ADDOPTS='--ignore=tests/test_tts_e2e.py'
 - **`showcase-img`:** صور المؤسسين تحمل نفس الصنف؛ أي قاعدة تستهدف الصنف ستحلّ محل صورهم. الشرط الصحيح: `logo-official` داخل الوسم.
 - **الاختبارات البطيئة:** السنتينل يتراوح 128s–396s حسب حِمل الجهاز — لذلك مهلة الخطوة 600s.
 - **التحقق البصري:** `browser_tool` يفشل إن لم تكن النافذة معروضة. البديل المستخدم: Chrome headless عبر CDP (`scratch/cdp_*.js`) مع قياس `getBoundingClientRect`.
+- **البوابة ليست CI:** قد تكون خضراء وCI أحمر إن أُضيفت خطوة حاجبة إلى `ci.yml` ولم تُضف إلى `scripts/prepush_gate.sh`. عند كل `[FAIL]` في CI: اسأل أولاً «هل هذه الخطوة في البوابة؟» قبل التخمين في الكود. الخطوات الثلاث للـe2e المتصفحية تبقى CI فقط (تحتاج Chromium).
 
 ---
 

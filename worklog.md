@@ -9,6 +9,14 @@
 
 ---
 
+### [2026-11-28 03:25] — العطل الذي أبقى CI أحمر سبع دورات: قالبا البريد + بوابة لا ترى الفحص
+- **العرَض:** `CI & QA` فشل في #2699–#2706 على كل التزامات 2026-11-27، بينما `GATE GREEN` محلياً و`Deploy` ينشر بنجاح. التشخيص من GitHub API (خطوة بخطوة) حدّد الخطوة الفاشلة: «Build & Verify Transactional E-mails».
+- **السبب:** الإعادة المحلية أعطت `EXIT=1` برسالة `1 WebP sources remain` في القالبين. السطر المسبب في `templates/welcome-email.html:35` و`invoice-quote-email.html:41`: `https://sr-coresync.com../assets/sr-core-emblem-official.webp` — بادئة `com..` مكسورة **و** امتداد `.webp`، فلا ينطبق عليه أي مدخل من `ASSET_SWAPS` فيبقى WebP ويكسر الفحص.
+- **الإصلاح:** الرابط صار `https://sr-coresync.com/assets/sr-core-emblem-official.png`، فطبّق البناء خريطته إلى `email-emblem-192.png`. المخرجات المشحونة: `webp=0` و`png-signatures=2` في `invoice-quote.html` و`-rendered.html` و`.eml`؛ والسكربت `PASSED` بـ`exit 0`.
+- **السبب الجذري:** الخطوة حاجبة في `ci.yml` لكنها **لم تكن ضمن البوابة** (20 خطوة)، فكانت البوابة خضراء وCI أحمر على كل دفعة. أُضيفت بترتيبها الحقيقي بعد `check_seo_assets` ← البوابة صارت **21 خطوة**.
+- **التحقق:** `GATE GREEN` exit 0 في 5m34s، 20 PASS + تحذير انزياح البنية وحده، وخطوة البريد `[PASS]` داخل البوابة.
+- **ملاحظة:** `dist/emails/invoice-quote-compiled.html` يحتفظ بـ`.webp` لأنه وسيط قبل `ASSET_SWAPS` ولا يُشحن — لا يُطارد.
+
 ### [2026-11-27 13:05] — إغلاق ملف TTS: من سكربت يُسقط pytest إلى وحدة E2E معزولة اختيارية
 - **العطل:** `tests/test_tts_e2e.py` كان سكربتاً ينفّذ كل شيء وقت الاستيراد (يرفع uvicorn على 8765، يكتب MP3 داخل المستودع، ثم `sys.exit(1)`)، فكان تجميعه بواسطة pytest يُسقط الجلسة كاملة — ولهذا كانت البوابة تُستدعى بـ`PYTEST_ADDOPTS=--ignore=tests/test_tts_e2e.py`.
 - **الإصلاح:** تحويله إلى وحدة pytest حقيقية: `pytestmark = skipif` عند غياب أي من `fastapi/uvicorn/edge_tts`، وتخطٍّ افتراضي ما لم يُضبط `CORESYNC_TTS_E2E=1`، وسيرفر في مرفق بمستوى الوحدة على منفذ حر، وفحص جاهزية عبر `/health` العام (لا `/openapi.json` المحمي الذي يرجع 401)، ومفتاح اختباري عبر `CORESYNC_API_KEYS`، وملفات الصوت في `tmp_path`، وسجل السيرفر في مجلد مؤقت. بقي مسار تشغيل يدوي عبر `__main__` يحفظ الملفات في `tests/tts_test_output`.

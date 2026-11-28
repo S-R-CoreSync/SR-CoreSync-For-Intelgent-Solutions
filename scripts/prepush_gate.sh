@@ -47,6 +47,11 @@ steps=(
   "$PY scripts/check_content_depth_parity.py --strict"
   "$PY scripts/fix_og_locale.py --check"
   "$PY scripts/check_seo_assets.py"
+  # [2026-11-28] الخطوة التي كانت تُسقط CI على كل دفعة بينما البوابة خضراء:
+  # build_email_templates.py فحصته ci.yml فقط ("Build & Verify Transactional
+  # E-mails")، ووجد رابطاً مشوّهاً واحداً في قالبين فأبطل #2699–#2706 كلها.
+  # ما لا يُفحص محلياً يُفشل بعيداً — تُضاف الآن بترتيبها الحقيقي في ci.yml.
+  "$PY scripts/build_email_templates.py"
   # [2026-11-26 — الاقتراح 29] سلامة الروابط والأصول على مجموعة النشر الفعلية:
   # الفحص القديم كان يقرأ href/src فقط، فمرّت 55 صورة مكسورة (مسارات لغات +
   # srcset مسطّح) دون أن يراها أحد. الآن يُبنى العرف الكامل ويُفحص كل مرشّح srcset.
