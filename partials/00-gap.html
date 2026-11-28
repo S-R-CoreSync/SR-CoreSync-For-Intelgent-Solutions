@@ -232,7 +232,13 @@
 
     <!-- تحميل مسبق للصفحات للتنقل الفوري بدون أي تأخير (0ms Instant Navigation) -->
     <!-- تحميل مسبق لصيغة WebP للبانر لضمان العرض الفوري لشاشات التلفاز الذكية (0ms Smart TV rendering) -->
-    <link rel="preload" as="image" href="./assets/sr-badge-official.png" type="image/jpeg">
+    <!-- [2026-11-28] كان هنا preload لـPNG بحجم 498 KB ويعلن type="image/jpeg" خطأً،
+         فيدفع كل زائر لتنزيل 498 KB لمعرض لا يُفتح إلا عند الطلب (والوسم نفسه lazy).
+         المرشّحات أدناه مطابقة حرفياً لـsrcset/sizes في #srLogoFullImg حتى يُعاد استخدام نفس الملف. -->
+    <link rel="preload" as="image" type="image/webp"
+        href="./assets/sr-badge-official-1024w.webp"
+        imagesrcset="./assets/sr-badge-official-384w.webp 384w, ./assets/sr-badge-official-1024w.webp 1024w"
+        imagesizes="(max-width: 768px) 256px, (max-width: 1200px) 512px, 1024px">
 
     <link rel="stylesheet" href="./css/inline-core.css?v=20261114-type">
     <link rel="stylesheet" href="./css/concierge.css?v=20261114-type">

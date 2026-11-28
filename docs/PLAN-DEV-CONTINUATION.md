@@ -76,6 +76,8 @@ $env:PYTEST_ADDOPTS='--ignore=tests/test_tts_e2e.py'
 
 **إصلاح 2026-11-28 — CI أحمر سبع دورات والبّوابة خضراء:** `CI & QA #2699–#2706` فشلت كلها على خطوة «Build & Verify Transactional E-mails» بسبب رابط مشوّه في قالبَي البريد (`...sr-coresync.com../assets/sr-core-emblem-official.webp`). أُصلح الرابط وصار البناء يخرجه `email-emblem-192.png`، وأُضيفت الخطوة إلى البوابة (20 ← 21) لأن أي فحص حاجب في `ci.yml` غير موجود في البوابة يجعل «GATE GREEN» مُضلّلة.
 
+**إصلاح 2026-11-28 — ميزانية الأداء (كانت مخفية خلف البريد):** `check_perf_budget.py` كان يرفض عند 3348.6 KB / 3200. السبب المقيس: `<link rel="preload" as="image" href="./assets/sr-badge-official.png" type="image/jpeg">` في `index.html` يدفع 498.8 KB لكل زائر لصورة معرض `#srLogoFullImg` الـlazy. صار preload لـWebP (1024w/384w) بـimagesrcset مطابقة ← **2850.0 KB** (‑498.6). ملاحظة: هذه الخطوة **لا تزال خارج البوابة** لأنها تعتمد Lighthouse وقد تكون متقلبة — إضافتها قرار مالك.
+
 ---
 
 ## 5) ما تبقّى — Backlog مرتّب
